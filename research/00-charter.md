@@ -2,7 +2,7 @@
 
 ## Objective
 
-The long-range objective is a constructive (SU(2)) Yang--Mills theory on
+The long-range objective is a constructive \(SU(2)\) Yang--Mills theory on
 \(\mathbb R^4\) satisfying the Osterwalder--Schrader axioms, the short-distance
 identification required by Jaffe--Witten, and a positive physical mass gap.
 
@@ -52,7 +52,7 @@ asymptotic input rather than a definition of a continuum theory:
 ## Non-claims of the active milestone
 
 The active milestone does not claim point locality, full OS reconstruction,
-infinite volume, (O(4)) restoration, nontrivial scattering, confinement, or a
+infinite volume, \(O(4)\) restoration, nontrivial scattering, confinement, or a
 mass gap.  Its output is intended to be a controlled finite-volume continuum
 cylinder algebra on which those later questions can be formulated without
 pretending that partition-function stability already supplies correlation
