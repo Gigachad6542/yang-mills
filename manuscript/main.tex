@@ -1,0 +1,152 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\D}{\mathbb D}
+\newcommand{\C}{\mathbb C}
+\newcommand{\E}{\mathbb E}
+
+\title{A Source-Dependent Fixed-Volume Milestone for Constructive
+Four-Dimensional Yang--Mills}
+\author{Working draft}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We formulate a deliberately limited first observable theorem beyond the known
+ultraviolet-stability estimates for lattice Yang--Mills theory.  The target is
+cutoff convergence, at fixed physical volume and observation scale, of bounded
+gauge-invariant cylinder observables of the terminal gauge-covariant block field.
+We separate the genuinely open RG estimate from an elementary but essential
+analytic reduction: summable complex-source bounds imply convergence and
+factorial estimates for every fixed joint cumulant.  No continuum construction,
+point-local field, or mass gap is claimed.
+\end{abstract}
+
+\section{Scope}
+
+The ultimate Yang--Mills problem requires local fields corresponding to
+gauge-invariant curvature polynomials, the Osterwalder--Schrader axioms,
+asymptotically-free short-distance behavior, and a positive gap
+\cite{JaffeWitten2006,OsterwalderSchrader1975}.  Reflection positivity of the
+Wilson lattice action is an indispensable finite-cutoff input
+\cite{OsterwalderSeiler1978}, but it does not establish convergence of a
+continuum state.
+
+Balaban's gauge-covariant RG establishes ultraviolet stability through a
+small-field analysis, cluster expansions, and a large-field renormalization
+operation
+\cite{Balaban1987RGI,Balaban1988RGII,Balaban1988Convergent,Balaban1989LargeII}.
+The present project asks for a comparison estimate between successive ultraviolet
+depths for normalized observable-generating functions.  Such an estimate is not
+asserted in the cited stability results.
+
+\section{Fixed-volume setup}
+
+Let (G=SU(2)) and let \(\Lambda_{a,R}=a\mathbb Z^4/R\mathbb Z^4\) approximate a
+fixed physical four-torus.  The Wilson measure is
+\[
+ d\mu_{a,R}(U)=Z_{a,R}^{-1}e^{-S_{a,R}(U)}\prod_{e\in E^+}dU_e,
+ \qquad
+ S_{a,R}(U)=\beta(a)\sum_p\left(1-\frac12\operatorname{ReTr}U_p\right).
+\]
+Fix a physical block scale \(\ell\), set \(a_n=\ell L^{-n}\), and denote by
+\(Q_n\) the (n)-step gauge-covariant averaging map.  The exact identification
+of this notation with Balaban's averaging operation
+\cite{Balaban1985Averaging} is an explicit proof obligation.
+
+For coarse closed paths \(C_1,\ldots,C_m\) and a function (h) holomorphic near
+\([-2,2]^m\), consider
+\[
+ \mathcal O_{n,h}(U)=h\bigl(
+ \operatorname{TrHol}_{C_1}(Q_nU),\ldots,
+ \operatorname{TrHol}_{C_m}(Q_nU)\bigr).
+\]
+This is bounded and gauge invariant on real (SU(2)) configurations.  It is a
+fixed-scale cylinder observable, not a point-local field.
+
+\section{Analytic reduction}
+
+For finitely many such observables let
+\[
+ Z_n(z)=\E_{\mu_{a_n,R}}\exp\left(\sum_{j=1}^qz_j\mathcal O_{n,j}\right),
+ \qquad W_n(z)=\log Z_n(z).
+\]
+For (R=(R_1,\ldots,R_q)>0\), set
+\(\D_R=\{z\in\C^q:|z_j|<R_j\}\).
+
+\begin{theorem}[Summable holomorphic increments]\label{thm:analytic}
+Suppose every (W_n\) is holomorphic on \(\D_R\) and
+\[
+ \lVert W_{n+1}-W_n\rVert_{\D_R}\le\delta_n,
+ \qquad \sum_{n\ge0}\delta_n<\infty.
+\]
+Then (W_n\) converges uniformly to a holomorphic (W_\infty\).  For every
+multi-index \(\alpha\),
+\[
+ \left|\partial^\alpha(W_\infty-W_n)(0)\right|
+ \le \alpha!\prod_{j=1}^qR_j^{-\alpha_j}
+       \sum_{k=n}^{\infty}\delta_k.
+\]
+Consequently every fixed joint cumulant converges.
+\end{theorem}
+
+\begin{proof}
+The increment estimate makes (W_n\) uniformly Cauchy, and its limit is locally
+uniform and therefore holomorphic.  Apply the multivariable Cauchy formula to
+\(W_m-W_n\) on a smaller concentric polytorus and use
+\(\lVert W_m-W_n\rVert\le\sum_{k=n}^{m-1}\delta_k\).  Let (m\to\infty\), then
+let the smaller polyradius increase coordinatewise to (R\).
+\end{proof}
+
+\begin{theorem}[A sufficient zero-free criterion]\label{thm:log}
+Suppose (Z_n(0)=1\) and, for one \(0<\eta<1\),
+\(\lVert Z_n-1\rVert_{\D_R}\le\eta\) for every (n\).  Then the principal branch
+\(W_n=\log Z_n\) is holomorphic on \(\D_R\), and
+\[
+ \lVert W_n-W_m\rVert_{\D_R}
+ \le(1-\eta)^{-1}\lVert Z_n-Z_m\rVert_{\D_R}.
+\]
+\end{theorem}
+
+\begin{proof}
+The range lies in the convex disc (B(1,\eta)\), on which the principal logarithm
+is holomorphic.  Integrating (1/w\) along the segment from (Z_m(z)\) to
+(Z_n(z)\) gives the estimate because the segment stays at distance at least
+\(1-\eta\) from zero.
+\end{proof}
+
+\begin{remark}
+Real-source convergence is insufficient.  The functions
+\(f_n(z)=\sin(nz)/n\) converge uniformly to zero on bounded real intervals while
+\(f_n'(0)=1\).  Similarly, (Z_n(z)=1+nz\) shows why normalization at zero does
+not supply a cutoff-independent logarithmic domain.
+\end{remark}
+
+\section{Open estimate}
+
+The principal target is a cutoff-independent polydisc and a summable estimate
+\[
+ \sup_{z\in\D_R}|W_{n+1}(z)-W_n(z)|\le\delta_n,
+ \qquad \sum_n\delta_n<\infty,
+\]
+including all large-field polymers.  Theorem~\ref{thm:analytic} then completes the
+source-to-cumulant step.  A partition-function stability bound at each depth does
+not imply this comparison estimate.
+
+Positive gradient-flow time offers an alternative bounded observable family, but
+the resulting fields are nonlocal over a four-dimensional radius of order
+\(\sqrt{8t}\) \cite{Luscher2010,RamosSint2016}.  They are therefore postponed
+until the RG-adapted cylinder theorem is understood.
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
