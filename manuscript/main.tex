@@ -228,6 +228,38 @@ real sources is insufficient; $1+n^{-1/2}\sin(nz)$ converges uniformly to one
 on every bounded real interval while its first logarithmic derivative at zero is
 $\sqrt n$.
 
+\begin{proposition}[Projective density criterion]\label{prop:projective}
+Let $\nu_n$ and $\nu_{n+1}$ be probability measures on the same terminal
+configuration space and suppose
+\[
+ \frac{d\nu_{n+1}}{d\nu_n}
+ =\frac{e^{D_n}}{\nu_n(e^{D_n})},
+ \qquad
+ \varepsilon_n=\sup D_n-\inf D_n<\infty,
+\]
+with $D_n$ real.  Then, for the bounded-source generating functions above,
+formed from fixed terminal tests $F_j$ satisfying $|F_j|\le B_j$,
+\[
+ \lVert Z_{n+1}-Z_n\rVert_{\D_\rho}
+ \le e^{S_\rho}(e^{\varepsilon_n}-1).
+\]
+If $S_\rho<\log2$ and $\sum_n\varepsilon_n<\infty$, all fixed joint cumulants
+converge.  Additive vacuum-energy constants in $D_n$ have no effect on the
+criterion.
+\end{proposition}
+
+\begin{proof}
+Subtract $\inf D_n$.  The normalized Radon--Nikodym derivative then lies between
+$e^{-\varepsilon_n}$ and $e^{\varepsilon_n}$.  Hence, for every bounded $f$,
+\[
+ |\nu_{n+1}(f)-\nu_n(f)|
+ \le\lVert f\rVert_\infty(e^{\varepsilon_n}-1).
+\]
+Take $f=e^{\sum_jz_jF_j}$, whose norm is at most $e^{S_\rho}$, and apply
+Theorems~\ref{thm:bounded} and \ref{thm:analytic}.  Summability follows from
+$e^x-1\le e^M x$ on a bounded interval containing the $\varepsilon_n$.
+\end{proof}
+
 \section{The open fixed-volume theorem}
 
 The principal target is now precise.  For finitely many bounded terminal block
@@ -254,10 +286,21 @@ then the required left side is exactly
 Convergence of full densities in total variation would suffice but is stronger
 than the theorem logically needs.
 
-This target has two independent open tracks.  Track A proves the source extension
-and adjacent-depth comparison conditional on $0<g_k\le\gamma$, exactly matching
-the hypothesis of the published density estimates.  Track B supplies or replaces
-the unpublished $SU(2)$ coupling-flow proof stated as Theorem~2 of the 1987 paper.
+Proposition~\ref{prop:projective} gives an RG-natural sufficient target.  If
+$\rho_n^{(\ell)}$ and $\rho_{n+1}^{(\ell)}$ are the complete positive terminal
+densities at adjacent ultraviolet depths, it is enough to prove
+\[
+ \sum_n\operatorname{osc}\left(
+  \log\rho_{n+1}^{(\ell)}-\log\rho_n^{(\ell)}\right)<\infty.
+\]
+This comparison must include the full $E$, $R$, and $B$ sectors of the complete
+density.  Bounds on each density separately do not imply it.
+
+This target has two independent open tracks.  Track A proves the source-free
+adjacent-depth comparison conditional on $0<g_k\le\gamma$, exactly matching the
+hypothesis of the published density estimates; the bounded terminal source is
+then applied only as a test function.  Track B supplies or replaces the
+unpublished $SU(2)$ coupling-flow proof stated as Theorem~2 of the 1987 paper.
 Neither track may be used as an implicit lemma for the other.
 
 \section{Reflection positivity and flowed observables}

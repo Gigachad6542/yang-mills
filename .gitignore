@@ -4,3 +4,5 @@ manuscript/*.blg
 manuscript/*.log
 manuscript/*.out
 manuscript/*.pdf
+tmp/
+.DS_Store

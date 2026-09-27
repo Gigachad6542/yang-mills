@@ -3,7 +3,7 @@
 Status: **target**. This file specifies what would count as completion; it does
 not state a theorem currently proved in the literature or in this repository.
 
-## Stage S0: local-source stress test
+## Parallel stage S0: local-source stress test
 
 For (j\in\tfrac12\mathbb N_0) and an oriented plaquette (p), put
 
@@ -28,6 +28,11 @@ This is a test of whether sources survive the published RG machinery. It does
 **not** assert cutoff convergence. Raw plaquette characters tend toward their
 identity contribution and are not, without subtraction and matching, the
 renormalized local field \(\operatorname{tr}F^2\).
+
+S0 is not a prerequisite for M1. A microscopic plaquette source is present at
+the ultraviolet scale and marks the polymer expansion, whereas an M1 source
+depends only on the terminal block variable and factors outside every earlier RG
+integration exactly.
 
 ## Stage M1: fixed-scale block observables
 

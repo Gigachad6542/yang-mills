@@ -32,8 +32,8 @@ The following papers form a dependency chain rather than interchangeable citatio
    [DOI](https://doi.org/10.1007/BF01240221).
 3. T. Bałaban, *Averaging Operations for Lattice Gauge Theories*, CMP **98**
    (1985), 17--51. [DOI](https://doi.org/10.1007/BF01211042).
-   This is the first source to audit for the exact (Q_n) used in the active
-   observable definition.
+   Eqs. (10)--(15), printed pp. 19--20, define and linearize the deterministic
+   gauge-covariant block average used in the active observable definition.
 4. T. Bałaban, *Spaces of Regular Gauge Field Configurations on a Lattice and
    Gauge Fixing Conditions*, CMP **99** (1985), 75--102.
    [DOI](https://doi.org/10.1007/BF01466594).

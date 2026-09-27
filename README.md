@@ -18,10 +18,10 @@ of a fixed physical-scale RG block field.  The source-dependent generating
 functional must converge on a cutoff-independent complex polydisc, with bounds on
 all source derivatives.
 
-Before that comparison theorem, establish a source-stable version of each exact
-Balaban RG step for normalized plaquette characters. This local source family is
-the cleanest diagnostic for the small-field/large-field machinery, but its raw
-continuum limit is not advertised as a renormalized curvature field.
+In parallel, a source-stable version of the RG for normalized plaquette
+characters is a local-observable stress test. Unlike terminal sources, microscopic
+plaquette sources do enter the multiscale polymer analysis. Their raw continuum
+limit is not advertised as a renormalized curvature field.
 
 This is deliberately weaker than the Clay problem. It targets a first missing
 observable theorem beyond Balaban's conditional, source-free ultraviolet-stability
@@ -43,6 +43,8 @@ estimates while avoiding three later problems:
   observable families.
 - `research/06-balaban-audit.md` -- theorem-by-theorem dependency audit, including
   the unpublished coupling-flow input and exact block formula.
+- `research/07-depth-comparison-reduction.md` -- proved projective-density
+  criterion reducing adjacent-cutoff control to cumulant convergence.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 
