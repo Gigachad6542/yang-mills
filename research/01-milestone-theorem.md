@@ -32,10 +32,12 @@ renormalized local field \(\operatorname{tr}F^2\).
 ## Stage M1: fixed-scale block observables
 
 Fix a physical observation scale \(\ell>0\) with \(R/\ell\in\mathbb N\). For
-lattice spacings \(a_n=\ell L^{-n}\), let \(Q^{(n)}\) provisionally denote the
-\(n\)-fold gauge-covariant block operation in the chosen Balaban construction.
-Its terminal variable is a coarse \(SU(2)\) connection \(V\) on the
-\(\ell\)-lattice, subject to the construction's gauge convention.
+lattice spacings \(a_n=\ell L^{-n}\), let \(U\mapsto\bar U^{(n)}\) denote the
+\(n\)-fold deterministic gauge-covariant average in
+Balaban's construction. Its terminal variable is a coarse \(SU(2)\) connection
+\(V=\bar U^{(n)}\) on the \(\ell\)-lattice, subject to the construction's gauge
+convention. The exact group-delta transformation and source identity are recorded
+in `04-terminal-source-identity.md`.
 
 Let \(C_1,\ldots,C_m\) be closed coarse-lattice paths and let \(h\) be a bounded
 continuous function on \([-2,2]^m\) (holomorphic on a complex neighborhood when
@@ -43,15 +45,15 @@ field-complexification estimates require it). Define provisionally
 
 \[
  \mathcal O_{n,h}(U)
- =h\!\left(\operatorname{TrHol}_{C_1}(Q^{(n)}U),\ldots,
-           \operatorname{TrHol}_{C_m}(Q^{(n)}U)\right).
+ =h\!\left(\operatorname{TrHol}_{C_1}(\bar U^{(n)}),\ldots,
+           \operatorname{TrHol}_{C_m}(\bar U^{(n)})\right).
 \]
 
-The notation is intentionally conditional: P1 must identify the exact published
-block kernel, determine whether it is a deterministic map or a constrained
-integration, and replace this display if necessary. The structural requirement
-is that the source depend only on the terminal block variable. It then remains at
-the terminal scale instead of generating a new ultraviolet vertex at every step.
+Balaban's density transformation inserts the deterministic average through a
+group-delta constraint. A source depending only on the terminal variable factors
+through that constraint exactly. It therefore remains at the terminal scale
+instead of generating a new ultraviolet vertex at every earlier step. What
+remains open is compatibility with the analytic small/large-field estimates.
 
 Choose finitely many real-valued observables
 \(\mathcal O_{n,1},\ldots,\mathcal O_{n,q}\), uniformly bounded by constants

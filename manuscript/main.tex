@@ -110,9 +110,11 @@ separate problems.
 \subsection{Terminal block observables}
 
 Fix a physical block scale $\ell$ and let $a_n=\ell L^{-n}$.  Write $V_n$ for
-the terminal variable of the exact $n$-step block kernel.  The precise match
-between $V_n$ and Balaban's averaging and gauge conventions
-\cite{Balaban1985Averaging} is an open dictionary obligation.  For closed
+the terminal variable of the exact $n$-step block transformation.  Balaban's
+coarse field $\bar U$ is a deterministic nonlinear, gauge-covariant average
+inserted through an exact group-delta constraint
+\cite{Balaban1985Averaging,Balaban1988Convergent}.  Thus
+$V_n=\bar U^{(n)}$.  For closed
 coarse-lattice paths $C_1,\ldots,C_m$ and bounded $h$, the intended class is
 \[
  \mathcal O_{n,h}=
@@ -148,8 +150,19 @@ denominator of the normalized expectation.
 
 If $K_k(U,dV)=\delta_{Q_kU}(dV)$, this is the fine-lattice observable
 $F(Q_{n-1}\cdots Q_0U)$.  For a genuinely constrained or stochastic kernel it
-is instead an observable of the extended joint measure.  These cases must not be
-identified before the published transformation is audited.
+is instead an observable of the extended joint measure; the distinction matters
+when the argument is transferred to another RG scheme.
+
+For Balaban's actual transformation,
+\[
+ (T\rho)(V)=\int dU\,\delta(\bar U V^{-1})\rho(U),
+\]
+the average $U\mapsto\bar U$ is deterministic.  The group delta gives the exact
+specialization
+\[
+ \int dU\,\delta(\bar U V^{-1})\rho(U)e^{zF(\bar U)}
+ =e^{zF(V)}(T\rho)(V).
+\]
 
 \section{Complex-source reduction}
 
@@ -240,6 +253,12 @@ then the required left side is exactly
 \]
 Convergence of full densities in total variation would suffice but is stronger
 than the theorem logically needs.
+
+This target has two independent open tracks.  Track A proves the source extension
+and adjacent-depth comparison conditional on $0<g_k\le\gamma$, exactly matching
+the hypothesis of the published density estimates.  Track B supplies or replaces
+the unpublished $SU(2)$ coupling-flow proof stated as Theorem~2 of the 1987 paper.
+Neither track may be used as an implicit lemma for the other.
 
 \section{Reflection positivity and flowed observables}
 

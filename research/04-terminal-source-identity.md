@@ -1,8 +1,8 @@
 # Exact transport of terminal sources through a block kernel
 
-Status: **proved here as an abstract finite-dimensional identity**. Its
-identification with Balaban's precise constrained averaging is P0b and remains
-open pending the primary-source audit.
+Status: **proved here**, with the kernel matched to Balaban's published formulas.
+The source-dependent analytic estimates are not part of this identity and remain
+open.
 
 ## One exact RG step
 
@@ -59,14 +59,49 @@ Consequently the normalized generating function is
 All multiplicative normalizations accumulated in the vacuum RG cancel in this
 ratio.
 
-## Deterministic and constrained block maps
+## Match to Balaban's exact transformation
 
-If \(K_k(U,dV)=\delta_{Q_kU}(dV)\), the terminal source is the fine-lattice
-observable \(e^{zF(Q_{n-1}\cdots Q_0U)}\). For a genuinely stochastic or
-constrained kernel, the exact observable belongs naturally to the extended joint
-measure; it must not be silently rewritten as a deterministic \(F(Q^{(n)}U)\).
-Determining which case Balaban's construction realizes, including gauge-fixing
-constraints and Jacobians, is precisely P0b/P1.
+Balaban's nonlinear coarse connection \(\bar U\) is a deterministic,
+gauge-covariant function of the fine connection. In *Averaging Operations for
+Lattice Gauge Theories*, printed pp. 19--20, Eq. (10) defines
+
+\[
+ \rho'(V)=\int dU\,\delta(V\bar U^{-1})\rho(U).
+\]
+
+Equations (11), (14), and (15) give its covariance, linearization, and a concrete
+average. The four-dimensional construction uses Euclidean-symmetric deterministic
+averages in Eqs. (0.4) and (0.12) of CMP **109** (printed pp. 253--254). The
+complete transformation is restated in CMP **119**, Eq. (0.1), printed p. 243:
+
+\[
+ (T\rho)(V)=\int dU\,\delta(\bar U V^{-1})\rho(U).
+\]
+
+Thus \(\bar U\) is the deterministic map inside the delta constraint; it is not
+a random kernel. For a terminal gauge-invariant function \(F\), the sourced
+transformation satisfies
+
+\[
+ \begin{aligned}
+ (T_z\rho)(V)
+ &=\int dU\,\delta(\bar U V^{-1})\rho(U)e^{zF(\bar U)}\\
+ &=e^{zF(V)}(T\rho)(V).
+ \end{aligned}
+\]
+
+The second line is the defining property of the group delta distribution. The
+normalization identity \(\int dV\,T\rho=\int dU\,\rho\) also appears as Eq. (10)
+in Balaban's 1986 ICM account. This establishes P0b at the algebraic level.
+
+## Deterministic and general kernels
+
+For Balaban's transformation the terminal source is therefore the fine-lattice
+observable
+\(e^{zF(\bar U^{(n)})}\), where \(\bar U^{(n)}\) is the iterated deterministic
+average. The abstract kernel formulation remains useful for comparing other RG
+schemes; for a genuinely stochastic kernel, the terminal variable instead lives
+naturally in the extended joint measure.
 
 ## Gauge covariance
 
@@ -120,7 +155,21 @@ unnecessarily strong full-measure convergence theorem.
 
 ## What this identity does not prove
 
-It proves no RG norm estimate, no cutoff comparison, and no convergence. It only
-shows that once an exact block kernel is fixed, a terminal source introduces no
-new ultraviolet dependence inside earlier integrations. That structural fact is
-why terminal block observables are the primary M1 family.
+It proves no RG norm estimate, no cutoff comparison, and no convergence. It shows
+only that a terminal source introduces no new ultraviolet dependence inside
+earlier integrations. Its effect on Balaban's small-field domains, localization,
+and large-field polymers is the separate Stage S0/P4 analysis.
+
+## Primary formula sources
+
+- T. Bałaban, *Averaging Operations for Lattice Gauge Theories*, CMP **98**
+  (1985), 17--51. [DOI](https://doi.org/10.1007/BF01211042).
+- T. Bałaban, *Renormalization Group Approach to Lattice Gauge Field Theories I*,
+  CMP **109** (1987), 249--301.
+  [DOI](https://doi.org/10.1007/BF01215223).
+- T. Bałaban, *Convergent Renormalization Expansions for Lattice Gauge Theories*,
+  CMP **119** (1988), 243--285.
+  [DOI](https://doi.org/10.1007/BF01217741).
+- T. Bałaban, *Recent Results in Constructing Gauge Fields*, Proceedings of the
+  1986 ICM, pp. 1259--1266.
+  [Proceedings PDF](https://www.mathunion.org/fileadmin/ICM/Proceedings/ICM1986.2/ICM1986.2.ocr.pdf).

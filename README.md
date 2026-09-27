@@ -41,6 +41,8 @@ estimates while avoiding three later problems:
   abstract block kernel, proved here; matching to Balaban remains open.
 - `research/05-observable-strategy.md` -- comparison of local, blocked, and flowed
   observable families.
+- `research/06-balaban-audit.md` -- theorem-by-theorem dependency audit, including
+  the unpublished coupling-flow input and exact block formula.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 

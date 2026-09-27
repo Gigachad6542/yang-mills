@@ -58,18 +58,18 @@ The following papers form a dependency chain rather than interchangeable citatio
     [DOI](https://doi.org/10.1007/BF01217741).
 11. T. Bałaban, *Large Field Renormalization I: The Basic Step of the R
     Operation*, CMP **122** (1989), 175--202.
-    Bibliographic record: [OSTI](https://www.osti.gov/etdeweb/biblio/6142166).
+    [DOI](https://doi.org/10.1007/BF01257412).
 12. T. Bałaban, *Large Field Renormalization II: Localization, Exponentiation,
     and Bounds for the R Operation*, CMP **122** (1989), 355--392.
     [DOI](https://doi.org/10.1007/BF01238433).
 
 **Dependency warning.** The four-dimensional package must not be cited as an
-unconditional completed construction. On the opening page of *Large Field
+unconditional completed construction. On printed p. 355 of *Large Field
 Renormalization II*, Theorem 1 assumes that the sequence of effective coupling
-constants remains in a specified weak-coupling interval. The following paragraph
-states that the proof of the SU(2) coupling-constant behavior announced as
-Theorem 2 of the 1987 paper had not been published. Exact quotations, equations,
-and page references are being recorded in `research/06-balaban-audit.md`.
+constants remains in \((0,\gamma]\). The following paragraph states that the
+proof of the SU(2) coupling-constant behavior announced as Theorem 2 of the 1987
+paper had not been published. Exact equations and page references are recorded in
+`research/06-balaban-audit.md`.
 
 What the published estimates provide, under their stated hypotheses, is
 source-free ultraviolet stability of normalized RG densities/partition functions.
