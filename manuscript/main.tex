@@ -5,12 +5,15 @@
 \usepackage{microtype}
 
 \newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{remark}[theorem]{Remark}
 \newcommand{\D}{\mathbb D}
 \newcommand{\C}{\mathbb C}
 \newcommand{\E}{\mathbb E}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Log}{\operatorname{Log}}
 
 \title{A Source-Dependent Fixed-Volume Milestone for Constructive
 Four-Dimensional Yang--Mills}
@@ -21,131 +24,249 @@ Four-Dimensional Yang--Mills}
 \maketitle
 
 \begin{abstract}
-We formulate a deliberately limited first observable theorem beyond the known
-ultraviolet-stability estimates for lattice Yang--Mills theory.  The target is
-cutoff convergence, at fixed physical volume and observation scale, of bounded
-gauge-invariant cylinder observables of the terminal gauge-covariant block field.
-We separate the genuinely open RG estimate from an elementary but essential
-analytic reduction: summable complex-source bounds imply convergence and
-factorial estimates for every fixed joint cumulant.  No continuum construction,
-point-local field, or mass gap is claimed.
+We formulate a deliberately limited observable milestone for four-dimensional
+$SU(2)$ lattice Yang--Mills theory.  The target is cutoff convergence, at fixed
+physical volume and observation scale, of bounded gauge-invariant observables of
+the terminal block variable in a gauge-covariant renormalization group.  We
+separate the genuinely open RG comparison estimate from two exact reductions.
+First, a source depending only on the terminal variable factors through every
+earlier block integration.  Second, bounded observables have a uniform complex
+zero-free source disc, and locally uniform convergence of their generating
+functions implies convergence and factorial estimates for every fixed joint
+cumulant.  The published four-dimensional Balaban estimates are used only under
+their stated coupling-flow hypothesis.  No continuum state, point-local field,
+or mass gap is claimed.
 \end{abstract}
 
-\section{Scope}
+\section{Scope and historical boundary}
 
-The ultimate Yang--Mills problem requires local fields corresponding to
-gauge-invariant curvature polynomials, the Osterwalder--Schrader axioms,
-asymptotically-free short-distance behavior, and a positive gap
+The Yang--Mills problem requires local fields corresponding to gauge-invariant
+curvature polynomials, the Osterwalder--Schrader axioms, asymptotically free
+short-distance behavior, and a positive spectral gap
 \cite{JaffeWitten2006,OsterwalderSchrader1975}.  Reflection positivity of the
 Wilson lattice action is an indispensable finite-cutoff input
-\cite{OsterwalderSeiler1978}, but it does not establish convergence of a
-continuum state.
+\cite{OsterwalderSeiler1978}; it does not establish convergence of a continuum
+state.
 
-Balaban's gauge-covariant RG establishes ultraviolet stability through a
-small-field analysis, cluster expansions, and a large-field renormalization
+Balaban developed a gauge-covariant multiscale analysis using small-field
+effective actions, cluster expansions, and a large-field renormalization
 operation
 \cite{Balaban1987RGI,Balaban1988RGII,Balaban1988Convergent,Balaban1989LargeII}.
-The present project asks for a comparison estimate between successive ultraviolet
-depths for normalized observable-generating functions.  Such an estimate is not
-asserted in the cited stability results.
+The status must be stated carefully.  Theorem~1 on the opening page of the final
+large-field paper assumes that the effective coupling constants remain in a
+fixed weak-coupling interval; the following paragraph says that the proof of the
+$SU(2)$ coupling behavior announced in the 1987 paper had not been published
+\cite[p.~355]{Balaban1989LargeII}.  Moreover, the estimates are source-free
+stability results, not convergence of normalized observable expectations.  The
+present program therefore records both the coupling-flow input and the new
+source comparison as explicit obligations.
 
 \section{Fixed-volume setup}
 
-Let (G=SU(2)) and let \(\Lambda_{a,R}=a\mathbb Z^4/R\mathbb Z^4\) approximate a
-fixed physical four-torus.  The Wilson measure is
+Let $G=SU(2)$ and let
+$\Lambda_{a,R}=a\mathbb Z^4/R\mathbb Z^4$ approximate a fixed physical
+four-torus.  The Wilson probability measure is
 \[
  d\mu_{a,R}(U)=Z_{a,R}^{-1}e^{-S_{a,R}(U)}\prod_{e\in E^+}dU_e,
  \qquad
- S_{a,R}(U)=\beta(a)\sum_p\left(1-\frac12\operatorname{ReTr}U_p\right).
+ S_{a,R}(U)=\beta(a)\sum_p
+ \left(1-\frac12\operatorname{ReTr}U_p\right).
 \]
-Fix a physical block scale \(\ell\), set \(a_n=\ell L^{-n}\), and denote by
-\(Q_n\) the (n)-step gauge-covariant averaging map.  The exact identification
-of this notation with Balaban's averaging operation
-\cite{Balaban1985Averaging} is an explicit proof obligation.
+The bare trajectory must ultimately be fixed by a nonperturbative
+renormalization condition.  Perturbative asymptotic scaling is an input rather
+than a proof of the limit.
 
-For coarse closed paths \(C_1,\ldots,C_m\) and a function (h) holomorphic near
-\([-2,2]^m\), consider
+We use two source families.  Normalized plaquette characters provide a local
+stress test of every RG estimate.  Bounded holonomy functions of a terminal
+block variable provide the first cutoff-convergence target.
+
+\subsection{Local source stress test}
+
+For $j\in\tfrac12\mathbb N_0$ define
 \[
- \mathcal O_{n,h}(U)=h\bigl(
- \operatorname{TrHol}_{C_1}(Q_nU),\ldots,
- \operatorname{TrHol}_{C_m}(Q_nU)\bigr).
+ \phi_{j,p}(U)=\frac{1}{2j+1}\chi_j(U_p),
+ \qquad |\phi_{j,p}(U)|\le1.
 \]
-This is bounded and gauge invariant on real (SU(2)) configurations.  It is a
-fixed-scale cylinder observable, not a point-local field.
-
-\section{Analytic reduction}
-
-For finitely many such observables let
+For a finite representation set $\mathcal J$, smooth macroscopic sources $J_j$,
+and finitely many marked plaquettes, put
 \[
- Z_n(z)=\E_{\mu_{a_n,R}}\exp\left(\sum_{j=1}^qz_j\mathcal O_{n,j}\right),
- \qquad W_n(z)=\log Z_n(z).
+ G_{a,R}(J,z)=\E_{\mu_{a,R}}\exp\left\{
+ a^4\sum_p\sum_{j\in\mathcal J}J_j(c_p)\phi_{j,p}
+ +\sum_{r=1}^qz_r\phi_{j_r,p_r}\right\}.
 \]
-For (R=(R_1,\ldots,R_q)>0\), set
-\(\D_R=\{z\in\C^q:|z_j|<R_j\}\).
-
-\begin{theorem}[Summable holomorphic increments]\label{thm:analytic}
-Suppose every (W_n\) is holomorphic on \(\D_R\) and
+There are $6(R/a)^4$ unoriented plaquettes, and hence
 \[
- \lVert W_{n+1}-W_n\rVert_{\D_R}\le\delta_n,
- \qquad \sum_{n\ge0}\delta_n<\infty.
+ |G_{a,R}(J,z)|\le
+ \exp\left(6R^4\sum_{j\in\mathcal J}\lVert J_j\rVert_\infty
+          +\sum_{r=1}^q|z_r|\right).
 \]
-Then (W_n\) converges uniformly to a holomorphic (W_\infty\).  For every
-multi-index \(\alpha\),
+Elementary source analyticity is therefore not the hard statement.  The first
+RG task is to prove source-derivative bounds for every small-field and
+large-field polymer activity, uniformly in ultraviolet depth.  Raw plaquette
+characters are not advertised as the renormalized local field $\Tr F^2$;
+identity subtraction, multiplicative matching, and contact counterterms are
+separate problems.
+
+\subsection{Terminal block observables}
+
+Fix a physical block scale $\ell$ and let $a_n=\ell L^{-n}$.  Write $V_n$ for
+the terminal variable of the exact $n$-step block kernel.  The precise match
+between $V_n$ and Balaban's averaging and gauge conventions
+\cite{Balaban1985Averaging} is an open dictionary obligation.  For closed
+coarse-lattice paths $C_1,\ldots,C_m$ and bounded $h$, the intended class is
+\[
+ \mathcal O_{n,h}=
+ h\left(\Tr\operatorname{Hol}_{C_1}(V_n),\ldots,
+        \Tr\operatorname{Hol}_{C_m}(V_n)\right).
+\]
+It is a fixed-scale cylinder observable, not a point-local field.
+
+\section{Exact transport of a terminal source}
+
+\begin{proposition}[Block-kernel identity]\label{prop:block}
+Let $\eta_k$ be a finite measure on a compact configuration space $\Omega_k$
+and $K_k(U,dV)$ a finite block kernel.  Define
+\[
+ \eta_{k+1}(dV)=\int_{\Omega_k}\eta_k(dU)K_k(U,dV).
+\]
+For every bounded terminal observable $F$,
+\[
+ \int\eta_k(dU)K_k(U,dV)e^{zF(V)}
+ =e^{zF(V)}\eta_{k+1}(dV).
+\]
+The identity iterates through any finite composition of block kernels, and all
+field-independent vacuum-energy factors cancel in the normalized generating
+function.
+\end{proposition}
+
+\begin{proof}
+The source factor is measurable with respect to the terminal variable $V$ and
+therefore pulls through the $U$ integration.  Iteration is induction on the
+number of kernels.  Multiplicative constants occur in both numerator and
+denominator of the normalized expectation.
+\end{proof}
+
+If $K_k(U,dV)=\delta_{Q_kU}(dV)$, this is the fine-lattice observable
+$F(Q_{n-1}\cdots Q_0U)$.  For a genuinely constrained or stochastic kernel it
+is instead an observable of the extended joint measure.  These cases must not be
+identified before the published transformation is audited.
+
+\section{Complex-source reduction}
+
+Let $X_{n,1},\ldots,X_{n,q}$ obey $|X_{n,j}|\le B_j$ and set
+\[
+ Z_n(z)=\E\exp\left(\sum_{j=1}^qz_jX_{n,j}\right).
+\]
+
+\begin{theorem}[Uniform logarithmic source disc]\label{thm:bounded}
+Each $Z_n$ is entire and
+\[
+ |Z_n(z)-1|\le
+ \exp\left(\sum_jB_j|z_j|\right)-1.
+\]
+If a polyradius $\rho$ satisfies $S_\rho:=\sum_jB_j\rho_j<\log2$, then every
+$Z_n$ is nonzero on $\D_\rho$, its normalized logarithm $W_n=\Log Z_n$ is
+holomorphic there, and
+\[
+ \lVert W_n-W_m\rVert_{\D_\rho}
+ \le\frac{\lVert Z_n-Z_m\rVert_{\D_\rho}}
+              {2-e^{S_\rho}}.
+\]
+\end{theorem}
+
+\begin{proof}
+Boundedness permits differentiation under the expectation on compact source
+sets.  With $w=\sum_jz_jX_{n,j}$, use
+$|e^w-1|\le e^{|w|}-1$.  Thus $Z_n(\D_\rho)$ lies in the convex disc centered
+at one with radius $e^{S_\rho}-1<1$.  The principal logarithm is holomorphic on
+that disc.  Integrating $1/\zeta$ along the line segment from $Z_m(z)$ to
+$Z_n(z)$ gives the displayed estimate because the segment remains at distance
+at least $2-e^{S_\rho}$ from zero.
+\end{proof}
+
+\begin{theorem}[Summable cutoff comparison]\label{thm:analytic}
+Suppose, on a common polydisc $\D_\rho$,
+\[
+ \lVert Z_{n+1}-Z_n\rVert_{\D_\rho}\le\delta_n,
+ \qquad \sum_{n\ge0}\delta_n<\infty,
+\]
+and $S_\rho<\log2$.  Then $Z_n$ and $W_n=\Log Z_n$ converge uniformly.
+For every multi-index $\alpha$,
 \[
  \left|\partial^\alpha(W_\infty-W_n)(0)\right|
- \le \alpha!\prod_{j=1}^qR_j^{-\alpha_j}
+ \le \frac{\alpha!\rho^{-\alpha}}{2-e^{S_\rho}}
        \sum_{k=n}^{\infty}\delta_k.
 \]
 Consequently every fixed joint cumulant converges.
 \end{theorem}
 
 \begin{proof}
-The increment estimate makes (W_n\) uniformly Cauchy, and its limit is locally
-uniform and therefore holomorphic.  Apply the multivariable Cauchy formula to
-\(W_m-W_n\) on a smaller concentric polytorus and use
-\(\lVert W_m-W_n\rVert\le\sum_{k=n}^{m-1}\delta_k\).  Let (m\to\infty\), then
-let the smaller polyradius increase coordinatewise to (R\).
+The increment estimate makes $Z_n$ uniformly Cauchy.  Apply
+Theorem~\ref{thm:bounded} to its logarithms, telescope, and use the
+multivariable Cauchy estimate at the origin.  Boundary circles are reached by an
+interior approximation.
 \end{proof}
 
-\begin{theorem}[A sufficient zero-free criterion]\label{thm:log}
-Suppose (Z_n(0)=1\) and, for one \(0<\eta<1\),
-\(\lVert Z_n-1\rVert_{\D_R}\le\eta\) for every (n\).  Then the principal branch
-\(W_n=\log Z_n\) is holomorphic on \(\D_R\), and
+More generally, local uniform convergence $Z_n\to Z$ and $Z(0)=1$ already imply
+cumulant convergence on a sufficiently small common disc: continuity makes $Z$
+nonzero there, uniform convergence makes late $Z_n$ nonzero there, and Cauchy's
+formula applies to the normalized logarithms.  By contrast, convergence only on
+real sources is insufficient; $1+n^{-1/2}\sin(nz)$ converges uniformly to one
+on every bounded real interval while its first logarithmic derivative at zero is
+$\sqrt n$.
+
+\section{The open fixed-volume theorem}
+
+The principal target is now precise.  For finitely many bounded terminal block
+observables, prove on a cutoff-independent source polydisc
 \[
- \lVert W_n-W_m\rVert_{\D_R}
- \le(1-\eta)^{-1}\lVert Z_n-Z_m\rVert_{\D_R}.
-\]
-\end{theorem}
-
-\begin{proof}
-The range lies in the convex disc (B(1,\eta)\), on which the principal logarithm
-is holomorphic.  Integrating (1/w\) along the segment from (Z_m(z)\) to
-(Z_n(z)\) gives the estimate because the segment stays at distance at least
-\(1-\eta\) from zero.
-\end{proof}
-
-\begin{remark}
-Real-source convergence is insufficient.  The functions
-\(f_n(z)=\sin(nz)/n\) converge uniformly to zero on bounded real intervals while
-\(f_n'(0)=1\).  Similarly, (Z_n(z)=1+nz\) shows why normalization at zero does
-not supply a cutoff-independent logarithmic domain.
-\end{remark}
-
-\section{Open estimate}
-
-The principal target is a cutoff-independent polydisc and a summable estimate
-\[
- \sup_{z\in\D_R}|W_{n+1}(z)-W_n(z)|\le\delta_n,
+ \sup_{z\in\D_\rho}|Z_{n+1}(z)-Z_n(z)|\le\delta_n,
  \qquad \sum_n\delta_n<\infty,
 \]
-including all large-field polymers.  Theorem~\ref{thm:analytic} then completes the
-source-to-cumulant step.  A partition-function stability bound at each depth does
-not imply this comparison estimate.
+with every large-field and boundary polymer included.  Also prove that at least
+one limiting variance is positive.  Theorem~\ref{thm:analytic} then supplies all
+fixed connected source derivatives.  A uniform bound on each $Z_n$ separately
+does not imply this adjacent-depth comparison.
 
-Positive gradient-flow time offers an alternative bounded observable family, but
-the resulting fields are nonlocal over a four-dimensional radius of order
-\(\sqrt{8t}\) \cite{Luscher2010,RamosSint2016}.  They are therefore postponed
-until the RG-adapted cylinder theorem is understood.
+It is useful to phrase the needed norm minimally.  If $\nu_n$ is the normalized
+terminal measure and
+\[
+ \mathcal T_\rho=\left\{V\mapsto
+ e^{\sum_jz_jF_j(V)}:z\in\D_\rho\right\},
+\]
+then the required left side is exactly
+\[
+ \sup_{f\in\mathcal T_\rho}\left|\int f\,d(\nu_{n+1}-\nu_n)\right|.
+\]
+Convergence of full densities in total variation would suffice but is stronger
+than the theorem logically needs.
+
+\section{Reflection positivity and flowed observables}
+
+Reflection positivity should be retained as a kernel inequality for positive-time
+sources,
+\[
+ \sum_{r,s}\overline{c_r}c_s\,G_a[\Theta J_r+J_s]\ge0,
+\]
+not as a claim that an arbitrary complex source-deformed measure is reflection
+positive.
+
+Positive four-dimensional gradient-flow time offers perturbatively finite
+observable families, but the field is nonlocal over a radius of order
+$\sqrt{8t}$ \cite{Luscher2010,RamosSint2016}.  A flowed insertion at positive
+Euclidean time can therefore depend on links across the reflection plane.  Such
+observables are postponed until the RG-adapted fixed-scale theorem is understood.
+Spatial-only flow preserves the positive-time algebra but breaks $O(4)$ and lacks
+a corresponding all-orders renormalization theorem.
+
+\section{Nonclaims}
+
+The proposed milestone constructs neither point-local curvature polynomials nor
+an infinite-volume state.  It proves no clustering estimate and no spectral gap.
+Those require, among other inputs, a dense OS-positive local algebra and decay
+uniform in cutoff and volume in physical units.  Nonzero higher cumulants of a
+composite observable would also not by itself distinguish Yang--Mills theory
+from composites of a Gaussian field.
 
 \bibliographystyle{plain}
 \bibliography{references}

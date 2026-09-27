@@ -23,9 +23,9 @@ Balaban RG step for normalized plaquette characters. This local source family is
 the cleanest diagnostic for the small-field/large-field machinery, but its raw
 continuum limit is not advertised as a renormalized curvature field.
 
-This is deliberately weaker than the Clay problem.  It targets the first missing
-observable theorem beyond Balaban's ultraviolet-stability estimates while avoiding
-three later problems:
+This is deliberately weaker than the Clay problem. It targets a first missing
+observable theorem beyond Balaban's conditional, source-free ultraviolet-stability
+estimates while avoiding three later problems:
 
 1. removal of the infrared cutoff;
 2. construction of point-local renormalized curvature polynomials;

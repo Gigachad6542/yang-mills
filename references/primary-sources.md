@@ -63,9 +63,18 @@ The following papers form a dependency chain rather than interchangeable citatio
     and Bounds for the R Operation*, CMP **122** (1989), 355--392.
     [DOI](https://doi.org/10.1007/BF01238433).
 
-The published conclusion used at present is **ultraviolet stability**.  The active
-project must not silently strengthen that to convergence of normalized measures or
-observables.
+**Dependency warning.** The four-dimensional package must not be cited as an
+unconditional completed construction. On the opening page of *Large Field
+Renormalization II*, Theorem 1 assumes that the sequence of effective coupling
+constants remains in a specified weak-coupling interval. The following paragraph
+states that the proof of the SU(2) coupling-constant behavior announced as
+Theorem 2 of the 1987 paper had not been published. Exact quotations, equations,
+and page references are being recorded in `research/06-balaban-audit.md`.
+
+What the published estimates provide, under their stated hypotheses, is
+source-free ultraviolet stability of normalized RG densities/partition functions.
+The active project must not silently strengthen this to convergence of normalized
+measures or observables.
 
 ## Finite-IR-cutoff construction and flowed observables
 

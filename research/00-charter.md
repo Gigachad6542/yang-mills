@@ -48,6 +48,9 @@ asymptotic input rather than a definition of a continuum theory:
    four-dimensional theory.
 5. Computer-assisted estimates may certify a finite inequality, but simulations
    are not proof of a continuum limit.
+6. Balaban's four-dimensional estimates are used only with every stated
+   hypothesis, including control of the effective coupling sequence; an
+   announced but unpublished coupling-flow argument is not treated as a theorem.
 
 ## Non-claims of the active milestone
 
