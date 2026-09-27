@@ -43,7 +43,8 @@ estimates while avoiding three later problems:
 | Generating-functional convergence \(\Rightarrow\) convergence and factorial bounds for fixed cumulants | proved here |
 | Summable projective-density difference \(\Rightarrow\) the required generating-functional comparison | proved here |
 | Four-dimensional source-free \(RT\) density/vacuum bounds | published, conditional on a small effective-coupling sequence |
-| Terminal-test-preserving large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 |
+| Exact source-dependent lift of the fiber-normalized introductory \(R\) prototype, with a uniform zero-free polydisc | proved here |
+| Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 |
 | SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
 
@@ -68,6 +69,9 @@ estimates while avoiding three later problems:
 - `research/09-common-space-and-r-obstruction.md` -- the exact common-space
   reduction, the observable obstruction at \(R\), history-mixture bounds, and
   polymer-to-projective estimates.
+- `research/10-source-dependent-r-prototype.md` -- a proved multi-source
+  fiber-normalization theorem, its exact match to the introductory
+  \(R\)-prototype, and the remaining complete-\(R\) locality/summability gap.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified eight-page

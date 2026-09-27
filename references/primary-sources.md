@@ -82,6 +82,13 @@ has a second equivalent-but-not-equal step in the reverse Faddeev--Popov removal
 Observable expectations require a source/test-dependent extension or a
 quantitative error estimate.
 
+The page image also fixes an important detail lost in OCR: Eq. (0.3) uses
+\(dV|_{Z'}\), so the introductory prototype integrates only the variables in
+\(Z'\) with exterior variables fixed.  It is therefore termwise
+fiber-normalized.  `research/10-source-dependent-r-prototype.md` gives an exact
+source-dependent lift of that algebraic prototype.  This does not supply the
+localized source bounds for the complete \(R\)-operation.
+
 ## Finite-IR-cutoff construction and flowed observables
 
 1. J. Magnen, V. Rivasseau, and R. Sénéor, *Construction of \(YM_4\) with an

@@ -39,8 +39,11 @@ block integration. An M1 source depends only on the terminal block variable and
 factors outside every earlier exact \(T\)-integration. It does **not** factor
 through Balaban's large-field \(R\)-replacement, which preserves the unweighted
 integral but generally changes the density. The smaller, terminal-test
-\(R\)-extension called Robs in `09-common-space-and-r-obstruction.md` is therefore
-a prerequisite for using the published \(RT\) bounds in M1.
+\(R\)-extension called Robs is therefore a prerequisite for using the published
+\(RT\) bounds in M1.  The algebraic source lift of the introductory
+fiber-normalized prototype is proved in
+`10-source-dependent-r-prototype.md`; propagating that lift through the complete
+history-dependent localization and \(E/R/B\) estimates remains open.
 
 ## Stage M1: fixed-scale block observables
 
@@ -71,7 +74,11 @@ of total integrals while allowing the density to change. Consequently the
 physical terminal generating function is not identified with the integral of
 the published stabilized density. One must extend \(R\) to the terminal test or
 bound its cumulative observable bias; see
-`09-common-space-and-r-obstruction.md`.
+`09-common-space-and-r-obstruction.md`.  The exact fiber formula of the
+introductory \(R\)-prototype does admit a source-dependent normalization on the
+uniform disc \(\sum_jr_j|z_j|<\log2\), as proved in
+`10-source-dependent-r-prototype.md`.  What is missing is a complete
+source-stable \(R\) induction with uniform localization and summability.
 
 Choose finitely many real-valued observables
 \(\mathcal O_{n,1},\ldots,\mathcal O_{n,q}\), uniformly bounded by constants

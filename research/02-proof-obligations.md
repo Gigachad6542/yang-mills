@@ -10,7 +10,9 @@ H0 prove the SU(2) coupling-flow claim announced as CMP 109, Theorem 2
  |
  +--> H1 published source-free RT stability theorem (conditional on H0)
           |
-          +--> Robs make the measure-changing R step preserve terminal tests
+          +--> R0a exact source lift of the introductory fiber prototype
+                    |
+                    +--> Robs source-stable complete R localization/bounds
                     |
 
 P1 exact T block-map dictionary                       |
@@ -36,7 +38,8 @@ H1 + P1 --> S0 fully marked small/large-field RG --> local-field program
 | P0a | A source depending only on the output of an exact block kernel factors through that RG step. | proved here | `04-terminal-source-identity.md`. |
 | P0b | Match P0a to Balaban's exact deterministic average inside the group-delta constraint. | proved here from published formulas | CMP **98**, Eqs. (10)--(15); CMP **119**, Eq. (0.1); `04-terminal-source-identity.md`. This is an identity for \(T\), not for the large-field \(R\)-replacement. |
 | P1 | Identify the published block variable and its gauge covariance without changing conventions. | published input, audited | CMP **98**, Eqs. (10)--(15); Euclidean-symmetric variants in CMP **109**, Eqs. (0.4), (0.12). |
-| Robs | Extend each large-field \(R\)-operation so that it preserves the selected terminal generating functions, or bound its cumulative terminal-test bias by a quantity vanishing with the cutoff. | open; prerequisite for M1 through Balaban's \(RT\) route | CMP **122 I**, Eq. (0.4), p. 176 and the equivalence discussion on pp. 193--194, 200--201 show the first density-changing step; CMP **122 II**, p. 378 has a second. The prototype is termwise fiber-normalized, but complete \(R\) has only a global mass theorem. See `09-common-space-and-r-obstruction.md`. |
+| R0a | Lift the introductory fiber-normalized \(R\)-prototype to finitely many terminal sources and prove a cutoff-independent zero-free source domain. | proved here | CMP **122 I**, Eq. (0.3), p. 176 is exactly a restricted-variable fiber replacement. `10-source-dependent-r-prototype.md` proves the multi-source lift, distortion bounds, and sequential analytic-family identity. |
+| Robs | Identify and propagate R0a through every localized denominator, history, localization/exponentiation step, and the final reverse Faddeev--Popov equivalence, with source bounds uniform in ultraviolet depth; alternatively bound the cumulative physical terminal-test bias by a vanishing quantity. | open; prerequisite for M1 through Balaban's \(RT\) route | CMP **122 I**, pp. 177, 193--194, 200--201 and CMP **122 II**, p. 378. Nonzero source denominators are elementary; locality and summability of the source corrections are not. See `09` and `10`. |
 | S0 | Extend every small-field and large-field/polymer estimate to microscopic bounded plaquette-character sources, with analytic derivative bounds uniform in ultraviolet depth. | open parallel track | A full marked version of the published estimates. S0 is stronger than Robs, but the \(R\)-part of Robs cannot be omitted from terminal-source M1. |
 | P4 | Compare ultraviolet depths \(n+1\) and \(n\) for the physical \(T^n\)-pushforward measures on a common terminal lattice and obtain a summable observable-test bound. | open | Principal convergence estimate. It requires common-space compatibility, marginal matching, complete history control, and a scale gain beating lattice entropy. Abstract reductions are in `07` and `09`. |
 | P5 | Establish a cutoff-independent zero-free source polydisc for finitely many uniformly bounded observables. | proved here | Elementary estimate in `01-milestone-theorem.md` and `03-source-cumulant-lemma.md`. |
@@ -46,9 +49,11 @@ H1 + P1 --> S0 fully marked small/large-field RG --> local-field program
 
 ## Highest-risk interfaces
 
-1. **Observable-changing \(R\)-step.** The published \(R\)-operation preserves
-   the partition integral but generally changes the density. Vacuum stability
-   therefore cannot be inserted directly into a terminal-expectation proof.
+1. **Observable-changing \(R\)-step.** The introductory \(R\)-prototype is
+   fiber-normalized and now has an exact abstract source lift, but the published
+   complete construction changes the density and provides no source-stable
+   locality/summability theorem. Vacuum stability therefore cannot be inserted
+   directly into a terminal-expectation proof.
 2. **Depth comparison.** Balaban's stability theorem controls each ultraviolet
    depth but is not automatically a comparison theorem between physical depths.
 3. **Coupling flow.** Even the source-free four-dimensional bound assumes the
@@ -67,9 +72,10 @@ H1 + P1 --> S0 fully marked small/large-field RG --> local-field program
 
 ## Next proof attempt
 
-Run three explicit tracks. Track A constructs Robs, a terminal-test-preserving
-version of the large-field step, or a quantitative comparison between the
-physical and stabilized measures. Track B compares adjacent **physical** depths
+Run three explicit tracks. Track A upgrades the proved prototype lift R0a to
+Robs by retaining the analytic source family through the localized complete
+large-field step, or gives a quantitative comparison between the physical and
+stabilized measures. Track B compares adjacent **physical** depths
 on their first common lattice, with a complete history pairing and rooted
 polymer-difference estimate as specified in `09`. Track C reconstructs or
 replaces the unpublished coupling-flow proof. The full marked CMP **116** program

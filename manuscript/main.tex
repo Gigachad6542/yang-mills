@@ -35,7 +35,10 @@ First, a source depending only on the terminal variable factors through every
 earlier exact group-delta block integration.  This identity does not cross the
 large-field $R$-operation, which preserves the vacuum integral while generally
 changing the density; an observable-preserving extension of $R$ is a new explicit
-obligation.  Second, bounded observables have a uniform complex
+obligation.  For the introductory fiber-normalized $R$ prototype we construct an
+exact source lift and a uniform zero-free source polydisc; the remaining problem
+is to prove source-stable localization and summability for the complete
+history-dependent operation.  Second, bounded observables have a uniform complex
 zero-free source disc, and locally uniform convergence of their generating
 functions implies convergence and factorial estimates for every fixed joint
 cumulant.  The published four-dimensional Balaban estimates are used only under
@@ -64,9 +67,10 @@ fixed weak-coupling interval; the following paragraph says that the proof of the
 $SU(2)$ coupling behavior announced in the 1987 paper had not been published
 \cite[p.~355]{Balaban1989LargeII}.  Moreover, the estimates are source-free
 stability results, not convergence of normalized observable expectations.  The
-basic $R$-operation is normalized to preserve the integral of a density, but the
-paper explicitly replaces equality of densities by an equivalence meaning
-equality only after integration
+basic $R$-operation is normalized fiber by fiber in its introductory formula,
+but it replaces the conditional density on those fibers.  In the detailed
+construction the paper explicitly replaces equality of densities by an
+equivalence meaning equality only after integration
 \cite[pp.~176, 193--194, 200--201]{Balaban1989LargeI}; a second such step occurs
 in the complete operation \cite[p.~378]{Balaban1989LargeII}.
 The present program therefore records the coupling-flow input, the observable
@@ -205,6 +209,62 @@ $(2-\epsilon,\epsilon)$ have equal mass while the expectation of the second
 coordinate differs by $(1-\epsilon)/2$.  Thus the terminal source creates no
 new vertex inside $T$, but an $R$-operation preserving the selected weighted
 integrals, or a vanishing estimate for its cumulative test bias, remains open.
+\end{remark}
+
+\begin{proposition}[Source lift of a fiber-normalized replacement]
+\label{prop:rfiber}
+Let $x$ be a fiber variable with kernel $\kappa_y(dx)$ and $y$ exterior data.
+Let $p,q\ge0$ have finite, strictly positive fiber masses $P_0(y)$ and
+$Q_0(y)$.  For real tests $F_1,\ldots,F_m$, suppose that, on the supports of
+$p$ and $q$,
+\[
+ |F_j(x,y)-c_j(y)|\le r_j .
+\]
+Put $G_z=\sum_jz_jF_j$,
+\[
+ P_z(y)=\int e^{G_z}p\,d\kappa_y,\qquad
+ Q_z(y)=\int e^{G_z}q\,d\kappa_y,
+\]
+and
+\[
+ \mathcal R^F_z[p\mid q](x,y)
+ =e^{G_z(x,y)}q(x,y)\frac{P_z(y)}{Q_z(y)}.
+\]
+If $s(z):=\sum_jr_j|z_j|<\log2$, then $P_z,Q_z$ are nonzero,
+$\mathcal R^F_z$ is holomorphic in $z$, and
+\[
+ \int \mathcal R^F_z[p\mid q]\,d\kappa_y=P_z(y).
+\]
+Relative to the naively sourced unsourced replacement,
+\[
+ D_z(y):=\frac{\mathcal R^F_z[p\mid q]}
+ {e^{G_z}\mathcal R^F_0[p\mid q]}
+\]
+is independent of $x$ and satisfies
+\[
+ |D_z-1|\le\frac{2(e^s-1)}{2-e^s},\qquad
+ |\log D_z|\le2[-\log(2-e^s)].
+\]
+\end{proposition}
+
+\begin{proof}
+Write $g_z=G_z-\sum_jz_jc_j(y)$ and normalize $p,q$ on the
+fiber.  Both normalized moment-generating functions
+$a=\mathbb E_{\widehat p}e^{g_z}$ and
+$b=\mathbb E_{\widehat q}e^{g_z}$ lie in the disc centered at one with radius
+$e^s-1<1$.  Hence they are nonzero, $D_z=a/b$, and the displayed estimates
+follow from the triangle inequality and the principal-logarithm power series.
+The definition cancels $Q_z$ under fiber integration.
+\end{proof}
+
+\begin{remark}
+CMP~122 I, Eq.~(0.3), uses $dV|_{Z'}$ and is exactly of this fiber form
+\cite[p.~176]{Balaban1989LargeI}.  Proposition~\ref{prop:rfiber} solves the
+algebraic source-normalization problem for that prototype.  It does not prove
+that every localized denominator in the detailed operation has this form, nor
+that the corrections $D_z$ obey the local polymer estimates needed after
+history summation and exponentiation.  Those are the substantive open parts of
+the observable extension.
 \end{remark}
 
 \section{Complex-source reduction}
@@ -413,9 +473,14 @@ at two depths must either be tied to one physical terminal renormalization
 condition or supplemented by a summable bound on the residual action-coefficient
 mismatch.
 
-This target has three independent open tracks.  Track A is to construct an
-observable-preserving $R$-operation, or prove a vanishing cumulative bias
-between physical and stabilized measures.  Track B is to prove the adjacent-depth
+This target has three independent open tracks.  Track A is to propagate
+Proposition~\ref{prop:rfiber} through every localized denominator, history,
+exponentiation, and final Faddeev--Popov step with uniform $E/R/B$ bounds, or
+prove a vanishing cumulative bias between physical and stabilized measures.
+CMP~98, Proposition~5, gives a regular-small-field functional-derivative bound
+but not a uniform $L^{-3m}$ single-bond influence; already in the linearized
+contour average, some bonds adjacent to block centers can have order-one
+one-step weight \cite{Balaban1985Averaging}.  Track B is to prove the adjacent-depth
 physical comparison on the first common lattice, conditional on
 $0<g_k\le\gamma$, with common history centering and a rooted polymer gain that
 beats lattice entropy.  Track C is to supply or replace the unpublished $SU(2)$

@@ -117,6 +117,13 @@ in general \(R(N_k)\ne F_kR(D_k)\). For cumulants the analogue is an analytic
 family \(\rho_{k,z}=e^{zF_k}\rho_k\) and a nonlinear, source-dependent
 \(R_z\), including a sourced version of the final reverse Faddeev--Popov step.
 
+The algebraic part of the first option is now solved for the introductory
+fiber-normalized prototype: `10-source-dependent-r-prototype.md` constructs the
+exact multi-source replacement and proves a uniform zero-free polydisc.  The
+open content is its identification with every detailed localized denominator
+and the uniform localization/summability estimates needed to carry it through
+the complete \(R\)-induction.
+
 ## 3. Exact reduction to a one-layer physical defect
 
 The following reduction applies to the physical measures and is independent of
@@ -363,8 +370,9 @@ The exact logical chain is now:
 
 1. **H0:** construct the small-coupling trajectory with a fixed terminal
    renormalization condition.
-2. **Robs:** extend the large-field \(R\)-operation to preserve the selected
-   terminal generating functions, or prove a vanishing cumulative test bias.
+2. **Robs:** upgrade the proved source lift of the introductory fiber prototype
+   to the complete localized \(R\)-operation with uniform \(E/R/B\) bounds, or
+   prove a vanishing cumulative test bias.
 3. **P4a:** put adjacent physical cutoffs on a genuinely common lattice and
    verify compatibility of the iterated deterministic averages.
 4. **P4b:** match vacuum and marginal coordinates and compare complete
