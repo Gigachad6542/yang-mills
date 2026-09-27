@@ -18,6 +18,15 @@ prescribed terminal value \(g_K=g\) and two-sided linear control of
 \(g_k^{-2}\) in \(K-k\). The paper promises a separate proof; CMP **122 II**
 later says it was not published.
 
+Here \(\epsilon=L^{-K}\), so \(K=\log_L(1/\epsilon)\). CMP **109** defines
+\(\beta_{j+1}\) through the vacuum-polarization Hessian/moment in Eqs. (1.20)--
+(1.22), printed p. 264. It proves smoothness/analyticity and uniform boundedness,
+but no positive lower bound and no uniform expansion
+\(\beta_j(u)=b_*+O(u^2)\). The paper also warns on printed p. 298 that
+\(\beta_j\), although displayed as a function of \(g_{j-1}\), depends on all
+preceding couplings. Thus every hypothesis below must ultimately hold uniformly
+over admissible coupling histories.
+
 The lemma below isolates the elementary shooting argument from the hard field-
 theoretic assertion that the increments \(\beta_{k+1}\) really have uniform
 positive bounds along the full RG trajectory.
@@ -138,7 +147,8 @@ To apply Theorem 1 to the Balaban flow one must prove, rather than assume:
 1. the effective increment is defined consistently with the complete
    \(E/R/B\) density and all irrelevant coordinates;
 2. \(0<b_-\le\beta_{k+1}(g_k)\le b_+\) uniformly in scale and ultraviolet
-   depth on the required analytic domains;
+   depth, and uniformly in the preceding coupling history, on the required
+   analytic domains;
 3. enough continuity or monotonicity for the terminal-coupling shooting map;
 4. compatibility of those estimates with the large-field \(R\)-operation.
 
@@ -146,3 +156,16 @@ For the two-term asymptotic one additionally needs a uniform expansion of the
 increment through order \(H^{-1}\), with a summable \(O(H^{-2})\) remainder.
 Formal perturbative coefficients do not supply these nonperturbative uniform
 bounds by themselves.
+
+A concrete sufficient one-loop hypothesis would be
+
+\[
+ \beta_n(u;\text{history})=b_*+r_n(u;\text{history}),
+ \qquad b_*>0,
+ \qquad |r_n|\le Cu^2,
+\]
+
+plus the derivative bound needed for monotonicity. Choosing
+\(C\gamma^2<b_*\) gives \(b_\pm=b_*\pm C\gamma^2\) in Theorem 1. The
+irrelevant-polymer estimate CMP **109**, Eq. (0.29), does not provide this
+remainder bound; it controls a different part of the effective action.

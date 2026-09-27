@@ -69,3 +69,15 @@ estimates while avoiding three later problems:
 No partition-function bound is described as a continuum state, no subsequential
 limit as a unique limit, and no decay estimate as a spectral gap unless the dense
 observable algebra and physical-unit uniformity hypotheses are stated explicitly.
+
+## Build
+
+The manuscript requires [Tectonic](https://tectonic-typesetting.github.io/). Run
+
+```sh
+make manuscript
+```
+
+or provide an explicit executable with
+`make manuscript TECTONIC=/path/to/tectonic`. The verified output is written to
+`output/pdf/constructive-ym-fixed-volume-milestone.pdf`.

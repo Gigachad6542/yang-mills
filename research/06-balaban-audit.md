@@ -101,6 +101,29 @@ The density bound in CMP **122 II**, Eq. (0.1), printed pp. 355--356,
 
 is conditional and is not an inter-cutoff Cauchy estimate.
 
+The exact coupling recursion is
+
+\[
+ \frac1{g_1^2}=\frac1{g_0^2}-\beta_1(g_0)
+ \quad\text{(CMP **109**, Eq. (0.18), p. 255)},
+\]
+
+and generally
+
+\[
+ \frac1{g_{k+1}^2}=\frac1{g_k^2}-\beta_{k+1}(g_k)
+ \quad\text{(Eq. (0.20), p. 256; repeated as (2.15), p. 268)}.
+\]
+
+Equations (1.20)--(1.22), p. 264, extract \(\beta_{j+1}\) from a
+vacuum-polarization Hessian/moment. The paper supplies smoothness/analyticity and
+uniform boundedness but no uniform positive lower bound or expansion
+\(\beta_j(u)=b_*+O(u^2)\). Printed p. 298 also notes that \(\beta_j\) depends on
+all preceding couplings despite the one-variable notation. The irrelevant-
+polymer bound (0.29) is not a beta-function remainder estimate. The abstract
+backward-shooting step and the exact missing hypotheses are isolated in
+`08-coupling-flow-reduction.md`.
+
 ## Complete density structure
 
 CMP **119**, Eq. (2.18), p. 257, sums over nested small-/large-field histories.
