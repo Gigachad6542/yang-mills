@@ -77,9 +77,10 @@ Suppose that there are measurable fiber centers \(c_{h,j}(y)\) and constants
  \tag{2.2}
 \]
 
-For global dominated-convergence statements, also assume that each
-\(F_{h,j}\) is uniformly bounded, or replace this by a uniform exponential
-moment hypothesis.  Define
+For the summed identity and differentiation across \(h,y\), assume in addition
+that each \(F_{h,j}\) is uniformly bounded.  A locally uniform exponential
+moment dominating all source derivatives would be an admissible replacement,
+but is not needed for the bounded terminal observables used here.  Define
 
 \[
  \begin{aligned}
@@ -92,11 +93,14 @@ moment hypothesis.  Define
 \]
 
 The explicit factor \(e^{G_{h,z}}\) is part of the **full sourced density**.
-Equivalently, one can call \(q_hP_h(z)/Q_h(z)\) the replaced base density and
-retain the same explicit source outside all subsequent integrations.  Mixing
-these two conventions obscures the normalization identity.
+One may factor it as
+\(e^{G_{h,z}}\widetilde p_{h,z}\), where
+\(\widetilde p_{h,z}=q_hP_h(z)/Q_h(z)\), but this is a source-dependent base
+correction.  Moreover, \(e^{G_{h,z}}\) must remain inside every later
+integration over variables on which \(G_{h,z}\) depends.  Mixing the full-density
+and factored conventions obscures the normalization identity.
 
-### Theorem 1: exact source lift and a uniform zero-free polydisc
+### Theorem 1: exact source lift and a uniform zero-free domain
 
 Let
 
@@ -128,6 +132,10 @@ fiber-normalized replacement
 \[
  \mathcal R^F_{h,0}[p_h\mid q_h]=q_h\frac{P_h}{Q_h}.
 \]
+
+The set \(s(z)<\log2\) is a weighted complete Reinhardt
+\(\ell^1\)-domain.  In particular, every polydisc with
+\(\sum_jr_j\rho_j<\log2\) lies inside it.
 
 ## 3. Quantitative distortion bounds
 
@@ -164,16 +172,19 @@ In particular,
 
 and the same lower bound holds with \(P_h\) in place of \(Q_h\).
 
-Relative to naively multiplying the unsourced replacement by the source, the
-extra correction is independent of the fiber variable \(x\):
+Relative to naively multiplying the unsourced replacement by the source, define
+the fiber scalar
 
 \[
  D_h(z,y):=
- \frac{\mathcal R^F_{h,z}[p_h\mid q_h]}
-      {e^{G_{h,z}}\mathcal R^F_{h,0}[p_h\mid q_h]}
+ \frac{P_h(z,y)/P_h(y)}{Q_h(z,y)/Q_h(y)}
  =\frac{a_h(z,y)}{b_h(z,y)}.
  \tag{3.3}
 \]
+
+Where \(q_h(x,y)>0\), this equals the density ratio
+\(\mathcal R^F_{h,z}/(e^{G_{h,z}}\mathcal R^F_{h,0})\).  Definition (3.3)
+remains meaningful where both densities vanish and avoids a spurious \(0/0\).
 
 It obeys
 
@@ -187,7 +198,9 @@ It obeys
  \tag{3.4}
 \]
 
-where the logarithm is the branch fixed by \(\log D_h(0)=0\).  On a polydisc
+where
+\(\log D_h:=\operatorname{Log}a_h-\operatorname{Log}b_h\), with each principal
+branch taken in the disc around one, so that \(\log D_h(0)=0\).  On a polydisc
 \(\sum_jr_j\rho_j\le s_0<\log2\), Cauchy's estimate gives
 
 \[
@@ -285,14 +298,17 @@ commutes with that source.
 For one real \(F\), choosing the midpoint of its essential fiber range gives
 \(r=\operatorname{osc}_{\rm fiber}(F)/2\), improving the source disc by a
 factor of two over an uncentered norm bound.  A sufficient elementary condition
-for a sequence of source corrections is summability of the fiber influences
-\(\sum_kd_{h,k}\).  Without such an estimate, per-step
-\(O(|z|d_{h,k})\) corrections may accumulate with ultraviolet depth.
+for a compatible history-resolved composition is a common summable envelope,
+for example
+\(\sum_k\sup_{h,y}d_{h,k}<\infty\).  A weighted variant can be used if its
+weights are retained through the history sum.  Without such an estimate,
+per-step \(O(|z|d_{h,k})\) corrections may accumulate with ultraviolet depth.
 
 ## 5. History sums do not remove the difficulty
 
-Suppose at a fixed configuration the explicit source factor is common and the
-unsourced history summands \(r_h\) are positive.  Then
+Suppose at a common pointwise configuration the explicit source factor is
+common, the unsourced history summands \(r_h\) are positive, and
+\(0<\sum_hr_h<\infty\).  Then
 
 \[
  \frac{\sum_he^{G_z}r_hD_h}{e^{G_z}\sum_hr_h}
@@ -334,8 +350,10 @@ After one sourced step the input is no longer necessarily a pure exponential
 times a positive source-free density.  The following general form is therefore
 the appropriate algebraic induction.
 
-Let \(a_h(z,x,y)\) and \(b_h(z,x,y)\) be arbitrary holomorphic integrable
-families, set
+Let \(a_h(z,x,y)\) and \(b_h(z,x,y)\) be \(L^1(d\kappa_h)\)-valued
+holomorphic families; equivalently, pointwise holomorphy together with local
+\(L^1\) domination on every compact source set suffices.  Assume
+\(0<A_h(0,y),B_h(0,y)<\infty\), and set
 
 \[
  A_h(z,y)=\int a_h(z,x,y)d\kappa_h,
@@ -358,7 +376,8 @@ Then
  \tag{6.2}
 \]
 
-exactly.  If \(a_h(0),b_h(0)>0\) and, pointwise on a common source domain,
+exactly.  If \(a_h(0,x,y),b_h(0,x,y)>0\) on the points where the ratios below
+are used and, pointwise on a common source domain,
 
 \[
  \left|\frac{a_h(z)}{a_h(0)}-1\right|\le\varepsilon_a<1,
@@ -386,35 +405,160 @@ and
 These follow by writing the ratio as the product of the pointwise template
 ratio, the normalized \(A\)-ratio, and the inverse normalized \(B\)-ratio.
 
-## 7. Sensitivity audit: what CMP 98 does and does not give
+## 7. Closed-loop cancellation and the actual sensitivity gap
 
 CMP **98**, Proposition 5, proves a functional-derivative bound for the iterated
 average on a regular small-field domain, uniform in the lattice spacing.  It
-does **not** state a uniform single-bond influence of order
-\(L^{-3(K-k)}\), and it supplies no comparable iterated estimate on arbitrary
-large-field fibers.
+does not by itself state the source-sensitive estimate needed here.  The
+linearized contour geometry can nevertheless be analyzed exactly, and gauge
+invariance removes an apparent hub-bond obstruction for closed loops.
 
-There is already an obstruction in the linearization of its contour average.
-The average over \(L^d\) starting points carries a factor \(L^{-d}\), but every
-radial contour leaving a block center starts along one of only \(2d\) adjacent
-bonds.  By pigeonhole, at least one such hub bond is used by order \(L^d\)
-contours and can therefore have order-one one-step weight.  Thus the often
-guessed \(L^{-(d-1)}\) influence is at best a generic-position heuristic, not a
-uniform estimate.
+CMP **95**, Eqs. (1.6)--(1.8), takes the coarse point \(y\) at a **corner** of
+the block \(B(y)\) and uses axis-ordered contours \(\Gamma_{y,x}\).  A single
+coarse link therefore does have order-one radial weights near that corner.
+Write the one-step linearized average as
 
-Iterated locality still says which components can affect a fixed terminal loop.
-At a scale \(m\) below the terminal lattice, its pullback occupies order
-\(L^{4m}\) fine cells.  Even combining a **heuristic** generic influence
-\(L^{-3m}\) with absolute component counting produces \(L^m\), not a summable
-upper bound.  Balaban's first large-field factor is
-\(\exp[-A(\log g^{-2})^{p}]\); along \(g^{-2}\asymp m\), this is subexponential
-in \(m\) and does not repair that crude absolute count.
+\[
+ (QA)(c)=\Lambda(c_-)+S(c)-\Lambda(c_+),
+ \tag{7.1}
+\]
 
-This calculation shows only that the proposed absolute-value proof does not
-close.  It does **not** prove that the true conditional bias diverges.  A useful
-bound would need cancellation, a stronger probabilistic estimate, a different
-observable/RG geometry, or a comparison norm that avoids summing worst-case
-single-bond influences.
+where
+
+\[
+ \Lambda(y)=L^{-d}\sum_{x\in B(y)}A(\Gamma_{y,x}),\qquad
+ S(c)=L^{-d}\sum_{x\in B(c_-)}A([x,x+Le_\mu]).
+ \tag{7.2}
+\]
+
+Here \(c=\langle y,y+Le_\mu\rangle\).  For an antisymmetric current \(\tau\)
+on oriented coarse bonds define
+
+\[
+ (\operatorname{div}\tau)(y)
+ =\sum_{c_-=y}\tau(c)-\sum_{c_+=y}\tau(c).
+\]
+
+### Lemma 2: a divergence-free current has no radial hub term
+
+Pairing (7.1) with \(\tau\) gives
+
+\[
+ \sum_c\tau(c)(QA)(c)
+ =\sum_b\tau'(b)A(b)
+  +\sum_y(\operatorname{div}\tau)(y)\Lambda(y),
+ \tag{7.3}
+\]
+
+where
+
+\[
+ \tau'(b)=L^{-d}\sum_c\tau(c)\,
+ \#\{x\in B(c_-):b\subset[x,x+Le_\mu]\}.
+ \tag{7.4}
+\]
+
+If \(\operatorname{div}\tau=0\), then
+
+\[
+ \operatorname{div}\tau'=0,\qquad
+ \lVert\tau'\rVert_\infty\le L^{1-d}\lVert\tau\rVert_\infty,\qquad
+ \lVert\tau'\rVert_1\le L\lVert\tau\rVert_1.
+ \tag{7.5}
+\]
+
+### Proof
+
+The two \(\Lambda\)-terms telescope after summing over coarse bonds and give the
+last term in (7.3), which vanishes for a divergence-free current.  A straight
+segment \([x,x+Le_\mu]\) has divergence
+\(\delta_x-\delta_{x+Le_\mu}\).  Summing its contribution over
+\(x\in B(c_-)\), and then over \(c\), gives
+
+\[
+ (\operatorname{div}\tau')(z)
+ =L^{-d}(\operatorname{div}\tau)(y(z)),
+\]
+
+where \(y(z)\) is the corner of the block containing \(z\).  Finally, a fine
+bond in direction \(\mu\) lies in at most \(L\) of the straight segments in
+(7.4), each weighted by \(L^{-d}\), proving the sup bound.  There are \(L^d\)
+segments of length \(L\) per coarse bond, proving the \(\ell^1\) bound.
+\(\square\)
+
+The linearized current of a closed terminal loop is divergence-free.  Iterating
+Lemma 2 therefore gives the **uniform**, not merely generic-position, estimate
+
+\[
+ \lVert\tau^{(m)}\rVert_\infty
+ \le L^{(1-d)m}\lVert\tau\rVert_\infty.
+ \tag{7.6}
+\]
+
+This proves the \(L^{-3m}\) single-bond influence in \(d=4\) at the trivial-field
+linearization for closed-loop tests.  It does not prove the nonlinear
+large-field estimate.  Three interfaces remain:
+
+1. the first level above an \(R\)-component may contain irregular fields, where
+   the spectral logarithms and Baker--Campbell--Hausdorff terms are not governed
+   by the linear telescoping argument;
+2. at a nontrivial regular background, the derivative of a loop is
+   covariantly divergence-free and curvature corrections must be quantified;
+3. the source correction depends on the difference between the true and model
+   conditional means, not only on the oscillation of the terminal test.
+
+Conditional on regular propagation after the first affected level, the natural
+component influence has the form
+
+\[
+ \delta_\Lambda\lesssim
+ C(|\Lambda|+L^d)L^{(1-d)m}.
+ \tag{7.7}
+\]
+
+The factor \(L^{dm}\) counting possible fine cells then turns a first-order
+absolute bias \(O(\delta_\Lambda)\) with an order-one conditional-mean mismatch
+into a bound of order
+
+\[
+ \varepsilon_mL^m,
+ \tag{7.8}
+\]
+
+per terminal loop bond.  Here \(\varepsilon_m\) denotes the large-field
+component density after lattice-animal and history summation.  Balaban's
+first suppression factor behaves like
+\(\varepsilon_m=\exp[-A(\log(bm))^{p_0}]\), which is subexponential and cannot
+beat \(L^m\).  This shows that an order-one first-order mismatch estimate does
+not close; it does not show that the true bias diverges.
+
+If instead the conditional-mean mismatch supplies a factor
+\(\eta_m\), the first-order sum is bounded by
+\(\varepsilon_mL^m\eta_m\).  A second-order estimate
+\(O(\delta_\Lambda^2)\) gives
+\[
+ \varepsilon_m|\Lambda|^2L^{(2-d)m},
+ \tag{7.9}
+\]
+which is geometrically summable in \(d=4\), subject to uniform control of
+component shapes, histories, and additional irregular levels.
+
+A precise replacement for the earlier vague summability request is therefore:
+
+> **Y6'.**  In Balaban's local axial frame, let \(\Pi^\perp\) remove gradient
+> directions.  For every \(R\)-component \(\Lambda\) at scale \(K-m\), prove,
+> uniformly in exterior fields and histories,
+> \[
+> \left\|\Pi^\perp\left(
+> \mathbb E_{\widehat p_\Lambda}[A_\Lambda\mid V_c]
+> -\mathbb E_{\widehat q_\Lambda}[A_\Lambda\mid V_c]\right)\right\|_\infty
+> \le\eta_m,
+> \]
+> with \(\sum_m\varepsilon_mL^m\eta_m<\infty\), and control the quadratic
+> remainder by (7.9), including all irregular-level costs.
+
+Establishing Y6' is a Yang--Mills estimate; the linear current lemma only
+identifies the gauge-invariant direction in which it is needed.
 
 ## 8. What remains open for the complete \(R\)-operation
 
@@ -426,8 +570,9 @@ are:
    nonzero fiber pair of the form used above;
 2. retain the history/fiber labels through all subsequent localization and
    exponentiation steps;
-3. prove a cutoff-uniform fiber-influence or direct marked-polymer bound for the
-   selected terminal observables, including large-field configurations;
+3. extend Lemma 2 from the trivial-field linearization to the irregular first
+   level and regular curved backgrounds, and prove Y6' (or a direct
+   marked-polymer substitute) for the selected terminal loop observables;
 4. control several components, mixed fiber differences, and unmatched
    histories without losing the common source disc;
 5. show that the source corrections fit the analytic/local \(E/R/B\) density
