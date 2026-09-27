@@ -1,77 +1,126 @@
-# Milestone theorem: fixed-volume block-observable convergence
+# Milestone theorem: source-stable RG and block-observable convergence
 
-Status: **target**.  This file specifies what would count as completion; it is not
-a theorem currently proved in the literature or in this repository.
+Status: **target**. This file specifies what would count as completion; it does
+not state a theorem currently proved in the literature or in this repository.
 
-## RG-adapted observable class
+## Stage S0: local-source stress test
 
-Fix a physical observation scale \(\ell>0\) for which \(R/\ell\in\mathbb N\).
-For lattice spacings \(a_n=\ell L^{-n}\), let \(Q_n\) denote the (n)-fold
-gauge-covariant block map used by the chosen Balaban RG construction.  Its output
-is a coarse (SU(2)) connection \(V=Q_nU\) on the \(\ell\)-lattice, modulo the
-block gauge convention.
+For (j\in\tfrac12\mathbb N_0) and an oriented plaquette (p), put
 
-Let \(C_1,\ldots,C_m\) be closed coarse-lattice paths contained in a fixed proper
-subset of the torus, and let \(h\) be holomorphic on a complex neighborhood of
-\([-2,2]^m\).  Define
+\[
+ \phi_{j,p}(U)=\frac{1}{2j+1}\chi_j(U_p),
+ \qquad |\phi_{j,p}(U)|\le 1.
+\]
+
+For a finite representation set \(\mathcal J\), smooth macroscopic sources
+\(J_j\), and finitely many marked plaquettes, define
+
+\[
+ G_{a,R}(J,z)=\mathbb E_{\mu_{a,R}}\exp\!\left\{
+ a^4\sum_p\sum_{j\in\mathcal J}J_j(c_p)\phi_{j,p}
+ +\sum_{r=1}^qz_r\phi_{j_r,p_r}\right\}.
+\]
+
+Stage S0 asks for the full small-field/large-field Balaban representation with
+these sources, analytic source-dependent polymer activities, and scale-uniform
+derivative bounds in the same localization norms as the vacuum construction.
+This is a test of whether sources survive the published RG machinery. It does
+**not** assert cutoff convergence. Raw plaquette characters tend toward their
+identity contribution and are not, without subtraction and matching, the
+renormalized local field \(\operatorname{tr}F^2\).
+
+## Stage M1: fixed-scale block observables
+
+Fix a physical observation scale \(\ell>0\) with \(R/\ell\in\mathbb N\). For
+lattice spacings \(a_n=\ell L^{-n}\), let \(Q^{(n)}\) provisionally denote the
+\(n\)-fold gauge-covariant block operation in the chosen Balaban construction.
+Its terminal variable is a coarse \(SU(2)\) connection \(V\) on the
+\(\ell\)-lattice, subject to the construction's gauge convention.
+
+Let \(C_1,\ldots,C_m\) be closed coarse-lattice paths and let \(h\) be a bounded
+continuous function on \([-2,2]^m\) (holomorphic on a complex neighborhood when
+field-complexification estimates require it). Define provisionally
 
 \[
  \mathcal O_{n,h}(U)
- =h\!\left(\operatorname{Tr}\operatorname{Hol}_{C_1}(Q_nU),\ldots,
-           \operatorname{Tr}\operatorname{Hol}_{C_m}(Q_nU)\right).
+ =h\!\left(\operatorname{TrHol}_{C_1}(Q^{(n)}U),\ldots,
+           \operatorname{TrHol}_{C_m}(Q^{(n)}U)\right).
 \]
 
-For real (SU(2)) configurations this is bounded and gauge invariant.  The use of
-the final block field is structural: after the exact block-variable insertion the
-source stays at the terminal RG scale instead of producing a new ultraviolet
-vertex at every step.
-
-The precise definition of \(Q_n\), including its gauge covariance, path choices,
-and compatibility with Balaban's large-field domains, is Proof Obligation P1.
-
-## Target statement M1
+The notation is intentionally conditional: P1 must identify the exact published
+block kernel, determine whether it is a deterministic map or a constrained
+integration, and replace this display if necessary. The structural requirement
+is that the source depend only on the terminal block variable. It then remains at
+the terminal scale instead of generating a new ultraviolet vertex at every step.
 
 Choose finitely many real-valued observables
-\(\mathcal O_{n,1},\ldots,\mathcal O_{n,q}\) from the class above and set
+\(\mathcal O_{n,1},\ldots,\mathcal O_{n,q}\), uniformly bounded by constants
+\(B_1,\ldots,B_q\), and set
 
 \[
  Z_n(z)=\mathbb E_{\mu_{a_n,R}}
  \exp\!\left(\sum_{j=1}^q z_j\mathcal O_{n,j}\right),
- \qquad W_n(z)=\log Z_n(z),
  \qquad z\in\mathbb C^q.
 \]
 
-There should exist a polyradius \(\rho=(\rho_1,\ldots,\rho_q)>0\), independent of
-(n), and a holomorphic function (W_\infty\) on
-\(D_\rho=\{z:|z_j|<\rho_j\}\), such that:
+### Target M1
 
-1. **Uniform zero-free source domain.**  (Z_n\) is nonzero on (D_\rho\), and the
-   branch (W_n(0)=0) is holomorphic there.
-2. **Summable cutoff increments.**  There are \(\delta_n\ge0\) with
-   \(\sum_n\delta_n<\infty\) such that
+There should be a polydisc \(D_\rho\), independent of \(n\), and a holomorphic
+\(Z_\infty\) such that
+
+1. **Summable cutoff comparison.** There are \(\delta_n\ge0\),
+   \(\sum_n\delta_n<\infty\), for which
    \[
-      \sup_{z\in D_\rho}|W_{n+1}(z)-W_n(z)|\le\delta_n.
+      \sup_{z\in D_\rho}|Z_{n+1}(z)-Z_n(z)|\le\delta_n.
    \]
-3. **Boundary-condition robustness.**  Replacing the periodic fine-lattice
-   boundary condition by any member of a stated admissible class changes
-   (W_n\) by a quantity tending uniformly to zero on every smaller polydisc.
-4. **Nondegeneracy.**  At least one limiting variance
-   \(\partial_i\partial_jW_\infty(0)\) is nonzero.
+2. **Large-field completeness.** The comparison includes every large-field and
+   boundary polymer; it is not only a small-field expansion.
+3. **Nondegeneracy.** At least one limiting variance is strictly positive.
 
-## Consequence M1-C
+Uniform boundedness already gives an elementary cutoff-independent zero-free
+subdisc:
 
-Target M1 implies convergence of every fixed joint cumulant, with quantitative
-tails and factorial bounds.  This implication is proved independently in
-`03-source-cumulant-lemma.md`.  It is not the open part of the project.
+\[
+ |Z_n(z)-1|
+ \le \exp\!\left(\sum_jB_j|z_j|\right)-1<1
+ \quad\text{if}\quad
+ \sum_jB_j|z_j|<\log2.
+\]
+
+Thus zero-freeness is **proved here**, not a separate RG conjecture. On that
+subdisc \(W_n=\log Z_n\) is holomorphic, and the summable comparison yields
+convergence of all fixed joint cumulants by `03-source-cumulant-lemma.md`.
+
+### Extension M1b: boundary robustness
+
+After M1, compare periodic boundary conditions with an explicitly stated
+admissible class. Uniform convergence of the corresponding normalized generating
+functions on smaller source polydiscs is useful for infrared work but is not part
+of the minimal fixed-torus theorem.
+
+## Reflection-positivity boundary
+
+Reflection positivity is a property of the Wilson measure paired with its
+positive-time observable algebra. The correct generating-functional statement is
+
+\[
+ \sum_{r,s}\overline{c_r}c_s\,
+ G_a[\Theta J_r+J_s]\ge0.
+\]
+
+No claim is made that a general complex source-deformed measure is itself
+reflection positive. Four-dimensional positive-flow observables also need not lie
+in the positive-time algebra because the flow crosses the reflection plane.
 
 ## Acceptance criteria
 
 M1 is complete only if:
 
-- the (Q_n) used in the observable is exactly the map controlled by the cited RG
-  theorem, rather than an analogous informal average;
-- constants are independent of the ultraviolet depth (n);
-- vacuum-energy normalizations cancel in the normalized (Z_n(z)/Z_n(0));
+- the terminal block variable is exactly the one controlled by the cited RG
+  theorem, rather than an informal average;
+- constants are independent of ultraviolet depth \(n\);
+- vacuum-energy normalizations cancel in the normalized generating function;
 - large-field polymers are included;
 - convergence, rather than compactness or boundedness, is proved;
-- no statement about point-local fields or a mass gap is inferred from M1 alone.
+- no statement about point-local fields, infinite volume, or a mass gap is
+  inferred from M1 alone.
