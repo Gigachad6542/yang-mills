@@ -8,7 +8,7 @@ source that is simple for Balaban's RG.
 | Family | Main advantage | Main obstruction | Project role |
 |---|---|---|---|
 | Normalized plaquette characters | Exactly local, gauge invariant, uniformly bounded, compatible with the Wilson positive-time algebra | The raw limit is dominated by the identity; \(a^{-4}\)-scaled \(\operatorname{tr}F^2\) needs identity subtraction, matching, and contact counterterms | Stage S0 stress test for source-dependent small/large-field RG |
-| Terminal block-holonomy characters | Uniformly bounded; the source factors through every exact (T)-block map | Balaban's (R)-operation changes the density while preserving only its integral; a terminal-test (R)-extension is open, and fixed-scale fields are not point-local | Stage M1 cutoff-convergence target |
+| Terminal block-holonomy characters | Uniformly bounded; the source factors through every exact \(T\)-block map | Balaban's \(R\)-operation changes the density while preserving only its integral; a terminal-test \(R\)-extension is open, and fixed-scale fields are not point-local | Stage M1 cutoff-convergence target |
 | Four-dimensional Wilson-flow fields/loops | Positive-flow observables have the best perturbative UV control | Flow diffuses across the time-reflection plane over radius \(\sqrt{8t}\); energy-density bounds grow with the cutoff | Later continuum-oriented theorem, without automatic RP claim |
 | Spatial-flow spatial-loop characters | Gauge invariant, bounded, and remain inside a fixed time slice | Break \(O(4)\); no all-orders finiteness theorem comparable to four-dimensional flow | Later OS-compatible smoothing candidate |
 
@@ -90,7 +90,7 @@ an observable in the OS positive-time algebra.
 
 1. Use plaquette characters to expose every source-dependent estimate in the
    published RG machinery.
-2. Construct a terminal-test-preserving (R)-step (or a vanishing (R)-bias
+2. Construct a terminal-test-preserving \(R\)-step (or a vanishing \(R\)-bias
    estimate), then prove the M1 physical cutoff comparison for block-holonomy
    characters.
 3. Investigate bounded flowed-loop characters. Use full flow for continuum UV
