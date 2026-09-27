@@ -31,6 +31,18 @@ estimates while avoiding three later problems:
 2. construction of point-local renormalized curvature polynomials;
 3. a physical-unit mass gap.
 
+## Current theorem status
+
+| Component | Status |
+|---|---|
+| Exact transport of a terminal source through Balaban's group-delta block transformation | proved here from the published formula |
+| Uniform zero-free complex disc for finitely many bounded observables | proved here |
+| Generating-functional convergence \(\Rightarrow\) convergence and factorial bounds for fixed cumulants | proved here |
+| Summable projective-density difference \(\Rightarrow\) the required generating-functional comparison | proved here |
+| Four-dimensional source-free density bounds | published, conditional on a small effective-coupling sequence |
+| SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
+| Adjacent-cutoff comparison of terminal densities | open; principal M1 estimate |
+
 ## Repository map
 
 - `research/00-charter.md` -- scope, conventions, and non-claims.
@@ -47,6 +59,8 @@ estimates while avoiding three later problems:
   criterion reducing adjacent-cutoff control to cumulant convergence.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
+- `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified six-page
+  build of the current manuscript.
 
 ## Immediate rule
 

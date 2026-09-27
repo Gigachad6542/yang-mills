@@ -46,7 +46,7 @@ in `04-terminal-source-identity.md`.
 
 Let \(C_1,\ldots,C_m\) be closed coarse-lattice paths and let \(h\) be a bounded
 continuous function on \([-2,2]^m\) (holomorphic on a complex neighborhood when
-field-complexification estimates require it). Define provisionally
+field-complexification estimates require it). Define
 
 \[
  \mathcal O_{n,h}(U)

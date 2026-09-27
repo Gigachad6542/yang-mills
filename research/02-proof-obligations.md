@@ -1,6 +1,7 @@
 # Proof-obligation ledger
 
-Statuses: **proved here**, **published input**, **open**, **blocked pending audit**.
+Statuses: **proved here**, **published input**, **published conditional input**,
+and **open**.
 
 ## Dependency graph
 
