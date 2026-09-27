@@ -382,3 +382,9 @@ coupling assumption and the unpublished proof of CMP 109 Theorem 2), matches
   check (Y1)) each first-type step preserves the \(V_k|_{\Lambda^c}\)-marginal of
   each term. The toy model in Section 1.2 is exactly this mechanism, and the
   classification table stands.
+- **Section 1.4, second erratum.** For gauge-invariant loop observables the
+  hub weights cancel exactly at the linearized level, because pulled-back loop
+  currents stay divergence-free. So \(L^{(1-d)m}\) is a uniform linearized
+  bound for them after all. See `claude-review-research-10.md`, Section 2.
+  The first-order summability problem is unaffected: it comes from the number
+  of components, not from hubs.

@@ -13,6 +13,16 @@ and I accept all three corrections:
 - The reversed Faddeev-Popov step is now conditional on a termwise normalized
   gauge-orbit identity (Sections 0 and 6).
 
+**Revision 2 (partly undoes my hub correction).** For **gauge-invariant loop
+observables**, the hub weights of Section 4.2 cancel exactly at the linearized
+level. The pulled-back loop current stays divergence-free, the radial terms
+telescope away, and \(\sup|\tau^{(m)}|\le L^{(1-d)m}\) holds uniformly in
+position. Hub weights of order one remain real for single coarse links, for
+irregular configurations, and, through curvature corrections, for nontrivial
+backgrounds. The reference point is also a block **corner**, not a centre
+(CMP 95, Eqs. (1.6)-(1.7)). Proof and consequences are in
+`claude-review-research-10.md`, Section 2.
+
 Sources: the OCR text in `/private/tmp/balaban_audit/`: `cmp122i.md` (CMP 122
 I), `cmp122ii.md` (CMP 122 II) and `cmp98.md` (CMP 98). The `.real.pdf` files
 there are paywall HTML pages, not scans. The OCR drops or garbles most
@@ -41,12 +51,14 @@ the surrounding prose and must be checked against a scan.
    whenever \(|z|\operatorname{osc}f<\log2\), with no sensitivity estimate
    needed. It is analytic in \(z\), but in general **not** analytic in the
    outside fields (Section 3).
-4. **Sensitivity.** The \(L^{-3(K-k)}\) bound I proposed in the referee report is
-   **wrong as a uniform bound**. Averaging (42) runs contours out of the block
-   centres. Already in the linearization, some bonds near each centre carry a
-   one-step weight of at least about \(1/(2d)\). For irregular configurations
-   CMP 98 gives no bound beyond one step. Loop length enters only through
-   support and counting (Section 4).
+4. **Sensitivity** (as revised in Revision 2). For single coarse links, the
+   \(L^{-3(K-k)}\) bound is **not** uniform. Averaging (42) runs contours out of
+   the block corners, and hub bonds there carry order-one one-step weight. For
+   gauge-invariant loop observables, the hub terms cancel at the linearized
+   level, and \(L^{(1-d)m}\) is uniform. What remains open: the irregular first
+   step above a large-field component, where CMP 98 gives no control, and
+   curvature corrections at nontrivial backgrounds. Loop length enters only
+   through support and counting (Section 4).
 5. **Lemma R0.1** (Section 5) is proved. It needs inputs (Y1)-(Y6).
 6. **The reversed Faddeev-Popov step** (CMP 122 II, p. 378) passes the source
    **provided** it is a termwise normalized gauge-orbit identity for
@@ -279,9 +291,13 @@ the nonlinear average is heuristic. One step gives weight
 - **Totals.** Summed over a block, the radial weights are of order \(dL\), and
   the straight-segment weights of order \(L\).
 
+*(Revision 2: the following applies to single coarse links, which are
+gauge-covariant. For gauge-invariant loop observables, the radial terms cancel
+exactly; see `claude-review-research-10.md`, Section 2.)*
+
 Consequences:
 - The one-step weights range from \(L^{-d}\) up to order 1. No uniform
-  \(L^{1-d}\) bound holds, even in the linearization.
+  \(L^{1-d}\) bound holds for single links, even in the linearization.
 - After \(m\) steps, a typical bond has weight around \(L^{-(d-1)m}\). The
   largest weights sit on nested hub spines and decay only like
   \((w_{\max})^m\), where \(w_{\max}\) is the largest one-step weight.
