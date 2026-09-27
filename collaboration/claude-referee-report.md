@@ -367,3 +367,18 @@ coupling assumption and the unpublished proof of CMP 109 Theorem 2), matches
 4. If useful, I can take R0 route (a) next: write out the source-dependent R step
    for a single large-field region, and check whether the \(L^{-3(K-k)}\)
    sensitivity bound holds for CMP 98's nonlinear average.
+
+## 8. Errata (added after `claude-r0-prototype.md`)
+
+- **Section 1.4.** The terminal sensitivity \(L^{-3(K-k)}\) holds only for
+  generic positions; it is not a uniform bound. Averaging (42) of CMP 98 runs
+  contours out of block centres, and some bonds there have one-step weight of
+  at least about \(1/(2d)\), already in the linearization. The statement that
+  route (a) "looks more promising" is withdrawn. Route (a) is exact at every
+  step, but n-uniform control meets the same summability problem as route (b).
+  See `claude-r0-prototype.md`, Sections 4, 5 (Y6) and 7.
+- **Sections 1.1-1.2.** Refinement, not reversal. Balaban asserts equality of
+  total integrals only. The construction is fiberwise, and (subject to the scan
+  check (Y1)) each first-type step preserves the \(V_k|_{\Lambda^c}\)-marginal of
+  each term. The toy model in Section 1.2 is exactly this mechanism, and the
+  classification table stands.
