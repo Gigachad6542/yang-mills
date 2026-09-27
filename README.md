@@ -57,6 +57,8 @@ estimates while avoiding three later problems:
   the unpublished coupling-flow input and exact block formula.
 - `research/07-depth-comparison-reduction.md` -- proved projective-density
   criterion reducing adjacent-cutoff control to cumulant convergence.
+- `research/08-coupling-flow-reduction.md` -- proved backward-shooting and
+  two-term scalar recursion lemmas isolating the missing RG beta estimates.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified six-page

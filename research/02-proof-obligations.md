@@ -33,7 +33,7 @@ H1 + P1 --> S0 marked small/large-field RG --> renormalized local-field program
 
 | ID | Statement | Status | Evidence needed |
 |---|---|---|---|
-| H0 | Prove the SU(2) effective-coupling trajectory stated in CMP **109**, Theorem 2, keeping a prescribed terminal coupling while every \(g_k\) remains small. | open; announced proof unpublished | A complete replacement for the proof that CMP **109** says would appear separately and CMP **122 II** says remained unpublished. |
+| H0 | Prove the SU(2) effective-coupling trajectory stated in CMP **109**, Theorem 2, keeping a prescribed terminal coupling while every \(g_k\) remains small. | open; announced proof unpublished | A complete replacement for the missing proof. The scalar shooting step is proved in `08-coupling-flow-reduction.md`; uniform positive beta-increment bounds are not. |
 | H1 | Source-free four-dimensional density/stability bounds, assuming \(0<g_k\le\gamma\). | published conditional input | CMP **109**, Theorems 1 and 3; CMP **119**, Corollary 3; CMP **122 II**, Theorem 1. |
 | P0a | A source depending only on the output of an exact block kernel factors through that RG step. | proved here | `04-terminal-source-identity.md`. |
 | P0b | Match P0a to Balaban's exact deterministic average inside the group-delta constraint. | proved here from published formulas | CMP **98**, Eqs. (10)--(15); CMP **119**, Eq. (0.1); `04-terminal-source-identity.md`. |
