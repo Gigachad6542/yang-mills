@@ -51,6 +51,10 @@ asymptotic input rather than a definition of a continuum theory:
 6. Balaban's four-dimensional estimates are used only with every stated
    hypothesis, including control of the effective coupling sequence; an
    announced but unpublished coupling-flow argument is not treated as a theorem.
+7. A large-field (R)-operation that preserves the vacuum integral is not
+   treated as preserving normalized observable expectations. The physical
+   (T^n)-pushforward and the auxiliary (RT)-stabilized density remain distinct
+   until a terminal-test comparison is proved.
 
 ## Non-claims of the active milestone
 

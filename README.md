@@ -16,7 +16,10 @@ For \(G=SU(2)\) on a fixed physical four-torus, prove convergence as the lattice
 spacing tends to zero for a finite family of bounded, gauge-invariant observables
 of a fixed physical-scale RG block field.  The source-dependent generating
 functional must converge on a cutoff-independent complex polydisc, with bounds on
-all source derivatives.
+all source derivatives. The exact terminal source factors through Balaban's
+group-delta block map \(T\), but not through the large-field \(R\)-replacement,
+which preserves the vacuum integral while generally changing the density. An
+observable-preserving \(R\)-extension is therefore part of the milestone.
 
 In parallel, a source-stable version of the RG for normalized plaquette
 characters is a local-observable stress test. Unlike terminal sources, microscopic
@@ -35,13 +38,14 @@ estimates while avoiding three later problems:
 
 | Component | Status |
 |---|---|
-| Exact transport of a terminal source through Balaban's group-delta block transformation | proved here from the published formula |
+| Exact transport of a terminal source through Balaban's group-delta \(T\)-transformation | proved here from the published formula; does not cover \(R\) |
 | Uniform zero-free complex disc for finitely many bounded observables | proved here |
 | Generating-functional convergence \(\Rightarrow\) convergence and factorial bounds for fixed cumulants | proved here |
 | Summable projective-density difference \(\Rightarrow\) the required generating-functional comparison | proved here |
-| Four-dimensional source-free density bounds | published, conditional on a small effective-coupling sequence |
+| Four-dimensional source-free \(RT\) density/vacuum bounds | published, conditional on a small effective-coupling sequence |
+| Terminal-test-preserving large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 |
 | SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
-| Adjacent-cutoff comparison of terminal densities | open; principal M1 estimate |
+| Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
 
 ## Repository map
 
@@ -50,7 +54,8 @@ estimates while avoiding three later problems:
 - `research/02-proof-obligations.md` -- dependency graph and status ledger.
 - `research/03-source-cumulant-lemma.md` -- abstract analytic reduction, proved here.
 - `research/04-terminal-source-identity.md` -- exact source transport through an
-  abstract block kernel, proved here; matching to Balaban remains open.
+  abstract block kernel and Balaban's exact \(T\)-map, proved here; its boundary
+  at the measure-changing \(R\)-step is explicit.
 - `research/05-observable-strategy.md` -- comparison of local, blocked, and flowed
   observable families.
 - `research/06-balaban-audit.md` -- theorem-by-theorem dependency audit, including
@@ -59,6 +64,9 @@ estimates while avoiding three later problems:
   criterion reducing adjacent-cutoff control to cumulant convergence.
 - `research/08-coupling-flow-reduction.md` -- proved backward-shooting and
   two-term scalar recursion lemmas isolating the missing RG beta estimates.
+- `research/09-common-space-and-r-obstruction.md` -- the exact common-space
+  reduction, the observable obstruction at \(R\), history-mixture bounds, and
+  polymer-to-projective estimates.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified six-page

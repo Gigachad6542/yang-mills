@@ -29,10 +29,14 @@ This is a test of whether sources survive the published RG machinery. It does
 identity contribution and are not, without subtraction and matching, the
 renormalized local field \(\operatorname{tr}F^2\).
 
-S0 is not a prerequisite for M1. A microscopic plaquette source is present at
-the ultraviolet scale and marks the polymer expansion, whereas an M1 source
-depends only on the terminal block variable and factors outside every earlier RG
-integration exactly.
+The full microscopic-source theorem S0 is not a prerequisite for M1. A
+microscopic plaquette source is present at the ultraviolet scale and marks every
+block integration. An M1 source depends only on the terminal block variable and
+factors outside every earlier exact \(T\)-integration. It does **not** factor
+through Balaban's large-field \(R\)-replacement, which preserves the unweighted
+integral but generally changes the density. The smaller, terminal-test
+\(R\)-extension called Robs in `09-common-space-and-r-obstruction.md` is therefore
+a prerequisite for using the published \(RT\) bounds in M1.
 
 ## Stage M1: fixed-scale block observables
 
@@ -54,11 +58,16 @@ field-complexification estimates require it). Define
            \operatorname{TrHol}_{C_m}(\bar U^{(n)})\right).
 \]
 
-Balaban's density transformation inserts the deterministic average through a
+Balaban's exact \(T\)-transformation inserts the deterministic average through a
 group-delta constraint. A source depending only on the terminal variable factors
-through that constraint exactly. It therefore remains at the terminal scale
-instead of generating a new ultraviolet vertex at every earlier step. What
-remains open is compatibility with the analytic small/large-field estimates.
+through that constraint exactly, so it creates no new vertex inside the exact
+block integrations. The published four-dimensional induction, however, controls
+an \(RT\)-stabilized density. CMP **122 I** explicitly defines \(R\) by equality
+of total integrals while allowing the density to change. Consequently the
+physical terminal generating function is not identified with the integral of
+the published stabilized density. One must extend \(R\) to the terminal test or
+bound its cumulative observable bias; see
+`09-common-space-and-r-obstruction.md`.
 
 Choose finitely many real-valued observables
 \(\mathcal O_{n,1},\ldots,\mathcal O_{n,q}\), uniformly bounded by constants
@@ -82,7 +91,10 @@ There should be a polydisc \(D_\rho\), independent of \(n\), and a holomorphic
    \]
 2. **Large-field completeness.** The comparison includes every large-field and
    boundary polymer; it is not only a small-field expansion.
-3. **Nondegeneracy.** At least one limiting variance is strictly positive.
+3. **Observable-preserving large-field step.** Every \(R\)-replacement preserves
+   the selected terminal generating functions, or its cumulative test error is
+   proved to vanish uniformly on the source polydisc.
+4. **Nondegeneracy.** At least one limiting variance is strictly positive.
 
 Uniform boundedness already gives an elementary cutoff-independent zero-free
 subdisc:
@@ -125,6 +137,9 @@ M1 is complete only if:
 
 - the terminal block variable is exactly the one controlled by the cited RG
   theorem, rather than an informal average;
+- the measure being compared is the physical \(T^n\)-pushforward of the Wilson
+  measure, or its difference from the auxiliary \(RT\) density is controlled in
+  the required terminal-test norm;
 - constants are independent of ultraviolet depth \(n\);
 - vacuum-energy normalizations cancel in the normalized generating function;
 - large-field polymers are included;

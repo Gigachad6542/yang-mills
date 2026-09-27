@@ -74,7 +74,11 @@ paper had not been published. Exact equations and page references are recorded i
 What the published estimates provide, under their stated hypotheses, is
 source-free ultraviolet stability of normalized RG densities/partition functions.
 The active project must not silently strengthen this to convergence of normalized
-measures or observables.
+measures or observables. In particular, CMP **122 I**, Eq. (0.4), p. 176
+preserves the integral under the (R)-operation, while the discussion around
+Eqs. (1.75)--(1.76), p. 194 and (1.99)--(1.100), p. 200 explicitly allows the
+density to change. Observable expectations require a source/test-dependent
+extension or a quantitative error estimate.
 
 ## Finite-IR-cutoff construction and flowed observables
 

@@ -1,8 +1,9 @@
 # Exact transport of terminal sources through a block kernel
 
-Status: **proved here**, with the kernel matched to Balaban's published formulas.
-The source-dependent analytic estimates are not part of this identity and remain
-open.
+Status: **proved here for the exact \(T\)-kernel**, with that kernel matched to
+Balaban's published formulas. The identity does not extend automatically to the
+measure-changing large-field \(R\)-operation; the required terminal-test
+extension of \(R\) remains open.
 
 ## One exact RG step
 
@@ -94,6 +95,31 @@ The second line is the defining property of the group delta distribution. The
 normalization identity \(\int dV\,T\rho=\int dU\,\rho\) also appears as Eq. (10)
 in Balaban's 1986 ICM account. This establishes P0b at the algebraic level.
 
+## Boundary at the large-field \(R\)-operation
+
+The displayed identity concerns Balaban's exact group-delta map \(T\). In the
+four-dimensional stability proof it is followed by a large-field
+\(R\)-operation. CMP **122 I**, Eq. (0.4), p. 176, gives only
+
+\[
+ \int dV\,(R\rho)(V)=\int dV\,\rho(V).
+\]
+
+The paper later states explicitly that this step may change the density while
+preserving its integral (printed pp. 194 and 200). It therefore does not follow
+that
+
+\[
+ \int dV\,e^{zF(V)}(R\rho)(V)
+ =\int dV\,e^{zF(V)}\rho(V).
+\]
+
+Mass preservation is enough for vacuum stability but not for a nonconstant
+terminal observable. The exact \(T\)-identity eliminates source vertices inside
+the block integrations; it does not eliminate the need for a source/test-stable
+\(R\)-step. The distinction and a two-point counterexample are in
+`09-common-space-and-r-obstruction.md`.
+
 ## Deterministic and general kernels
 
 For Balaban's transformation the terminal source is therefore the fine-lattice
@@ -156,9 +182,9 @@ unnecessarily strong full-measure convergence theorem.
 ## What this identity does not prove
 
 It proves no RG norm estimate, no cutoff comparison, and no convergence. It shows
-only that a terminal source introduces no new ultraviolet dependence inside
-earlier integrations. Its effect on Balaban's small-field domains, localization,
-and large-field polymers is the separate Stage S0/P4 analysis.
+only that a terminal source introduces no new vertex inside earlier exact
+\(T\)-integrations. Its behavior under the large-field \(R\)-replacement is the
+open Robs obligation, and the subsequent physical cutoff comparison is P4.
 
 ## Primary formula sources
 

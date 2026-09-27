@@ -3,10 +3,14 @@
 Status: **proved here as an abstract reduction**. The required Yang--Mills
 estimate on the effective densities remains open.
 
-The terminal-source identity means that M1 does not require a source-dependent
-RG. It requires comparison of two positive, source-free terminal measures on the
-same fixed coarse configuration space. This note gives a concrete sufficient norm
-for that comparison.
+The terminal-source identity means that no source vertex is needed inside the
+exact group-delta block maps \(T\). It does **not** remove the source/test problem
+for Balaban's large-field \(R\)-operation, which preserves the vacuum integral
+while generally changing the density. Subject to that separate Robs obligation,
+M1 reduces to comparing two positive **physical** terminal measures on the same
+fixed coarse configuration space. This note gives a sufficient norm for that
+comparison; `09-common-space-and-r-obstruction.md` records the missing
+physical-versus-stabilized bridge.
 
 ## Setup
 
@@ -102,8 +106,8 @@ estimate then gives the cumulant tail. \(\square\)
 
 ## Effective-action form
 
-If \(\rho_n\) and \(\rho_{n+1}\) are strictly positive densities with respect to
-the same coarse Haar measure, take
+If the physical terminal measures have strictly positive densities
+\(\rho_n\) and \(\rho_{n+1}\) with respect to the same coarse Haar measure, take
 
 \[
  D_n=\log\rho_{n+1}-\log\rho_n.
@@ -122,10 +126,10 @@ more RG-natural than fixing absolute normalizations of the full effective action
 
 ## Concrete next target
 
-Put the cutoff-\(a_n\) and cutoff-\(a_{n+1}\) theories on a common terminal
-\(\ell\)-lattice, use the same terminal coupling and gauge convention, and write
-their complete CMP **119** densities including all \(E\), \(R\), and \(B\)
-sectors. The next new estimate is a geometric or otherwise summable bound
+Put the cutoff-\(a_n\) and cutoff-\(a_{n+1}\) **physical** theories on a common
+terminal \(\ell\)-lattice, use the same terminal coupling and gauge convention,
+and first establish an observable-preserving replacement for the CMP **119/122**
+\(RT\) density. The next new estimate is a geometric or otherwise summable bound
 
 \[
  \operatorname{osc}
@@ -135,11 +139,18 @@ sectors. The next new estimate is a geometric or otherwise summable bound
 \]
 
 conditional first on the small-coupling sequence. Published stability bounds on
-each density separately do not imply this difference estimate.
+each auxiliary density separately do not imply this difference estimate. Since
+CMP **119**, Eq. (2.18), is a sum over large-field histories, the comparison must
+also control the history sum with a common centering; termwise oscillations modulo
+history-dependent constants are insufficient. A rooted polymer criterion and a
+sharp counterexample are proved in `09-common-space-and-r-obstruction.md`.
 
 ## Boundary of the reduction
 
-The propositions do not produce \(D_n\), prove mutual absolute continuity, or
-bound any CMP **119** polymer difference. Those are the remaining Yang--Mills
-steps. They do show exactly which additive constants are irrelevant and turn a
-summable effective-action comparison into quantitative cumulant convergence.
+The propositions do not produce \(D_n\), prove mutual absolute continuity,
+identify the auxiliary \(RT\) density with the physical \(T^n\)-pushforward, or
+bound any CMP **119** polymer difference. Those are remaining Yang--Mills steps.
+They do show that one **global** additive constant is irrelevant and turn a
+summable physical effective-action comparison into quantitative cumulant
+convergence. Constants depending on a large-field history are not globally
+irrelevant before the history sum.
