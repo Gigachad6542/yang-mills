@@ -244,7 +244,8 @@ one global constant, has the uniformly convergent expansion
 
 \[
  D_N(\omega)=c_N+
- \sum_s\sum_{X\subset\Lambda}\Delta\Phi_{N,s}(X;\omega),
+ \sum_s\sum_{\varnothing\ne X\subset\Lambda}
+ \Delta\Phi_{N,s}(X;\omega),
 \]
 
 where \(s\) may label \(E,R,B\) sectors. Define the rooted oscillation norm

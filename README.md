@@ -70,7 +70,7 @@ estimates while avoiding three later problems:
   polymer-to-projective estimates.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
-- `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified six-page
+- `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified eight-page
   build of the current manuscript.
 
 ## Immediate rule

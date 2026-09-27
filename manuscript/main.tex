@@ -7,7 +7,9 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 \newcommand{\D}{\mathbb D}
 \newcommand{\C}{\mathbb C}
@@ -354,7 +356,7 @@ $m\le r_h\le M$ implies
 because the density ratio is a convex combination of $e^{r_h}$.  Separate
 oscillation bounds modulo a different constant for each history do not suffice.
 Second, if a complete log-density defect on a finite graph $\Lambda$ has
-activities $\Delta\Phi_{N,s}(X)$ and rooted norms
+activities $\Delta\Phi_{N,s}(X)$ for nonempty $X$ and rooted norms
 \[
  \eta_{N,s}=\sup_{x\in\Lambda}\sum_{X\ni x}
  \frac{\operatorname{osc}\Delta\Phi_{N,s}(X)}{|X|},
@@ -396,7 +398,7 @@ convenient sufficient condition and is itself strong enough to imply summable
 total-variation increments.
 
 Proposition~\ref{prop:projective} gives an RG-natural sufficient target.  If
-the adjacent **physical** terminal measures admit mutually absolutely continuous,
+the adjacent physical terminal measures admit mutually absolutely continuous,
 strictly positive densities $\rho_n^{(\ell)}$ and
 $\rho_{n+1}^{(\ell)}$, it is enough to prove
 \[
