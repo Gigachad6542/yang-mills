@@ -123,7 +123,10 @@ Mass preservation is enough for vacuum stability but not for a nonconstant
 terminal observable. The exact \(T\)-identity eliminates source vertices inside
 the block integrations; it does not eliminate the need for a source/test-stable
 \(R\)-step. The distinction and a two-point counterexample are in
-`09-common-space-and-r-obstruction.md`.
+`09-common-space-and-r-obstruction.md`.  The introductory fiber-normalized
+prototype now has an exact source lift (`10-source-dependent-r-prototype.md`);
+extending its local estimates through the complete \(R\)-operation is still
+open.
 
 ## Deterministic and general kernels
 
@@ -189,7 +192,8 @@ unnecessarily strong full-measure convergence theorem.
 It proves no RG norm estimate, no cutoff comparison, and no convergence. It shows
 only that a terminal source introduces no new vertex inside earlier exact
 \(T\)-integrations. Its behavior under the large-field \(R\)-replacement is the
-open Robs obligation, and the subsequent physical cutoff comparison is P4.
+open complete-R part of the Robs obligation, and the subsequent physical cutoff
+comparison is P4.
 
 ## Primary formula sources
 

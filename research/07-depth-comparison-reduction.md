@@ -6,8 +6,10 @@ estimate on the effective densities remains open.
 The terminal-source identity means that no source vertex is needed inside the
 exact group-delta block maps \(T\). It does **not** remove the source/test problem
 for Balaban's large-field \(R\)-operation, which preserves the vacuum integral
-while generally changing the density. Subject to that separate Robs obligation,
-M1 reduces to comparing two positive **physical** terminal measures on the same
+while generally changing the density. The introductory fiber prototype has an
+exact abstract source lift, but the complete source-stable \(R\) estimates remain
+the separate Robs obligation. Subject to that obligation, M1 reduces to
+comparing two positive **physical** terminal measures on the same
 fixed coarse configuration space. This note gives a sufficient norm for that
 comparison; `09-common-space-and-r-obstruction.md` records the missing
 physical-versus-stabilized bridge.
