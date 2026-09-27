@@ -74,7 +74,7 @@ estimates while avoiding three later problems:
   \(R\)-prototype, and the remaining complete-\(R\) locality/summability gap.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
-- `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified eight-page
+- `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified nine-page
   build of the current manuscript.
 
 ## Immediate rule
