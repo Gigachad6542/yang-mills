@@ -64,7 +64,9 @@ $SU(2)$ coupling behavior announced in the 1987 paper had not been published
 stability results, not convergence of normalized observable expectations.  The
 basic $R$-operation is normalized to preserve the integral of a density, but the
 paper explicitly replaces equality of densities by an equivalence meaning
-equality only after integration \cite[pp.~176, 194, 200]{Balaban1989LargeI}.
+equality only after integration
+\cite[pp.~176, 193--194, 200--201]{Balaban1989LargeI}; a second such step occurs
+in the complete operation \cite[p.~378]{Balaban1989LargeII}.
 The present program therefore records the coupling-flow input, the observable
 extension of $R$, and the cutoff comparison as separate obligations.
 
@@ -94,6 +96,9 @@ For $j\in\tfrac12\mathbb N_0$ define
  \phi_{j,p}(U)=\frac{1}{2j+1}\chi_j(U_p),
  \qquad |\phi_{j,p}(U)|\le1.
 \]
+We sum over one orientation of each unoriented plaquette.  This is
+orientation-independent for $SU(2)$ because
+$\chi_j(U^{-1})=\chi_j(U)$.
 For a finite representation set $\mathcal J$, smooth macroscopic sources $J_j$,
 and finitely many marked plaquettes, put
 \[
@@ -140,7 +145,11 @@ and decisive for the observable above.
 
 \begin{proposition}[Block-kernel identity]\label{prop:block}
 Let $\eta_k$ be a finite measure on a compact configuration space $\Omega_k$
-and $K_k(U,dV)$ a finite block kernel.  Define
+and $K_k(U,dV)$ a measurable positive block kernel satisfying
+\[
+ \int_{\Omega_k}\eta_k(dU)\,K_k(U,\Omega_{k+1})<\infty.
+\]
+Define
 \[
  \eta_{k+1}(dV)=\int_{\Omega_k}\eta_k(dU)K_k(U,dV).
 \]
@@ -149,9 +158,9 @@ For every bounded terminal observable $F$,
  \int\eta_k(dU)K_k(U,dV)e^{zF(V)}
  =e^{zF(V)}\eta_{k+1}(dV).
 \]
-The identity iterates through any finite composition of block kernels, and all
-field-independent vacuum-energy factors cancel in the normalized generating
-function.
+The identity iterates through any finite composition of such block kernels.  If
+the total mass is nonzero, all field-independent vacuum-energy factors cancel in
+the normalized generating function.
 \end{proposition}
 
 \begin{proof}
@@ -184,8 +193,11 @@ $R$-operation.  CMP~122 I records
  \int dV\,(R\rho)(V)=\int dV\,\rho(V),
 \]
 but also states that $R\rho$ need not equal $\rho$
-\cite[Eq.~(0.4), pp.~176, 194, 200]{Balaban1989LargeI}.  Equality of masses does
-not imply equality of the weighted integrals with $e^{zF(V)}$.  On a two-point
+\cite[Eq.~(0.4), pp.~176, 193--194, 200--201]{Balaban1989LargeI}.  The
+introductory prototype is termwise fiber-normalized, but its fiber varies with
+the history.  A second equivalent-but-not-equal step occurs in the reverse
+Faddeev--Popov removal \cite[p.~378]{Balaban1989LargeII}.  Equality of masses
+does not imply equality of the weighted integrals with $e^{zF(V)}$.  On a two-point
 space, for example, the positive densities $(1,1)$ and
 $(2-\epsilon,\epsilon)$ have equal mass while the expectation of the second
 coordinate differs by $(1-\epsilon)/2$.  Thus the terminal source creates no
@@ -289,6 +301,19 @@ Theorems~\ref{thm:bounded} and \ref{thm:analytic}.  Summability follows from
 $e^x-1\le e^M x$ on a bounded interval containing the $\varepsilon_n$.
 \end{proof}
 
+A weaker projective criterion tolerates exceptional configurations.  For any
+$c\in\mathbb R$, set
+$\delta_n(c)=\nu_n(|e^{D_n-c}-1|)$.  If $\delta_n(c)<1$, then
+\[
+ |\nu_{n+1}(f)-\nu_n(f)|
+ \le \lVert f\rVert_\infty
+      \frac{2\delta_n(c)}{1-\delta_n(c)}.
+\]
+Indeed, with $X=e^{D_n-c}$ and $m=\nu_n(X)$, one has
+$m\ge1-\delta_n(c)$ and
+$\nu_n(|X/m-1|)\le2\delta_n(c)/m$.  Summability of these bounds is enough for
+Theorem~\ref{thm:analytic}, without a global oscillation estimate.
+
 \begin{proposition}[One-layer physical defect]\label{prop:onelayer}
 Let $q_N:\Omega_{N+1}\to\Omega_N$ be the first exact block map and
 $b_N:\Omega_N\to\Omega_*$ the remaining map to one fixed terminal lattice, with
@@ -366,11 +391,14 @@ then the required left side is exactly
  \sup_{f\in\mathcal T_\rho}\left|\int f\,d(\nu_{n+1}-\nu_n)\right|.
 \]
 Convergence of full densities in total variation would suffice but is stronger
-than the theorem logically needs.
+than the theorem logically needs.  The uniform projective criterion below is a
+convenient sufficient condition and is itself strong enough to imply summable
+total-variation increments.
 
 Proposition~\ref{prop:projective} gives an RG-natural sufficient target.  If
-$\rho_n^{(\ell)}$ and $\rho_{n+1}^{(\ell)}$ are the positive **physical**
-terminal densities at adjacent ultraviolet depths, it is enough to prove
+the adjacent **physical** terminal measures admit mutually absolutely continuous,
+strictly positive densities $\rho_n^{(\ell)}$ and
+$\rho_{n+1}^{(\ell)}$, it is enough to prove
 \[
  \sum_n\operatorname{osc}\left(
   \log\rho_{n+1}^{(\ell)}-\log\rho_n^{(\ell)}\right)<\infty.
@@ -378,38 +406,47 @@ terminal densities at adjacent ultraviolet depths, it is enough to prove
 To obtain this estimate from Balaban's construction, the comparison must include
 the full $E$, $R$, and $B$ sectors, the sum over large-field histories, and the
 observable error of every $R$-replacement.  Bounds on each auxiliary density
-separately do not imply it.
+separately do not imply it.  Equality of the history-dependent parameter $g_K$
+at two depths must either be tied to one physical terminal renormalization
+condition or supplemented by a summable bound on the residual action-coefficient
+mismatch.
 
-This target has three independent open tracks.  Track A constructs an
-observable-preserving $R$-operation, or proves a vanishing cumulative bias
-between physical and stabilized measures.  Track B proves the adjacent-depth
+This target has three independent open tracks.  Track A is to construct an
+observable-preserving $R$-operation, or prove a vanishing cumulative bias
+between physical and stabilized measures.  Track B is to prove the adjacent-depth
 physical comparison on the first common lattice, conditional on
 $0<g_k\le\gamma$, with common history centering and a rooted polymer gain that
-beats lattice entropy.  Track C supplies or replaces the unpublished $SU(2)$
+beats lattice entropy.  Track C is to supply or replace the unpublished $SU(2)$
 coupling-flow proof stated as Theorem~2 of the 1987 paper.  None may be used as
 an implicit lemma for another.
 
-The scalar shooting part of Track C is elementary once the missing RG estimate is
-available.  Writing $h_k=g_k^{-2}$, suppose
-$h_{k+1}=h_k-B_{k+1}(h_k)$ with uniform
-$0<b_-\le B_{k+1}\le b_+$ and with $h\mapsto h-B_{k+1}(h)$ strictly
-increasing.  Backward solution from a prescribed $h_K$ exists uniquely and gives
+The scalar shooting part of Track C is elementary once the missing RG estimate
+is available, but the history dependence must be retained.  Writing
+$h_k=g_k^{-2}$, suppose
+\[
+ h_{k+1}=h_k-B_{k+1}(h_0,\ldots,h_k),
+ \qquad 0<b_-\le B_{k+1}\le b_+,
+\]
+with every increment continuous on admissible histories.  Shooting the bare
+value $h_0$ forward and applying the intermediate value theorem gives at least
+one trajectory with any prescribed $h_K$ and
 \[
  h_K+b_-(K-k)\le h_k\le h_K+b_+(K-k).
 \]
-Thus the hard Yang--Mills input is a uniform positive beta-increment estimate,
-including its dependence on the complete effective density, not the final scalar
-shooting argument.
+Uniqueness would require monotonicity of the full map $h_0\mapsto h_K$, including
+all history derivatives.  Thus the hard Yang--Mills input is a uniform positive
+beta-increment estimate and continuity over complete histories, not the final
+scalar shooting argument.
 
 \section{Reflection positivity and flowed observables}
 
-Reflection positivity should be retained as a kernel inequality for positive-time
-sources,
+For real observables and real sources supported in the positive-time
+half-lattice, reflection positivity should be retained as the kernel inequality
 \[
  \sum_{r,s}\overline{c_r}c_s\,G_a[\Theta J_r+J_s]\ge0,
 \]
 not as a claim that an arbitrary complex source-deformed measure is reflection
-positive.
+positive.  For complex sources, $\Theta$ must also conjugate the source values.
 
 Positive four-dimensional gradient-flow time offers perturbatively finite
 observable families, but the field is nonlocal over a radius of order
@@ -417,7 +454,7 @@ $\sqrt{8t}$ \cite{Luscher2010,RamosSint2016}.  A flowed insertion at positive
 Euclidean time can therefore depend on links across the reflection plane.  Such
 observables are postponed until the RG-adapted fixed-scale theorem is understood.
 Spatial-only flow preserves the positive-time algebra but breaks $O(4)$ and lacks
-a corresponding all-orders renormalization theorem.
+a corresponding all-orders renormalization input in the present source set.
 
 \section{Nonclaims}
 

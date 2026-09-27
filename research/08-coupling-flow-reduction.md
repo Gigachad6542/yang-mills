@@ -1,8 +1,10 @@
 # Coupling-flow shooting reduction
 
-Status: **proved here as a scalar-recursion lemma**. The uniform Yang--Mills
-beta-increment estimates needed to apply it are open in this project and are the
-missing input behind Balaban's announced CMP **109**, Theorem 2.
+Status: **two scalar-recursion lemmas are proved here**. Backward shooting is
+valid for memoryless increments. A separate forward-shooting theorem below
+handles Balaban's stated dependence on the entire preceding coupling history.
+The uniform Yang--Mills beta-increment estimates needed to apply either lemma are
+open and are the missing input behind Balaban's announced CMP **109**, Theorem 2.
 
 ## Published recursion and target
 
@@ -27,11 +29,15 @@ but no positive lower bound and no uniform expansion
 preceding couplings. Thus every hypothesis below must ultimately hold uniformly
 over admissible coupling histories.
 
-The lemma below isolates the elementary shooting argument from the hard field-
-theoretic assertion that the increments \(\beta_{k+1}\) really have uniform
-positive bounds along the full RG trajectory.
+The first lemma isolates the elementary backward argument for one-variable
+increments. It cannot be applied verbatim to Balaban's history-dependent
+\(\beta_{k+1}\), because the finer part of the history is unknown during a
+backward induction. The second lemma supplies the correct existence argument by
+shooting the bare datum forward. In both cases the hard field-theoretic assertion
+is that the increments really have uniform positive bounds along the full RG
+trajectory.
 
-## Theorem 1: backward shooting
+## Theorem 1: memoryless backward shooting
 
 Put \(h_k=g_k^{-2}\). Fix \(h_*=\gamma^{-2}>0\), a terminal value
 \(h_K\ge h_*\), and constants \(0<b_-\le b_+<\infty\). For
@@ -58,7 +64,7 @@ with the prescribed \(h_K\). It obeys
  \qquad 0\le k\le K.
 \]
 
-Equivalently,
+In particular,
 
 \[
  g_k\le g_K\le\gamma,
@@ -98,7 +104,61 @@ A convenient sufficient condition for strict monotonicity is
 uniformly in \(j\). Existence alone needs only continuity and the two-sided
 increment bound; uniqueness is not required merely to produce one bare coupling.
 
-## Proposition 2: two-term asymptotics
+## Theorem 2: forward shooting with history dependence
+
+Let \(I=[h_*,\infty)\), let \(0<b_-\le b_+\), and for
+\(j=1,\ldots,K\) let
+
+\[
+ B_j:I^j\longrightarrow[b_-,b_+]
+\]
+
+be continuous. Starting from a bare value \(h_0\), define, while the preceding
+history remains in \(I\),
+
+\[
+ h_j=h_{j-1}-B_j(h_0,\ldots,h_{j-1}).
+\]
+
+For every prescribed terminal value \(t\in I\), there is at least one \(h_0\)
+whose complete trajectory lies in \(I\) and satisfies \(h_K=t\). Every such
+trajectory obeys
+
+\[
+ t+b_-(K-k)\le h_k\le t+b_+(K-k),
+ \qquad 0\le k\le K.
+\]
+
+### Proof
+
+For \(j\ge1\), let
+
+\[
+ A_j=\{h_0\in I:h_1,\ldots,h_j\in I\}.
+\]
+
+The recursively defined \(h_j\) is continuous on \(A_{j-1}\), so \(A_j\) is
+closed. Put \(A=A_K\). Since each step lowers \(h\) by at most \(b_+\),
+\([h_*+b_+K,\infty)\subset A\). Let \(C=[a_0,\infty)\) be the connected
+component of \(A\) containing that ray; closedness gives \(a_0\in A\). The
+terminal map \(\Phi(h_0)=h_K\) is continuous on \(C\).
+
+We claim \(\Phi(a_0)=h_*\). If every \(h_j(a_0)>h_*\), including \(j=0\), then
+continuity would put a left neighborhood of \(a_0\) in \(A\), contradicting the
+definition of the endpoint. The case \(a_0=h_*\) is impossible because
+\(h_1(a_0)<h_*\). If \(h_j(a_0)=h_*\) first occurs with \(j<K\), then
+\(h_{j+1}(a_0)\le h_*-b_-<h_*\), contradicting \(a_0\in A\). Hence the first
+contact is \(h_K(a_0)=h_*\).
+
+Finally, \(\Phi(h_0)\ge h_0-b_+K\to\infty\) on \(C\). The intermediate value
+theorem gives an \(h_0\in C\) with \(\Phi(h_0)=t\). Telescoping the recursion
+backward from \(h_K=t\) gives the displayed bounds. \(\square\)
+
+This theorem proves existence only. Uniqueness would require a quantitative
+monotonicity estimate for the full map \(h_0\mapsto h_K\), including derivatives
+through every history argument.
+
+## Proposition 3: two-term asymptotics
 
 Let a reverse-scale sequence \(H_m\), starting at the fixed terminal coupling,
 satisfy
@@ -109,7 +169,7 @@ satisfy
  \qquad |r_m|\le\frac{C}{H_m^2},
 \]
 
-and assume \(H_m\ge H_0+a m\) for some \(a>0\). Then
+and assume \(H_m\ge H_0+c_0m\) for some \(c_0>0\). Then
 
 \[
  H_m=bm+\frac cb\log(m+1)+O(1).
@@ -135,21 +195,28 @@ whose series converges. Therefore
 Summing the original recursion once more and using
 \(\sum_jr_j=O(1)\) proves the claim. \(\square\)
 
-For \(m=K\) and \(a=L^{-K}\), this is the abstract source of a leading
-\(\log(1/a)\) term and a subleading \(\log\log(1/a)\) correction in the inverse
-bare coupling. It does not identify \(b\) or \(c\) with Yang--Mills beta-function
-coefficients; that identification requires the missing uniform RG calculation.
+For \(m=K\) and lattice spacing \(a_{\mathrm{lat}}=L^{-K}\), this is the
+abstract source of a leading \(\log(1/a_{\mathrm{lat}})\) term and a subleading
+\(\log\log(1/a_{\mathrm{lat}})\) correction in the inverse bare coupling. It
+does not identify \(b\) or \(c\) with Yang--Mills beta-function coefficients;
+that identification requires the missing uniform RG calculation.
+
+In the reversed Balaban recursion the first correction may naturally be written
+as \(c/H_{m+1}\) rather than \(c/H_m\). Once \(H_m\) has linear growth, their
+difference is \(O(H_m^{-2})\) and is absorbed into the stated remainder.
 
 ## Exact missing Yang--Mills inputs
 
-To apply Theorem 1 to the Balaban flow one must prove, rather than assume:
+To apply Theorem 2 to the history-dependent Balaban flow one must prove, rather
+than assume:
 
 1. the effective increment is defined consistently with the complete
    \(E/R/B\) density and all irrelevant coordinates;
 2. \(0<b_-\le\beta_{k+1}(g_k)\le b_+\) uniformly in scale and ultraviolet
    depth, and uniformly in the preceding coupling history, on the required
    analytic domains;
-3. enough continuity or monotonicity for the terminal-coupling shooting map;
+3. continuity of every increment in the entire admissible preceding history;
+   monotonicity of the full terminal map is needed only if uniqueness is desired;
 4. compatibility of those estimates with the large-field \(R\)-operation.
 
 For the two-term asymptotic one additionally needs a uniform expansion of the
@@ -165,7 +232,7 @@ A concrete sufficient one-loop hypothesis would be
  \qquad |r_n|\le Cu^2,
 \]
 
-plus the derivative bound needed for monotonicity. Choosing
-\(C\gamma^2<b_*\) gives \(b_\pm=b_*\pm C\gamma^2\) in Theorem 1. The
+plus a history-derivative bound if uniqueness is desired. Choosing
+\(C\gamma^2<b_*\) gives \(b_\pm=b_*\pm C\gamma^2\) in Theorem 2. The
 irrelevant-polymer estimate CMP **109**, Eq. (0.29), does not provide this
 remainder bound; it controls a different part of the effective action.

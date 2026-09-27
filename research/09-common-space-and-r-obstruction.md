@@ -15,10 +15,11 @@ density \(\rho_0\), the physical coarse density is
 \]
 
 Balaban's four-dimensional stability proof also uses a large-field
-\(R\)-operation. Its defining property is preservation of the **unweighted
-integral**, not equality of densities. CMP **122 I** says in the introduction
-that large-field expressions are replaced so that integrals of densities are
-unchanged and records
+\(R\)-operation. The theorem available for the **complete** operation preserves
+the unweighted total integral, not the density. Its introductory prototype is
+more structured: it is normalized term by term along history-dependent fibers.
+CMP **122 I** says that large-field expressions are replaced so that integrals
+of densities are unchanged and records
 
 \[
  \int dV\,(R\rho)(V)=\int dV\,\rho(V)
@@ -26,12 +27,17 @@ unchanged and records
 \]
 
 The detailed construction first performs transformations that preserve
-\(\rho_k\), but then explicitly replaces equality by an equivalence meaning only
-equality after integration over \(V_k\) (printed p. 194, around
-Eqs. (1.75)--(1.76)). Its summary again says that the resulting density may not
-equal \(\rho_k\), although the two have equal integrals (printed p. 200, around
-Eqs. (1.99)--(1.100)). Thus the density controlled by the complete \(RT\)
-induction is an auxiliary stabilized density, schematically
+\(\rho_k\) pointwise through Eq. (1.75), but then explicitly replaces equality
+by an equivalence meaning only equality after integration over \(V_k\) (printed
+pp. 193--194, around Eqs. (1.75)--(1.76)). Its summary on printed p. 200 again
+says that the resulting density may not equal \(\rho_k\), although the two have
+equal integrals; Eqs. (1.99)--(1.100) are on p. 201. CMP **122 II**, p. 378,
+contains a second non-pointwise step: the reverse Faddeev--Popov removal is
+possible only after integrations over the relevant components, and the resulting
+densities are again described as equivalent but not equal. The intervening
+localization and exponentiation operations are principally equality-level
+reorganizations. Thus the density controlled by the complete \(RT\) induction
+is an auxiliary stabilized density, schematically
 
 \[
  \widehat\rho_k=R_kT_{k-1}\cdots R_1T_0\rho_0,
@@ -43,6 +49,14 @@ automatically the same terminal law.
 This distinction explains Balaban's statement in CMP **122 II**, p. 356, that
 loop and averaged-loop expectations still require detailed analysis and further
 publication.
+
+The fiber normalization of the prototype does not repair the observable problem.
+For each summand it integrates over a region \(Z'\) while holding exterior
+variables fixed, but \(Z'\) varies with the summand/history, the actual
+denominators are localized variants, and the final Faddeev--Popov step is only
+globally equivalent. A test is preserved by one prototype fiber integration only
+when it is independent of that fiber. A future terminal block observable
+generally is not.
 
 ## 2. Exact \(T\)-transport does not solve the \(R\) problem
 
@@ -79,13 +93,14 @@ expectations are \(1/2\) and \(\epsilon/2\). The difference can approach
 Therefore a theorem about the physical terminal observable needs at least one
 of the following new inputs:
 
-1. a source- or test-dependent \(R_z\) satisfying
+1. for \(\rho_z=e^{zF}\rho\), a source-dependent \(R_z\) satisfying
 
    \[
-     \int e^{zF}R_z\rho=\int e^{zF}\rho
+     \int R_z(\rho_z)=\int\rho_z
    \]
 
-   on a common complex disc, together with the full \(E/R/B\) stability bounds;
+   on a common complex disc, together with nonvanishing source-dependent
+   denominators and the full \(E/R/B\) stability bounds;
 2. an \(R\)-operation preserving the pushforward measure under all remaining
    block maps, not merely its total mass; or
 3. a quantitative estimate showing that the cumulative observable bias from the
@@ -94,6 +109,13 @@ of the following new inputs:
 A source at the terminal scale is still simpler than a microscopic local source:
 it factors through every exact \(T\)-step. But it does **not** eliminate the
 source/test extension of the large-field \(R\)-step.
+
+For one test, the minimal exact object is a marked numerator--denominator pair.
+At scale \(k\), with pulled-back test \(F_k=f\circ Q_{k,K}\), one must transport
+\(D_k=\rho_k\) and \(N_k=F_k\rho_k\) separately through every local integration;
+in general \(R(N_k)\ne F_kR(D_k)\). For cumulants the analogue is an analytic
+family \(\rho_{k,z}=e^{zF_k}\rho_k\) and a nonlinear, source-dependent
+\(R_z\), including a sourced version of the final reverse Faddeev--Popov step.
 
 ## 3. Exact reduction to a one-layer physical defect
 
@@ -353,4 +375,3 @@ The exact logical chain is now:
 
 Published source-free \(RT\) stability is indispensable input to this program,
 but it closes none of Robs, P4a, P4b, or P4c by itself.
-

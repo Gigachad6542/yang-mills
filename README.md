@@ -62,8 +62,9 @@ estimates while avoiding three later problems:
   the unpublished coupling-flow input and exact block formula.
 - `research/07-depth-comparison-reduction.md` -- proved projective-density
   criterion reducing adjacent-cutoff control to cumulant convergence.
-- `research/08-coupling-flow-reduction.md` -- proved backward-shooting and
-  two-term scalar recursion lemmas isolating the missing RG beta estimates.
+- `research/08-coupling-flow-reduction.md` -- proved memoryless backward- and
+  history-dependent forward-shooting lemmas, plus the two-term scalar
+  asymptotic, isolating the missing RG beta estimates.
 - `research/09-common-space-and-r-obstruction.md` -- the exact common-space
   reduction, the observable obstruction at \(R\), history-mixture bounds, and
   polymer-to-projective estimates.

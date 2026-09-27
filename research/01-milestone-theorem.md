@@ -5,12 +5,16 @@ not state a theorem currently proved in the literature or in this repository.
 
 ## Parallel stage S0: local-source stress test
 
-For (j\in\tfrac12\mathbb N_0) and an oriented plaquette (p), put
+For \(j\in\tfrac12\mathbb N_0\), choose one orientation of each unoriented
+plaquette \(p\) and put
 
 \[
  \phi_{j,p}(U)=\frac{1}{2j+1}\chi_j(U_p),
  \qquad |\phi_{j,p}(U)|\le 1.
 \]
+
+For \(SU(2)\), \(\chi_j(U^{-1})=\chi_j(U)\), so the value is orientation
+independent.
 
 For a finite representation set \(\mathcal J\), smooth macroscopic sources
 \(J_j\), and finitely many marked plaquettes, define
@@ -120,7 +124,8 @@ of the minimal fixed-torus theorem.
 ## Reflection-positivity boundary
 
 Reflection positivity is a property of the Wilson measure paired with its
-positive-time observable algebra. The correct generating-functional statement is
+positive-time observable algebra. For real observables and real positive-time
+sources, the generating-functional statement is
 
 \[
  \sum_{r,s}\overline{c_r}c_s\,
@@ -128,8 +133,9 @@ positive-time observable algebra. The correct generating-functional statement is
 \]
 
 No claim is made that a general complex source-deformed measure is itself
-reflection positive. Four-dimensional positive-flow observables also need not lie
-in the positive-time algebra because the flow crosses the reflection plane.
+reflection positive. For complex sources the reflection also conjugates source
+values. Four-dimensional positive-flow observables also need not lie in the
+positive-time algebra because the flow crosses the reflection plane.
 
 ## Acceptance criteria
 
@@ -140,6 +146,8 @@ M1 is complete only if:
 - the measure being compared is the physical \(T^n\)-pushforward of the Wilson
   measure, or its difference from the auxiliary \(RT\) density is controlled in
   the required terminal-test norm;
+- adjacent cutoffs satisfy the same physical terminal renormalization condition,
+  or any mismatch of the marginal action coefficient is summable;
 - constants are independent of ultraviolet depth \(n\);
 - vacuum-energy normalizations cancel in the normalized generating function;
 - large-field polymers are included;

@@ -82,7 +82,8 @@ nonzero. Their normalized logarithms converge locally uniformly there, and
 
 for every fixed \(\alpha\).
 
-More quantitatively, if \(F\) is nonzero on \(\overline{D_s}\), put
+More quantitatively, if \(\overline{D_s}\subset D_R\) and \(F\) is nonzero on
+\(\overline{D_s}\), put
 
 \[
  m_s=\inf_{\overline{D_s}}|F|,
@@ -122,11 +123,12 @@ Hence \(F_n\ne0\) there and the normalized logarithms obey
 \]
 
 The logarithm power series bounds the norm by
-\(\sum_{k\ge1}q_n^k/k=-\log(1-q_n)\). Cauchy's estimate gives the derivative
+\(\sum_{k\ge1}q_n^k/k=-\log(1-q_n)\). Cauchy's estimate, with boundary radii
+reached by the same interior-limit argument as in Theorem A, gives the derivative
 bound. \(\square\)
 
-The same proof yields a useful relative-Cauchy form. If \(F_n,F_m\) are
-nonzero on \(D_R\) and
+The same proof yields a useful relative-Cauchy form. If
+\(F_n(0)=F_m(0)=1\), both functions are nonzero on \(D_R\), and
 
 \[
  q_{nm}=\sup_{D_R}\left|\frac{F_n}{F_m}-1\right|<1,

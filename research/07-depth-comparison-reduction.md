@@ -57,6 +57,40 @@ Writing the difference of expectations against \(\nu_n\) and using
 \(\max\{1-e^{-\varepsilon_n},e^{\varepsilon_n}-1\}
 =e^{\varepsilon_n}-1\) proves the claim. \(\square\)
 
+## Proposition 1': an \(L^1\) projective criterion
+
+Under the same Radon--Nikodym hypothesis, let \(c\in\mathbb R\) and set
+
+\[
+ \delta_n(c)=\nu_n\!\left(\left|e^{D_n-c}-1\right|\right).
+\]
+
+If \(\delta_n(c)<1\), then every bounded measurable \(f\) satisfies
+
+\[
+ |\nu_{n+1}(f)-\nu_n(f)|
+ \le \lVert f\rVert_\infty
+      \frac{2\delta_n(c)}{1-\delta_n(c)}.
+\]
+
+The estimate may be optimized over \(c\). It is weaker than uniform oscillation
+control because it tolerates a large defect on a set of small \(\nu_n\)-mass.
+
+### Proof
+
+Put \(X=e^{D_n-c}\) and \(m=\nu_n(X)\). Then
+\(m\ge1-\delta_n(c)>0\), and the normalized Radon--Nikodym derivative is
+\(X/m\). Moreover,
+
+\[
+ \nu_n\!\left(\left|\frac Xm-1\right|\right)
+ \le \frac{\nu_n(|X-1|)+|1-m|}{m}
+ \le \frac{2\delta_n(c)}{1-\delta_n(c)}.
+\]
+
+Integrating \(f\) against this density difference proves the claim.
+\(\square\)
+
 ## Proposition 2: generating functions and cumulants
 
 Let \(|F_j|\le B_j\) and
@@ -104,6 +138,11 @@ the logarithm are Theorem C of `03-source-cumulant-lemma.md`. Summability of
 is bounded and \(e^x-1\le e^M x\) for \(0\le x\le M\). Cauchy's derivative
 estimate then gives the cumulant tail. \(\square\)
 
+The same argument with Proposition 1' replaces
+\(e^{\varepsilon_n}-1\) by
+\(2\delta_n(c_n)/(1-\delta_n(c_n))\). Summability of those quantities is enough
+for all conclusions of Proposition 2.
+
 ## Effective-action form
 
 If the physical terminal measures have strictly positive densities
@@ -121,19 +160,24 @@ The sufficient M1 estimate is therefore
 \]
 
 This is a projective estimate: all field-independent vacuum energies disappear.
-It is stronger than convergence only in the source-test seminorm but weaker and
-more RG-natural than fixing absolute normalizations of the full effective action.
+It is substantially stronger than the source-test requirement: summability of
+the oscillations gives summable increments in full dual total variation. Its
+advantage is instead invariance under one global vacuum-energy constant. The
+\(L^1\) criterion above is a weaker fallback when the uniform log ratio is badly
+behaved on rare configurations.
 
 ## Concrete next target
 
 Put the cutoff-\(a_n\) and cutoff-\(a_{n+1}\) **physical** theories on a common
-terminal \(\ell\)-lattice, use the same terminal coupling and gauge convention,
-and first establish an observable-preserving replacement for the CMP **119/122**
-\(RT\) density. The next new estimate is a geometric or otherwise summable bound
+terminal \(\ell\)-lattice and use the same gauge convention. Impose one physical
+terminal renormalization condition, or prove that equality of Balaban's
+history-dependent \(g_K\) implies it with a summable marginal mismatch. Then
+establish an observable-preserving replacement for the CMP **119/122** \(RT\)
+density. A strong sufficient estimate is a geometric or otherwise summable bound
 
 \[
  \operatorname{osc}
- \bigl(\log\rho_{n+1}^{(\ell)}-log\rho_n^{(\ell)}\bigr)
+ \bigl(\log\rho_{n+1}^{(\ell)}-\log\rho_n^{(\ell)}\bigr)
  \le C\vartheta^n,
  \qquad 0<\vartheta<1,
 \]
@@ -143,7 +187,9 @@ each auxiliary density separately do not imply this difference estimate. Since
 CMP **119**, Eq. (2.18), is a sum over large-field histories, the comparison must
 also control the history sum with a common centering; termwise oscillations modulo
 history-dependent constants are insufficient. A rooted polymer criterion and a
-sharp counterexample are proved in `09-common-space-and-r-obstruction.md`.
+sharp counterexample are proved in the common-space note. If global oscillation
+is unavailable, the immediate alternative is a summable source-test estimate or
+the \(L^1\) criterion of Proposition 1'.
 
 ## Boundary of the reduction
 

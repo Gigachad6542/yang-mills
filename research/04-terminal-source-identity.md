@@ -9,8 +9,12 @@ extension of \(R\) remains open.
 
 Let \(\Omega_k\) and \(\Omega_{k+1}\) be compact configuration spaces, let
 \(\eta_k\) be a finite positive measure on \(\Omega_k\), and let
-\(K_k(U,dV)\) be a finite positive block kernel. No normalization of \(K_k\) is
-needed. Define the next unnormalized measure by
+\(K_k(U,dV)\) be a measurable positive block kernel such that
+\[
+ \int_{\Omega_k}\eta_k(dU)\,K_k(U,\Omega_{k+1})<\infty.
+\]
+For example, a uniform bound on the kernel masses suffices. No normalization of
+\(K_k\) is needed. Define the next unnormalized measure by
 
 \[
  \eta_{k+1}(dV)=\int_{\Omega_k}\eta_k(dU)K_k(U,dV).
@@ -50,7 +54,8 @@ Repeated use of the one-step identity gives
  =e^{zF(V)}\eta_n(dV).
 \]
 
-Consequently the normalized generating function is
+If the resulting total mass is also nonzero, the normalized generating function
+is
 
 \[
  \frac{\displaystyle\int e^{zF(V)}\eta_n(dV)}

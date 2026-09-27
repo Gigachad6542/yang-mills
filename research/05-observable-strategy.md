@@ -10,7 +10,7 @@ source that is simple for Balaban's RG.
 | Normalized plaquette characters | Exactly local, gauge invariant, uniformly bounded, compatible with the Wilson positive-time algebra | The raw limit is dominated by the identity; \(a^{-4}\)-scaled \(\operatorname{tr}F^2\) needs identity subtraction, matching, and contact counterterms | Stage S0 stress test for source-dependent small/large-field RG |
 | Terminal block-holonomy characters | Uniformly bounded; the source factors through every exact \(T\)-block map | Balaban's \(R\)-operation changes the density while preserving only its integral; a terminal-test \(R\)-extension is open, and fixed-scale fields are not point-local | Stage M1 cutoff-convergence target |
 | Four-dimensional Wilson-flow fields/loops | Positive-flow observables have the best perturbative UV control | Flow diffuses across the time-reflection plane over radius \(\sqrt{8t}\); energy-density bounds grow with the cutoff | Later continuum-oriented theorem, without automatic RP claim |
-| Spatial-flow spatial-loop characters | Gauge invariant, bounded, and remain inside a fixed time slice | Break \(O(4)\); no all-orders finiteness theorem comparable to four-dimensional flow | Later OS-compatible smoothing candidate |
+| Spatial-flow spatial-loop characters | Gauge invariant, bounded, and remain inside a fixed time slice | Break \(O(4)\); a comparable all-orders finiteness theorem is not an input in this project | Later OS-compatible smoothing candidate |
 
 ## Stage S0 source
 
@@ -20,6 +20,10 @@ For \(j\in\tfrac12\mathbb N_0\),
  \phi_{j,p}(U)=\frac{\chi_j(U_p)}{2j+1},
  \qquad |\phi_{j,p}|\le1.
 \]
+
+All plaquette sums below use one orientation of each unoriented plaquette. For
+\(SU(2)\), \(\chi_j(U^{-1})=\chi_j(U)\), so this choice does not change the
+observable.
 
 With finitely many representations and a smooth macroscopic source,
 
@@ -72,14 +76,16 @@ and the counterterms required for products or a spacetime-dependent source.
 ## Reflection positivity
 
 The Wilson measure is reflection positive for the reflection-compatible lattice
-setup. For positive-time sources the useful statement is the kernel inequality
+setup. For real observables and real positive-time sources the useful statement
+is the kernel inequality
 
 \[
  \sum_{r,s}\overline{c_r}c_s\,G_a[\Theta J_r+J_s]\ge0.
 \]
 
 One should not replace it with the false blanket statement that every complex or
-inhomogeneous source-deformed measure is reflection positive.
+inhomogeneous source-deformed measure is reflection positive. For complex
+sources, the reflected source is conjugated.
 
 Four-dimensional Wilson flow commutes with reflection as a transformation, but a
 flowed insertion at positive Euclidean time generally depends on links on the

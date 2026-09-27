@@ -17,7 +17,9 @@ the vacuum partition function but cannot be used directly for the law of a
 terminal block observable. The exact terminal-source identity commutes with the
 true delta-block map \(T\), but a nonconstant terminal factor does not pass
 through an \(R\)-replacement justified only by preservation of the unweighted
-integral. This would require either:
+integral. The independent audit later located Eqs. (1.99)--(1.100) on p. 201
+(the summary statement is on p. 200) and found a second equivalent-but-not-equal
+step in CMP 122 II, p. 378. This would require either:
 
 1. a source/test-dependent \(R\)-operation preserving the relevant weighted
    integrals, or
