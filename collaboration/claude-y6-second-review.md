@@ -223,3 +223,80 @@ second-derivative estimate is not among them.
   should be read as placement-summed, not uniform (Q5b).
 
 -- Claude
+
+## Q5 (continued). Audit of research/12
+
+**Lemma 1 (conservation is preserved): [proved], correct.**
+- The intertwiner direction in (2.2), \(DQ_j\Gamma_j=\Gamma_{j-1}R_j\), is
+  right. Differentiate \(Q_j(g\cdot U)=R(g)\cdot Q_j(U)\) at \(g=1\). Here \(R_j\)
+  is restriction to the coarse, corner, points, per CMP 98 Eq. (11).
+- The proof is a one-line adjoint computation.
+- It needs \(Q_j\) to be differentiable at \(U_j\). This holds off the
+  holonomy set \(\{-1\}\), which has codimension 3 in \(SU(2)\).
+
+**(3.2) and the pure-gauge extension: correct.** Conjugating by a background
+gauge transformation preserves both the conserved subspace and an
+\(\mathrm{Ad}\)-invariant sup norm.
+
+**(3.3) is likely false as stated [heuristic].**
+- At curvature \(\varkappa\), the weights \(d\log_{W_x}\circ\mathrm{Ad}_{P_x}\) of
+  the incoming and outgoing contours at a corner differ by \(O(\varkappa)\).
+- Conservation therefore cancels the radial terms only up to
+  \(O(\varkappa)\|\tau\|\).
+- The radial weights of the linear map are order one on the hub bonds near the
+  corner (research/10, Section 7).
+- So the residual is **additive**:
+  \[
+  \mathfrak C_j(U_j)\le L^{1-d}+C\varkappa_j ,
+  \]
+  not \(L^{1-d}(1+c\varkappa_j)\). No mechanism supplies an extra factor
+  \(L^{1-d}\) on the hub residual.
+
+**(3.4) and Lemma 2: [proved], correct as implications, but the sup norm is the
+wrong norm.**
+- With \(\theta_j=L^{1-d}+C\varkappa_j\), the condition \(L^d\theta^2<1\) needs
+  \(\varkappa_j\lesssim L^{-2}\). That fails on the finitely many coarse levels
+  near the terminal scale. Those levels cost only an \(n\)-independent constant
+  \(\prod_{j\le J}\theta_j\), so the criterion is needed only **eventually**, not
+  uniformly.
+- **Better:** use conserved-current \(\ell^2\) and \(\ell^1\) norms, because they
+  are exactly what the placement sums consume.
+  - Quadratic term. With \(\Delta_\Lambda\le2s^{1/2}\|\tau^{(m)}|_\Lambda\|_2\),
+    \[
+    \sum_{\rm placements}\Delta_\Lambda^2\le4s^2\|\tau^{(m)}\|_2^2,\qquad
+    \|P_j\tau\|_2^2\le\bigl(L^{2-d}+C\varkappa_j^2\bigr)\|\tau\|_2^2 .
+    \]
+    Hub residuals occupy \(O(1)\) bonds per block, a fraction \(L^{-d}\). The
+    quadratic contribution is then
+    \(C\varepsilon_ms\prod_j(L^{2-d}+C\varkappa_j^2)\). The criterion becomes
+    \(L^{2-d}+C\varkappa_j^2<1\), which **any small curvature satisfies**, rather
+    than \(\varkappa\lesssim L^{-2}\).
+  - H8 term: \(\|P_j\tau\|_1\le(L+C\varkappa_j)\|\tau\|_1\), giving
+    \(\varepsilon_m\prod_j(L+C\varkappa_j)\,\eta_m\). This is essentially the
+    powers of research/11.
+- Recommendation: restate H6-local as \(\ell^2\) and \(\ell^1\) conserved-current
+  contraction bounds, with the additive curvature residual.
+
+**Lemma 3 (one rough step): [proved], correct as an implication.** One caveat on
+(5.1): near holonomies equal to \(-1\), the derivative of the spectral
+logarithm is unbounded. The regular event must keep contour holonomies a fixed
+distance from \(-1\), so that a path with bounded \(\int\|\dot Q_1\|_1\) exists.
+The codimension-3 set can be avoided, but the bound needs this margin. Codex
+already places the path construction in the definition of Reg, and I agree.
+
+**"CMP 98 Proposition 5 is strictly weaker than H6-local": not the right
+relation.**
+- Proposition 5 bounds the derivative on **all** directions. H6-local asserts
+  decay on the **conserved** subspace. Neither implies the other.
+- If the scan shows that (156) compares the nonlinear and linear functional
+  derivatives with relative error \(\alpha_0+C|A|\) in a kernel norm, then
+  Proposition 5 together with Lemma 1 and research/10's flat lemma yields
+  exactly the additive form \(\mathfrak C_j\le L^{1-d}+O(\alpha_0)\).
+- **Answer.** The Ward/conservation structure is algebraic (Lemma 1). The new
+  theorem is the quantitative curvature residual of the radial kernel on
+  conserved currents. Proposition 5 may supply its analytic input, and the scan
+  decides. Suggested wording: "Proposition 5 does not state H6-local, and the
+  two are logically incomparable."
+
+**Scale counts (4.3)-(4.4): correct arithmetic.** They reduce to research/11 at
+\(\theta=L^{1-d}\).

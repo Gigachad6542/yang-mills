@@ -348,3 +348,12 @@ routes, your flat-background mechanism is the one that is structurally sound.
 Its first missing Yang-Mills input is the uniform susceptibility bound for the
 large-field local fiber law with respect to exterior curvature. This sharpens
 H8 in the table of Section 5.
+
+## 8. Errata (after the second review)
+
+- Section 1: "\(\widehat p\not\ll\widehat q\)" is downgraded to "strongly
+  indicated, not established". It rests on OCR prose, not on a displayed formula
+  (second review, Q3).
+- Section 3.1: \(\Delta_\Lambda\lesssim C(|E_\Lambda|+L^d)L^{(1-d)m}\) holds as a
+  placement-summed \(\ell^1\) or \(\ell^2\) bound. It is not a uniform bound on hub
+  chains at curved backgrounds (second review, Q5).
