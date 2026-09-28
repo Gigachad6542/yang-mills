@@ -1,413 +1,406 @@
-# Transverse conditional means and quadratic \(R\)-bias
+# Terminal mean shifts and the complete \(R\)-observable gap
 
-Status: **the probability lemmas, counterexamples, and scale reduction below
-are proved here**. The conditional entropy, score, reflection, susceptibility,
-and second-derivative estimates needed to apply them to Balaban's complete
-\(R\)-operation are open.
+Status: **Lemma 1 and the diagnostic probability lemmas below are proved
+here.**  The identification of the two fiber laws is taken from Balaban's
+published formulas, with the caveats stated in Section 2.  The three
+Yang--Mills estimates H6--H8 isolated below are open.  In particular, this
+note does not prove that the complete \(R\)-operation preserves, or
+asymptotically preserves, terminal observables.
 
-## 1. The quantity left after source normalization
+This note supersedes the earlier fine-field condition Y6'.  That condition was
+not sufficient: nonlinear block averaging creates Baker--Campbell--Hausdorff
+terms whose fine-coordinate Hessian is still first order in the terminal
+sensitivity.  The clean reduction must be made in a **terminal** chart.
 
-Fix one history, one exterior field, and one \(R\)-component \(\Lambda\). In
-the notation of research note 10, normalize the two fiber densities to
-probability laws
+## 1. The observable defect on one fiber
+
+Fix one history, one exterior field \(V_c\), and one \(R\)-component
+\(\Lambda\) at scale \(k=K-m\).  Normalize the true and template fiber
+weights to probability laws
 
 \[
- \mu=\widehat p_\Lambda,\qquad \nu=\widehat q_\Lambda.
+ \widehat p_\Lambda(dW\mid V_c),\qquad
+ \widehat q_\Lambda(dW\mid V_c).
 \]
 
-The source-blind replacement changes the conditional expectation of a terminal
-test \(F_m\) by
+For a bounded terminal test \(F\), the source-blind replacement changes its
+conditional expectation by
 
 \[
- B_\Lambda(F_m)=\mathbb E_\nu F_m-\mathbb E_\mu F_m.
+ B_\Lambda(F)
+ =\mathbb E_{\widehat q_\Lambda}F
+  -\mathbb E_{\widehat p_\Lambda}F.
  \tag{1.1}
 \]
 
-Equivalently, the first derivative of the exact source correction has the
-opposite sign:
+Equivalently, the exact source correction of research note 10 satisfies
 
 \[
  \partial_z\log D_\Lambda(0)
- =\mathbb E_\mu F_m-\mathbb E_\nu F_m.
+ =\mathbb E_{\widehat p_\Lambda}F
+  -\mathbb E_{\widehat q_\Lambda}F.
  \tag{1.2}
 \]
 
-Let \(A_\Lambda\) denote a Lie-algebra coordinate in a local axial frame and
-let \(\Pi^\perp\) remove infinitesimal gradient directions. The proposed Y6'
-input is
+Fiber-mass suppression does not bound (1.1): normalization cancels that small
+mass.  What is needed is either direct control of the conditional terminal
+laws or a structural cancellation in the particular terminal tests.
+
+## 2. What the published fiber formulas do and do not provide
+
+The true fiber weight is the restriction of one history term in the density
+of CMP **119**, Eqs. (2.18), (2.23), to
+\(W=V_k|_\Lambda\), with \(V_c=V_k|_{\Lambda^c}\) fixed.  CMP **122 I**,
+Eqs. (1.71)--(1.76), integrates these variables after imposing the
+history-dependent characteristic functions.  The extra function
+\(\chi_{k,\Lambda}\) in Eq. (1.75) restricts the field outside the integration
+region; it is not a small-field cutoff on every component of \(W\).
+
+The template in CMP **122 I**, Eqs. (1.100)--(1.101), is instead an axial-gauge
+small-field weight of the schematic form
 
 \[
- \left\|\Pi^\perp\left(
-   \mathbb E_\mu A_\Lambda-\mathbb E_\nu A_\Lambda
- \right)\right\|_\infty\le\eta_m,
- \qquad
- \sum_m\varepsilon_mL^m\eta_m<\infty.
- \tag{1.3}
-\]
-
-The large-field factor \(\varepsilon_m\) controls the mass of a history term.
-It does not control the mean of the **normalized** conditional law in (1.1).
-The lemmas below identify the additional input needed to control that mean.
-
-## 2. Entropy does not create a geometric factor
-
-### Proposition 1: entropy--subgaussian mean bound
-
-Let \(X\) be real and suppose its centered moment-generating function under
-\(\nu\) satisfies
-
-\[
- \log\mathbb E_\nu e^{t(X-\mathbb E_\nu X)}
- \le \frac{\sigma^2t^2}{2},\qquad t\in\mathbb R.
+ \widehat q_\Lambda(dW\mid V_c)\ \propto\
+ e^{-g_k^{-2}A(\zeta,U_{k,X}(W,V_c))}
+ \delta_G(W)\,
+ \mathbf 1\{ |\log W(b)|<M_0\varepsilon_k:\ b\in\Lambda\}\,dW,
  \tag{2.1}
 \]
 
-For every \(\mu\ll\nu\),
+averaged over the prescribed coordinate graphs.  Formula (2.1) is schematic:
+the journal scan must be used before quoting its normalization or indices
+verbatim.
+
+Thus the template is supported in a small axial chart, whereas the published
+representation of the true fiber law does not impose the same support
+restriction on \(W\).  The positive Wilson integrand strongly indicates true
+fiber mass outside the template support, but the present argument needs only
+the weaker, fully justified conclusion:
+
+> The published bounds do not establish
+> \(\widehat p_\Lambda\ll\widehat q_\Lambda\), mutual absolute continuity, or
+> a finite log-likelihood ratio on the full fiber.
+
+Consequently, entropy, likelihood-ratio interpolation, and integration by
+parts across the two actual laws are not presently licensed.  Hard
+characteristic functions would also create boundary terms in a formal
+integration-by-parts argument.
+
+## 3. The correct abstract reduction
+
+### Lemma 1: terminal-chart linearization with a bad-set remainder
+
+Let \(p,q\) be probability measures on a fiber \(\Omega\), let
+\(\Phi:\Omega\to\mathbb R^N\) and \(F:\Omega\to\mathbb R\) be measurable,
+and let \(\mathrm{Reg}\subset\Omega\) be measurable.  Assume that
+\(\Phi(\mathrm{Reg})\) lies in a convex set \(K\), that \(\Phi_0\in K\), and
+that there is an \(f\in C^2(K)\) for which \(F=f\circ\Phi\) on
+\(\mathrm{Reg}\).  Put
 
 \[
- \left|\mathbb E_\mu X-\mathbb E_\nu X\right|
- \le\sqrt{2\sigma^2D(\mu\Vert\nu)}.
- \tag{2.2}
+ \xi=\nabla f(\Phi_0),\qquad
+ \kappa=\sup_{u\in K}\|\nabla^2 f(u)\|_{\rm op},
+ \tag{3.1}
 \]
 
-#### Proof
-
-The entropy variational inequality gives, for \(t>0\),
+and suppose
 
 \[
- t(\mathbb E_\mu X-\mathbb E_\nu X)
- \le D(\mu\Vert\nu)+\frac{\sigma^2t^2}{2}.
+ \omega:=\sup_{\operatorname{supp}(p+q)}
+       |F-f(\Phi_0)|<\infty.
+ \tag{3.2}
 \]
 
-Optimize in \(t\) and repeat for \(-X\). \(\square\)
-
-If \(\nu(dx)=Z^{-1}e^{-V(x)}dx\) on a convex fiber with
-\(\nabla^2V\ge\kappa I\), then Bakry--Émery gives
-\(\sigma^2\le\kappa^{-1}\) for a unit coordinate. Thus (2.2) yields the
-required \(O(L^{-m})\) mean only after the new estimate
+Define the regular, centered mean shift
 
 \[
- D(\mu\Vert\nu)=O(\kappa L^{-2m}).
- \tag{2.3}
-\]
-
-This scale is sharp: for two unit-variance Gaussians with means \(0\) and \(a\),
-the entropy is \(a^2/2\) and (2.2) is an equality. Conditioning a Gaussian on
-a large-field event gives a second warning. The event may have small mass while
-the normalized conditional mean is order one, or larger. Large-field
-suppression alone is therefore not an entropy estimate of the form (2.3).
-
-## 3. A density tilt transfers the burden to a score estimate
-
-### Proposition 2: interpolation identity
-
-Assume
-
-\[
- d\mu=\frac{e^U}{\nu(e^U)}d\nu,\qquad
- d\mu_t=\frac{e^{tU}}{\nu(e^{tU})}d\nu,\quad 0\le t\le1.
+ M_{p,q}:=
+ \mathbb E_p[(\Phi-\Phi_0)\mathbf1_{\rm Reg}]
+ -\mathbb E_q[(\Phi-\Phi_0)\mathbf1_{\rm Reg}].
+ \tag{3.3}
 \]
 
 Then
 
 \[
- \mathbb E_\mu X-\mathbb E_\nu X
- =\int_0^1\operatorname{Cov}_{\mu_t}(X,U)\,dt.
- \tag{3.1}
-\]
-
-If every \(\mu_t\) satisfies a Poincaré inequality with constant \(C_t\), and
-\(X\) is a unit Euclidean coordinate, then
-
-\[
- \left|\mathbb E_\mu X-\mathbb E_\nu X\right|
- \le\int_0^1 C_t
-       \left(\mathbb E_{\mu_t}|\nabla U|^2\right)^{1/2}dt.
- \tag{3.2}
-\]
-
-#### Proof
-
-Differentiate \(\mathbb E_{\mu_t}X\) to obtain (3.1). Cauchy--Schwarz and the
-two Poincaré inequalities for \(X\) and \(U\) give (3.2). \(\square\)
-
-A usual Poincaré or Brascamp--Lieb inequality does not permit replacing
-\(\nabla U\) by \(\Pi^\perp\nabla U\) merely because the tested coordinate is
-transverse. Cross-Hessian terms can carry a longitudinal score into a
-transverse mean. That replacement requires a product decomposition, an
-invariant transverse subspace for the covariance operator, or a genuinely
-directional covariance inequality.
-
-There is also a sharp zeroth-order version. If
-\(\operatorname{osc}U\le a\), then
-
-\[
- \lVert\mu-\nu\rVert_{\rm TV}\le\tanh(a/4),\qquad
- |\mathbb E_\mu f-\mathbb E_\nu f|
- \le\operatorname{osc}(f)\tanh(a/4).
- \tag{3.3}
-\]
-
-Here \(\lVert\mu-\nu\rVert_{\rm TV}=\sup_A|\mu(A)-\nu(A)|\), so a real
-bounded test obeys
-\(|\mathbb E_\mu f-\mathbb E_\nu f|\le\operatorname{osc}(f)
-\lVert\mu-\nu\rVert_{\rm TV}\).
-The extremizer is a two-point likelihood ratio whose two values have ratio
-\(e^a\). Hence this route still needs
-\(\operatorname{osc}\log(d\mu/d\nu)=O(L^{-m})\).
-
-### Proposition 3: Stein identity and transverse leakage
-
-Suppose a law \(\nu\) on a Euclidean fiber has a Stein kernel \(\tau\):
-
-\[
- \mathbb E_\nu[(A-\mathbb E_\nu A)\varphi(A)]
- =\mathbb E_\nu[\tau(A)\nabla\varphi(A)].
+ \mathbb E_pF-\mathbb E_qF=\langle\xi,M_{p,q}\rangle+r
  \tag{3.4}
-\]
-
-For the tilt in Proposition 2,
-
-\[
- \mathbb E_\mu A-\mathbb E_\nu A
- =\mathbb E_\mu[\tau\nabla U].
- \tag{3.5}
-\]
-
-Consequently,
-
-\[
- \Pi^\perp(\mathbb E_\mu A-\mathbb E_\nu A)
- =\mathbb E_\mu[\Pi^\perp\tau\Pi^\perp\nabla U]
-  +\mathbb E_\mu[\Pi^\perp\tau(1-\Pi^\perp)\nabla U].
- \tag{3.6}
-\]
-
-#### Proof
-
-Use \(\varphi=e^U/\nu(e^U)\) in (3.4). \(\square\)
-
-For a Gaussian with precision \(K\), (3.5) is the exact Schwinger--Dyson
-identity \(\Delta m=K^{-1}\mathbb E_\mu\nabla U\). Formula (3.6) shows both
-requirements explicitly: a small transverse score and control of longitudinal
-to transverse mixing. Integration by parts does not manufacture either one.
-Hard characteristic-function boundaries add flux terms and may make \(U\)
-infinite, so (3.5) cannot be applied to Balaban's fiber pair without a new
-support-compatible interpolation or explicit boundary analysis.
-
-## 4. The symmetry route
-
-### Proposition 4: odd-density defect
-
-Let \(S\) be a measurable involution preserving a reference measure \(\lambda\).
-Suppose \(X\circ S=-X\), \(E\circ S=E\), and \(O\circ S=-O\). For
-
-\[
- d\mu=Z^{-1}e^{E+O}d\lambda,\qquad
- d\bar\mu=\bar Z^{-1}e^E\cosh(O)d\lambda,
-\]
-
-one has
-
-\[
- \mathbb E_\mu X=\mathbb E_{\bar\mu}[X\tanh O].
- \tag{4.1}
-\]
-
-In particular, if \(|X|\le M\) and \(|O|\le a\), then
-
-\[
- |\mathbb E_\mu X|\le M\tanh a.
- \tag{4.2}
-\]
-
-#### Proof
-
-Pair a point with its image under \(S\). The \(X\cosh O\) contribution and the
-\(\sinh O\) contribution to the normalization vanish by parity, leaving (4.1).
-\(\square\)
-
-More intrinsically,
-
-\[
- |\mathbb E_\mu X|
- \le M\lVert\mu-S_*\mu\rVert_{\rm TV}.
- \tag{4.3}
-\]
-
-Thus exact invariance of both fiber laws makes both odd means vanish. An
-approximate reflection defect \(O(L^{-m})\) is also sufficient.
-
-Suppose instead that the conditioning/background datum is \(h\),
-\(S_*\mu_h=\mu_{-h}\), and the same holds for \(\nu_h\). If the two mean maps
-vanish at \(h=0\) and have derivative norms bounded by \(C_\mu,C_\nu\), then
-
-\[
- \left|\mathbb E_{\mu_h}X-\mathbb E_{\nu_h}X\right|
- \le(C_\mu+C_\nu)|h|.
- \tag{4.4}
-\]
-
-This identifies a plausible mechanism for (1.3): exact cancellation at a flat
-or pure-gauge background, followed by a uniform susceptibility estimate in a
-background whose curvature contribution is geometrically small. A global
-symmetry that changes the fixed exterior field or the history label is not
-enough.
-
-There is a useful paired-history relaxation. If histories \(h,h^*\) have
-weights \(w,w^*\) and first-order biases \(b,b^*\), and
-
-\[
- |w-w^*|\le\theta(w+w^*),\quad |b|,|b^*|\le M,\quad |b+b^*|\le r,
-\]
-
-then their normalized combined bias is at most
-
-\[
- \theta M+\frac r2.
- \tag{4.5}
-\]
-
-This follows by writing
-\(wb+w^*b^*=\frac12(w+w^*)(b+b^*)+\frac12(w-w^*)(b-b^*)\).
-It allows a reflected-history pairing even when a termwise symmetry fails.
-
-## 5. Exact reduction to a mean term and a quadratic remainder
-
-### Proposition 5: transverse Taylor reduction
-
-Assume that on the union of the two fiber supports,
-
-\[
- F_m(A)=F_0+\ell_m(\Pi^\perp A)+R_m(A),
- \tag{5.1}
 \]
 
 with
 
 \[
- \lVert\ell_m\rVert_1\le C_1\delta_\Lambda,\qquad
- |R_m(A)|\le C_2\delta_\Lambda^2W(A),\qquad
- \mathbb E_\mu W+\mathbb E_\nu W\le M_2.
- \tag{5.2}
-\]
-
-Then
-
-\[
- \boxed{
- |B_\Lambda(F_m)|
- \le C_1\delta_\Lambda
- \left\|\Pi^\perp(\mathbb E_\mu A-\mathbb E_\nu A)\right\|_\infty
- +C_2M_2\delta_\Lambda^2.}
- \tag{5.3}
+ \begin{aligned}
+ |r|\le{}&\frac\kappa2\left(
+  \mathbb E_p[|\Phi-\Phi_0|^2\mathbf1_{\rm Reg}]
+ +\mathbb E_q[|\Phi-\Phi_0|^2\mathbf1_{\rm Reg}]
+ \right)\\
+ &+\omega\bigl(p(\mathrm{Reg}^c)+q(\mathrm{Reg}^c)\bigr).
+ \end{aligned}
+ \tag{3.5}
 \]
 
 #### Proof
 
-Take expectations in (5.1), subtract, use \(\ell^1\)-\(\ell^\infty\) duality,
-and bound the two remainders separately. \(\square\)
-
-There is also a symmetry-only version. If \(\mu,\nu\) are \(S\)-invariant and
+On \(\mathrm{Reg}\), Taylor's theorem along the segment from \(\Phi_0\) to
+\(\Phi\) gives
 
 \[
- |F_m(A)+F_m(SA)-2F_0|
- \le C\delta_\Lambda^2W(A),
+ |f(\Phi)-f(\Phi_0)-\langle\xi,\Phi-\Phi_0\rangle|
+ \le\frac\kappa2|\Phi-\Phi_0|^2.
 \]
 
-then averaging \(F_m\) with \(F_m\circ S\) gives
+On \(\mathrm{Reg}^c\), use (3.2).  Integrate the two decompositions and
+subtract. \(\square\)
+
+### Corollary 2: terminal oscillation
+
+If
 
 \[
- |B_\Lambda(F_m)|
- \le\frac C2\delta_\Lambda^2
-      (\mathbb E_\mu W+\mathbb E_\nu W).
+ \Delta_\Lambda=
+ \sup_{\mathrm{Reg}\cap\operatorname{supp}(p+q)}
+ |\Phi-\Phi_0|,
+ \tag{3.6}
+\]
+
+then
+
+\[
+ |\mathbb E_pF-\mathbb E_qF|
+ \le |\xi|\,|M_{p,q}|+\kappa\Delta_\Lambda^2
+ +\omega\bigl(p(\mathrm{Reg}^c)+q(\mathrm{Reg}^c)\bigr).
+ \tag{3.7}
+\]
+
+For the \(R\)-problem, \(\Phi=\Phi_K\) should be a smooth local coordinate of
+the selected **terminal** loop holonomies, or of terminal bonds in a fixed
+complete gauge.  A logarithmic chart is used only on \(\mathrm{Reg}\); bounded
+tests are controlled crudely on its complement.  This avoids assuming a
+global logarithm.
+
+The three missing Yang--Mills inputs are now explicit:
+
+> **H6 (terminal oscillation).**  On \(\mathrm{Reg}\), prove, uniformly in
+> histories and exterior fields,
+> \[
+> \Delta_\Lambda
+> \le C(|E_\Lambda|+L^d)L^{(1-d)m}.
+> \tag{3.8}
+> \]
+> This must include the first irregular level and propagation through regular
+> nontrivial backgrounds.
+>
+> **H7 (bad-fiber tail).**  Prove a history- and shape-summed bound on
+> \(\widehat p_\Lambda(\mathrm{Reg}^c)\) and
+> \(\widehat q_\Lambda(\mathrm{Reg}^c)\) strong enough to remain summable after
+> the \(L^{dm}\) placement count.
+>
+> **H8 / Y6\(^{\prime\prime}\) (terminal mean shift).**  With \(M_\Lambda\)
+> defined by (3.3) in the terminal chart, prove
+> \[
+> |M_\Lambda|
+> \le C|E_\Lambda|L^{(1-d)m}\eta_m,
+> \qquad
+> \sum_m\varepsilon_mL^m\eta_m<\infty,
+> \tag{3.9}
+> \]
+> uniformly in histories and exterior fields.
+
+Here \(\varepsilon_m\) denotes the already-summed component suppression, not
+a bound on the normalized conditional mean.
+
+Under the additional counting hypothesis that components with \(|E_\Lambda|=s\)
+occur with weight at most \(C\varepsilon_mL^{dm}/s\) per terminal block, H8
+contributes at most \(C\varepsilon_mL^m\eta_m\).  H6 makes the quadratic term
+at most
+
+\[
+ C\varepsilon_m sL^{(2-d)m},
+ \tag{3.10}
+\]
+
+before the remaining shape sum.  It is geometrically summable in \(d=4\) if
+the shape weights absorb the factor \(s\).  A conservative sufficient form of
+H7 is
+
+\[
+ \sum_m\varepsilon_mL^{dm}
+ \sup_{\Lambda,V_c,h}
+ \bigl[\widehat p_\Lambda(\mathrm{Reg}^c\mid V_c)
+      +\widehat q_\Lambda(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
+ \tag{3.11}
+\]
+
+Equations (3.8)--(3.11) are a conditional scale reduction, not published
+estimates.
+
+## 4. Why a fine first moment is insufficient
+
+At the trivial-field linearization, research note 10 proves that pulling a
+closed-loop current back through \(m\) linear averaging steps gives
+
+\[
+ \|\tau^{(m)}\|_\infty\le L^{(1-d)m}\|\tau\|_\infty.
+ \tag{4.1}
+\]
+
+This is a first-derivative statement.  It does not imply that the remainder of
+a Taylor expansion in the fine axial coordinates is of order
+\(L^{2(1-d)m}\).  Already at one nonlinear averaging step,
+
+\[
+ \log(e^Xe^Y)=X+Y+\tfrac12[X,Y]+O(|X|^3+|Y|^3),
+ \tag{4.2}
+\]
+
+up to the convention for anti-Hermitian versus Hermitian coordinates.  Pairing
+the commutator term with the current one level above produces a Hessian with
+the **one-insertion** scale of that current.  For a nonabelian group it is
+generically nonzero.  Thus second moments and commutator anisotropies of the
+two fine laws enter at the same sensitivity order as their first moments.
+
+Consequently, the former condition Y6', which controlled only
+\(\mathbb E_{\widehat p}A-\mathbb E_{\widehat q}A\), does not control (1.1).
+Nor does projecting that difference repair the problem.  In a complete axial
+gauge the tree conditions remove every nonzero root-fixed gradient tangent to
+the slice, so the proposed \(\Pi^\perp\) is simply the identity there.  A
+gauge-independent fine-field seminorm can be defined by pairing with
+divergence-free currents, but it still sees only the linear term and not the
+BCH remainder.
+
+This does not invalidate (4.1).  It makes (4.1) the linear seed for H6 rather
+than a proof of H8.
+
+## 5. Diagnostic comparison lemmas
+
+These lemmas show exactly what extra estimates would make standard
+probability routes work.  Section 2 explains why their hypotheses are not
+known for the actual fiber pair.
+
+### Proposition 3: entropy--subgaussian bound
+
+If \(X-\mathbb E_qX\) is \(\sigma^2\)-subgaussian under \(q\) and
+\(p\ll q\), then
+
+\[
+ |\mathbb E_pX-\mathbb E_qX|
+ \le\sqrt{2\sigma^2D(p\Vert q)}.
+ \tag{5.1}
+\]
+
+This follows from the entropy variational inequality and optimization in the
+Laplace parameter.  Shifted Gaussians attain equality.  Hence an
+\(O(L^{-m})\) mean gain requires a genuinely new entropy bound of order
+\(L^{-2m}\), after the susceptibility scale is included.
+
+### Proposition 4: tilt interpolation
+
+If \(dp=e^U\,dq/q(e^U)\) and
+\(dp_t=e^{tU}\,dq/q(e^{tU})\), then
+
+\[
+ \mathbb E_pX-\mathbb E_qX
+ =\int_0^1\operatorname{Cov}_{p_t}(X,U)\,dt.
+ \tag{5.2}
+\]
+
+If all \(p_t\) obey a Poincar\'e inequality with constant \(C_t\) and \(X\)
+is a unit coordinate, then
+
+\[
+ |\mathbb E_pX-\mathbb E_qX|
+ \le\int_0^1 C_t
+       (\mathbb E_{p_t}|\nabla U|^2)^{1/2}dt.
+ \tag{5.3}
+\]
+
+Thus functional inequalities transfer the burden to a small score; they do
+not create the geometric factor.  Hard support mismatch makes \(U\) infinite
+and invalidates this interpolation.
+
+For completeness, if \(\operatorname{osc}U\le a\), then
+
+\[
+ \|p-q\|_{\rm TV}\le\tanh(a/4),\qquad
+ |\mathbb E_pf-\mathbb E_qf|
+ \le\operatorname{osc}(f)\tanh(a/4),
  \tag{5.4}
 \]
 
-First-derivative control does **not** imply the quadratic remainder in (5.2).
-On \([-1,1]\), let
-\(\mu=(\delta_{-1}+\delta_1)/2\), \(\nu=\delta_0\), and
-\(F_\delta(x)=\delta x^2\). The laws have the same mean and
-\(\operatorname{osc}F_\delta=\delta\), but their expectation difference is
-\(\delta\), not \(O(\delta^2)\). A two-insertion or second-Fréchet-derivative
-estimate for the pulled-back loop observable is a separate theorem.
+where \(\|p-q\|_{\rm TV}=\sup_A|p(A)-q(A)|\).  This still requires
+\(\operatorname{osc}U=O(L^{-m})\).
 
-## 6. Scale count
+### Proposition 5: Stein identity
 
-The linear closed-loop lemma in research note 10 gives, conditionally on
-regular propagation above the first affected level,
+If \(q\) has a Stein kernel \(\tau\),
 
 \[
- \delta_\Lambda
- \lesssim C(|\Lambda|+L^d)L^{(1-d)m}.
+ \mathbb E_q[(A-\mathbb E_qA)\varphi(A)]
+ =\mathbb E_q[\tau(A)\nabla\varphi(A)],
+\]
+
+then the tilt of Proposition 4 obeys
+
+\[
+ \mathbb E_pA-\mathbb E_qA=\mathbb E_p[\tau\nabla U].
+ \tag{5.5}
+\]
+
+This is an exact burden transfer to a score and a susceptibility.  Boundary
+flux must be added for hard cutoffs.
+
+## 6. Why the evident symmetry does not supply H8
+
+An abstract oddness lemma remains useful.  Let \(S\) preserve a reference
+measure, let \(X\circ S=-X\), and write a density as
+\(e^{E+O}\), with \(E\circ S=E\) and \(O\circ S=-O\).  Pairing each point
+with its image gives
+
+\[
+ \mathbb E_\mu X=\mathbb E_{\bar\mu}[X\tanh O],
+ \qquad d\bar\mu\propto e^E\cosh(O)d\lambda.
  \tag{6.1}
 \]
 
-Inserting (1.3) into (5.3), and then counting \(L^{dm}\) possible fine cells per
-terminal block, gives the two scale contributions
+Exact invariance would kill the odd mean, and an odd defect of size
+\(O(L^{-m})\) would suffice.  The actual fixed-conditioning problem lacks this
+involution.  For a generic exterior field \(V_c\), the standard Wilson-measure
+symmetries that also fix \(V_c\) reduce to the center and gauge
+transformations supported in \(\Lambda\):
 
-\[
- \varepsilon_mL^m\eta_m
- \quad\hbox{and}\quad
- \varepsilon_m|\Lambda|^2L^{(2-d)m},
- \tag{6.2}
-\]
+- a global conjugation fixing generic noncommuting exterior holonomies is
+  central;
+- for \(SU(2)\), charge conjugation is inner;
+- a generic exterior field breaks nontrivial lattice isometries;
+- interior gauge transformations change a linearized fine field by gradient
+  directions, already annihilated by a closed-loop current.
 
-up to fixed powers associated with the bounded component diameter. The first
-is summable precisely under the weighted Y6' condition. The second is
-geometrically summable in \(d=4\), provided component shapes and histories have
-already been absorbed into \(\varepsilon_m\), the moment \(M_2\) is uniform, and
-irregular-level costs are controlled.
+None flips the terminal observable while leaving the conditioning data fixed.
+A symmetry moving \(V_c\) relates different conditional laws and gives no
+termwise cancellation.  Approximate fluctuation reversal is also unavailable
+for the unrestricted true large-field fiber law.
 
-Thus a valid proof may take either of two forms:
+## 7. Published inputs and open hypotheses
 
-1. a transverse conditional-mean estimate with
-   \(\sum_m\varepsilon_mL^m\eta_m<\infty\); or
-2. exact cancellation of the projected first moment plus the genuinely
-   quadratic observable estimate (5.2).
+| ID | Input | Status |
+|---|---|---|
+| H1 | Fiber variable and fixed exterior data; CMP **122 I**, Eqs. (0.3), (1.73)--(1.76) | published |
+| H2 | Axial small-field template; CMP **122 I**, Eqs. (1.100)--(1.101) | published formula; scan transcription still required for verbatim use |
+| H3 | True history-term representation; CMP **119**, Eqs. (2.18), (2.23), and CMP **122 I**, Eqs. (1.71)--(1.75) | published representation, not a moment bound |
+| H4 | Positivity, fiber-mass normalization, and component suppression | published source-free bounds |
+| H5 | Regular-domain analyticity and functional derivatives of the averaging map; CMP **98**, Propositions 3--7 | published; no comparison of the fiber laws |
+| H6 | Terminal oscillation (3.8), including the first irregular step and curved backgrounds | open; the trivial-background linear part is proved in note 10 |
+| H7 | Summable regular-set-complement probability for the normalized fiber laws | open |
+| H8 | Terminal mean-shift estimate (3.9), Y6\(^{\prime\prime}\) | open; core conditional-law input |
 
-## 7. Audit against the published construction
+The next defensible technical target is H6.  CMP **98** provides the local
+analytic machinery, but its published first-derivative estimates do not by
+themselves cover the irregular first step or prove the terminal bound.  H7 and
+H8 require information about normalized fiber laws that the source-free
+\(R\)-bounds intentionally do not retain.
 
-The introductory CMP **122 I** formula identifies \(p=\rho(Z,V)\) and
-\(q=\rho(Z'',V)\) on a restricted-variable fiber (Eq. (0.3), printed p. 176).
-It proves positivity of their fiber masses, not closeness of their normalized
-conditional laws. The actual denominator uses localized small-field parts
-(p. 177), and the integration fiber varies by term/history (pp. 193--194).
-
-CMP **119**, Section 1, builds the complete density with hard small-field and
-large-field characteristic functions and repeated decompositions of unity
-(printed pp. 246--253); Eq. (2.18) then sums over the resulting histories.
-Consequently, mutual absolute continuity of \(\mu\) and \(\nu\), a finite
-log-density tilt, and the absence of boundary flux cannot be assumed. They
-would have to be proved for a refined pairing or replaced by the coupling or
-reflection route.
-
-CMP **98**, Proposition 5, controls a first functional derivative of the
-iterated averaging map on a regular small-field domain. Even after combining
-that estimate with the divergence-free loop-current cancellation, it supplies
-neither:
-
-- a comparison of the two conditional fiber laws;
-- a transverse entropy, score, or susceptibility estimate;
-- control of hard characteristic-function boundary terms;
-- nor the second-derivative estimate in (5.2).
-
-The exact additional Yang--Mills obligations are therefore:
-
-1. construct common local axial coordinates, or an intrinsic replacement, on
-   the relevant supports, including the first irregular level;
-2. prove one of the sharp small inputs isolated above: conditional entropy
-   \(O(L^{-2m})\), transverse score/odd defect \(O(L^{-m})\), or exact
-   flat-background cancellation with \(O(L^{-m})\) susceptibility response;
-3. control longitudinal-to-transverse covariance mixing and all cutoff-boundary
-   flux terms;
-4. prove a two-insertion bound for the nonlinear average and terminal loop,
-   including mixed derivatives for several components;
-5. retain these estimates uniformly through component shapes, exterior fields,
-   histories, and the final history sum.
-
-The strongest presently motivated route is exact cancellation at a flat or
-pure-gauge background, possibly after pairing reflected histories, followed by
-a uniform conditional susceptibility bound showing that only geometrically
-small background curvature breaks the cancellation. This is a precise target,
-not a consequence of the published source-free bounds.
+One could redesign the template by an exponential tilt chosen to match the
+terminal mean.  That removes the linear defect by construction, but introduces
+new localized linear terms and a source-dependent minimizer.  It is a possible
+new RG scheme, not a consequence of Balaban's present one.
