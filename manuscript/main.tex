@@ -492,6 +492,19 @@ projected fine-field first moment does not make the Taylor remainder quadratic
 in $L^{-3m}$.  The correct reduction is at the terminal level: on a regular
 event it splits the fiber bias into a terminal mean shift and a genuinely
 quadratic terminal-oscillation term, plus a bounded-test tail on the complement.
+Indeed, if $F=f\circ\Phi$ on a regular event, $f$ has Hessian norm at most
+$\kappa$, $\Delta=\sup_{\rm Reg}|\Phi-\Phi_0|$, and
+$\omega=\sup|F-f(\Phi_0)|$, then Taylor's theorem gives
+\[
+ \begin{aligned}
+ M_{p,q}&=E_p[(\Phi-\Phi_0)1_{\rm Reg}]
+          -E_q[(\Phi-\Phi_0)1_{\rm Reg}],\\
+ \left|E_pF-E_qF-
+   \left\langle\nabla f(\Phi_0),M_{p,q}\right\rangle\right|
+ &\le \kappa\Delta^2
+   +\omega\{p({\rm Reg}^c)+q({\rm Reg}^c)\}.
+ \end{aligned}
+\]
 The three missing estimates are therefore a terminal oscillation bound through
 the first irregular level and curved backgrounds, a summable complement
 probability under both normalized fiber laws, and a summable terminal mean

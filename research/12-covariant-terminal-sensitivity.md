@@ -8,8 +8,8 @@ Yang--Mills inputs.  They are not stated in CMP **98**, Proposition 5.
 
 ## 1. Why this is the next H6 question
 
-Research note 11 reduces the observable defect of one complete-
-\(R\) fiber replacement to three quantities.  H6 is the deterministic one:
+Research note 11 reduces the observable defect of one complete
+\(R\)-fiber replacement to three quantities.  H6 is the deterministic one:
 on a regular event, changing a component \(\Lambda\) at scale \(K-m\) should
 move each selected gauge-invariant terminal coordinate by
 
