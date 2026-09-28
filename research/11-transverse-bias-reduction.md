@@ -173,11 +173,14 @@ then
  \tag{3.7}
 \]
 
-For the \(R\)-problem, \(\Phi=\Phi_K\) should be a smooth local coordinate of
-the selected **terminal** loop holonomies, or of terminal bonds in a fixed
-complete gauge.  A logarithmic chart is used only on \(\mathrm{Reg}\); bounded
-tests are controlled crudely on its complement.  This avoids assuming a
-global logarithm.
+For the \(R\)-problem, \(\Phi=\Phi_K\) should be a smooth gauge-invariant
+coordinate map of the selected **terminal** holonomy data---for example, a
+finite vector of character functions.  It need not be one-to-one.  A
+gauge-fixed bond chart is also possible only if the gauge-fixing map and its
+derivatives are included in the estimates.  If logarithmic coordinates are
+used, they are used only on \(\mathrm{Reg}\); bounded tests are controlled
+crudely on its complement.  This avoids assuming a global logarithm and keeps
+the differentials relevant to H6 covariantly conserved.
 
 The three missing Yang--Mills inputs are now explicit:
 
@@ -435,7 +438,9 @@ The next defensible technical target is H6.  CMP **98** provides the local
 analytic machinery, but its published first-derivative estimates do not by
 themselves cover the irregular first step or prove the terminal bound.  H7 and
 H8 require information about normalized fiber laws that the source-free
-\(R\)-bounds intentionally do not retain.
+\(R\)-bounds intentionally do not retain.  Research note 12 reduces H6 to a
+curvature-stable one-step contraction of conserved currents and one localized
+rough-step path bound; neither estimate is stated in Proposition 5.
 
 One could redesign the template by an exponential tilt chosen to match the
 terminal mean.  That removes the linear defect by construction, but introduces

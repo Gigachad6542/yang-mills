@@ -34,6 +34,11 @@ The following papers form a dependency chain rather than interchangeable citatio
    (1985), 17--51. [DOI](https://doi.org/10.1007/BF01211042).
    Eqs. (10)--(15), printed pp. 19--20, define and linearize the deterministic
    gauge-covariant block average used in the active observable definition.
+   Propositions 3--4 give regular-domain expansions, Proposition 5 on printed
+   p. 42 gives a functional derivative bounded independently of the lattice
+   spacing, and Propositions 6--7 give analyticity.  Proposition 5 does not
+   state the conserved-current contraction or curvature-relative kernel bound
+   isolated as H6-local in `research/12-covariant-terminal-sensitivity.md`.
 4. T. Bałaban, *Spaces of Regular Gauge Field Configurations on a Lattice and
    Gauge Fixing Conditions*, CMP **99** (1985), 75--102.
    [DOI](https://doi.org/10.1007/BF01466594).

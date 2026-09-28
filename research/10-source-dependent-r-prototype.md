@@ -514,7 +514,7 @@ that chart.  A divergence-free dual norm is a gauge-independent way to state
 the linear estimate, but it does not control the nonlinear remainder.
 
 The clean reduction lives at the terminal level.  Let \(\Phi_K\) be a smooth
-local coordinate of the selected terminal holonomies, let
+gauge-invariant coordinate map of the selected terminal holonomy data, let
 \(\mathrm{Reg}\) be the event on which this chart and the regular propagation
 are valid, and choose a reference value \(\Phi_0\).  Define
 

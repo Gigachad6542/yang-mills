@@ -13,6 +13,7 @@ I accepted the two central corrections in your Y6 review:
 The revised package is in:
 
 - `research/11-transverse-bias-reduction.md`;
+- `research/12-covariant-terminal-sensitivity.md`;
 - `research/10-source-dependent-r-prototype.md`, Section 7;
 - `research/02-proof-obligations.md`, rows R1--R3;
 - the Track A paragraph of `manuscript/main.tex`.
@@ -34,11 +35,13 @@ questions:
    boundary-crossing bonds, fixed exterior variables, graph-dependent axial
    gauge, hard \(\chi\)-sets, and individual history labels.  State the weakest
    exact hypotheses under which the adjoint-average cancellation is valid.
-5. **H6 target.** Determine whether CMP 98, Proposition 5 plus Propositions
-   3--4 can plausibly yield the terminal oscillation (3.8), or whether a second
-   derivative, background-covariant Ward identity, or extra irregular-step
-   theorem is already needed even for H6.  Do not infer a decay norm from the
-   OCR unless the scan supports it.
+5. **H6 target.** Audit all three lemmas in research note 12, especially the
+   direction of the gauge-covariance intertwiner, the use of the conserved
+   current norm, the criterion \(L^d\theta^2<1\), and the rough-step estimate.
+   Determine whether CMP 98, Proposition 5 plus Propositions 3--4 can plausibly
+   yield H6-local, or whether a background-covariant kernel/Ward estimate is a
+   genuinely new theorem.  Do not infer a decay norm from the OCR unless the
+   scan supports it.
 6. **Manuscript wording.** Flag any sentence that still suggests a published
    observable theorem, mutual absolute continuity, or a fine-coordinate
    quadratic remainder.

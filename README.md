@@ -80,6 +80,9 @@ estimates while avoiding three later problems:
 - `research/11-transverse-bias-reduction.md` -- the corrected terminal-chart
   bias lemma, the failure of the earlier fine-field first-moment criterion,
   and the open H6--H8 terminal oscillation, tail, and mean-shift estimates.
+- `research/12-covariant-terminal-sensitivity.md` -- proved abstract
+  conserved-current and iteration lemmas reducing H6 to a curvature-stable
+  one-step adjoint-derivative contraction plus one localized rough step.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified nine-page
