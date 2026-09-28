@@ -381,6 +381,43 @@ A symmetry moving \(V_c\) relates different conditional laws and gives no
 termwise cancellation.  Approximate fluctuation reversal is also unavailable
 for the unrestricted true large-field fiber law.
 
+There is a useful **conditional flat-background exception**.  Suppose a
+neighborhood \(N\supset\Lambda\) can be put in a pure-gauge frame, and suppose
+that, with this exterior held fixed, both localized fiber laws, the regular
+event, and the terminal perturbation \(Y_{\rm loc}\) obey
+
+\[
+ S_{h*}\widehat p_\Lambda=\widehat p_\Lambda,\qquad
+ S_{h*}\widehat q_\Lambda=\widehat q_\Lambda,\qquad
+ Y_{\rm loc}(S_hW)=\operatorname{Ad}_hY_{\rm loc}(W)
+ \tag{6.2}
+\]
+
+for every constant color rotation \(h\).  For a compact simple group, the
+adjoint representation has no invariant vector.  Hence each regular first
+moment of \(Y_{\rm loc}\) vanishes.  Equivalently, the linear term of any smooth
+gauge-invariant terminal test vanishes, and Lemma 1 leaves only the quadratic
+and bad-set terms.
+
+This gives a structurally sound route to H8: verify (6.2) for every localized
+history at a flat exterior, then prove a uniform susceptibility estimate for
+the change in the terminal mean under exterior curvature.  Schematically, one
+would need
+
+\[
+ |M_\Lambda(V_c)-M_\Lambda(V_{\rm flat})|
+ \le \chi_\Lambda\,
+       \operatorname{curv}(V_c|_N)
+       +\text{localized tail},
+ \tag{6.3}
+\]
+
+with the right side satisfying (3.9) after history and placement sums.  Neither
+the invariance through every complete-\(R\) localization nor the susceptibility
+bound is in the published estimates.  In particular, averaging over exterior
+fields cannot be used until correlations between the exterior weight and the
+fiber bias are controlled.
+
 ## 7. Published inputs and open hypotheses
 
 | ID | Input | Status |

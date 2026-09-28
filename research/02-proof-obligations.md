@@ -9,6 +9,7 @@ and **open**.
 H0 --> H1 --+
              +--> Robs -----------------------------------+
 R0a --------+                                             |
+R1 + R2 + R3 (quantitative-bias route) -------------------+
                                                             +--> P4 --+
 P0a --+                                                    |         |
        +--> P0b -------------------------------------------+         +--> M1
@@ -23,7 +24,10 @@ H1 + P1 --> S0 fully marked small/large-field RG --> local-field program
 
 Here H0 is the coupling-flow proof, H1 the conditional source-free (RT)
 stability input, R0a the exact source lift of the introductory fiber prototype,
-P0a the abstract block-kernel identity, and P1 the exact (T)-dictionary.
+R1--R3 the alternative quantitative-bias route to the complete observable
+interface, P0a the abstract block-kernel identity, and P1 the exact
+\(T\)-dictionary.  R1--R3 do not replace the remaining history/localization
+bookkeeping in Robs.
 
 ## Obligations
 
@@ -35,7 +39,10 @@ P0a the abstract block-kernel identity, and P1 the exact (T)-dictionary.
 | P0b | Match P0a to Balaban's exact deterministic average inside the group-delta constraint. | proved here from published formulas | CMP **98**, Eqs. (10)--(15); CMP **119**, Eq. (0.1); `04-terminal-source-identity.md`. This is an identity for \(T\), not for the large-field \(R\)-replacement. |
 | P1 | Identify the published block variable and its gauge covariance without changing conventions. | published input, audited | CMP **98**, Eqs. (10)--(15); Euclidean-symmetric variants in CMP **109**, Eqs. (0.4), (0.12). |
 | R0a | Lift the introductory fiber-normalized \(R\)-prototype to finitely many terminal sources and prove a cutoff-independent zero-free source domain. | proved here | CMP **122 I**, Eq. (0.3), p. 176 is exactly a restricted-variable fiber replacement. `10-source-dependent-r-prototype.md` proves the multi-source lift, distortion bounds, and sequential analytic-family identity. |
-| Robs | Identify and propagate R0a through every localized denominator, history, localization/exponentiation step, and the final reverse Faddeev--Popov equivalence, with source bounds uniform in ultraviolet depth; alternatively bound the cumulative physical terminal-test bias by a vanishing quantity. | open; prerequisite for M1 through Balaban's \(RT\) route | CMP **122 I**, pp. 177, 193--194, 200--201 and CMP **122 II**, p. 378. Nonzero source denominators are elementary; locality and summability of the source corrections are not. See `09` and `10`. |
+| R1 / H6 | Bound the oscillation of a selected terminal chart caused by one \(R\)-component by \(C(|E_\Lambda|+L^d)L^{(1-d)m}\), including the first irregular step and regular curved backgrounds. | open; trivial-background linear part proved here | `10`, Lemma 2 proves the divergence-free linear-current bound. `11`, H6 explains why nonlinear BCH terms prevent promoting a fine-field first moment to this terminal estimate automatically. |
+| R2 / H7 | Prove a history- and shape-summed tail bound for the complement of the regular terminal chart under both normalized fiber laws, strong enough to beat the placement count. | open | The source-free large-field weights bound fiber masses, not the bad-event probability after each fiber is normalized. See `11`, H7. |
+| R3 / H8 | Bound the regular masked **terminal** mean shift by \(C|E_\Lambda|L^{(1-d)m}\eta_m\), with \(\sum_m\varepsilon_mL^m\eta_m<\infty\), uniformly in histories and exterior fields. | open; core conditional-law estimate | `11`, Lemma 1 and Y6\(^{\prime\prime}\). A projected fine-field mean is insufficient, and the actual hard-cutoff fiber pair is not known to be mutually absolutely continuous. |
+| Robs | Identify and propagate R0a through every localized denominator, history, localization/exponentiation step, and the final reverse Faddeev--Popov equivalence, with source bounds uniform in ultraviolet depth; alternatively combine R1--R3 with the complete history sum to bound the cumulative physical terminal-test bias by a vanishing quantity. | open; prerequisite for M1 through Balaban's \(RT\) route | CMP **122 I**, pp. 177, 193--194, 200--201 and CMP **122 II**, p. 378. Nonzero source denominators are elementary; locality, terminal-law comparison, and summability are not. See `09`--`11`. |
 | S0 | Extend every small-field and large-field/polymer estimate to microscopic bounded plaquette-character sources, with analytic derivative bounds uniform in ultraviolet depth. | open parallel track | A full marked version of the published estimates. S0 is stronger than Robs, but the \(R\)-part of Robs cannot be omitted from terminal-source M1. |
 | P4 | Compare ultraviolet depths \(n+1\) and \(n\) for the physical \(T^n\)-pushforward measures on a common terminal lattice and obtain a summable observable-test bound. | open | Principal convergence estimate. It requires common-space compatibility, marginal matching, complete history control, and a scale gain beating lattice entropy. Abstract reductions are in `07` and `09`. |
 | P5 | Establish a cutoff-independent zero-free source polydisc for finitely many uniformly bounded observables. | proved here | Elementary estimate in `01-milestone-theorem.md` and `03-source-cumulant-lemma.md`. |
@@ -48,8 +55,10 @@ P0a the abstract block-kernel identity, and P1 the exact (T)-dictionary.
 1. **Observable-changing \(R\)-step.** The introductory \(R\)-prototype is
    fiber-normalized and now has an exact abstract source lift, but the published
    complete construction changes the density and provides no source-stable
-   locality/summability theorem. Vacuum stability therefore cannot be inserted
-   directly into a terminal-expectation proof.
+   locality/summability theorem.  Its true and template normalized fiber laws
+   are not known to have common support.  The corrected bias route requires a
+   terminal oscillation bound, a summable regular-set tail, and a terminal mean
+   shift; a projected fine-field mean does not suffice.
 2. **Depth comparison.** Balaban's stability theorem controls each ultraviolet
    depth but is not automatically a comparison theorem between physical depths.
 3. **Coupling flow.** Even the source-free four-dimensional bound assumes the
@@ -70,8 +79,9 @@ P0a the abstract block-kernel identity, and P1 the exact (T)-dictionary.
 
 Run three explicit tracks. Track A upgrades the proved prototype lift R0a to
 Robs by retaining the analytic source family through the localized complete
-large-field step, or gives a quantitative comparison between the physical and
-stabilized measures. Track B compares adjacent **physical** depths
+large-field step, or follows the quantitative-bias route R1--R3.  The first
+technical target on that route is R1/H6; R2/H7 and R3/H8 require new information
+about normalized fiber laws. Track B compares adjacent **physical** depths
 on their first common lattice, with a complete history pairing and rooted
 polymer-difference estimate as specified in `09`. Track C reconstructs or
 replaces the unpublished coupling-flow proof. The full marked CMP **116** program

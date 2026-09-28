@@ -48,6 +48,7 @@ estimates while avoiding three later problems:
 | Summable projective-density difference \(\Rightarrow\) the required generating-functional comparison | proved here |
 | Four-dimensional source-free \(RT\) density/vacuum bounds | published conditional input; assumes a small effective-coupling sequence |
 | Exact source-dependent lift of the fiber-normalized introductory \(R\) prototype, with a uniform zero-free polydisc | proved here |
+| Terminal-chart decomposition of one \(R\)-fiber observable bias into a mean shift, a quadratic regular remainder, and a bad-set tail | proved here as an abstract lemma; the required Yang--Mills estimates H6--H8 are open |
 | Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 through Balaban's \(RT\) route |
 | SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
@@ -76,6 +77,9 @@ estimates while avoiding three later problems:
 - `research/10-source-dependent-r-prototype.md` -- a proved multi-source
   fiber-normalization theorem, its exact match to the introductory
   \(R\)-prototype, and the remaining complete-\(R\) locality/summability gap.
+- `research/11-transverse-bias-reduction.md` -- the corrected terminal-chart
+  bias lemma, the failure of the earlier fine-field first-moment criterion,
+  and the open H6--H8 terminal oscillation, tail, and mean-shift estimates.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified nine-page

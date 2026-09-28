@@ -499,68 +499,93 @@ Lemma 2 therefore gives the **uniform**, not merely generic-position, estimate
 
 This proves the \(L^{-3m}\) single-bond influence in \(d=4\) at the trivial-field
 linearization for closed-loop tests.  It does not prove the nonlinear
-large-field estimate.  Three interfaces remain:
+large-field estimate.  In particular it is a first-derivative statement, not
+a quadratic Taylor theorem in the fine field.  Already the first nonlinear
+averaging step contains the Baker--Campbell--Hausdorff term
+\(\frac12[X,Y]\).  When paired with the current one level above, its Hessian
+has the one-insertion scale of that current, rather than the square of the
+terminal sensitivity.  A fine-field first-moment estimate therefore leaves
+second-moment and commutator terms at the same order.
 
-1. the first level above an \(R\)-component may contain irregular fields, where
-   the spectral logarithms and Baker--Campbell--Hausdorff terms are not governed
-   by the linear telescoping argument;
-2. at a nontrivial regular background, the derivative of a loop is
-   covariantly divergence-free and curvature corrections must be quantified;
-3. the source correction depends on the difference between the true and model
-   conditional means, not only on the oscillation of the terminal test.
+There is a second correction to the earlier formulation.  In a complete axial
+gauge the tree conditions remove every nonzero root-fixed gradient tangent to
+the slice.  The former projection \(\Pi^\perp\) is therefore the identity in
+that chart.  A divergence-free dual norm is a gauge-independent way to state
+the linear estimate, but it does not control the nonlinear remainder.
 
-Conditional on regular propagation after the first affected level, the natural
-component influence has the form
+The clean reduction lives at the terminal level.  Let \(\Phi_K\) be a smooth
+local coordinate of the selected terminal holonomies, let
+\(\mathrm{Reg}\) be the event on which this chart and the regular propagation
+are valid, and choose a reference value \(\Phi_0\).  Define
 
 \[
- \delta_\Lambda\lesssim
- C(|\Lambda|+L^d)L^{(1-d)m}.
+ M_\Lambda=
+ \mathbb E_{\widehat p_\Lambda}
+   [ (\Phi_K-\Phi_0)\mathbf1_{\mathrm{Reg}}\mid V_c]
+ -\mathbb E_{\widehat q_\Lambda}
+   [ (\Phi_K-\Phi_0)\mathbf1_{\mathrm{Reg}}\mid V_c].
  \tag{7.7}
 \]
 
-The factor \(L^{dm}\) counting possible fine cells then turns a first-order
-absolute bias \(O(\delta_\Lambda)\) with an order-one conditional-mean mismatch
-into a bound of order
+Lemma 1 of research note 11 proves, for \(F=f\circ\Phi_K\) on
+\(\mathrm{Reg}\),
 
 \[
- \varepsilon_mL^m,
+ \begin{aligned}
+ |B_\Lambda(F)|\le{}& |\nabla f(\Phi_0)|\,|M_\Lambda|
+ +\|\nabla^2f\|_{\infty}\Delta_\Lambda^2\\
+ &+\omega_F\bigl[
+ \widehat p_\Lambda(\mathrm{Reg}^c\mid V_c)
+ +\widehat q_\Lambda(\mathrm{Reg}^c\mid V_c)
+ \bigr],
+ \end{aligned}
  \tag{7.8}
 \]
 
-per terminal loop bond.  Here \(\varepsilon_m\) denotes the large-field
-component density after lattice-animal and history summation.  For large \(m\),
-Balaban's first suppression factor behaves like
-\(\varepsilon_m=\exp[-A(\log(bm))^{p_0}]\), which is subexponential and cannot
-beat \(L^m\).  This shows that an order-one first-order mismatch estimate does
-not close; it does not show that the true bias diverges.
+where \(\Delta_\Lambda\) is the terminal oscillation on
+\(\mathrm{Reg}\), and \(\omega_F\) is a uniform bounded-test envelope.  This
+separates three open interfaces:
 
-If instead the conditional-mean mismatch supplies a factor
-\(\eta_m\), the first-order sum is bounded by
-\(\varepsilon_mL^m\eta_m\).  A second-order estimate
-\(O(\delta_\Lambda^2)\) gives
-\[
- \varepsilon_m|\Lambda|^2L^{(2-d)m},
- \tag{7.9}
-\]
-which is geometrically summable in \(d=4\), subject to uniform control of
-component shapes, histories, and additional irregular levels.
+1. **H6:** extend (7.6) through the first irregular level and regular curved
+   backgrounds to prove
+   \[
+   \Delta_\Lambda\le
+   C(|E_\Lambda|+L^d)L^{(1-d)m};
+   \tag{7.9}
+   \]
+2. **H7:** prove a summable bound on the two normalized probabilities of
+   \(\mathrm{Reg}^c\) in (7.8);
+3. **H8 / Y6\(^{\prime\prime}\):** prove, uniformly in exterior fields and
+   histories,
+   \[
+   |M_\Lambda|\le
+   C|E_\Lambda|L^{(1-d)m}\eta_m,
+   \qquad
+   \sum_m\varepsilon_mL^m\eta_m<\infty.
+   \tag{7.10}
+   \]
 
-A precise replacement for the earlier vague summability request is therefore:
+Here \(\varepsilon_m\) is the component suppression after the history and
+lattice-animal sum; it is not a bound on either normalized conditional law.
+If size-\(s\) components have total placement weight
+\(O(\varepsilon_mL^{dm}/s)\), then H8 contributes
+\(O(\varepsilon_mL^m\eta_m)\), while the squared H6 term contributes
+\(O(\varepsilon_msL^{(2-d)m})\).  The latter is geometrically summable in
+\(d=4\) after a shape bound absorbing \(s\).  H7 must separately beat the
+placement count.  These are conditional scale counts, not consequences of the
+published source-free estimates.
 
-> **Y6'.**  In Balaban's local axial frame, let \(\Pi^\perp\) remove gradient
-> directions.  For every \(R\)-component \(\Lambda\) at scale \(K-m\), prove,
-> uniformly in exterior fields and histories,
-> \[
-> \left\|\Pi^\perp\left(
-> \mathbb E_{\widehat p_\Lambda}[A_\Lambda\mid V_c]
-> -\mathbb E_{\widehat q_\Lambda}[A_\Lambda\mid V_c]\right)\right\|_\infty
-> \le\eta_m,
-> \]
-> with \(\sum_m\varepsilon_mL^m\eta_m<\infty\), and control the quadratic
-> remainder by (7.9), including all irregular-level costs.
-
-Establishing Y6' is a Yang--Mills estimate; the linear current lemma only
-identifies the gauge-invariant direction in which it is needed.
+The published formulas also do not establish mutual absolute continuity of
+the two fiber laws: the template has a hard axial small-field cutoff, whereas
+the true history term is not shown to have the same support.  Thus an entropy
+or score interpolation cannot replace H8 without a new support-compatible
+comparison.  Research note 11 gives the exact abstract lemma, probability
+diagnostics, and the fixed-exterior symmetry obstruction.  It also isolates a
+conditional exception: at a genuinely flat exterior, simultaneous
+\(\operatorname{Ad}\)-invariance would kill the terminal linear term, reducing
+H8 to a uniform susceptibility estimate in exterior curvature.  Establishing
+that invariance and susceptibility through the complete history construction
+is still open.
 
 ## 8. What remains open for the complete \(R\)-operation
 
@@ -572,9 +597,9 @@ are:
    nonzero fiber pair of the form used above;
 2. retain the history/fiber labels through all subsequent localization and
    exponentiation steps;
-3. extend Lemma 2 from the trivial-field linearization to the irregular first
-   level and regular curved backgrounds, and prove Y6' (or a direct
-   marked-polymer substitute) for the selected terminal loop observables;
+3. prove H6--H8 of Section 7---terminal oscillation, a summable bad-fiber
+   tail, and the terminal mean-shift bound Y6\(^{\prime\prime}\)---or a direct
+   marked-polymer substitute for the selected terminal loop observables;
 4. control several components, mixed fiber differences, and unmatched
    histories without losing the common source disc;
 5. show that the source corrections fit the analytic/local \(E/R/B\) density
