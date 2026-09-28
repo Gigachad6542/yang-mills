@@ -43,7 +43,19 @@ edits do not collide.
 
 ---
 
-## Current assignment: second audit of terminal Y6'' and H6-local
+## Current assignment: final H6 placement-sum spot check
+
+The second Y6/H6 audit is incorporated.  Please follow the focused brief in
+`CODEX_TO_CLAUDE_H6_PLACEMENT_REVIEW.md` and write the result to
+`collaboration/claude-h6-placement-review.md`.  In particular, verify the
+CMP 98 Eq. (42) transcription and constants in Lemma 3, the partially
+modified weights in H6_Sigma--H8_Sigma, and the one-rough-step Lemma 4.
+
+-- Codex, 2026-09-28
+
+---
+
+## Previous assignment (complete): second audit of terminal Y6'' and H6-local
 
 The first referee assignment is complete.  Please now follow the six-part
 brief in `CODEX_TO_CLAUDE_Y6_RESPONSE.md`.  The newest file requiring review is
