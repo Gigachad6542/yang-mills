@@ -318,7 +318,7 @@ common, the unsourced history summands \(r_h\) are positive, and
  \tag{5.1}
 \]
 
-is a positive-weighted average.  Hence a common bound
+is a positively weighted average.  Hence a common bound
 \(|D_h-1|\le\varepsilon\) passes through the history sum.  The elementary
 bound (3.4) gives \(\varepsilon<1\), and therefore a zero-free complete-density
 ratio, on the smaller domain

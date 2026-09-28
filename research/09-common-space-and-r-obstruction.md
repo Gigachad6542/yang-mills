@@ -73,7 +73,8 @@ mark the integrations inside \(T\). It says nothing about a subsequent
 
 ### Proposition 1: mass preservation gives no observable closeness
 
-Positivity and equal mass give only the trivial estimate
+For a bounded real-valued test \(f\), positivity and equal mass give only the
+trivial estimate
 
 \[
  \left|\int f\,R\rho-\int f\,\rho\right|
@@ -250,7 +251,8 @@ remainder estimate.
 ## 5. From local polymer differences to a projective bound
 
 Suppose a **complete** log-density defect on a finite graph \(\Lambda\), modulo
-one global constant, has the uniformly convergent expansion
+one global constant, has the uniformly convergent expansion into connected
+polymers
 
 \[
  D_N(\omega)=c_N+
@@ -258,7 +260,8 @@ one global constant, has the uniformly convergent expansion
  \Delta\Phi_{N,s}(X;\omega),
 \]
 
-where \(s\) may label \(E,R,B\) sectors. Define the rooted oscillation norm
+where every nonzero \(X\) is connected and \(s\) may label \(E,R,B\) sectors.
+Define the rooted oscillation norm
 
 \[
  \eta_{N,s}=\sup_{x\in\Lambda}

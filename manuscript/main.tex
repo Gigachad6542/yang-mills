@@ -411,8 +411,9 @@ common lattice.
 
 Two bookkeeping points are essential before a polymer estimate can instantiate
 this proposition.  First, the complete CMP~119 density is a sum over large-field
-histories \cite[Eq.~(2.18)]{Balaban1988Convergent}.  If
-$\rho=\sum_h a_h$ and $\widetilde\rho=\sum_h a_he^{r_h}$, a common envelope
+histories \cite[Eq.~(2.18)]{Balaban1988Convergent}.  If $a_h\ge0$, both sums
+below are finite and positive,
+$\rho=\sum_h a_h$ and $\widetilde\rho=\sum_h a_he^{r_h}$, and a common envelope
 $m\le r_h\le M$ implies
 \[
  \operatorname{osc}\log(\widetilde\rho/\rho)\le M-m,
@@ -504,7 +505,7 @@ $h_k=g_k^{-2}$, let $I=[h_*,\infty)$, and suppose
 where each $B_{k+1}:I^{k+1}\to[b_-,b_+]$ is continuous while the history
 remains in $I$.  Shooting the bare
 value $h_0$ forward and applying the intermediate value theorem gives at least
-one trajectory with any prescribed $h_K$ and
+one trajectory with any prescribed $h_K\in I$ and
 \[
  h_K+b_-(K-k)\le h_k\le h_K+b_+(K-k).
 \]

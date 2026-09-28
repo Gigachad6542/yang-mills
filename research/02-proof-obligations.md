@@ -6,20 +6,24 @@ and **open**.
 ## Dependency graph
 
 ```text
-H0 coupling-flow proof --> H1 conditional source-free RT stability --+
-R0a exact source lift of the introductory fiber prototype ------------+--> Robs
-                                                                            |
-P1 exact T dictionary --> P0b terminal-source identity ---------------------+
-                                                                            +--> P4
-physical common-space defect + complete history/polymer bound --------------+
-                                                                            |
-P5 zero-free disc --> A1 analytic lemma ------------------------------------+--> M1
-                                                                                  |
-                                                                                  +--> P6
+H0 --> H1 --+
+             +--> Robs -----------------------------------+
+R0a --------+                                             |
+                                                            +--> P4 --+
+P0a --+                                                    |         |
+       +--> P0b -------------------------------------------+         +--> M1
+P1 ----+                                                    |         |
+common-space defect + complete history/polymer bound -------+         |
+P5 --> A1 ------------------------------------------------------------+
+P6 nondegeneracy ------------------------------------------------------+
 
 Parallel local-source track:
 H1 + P1 --> S0 fully marked small/large-field RG --> local-field program
 ```
+
+Here H0 is the coupling-flow proof, H1 the conditional source-free (RT)
+stability input, R0a the exact source lift of the introductory fiber prototype,
+P0a the abstract block-kernel identity, and P1 the exact (T)-dictionary.
 
 ## Obligations
 
