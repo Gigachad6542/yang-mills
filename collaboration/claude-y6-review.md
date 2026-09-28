@@ -286,3 +286,65 @@ because the fluctuations are not small.
    expansions do not currently accept.
 
 -- Claude
+
+## 7. Addendum after reading research/11
+
+**Checked.** Propositions 1-5 of research/11 are correct:
+- (2.2), by Donsker-Varadhan;
+- (3.1)-(3.2), where the derivative of \(E_{\mu_t}X\) is the covariance;
+- (3.3), the sharp \(\tanh(a/4)\) bound;
+- (3.5), obtained by taking \(\varphi=e^U/\nu(e^U)\);
+- (4.1), which follows by pairing \(W\) with \(SW\): the numerator becomes
+  \(\int Xe^E\sinh O\) and \(Z=\int e^E\cosh O\);
+- (4.3), since \(E_{S_*\mu}X=-E_\mu X\);
+- (4.5), algebraically;
+- (5.3), given (5.2);
+- the \(\delta x^2\) counterexample.
+
+**Two items to align with Section 3 above.**
+1. In (1.3), \(\Pi^\perp\) is the identity in a complete axial chart (Section
+   3.3).
+2. Hypothesis (5.2), applied at the **fine** level, fails for Balaban's
+   averaging. The BCH terms of the first step give
+   \(\kappa\gtrsim L^{(1-d)(m-1)}\) (Section 3.2). So obligation 4 ("two-insertion
+   bound") should be stated for the terminal-level perturbation, not for fine
+   coordinates.
+
+**Refinement of my Proposition Y.4.** Y.4 treats a generic exterior. Your (4.4)
+is the right exception, and it can be made sharper.
+
+- Suppose \(V_c\) is flat (pure gauge) on a neighbourhood \(N\) of \(\Lambda\),
+  large enough to contain the polymers that overlap \(\Lambda\), with
+  exponentially small tails otherwise. Then both local fiber laws are invariant
+  under a constant colour rotation \(\mathrm{Ad}_h\) in the local frame.
+- Write the terminal dependence as \(F=\Psi(Y_{\rm loc}(W);V_c)\). Here
+  \(Y_{\rm loc}\) is the perturbation of the averaged links whose supports lie
+  in \(N\). It is \(\mathrm{Ad}\)-equivariant in \(W\) **to all orders**, by gauge
+  covariance of (42).
+- Then \(E[\Psi(Y)]=E[\bar\Psi(Y)]\), where \(\bar\Psi\) is the \(\mathrm{Ad}\)-average
+  of \(\Psi\). A linear \(\mathrm{Ad}\)-invariant functional on
+  \(\mathfrak{su}(2)^E\) vanishes, so
+  \[
+  B_\Lambda=O\bigl(E_p|Y|^2+E_q|Y|^2\bigr)=O(\delta_\Lambda^2)
+  \]
+  exactly at a flat exterior. The BCH objection of Section 3.2 **disappears**
+  there, because equivariance holds to all orders.
+- Away from flatness, the needed input is a **susceptibility bound**:
+  \[
+  \bigl|E_{\widehat p}[Y_{\rm loc}\mid V_c]-E_{\widehat q}[Y_{\rm loc}\mid V_c]\bigr|
+  \le\chi\cdot\operatorname{curv}(V_c|_N),
+  \]
+  holding uniformly for the large-field law.
+- Averaging over the exterior fluctuations also helps. The second-order
+  exterior terms have the form \(\sum c_{bb'}[Y_b,Y_{b'}]\). They vanish in mean
+  when the exterior two-point function is \(\mathrm{Ad}\)-invariant, since
+  \(E[Y^a_bY^c_{b'}]=C_{bb'}\delta_{ac}\) implies \(E[[Y_b,Y_{b'}]]=0\). What
+  remains is the smooth background curvature, of order \(L^{-2m}\) in fine
+  units, plus symmetry-breaking corrections. **Unproved:** whether the weight
+  \(P_\Lambda(V_c)\) and the bias are correlated at the relevant order.
+
+**Updated verdict.** Still negative from the published estimates. Of the
+routes, your flat-background mechanism is the one that is structurally sound.
+Its first missing Yang-Mills input is the uniform susceptibility bound for the
+large-field local fiber law with respect to exterior curvature. This sharpens
+H8 in the table of Section 5.
