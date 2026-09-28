@@ -148,6 +148,10 @@ There is also a sharp zeroth-order version. If
  \tag{3.3}
 \]
 
+Here \(\lVert\mu-\nu\rVert_{\rm TV}=\sup_A|\mu(A)-\nu(A)|\), so a real
+bounded test obeys
+\(|\mathbb E_\mu f-\mathbb E_\nu f|\le\operatorname{osc}(f)
+\lVert\mu-\nu\rVert_{\rm TV}\).
 The extremizer is a two-point likelihood ratio whose two values have ratio
 \(e^a\). Hence this route still needs
 \(\operatorname{osc}\log(d\mu/d\nu)=O(L^{-m})\).
