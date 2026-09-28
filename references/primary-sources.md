@@ -32,8 +32,11 @@ The following papers form a dependency chain rather than interchangeable citatio
    [DOI](https://doi.org/10.1007/BF01240221).
 3. T. Bałaban, *Averaging Operations for Lattice Gauge Theories*, CMP **98**
    (1985), 17--51. [DOI](https://doi.org/10.1007/BF01211042).
-   Eqs. (10)--(15), printed pp. 19--20, define and linearize the deterministic
-   gauge-covariant block average used in the active observable definition.
+   Eqs. (10)--(15), printed pp. 19--20, define and linearize the corner-based
+   deterministic gauge-covariant block-average prototype.  The
+   four-dimensional construction uses the Euclidean-symmetric variants in CMP
+   **109**, Eqs. (0.4) and (0.12), so nonlinear rough-field estimates for the
+   prototype do not transfer without a formula-specific proof.
    Propositions 3--4 give regular-domain expansions, Proposition 5 on printed
    p. 42 gives a functional derivative bounded independently of the lattice
    spacing, and Propositions 6--7 give analyticity.  Proposition 5 does not

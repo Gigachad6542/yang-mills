@@ -233,8 +233,10 @@ proved SU(2) coupling-flow theorem stated as CMP109, Theorem 2
   cutoff-independent bounded functional derivative (Proposition 5, p. 42),
   and analyticity of averaging.  Proposition 5 is not a spatial-decay or
   conserved-current contraction theorem; the placement-summed H6\(_\Sigma\)
-  target and a stronger uniform-contraction route are
-  isolated in research note 12.
+  target and a stronger uniform-contraction route are isolated in research
+  note 12.  Its rough one-step lemma concerns the CMP **98** corner-based
+  prototype; CMP **109**, Eqs. (0.4) and (0.12), require a formula-specific
+  nonlinear estimate.
 - CMP **99**, 75--102, Theorem 2, p. 83: unique regular Landau representative.
 - CMP **99**, 389--434, Theorems 3.1--3.4, pp. 397--400; Theorems 3.7--3.10,
   pp. 409--415; Theorem 3.14, pp. 426--427; Theorem 3.15, p. 432: background

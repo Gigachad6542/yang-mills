@@ -201,18 +201,27 @@ the differentials relevant to H6\(_\Sigma\) covariantly conserved.
 
 The norm actually consumed by the complete history sum is placement-summed.
 Let \(\mathscr C_m\) be the history-resolved component placements introduced at
-distance \(m\) from the terminal scale.  Let \(w_\lambda\ge0\) be an absolute
-majorant for the exterior-integrated mass of the partially \(R\)-modified
-history term at the point where that replacement is made.  It may dominate,
-rather than equal, a signed localized activity.  Define
+distance \(m\) from the terminal scale.  For each \(\lambda\), let
+\(\varpi_\lambda(dV_c)\) be a finite nonnegative measure which dominates in
+total variation the exterior marginal of the partially \(R\)-modified history
+term, including its true fiber mass, and is divided by the common positive
+partition function.  Thus \(\varpi_\lambda\) is already a normalized absolute
+majorant for the contribution of that replacement to an expectation.  It may
+dominate, rather than equal, a signed localized activity.  Regard
+\(\Delta_\lambda\), \(M_\lambda\), and the two conditional bad-event
+probabilities as measurable functions of \(V_c\), defined
+\(\varpi_\lambda\)-almost everywhere.  Define
 
 \[
  \begin{aligned}
  \mathcal Q_m&=\sum_{\lambda\in\mathscr C_m}
-                  w_\lambda\Delta_\lambda^2,\\
- \mathcal B_m&=\sum_{\lambda\in\mathscr C_m}w_\lambda
-  \bigl[p_\lambda(\mathrm{Reg}^c)+q_\lambda(\mathrm{Reg}^c)\bigr],\\
- \mathcal A_m&=\sum_{\lambda\in\mathscr C_m}w_\lambda|M_\lambda|.
+   \int \Delta_\lambda(V_c)^2\,\varpi_\lambda(dV_c),\\
+ \mathcal B_m&=\sum_{\lambda\in\mathscr C_m}
+   \int\!\bigl[p_\lambda(\mathrm{Reg}^c\mid V_c)
+              +q_\lambda(\mathrm{Reg}^c\mid V_c)\bigr]
+              \,\varpi_\lambda(dV_c),\\
+ \mathcal A_m&=\sum_{\lambda\in\mathscr C_m}
+   \int |M_\lambda(V_c)|\,\varpi_\lambda(dV_c).
  \end{aligned}
  \tag{3.9}
 \]
@@ -228,46 +237,56 @@ The three missing inputs in their minimal sufficient form are
 \]
 
 The tail of each series must be the vanishing error in the physical-versus-
-stabilized-measure telescope.  These weights cannot be taken from a final
+stabilized-measure telescope.  These majorants cannot be taken from a final
 auxiliary density after all replacements: they belong to the partially
 modified density at the corresponding scale.  Constructing them from the
 published source-free activity bounds is itself part of the open history
 bookkeeping.
 
 A stronger termwise package is sufficient but is not the primary target.
-Suppose size-\(s\) placements have total weight at most
-\(C\varepsilon_mL^{dm}/s\) per terminal block, and suppose
+Suppose there are nonnegative shape weights \(\varepsilon_{m,s}\) such that
+the total normalized majorant mass of size-\(s\) placements is at most
+\(C\varepsilon_{m,s}L^{dm}/s\) per terminal block and
+
+\[
+ \sum_{s\ge1}(s+1)\varepsilon_{m,s}\le C\varepsilon_m.
+ \tag{3.11}
+\]
+
+Suppose also, uniformly in the exterior data on the support of the majorant,
 
 \[
  \Delta_\lambda\le C(s+L^d)L^{(1-d)m},\qquad
  |M_\lambda|\le CsL^{(1-d)m}\eta_m.
- \tag{3.11}
+ \tag{3.12}
 \]
 
 Then the first-order contribution is at most
 \(C\varepsilon_mL^m\eta_m\), while the size-\(s\) quadratic contribution is
 
 \[
- C\varepsilon_m\frac{(s+L^d)^2}{s}L^{(2-d)m}
- \le C_L\varepsilon_m(s+1)L^{(2-d)m}.
- \tag{3.12}
-\]
-
-The second inequality uses \(s\ge1\) and keeps the hub term that a bare
-\(sL^{(2-d)m}\) estimate misses.  It is geometrically summable in \(d=4\) if
-the shape weights absorb \(s+1\).  A conservative sufficient tail condition is
-
-\[
- \sum_m\varepsilon_mL^{dm}
- \sup_{\lambda\in\mathscr C_m}
- \bigl[p_\lambda(\mathrm{Reg}^c)+q_\lambda(\mathrm{Reg}^c)\bigr]<\infty.
+ C\varepsilon_{m,s}\frac{(s+L^d)^2}{s}L^{(2-d)m}
+ \le C_L\varepsilon_{m,s}(s+1)L^{(2-d)m}.
  \tag{3.13}
 \]
 
-The placement hypothesis and normalized weights in this termwise package are
+The second inequality uses \(s\ge1\) and keeps the hub term that a bare
+\(sL^{(2-d)m}\) estimate misses.  Summing (3.13) over \(s\) uses (3.11), so it
+is geometrically summable in \(d=4\).  A conservative sufficient tail
+condition is
+
+\[
+ \sum_m\varepsilon_mL^{dm}
+ \mathop{\rm ess\,sup}_{\lambda,V_c}
+ \bigl[p_\lambda(\mathrm{Reg}^c\mid V_c)
+      +q_\lambda(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
+ \tag{3.14}
+\]
+
+The placement hypothesis and normalized majorants in this termwise package are
 not theorems of CMP **122 II**.  Its activity and combinatorial estimates make
 such a Peierls-type bound plausible, but passing to normalized local weights is
-an additional argument.  Equations (3.9)--(3.13) are conditional reductions,
+an additional argument.  Equations (3.9)--(3.14) are conditional reductions,
 not published estimates.
 
 ## 4. Why a fine first moment is insufficient

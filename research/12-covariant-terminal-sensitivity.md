@@ -5,17 +5,19 @@ The flat-background contraction is the linear lemma of research note 10,
 transported by gauge covariance.  The curvature-stable one-step contraction
 is a strong sufficient hypothesis, not the minimal target and possibly too
 strong at curved backgrounds.  The actual target is a placement-summed squared
-sensitivity bound.  The local rough-step estimate in Lemma 3 is proved here;
-the regular curved-background placement sum and the path hypotheses in Lemma 4
-are open Yang--Mills inputs.  They are not stated in CMP **98**, Proposition 5.
+sensitivity bound.  The local rough-step estimate in Lemma 3 is proved here
+for the corner-based CMP **98** prototype; a formula-specific analogue for the
+Euclidean-symmetric four-dimensional averages, the regular curved-background
+placement sum, and the path hypotheses in Lemma 4 are open Yang--Mills inputs.
+They are not stated in CMP **98**, Proposition 5.
 
 ## 1. Why this is the next H6\(_\Sigma\) question
 
 Research note 11 reduces the observable defect of one complete
 \(R\)-fiber replacement to three placement-summed quantities.  H6\(_\Sigma\)
 is the deterministic one: the weighted sum of the squared movements of each
-selected gauge-invariant terminal coordinate must be summable.  The stronger
-termwise estimate
+selected gauge-invariant terminal coordinate must be summable.  One stronger
+sufficient estimate is the termwise bound
 
 \[
  \Delta_\Lambda
@@ -120,18 +122,19 @@ Gauge covariance and \(\operatorname{Ad}\)-invariance of the norm extend
 (3.2) to pure-gauge backgrounds, provided the local domains and boundary data
 are transformed with the background.
 
-The natural regular-background target is
+The direct perturbative bound one should test at a regular background is
 
 \[
  \boxed{
  \mathfrak C_j(U_j)
- \le L^{1-d}(1+c\,\varkappa_j),
+ \le L^{1-d}+c\,\varkappa_j,
  }
  \tag{3.3}
 \]
 
 where \(\varkappa_j\) is a gauge-invariant curvature size on the block and its
-one-layer neighborhood.  A weaker uniform bound
+one-layer neighborhood.  The additive form is important: a curvature-induced
+radial residual need not carry an extra factor \(L^{1-d}\).  A uniform bound
 
 \[
  \mathfrak C_j(U_j)\le\theta,\qquad
@@ -185,30 +188,35 @@ Apply (4.1) successively, using Lemma 1 after each step, and use
 \(1+r_j\le e^{r_j}\). \(\square\)
 
 The primary target does not require this pointwise iteration.  With the
-partially modified history weights of note 11, it is exactly
+normalized exterior-majorant measures of note 11, it is exactly
 
 \[
  \mathcal Q_m=\sum_{\lambda\in\mathscr C_m}
- w_\lambda\Delta_\lambda^2,\qquad
+ \int\Delta_\lambda(V_c)^2\,\varpi_\lambda(dV_c),\qquad
  \sum_m\mathcal Q_m<\infty.
  \tag{4.3}
 \]
 
 This is H6\(_\Sigma\).  A uniform contraction is one sufficient route to it.
-Indeed, (3.3) with \(\sum_j\varkappa_j\le C\) yields the flat exponent
-\(L^{(1-d)m}\) up to a constant, while
-\(\mathfrak C_j\le\theta\) yields \(\theta^m\).  If size-\(s\) components have
-total placement weight \(O(\varepsilon_mL^{dm}/s)\), and
+Indeed, for fixed \(L\), (3.3) with \(\sum_j\varkappa_j\le C\) is (4.1) with
+\(\alpha=L^{1-d}\) and \(r_j=cL^{d-1}\varkappa_j\), so it yields the flat
+exponent \(L^{(1-d)m}\) up to a constant.  Likewise,
+\(\mathfrak C_j\le\theta\) yields \(\theta^m\); it is enough that this hold
+after finitely many initial regular levels, whose derivative norms contribute
+only a cutoff-independent prefactor.  If size-\(s\) components have total
+normalized majorant mass
+\(O(\varepsilon_{m,s}L^{dm}/s)\), with
+\(\sum_s(s+1)\varepsilon_{m,s}=O(\varepsilon_m)\), and
 \(\Delta_\Lambda\le C(s+L^d)\theta^m\), then their quadratic contribution is
 
 \[
- C\varepsilon_m\frac{(s+L^d)^2}{s}
+ C\varepsilon_{m,s}\frac{(s+L^d)^2}{s}
  (L^d\theta^2)^m.
  \tag{4.4}
 \]
 
-It is geometrically summable under (3.4), after the shape weight absorbs
-\((s+L^d)^2/s\).  The corresponding stronger terminal-mean condition is
+Summing over \(s\) makes it geometrically summable under (3.4).  The
+corresponding stronger terminal-mean condition is
 
 \[
  |M_\Lambda|\le Cs\theta^m\eta_m,\qquad
@@ -228,18 +236,20 @@ which (3.3) is meaningful.  It is enough to isolate one step.
 
 ### Lemma 3: rough one-step support bound
 
-Write the one-step average of CMP **98**, Eq. (42), in the form
+For the corner-based one-step average of CMP **98**, Eq. (42), write
 
 \[
  \overline U(c)=
  \exp\!\left(iL^{-d}\sum_{x\in B(c_-)}Z_{c,x}(U)\right)U(c),
- \qquad \|Z_{c,x}(U)\|\le\pi,
+ \quad
+ Z_{c,x}(U)=\frac1i\log\!\left[U(\Gamma_{c,x})U(c)^{-1}\right],
+ \quad \|Z_{c,x}(U)\|\le\pi,
  \tag{5.1}
 \]
 
-where multiplying by \(U(c)\) on the other side, as in an equivalent
-convention, makes no difference to the estimate.  Norms in this lemma are
-operator norms.  Let \(U,U'\) agree off a
+where \(\log\) is the spectral logarithm of CMP **98**, Eq. (22), with
+eigenvalue arguments in \((-π,π]\).  Norms in this lemma are operator
+norms.  Let \(U,U'\) agree off a
 set \(S\) of fine bonds.  If \(S\) is disjoint from the central transporter
 \(c\), then
 
@@ -269,10 +279,20 @@ affect order \(L^d\) contours and retain an order-one bound.  Lemma 3 is a
 local deterministic estimate; it does not prove that hub placements have a
 summable total weight.
 
+CMP **109**, Eqs. (0.4) and (0.12), use Euclidean-symmetric averages in the
+four-dimensional construction.  Their identity-background linearizations
+have the cancellation proved in note 10, but Lemma 3 is not automatically a
+rough-field theorem for them: Eq. (0.4) has additional contour averages, while
+Eq. (0.12) also uses the nonlinear group mean \(M\), defined on small-diameter
+sets.  The first-irregular-layer estimate must therefore be proved for the
+specific average selected in the complete \(RT\) scheme.
+
 ### Lemma 4: one rough step followed by regular contraction
 
 Let \(W(t)\), \(0\le t\le1\), join two fiber configurations on a regular event.
-Assume that after the first block map the path is in the regular domain and
+Assume that the once-blocked path and all of its later images stay in common
+differentiability charts and regular domains.  In one fixed tangent
+trivialization, assume
 
 \[
  \int_0^1
@@ -283,7 +303,9 @@ Assume that after the first block map the path is in the regular domain and
 
 where \(s=|E_\Lambda|\).  Suppose the remaining \(m-1\) adjoint derivatives
 obey \(\mathfrak C_j\le\theta\), and the selected terminal coordinate is
-gauge invariant and has bounded differential \(C_F\).  Then
+gauge invariant and has differential bounded by \(C_F\) in the dual sup
+norm.  Require all these bounds essentially uniformly in the exterior field,
+history, and component placement on the regular event.  Then
 
 \[
  |\Phi_K(W(1),V_c)-\Phi_K(W(0),V_c)|
@@ -313,8 +335,9 @@ laws.
 
 > **H6-uniform.**  For every regular background admitted after the first
 > large-field blocking step, prove either (3.3) with a summable curvature
-> sequence or (3.4) with \(L^d\theta^2<1\), uniformly in domains, histories,
-> boundary data, and RG depth.  Prove (5.3) for the first affected layer on a
+> sequence or, after at most a fixed number of initial levels, (3.4) with
+> \(L^d\theta^2<1\), uniformly in domains, histories, boundary data, exterior
+> fields, and RG depth.  Prove (5.3) for the first affected layer on a
 > regular event whose complement satisfies H7\(_\Sigma\), and apply the estimate
 > to the differentials of the selected gauge-invariant terminal coordinate
 > maps.
@@ -323,8 +346,8 @@ H6-uniform implies H6\(_\Sigma\) after the component-counting hypotheses in
 Section 4, but it may be stronger than the geometry permits.  The minimal
 alternative is a rooted, placement-averaged derivative estimate that proves
 (4.3) directly while allowing order-one hub sensitivities on a sufficiently
-sparse set.  The required sparsity must be proved with the same partially
-modified history weights that enter the observable-bias telescope; a bare
+sparse set.  The required sparsity must be proved with the same normalized
+partially modified exterior majorants that enter the observable-bias telescope; a bare
 fraction of geometric hub locations is not enough.
 
 CMP **98** supplies relevant ingredients:
@@ -336,7 +359,7 @@ CMP **98** supplies relevant ingredients:
 - analytic dependence on a regular background in Propositions 6--7.
 
 It does **not** state H6-uniform or H6\(_\Sigma\).  In particular, Proposition
-5 does not give the conserved-current operator norm (3.1), the relative
+5 does not give the conserved-current operator norm (3.1), the additive
 curvature error in (3.3), the first-layer path estimate (5.3), or a
 placement-averaged substitute.  A
 proof must expose the contour kernel, use the covariant Ward identity from

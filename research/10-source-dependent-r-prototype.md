@@ -488,6 +488,18 @@ bond in direction \(\mu\) lies in at most \(L\) of the straight segments in
 segments of length \(L\) per coarse bond, proving the \(\ell^1\) bound.
 \(\square\)
 
+The same linear conclusion applies to the Euclidean-symmetric averages in CMP
+**109**, Eqs. (0.4) and (0.12).  In Eq. (0.4), \(\Lambda(y)\) is replaced by
+the average over all shortest axis-ordered contours from \(y\); property (0.8)
+of the group average used in Eq. (0.12) gives the same replacement at first
+order.  The incoming and outgoing endpoint terms still use the same symmetric
+family, so their pairing with \(\tau\) is again
+\(\sum_y(\operatorname{div}\tau)(y)\Lambda_{\rm sym}(y)\), while the translated
+straight-segment term is unchanged.  Hence (7.5) holds for those
+linearizations as well.  This argument is only at the identity background; it
+does not transfer the rough nonlinear estimate of note 12 to the symmetric
+maps.
+
 The linearized current of a closed terminal loop is divergence-free.  Iterating
 Lemma 2 therefore gives the **uniform**, not merely generic-position, estimate
 
@@ -498,7 +510,8 @@ Lemma 2 therefore gives the **uniform**, not merely generic-position, estimate
 \]
 
 This proves the \(L^{-3m}\) single-bond influence in \(d=4\) at the trivial-field
-linearization for closed-loop tests.  It does not prove the nonlinear
+linearization for closed-loop tests, including the published symmetric
+variants just described.  It does not prove the nonlinear
 large-field estimate.  In particular it is a first-derivative statement, not
 a quadratic Taylor theorem in the fine field.  Already the first nonlinear
 averaging step contains the Baker--Campbell--Hausdorff term
@@ -545,27 +558,31 @@ Lemma 1 of research note 11 proves, for \(F=f\circ\Phi_K\) on
 where \(\Delta_\Lambda\) is the terminal oscillation on
 \(\mathrm{Reg}\), and \(\omega_F\) is a uniform bounded-test envelope.  This
 separates three open interfaces.  The norm consumed by the complete history
-sum is not a supremum over components.  If \(w_\lambda\) is a nonnegative
-absolute majorant for a component placement in the partially \(R\)-modified
-density at scale \(m\), the minimal targets are
+sum is not a supremum over components.  Let
+\(\varpi_\lambda(dV_c)\) be the normalized nonnegative exterior majorant of the
+partially \(R\)-modified history term, including its true fiber mass, as
+defined precisely in research note 11.  The minimal targets are
 
 \[
- \sum_m\sum_{\lambda\in\mathscr C_m}w_\lambda
- \left(
-   \Delta_\lambda^2
-  +p_\lambda(\mathrm{Reg}^c)+q_\lambda(\mathrm{Reg}^c)
-  +|M_\lambda|
- \right)<\infty.
+ \sum_m\sum_{\lambda\in\mathscr C_m}
+ \int\!\left(
+   \Delta_\lambda(V_c)^2
+  +p_\lambda(\mathrm{Reg}^c\mid V_c)
+  +q_\lambda(\mathrm{Reg}^c\mid V_c)
+  +|M_\lambda(V_c)|
+ \right)\varpi_\lambda(dV_c)<\infty.
  \tag{7.9}
 \]
 
 These are H6\(_\Sigma\), H7\(_\Sigma\), and H8\(_\Sigma\), respectively.
 The tails of the three series must control the physical-versus-stabilized
 observable telescope.  Bounds for a final auxiliary density do not construct
-the intermediate weights \(w_\lambda\).
+the intermediate majorants \(\varpi_\lambda\).
 
 A uniform termwise package remains sufficient.  If size-\(s\) placements have
-total weight \(O(\varepsilon_mL^{dm}/s)\), and
+total normalized majorant mass
+\(O(\varepsilon_{m,s}L^{dm}/s)\), with
+\(\sum_s(s+1)\varepsilon_{m,s}=O(\varepsilon_m)\), and
 
 \[
  \Delta_\lambda\le C(s+L^d)L^{(1-d)m},\qquad
@@ -578,14 +595,14 @@ quadratic term contributes
 
 \[
  O\!\left(
- \varepsilon_m\frac{(s+L^d)^2}{s}L^{(2-d)m}
+ \varepsilon_{m,s}\frac{(s+L^d)^2}{s}L^{(2-d)m}
  \right).
  \tag{7.11}
 \]
 
-The latter is geometrically summable in \(d=4\) after a shape bound absorbs
-\((s+L^d)^2/s\).  The hub term \(L^{2d}/s\) cannot be dropped, although \(L\)
-is fixed.  This placement hypothesis, the normalized local weights, and the
+The latter is geometrically summable in \(d=4\) after summing the stated shape
+weights.  The hub term \(L^{2d}/s\) cannot be dropped, although \(L\)
+is fixed.  This placement hypothesis, the normalized local majorants, and the
 three estimates are conditional; they are not consequences of the published
 source-free activity bounds.
 
