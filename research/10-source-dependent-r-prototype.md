@@ -1,9 +1,10 @@
 # A source-dependent fiber-normalized \(R\) prototype
 
-Status: **the abstract fiber theorems and bounds in Sections 2--6 are proved
-here**.  Their identification with Balaban's introductory prototype is exact.
-Their use in the complete four-dimensional \(R\)-operation requires the open
-Yang--Mills inputs listed in Section 8.
+Status: **the abstract fiber theorems and bounds in Sections 2--6 and the
+linearized closed-loop current lemma in Section 7 are proved here**.  Their
+identification with Balaban's introductory prototype and linear averaging
+formula is exact.  Their use in the complete four-dimensional \(R\)-operation
+requires the open Yang--Mills inputs listed in Section 8.
 
 This note incorporates the independent derivation in
 `collaboration/claude-r0-prototype.md`, with two corrections from the journal
@@ -209,9 +210,10 @@ branch taken in the disc around one, so that \(\log D_h(0)=0\).  On a polydisc
  \tag{3.5}
 \]
 
-If \(|F_{h,j}|\le B_j\) and \(t(z)=\sum_jB_j|z_j|\), the complete local
-source ratio \(C_h=\mathcal R^F_{h,z}/\mathcal R^F_{h,0}=e^{G_{h,z}}D_h\)
-satisfies
+If \(|F_{h,j}|\le B_j\) and \(t(z)=\sum_jB_j|z_j|\), define the complete local
+source factor \(C_h=e^{G_{h,z}}D_h\).  It agrees with
+\(\mathcal R^F_{h,z}/\mathcal R^F_{h,0}\) wherever the unsourced replacement is
+positive and satisfies
 
 \[
  |C_h|\le e^t\frac{e^s}{2-e^s},
@@ -526,8 +528,8 @@ into a bound of order
 \]
 
 per terminal loop bond.  Here \(\varepsilon_m\) denotes the large-field
-component density after lattice-animal and history summation.  Balaban's
-first suppression factor behaves like
+component density after lattice-animal and history summation.  For large \(m\),
+Balaban's first suppression factor behaves like
 \(\varepsilon_m=\exp[-A(\log(bm))^{p_0}]\), which is subexponential and cannot
 beat \(L^m\).  This shows that an order-one first-order mismatch estimate does
 not close; it does not show that the true bias diverges.

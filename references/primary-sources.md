@@ -72,7 +72,8 @@ paper had not been published. Exact equations and page references are recorded i
 `research/06-balaban-audit.md`.
 
 What the published estimates provide, under their stated hypotheses, is
-source-free ultraviolet stability of normalized RG densities/partition functions.
+source-free ultraviolet-stability bounds for effective densities and their total
+integrals (vacuum partition functions).
 The active project must not silently strengthen this to convergence of normalized
 measures or observables. In particular, CMP **122 I**, Eq. (0.4), p. 176
 preserves the integral under the \(R\)-operation. The discussion around

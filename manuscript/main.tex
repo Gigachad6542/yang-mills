@@ -238,10 +238,10 @@ $\mathcal R^F_z$ is holomorphic in $z$, and
 \]
 Relative to the naively sourced unsourced replacement,
 \[
- D_z(y):=\frac{\mathcal R^F_z[p\mid q]}
- {e^{G_z}\mathcal R^F_0[p\mid q]}
+ D_z(y):=\frac{P_z(y)/P_0(y)}{Q_z(y)/Q_0(y)}
 \]
-is independent of $x$ and satisfies
+is a well-defined fiber scalar.  Wherever $q(x,y)>0$, it equals
+$\mathcal R^F_z/(e^{G_z}\mathcal R^F_0)$.  It satisfies
 \[
  |D_z-1|\le\frac{2(e^s-1)}{2-e^s},\qquad
  |\log D_z|\le2[-\log(2-e^s)].
@@ -255,6 +255,8 @@ $a=\mathbb E_{\widehat p}e^{g_z}$ and
 $b=\mathbb E_{\widehat q}e^{g_z}$ lie in the disc centered at one with radius
 $e^s-1<1$.  Hence they are nonzero, $D_z=a/b$, and the displayed estimates
 follow from the triangle inequality and the principal-logarithm power series.
+Here $\log D_z:=\operatorname{Log}a-\operatorname{Log}b$, with both branches
+normalized to vanish at the origin.
 The definition cancels $Q_z$ under fiber integration.
 \end{proof}
 
@@ -383,7 +385,8 @@ $b_N:\Omega_N\to\Omega_*$ the remaining map to one fixed terminal lattice, with
 $b_{N+1}=b_N\circ q_N$.  For fine-cutoff probability measures $\mu_N$, put
 \[
  \widetilde\mu_N=(q_N)_*\mu_{N+1},\qquad
- \nu_N=(b_N)_*\mu_N.
+ \nu_N=(b_N)_*\mu_N,\qquad
+ \nu_{N+1}=(b_{N+1})_*\mu_{N+1}.
 \]
 Then, for every bounded terminal test $f$,
 \[
@@ -454,7 +457,7 @@ then the required left side is exactly
  \sup_{f\in\mathcal T_\rho}\left|\int f\,d(\nu_{n+1}-\nu_n)\right|.
 \]
 Convergence of full densities in total variation would suffice but is stronger
-than the theorem logically needs.  The uniform projective criterion below is a
+than the theorem logically needs.  The uniform projective criterion above is a
 convenient sufficient condition and is itself strong enough to imply summable
 total-variation increments.
 
@@ -479,9 +482,12 @@ Proposition~\ref{prop:rfiber} through every localized denominator, history,
 exponentiation, and final Faddeev--Popov step with uniform $E/R/B$ bounds, or
 prove a vanishing cumulative bias between physical and stabilized measures.
 CMP~98, Proposition~5, gives a regular-small-field functional-derivative bound
-but not a uniform $L^{-3m}$ single-bond influence; already in the linearized
-contour average, some bonds adjacent to block centers can have order-one
-one-step weight \cite{Balaban1985Averaging}.  Track B is to prove the adjacent-depth
+but not the complete source estimate.  At the trivial-field linearization,
+closed-loop currents are divergence-free: the radial contour terms telescope
+and the pulled-back current has the uniform bound $L^{-3m}$ in four dimensions.
+The missing estimates concern the irregular first level, curved backgrounds,
+and the mismatch between true and model conditional means
+\cite{Balaban1985Averaging}.  Track B is to prove the adjacent-depth
 physical comparison on the first common lattice, conditional on
 $0<g_k\le\gamma$, with common history centering and a rooted polymer gain that
 beats lattice entropy.  Track C is to supply or replace the unpublished $SU(2)$
@@ -490,12 +496,13 @@ an implicit lemma for another.
 
 The scalar shooting part of Track C is elementary once the missing RG estimate
 is available, but the history dependence must be retained.  Writing
-$h_k=g_k^{-2}$, suppose
+$h_k=g_k^{-2}$, let $I=[h_*,\infty)$, and suppose
 \[
  h_{k+1}=h_k-B_{k+1}(h_0,\ldots,h_k),
  \qquad 0<b_-\le B_{k+1}\le b_+,
 \]
-with every increment continuous on admissible histories.  Shooting the bare
+where each $B_{k+1}:I^{k+1}\to[b_-,b_+]$ is continuous while the history
+remains in $I$.  Shooting the bare
 value $h_0$ forward and applying the intermediate value theorem gives at least
 one trajectory with any prescribed $h_K$ and
 \[

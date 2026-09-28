@@ -76,7 +76,7 @@ the published stabilized density. One must extend \(R\) to the terminal test or
 bound its cumulative observable bias; see
 `09-common-space-and-r-obstruction.md`.  The exact fiber formula of the
 introductory \(R\)-prototype does admit a source-dependent normalization on the
-uniform disc \(\sum_jr_j|z_j|<\log2\), as proved in
+uniform weighted source domain \(\sum_jr_j|z_j|<\log2\), as proved in
 `10-source-dependent-r-prototype.md`.  What is missing is a complete
 source-stable \(R\) induction with uniform localization and summability.
 

@@ -7,8 +7,11 @@ Every result is labelled as one of:
 
 - **proved here** -- a complete argument is present in this repository;
 - **published input** -- a precise external theorem is cited;
+- **published conditional input** -- a cited theorem whose stated hypothesis
+  remains open in this project;
 - **target** -- a theorem we are trying to establish;
-- **conditional reduction** -- a proved implication whose hypotheses remain open.
+- **conditional reduction** -- a proved implication whose hypotheses remain open;
+- **open** -- a proof obligation not supplied here or by the cited inputs.
 
 ## Current milestone
 
@@ -19,7 +22,8 @@ functional must converge on a cutoff-independent complex polydisc, with bounds o
 all source derivatives. The exact terminal source factors through Balaban's
 group-delta block map \(T\), but not through the large-field \(R\)-replacement,
 which preserves the vacuum integral while generally changing the density. An
-observable-preserving \(R\)-extension is therefore part of the milestone.
+a source-stable complete-\(R\) extension is therefore part of the Balaban
+\(RT\) route to the milestone.
 
 In parallel, a source-stable version of the RG for normalized plaquette
 characters is a local-observable stress test. Unlike terminal sources, microscopic
@@ -44,7 +48,7 @@ estimates while avoiding three later problems:
 | Summable projective-density difference \(\Rightarrow\) the required generating-functional comparison | proved here |
 | Four-dimensional source-free \(RT\) density/vacuum bounds | published, conditional on a small effective-coupling sequence |
 | Exact source-dependent lift of the fiber-normalized introductory \(R\) prototype, with a uniform zero-free polydisc | proved here |
-| Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 |
+| Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 through Balaban's \(RT\) route |
 | SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
 

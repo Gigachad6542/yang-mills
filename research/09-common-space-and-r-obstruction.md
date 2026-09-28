@@ -71,16 +71,17 @@ mark the integrations inside \(T\). It says nothing about a subsequent
 \(R\)-replacement for which only
 \(\int R\rho=\int\rho\) is known.
 
-### Proposition 1: mass preservation is insufficient for observables
+### Proposition 1: mass preservation gives no observable closeness
 
-There is no bound on
+Positivity and equal mass give only the trivial estimate
 
 \[
- \int f\,R\rho-\int f\,\rho
+ \left|\int f\,R\rho-\int f\,\rho\right|
+ \le \left(\int\rho\right)\operatorname{osc}f.
 \]
 
-for nonconstant bounded \(f\) that follows from positivity and
-\(\int R\rho=\int\rho\) alone.
+They give neither equality nor any bound forcing the difference to be small for
+a nonconstant bounded \(f\).
 
 ### Proof
 
@@ -119,7 +120,8 @@ family \(\rho_{k,z}=e^{zF_k}\rho_k\) and a nonlinear, source-dependent
 
 The algebraic part of the first option is now solved for the introductory
 fiber-normalized prototype: `10-source-dependent-r-prototype.md` constructs the
-exact multi-source replacement and proves a uniform zero-free polydisc.  The
+exact multi-source replacement and proves a uniform zero-free weighted source
+domain containing fixed polydiscs.  The
 open content is its identification with every detailed localized denominator
 and the uniform localization/summability estimates needed to carry it through
 the complete \(R\)-induction.
@@ -142,7 +144,8 @@ For fine-cutoff probability measures \(\mu_N\), put
 
 \[
  \widetilde\mu_N=(q_N)_*\mu_{N+1},\qquad
- \nu_N=(b_N)_*\mu_N.
+ \nu_N=(b_N)_*\mu_N,\qquad
+ \nu_{N+1}=(b_{N+1})_*\mu_{N+1}.
 \]
 
 ### Proposition 2: defect propagation is contractive
@@ -345,7 +348,8 @@ An adjacent action defect of the form
  \sum_X(\Delta E_N+\Delta R_N+\Delta B_N)(X)
 \]
 
-obeys
+obeys the following bound whenever the action coordinate is extensive in the
+sense that \(\operatorname{osc}A\le C_A|\Lambda|\):
 
 \[
  \operatorname{osc}D_N\le |\Lambda|

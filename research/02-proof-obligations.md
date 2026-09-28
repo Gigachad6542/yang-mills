@@ -6,24 +6,16 @@ and **open**.
 ## Dependency graph
 
 ```text
-H0 prove the SU(2) coupling-flow claim announced as CMP 109, Theorem 2
- |
- +--> H1 published source-free RT stability theorem (conditional on H0)
-          |
-          +--> R0a exact source lift of the introductory fiber prototype
-                    |
-                    +--> Robs source-stable complete R localization/bounds
-                    |
-
-P1 exact T block-map dictionary                       |
- |                                                     |
- +--> P0b terminal-source identity for exact T --------+
-                                                        |
-physical common-space defect + history/polymer bound --> P4
-                                                        |
-P5 bounded-source zero-free disc --> A1 analytic lemma -+--> M1 convergence
-                                                                  |
-                                                                  +--> P6
+H0 coupling-flow proof --> H1 conditional source-free RT stability --+
+R0a exact source lift of the introductory fiber prototype ------------+--> Robs
+                                                                            |
+P1 exact T dictionary --> P0b terminal-source identity ---------------------+
+                                                                            +--> P4
+physical common-space defect + complete history/polymer bound --------------+
+                                                                            |
+P5 zero-free disc --> A1 analytic lemma ------------------------------------+--> M1
+                                                                                  |
+                                                                                  +--> P6
 
 Parallel local-source track:
 H1 + P1 --> S0 fully marked small/large-field RG --> local-field program
