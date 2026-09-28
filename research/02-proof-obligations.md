@@ -39,9 +39,9 @@ bookkeeping in Robs.
 | P0b | Match P0a to Balaban's exact deterministic average inside the group-delta constraint. | proved here from published formulas | CMP **98**, Eqs. (10)--(15); CMP **119**, Eq. (0.1); `04-terminal-source-identity.md`. This is an identity for \(T\), not for the large-field \(R\)-replacement. |
 | P1 | Identify the published block variable and its gauge covariance without changing conventions. | published input, audited | CMP **98**, Eqs. (10)--(15); Euclidean-symmetric variants in CMP **109**, Eqs. (0.4), (0.12). |
 | R0a | Lift the introductory fiber-normalized \(R\)-prototype to finitely many terminal sources and prove a cutoff-independent zero-free source domain. | proved here | CMP **122 I**, Eq. (0.3), p. 176 is exactly a restricted-variable fiber replacement. `10-source-dependent-r-prototype.md` proves the multi-source lift, distortion bounds, and sequential analytic-family identity. |
-| R1 / H6 | Bound the oscillation of a selected terminal chart caused by one \(R\)-component by \(C(|E_\Lambda|+L^d)L^{(1-d)m}\), including the first irregular step and regular curved backgrounds. | open; abstract reduction and trivial-background linear part proved here | `10`, Lemma 2 proves the flat divergence-free linear-current bound. `12`, Lemmas 1--3 reduce the nonlinear target to a curvature-stable conserved-current contraction and one localized rough-step path bound. CMP **98**, Proposition 5 gives only a cutoff-independent bounded derivative, not that contraction. |
-| R2 / H7 | Prove a history- and shape-summed tail bound for the complement of the regular terminal chart under both normalized fiber laws, strong enough to beat the placement count. | open | The source-free large-field weights bound fiber masses, not the bad-event probability after each fiber is normalized. See `11`, H7. |
-| R3 / H8 | Bound the regular masked **terminal** mean shift by \(C|E_\Lambda|L^{(1-d)m}\eta_m\), with \(\sum_m\varepsilon_mL^m\eta_m<\infty\), uniformly in histories and exterior fields. | open; core conditional-law estimate | `11`, Lemma 1 and Y6\(^{\prime\prime}\). A projected fine-field mean is insufficient, and the actual hard-cutoff fiber pair is not known to be mutually absolutely continuous. |
+| R1 / H6\(_\Sigma\) | Prove a summable, history- and placement-weighted bound on the **squared** terminal sensitivity of all \(R\)-components, including the first irregular step and regular curved backgrounds. | open; abstract reductions, a rough one-step bound, and the trivial-background linear part proved here | `10`, Lemma 2 proves the flat divergence-free linear-current bound. `12`, Lemmas 1--4 give conservation, uniform-contraction implications, and the rough one-step estimate. A uniform per-component bound is only a strong sufficient route and may fail on curved hub chains; the placement-summed norm is primary. CMP **98**, Proposition 5 gives only a cutoff-independent bounded derivative. |
+| R2 / H7\(_\Sigma\) | Prove a summable history- and placement-weighted tail bound for the complement of the regular terminal chart under both normalized fiber laws. | open | The source-free large-field weights bound fiber masses, not the bad-event probability after each fiber is normalized. See `11`, H7\(_\Sigma\). |
+| R3 / H8\(_\Sigma\) | Prove a summable history- and placement-weighted bound on the regular masked **terminal** mean shifts. | open; core conditional-law estimate | `11`, Lemma 1 and corrected Y6\(^{\prime\prime}\). A projected fine-field mean is insufficient, the hard-cutoff fiber pair is not known to be mutually absolutely continuous, and the flat-background route still needs a quadratic residual and curvature susceptibility bound. |
 | Robs | Identify and propagate R0a through every localized denominator, history, localization/exponentiation step, and the final reverse Faddeev--Popov equivalence, with source bounds uniform in ultraviolet depth; alternatively combine R1--R3 with the complete history sum to bound the cumulative physical terminal-test bias by a vanishing quantity. | open; prerequisite for M1 through Balaban's \(RT\) route | CMP **122 I**, pp. 177, 193--194, 200--201 and CMP **122 II**, p. 378. Nonzero source denominators are elementary; locality, terminal-law comparison, and summability are not. See `09`--`11`. |
 | S0 | Extend every small-field and large-field/polymer estimate to microscopic bounded plaquette-character sources, with analytic derivative bounds uniform in ultraviolet depth. | open parallel track | A full marked version of the published estimates. S0 is stronger than Robs, but the \(R\)-part of Robs cannot be omitted from terminal-source M1. |
 | P4 | Compare ultraviolet depths \(n+1\) and \(n\) for the physical \(T^n\)-pushforward measures on a common terminal lattice and obtain a summable observable-test bound. | open | Principal convergence estimate. It requires common-space compatibility, marginal matching, complete history control, and a scale gain beating lattice entropy. Abstract reductions are in `07` and `09`. |
@@ -57,8 +57,9 @@ bookkeeping in Robs.
    complete construction changes the density and provides no source-stable
    locality/summability theorem.  Its true and template normalized fiber laws
    are not known to have common support.  The corrected bias route requires a
-   terminal oscillation bound, a summable regular-set tail, and a terminal mean
-   shift; a projected fine-field mean does not suffice.
+   placement-summed squared terminal-sensitivity bound, a summable regular-set
+   tail, and a placement-summed terminal mean shift; a projected fine-field
+   mean does not suffice.
 2. **Depth comparison.** Balaban's stability theorem controls each ultraviolet
    depth but is not automatically a comparison theorem between physical depths.
 3. **Coupling flow.** Even the source-free four-dimensional bound assumes the
@@ -80,8 +81,8 @@ bookkeeping in Robs.
 Run three explicit tracks. Track A upgrades the proved prototype lift R0a to
 Robs by retaining the analytic source family through the localized complete
 large-field step, or follows the quantitative-bias route R1--R3.  The first
-technical target on that route is R1/H6; R2/H7 and R3/H8 require new information
-about normalized fiber laws. Track B compares adjacent **physical** depths
+technical target on that route is R1/H6\(_\Sigma\); R2/H7\(_\Sigma\) and
+R3/H8\(_\Sigma\) require new information about normalized fiber laws. Track B compares adjacent **physical** depths
 on their first common lattice, with a complete history pairing and rooted
 polymer-difference estimate as specified in `09`. Track C reconstructs or
 replaces the unpublished coupling-flow proof. The full marked CMP **116** program

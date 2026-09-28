@@ -3,7 +3,7 @@
 Status: **Lemma 1 and the diagnostic probability lemmas below are proved
 here.**  The identification of the two fiber laws is taken from Balaban's
 published formulas, with the caveats stated in Section 2.  The three
-Yang--Mills estimates H6--H8 isolated below are open.  In particular, this
+Yang--Mills estimates H6\(_\Sigma\)--H8\(_\Sigma\) isolated below are open.  In particular, this
 note does not prove that the complete \(R\)-operation preserves, or
 asymptotically preserves, terminal observables.
 
@@ -95,7 +95,8 @@ Let \(p,q\) be probability measures on a fiber \(\Omega\), let
 and let \(\mathrm{Reg}\subset\Omega\) be measurable.  Assume that
 \(\Phi(\mathrm{Reg})\) lies in a convex set \(K\), that \(\Phi_0\in K\), and
 that there is an \(f\in C^2(K)\) for which \(F=f\circ\Phi\) on
-\(\mathrm{Reg}\).  Put
+\(\mathrm{Reg}\).  Assume
+\(|\Phi-\Phi_0|\mathbf1_{\rm Reg}\) is integrable under both laws.  Put
 
 \[
  \xi=\nabla f(\Phi_0),\qquad
@@ -106,7 +107,7 @@ that there is an \(f\in C^2(K)\) for which \(F=f\circ\Phi\) on
 and suppose
 
 \[
- \omega:=\sup_{\operatorname{supp}(p+q)}
+ \omega:=\mathop{\rm ess\,sup}_{p+q}
        |F-f(\Phi_0)|<\infty.
  \tag{3.2}
 \]
@@ -159,8 +160,8 @@ If
 
 \[
  \Delta_\Lambda=
- \sup_{\mathrm{Reg}\cap\operatorname{supp}(p+q)}
- |\Phi-\Phi_0|,
+ \mathop{\rm ess\,sup}_{p+q}
+ \bigl(|\Phi-\Phi_0|\mathbf1_{\rm Reg}\bigr),
  \tag{3.6}
 \]
 
@@ -173,6 +174,22 @@ then
  \tag{3.7}
 \]
 
+The split depends on \(\Phi_0\) if \(p(\mathrm{Reg})\ne q(\mathrm{Reg})\).
+When \(q(\mathrm{Reg})>0\), a useful choice is
+\(\Phi_0=\mathbb E_q[\Phi\mid\mathrm{Reg}]\), provided this barycenter lies in
+\(K\).  Then
+
+\[
+ M_{p,q}=p(\mathrm{Reg})
+ \left(\mathbb E_p[\Phi\mid\mathrm{Reg}]
+      -\mathbb E_q[\Phi\mid\mathrm{Reg}]\right),
+ \tag{3.8}
+\]
+
+so the linear term is a pure conditional-mean mismatch.  Uniform control of
+\(\Delta_\Lambda\), \(\omega\), and the derivatives of \(f\) is still required
+when this center depends on the history and exterior field.
+
 For the \(R\)-problem, \(\Phi=\Phi_K\) should be a smooth gauge-invariant
 coordinate map of the selected **terminal** holonomy data---for example, a
 finite vector of character functions.  It need not be one-to-one.  A
@@ -180,63 +197,78 @@ gauge-fixed bond chart is also possible only if the gauge-fixing map and its
 derivatives are included in the estimates.  If logarithmic coordinates are
 used, they are used only on \(\mathrm{Reg}\); bounded tests are controlled
 crudely on its complement.  This avoids assuming a global logarithm and keeps
-the differentials relevant to H6 covariantly conserved.
+the differentials relevant to H6\(_\Sigma\) covariantly conserved.
 
-The three missing Yang--Mills inputs are now explicit:
-
-> **H6 (terminal oscillation).**  On \(\mathrm{Reg}\), prove, uniformly in
-> histories and exterior fields,
-> \[
-> \Delta_\Lambda
-> \le C(|E_\Lambda|+L^d)L^{(1-d)m}.
-> \tag{3.8}
-> \]
-> This must include the first irregular level and propagation through regular
-> nontrivial backgrounds.
->
-> **H7 (bad-fiber tail).**  Prove a history- and shape-summed bound on
-> \(\widehat p_\Lambda(\mathrm{Reg}^c)\) and
-> \(\widehat q_\Lambda(\mathrm{Reg}^c)\) strong enough to remain summable after
-> the \(L^{dm}\) placement count.
->
-> **H8 / Y6\(^{\prime\prime}\) (terminal mean shift).**  With \(M_\Lambda\)
-> defined by (3.3) in the terminal chart, prove
-> \[
-> |M_\Lambda|
-> \le C|E_\Lambda|L^{(1-d)m}\eta_m,
-> \qquad
-> \sum_m\varepsilon_mL^m\eta_m<\infty,
-> \tag{3.9}
-> \]
-> uniformly in histories and exterior fields.
-
-Here \(\varepsilon_m\) denotes the already-summed component suppression, not
-a bound on the normalized conditional mean.
-
-Under the additional counting hypothesis that components with \(|E_\Lambda|=s\)
-occur with weight at most \(C\varepsilon_mL^{dm}/s\) per terminal block, H8
-contributes at most \(C\varepsilon_mL^m\eta_m\).  H6 makes the quadratic term
-at most
+The norm actually consumed by the complete history sum is placement-summed.
+Let \(\mathscr C_m\) be the history-resolved component placements introduced at
+distance \(m\) from the terminal scale.  Let \(w_\lambda\ge0\) be an absolute
+majorant for the exterior-integrated mass of the partially \(R\)-modified
+history term at the point where that replacement is made.  It may dominate,
+rather than equal, a signed localized activity.  Define
 
 \[
- C\varepsilon_m sL^{(2-d)m},
+ \begin{aligned}
+ \mathcal Q_m&=\sum_{\lambda\in\mathscr C_m}
+                  w_\lambda\Delta_\lambda^2,\\
+ \mathcal B_m&=\sum_{\lambda\in\mathscr C_m}w_\lambda
+  \bigl[p_\lambda(\mathrm{Reg}^c)+q_\lambda(\mathrm{Reg}^c)\bigr],\\
+ \mathcal A_m&=\sum_{\lambda\in\mathscr C_m}w_\lambda|M_\lambda|.
+ \end{aligned}
+ \tag{3.9}
+\]
+
+The three missing inputs in their minimal sufficient form are
+
+\[
+ \boxed{
+ \sum_m\mathcal Q_m<\infty\quad\text{(H6\(_\Sigma\))},\qquad
+ \sum_m\mathcal B_m<\infty\quad\text{(H7\(_\Sigma\))},\qquad
+ \sum_m\mathcal A_m<\infty\quad\text{(H8\(_\Sigma\))}.}
  \tag{3.10}
 \]
 
-before the remaining shape sum.  It is geometrically summable in \(d=4\) if
-the shape weights absorb the factor \(s\).  A conservative sufficient form of
-H7 is
+The tail of each series must be the vanishing error in the physical-versus-
+stabilized-measure telescope.  These weights cannot be taken from a final
+auxiliary density after all replacements: they belong to the partially
+modified density at the corresponding scale.  Constructing them from the
+published source-free activity bounds is itself part of the open history
+bookkeeping.
+
+A stronger termwise package is sufficient but is not the primary target.
+Suppose size-\(s\) placements have total weight at most
+\(C\varepsilon_mL^{dm}/s\) per terminal block, and suppose
 
 \[
- \sum_m\varepsilon_mL^{dm}
- \sup_{\Lambda,V_c,h}
- \bigl[\widehat p_\Lambda(\mathrm{Reg}^c\mid V_c)
-      +\widehat q_\Lambda(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
+ \Delta_\lambda\le C(s+L^d)L^{(1-d)m},\qquad
+ |M_\lambda|\le CsL^{(1-d)m}\eta_m.
  \tag{3.11}
 \]
 
-Equations (3.8)--(3.11) are a conditional scale reduction, not published
-estimates.
+Then the first-order contribution is at most
+\(C\varepsilon_mL^m\eta_m\), while the size-\(s\) quadratic contribution is
+
+\[
+ C\varepsilon_m\frac{(s+L^d)^2}{s}L^{(2-d)m}
+ \le C_L\varepsilon_m(s+1)L^{(2-d)m}.
+ \tag{3.12}
+\]
+
+The second inequality uses \(s\ge1\) and keeps the hub term that a bare
+\(sL^{(2-d)m}\) estimate misses.  It is geometrically summable in \(d=4\) if
+the shape weights absorb \(s+1\).  A conservative sufficient tail condition is
+
+\[
+ \sum_m\varepsilon_mL^{dm}
+ \sup_{\lambda\in\mathscr C_m}
+ \bigl[p_\lambda(\mathrm{Reg}^c)+q_\lambda(\mathrm{Reg}^c)\bigr]<\infty.
+ \tag{3.13}
+\]
+
+The placement hypothesis and normalized weights in this termwise package are
+not theorems of CMP **122 II**.  Its activity and combinatorial estimates make
+such a Peierls-type bound plausible, but passing to normalized local weights is
+an additional argument.  Equations (3.9)--(3.13) are conditional reductions,
+not published estimates.
 
 ## 4. Why a fine first moment is insufficient
 
@@ -272,8 +304,8 @@ gauge-independent fine-field seminorm can be defined by pairing with
 divergence-free currents, but it still sees only the linear term and not the
 BCH remainder.
 
-This does not invalidate (4.1).  It makes (4.1) the linear seed for H6 rather
-than a proof of H8.
+This does not invalidate (4.1).  It makes (4.1) a linear seed for
+H6\(_\Sigma\), not a proof of H8\(_\Sigma\).
 
 ## 5. Diagnostic comparison lemmas
 
@@ -353,7 +385,7 @@ then the tilt of Proposition 4 obeys
 This is an exact burden transfer to a score and a susceptibility.  Boundary
 flux must be added for hard cutoffs.
 
-## 6. Why the evident symmetry does not supply H8
+## 6. Why the evident symmetry does not supply H8\(_\Sigma\)
 
 An abstract oddness lemma remains useful.  Let \(S\) preserve a reference
 measure, let \(X\circ S=-X\), and write a density as
@@ -384,10 +416,18 @@ A symmetry moving \(V_c\) relates different conditional laws and gives no
 termwise cancellation.  Approximate fluctuation reversal is also unavailable
 for the unrestricted true large-field fiber law.
 
-There is a useful **conditional flat-background exception**.  Suppose a
-neighborhood \(N\supset\Lambda\) can be put in a pure-gauge frame, and suppose
-that, with this exterior held fixed, both localized fiber laws, the regular
-event, and the terminal perturbation \(Y_{\rm loc}\) obey
+There is a useful **conditional flat-background mechanism**, but it needs more
+than flatness.  For one fixed history assume:
+
+1. the two fiber weights are strictly local to a neighborhood
+   \(N\supset\Lambda\), up to a separately bounded polymer tail;
+2. \(V_c|_N\) is pure gauge and has been put in the flat frame;
+3. every factor in both weights, the axial slice, the history label, and
+   \(\mathrm{Reg}\) is invariant under constant color conjugation;
+4. the local perturbation \(Y_{\rm loc}\) and every link used to define it have
+   support in \(N\), with no uncontrolled boundary-crossing bond.
+
+Under these hypotheses,
 
 \[
  S_{h*}\widehat p_\Lambda=\widehat p_\Lambda,\qquad
@@ -397,29 +437,41 @@ event, and the terminal perturbation \(Y_{\rm loc}\) obey
 \]
 
 for every constant color rotation \(h\).  For a compact simple group, the
-adjoint representation has no invariant vector.  Hence each regular first
-moment of \(Y_{\rm loc}\) vanishes.  Equivalently, the linear term of any smooth
-gauge-invariant terminal test vanishes, and Lemma 1 leaves only the quadratic
-and bad-set terms.
+adjoint representation has no invariant vector.  Hence the regular mean of
+every \(\operatorname{Ad}\)-equivariant Lie-algebra polynomial with one free
+color index vanishes under each law.
 
-This gives a structurally sound route to H8: verify (6.2) for every localized
-history at a flat exterior, then prove a uniform susceptibility estimate for
-the change in the terminal mean under exterior curvature.  Schematically, one
-would need
+This does **not** imply \(M_\Lambda(V_{\rm flat})=0\) for an invariant terminal
+coordinate.  Later nonlinear averages contain BCH commutators.  Adjoint
+invariance forces a two-point tensor to have color form
+\(C_{bb'}\delta^{ac}\), so color-antisymmetric commutator terms vanish in mean;
+color-traced symmetric quadratic terms survive, but contain two terminal
+sensitivities.  Terms coupled to a curved field outside \(N\) are not removed
+by the local color average.
+
+A sound flat-background route to H8\(_\Sigma\) therefore needs **both** estimates
 
 \[
+ \begin{aligned}
+ |M_\Lambda(V_{\rm flat})|
+ &\le C\Delta_\Lambda^2+\text{localized tail},\\
  |M_\Lambda(V_c)-M_\Lambda(V_{\rm flat})|
- \le \chi_\Lambda\,
-       \operatorname{curv}(V_c|_N)
+ &\le \chi_\Lambda\operatorname{curv}(V_c|_N)
        +\text{localized tail},
+ \end{aligned}
  \tag{6.3}
 \]
 
-with the right side satisfying (3.9) after history and placement sums.  Neither
-the invariance through every complete-\(R\) localization nor the susceptibility
-bound is in the published estimates.  In particular, averaging over exterior
-fields cannot be used until correlations between the exterior weight and the
-fiber bias are controlled.
+with their weighted sums satisfying H8\(_\Sigma\).  The first line requires an
+equivariant expansion through all later averaging steps, not merely the crude
+fine-coordinate Hessian in Lemma 1.  The second is a uniform susceptibility
+bound.  Strict locality also fails literally for polymer activities with
+unbounded support, so their exponential tails must be included.  The standard
+Wilson factors, Ad-invariant norm cutoffs, and axial condition
+\(h1h^{-1}=1\) are compatible with (6.2), but invariance of every detailed
+history factor still requires a scan-level check.  None of these complete-
+\(R\) statements is published.  Averaging over exterior fields cannot be used
+until correlations between the exterior weight and fiber bias are controlled.
 
 ## 7. Published inputs and open hypotheses
 
@@ -430,17 +482,18 @@ fiber bias are controlled.
 | H3 | True history-term representation; CMP **119**, Eqs. (2.18), (2.23), and CMP **122 I**, Eqs. (1.71)--(1.75) | published representation, not a moment bound |
 | H4 | Positivity, fiber-mass normalization, and component suppression | published source-free bounds |
 | H5 | Regular-domain analyticity and functional derivatives of the averaging map; CMP **98**, Propositions 3--7 | published; no comparison of the fiber laws |
-| H6 | Terminal oscillation (3.8), including the first irregular step and curved backgrounds | open; the trivial-background linear part is proved in note 10 |
-| H7 | Summable regular-set-complement probability for the normalized fiber laws | open |
-| H8 | Terminal mean-shift estimate (3.9), Y6\(^{\prime\prime}\) | open; core conditional-law input |
+| H6\(_\Sigma\) | Placement-summed squared terminal oscillation in (3.10), including the first irregular step and curved backgrounds | open; the trivial-background linear part is proved in note 10 |
+| H7\(_\Sigma\) | Placement-summed regular-set-complement probability in (3.10) | open |
+| H8\(_\Sigma\) | Placement-summed terminal mean shift in (3.10), the corrected Y6\(^{\prime\prime}\) | open; core conditional-law input |
 
-The next defensible technical target is H6.  CMP **98** provides the local
+The next defensible technical target is H6\(_\Sigma\).  CMP **98** provides the local
 analytic machinery, but its published first-derivative estimates do not by
-themselves cover the irregular first step or prove the terminal bound.  H7 and
-H8 require information about normalized fiber laws that the source-free
-\(R\)-bounds intentionally do not retain.  Research note 12 reduces H6 to a
-curvature-stable one-step contraction of conserved currents and one localized
-rough-step path bound; neither estimate is stated in Proposition 5.
+themselves cover the irregular first step or prove the placement-summed bound.
+H7\(_\Sigma\) and H8\(_\Sigma\) require information about normalized fiber laws that the source-free
+\(R\)-bounds intentionally do not retain.  Research note 12 reduces
+H6\(_\Sigma\) to a
+strong uniform contraction route and records the weaker placement-summed target;
+neither estimate is stated in Proposition 5.
 
 One could redesign the template by an exponential tilt chosen to match the
 terminal mean.  That removes the linear defect by construction, but introduces

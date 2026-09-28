@@ -544,48 +544,63 @@ Lemma 1 of research note 11 proves, for \(F=f\circ\Phi_K\) on
 
 where \(\Delta_\Lambda\) is the terminal oscillation on
 \(\mathrm{Reg}\), and \(\omega_F\) is a uniform bounded-test envelope.  This
-separates three open interfaces:
+separates three open interfaces.  The norm consumed by the complete history
+sum is not a supremum over components.  If \(w_\lambda\) is a nonnegative
+absolute majorant for a component placement in the partially \(R\)-modified
+density at scale \(m\), the minimal targets are
 
-1. **H6:** extend (7.6) through the first irregular level and regular curved
-   backgrounds to prove
-   \[
-   \Delta_\Lambda\le
-   C(|E_\Lambda|+L^d)L^{(1-d)m};
-   \tag{7.9}
-   \]
-2. **H7:** prove a summable bound on the two normalized probabilities of
-   \(\mathrm{Reg}^c\) in (7.8);
-3. **H8 / Y6\(^{\prime\prime}\):** prove, uniformly in exterior fields and
-   histories,
-   \[
-   |M_\Lambda|\le
-   C|E_\Lambda|L^{(1-d)m}\eta_m,
-   \qquad
-   \sum_m\varepsilon_mL^m\eta_m<\infty.
-   \tag{7.10}
-   \]
+\[
+ \sum_m\sum_{\lambda\in\mathscr C_m}w_\lambda
+ \left(
+   \Delta_\lambda^2
+  +p_\lambda(\mathrm{Reg}^c)+q_\lambda(\mathrm{Reg}^c)
+  +|M_\lambda|
+ \right)<\infty.
+ \tag{7.9}
+\]
 
-Here \(\varepsilon_m\) is the component suppression after the history and
-lattice-animal sum; it is not a bound on either normalized conditional law.
-If size-\(s\) components have total placement weight
-\(O(\varepsilon_mL^{dm}/s)\), then H8 contributes
-\(O(\varepsilon_mL^m\eta_m)\), while the squared H6 term contributes
-\(O(\varepsilon_msL^{(2-d)m})\).  The latter is geometrically summable in
-\(d=4\) after a shape bound absorbing \(s\).  H7 must separately beat the
-placement count.  These are conditional scale counts, not consequences of the
-published source-free estimates.
+These are H6\(_\Sigma\), H7\(_\Sigma\), and H8\(_\Sigma\), respectively.
+The tails of the three series must control the physical-versus-stabilized
+observable telescope.  Bounds for a final auxiliary density do not construct
+the intermediate weights \(w_\lambda\).
+
+A uniform termwise package remains sufficient.  If size-\(s\) placements have
+total weight \(O(\varepsilon_mL^{dm}/s)\), and
+
+\[
+ \Delta_\lambda\le C(s+L^d)L^{(1-d)m},\qquad
+ |M_\lambda|\le CsL^{(1-d)m}\eta_m,
+ \tag{7.10}
+\]
+
+then the mean term contributes \(O(\varepsilon_mL^m\eta_m)\), while the
+quadratic term contributes
+
+\[
+ O\!\left(
+ \varepsilon_m\frac{(s+L^d)^2}{s}L^{(2-d)m}
+ \right).
+ \tag{7.11}
+\]
+
+The latter is geometrically summable in \(d=4\) after a shape bound absorbs
+\((s+L^d)^2/s\).  The hub term \(L^{2d}/s\) cannot be dropped, although \(L\)
+is fixed.  This placement hypothesis, the normalized local weights, and the
+three estimates are conditional; they are not consequences of the published
+source-free activity bounds.
 
 The published formulas also do not establish mutual absolute continuity of
 the two fiber laws: the template has a hard axial small-field cutoff, whereas
 the true history term is not shown to have the same support.  Thus an entropy
-or score interpolation cannot replace H8 without a new support-compatible
+or score interpolation cannot replace H8\(_\Sigma\) without a new support-compatible
 comparison.  Research note 11 gives the exact abstract lemma, probability
 diagnostics, and the fixed-exterior symmetry obstruction.  It also isolates a
 conditional exception: at a genuinely flat exterior, simultaneous
-\(\operatorname{Ad}\)-invariance would kill the terminal linear term, reducing
-H8 to a uniform susceptibility estimate in exterior curvature.  Establishing
-that invariance and susceptibility through the complete history construction
-is still open.
+\(\operatorname{Ad}\)-invariance kills equivariant one-color terms.  One must
+still prove that the surviving flat-background mean mismatch is quadratic,
+and then prove a uniform susceptibility estimate in exterior curvature.
+Establishing the locality, history invariance, quadratic bound, and
+susceptibility through the complete construction is open.
 
 ## 8. What remains open for the complete \(R\)-operation
 
@@ -597,9 +612,10 @@ are:
    nonzero fiber pair of the form used above;
 2. retain the history/fiber labels through all subsequent localization and
    exponentiation steps;
-3. prove H6--H8 of Section 7---terminal oscillation, a summable bad-fiber
-   tail, and the terminal mean-shift bound Y6\(^{\prime\prime}\)---or a direct
-   marked-polymer substitute for the selected terminal loop observables;
+3. prove the placement-summed H6\(_\Sigma\)--H8\(_\Sigma\) bounds of Section
+   7---squared terminal sensitivity, bad-fiber tail, and terminal mean
+   shift---or a direct marked-polymer substitute for the selected terminal
+   loop observables;
 4. control several components, mixed fiber differences, and unmatched
    histories without losing the common source disc;
 5. show that the source corrections fit the analytic/local \(E/R/B\) density

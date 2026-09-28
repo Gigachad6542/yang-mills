@@ -38,7 +38,8 @@ The following papers form a dependency chain rather than interchangeable citatio
    p. 42 gives a functional derivative bounded independently of the lattice
    spacing, and Propositions 6--7 give analyticity.  Proposition 5 does not
    state the conserved-current contraction or curvature-relative kernel bound
-   isolated as H6-local in `research/12-covariant-terminal-sensitivity.md`.
+   used as a strong sufficient route to H6\(_\Sigma\) in
+   `research/12-covariant-terminal-sensitivity.md`.
 4. T. Bałaban, *Spaces of Regular Gauge Field Configurations on a Lattice and
    Gauge Fixing Conditions*, CMP **99** (1985), 75--102.
    [DOI](https://doi.org/10.1007/BF01466594).
