@@ -77,7 +77,7 @@ harmless in 3D"). Do not widen T4 beyond this.
   large-field suppression makes the R-bias sum converge with crude bounds.
   CMP 122 I, p. 176 says that for d < 4 the bound is an arbitrarily large
   power of epsilon. Target note: `research/14-three-dimensional-m1.md`.
-- T5 [proof/counterexample] — claimed by `normalized_tail`, 2026-09-29:
+- T5 [proof/counterexample] — completed by Codex, 2026-09-29:
   determine exactly when Balaban's unnormalized large-field/component bounds
   imply the normalized bad-event probabilities required by H7_Sigma. Prove a
   sharp normalization lemma and either match its hypotheses to the published
