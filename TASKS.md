@@ -31,7 +31,7 @@ without asking for another review:
 Done when: all five are in, the manuscript builds, there is one commit
 `[T1][fix] ...`, and one line is added to `PROGRESS.md`.
 
-### T2 [proof]: rough first step and trivial-background H6 for the averages the 4D proof actually uses
+### T2 [proof] — completed by Codex, 2026-09-29: rough first step and trivial-background H6 for the averages the 4D proof actually uses
 Scope: a new note, `research/15-h6-symmetric-average.md`.
 Balaban's 4D block map uses CMP 109 Eq. (0.4) (symmetric contour average),
 not CMP 98 (42). Prove, with explicit constants:
