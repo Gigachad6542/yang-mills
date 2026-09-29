@@ -5,11 +5,13 @@ Effective 2026-09-28. These rules override earlier arrangements in
 
 ## Roles
 
-- **Lead:** Claude (Anthropic), Claude Code session "Recent project review
-  with Codex", appointed by Daniel on 2026-09-28. The lead owns `TASKS.md`,
-  sets priorities, and is the only reviewer.
-- **Worker:** Codex, and any other agent Daniel starts here. Workers take
-  work only from `TASKS.md`.
+- **Lead:** Codex, appointed by Daniel on 2026-09-29 after Claude exhausted
+  the available usage. The lead owns `TASKS.md`, sets priorities, integrates
+  deliverables, and is the only reviewer while this appointment remains in
+  force.
+- **Workers:** Subagents dispatched by the lead, and any other agent Daniel
+  starts here. Workers take work only from `TASKS.md` or a matching bounded
+  dispatch from the lead.
 - Daniel's direct instructions outrank this file.
 
 ## Why these rules exist

@@ -1,7 +1,15 @@
 # Task board
 
-Owner: the lead (Claude). The rules are in `AGENTS.md`. Take the
+Owner: the lead (Codex, appointed 2026-09-29). The rules are in `AGENTS.md`. Take the
 lowest-numbered unclaimed task assigned to you.
+
+## Infrastructure
+
+### T0b [infra] — completed by Codex, 2026-09-29: record the lead handoff
+Scope: `AGENTS.md`, `TASKS.md`, `PROGRESS.md`.
+Daniel transferred repository leadership from Claude to Codex after Claude
+exhausted the available usage. The unfinished lead tasks below are reassigned
+without changing their mathematical scope.
 
 ## Assigned to Codex
 
@@ -47,19 +55,23 @@ If the OCR is garbled, say which symbols you reconstructed.
 Done when: (a)-(c) are proved, or each is replaced by a `failed-attempt`
 naming the exact obstruction, and there is one commit.
 
-## Lead (Claude) — in progress
+## Active research
 
-- T0 [infra]: reconstruct git history from the agent logs (verified
-  byte-identical), preserve the sources, and reorganize the repo.
-- T3 [proof/counterexample]: H8 in averaged form. The pointwise
+- T3 [proof/counterexample] — claimed by `averaged_h8`, 2026-09-29: H8 in averaged form. The pointwise
   (fixed-exterior) H8_Sigma is probably false. The averaged bias is a
   covariance, and gauge invariance plus power counting suggest it gains
   exactly the missing factor L^{-m}. Target note:
   `research/13-averaged-bias.md`.
-- T4 [computation]: M1 in three dimensions. Check whether Balaban's 3D
+- T4 [computation] — claimed by `three_dimensional_m1`, 2026-09-29: M1 in three dimensions. Check whether Balaban's 3D
   large-field suppression makes the R-bias sum converge with crude bounds.
   CMP 122 I, p. 176 says that for d < 4 the bound is an arbitrarily large
   power of epsilon. Target note: `research/14-three-dimensional-m1.md`.
+- T5 [proof/counterexample] — claimed by `normalized_tail`, 2026-09-29:
+  determine exactly when Balaban's unnormalized large-field/component bounds
+  imply the normalized bad-event probabilities required by H7_Sigma. Prove a
+  sharp normalization lemma and either match its hypotheses to the published
+  construction or give a finite-dimensional counterexample isolating the
+  missing lower bound. Target note: `research/16-normalized-tail.md`.
 
 ## Proposals
 (Workers: at most 5 lines each.)
