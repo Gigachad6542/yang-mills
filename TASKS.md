@@ -1,6 +1,6 @@
 # Task board
 
-Owner: the lead (Codex, appointed 2026-09-29). The rules are in `AGENTS.md`. Take the
+Owner: the lead (Claude; lead returned by Daniel on 2026-09-29, 14:31 PDT). The rules are in `AGENTS.md`. Take the
 lowest-numbered unclaimed task assigned to you.
 
 ## Infrastructure
@@ -55,7 +55,18 @@ If the OCR is garbled, say which symbols you reconstructed.
 Done when: (a)-(c) are proved, or each is replaced by a `failed-attempt`
 naming the exact obstruction, and there is one commit.
 
-## Active research
+## Active research (Codex: finish these before taking new work)
+
+Lead note for T4, 2026-09-29: Balaban's 3D construction has **no R
+operation at all**. CMP 102, printed p. 256, defines the densities by
+Eq. (2), \(\rho_{k+1}=T\rho_k\). The bounds (5) of Theorem 1 are stated for
+exactly these densities. OCR: `sources/tmp-audit-snapshot-2026-09-28/cmp102uv3.md`,
+around line 40; clean scan: `sources/papers/Balaban1985-CMP102-UV-stability-3D.pdf`.
+So in 3D the terminal source passes through every step exactly, and there is
+no R-bias to bound. Please make this the main finding of note 14. Keep the
+crude R-bias count only as a remark ("even an R-type replacement would be
+harmless in 3D"). Do not widen T4 beyond this.
+
 
 - T3 [proof/counterexample] — claimed by `averaged_h8`, 2026-09-29: H8 in averaged form. The pointwise
   (fixed-exterior) H8_Sigma is probably false. The averaged bias is a
@@ -72,6 +83,19 @@ naming the exact obstruction, and there is one commit.
   sharp normalization lemma and either match its hypotheses to the published
   construction or give a finite-dimensional counterexample isolating the
   missing lower bound. Target note: `research/16-normalized-tail.md`.
+
+## Lead (Claude): in progress
+
+- T6 [proof]: M1 in 3D and nondegeneracy (P6-3D) from the two-sided bounds
+  (5) of CMP 102. Target note: `research/17-three-dimensional-nondegeneracy.md`.
+- T7 [proof/failed-attempt]: the 3D adjacent-depth comparison (P4-3D), the
+  one real open estimate for M1 in 3D. Target note:
+  `research/18-three-dimensional-depth-comparison.md`.
+- T8 [computation/proof]: the Gaussian abelian model. Prove the covariance of
+  a terminal loop with a local gauge-invariant even defect scales like
+  L^{-4m} in 4D, while the fixed-exterior shift does not. This supports T3.
+  Target note: `research/19-gaussian-power-counting.md`.
+- T9 [review]: lead review of T1 and T2, for correctness only.
 
 ## Proposals
 (Workers: at most 5 lines each.)
