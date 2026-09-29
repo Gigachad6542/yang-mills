@@ -68,12 +68,12 @@ crude R-bias count only as a remark ("even an R-type replacement would be
 harmless in 3D"). Do not widen T4 beyond this.
 
 
-- T3 [proof/counterexample] — claimed by `averaged_h8`, 2026-09-29: H8 in averaged form. The pointwise
+- T3 [proof/counterexample] — completed by Codex, 2026-09-29: H8 in averaged form. The pointwise
   (fixed-exterior) H8_Sigma is probably false. The averaged bias is a
   covariance, and gauge invariance plus power counting suggest it gains
   exactly the missing factor L^{-m}. Target note:
   `research/13-averaged-bias.md`.
-- T4 [computation] — claimed by `three_dimensional_m1`, 2026-09-29: M1 in three dimensions. Check whether Balaban's 3D
+- T4 [computation] — claimed by Codex after worker usage-limit failure, 2026-09-29: M1 in three dimensions. Check whether Balaban's 3D
   large-field suppression makes the R-bias sum converge with crude bounds.
   CMP 122 I, p. 176 says that for d < 4 the bound is an arbitrarily large
   power of epsilon. Target note: `research/14-three-dimensional-m1.md`.
