@@ -6,3 +6,8 @@ manuscript/*.out
 manuscript/*.pdf
 tmp/
 .DS_Store
+
+# Local-only material (see sources/README.md and AGENTS.md)
+sources/papers/
+sources/tmp-audit-snapshot-2026-09-28/
+tools/bin/

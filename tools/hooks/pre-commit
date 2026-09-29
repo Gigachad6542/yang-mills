@@ -1,0 +1,10 @@
+#!/bin/sh
+# Blocks the review-request channel that AGENTS.md retired, and keeps
+# third-party / local-only material out of commits.
+bad=$(git diff --cached --name-only --diff-filter=A | grep -E '(^|/)CODEX_TO_CLAUDE[^/]*\.md$|^sources/(papers|tmp-audit)|^tools/bin/')
+if [ -n "$bad" ]; then
+  echo "pre-commit: refusing to add these files (AGENTS.md rules 3 and 8):" >&2
+  echo "$bad" >&2
+  exit 1
+fi
+exit 0
