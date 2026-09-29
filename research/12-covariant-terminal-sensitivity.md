@@ -5,11 +5,12 @@ The flat-background contraction is the linear lemma of research note 10,
 transported by gauge covariance.  The curvature-stable one-step contraction
 is a strong sufficient hypothesis, not the minimal target and possibly too
 strong at curved backgrounds.  The actual target is a placement-summed squared
-sensitivity bound.  The local rough-step estimate in Lemma 3 is proved here
-for the corner-based CMP **98** prototype; a formula-specific analogue for the
-Euclidean-symmetric four-dimensional averages, the regular curved-background
-placement sum, and the path hypotheses in Lemma 4 are open Yang--Mills inputs.
-They are not stated in CMP **98**, Proposition 5.
+sensitivity bound.  The convex-log rough-step estimate in Lemma 3\(^{\prime}\) is proved
+here and applies to CMP **109**, Eq. (0.4), as well as to the corner-based CMP
+**98** prototype.  The group-mean variant CMP **109**, Eq. (0.12), outside its
+small-diameter domain, the regular curved-background placement sum, and the
+path hypotheses in Lemma 4 remain open Yang--Mills inputs.  They are not
+stated in CMP **98**, Proposition 5.
 
 ## 1. Why this is the next H6\(_\Sigma\) question
 
@@ -100,8 +101,10 @@ it does not require a small-field expansion.
 
 ## 3. The quantitative one-step hypothesis
 
-Equip bond covectors with the sup norm in an \(\operatorname{Ad}\)-invariant
-Lie-algebra norm.  Define
+Equip each bond tangent space and its dual with the standard Hilbert--Schmidt
+inner product, and use the resulting \(\ell^\infty\) norm on bond covectors.
+Its dual tangent norm is \(\ell^1\).  Both norms are
+\(\operatorname{Ad}\)-invariant.  Define
 
 \[
  \mathfrak C_j(U_j)=
@@ -122,7 +125,7 @@ Gauge covariance and \(\operatorname{Ad}\)-invariance of the norm extend
 (3.2) to pure-gauge backgrounds, provided the local domains and boundary data
 are transformed with the background.
 
-The direct perturbative bound one should test at a regular background is
+A strong uniform sufficient condition one may test at a regular background is
 
 \[
  \boxed{
@@ -188,7 +191,8 @@ Apply (4.1) successively, using Lemma 1 after each step, and use
 \(1+r_j\le e^{r_j}\). \(\square\)
 
 The primary target does not require this pointwise iteration.  With the
-normalized exterior-majorant measures of note 11, it is exactly
+sequential, \(Z^{-1}\)-normalized absolute exterior-majorant measures of note
+11, it is exactly
 
 \[
  \mathcal Q_m=\sum_{\lambda\in\mathscr C_m}
@@ -203,11 +207,20 @@ Indeed, for fixed \(L\), (3.3) with \(\sum_j\varkappa_j\le C\) is (4.1) with
 exponent \(L^{(1-d)m}\) up to a constant.  Likewise,
 \(\mathfrak C_j\le\theta\) yields \(\theta^m\); it is enough that this hold
 after finitely many initial regular levels, whose derivative norms contribute
-only a cutoff-independent prefactor.  If size-\(s\) components have total
-normalized majorant mass
-\(O(\varepsilon_{m,s}L^{dm}/s)\), with
-\(\sum_s(s+1)\varepsilon_{m,s}=O(\varepsilon_m)\), and
-\(\Delta_\Lambda\le C(s+L^d)\theta^m\), then their quadratic contribution is
+only a cutoff-independent prefactor.  Let \(A_s\) count anchored size-\(s\)
+shapes, let \(\pi_{m,s}\) bound the normalized weight of any one such shape and
+placement, and put \(\varepsilon_{m,s}=sA_s\pi_{m,s}\).  Assume the explicit
+second-moment condition
+
+\[
+ \sum_s A_s\pi_{m,s}(s+L^d)^2
+ =\sum_s\varepsilon_{m,s}\frac{(s+L^d)^2}{s}
+ =O(\varepsilon_m).
+\]
+
+Then size-\(s\) components have total normalized majorant mass
+\(O(\varepsilon_{m,s}L^{dm}/s)\).  If
+\(\Delta_\Lambda\le C(s+L^d)\theta^m\), their quadratic contribution is
 
 \[
  C\varepsilon_{m,s}\frac{(s+L^d)^2}{s}
@@ -234,75 +247,89 @@ contained in Proposition 5.
 The field inside a large-field component need not lie in the regular chart in
 which (3.3) is meaningful.  It is enough to isolate one step.
 
-### Lemma 3: rough one-step support bound
+### Lemma 3\(^{\prime}\): convex-log rough one-step support bound
 
-For the corner-based one-step average of CMP **98**, Eq. (42), write
+Let \(\mathscr L_c\) be a finite family of fine-lattice paths from \(c_-\) to
+\(c_+\), with weights \(w_\ell\ge0\), \(\sum_\ell w_\ell=1\), and define
 
 \[
  \overline U(c)=
- \exp\!\left(iL^{-d}\sum_{x\in B(c_-)}Z_{c,x}(U)\right)U(c),
- \quad
- Z_{c,x}(U)=\frac1i\log\!\left[U(\Gamma_{c,x})U(c)^{-1}\right],
- \quad \|Z_{c,x}(U)\|\le\pi,
+ \exp\!\left(i\sum_{\ell\in\mathscr L_c}w_\ell Z_\ell(U)\right)U(c),
+ \qquad
+ Z_\ell(U)=\frac1i\log\!\left[U(\ell)U(c)^{-1}\right].
  \tag{5.1}
 \]
 
-where \(\log\) is the spectral logarithm of CMP **98**, Eq. (22), with
-eigenvalue arguments in \((-π,π]\).  Norms in this lemma are operator
-norms.  Let \(U,U'\) agree off a
-set \(S\) of fine bonds.  If \(S\) is disjoint from the central transporter
-\(c\), then
+Here \(U(c)\) is the straight central transporter on the right and \(\log\) is
+the spectral logarithm of CMP **98**, Eq. (22), with eigenvalue arguments in
+\((-\pi,\pi]\).  Thus \(Z_\ell\) is Hermitian and
+\(\|Z_\ell\|_{\rm op}\le\pi\).  Let \(U,U'\) agree off a set \(S\) of fine
+bonds and put
 
 \[
- \|\overline U(c)-\overline U'(c)\|
- \le \min\{2,\,2\pi L^{-d}n_c(S)\},
- \quad
- n_c(S)=\#\{x\in B(c_-):\Gamma_{c,x}\cap S\ne\varnothing\}.
+ \omega_c(S)=\sum_{\substack{\ell\in\mathscr L_c\\
+                              \ell\cap S\ne\varnothing}}w_\ell.
+\]
+
+If \(S\) is disjoint from the central transporter, then
+
+\[
+ \|\overline U(c)-\overline U'(c)\|_{\rm op}
+ \le \min\{2,\,2\pi\omega_c(S)\}.
  \tag{5.2}
 \]
 
-If \(S\) meets the central transporter, the universal bound is \(2\).
+If \(S\) meets the central transporter, the universal operator-norm bound is
+\(2\).
 
 #### Proof
 
-When \(U(c)\) is unchanged, only the \(n_c(S)\) indicated spectral logarithms
-can change.  Each has norm at most \(\pi\), so each difference has norm at most
-\(2\pi\).  The Duhamel formula gives
+When \(U(c)\) is unchanged, only paths meeting \(S\) contribute a changed
+spectral logarithm.  Each such difference has operator norm at most \(2\pi\).
+The Duhamel formula gives
 \(\|e^{iX}-e^{iY}\|\le\|X-Y\|\) for Hermitian \(X,Y\).  This proves the second
 entry in the minimum; two unitary matrices are always at distance at most two.
 The same universal bound applies when \(U(c)\) changes. \(\square\)
 
-For a bond occurring only in the translated straight segments,
-\(n_c(S)\le L|S|\) before overlaps are optimized, so the normalized contour
-average gives an \(L^{1-d}\) factor per affected bond.  Radial hub bonds may
-affect order \(L^d\) contours and retain an order-one bound.  Lemma 3 is a
-local deterministic estimate; it does not prove that hub placements have a
-summable total weight.
+CMP **98**, Eq. (42), is (5.1) with
+\(\ell=\Gamma_{c,x}\) and \(w_\ell=L^{-d}\).  CMP **109**, Eq. (0.4), is also
+of the form (5.1): for each \(x\), average over
+\(G(c_-,x)\times G(c_+,x')\) with weight
+\(L^{-d}/(|G(c_-,x)|\,|G(c_+,x')|)\).  Hence Lemma 3\(^{\prime}\) applies directly to the
+convex-log Euclidean-symmetric average used by CMP **119**, Eq. (0.1).  A bond
+occurring only in the translated straight segments has
+\(\omega_c(S)\le L^{1-d}|S|\) before overlaps are optimized, whereas radial
+hub bonds can have order-one affected weight.  The operator estimate implies
+a Hilbert--Schmidt estimate with the factor \(\sqrt N\), hence \(\sqrt2\) for
+the defining representation of \(SU(2)\).
 
-CMP **109**, Eqs. (0.4) and (0.12), use Euclidean-symmetric averages in the
-four-dimensional construction.  Their identity-background linearizations
-have the cancellation proved in note 10, but Lemma 3 is not automatically a
-rough-field theorem for them: Eq. (0.4) has additional contour averages, while
-Eq. (0.12) also uses the nonlinear group mean \(M\), defined on small-diameter
-sets.  The first-irregular-layer estimate must therefore be proved for the
-specific average selected in the complete \(RT\) scheme.
+The alternative CMP **109**, Eq. (0.12), uses the nonlinear group mean \(M\),
+defined only for sets of sufficiently small diameter.  Lemma 3\(^{\prime}\)
+covers Eq. (0.12) only on that small-diameter domain and only after inserting a
+Lipschitz bound for \(M\); the rough first step must use Eq. (0.4).  Even for
+Eq. (0.4), Lemma 3\(^{\prime}\) is local and deterministic and does not prove
+that hub placements have a summable total weight.
 
 ### Lemma 4: one rough step followed by regular contraction
 
 Let \(W(t)\), \(0\le t\le1\), join two fiber configurations on a regular event.
-Assume that the once-blocked path and all of its later images stay in common
-differentiability charts and regular domains.  In one fixed tangent
-trivialization, assume
+With the convention \(Q_j:\mathcal X_j\to\mathcal X_{j-1}\), the first map
+applied to the fine field is \(Q_m\).  Put
+\(U_{m-1}(t)=Q_m(W(t),V_c)\) and recursively
+\(U_{j-1}(t)=Q_j(U_j(t))\).  Assume that for every \(t\) all these paths remain
+in the differentiability and regularity domains required at their respective
+levels.  Using Lie-algebra velocities obtained by translation, assume
 
 \[
  \int_0^1
- \left\|\frac d{dt}Q_1(W(t),V_c)\right\|_1dt
+ \left\|\frac d{dt}Q_m(W(t),V_c)\right\|_1dt
  \le C_0(s+L^d),
  \tag{5.3}
 \]
 
-where \(s=|E_\Lambda|\).  Suppose the remaining \(m-1\) adjoint derivatives
-obey \(\mathfrak C_j\le\theta\), and the selected terminal coordinate is
+where \(s=|E_\Lambda|\).  Suppose, along every \(U_j(t)\), the remaining
+adjoint derivatives \(1\le j\le m-1\) obey
+\(\mathfrak C_j\le\theta\), and the selected terminal coordinate is
 gauge invariant and has differential bounded by \(C_F\) in the dual sup
 norm.  Require all these bounds essentially uniformly in the exterior field,
 history, and component placement on the regular event.  Then
@@ -325,8 +352,12 @@ Because \(L\) is fixed, \(\theta^{m-1}\) differs from \(\theta^m\) only by a
 constant.  Thus the H6-uniform route does not require the large field itself to satisfy every
 small-field derivative estimate.  It requires a uniform localized path bound
 for the first output and contraction at all later regular levels.  Constructing
-such a path without a global logarithm is part of the regular-event definition;
-its complement belongs in H7\(_\Sigma\).
+such a path is part of the regular-event definition; \(\mathrm{Reg}\) must
+contain only configurations admitting such a path from the chosen reference
+fiber configuration, with all relevant contour holonomies kept away from the
+spectral-log branch cut.  Character coordinates at the terminal level are
+globally smooth; a logarithmic terminal chart imposes its own path-domain
+condition.  The complement belongs in H7\(_\Sigma\).
 
 ## 6. Exact missing estimates
 

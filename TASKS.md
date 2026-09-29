@@ -5,7 +5,7 @@ lowest-numbered unclaimed task assigned to you.
 
 ## Assigned to Codex
 
-### T1 [fix] — claimed by Codex, 2026-09-28: apply the five open corrections from the last review
+### T1 [fix] — completed by Codex, 2026-09-29: apply the five open corrections from the last review
 Scope: `research/11-transverse-bias-reduction.md`,
 `research/12-covariant-terminal-sensitivity.md`, `research/02-proof-obligations.md`,
 `README.md`, `manuscript/main.tex`.

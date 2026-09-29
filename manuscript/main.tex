@@ -492,9 +492,12 @@ projected fine-field first moment does not make the Taylor remainder quadratic
 in $L^{-3m}$.  The correct reduction is at the terminal level: on a regular
 event it splits the fiber bias into a terminal mean shift and a genuinely
 quadratic terminal-oscillation term, plus a bounded-test tail on the complement.
-Indeed, if $F=f\circ\Phi$ on a regular event, $f$ has Hessian norm at most
-$\kappa$, $\Delta=\sup_{\rm Reg}|\Phi-\Phi_0|$, and
-$\omega=\sup|F-f(\Phi_0)|$, then Taylor's theorem gives
+Indeed, for probability measures $p,q$, if $F=f\circ\Phi$ on a regular
+event, $f$ has Hessian norm at most $\kappa$,
+$\Delta=\operatorname*{ess\,sup}_{{\rm Reg}\cap\operatorname{supp}(p+q)}
+|\Phi-\Phi_0|$, and
+$\omega=\operatorname*{ess\,sup}_{\operatorname{supp}(p+q)}
+|F-f(\Phi_0)|$, then Taylor's theorem gives
 \[
  \begin{aligned}
  M_{p,q}&=E_p[(\Phi-\Phi_0)1_{\rm Reg}]
@@ -503,8 +506,10 @@ $\omega=\sup|F-f(\Phi_0)|$, then Taylor's theorem gives
    \left\langle\nabla f(\Phi_0),M_{p,q}\right\rangle\right|
  &\le \kappa\Delta^2
    +\omega\{p({\rm Reg}^c)+q({\rm Reg}^c)\}.
- \end{aligned}
+\end{aligned}
 \]
+For normalized finite signed measures, take essential suprema relative to
+$|p|+|q|$ and replace the right-hand moments and masses by total variations.
 The three missing estimates are therefore summable, history- and
 placement-weighted bounds on the squared terminal sensitivity, the complement
 probability under both normalized fiber laws, and the terminal mean shift.  A
@@ -514,6 +519,11 @@ small-field cutoff in the template also means that mutual
 absolute continuity with the true fiber law is not a published input, so a
 log-density interpolation cannot be assumed
 \cite[Eqs.~(1.100)--(1.101)]{Balaban1989LargeI}.
+The bias telescope must replace components in a fixed sequential order, with
+$\varpi_\lambda\ge Z^{-1}|P_\lambda\nu_\lambda|$ formed from the current
+partially modified term.  Component counting requires the second moment
+$\sum_{s\ge1}A_s\pi_{m,s}(s+L^4)^2\le C\varepsilon_m$, where $A_s$ counts
+anchored shapes and $\pi_{m,s}$ bounds one normalized placement weight.
 Gauge covariance does at least preserve covariant current conservation under
 every adjoint derivative.  A strong sufficient route is the one-step bound
 $\|DQ(U)^*\tau\|_\infty\le\theta\|\tau\|_\infty$ on conserved currents,

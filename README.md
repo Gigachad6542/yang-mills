@@ -82,9 +82,11 @@ estimates while avoiding three later problems:
   and the open placement-summed terminal-sensitivity, tail, and mean-shift
   estimates.
 - `research/12-covariant-terminal-sensitivity.md` -- proved abstract
-  conserved-current and iteration lemmas, a rough one-step estimate for the
-  corner-based averaging prototype, and the distinction between a strong
-  uniform contraction and the actual placement-summed H6\(_\Sigma\) target.
+  conserved-current and iteration lemmas, a convex-log rough one-step estimate
+  covering CMP **109**, Eq. (0.4), and the distinction between a strong uniform
+  contraction and the actual placement-summed H6\(_\Sigma\) target; the
+  nonlinear Eq. (0.12) remains conditional on its small-diameter domain and a
+  Lipschitz estimate for the group mean.
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified nine-page

@@ -154,6 +154,29 @@ On \(\mathrm{Reg}\), Taylor's theorem along the segment from \(\Phi_0\) to
 On \(\mathrm{Reg}^c\), use (3.2).  Integrate the two decompositions and
 subtract. \(\square\)
 
+The same argument has the following total-variation form, needed when a
+localized history expansion produces signed terms.  Let \(p,q\) be finite
+signed measures with \(p(\Omega)=q(\Omega)=1\), and interpret \(p[g]\) and
+\(q[g]\) as signed integrals.  In (3.2), take the essential supremum with
+respect to \(|p|+|q|\).  If the displayed moments are finite, then
+
+\[
+ \begin{aligned}
+ \left|p[F]-q[F]-\langle\xi,M_{p,q}\rangle\right|
+ \le{}&\frac\kappa2\left(
+  |p|[|\Phi-\Phi_0|^2\mathbf1_{\rm Reg}]
+ +|q|[|\Phi-\Phi_0|^2\mathbf1_{\rm Reg}]
+ \right)\\
+ &+\omega\left(|p|(\mathrm{Reg}^c)+|q|(\mathrm{Reg}^c)\right),
+ \end{aligned}
+ \tag{3.5$'$}
+\]
+
+where \(M_{p,q}=p[(\Phi-\Phi_0)\mathbf1_{\rm Reg}]
+-q[(\Phi-\Phi_0)\mathbf1_{\rm Reg}]\).  Indeed, apply the pointwise Taylor
+remainder bounds to the Jordan total variations.  No positivity is used
+after the common constant cancels because \(p(\Omega)=q(\Omega)\).
+
 ### Corollary 2: terminal oscillation
 
 If
@@ -200,25 +223,42 @@ crudely on its complement.  This avoids assuming a global logarithm and keeps
 the differentials relevant to H6\(_\Sigma\) covariantly conserved.
 
 The norm actually consumed by the complete history sum is placement-summed.
-Let \(\mathscr C_m\) be the history-resolved component placements introduced at
-distance \(m\) from the terminal scale.  For each \(\lambda\), let
-\(\varpi_\lambda(dV_c)\) be a finite nonnegative measure which dominates in
-total variation the exterior marginal of the partially \(R\)-modified history
-term, including its true fiber mass, and is divided by the common positive
-partition function.  Thus \(\varpi_\lambda\) is already a normalized absolute
-majorant for the contribution of that replacement to an expectation.  It may
-dominate, rather than equal, a signed localized activity.  Regard
-\(\Delta_\lambda\), \(M_\lambda\), and the two conditional bad-event
-probabilities as measurable functions of \(V_c\), defined
-\(\varpi_\lambda\)-almost everywhere.  Define
+At each scale, fix a deterministic order of the components and replace them
+**one at a time**.  The label \(\lambda\in\mathscr C_m\) records the history,
+placement, and position in this order.  Just before replacement \(\lambda\),
+let \(P_\lambda(V_c)\nu_\lambda(dV_c)\) be the exterior marginal of that
+partially modified history term, including its true fiber mass.  The preceding
+replacements are therefore already present in \(P_\lambda\); this sequential
+choice makes the difference of expectations an exact telescope without
+unrecorded mixed-component differences.
+
+Let \(Z>0\) be the common total mass, which every fiber-normalized
+\(R\)-replacement preserves, and choose a finite nonnegative measure
+
+\[
+ \varpi_\lambda(dV_c)
+ \ge Z^{-1}\bigl|P_\lambda(V_c)\nu_\lambda(dV_c)\bigr|.
+ \tag{3.9a}
+\]
+
+Thus \(\varpi_\lambda\) is a \(Z^{-1}\)-normalized absolute majorant, not an
+unnormalized exterior-integrated mass.  It may strictly dominate a signed
+localized activity.  For positive conditional fiber laws use Lemma 1; for
+normalized signed fiber terms use (3.5\(^{\prime}\)) and replace every
+conditional probability below by the corresponding total-variation mass.
+Regard \(\Delta_\lambda\), \(M_\lambda\), and the two conditional bad-event
+masses as measurable functions of \(V_c\), defined
+\(\varpi_\lambda\)-almost everywhere.  Here \(\Delta_\lambda(V_c)\) and the
+other essential suprema are taken with respect to the two conditional laws at
+that fixed exterior field.  Define
 
 \[
  \begin{aligned}
  \mathcal Q_m&=\sum_{\lambda\in\mathscr C_m}
    \int \Delta_\lambda(V_c)^2\,\varpi_\lambda(dV_c),\\
  \mathcal B_m&=\sum_{\lambda\in\mathscr C_m}
-   \int\!\bigl[p_\lambda(\mathrm{Reg}^c\mid V_c)
-              +q_\lambda(\mathrm{Reg}^c\mid V_c)\bigr]
+   \int\!\bigl[|p_\lambda|(\mathrm{Reg}^c\mid V_c)
+              +|q_\lambda|(\mathrm{Reg}^c\mid V_c)\bigr]
               \,\varpi_\lambda(dV_c),\\
  \mathcal A_m&=\sum_{\lambda\in\mathscr C_m}
    \int |M_\lambda(V_c)|\,\varpi_\lambda(dV_c).
@@ -244,14 +284,24 @@ published source-free activity bounds is itself part of the open history
 bookkeeping.
 
 A stronger termwise package is sufficient but is not the primary target.
-Suppose there are nonnegative shape weights \(\varepsilon_{m,s}\) such that
-the total normalized majorant mass of size-\(s\) placements is at most
-\(C\varepsilon_{m,s}L^{dm}/s\) per terminal block and
+Let \(A_s\) be the number of size-\(s\) connected shapes anchored at a fixed
+block, and let \(\pi_{m,s}\) dominate the normalized weight of any one such
+shape at any one anchor.  Put
+\(\varepsilon_{m,s}=sA_s\pi_{m,s}\).  Then the total normalized majorant mass
+of size-\(s\) placements is at most
+\(C\varepsilon_{m,s}L^{dm}/s=C A_s\pi_{m,s}L^{dm}\) per terminal block.
+Assume the explicit second-moment condition
 
 \[
- \sum_{s\ge1}(s+1)\varepsilon_{m,s}\le C\varepsilon_m.
+ \sum_{s\ge1}A_s\pi_{m,s}(s+L^d)^2
+ =\sum_{s\ge1}\varepsilon_{m,s}\frac{(s+L^d)^2}{s}
+ \le C\varepsilon_m.
  \tag{3.11}
 \]
+
+For fixed \(L\), this is equivalent up to constants to the earlier shorthand
+\(\sum_s(s+1)\varepsilon_{m,s}\lesssim\varepsilon_m\); writing (3.11) in
+this form makes the required second moment of component size explicit.
 
 Suppose also, uniformly in the exterior data on the support of the majorant,
 
@@ -278,8 +328,8 @@ condition is
 \[
  \sum_m\varepsilon_mL^{dm}
  \mathop{\rm ess\,sup}_{\lambda,V_c}
- \bigl[p_\lambda(\mathrm{Reg}^c\mid V_c)
-      +q_\lambda(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
+ \bigl[|p_\lambda|(\mathrm{Reg}^c\mid V_c)
+      +|q_\lambda|(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
  \tag{3.14}
 \]
 
@@ -473,7 +523,9 @@ A sound flat-background route to H8\(_\Sigma\) therefore needs **both** estimate
 \[
  \begin{aligned}
  |M_\Lambda(V_{\rm flat})|
- &\le C\Delta_\Lambda^2+\text{localized tail},\\
+ &\le C\Delta_\Lambda^2
+       +C\Delta_\Lambda\beta_\Lambda
+       +\text{localized tail},\\
  |M_\Lambda(V_c)-M_\Lambda(V_{\rm flat})|
  &\le \chi_\Lambda\operatorname{curv}(V_c|_N)
        +\text{localized tail},
@@ -483,7 +535,9 @@ A sound flat-background route to H8\(_\Sigma\) therefore needs **both** estimate
 
 with their weighted sums satisfying H8\(_\Sigma\).  The first line requires an
 equivariant expansion through all later averaging steps, not merely the crude
-fine-coordinate Hessian in Lemma 1.  The second is a uniform susceptibility
+fine-coordinate Hessian in Lemma 1; here \(\beta_\Lambda\) bounds, in local
+lattice units, the curvature outside \(N\) met by those later averaging steps.
+The second line is a uniform susceptibility
 bound.  Strict locality also fails literally for polymer activities with
 unbounded support, so their exponential tails must be included.  The standard
 Wilson factors, Ad-invariant norm cutoffs, and axial condition
@@ -509,10 +563,10 @@ The next defensible technical target is H6\(_\Sigma\).  CMP **98** provides the 
 analytic machinery, but its published first-derivative estimates do not by
 themselves cover the irregular first step or prove the placement-summed bound.
 H7\(_\Sigma\) and H8\(_\Sigma\) require information about normalized fiber laws that the source-free
-\(R\)-bounds intentionally do not retain.  Research note 12 reduces
-H6\(_\Sigma\) to a
-strong uniform contraction route and records the weaker placement-summed target;
-neither estimate is stated in Proposition 5.
+\(R\)-bounds intentionally do not retain.  Research note 12 records a strong
+uniform sufficient route to H6\(_\Sigma\), which may fail at curved hubs, and
+keeps the placement-summed H6\(_\Sigma\) as the primary target; neither estimate
+is stated in Proposition 5.
 
 One could redesign the template by an exponential tilt chosen to match the
 terminal mean.  That removes the linear defect by construction, but introduces
