@@ -65,6 +65,20 @@ is not acceptable. Every rule below exists to prevent that.
    reconstructed history. Stop and wait. Do not run `git init`, and do not
    commit.
 
+## Remote, sync and cloud sessions
+
+- The canonical repository is the private GitHub remote `origin`, on branch
+  `main`. The lead may work from a Claude Code cloud session. Codex works in
+  the local folder on Daniel's Mac.
+- Before starting a task, run `git pull --rebase origin main`. After each
+  commit, run `git push origin main`. If a push is rejected, pull with
+  rebase, resolve the conflicts, and push again. Never force-push `main`.
+- In every clone, including cloud sessions, run
+  `git config core.hooksPath tools/hooks` once, so the commit rules are
+  enforced.
+- `sources/text/` and `sources/ocr/` are committed only because the
+  repository is private (see `sources/README.md`).
+
 ## Build
 
 `make manuscript TECTONIC=tools/bin/tectonic` builds the paper. The

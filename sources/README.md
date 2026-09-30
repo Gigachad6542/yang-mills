@@ -21,6 +21,20 @@ As of 2026-09-28:
   one; the script can be re-run later. Their full text is still available
   as OCR (see the next section).
 
+## Committed text (private repository only)
+
+`text/` and `ocr/` are committed so that cloud sessions can read the
+primary sources. They contain text extracted from copyrighted journal
+papers that are free to read on Project Euclid and arXiv. **Keep the GitHub
+repository private.** If it ever becomes public, remove `sources/text/` and
+`sources/ocr/` from the history first. PDFs, page images and the third-party
+clone stay local.
+
+## `ocr/`: OCR text of the Balaban papers
+
+`ocr/` holds copies of the `cmp*.md` OCR files from the audit snapshot
+described below.
+
 ## `text/`: clean text extractions
 
 `text/` holds page-by-page text extracted from the PDFs in `papers/`: CMP 102

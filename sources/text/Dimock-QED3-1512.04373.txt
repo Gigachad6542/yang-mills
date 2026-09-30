@@ -1,0 +1,10142 @@
+=== PAGE 1 ===
+arXiv:1512.04373v3  [math-ph]  2 Aug 2017
+Ultraviolet regularity for QED in d=3
+J. Dimock ∗
+Dept. of Mathematics
+SUNY at Buﬀalo
+Buﬀalo, NY 14260
+September 23, 2018
+Abstract
+We study the ultraviolet problem for QED in d=3 using Balaban’s formulation of the renor-
+malization group. The model is deﬁned on a ﬁne toroidal lattice and we seek control as the lattice
+spacing goes to zero. As a ﬁrst step we take a bounded ﬁeld approximation and solve the renor-
+malization problem. Namely we show that the bare energy density and the bare fermion mass can
+be chosen to depend on the lattice spacing, so that under the renormalization group ﬂow they take
+preassigned values on a macroscopic scale. This is accomplished by a nonpertubative technique
+which is insensitive to whether the renormalizations are ﬁnite or inﬁnite.
+1
+Introduction
+1.1
+overview
+Constructive quantum ﬁeld theory is concerned with the construction of mathematically rigorous
+quantum ﬁeld theory models. It has had some notable successes in the case of super-renormalizable
+models in dimension d ≤3, see the surveys [33], [36]. However quantum electrodynamics (QED) in
+d = 3 has so far resisted analysis. In this paper we start a program to gain control over this model.
+The immediate task is to control the ultraviolet (short distance) singularities in a ﬁnite volume. In a
+subsequent paper [30] the goal is to prove an ultraviolet stability bound.
+The problem is formulated in a renormalization group language for lattice gauge theories. Originally
+due to Wilson, a precise version was developed by Balaban. [1] - [15]. The idea is to perform a series
+of block averaging renormalization group (RG) transformations on the action. Each transformation
+integrates out some short distance modes. One tracks the eﬀective actions and hopes to control the
+ﬂow by specifying that parameters like fermion mass and energy density end at certain speciﬁed values
+on a macroscopic scale. This involves renormalization: bare parameters are to be chosen to depend
+on the lattice spacing. In [29] we studied weakly coupled scalar QED in d = 3 and accomplished this
+using a non-perturbative technique. In the present we work we accomplish the same result for weakly
+coupled fermion QED in d = 3.
+Generally in quantum ﬁeld theory inﬁnite renormalizations are required, i.e. some bare parameters
+must diverge as the lattice spacing goes to zero. The present technique is insensitive to whether the
+renormalizations are ﬁnite or inﬁnite, and in fact we do not decide whether they are ﬁnite or inﬁnite.
+However taking some wisdom from the perturbative analysis of continuum theories it is quite likely
+that the energy density requires an inﬁnite renormalization and the fermion mass does not.
+In Balaban’s approach each RG transformation features a division of the lattice into regions where
+the ﬁeld is small (i.e bounded) and a region where the ﬁeld is large. The large ﬁeld region makes a
+∗dimock@buﬀalo.edu
+1
+
+=== PAGE 2 ===
+tiny contribution to the eﬀective actions and does not require renormalization. The renormalization
+problem is conﬁned to the small ﬁeld region, and that is what we study here. For simplicity we consider
+the case that the ﬁelds are small on the whole torus, anticipating that the analysis will work in arbitrary
+regions and provide the central ingredient for the full problem. A paradigm for the complete analysis
+is given for the scalar φ4 interaction in d = 3 in [25] - [27].
+Some preliminary work on QED3 was done by Balaban, O’Carroll, and Schor [20], [21] and also
+by the author [23], [24] (the latter with massive photons, something we avoid here). We also mention
+some work on the infrared problem with massive fermions integrated out [31].
+1.2
+the model
+We work on the toroidal lattices
+T−N
+M
+= (L−NZ/LMZ)3
+(1)
+where L is a (large) positive odd integer. To begin we take the lattice T−N
+0
+with unit volume and
+spacing ǫ = L−N On this lattice the fermi ﬁelds are elements of a Grassman algebra ¯ψα(x), ψα(x)
+indexed by points x ∈T−N
+0
+and components 1 ≤α ≤4 and satisfying
+ψα(x)ψβ(y) = −ψβ(y)ψα(x)
+(2)
+and so forth. Alternatively we can take x ∈L−NZ3 and make the identiﬁcation ψ(x + eµ) = ψ(x)
+where the eµ are the unit basis vectors. We also want to consider anti-periodic boundary conditions
+and then impose instead that ψ(x + eµ) = −ψ(x). In the latter case elements of the algebra with
+an even number of ﬁelds (which is all we consider) have no change in sign and can be considered as
+indexed by points in T−N
+0
+as well.
+There is also an abelian gauge ﬁeld (electromagnetic potential, connection, one-form) A mapping
+bonds in T−N
+0
+to R. A bond from x to a nearest neighbor x′ is the ordered pair b = [x, x′]. We
+require that A(b) = A(x, x′) = −A(x′, x). Oriented bonds have the form [x, x′] = [x, x + ǫeµ], and we
+sometimes write Aµ(x) = A(x, x + ǫeµ)
+A covariant derivative with charge e is deﬁned by
+(∂A,µf)(x) =
+
+eieǫA(x,x+ǫeµ)f(x + ǫeµ) −f(x)
+
+ǫ−1
+(3)
+This is a forward derivative. The transpose is given by
+(∂T
+−A,µf)(x) =
+
+eieǫA(x,s−ǫeµ)f(x −ǫeµ) −f(x)
+
+ǫ−1
+(4)
+and is a backward derivative. We also consider the symmetric derivative
+∇A,µ = 1
+2
+
+∂A,µ −∂T
+−A,µ
+
+(5)
+and the covariant Laplacian
+∆A = −(∂−A)T ∂A
+(6)
+Let {γµ, γν} = δµν be a representation of the Cliﬀord algebra for d = 4. We only use γ0, γ1, γ2
+in the three dimensional Dirac operator, but γ3 will also play a roll since it anti-commutes with the
+others. The Dirac operator on spinors is
+DA = γ · ∇A −1
+2ǫ∆A =
+2
+X
+µ=0
+γµ∇A,µ −1
+2ǫ∆A
+(7)
+2
+
+=== PAGE 3 ===
+The extra term 1
+2ǫ∆A was added by Wilson to prevent doubling of fermion species. The operator can
+also be written
+(DAf)(x)
+= −ǫ−1 X
+µ
+1 −γµ
+2
+
+eieǫA(x,x+ǫeµ)f(x + ǫeµ) +
+1 + γµ
+2
+
+eieǫA(x,x−ǫeµ)f(x −ǫeµ) −f(x)
+
+(8)
+The gauge ﬁeld A has ﬁeld strength dA deﬁned on plaquettes (squares) by
+dA(p) =
+X
+b∈∂p
+A(b) ǫ−1
+or
+(dA)µν(x) = dA
+
+x, x + ǫeµ, x + ǫeµ + ǫeν, x + ǫeν, x
+
+(9)
+The action with ﬁxed bare fermion mass 0 ≤¯m ≤1
+S(A, ¯ψ, ψ) = 1
+2∥dA∥2+ < ¯ψ, (DA + ¯m)ψ > +mN < ¯ψ, ψ > +εN
+(10)
+where
+< ¯ψ, ψ >=
+Z
+¯ψ(x)ψ(x)dx =
+X
+α
+X
+x
+ǫ3 ¯ψα(x)ψα(x)
+∥dA∥2 =
+Z
+|dA(p)|2dp ≡
+X
+µ<ν
+X
+x
+ǫ3|(dA)µν(x)|2
+(11)
+The vacuum energy density εN and the mass mN are counter terms and will be chosen to depend on
+N. The N →∞limit formally gives the standard continuum theory. We are interested in bounds
+uniform in N on things like the partition function
+Z
+exp(−S(A, ¯ψ, ψ)) D ¯ψ Dψ DA
+DA =
+Y
+b
+d(A(b))
+(12)
+where the fermion integral is the standard Grassman integral. The integral will need gauge ﬁxing to
+enable convergence.
+1.3
+symmetries
+The action is invariant under lattice symmetries, that is translations, reﬂections, and rotations by
+multiples of π/2. Indeed let a be a lattice point, let r be such a a reﬂection or rotation, and let S be
+a corresponding element of Spin(3) so that S−1γµS = P
+ν rµνγν. Then with
+ψa,r(x) = Sψ(r−1(x −a))
+¯ψa,r(x) = (S−1)T ¯ψ(r−1(x −a))
+Aa,r(b) = A
+
+r−1(b −(a, a))
+
+(13)
+we have
+S(Aa,r, ¯ψa,r, ψa,r) = S(A, ¯ψ, ψ)
+(14)
+The action is also gauge invariant. For λ : T−N
+0
+→R a gauge transformation is deﬁned by
+ψλ(x) = eieλ(x)ψ(x)
+¯ψλ(x) = e−ieλ(x) ¯ψ(x)
+Aλ(x, x′) = A(x, x′) −∂λ(x, x′)
+(15)
+Then DAλψλ = (DAψ)λ and
+S(Aλ, ¯ψλ, ψλ) = S(A, ¯ψ, ψ)
+(16)
+3
+
+=== PAGE 4 ===
+Another symmetry is charge conjugation invariance. We deﬁne a charge conjugation matrix C to
+satisfy −γT
+µ = C−1γµC and can choose a representation such that CT = C−1 = −C [37]. Then since
+(∇A)T = −∇−A and ∆T
+A = ∆−A
+(DA + m)T = C−1(D−A + m)C
+(17)
+Charge conjugation on the Grassman algebra is deﬁned by
+Cψ = C ¯ψ
+C ¯ψ = −Cψ
+(18)
+and on the gauge ﬁeld by A →−A. Then
+D
+C ¯ψ, (D−A + ¯m)Cψ
+E
+= −
+D
+ψ, (DA + ¯m)T ¯ψ
+E
+=
+D
+¯ψ, (DA + ¯m)ψ
+E
+(19)
+where we used ψ ¯ψ = −¯ψψ. It follows that the entire action has the symmetry
+S(−A, C ¯ψ, Cψ) = S(A, ¯ψ, ψ)
+(20)
+Note also that since γ∗
+µ = γµ we also have −¯γµ = C−1γµC which implies ¯γµ = (γ3C)−1γµ(γ3C).
+Assuming A is real we have ∇A = ∇−A and ∆A = ∆−A and therefore with ¯m real we have the
+complex conjugation
+(DA + ¯m) = (γ3C)−1(D−A + ¯m)(γ3C)
+(21)
+It follows from (17) and (21) that
+det (DA + ¯m)∗= det (DA + ¯m)
+(22)
+from which one can deduce that (after gauge ﬁxing) the partition function real and not zero.
+1.4
+the scaled model
+The model has been formulated on a ﬁne lattice with unit volume T−N
+0
+. But we immediately scale up
+to the large unit lattice T0
+N. Then the ultraviolet problem is recast as in infrared problem, the natural
+home of the renormalization group. Let Ψα(x), ¯Ψα(x) be elements of a Grassman algebra indexed by
+x ∈T0
+N and 1 ≤α ≤4, and let A : { bonds in T0
+N} →R be a gauge ﬁeld on this lattice. These scale
+down to ﬁelds on the original lattice T−N
+0
+by
+AL−N (b) = LN/2A(LNb)
+ΨL−N(x) = LNΨ(LNx)
+¯ΨL−N(x) = LN ¯Ψ(LNx)
+(23)
+The action on the new lattice is S0(A, ¯Ψ, Ψ) = S(AL−N, ¯ΨL−N, ΨL−N) which is
+S0(A, ¯Ψ, Ψ) = 1
+2∥dA∥2 +
+D
+¯Ψ, (DA + ¯mN
+0 )Ψ
+E
++ mN
+0
+D
+¯Ψ, Ψ
+E
++ εN
+0 Vol(T0
+N)
+(24)
+Now lattice sums are unweighted and derivatives are unit lattice derivatives such as
+(∂A,µΨ)(x) = eieN
+0 A(x,x+eµ)Ψ(x + eµ) −Ψ(x)
+(25)
+The scaled coupling constants are now tiny and given by
+eN
+0 = L−1
+2 Ne
+¯m0 = L−N ¯m
+(26)
+The scaled counter terms are
+εN
+0 = L−3NεN
+mN
+0 = L−NmN
+(27)
+4
+
+=== PAGE 5 ===
+In the following we omit the superscript N writing e0, ¯m0 and ε0, m0.
+As we proceed with the RG analysis the volume will shrink back down. After k steps the torus
+will be T0
+N−k or T−k
+N−k. The coupling constants will scale up to
+ek = L
+1
+2 ke0 = L−1
+2 (N−k)e
+¯mk = Lk ¯m0 = L−(N−k) ¯m
+(28)
+The counterterms εk, mk will evolve in a more complicated manner.
+Conventions:
+• Throughout the paper O(1) stands for a constant independent of all parameters. Also c, C, γ are
+constants (C ≥1, c, γ ≤1) which may depend on L and which may change from line to line.
+• Distances are taken in a sup metric
+d(x, y) = |x −y| = sup
+µ |xµ −yµ|
+(29)
+2
+RG transformation for fermions
+We explain how the RG transformation is deﬁned for fermions with a gauge ﬁeld background. The
+analysis is originally due to Balaban, O’Carroll, and Schor [20], [21]. See also [23], [24], [29].
+2.1
+Grassman variables
+We ﬁrst review some facts and conventions about Grassman variables, see Appendix A for more details.
+General references are [35], [32].
+We consider the Grassman algebra generated by Ψα(x), ¯Ψα(x) where (x, α) are spacetime and
+spinor indices, x ∈T0
+N. Let ξ stand for (x, α, ω) with ω = (0, 1). Combine the two by deﬁning
+Ψ(ξ) =
+(
+Ψα(x)
+ξ = (x, α, 0)
+¯Ψα(x)
+ξ = (x, α, 1)
+(30)
+Then the Ψ(ξ) satisfy Ψ(ξ)Ψ(ξ′) = −Ψ(ξ′)Ψ(ξ) and generate the algebra. Take some ﬁxed ordering
+for the index set which is all such ξ. Any element of the algebra can be uniquely written as
+F(Ψ) =
+∞
+X
+n=0
+X
+ξ1<···<ξn
+Fn(ξ1, . . . , ξn)Ψ(ξ1) · · · Ψ(ξn)
+(31)
+If the kernel Fn(ξ1, . . . , ξn) is extended to be an anti-symmetric function of unordered collections
+(ξ1, . . . , ξn) then
+F(Ψ) =
+∞
+X
+n=0
+1
+n!
+X
+ξ1,...,ξn
+Fn(ξ1, . . . , ξn)Ψ(ξ1) · · · Ψ(ξn)
+(32)
+The size of the F(Ψ) is measured by a norm of the kernel depending on a parameter h > 0 and
+deﬁned by
+∥F∥h =
+∞
+X
+n=0
+hn
+X
+ξ1<···<ξn
+|Fn(ξ1, . . . , ξn)|
+=
+∞
+X
+n=0
+hn
+n!
+X
+ξ1,...,ξn
+|Fn(ξ1, . . . , ξn)|
+(33)
+5
+
+=== PAGE 6 ===
+The integral of an element of the Grassman algebra is the projection onto the element of maximal
+degree which is identiﬁed with the complex numbers
+Z
+F(Ψ) DΨ = Fmax
+(34)
+A Gaussian integral with non-singular covariance Γ = D−1 is deﬁned by
+Z
+F(Ψ)dµΓ(Ψ) =Z−1
+Z
+F(Ψ)e−< ¯Ψ,DΨ>DΨ
+Z =
+Z
+e−< ¯Ψ,DΨ>DΨ = det D
+(35)
+In this formula Ψ stands for the pair Ψα(x), ¯Ψα(x) in F(Ψ), but just Ψα(x) in < ¯Ψ, DΨ >. This
+ambiguity shows up throughout the paper, but it should be clear from the context what is meant. If
+¯Jα(x), Jα(x) are additional Grassman variables the Gaussian measure can be characterized by
+Z
+e< ¯
+J,Ψ>+<J, ¯Ψ>dµΓ(Ψ) = e< ¯
+J,ΓJ>
+(36)
+2.2
+block averages
+Let A be a background gauge ﬁeld and let Ψ be a spinor valued function on a unit lattice T0
+N or a
+generator of the Grassman algebra. We deﬁne a covariant block averaging operator Q(A) taking Ψ to
+Q(A)Ψ deﬁned on the L-lattice T1
+N. In any square lattice let B(y) be a cube with L sites on a side
+centered on a point y. Here on the lattice T0
+N for y ∈T1
+N we have
+B(y) = {x ∈T0
+N : |x −y| < L/2}
+(37)
+The B(y) partition the lattice. For x ∈B(y) let π be a permutation of (1, 2, 3) and let Γπ(y, x) be
+that path from y to x obtained by varying each coordinate to its ﬁnal value in the order π. There are
+3! of these. For any path Γ let A(Γ) = P
+b∈Γ A(b) and deﬁne an average over the various paths from
+y to x by
+(τA)(y, x) = 1
+3!
+X
+π
+A(Γπ(y, x))
+(38)
+Then we deﬁne the averaging operator
+(Q(A)Ψ)(y) = L−3
+X
+x∈B(y)
+eie0(τA)(y,x)Ψ(x)
+y ∈T1
+N
+(39)
+and similarly on ¯Ψ.
+The deﬁnition is covariant under symmetries of the lattice T1
+N. In particular if r is a rotation by
+a multiple of π/2 or a reﬂection
+Q(Ar)Ψr = (Q(A)Ψ)r
+(40)
+It is also is constructed to be gauge covariant:
+Q(Aλ)Ψλ = (Q(A)Ψ)λ(1)
+(41)
+where λ(1) is λ restricted to the lattice T1
+N. For the conjugate ﬁeld we need to take Q(−A)¯Ψ to
+preserve the coveriance.
+The transpose operator QT (A) ≡(Q(A))T maps functions Ψ on T1
+N to functions on T0
+N. It is
+computed with sums on T1
+N weighted by Ld and is given by
+(QT (A)Ψ)(x) = eie0(τA)(y,x)Ψ(y)
+x ∈B(y)
+(42)
+6
+
+=== PAGE 7 ===
+Then we have
+Q(A)QT (−A) = I
+(43)
+while
+P(A) = QT (−A)Q(A)
+(44)
+is a projection which satisﬁes P T (A) = P(−A).
+2.3
+the transformation
+Suppose we start with a density ρ(A, ψ) with fermion ﬁeld ψ and background gauge ﬁeld A on T−N
+0
+.
+It scales up to a density
+ρ0(A, Ψ0) ≡ρLN(A, Ψ0) ≡ρ(AL−N Ψ0,L−N)
+(45)
+where A, Ψ0 are deﬁned on T0
+N. Starting with ρ0(A, Ψ0) we create a sequence of densities ρk(A, Ψk)
+deﬁned for A on T−k
+N−k and Ψk on T0
+N−k. They are deﬁned recursively ﬁrst by
+˜ρk+1(A, Ψk+1) =
+Z
+δG
+
+Ψk+1 −Q(A)Ψk
+
+ρk(A, Ψk)DΨk
+(46)
+where Ψk+1 are new Grassman variables deﬁned on the coarser lattice T1
+N−k. The δG is a Gaussian
+approximation to the delta function. For a constant b = O(1) it is deﬁned by
+δG
+
+Ψk+1 −Q(A)Ψk
+
+=Nk exp
+
+−b
+L
+D
+¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk
+E
+(47)
+Here Nk = (bL2)−4sN−k−1 where sN = L3N is the number of sites in a 3 dimensional lattice with LN
+sites on a side. Also < ¯Ψk+1, Ψk+1 >= P
+x L3 ¯Ψk+1(x)Ψk+1(x), etc. The averaging operator Q(A) is
+taken to be a modiﬁcation of (39):
+(Q(A)Ψk)(y) = L−3
+X
+x∈B(y)
+eiekη(τA)(y,x)Ψk(x)
+(48)
+Here (τA)(y, x) is still deﬁned by (38), but now in A(Γ) the sum is over bonds of length η =
+L−k, hence the weighting factor η in the exponent. The normalization factor Nk is chosen so that
+R
+dΨk+1 δG
+
+Ψk+1 −Q(A)Ψk
+
+= 1. Therefore
+Z
+˜ρk+1(A, Ψk+1) DΨk+1 =
+Z
+ρk(A, Ψk) DΨk
+(49)
+Next one scales back to the unit lattice. If A is a ﬁeld on T−k−1
+N−k−1 and Ψk+1 is a ﬁeld on T0
+N−k−1
+then then
+AL(b) = L−1/2A(L−1b)
+Ψk+1,L(x) = L−1Ψk+1(L−1x)
+(50)
+are ﬁelds on T−k
+N−k and T1
+N−k respectively, and we deﬁne
+ρk+1(A, Ψk+1) = ˜ρk+1(AL, Ψk+1,L)L−8(sN −sN−k−1)
+(51)
+If Ψ′
+k+1 = Ψk+1,L we have by (49)
+Z
+ρk+1(A, Ψk+1)DΨk+1 = L−8(sN−sN−k−1)
+Z
+˜ρk+1(AL, Ψk+1,L)DΨk+1
+= L−8sN
+Z
+˜ρk+1(AL, Ψ′
+k+1)DΨ′
+k+1 = L−8sN
+Z
+ρk(AL, Ψk)DΨk
+(52)
+7
+
+=== PAGE 8 ===
+Here the second step follows by picking out the element of maximal degree, taking account that there
+are 8 variables per site. (Formally DΨ′
+k+1 = L8sN−k−1DΨk+1 goes the opposite way from functions ).
+Now we claim that for A on T−k
+N−k and Ψk on T0
+N−k
+Z
+ρk(A, Ψk)DΨk =
+Z
+ρ0(ALk, ψLk) Dψ
+(53)
+where the integral is over ψ on T−k
+N−k. It is true for k = 0; suppose it is true for k. If ψ = ψ′
+L then
+Dψ = L8sNDψ′ and so by (52)
+Z
+ρk+1(A, Ψk+1)DΨk+1 = L−8sN
+Z
+ρk(AL, Ψk)DΨk
+=L−8sN
+Z
+ρ0(ALk+1, ψLk) Dψ =
+Z
+ρ0(ALk+1, ψ′
+Lk+1) Dψ′
+(54)
+Hence it is true for k + 1.
+For k = N (53) says that for A on T−N
+0
+and ΨN on T0
+0
+Z
+ρN(A, ΨN)DΨN =
+Z
+ρ(A, ψ)Dψ
+(55)
+where the integral is over ψ ∈T−N
+0
+. We are back to the original integral. The right side is the integral
+over a space with an unbounded number of dimensions, but can be computed as the left side which is
+the integral over a low dimensional space. This is the point of the renormalization group approach.
+2.4
+composition of averaging operators
+To investigate the sequence ρk(A, Ψk) we ﬁrst study how averaging operators compose. Deﬁne
+Qk(A) = Q(A) ◦· · · ◦Q(A)
+(k times )
+(56)
+This maps ﬁelds on T−k
+N−k to ﬁelds on T0
+N−k. We assume here that A is deﬁned on T−k
+N−k and each
+Q(A) has coupling constant ek. The identity Qk(A)QT
+k (−A) = I is satisﬁed and
+Pk(A) = QT
+k (−A)Qk(A)
+(57)
+is a projection operator.
+Later we will need an explicit representation for Qk(A). In general let Bk(y) be a cube with Lk
+sites on a side centered on y. Suppose x ∈T−k
+N−k and y ∈T0
+N−k satisfy x ∈Bk(y), which is the same
+as |x −y| < 1
+2. There is an associated sequence x = y0, y1, y2, . . . yk = y such that yj ∈T−k+j
+N−k and
+x ∈Bj(yj). Deﬁne
+(τkA)(y, x) =
+k−1
+X
+j=0
+(τA)(yj+1, yj)
+(58)
+Then one can show [29] that for A, ψ on T−k
+N−k and Ψ on T0
+N−k
+(Qk(A)ψ)(y) =
+Z
+|x−y|< 1
+2
+eiekη(τkA)(y,x)ψ(x) dx
+(QT
+k (A)Ψ)(x) =eiekη(τkA)(y,x)Ψ(y)
+x ∈Bk(y)
+(59)
+Next we show that the individual RG transformations compose to give a transformation with
+averaging operator Qk(A):
+8
+
+=== PAGE 9 ===
+Lemma 1. For A, ψ on T−k
+N−k and Ψk on T0
+N−k the density ρk,A(Ψk) can be written
+ρk(A, Ψk) = Nk
+Z
+exp
+
+−bk
+D
+¯Ψk −Qk(−A) ¯ψ, Ψk −Qk(A)ψ
+E
+ρ0(ALk, ψLk) Dψ
+(60)
+where
+bk+1 =
+bbk
+bk + a
+or
+bk = b
+1 −L−1
+1 −L−k
+
+(61)
+and Nk = b−4sN−k
+k
+is a normalizing constant.
+Proof. It holds for k = 1 by (46),(51) at k = 0. Suppose it is true for k. Then for k + 1 we have
+˜ρk+1(A, Ψk+1) =const
+Z
+exp
+
+−b
+L
+D
+¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk
+E
+exp
+
+−bk
+D
+¯Ψk −Qk(−A) ¯ψ, Ψk −Qk(A)ψ
+E
+ρ0(ALk, ψLk)DΨkDψ
+(62)
+We evaluate the integral by expanding around the critical point of the quantity in the exponential in
+Ψk. To ﬁnd the critcal point we treat the ﬁelds as real-valued rather than elements of a Grassman
+algebra. Taking derivatives in ¯Ψk, Ψk yields equations for the critical point
+−bL−1QT (−A)
+
+Ψk+1 −Q(A)Ψcrit
+k
+
++ bk
+
+Ψcrit
+k
+−Qk(A)ψ
+
+=0
+−bL−1QT (A)
+
+¯Ψk+1 −Q(−A)¯Ψcrit
+k
+
++ bk
+
+¯Ψcrit
+k
+−Qk(−A) ¯ψ
+
+=0
+(63)
+The ﬁrst equation can be rewritten as
+
+bk + bL−1P(A)
+
+Ψcrit
+k
+= bL−1QT(−A)Ψk+1 + bkQk(A)ψ
+(64)
+But
+
+bk + bL−1P(A)
+−1
+=b−1
+k (1 −P(A)) + (bk + bL−1)−1P(A)
+=b−1
+k
++
+
+(bk + bL−1)−1 −b−1
+k
+
+P(A)
+=b−1
+k
+−
+bL−1
+bk + bL−1 P(A)
+(65)
+We have P(A)QT (−A) = QT (−A) so the (1 −P(A)) do not survive on bL−1QT(−A)Ψk+1. Also
+P(A)Qk(A) = QT
+k (−A)Qk+1(A) so applying the inverse gives
+Ψcrit
+k
+=Ψ•(Ψk+1, ψ)
+≡Qk(A)ψ +
+bL−1
+bk + bL−1 QT (−A)Ψk+1 −
+bL−1
+bk + bL−1 QT
+k (−A)Qk+1(A)ψ
+(66)
+There is a similar expression for ¯Ψcrit
+k
+. We expand the quantity in the exponential around the critical
+point by Ψk = Ψcrit
+k
++ W and ¯Ψk = ¯Ψcrit
+k
++ ¯W and then integrate over W rather than Ψk. The linear
+term must vanish and the term quadratic in W just contributes an overall constant. Thus we have
+˜ρk+1(A, Ψk+1) = const
+Z
+Dψ ρ0(ALk, ψLk)
+exp
+
+−bL−1D
+¯Ψk+1 −Q(−A)¯Ψcrit
+k
+, Ψk+1 −Q(A)Ψcrit
+k
+E
+−bk
+D
+¯Ψcrit
+k
+−Qk(−A) ¯ψ, Ψcrit
+k
+−Qk(A)ψ
+E
+(67)
+9
+
+=== PAGE 10 ===
+However
+Q(−A)¯Ψcrit
+k
+= Qk+1(A)ψ +
+bL−1
+bk + bL−1 Ψk+1 −
+bL−1
+bk + bL−1 Qk+1(A)ψ
+(68)
+and so
+Ψk+1 −Q(−A)¯Ψcrit
+k
+=
+
+1 −
+bL−1
+bk + bL−1
+
+(Ψk+1 −Qk+1(A)ψ)
+=
+bk
+bk + bL−1 (Ψk+1 −Qk+1(A)ψ)
+(69)
+also
+Ψcrit
+k
+−Qk(A)ψ =
+bL−1
+bk + bL−1 QT (−A)(Ψk+1 −Qk+1(A)ψ)
+(70)
+Combining these and using
+bL−1
+
+bk
+bk + bL−1
+2
++ bk
+
+bL−1
+bk + bL−1
+2
+=
+bkbL−1
+bk + bL−1 = bk+1L−1
+(71)
+we have
+bL−1D
+¯Ψk+1 −Q(−A)¯Ψcrit
+k
+, Ψk+1 −Q(A)Ψcrit
+k
+E
++ bk
+D
+¯Ψcrit
+k
+−Qk(−A) ¯ψ, Ψcrit
+k
+−Qk(A)ψ
+E
+= bk+1L−1D
+¯Ψk+1 −Qk+1(−A) ¯ψ, Ψk+1 −Qk+1(A)ψ
+E
+(72)
+Make this substitution in (67).
+Then scale with A →AL, Ψk+1 →Ψk+1,L, ψ →ψL and use
+Qk+1(AL)ψL = (Qk+1(A)ψ)L (now with coupling constant ek+1). We obtain
+ρk+1(A, Ψk+1) =const
+Z
+exp
+
+−bk+1
+D
+¯Ψk+1 −Qk+1(−A) ¯ψ, Ψk+1 −Qk+1(A)ψ
+E
+ρ0(ALk, ψLk+1)Dψ
+(73)
+But the constant must be Nk+1 in order that the identity (53) hold, so we have the result for k + 1.
+2.5
+free ﬂow
+Now consider an initial density which is a perturbation of the free fermion action:
+ρ0(A, Ψ0) = F0(Ψ0) exp
+
+−
+D
+¯Ψ, (DA + ¯m0)Ψ
+E
+(74)
+Insert this in (60) and use for A, ψ on T−k
+N−k
+D
+¯ψLk, (DALk + ¯m0)ψLk
+E
+=
+D
+¯ψ, (DA + ¯mk)ψ
+E
+(75)
+where now DA is deﬁned with coupling constant ek. Then with F0,L−k(ψ) = F0(ψLk) we have from
+(60)
+ρk(A, Ψk) = Nk
+Z
+F0,L−k(ψ) exp
+
+−bk
+D
+¯Ψk−Qk(−A) ¯ψ, Ψk−Qk(A)ψ
+E
+−
+D
+¯ψ, (DA+ ¯mk)ψ
+E
+Dψ (76)
+We expand around the critical point in ψ for the expression in the exponential. The critical point
+satisﬁes the equations
+bkQT
+k (−A)
+
+Ψk −Qk(A)ψcrit
+−(DA + ¯mk)ψcrit =0
+bkQT
+k (A)
+
+¯Ψk −Qk(−A) ¯ψcrit
+−(DA + ¯mk)T ¯ψcrit =0
+(77)
+10
+
+=== PAGE 11 ===
+These are solved by ψcrit = ψk(A) and ¯ψcrit = ¯ψk(A) where on T−k
+N−k
+ψk(A) = ψk(A, Ψk) ≡bkSk(A)QT
+k (−A)Ψk
+¯ψk(A) = ¯ψk(A, ¯Ψk) ≡bkST
+k (A)QT
+k (A)¯Ψk
+(78)
+and the propagator (Green’s function) is deﬁned as
+Sk(A) =
+
+DA + ¯mk + bkPk(A)
+−1
+(79)
+This pair of equations (78) is abbreviated as
+ψk(A) = Hk(A)Ψk
+(80)
+We expand around the critical point introducing by ψ = ψk(A) + W and ¯ψ = ¯ψk(A) + ¯
+W and
+integrating over new Grassman variables ¯
+W, W instead of ψ, ¯ψ. The linear term must vanish and we
+have
+bk
+D
+¯Ψk −Qk(−A) ¯ψ, Ψk −Qk(A)ψ
+E
++
+D
+¯ψ, (DA + ¯mk)ψ
+E
+= Sk(A, Ψk, ψk(A)) +
+D
+¯
+W,
+
+DA + ¯mk + bkPk(A)
+
+W
+E
+(81)
+where
+Sk(A, Ψk, ψk(A)) =bk
+D
+¯Ψk −Qk(−A) ¯ψk(A), Ψk −Qk(A)ψk(A)
+E
++
+D
+¯ψk(A), (DA + ¯mk)ψk(A)
+E
+=
+D
+¯Ψk,
+h
+bk −b2
+kQk(A)Sk(A)QT
+k (−A)
+i
+Ψk
+E
+≡
+D
+¯Ψk, Dk(A)Ψk
+E
+(82)
+Our expression becomes
+ρk(A, Ψk) = NkZk(A)Fk(ψk(A)) exp
+
+−Sk(A, Ψk, ψk(A))
+
+(83)
+where
+Fk(ψ) =Zk(A)−1
+Z
+F0,L−k(ψ + W) exp
+
+−
+D
+¯
+W,
+
+DA + ¯mk + bkPk(A)
+
+W
+E
+DW
+Zk(A) =
+Z
+exp
+
+−
+D
+¯
+W,
+
+DA + ¯mk + bkPk(A)
+
+W
+E
+DZ = det(Sk(A))−1
+(84)
+2.6
+the next step
+If we start with the expression (83) for ρk and apply another renormalization transformation we again
+get ρk+1. Working out the details will give us some useful identities. We have ﬁrst
+˜ρk+1(A, Ψk+1) = NkNkZk(A)
+Z
+exp
+
+−bL−1D
+¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk
+E
+−Sk(A, Ψk, ψk(A))
+
+Fk(ψk(A)) DΨk
+(85)
+To evaluate the integral we want expand around the critical point for this quadratic form in the
+exponential. Using the representation (82) one can argue as in the previous section the critical point
+is
+Ψcrit
+k
+=bL−1Γk(A)QT (−A)Ψk+1
+¯Ψcrit
+k
+=bL−1ΓT
+k (A)QT (A)¯Ψk+1
+(86)
+11
+
+=== PAGE 12 ===
+where
+Γk(A) =
+
+Dk(A) + bL−1P(A)
+−1
+(87)
+However it is useful to ﬁnd another expression for these critical points.
+We deﬁne on T−k
+N−k the operator
+S0
+k+1(A) =
+
+DA + ¯mk + L−1bk+1Pk+1(A)
+−1
+(88)
+and the ﬁeld
+ψ0
+k+1(A) = L−1bk+1S0
+k+1(A)QT
+k+1(−A)Ψk+1
+(89)
+These scale to Sk+1(A), ψk+1(A) on T−k−1
+N−k−1.
+Lemma 2.
+Ψcrit
+k
+(A) =Ψ•
+Ψk+1, ψ0
+k+1(A)
+
+ψ0
+k+1(A) =ψk
+
+A, Ψcrit
+k
+(A)
+
+(90)
+Proof. These are identities between operators and it suﬃces to treat the ﬁelds as real-valued functions
+rather than elements of the Grassman algebra.
+The quadratic form in the exponential in (85) is J(Ψk+1, Ψk, ψk(A, Ψk)) is
+J(Ψk+1, Ψk, ψ) = bL−1D
+¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk
+E
++ bk
+D
+¯Ψk −Q(−A) ¯ψ, Ψk −Q(A)ψ
+E
++
+D
+¯ψk, (DA + ¯mk)ψ
+E
+(91)
+The critical point Ψcrit
+k
+(A) is the unique solution of ∂/∂¯Ψk(x)
+h
+J(Ψk+1, Ψk, ψk(A, Ψk))
+i
+= 0 or
+∂J
+∂¯Ψk(x)
+
+Ψk+1, Ψk, ψk(A, Ψk)
+
++
+Z
+Hk(A)(x, y)
+∂J
+∂ψ(y)
+
+Ψk+1, Ψk, ψk(A, Ψk)
+
+dy = 0
+(92)
+To get at this we study the critical point of J(Ψk+1, Ψk, ψ) in both variables Ψk, ψ.
+Taking
+derivatives in ¯Ψk, Ψk, ¯ψ, ψ gives the equations for the critical point of J(Ψk+1, Ψk, ψ)
+∂J
+∂¯Ψk
+= −bL−1QT (−A)
+
+Ψk+1 −Q(A)Ψ′
+k
+
++ bk
+
+Ψ′
+k −Qk(A)ψ′
+= 0
+∂J
+∂Ψk
+= −bL−1QT (A)
+
+¯Ψk+1 −Q(−A)¯Ψ′
+k
+
++ bk
+
+¯Ψ′
+k −Qk(−A) ¯ψ′
+= 0
+∂J
+∂¯ψ = −bkQT
+k (−A)
+
+Ψ′
+k −Qk(A)ψ′
++ (DA + ¯mk)ψ′ = 0
+∂J
+∂ψ = −bkQT
+k (A)
+
+¯Ψ′
+k −Qk(−A) ¯ψ′
+−(DA + ¯mk)T ¯ψ′ = 0
+(93)
+We have seen these equations before, but now we have to solve then simultaneously. The ﬁrst and
+third equations have the solutions
+Ψ′
+k =Ψ•(Ψk+1, ψ′)
+ψ′ =ψk(A, Ψ′
+k)
+(94)
+12
+
+=== PAGE 13 ===
+Substitute the expression for Ψ′
+k into the third equation which can be written
+
+DA + ¯mk + Pk(A)
+
+ψ′ = bkQT
+k (A)Ψ′
+k
+(95)
+We compute
+bkQT
+k (−A)Ψ′
+k =bkQT
+k (−A)
+
+Qk(A)ψ′ +
+bL−1
+bk + bL−1 QT (−A)Ψk+1 −
+bL−1
+(bk + bL−1)QT (−A)Qk+1(A)ψ
+
+=bkPk(A)ψ′ +
+bkbL−1
+bk + bL−1 QT
+k+1(−A)Ψk+1 −
+bkbL−1
+(bk + bL−1)Pk+1(A)ψ′
+(96)
+Substitute this in (95) and use bkb(bk + bL−1)−1 = bk+1 to obtain
+
+DA + ¯mk + L−1bk+1Pk+1(A)
+
+ψ′ = L−1bk+1QT
+k+1(−A)Ψk+1
+(97)
+which has the solution ψ′ = ψ0
+k+1(A). With this identiﬁcation the identities (94) become
+Ψ′
+k =Ψ•(Ψk+1, ψ0
+k+1(A))
+ψ0
+k+1(A) =ψk(A, Ψ′
+k)
+(98)
+Since ψ′ = ψk(A, Ψ′
+k) the ﬁrst and third equations in (93) now read
+∂J
+∂¯Ψk
+
+Ψk+1Ψ′
+k, ψk(A, Ψ′
+k)
+
+= 0
+∂J
+∂ψ
+
+Ψk+1Ψ′
+k, ψk(A, Ψ′
+k)
+
+= 0
+(99)
+Thus Ψk = Ψ′
+k solves the equation which which identiﬁes Ψcrit
+k
+(A) = Ψ′
+k. With this the identities (98)
+become the identities (90) of the theorem. This completes the proof.
+We expand around the critical point by
+Ψk = Ψcrit
+k
+(A) + W
+¯Ψk = ¯Ψcrit
+k
+(A) + ¯W
+(100)
+This also entails
+ψk(A) = ψ0
+k+1(A) + Wk(A)
+¯ψk(A) = ¯ψ0
+k+1(A) + ¯
+Wk(A)
+(101)
+where
+Wk(A) = ψk(A, W) = Hk(A)W
+(102)
+We introduce
+S0
+k+1
+
+A, Ψk+1, ψ
+
+=bk+1L−1D
+¯Ψk+1 −Qk+1(−A) ¯ψ, Ψk+1 −Qk+1(A)ψ
+E
++
+D
+¯ψ, (DA + ¯mk)ψ
+E
+(103)
+which scales to Sk+1
+
+A, Ψk+1, ψ
+
+Lemma 3. Under the transformation (100), (101) the quadratic form
+bL−1D
+¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk
+E
++ Sk(A, Ψk, ψk(A))
+(104)
+becomes
+S0
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
++
+D
+¯W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+(105)
+13
+
+=== PAGE 14 ===
+Proof. Since we are at the critical point the cross terms vanish. The terms in ¯Ψcrit
+k
+(A) and ¯ψk(A) are
+identiﬁed using (72) as
+bL−1D
+¯Ψk+1 −Q(−A)¯Ψcrit
+k
+(A), Ψk+1 −Q(A)Ψcrit
+k
+(A)
+E
++ Sk
+
+A, ¯Ψcrit
+k
+(A), ψ0
+k+1(A)
+
+=S0
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
+(106)
+The terms in W, Wk(A) are identiﬁed using (82) as
+bL−1D
+Q(−A) ¯W, Q(A)W
+E
++ Sk
+
+A, W, Wk(A)
+
+=
+D
+¯W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+(107)
+This completes the proof.
+Now in (85) we make the change of variables and integrate over the new Grassman variables ¯W, W
+instead of Ψk, ¯Ψk This gives
+˜ρk+1(A, Ψk+1) = NkNkZk(A) exp
+
+−S0
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
+Z
+exp
+
+−
+D
+¯W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+Fk
+
+ψ0
+k+1(A) + Wk(A)
+
+DW
+(108)
+Next identify the Gaussian integral
+R
+[· · · ]dµΓk(A) where
+dµΓk(A)(W) =Zk(A)−1 exp
+
+−
+D
+¯W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+DW
+δZk(A) =
+Z
+exp
+
+−
+D
+¯
+W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+DW = det(Γk(A))−1
+(109)
+Then (108) is rewritten as
+˜ρk+1(A, Ψk) =NkNkZk(A)δZk(A) exp
+
+−S0
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
+Z
+Fk
+
+ψ0
+k+1(A) + Wk(A)
+
+dµΓk(A)(W)
+(110)
+Next we scale by (51). Using ψ0
+k+1(AL, Ψk+1,L) = [ψk+1(A)]L and
+S0
+k+1
+
+AL, Ψk+1,L, [ψk+1(A)]L
+
+= Sk+1
+
+A, Ψk+1, ψk+1(A)
+
+(111)
+we have
+ρk+1(A, Ψk+1) = NkNkZk(AL)δZk(AL) L−8(sN−sN−k−1)
+exp
+
+−Sk+1
+
+A, Ψk+1, ψk+1(A)
+ Z
+Fk
+
+[ψk+1(A)]L + Wk(AL)
+
+dµΓk(AL)(W)
+(112)
+Comparing this expression with (83) for k + 1 we ﬁnd that
+Nk+1Zk+1(A) = NkNkZk(AL)δZk(AL) L−8(sN−sN−k−1)
+(113)
+and that
+Fk+1(ψk+1(A)) =
+Z
+Fk
+
+[ψk+1(A)]L + Wk(AL)
+
+dµΓk(A)(W)
+(114)
+The latter is ﬂuctuation integral of a type we investigate in detail for special Fk.
+14
+
+=== PAGE 15 ===
+We also note that Γk(A) has the alternate representation:
+Γk(A) =Bk(A) + b2
+kBk(A)Qk(A)S0
+k+1(A)QT
+k (−A)Bk(A)
+(115)
+where Bk(A) is the operator (65) and
+S0
+k+1(A) =
+
+DA + ¯mk + bk+1L−1Pk+1(A)
+−1
+(116)
+is the operator on T−k
+N−k which scales to Sk+1(A) on T−k−1
+N−k−1. See the Appendix B with y = 0 for
+derivation of this representation .
+2.7
+propagators
+We study the propagator
+Sk(A) =
+
+DA + ¯mk + bkPk(A)
+−1
+(117)
+an operator on functions on T−k
+N−k deﬁned for a background ﬁeld A on T−k
+N−k. We ﬁrst list some general
+properties.
+(a.) With gauge transformation λ on T−k
+N−k deﬁned as in (15) we have
+DAλψλ = (DAψ)λ
+Qk(Aλ)ψλ = (Qk(A)ψ)λ(0)
+(118)
+where λ(0) is the restriction to the unit lattice T0
+N−k. It follows that
+Sk(Aλ)ψλ = (Sk(A)ψ)λ
+Hk(Aλ)Ψλ(0)
+k
+= (Hk(A)Ψk)λ
+(119)
+Under charge conjugation
+C−1Sk(−A)C = ST
+k (A)
+CHk(A)Ψk = Hk(−A)CΨk
+(120)
+and if A is real
+(γ3C)−1Sk(−A)(γ3C) = Sk(A)
+(121)
+(b.) At some points we will want to change the background ﬁeld on T−k
+N−k from A+Z to a background
+ﬁeld A by
+Sk(A) −Sk(A + Z) = Sk(A + Z)Vk(A, Z)Sk(A)
+(122)
+where
+Vk(A, Z) ≡
+
+DA+Z + ¯mk + bkPk(A + Z)
+
+−
+
+DA + ¯mk + bkPk(A)
+
+(123)
+We have explicitly with η = L−k
+(Vk(A, Z)f)(x) = −
+X
+µ
+1 −γµ
+2
+
+eiekηA(x,x+ηeµ)
+eiekηZ(x,x+ηeµ) −1
+η
+
+f(x + ηeµ)
+−
+X
+µ
+1 + γµ
+2
+
+eiekηA(x,x−ηeµ)
+eiekηZ(x,x−ηeµ) −1
+η
+
+f(x −ηeµ)
++ bk
+
+Pk(A + Z) −Pk(A)
+
+(124)
+15
+
+=== PAGE 16 ===
+(c.) Now some comments about boundary conditions. The propagator Sk(A) on the torus T−k
+N−k is the
+same as the propagator on the cube [−1
+2LN−k, 1
+2LN−k]3 with periodic boundary conditions. In the
+latter form it can be obtained from propagator Sk,ηZ3(A) on ηZ3 (deﬁned with a periodic extension of
+A) by the statement that the kernels satisfy
+Sk(A, x, y) =
+X
+n∈Z3
+Sk,ηZ3(A, x, y + nLN−k)
+(125)
+For anti-periodic boundary conditions this is modiﬁed to
+Sk(A, x, y) =
+X
+n∈Z3
+(−1)n0+n1+n2Sk,ηZ3(A, x, y + nLN−k)
+(126)
+This satisﬁes for all x, y
+Sk(A, x, y + LN−keµ) = −Sk(A, x, y) = Sk(A, x + LN−keµ, y)
+(127)
+Hence when restricted to the cube it satisﬁes the anti-periodic boundary conditions in either variable.
+2.8
+local propagators
+We develop a random walk expansion for Sk(A) following Balaban, O’Carroll, and Schor [21]. The
+ﬁrst step is to ﬁnd local inverses for the Dirac operator.
+Partition the lattice T−k
+N−k into large cubes □of linear size M = Lm centered on points in Tm
+N−k
+for some integer m > 1. Let ˜□be cubes of linear size 3M centered on the same points, and more
+generally let ˜□n be the cubes of linear size (2n + 1)M centered on the same points.
+We seek local propagators Sk(□, A) localized near ˜□with the property that for x ∈˜□
+
+DA + ¯mk + bkPk(A)
+
+Sk(□, A)f
+
+(x) = f(x)
+(128)
+We also want bounds on Sk(□, A) and a certain Holder derivative δα,ASk(□, A). The Holder derivative
+for 0 < α < 1 is deﬁned for 0 < |x −y| < 1 by
+(δα,Af)(x, y) = eiekηA(Γxy)f(y) −f(x)
+|x −y|α
+(129)
+where Γxy is one of the standard paths from x to y. Or one can replace A(Γxy) by the average over
+paths (τA)(x, y). There is an associated norm
+∥δα,Af∥∞=
+sup
+0<|x−y|<1
+|(δα,Af)(x, y)|
+(130)
+Lemma 4. Let ek be suﬃciently small depending on L, M. Let A on ˜□5 be real-valued and gauge
+equivalent to a ﬁeld satisfying |A| < e−1+ǫ
+k
+for some small positive constant ǫ. Then there is an operator
+Sk(□, A) on functions on ˜□5 satisfying (128) and
+|Sk(□, A)f|, ∥δα,ASk(□, A)f∥∞≤C∥f∥∞
+(131)
+Furthermore let ∆y, ∆y′ be unit squares centered on unit lattice points y, y′ ∈˜□5, let ˜∆y be the
+enlargement of ∆y by a layer of unit cubes, and let ζy be a smooth partition on unity with supp ζy ⊂˜∆y.
+Then
+|1∆ySk(□, A)1∆y′ f|, ∥δα,AζySk□, A)1∆y′f∥∞≤Ce−γd(y,y′)∥f∥∞
+(132)
+16
+
+=== PAGE 17 ===
+The condition on A is satisﬁed if, for example, |∂A| < e−1+2ǫ
+k
+. Indeed by subtracting a constant
+the ﬁeld A is gauge equivalent to a ﬁeld satisfying
+|A| ≤O(1) diameter (˜□5)∥∂A∥∞≤O(1)Me−1+2ǫ
+k
+≤e−1+ǫ
+k
+(133)
+With a little more work this can be established with only a bound on the ﬁeld strength |dA| < e−1+2ǫ
+k
+.
+For the proof of the lemma see [21], [24]. A candidate for Sk(□, A) would be to restrict the operator
+DA+ ¯mk+bkPk(A) to a neighborhood on ˜□, say with Dirichlet boundary conditions, and then invert it.
+This would satisfy (128) but it is diﬃcult to get good estimates. Instead one uses a rather complicated
+construction involving soft boundary conditions implemented by a multi-scale random walk expansion.
+The previous result is extended to complex ﬁelds A on T−k
+N−k of the form
+A = A0 + A1
+A0 is real and on each ˜□5 is gauge equivalent to a ﬁeld satisfying |A0| < e−1+ǫ
+k
+,
+A1 is complex and satisﬁes |A1| < e−1+ǫ
+k
+(134)
+Then Sk(□, A) has an analytic extension to the region (134), and for such ﬁelds Sk(□, A) again satisﬁes
+bounds of the form (131), (132). This follows by expanding Sk(□, A) = Sk(□, A0 +A1) around A1 = 0
+and using the bounds for Sk(□, A0).
+2.9
+random walk expansion
+The random walk expansion is based on the operators Sk(□, A) just discussed. We assume that A is
+in the domain (134) so that these have good estimates by lemma 4. Let h2
+□be a partition of unity
+with P
+□h2
+□= 1 and supp h□well inside ˜□. We deﬁne a parametrix
+S∗
+k(A) =
+X
+□
+h□Sk(□, A)h□
+(135)
+On supp h□the identity (128) is applicable and so
+
+DA + mk + akPk(A)
+
+S∗
+k(A) = I −
+X
+□
+K□(A)Sk(□, A)h□≡I −K
+(136)
+where
+K□(A) = −
+h
+DA + ¯mk + akPk(A)
+
+, h□
+i
+(137)
+Then
+Sk(A) = S∗
+k(A)(I −K)−1 = S∗
+k(A)
+∞
+X
+n=0
+Kn
+(138)
+if the series converges. This can be written as the random walk expansion
+Sk(A) =
+X
+ω
+Sk,ω(A)
+(139)
+where a path ω is a sequence of cubes ω = (□0, □1, . . . , □n) in Tm
+N−k such that □i, □i+1 are nearest
+neighbors (in a sup metric), and
+Sk,ω(A) =
+
+h□0Sk(□0, A)h□0
+
+K□1(A)Sk(□1, A)h□1
+
+· · ·
+
+K□n(A)Sk(□n, A)h□n
+
+(140)
+Note that Sk,ω(A) only depends on A in the set Sn
+i=0 ˜□5
+i
+17
+
+=== PAGE 18 ===
+Lemma 5. [21], [23] Let M be suﬃciently large (depending on L), and ek suﬃciently small (depending
+on L, M), and let A be in the domain (134).
+Then the random walk expansion (139) for Sk(A)
+converges to a function analytic in A which satisﬁes
+|Sk(A)f|, ∥δα,ASk(A)f∥∞≤C∥f∥∞
+(141)
+Furthermore let ∆y, ∆y′ be unit squares centered on unit lattice points y, y′ ∈T0
+N−k and let ζy be a
+smooth partition on unity with supp ζy ⊂˜∆y′. Then
+|1∆ySk(A)1∆y′ f|, ∥δα,AζySk(A)1∆y′ f∥∞≤Ce−γd(y,y′)∥f∥∞
+(142)
+Proof. We compute
+
+[DA, h□]f
+
+(x) = −
+X
+µ
+1 −γµ
+2
+
+(∂h□)(x, x + ηeµ)eiekηA(x,x+ηeµ)f(x + ηeµ)
+−
+X
+µ
+1 + γµ
+2
+
+(∂h□)(x, x −ηeµ)eiekηA(x,x−ηeµ)f(x −ηeµ)
+(143)
+and with x ∈∆y
+
+[Pk(A), h□]f
+
+(x) =
+Z
+|x′−y|< 1
+2
+e−iekη(τkA)(y,x)eiekη(τkA)(y,x′)
+h□(x′) −h□(x)
+
+f(x′)dx′
+(144)
+The functions {h□} can be chosen so that |∂h□| ≤O(1)M −1. Then the representations (143), (144)
+lead to the bound
+|K□(A)f| ≤O(1)M −1∥f∥∞
+(145)
+and therefore by lemma 4
+|Kz(A)Sk(□, A)f| ≤CM −1∥f∥∞
+(146)
+These imply that
+|Sk,ω(A)f| ≤C(CM −1)ω∥f∥∞
+(147)
+This is suﬃcient to establish the convergence of the expansion for M suﬃciently large, since the number
+of paths with a ﬁxed length n is bounded by O(1)n. The bound on the Holder derivative follows as
+well.
+For the local estimates use the locality of K□(A) and (132) to obtain
+|1∆yK□(A)Sk(A, □)1∆y′ f| ≤CM −1e−γd(y,y′)∥f∥∞
+(148)
+The decay factors combine to give an overall decay factor (with a smaller γ) and the result follows
+Remarks. (1.) The same bounds (141), (142) also hold for Hk(A), for example
+|Hk(A)f|, ∥δα,AHk(A)f∥∞≤C∥f∥∞
+(149)
+We note that S0
+k+1(A) also has a random walk expansion and satisﬁes the same bounds as Sk(A).
+Then the representation (115) leads to the bound
+|Γk(A)f| ≤C∥f∥∞
+(150)
+18
+
+=== PAGE 19 ===
+(2.) The operator Hk has a kernel Hk(A, ξ, x) where ξ = (x, β, ω) with x ∈T−k
+N−k and x = (x, α, ω)
+with x ∈T0
+N−k. The operator δα,AHk has a kernel (δα,AHk)(A, ζ, x) with ζ = (x, y, β, ω) and x, y ∈
+T−k
+N−k. We consider the ℓ1 −ℓ∞norms on the kernels
+∥Hk(A)∥1,∞= sup
+ξ
+X
+x
+|Hk(A, ξ, x)| =
+sup
+ξ,∥f∥∞≤1
+|
+
+Hk(A)f
+
+(ξ)|
+∥δA,αHk(A)∥1,∞= sup
+ζ
+X
+x
+|δαHk(A, ζ, x)| =
+sup
+ζ,∥f∥∞≤1
+|
+
+δαHk(A)f
+
+(ζ)|
+(151)
+The second form for the norms follows since on our ﬁnite measure space ℓ∞is the dual space to ℓ1.
+Then (149) implies
+∥Hk(A)∥1,∞, ∥δA,αHk(A)∥1,∞≤C
+(152)
+2.10
+weakened propagators
+The random walk expansion makes it possible to introduce weakened forms of the propagators. Note
+that if |ω| = 0 then Sk,ω(A) = S∗
+k(A) and so
+Sk(s, A) = S∗
+k(A) +
+X
+ω:|ω|≥1
+Sk,ω(A)
+(153)
+For each ω = (□0, □1, . . . , □n) with n ≥1 deﬁne
+Xω ≡
+n
+[
+i=1
+˜□5
+i
+(154)
+We introduce weakening parameters {s□} indexed by the M cubes □with 0 ≤s□≤1 and deﬁne
+sω =
+Y
+□⊂Xω
+s□
+(155)
+Weakened propagators are deﬁned by
+Sk(s, A) = S∗
+k(A) +
+X
+ω:|ω|≥1
+sωSk,ω(A)
+(156)
+The Sk(s, A) interpolate between Sk(A) = Sk(1, A) and a strictly local operator Sk(0, A). If s□is
+small then the coupling through □is reduced. If Y is a union of M cubes and s□= 0 for □⊂Y c, then
+no path with Xω intersecting Y c contributes to the sum (156). Then Sk(s, A) only connects points in
+Y and only depends on A in Y .
+The bounds (141), (142) still hold for the weakened propagators Sk(s, A), even if we allow s□
+complex and rather large. In fact let α0 be a small parameter and take complex s□satisfying
+|s□| ≤M α0
+(157)
+Then for α0 suﬃciently small (independent of all parameters)
+|sω| ≤exp
+
+α0 log M|Xω|M
+
+≤exp
+
+O(1)α0 log M|ω|
+
+= M
+1
+2 |ω|
+(158)
+Still assuming M is suﬃciently large this does not aﬀect convergence of the random walk expansion
+which is driven by the factor M −|ω|.
+The weakened propagator Sk(s, A) has the analyticity, bounds, and symmetries of Sk(A). The
+weakened propagator Sk(s, A) also gives a weakened operator Hk(s, A) which satisﬁes the same bounds
+as Hk. Similarly S0
+k+1(A) weakens to S0
+k+1(s, A) and Γk(A) weakens to Γk(s, A) with the same bounds.
+19
+
+=== PAGE 20 ===
+3
+RG transformations for gauge ﬁelds
+For gauge ﬁelds we follow the analysis developed by Balaban [5], [6], [8], and Balaban, Imbrie, and
+Jaﬀe [18], [19]. The basic treatment is identical with [28], [29].
+3.1
+axial gauge
+We are concerned with formal integrals over ﬁelds on T−N
+0
+of the form
+Z
+f(A) exp
+
+−1
+2∥dA∥2
+DA
+(159)
+Scaling up by LN the integral is a constant times R ρ0(A0)DA0 where for A0 on T0
+N
+ρ0(A0) = F0(A0) exp
+
+−1
+2∥dA0∥2
+(160)
+and F0(A0) = fLN(A0) = f(A0,L−N). We seek control over the integral
+R
+ρ0(A0)DA0 with RG trans-
+formations, which at the same time supplies the gauge ﬁxing necessary for convergence. Speciﬁcally
+we want to deﬁne a sequence of well-deﬁned densities ρ0, ρ1, . . . , ρN where ρk(Ak) is a function of Ak
+on T0
+N−k and represents a partial integral of ρ0.
+Suppose ρk is already deﬁned. Then for Ak on T0
+N−k deﬁne an averaged ﬁeld on oriented bonds in
+T1
+N−k by (for reverse oriented bonds take minus this)
+(QA)(y, y + Leµ) =
+X
+x∈B(y)
+L−4A(Γx,x+Leµ)
+(161)
+where Γx,x+Leµ is the straight line between the indicated points. First consider for Ak+1 on T1
+N−k
+˜ρk+1(Ak+1) =
+Z
+δ(Ak+1 −QAk)ρk(Ak) DAk
+(162)
+This does not converge as it stands. For convergence we introduce an axial gauge ﬁxing function
+(justiﬁed by a formal Fadeev-Popov argument)
+δ(τAk) =
+Y
+y∈T1
+N−k
+Y
+x∈B(y),x̸=y
+δ
+
+(τAk)(y, x)
+
+(163)
+where (τAk)(y, x) is deﬁned in (38). Instead of (162) we deﬁne ˜ρk+1(Ak+1) for Ak+1 on T1
+N−k by
+˜ρk+1(Ak+1) =
+Z
+δ(Ak+1 −QAk)δ(τAk)ρk(Ak) DAk
+(164)
+Then we return to a unit lattice deﬁning ρk+1(Ak+1) for Ak+1 on T0
+N−k−1 by
+ρk+1(Ak+1) = ˜ρk+1(Ak+1,L)L
+1
+2 (bN−bN−k−1−1
+2 (sN −sN−k−1)
+(165)
+Here bn = 3L3N is the number of bonds in a three dimensional toroidal lattice with LN sites on a side,
+and again sN = L3N is the number of sites.
+The result of the iteration can be computed explicitly as
+ρk(Ak) =
+Z
+δ(Ak −QkA)δ(τkA)ρ0,L−k(A)DA
+=
+Z
+δ(Ak −QkA)δ(τkA)F0,L−k(A) exp
+
+−1
+2∥dA∥2
+DA
+(166)
+20
+
+=== PAGE 21 ===
+where now A is deﬁned on bonds in T−k
+N−k and the k-fold averaging operator is deﬁned by Qk =
+Q ◦· · · ◦Q. Then QkA is given on oriented bonds in T0
+N−k by
+(QkA)(y, y + eµ) =
+Z
+|x−y|< 1
+2
+L−kA(Γx,x+eµ) dx
+(167)
+and the gauge ﬁxing function is now
+δ(τkA) =
+k−1
+Y
+j=0
+δ(τQjA)
+(168)
+One can show that if F0 is exponentially bounded then ρk(Ak) is well-deﬁned. Furthermore the ﬁnal
+density ρN is a constant given by
+ρN =
+Z
+δ(QNA)δ(τNA)f(A) exp
+
+−1
+2∥dA∥2
+DA
+(169)
+This is a gauge ﬁxed version of the original integral (159).
+To evaluate ρk(Ak) as given by (166) we expand around the minimum of ∥dA∥2 subject to the
+constraints of the delta functions. We deﬁne Ax
+k = Ax
+k(Ak) on T−k
+N−k by
+Ax
+k ≡Hx
+kAk = minimizer of ∥dA∥2 subject to QkA = Ak, τkA = 0
+(170)
+where the linear operator Hx
+k has a speciﬁc representation in terms of Green’s functions. Expanding
+around the minimizer by A = Ax
+k + Z the linear term vanishes and one ﬁnds
+ρk(Ak) = ZkFk(Ax
+k) exp
+
+−1
+2∥Ax
+k∥2
+(171)
+where
+Fk(Ax
+k) =Z−1
+k
+Z
+δ(QkZ)δ(τkA)F0,L−k(Ax
+k + Z) exp
+
+−1
+2∥dZ∥2
+DZ
+Zk =
+Z
+δ(QkZ)δ(τkA) exp
+
+−1
+2∥dZ∥2
+DZ
+(172)
+Next consider how one passes from the representation for ρk to the representation for ρk+1. Suppose
+we are starting with the expression (171) for ρk(Ak). In the next step generated by (164) we have
+˜ρk+1(Ak+1) =Zk
+Z
+δ(Ak+1 −QAk) δ(τAk) Fk(Ax
+k) exp
+
+−1
+2∥dAx∥2
+DAk
+(173)
+Deﬁne the minimizer Amin
+k
+= Amin
+k
+(Ak+1) by
+Amin
+k
+≡Hx
+kAk+1 = minimizer of ∥dAx
+k∥2 in Ak subject to QAk = Ak+1, τAk = 0
+(174)
+Expand around the minimizer by Ak = Amin
+k
++ Z and integrate over Z instead of Ak Then
+Ax
+k = A0,x
+k+1 + Zk
+(175)
+where
+A0,x
+k+1 = Hx
+kAmin
+k
+= Hx
+kHx
+kAk+1
+Zk = Hx
+kZ
+(176)
+On the constrained subspace
+1
+2∥Ax
+k∥2 = 1
+2∥dA0,x
+k+1∥2 + 1
+2∥dZk∥2
+(177)
+21
+
+=== PAGE 22 ===
+and we also write with δ = dT on two-forms (functions on plaquettes)
+∥dZk∥2 =
+D
+Z, ∆kZ
+E
+where
+∆k = Hx,T
+k
+δdHx
+k
+(178)
+We ﬁnd
+˜ρk+1(Ak+1) = Zk exp
+
+−1
+2∥dA0,x
+k+1∥2 Z
+δ(QZ)δ(τZ) Fk
+
+A0,x
+k+1+Zk
+
+exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+DZ (179)
+This scales to
+ρk+1(Ak+1) =L
+1
+2 (bN −bN−k−1)−1
+2 (sN −sN−k−1)Zk exp
+
+−1
+2∥dA0,x
+k+1(Ak+1,L)∥2
+Z
+δ(QZ)δ(τZ) Fk
+
+A0,x
+k+1(Ak+1,L) + Zk
+
+exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+DZ
+(180)
+Compare this with ρk+1(Ak+1) = Zk+1 exp(−1
+2∥dAx
+k+1∥2)Fk+1(Ax
+k+1) and we have the identiﬁcations
+(making special choices of F)
+Zk+1 =ZkδZkL
+1
+2 (bN −bN−k−1)−1
+2 (sN−sN−k−1)
+Ax
+k+1,L =A0,x
+k+1(Ak+1.L)
+Fk+1(Ax
+k+1) =δZ−1
+k
+Z
+δ(QZ)δ(τZ) Fk
+
+Ax
+k+1,L + Zk
+
+exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+DZ
+δZk =
+Z
+δ(QZ)δ(τZ) exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+DZ
+(181)
+Note that if F0 is gauge invariant then Fk is gauge invariant for any k.
+The ﬂuctuation integral (181) can be parametrized as
+Fk+1(A) =
+Z
+Fk
+
+AL + HkC ˜Z
+
+exp
+
+−1
+2
+D
+C ˜Z, ∆kC ˜Z
+E
+D ˜Z
+.
+{Fk = 1}
+(182)
+where ˜Z = ( ˜Z1, ˜Z2). The ﬁeld ˜Z1 is deﬁned on bonds within each block B(y) and satisﬁes ˜Z1 ∈ker τ.
+The ﬁeld ˜Z2 is deﬁned on bonds joining B(y), B(y′) denoted B(y, y′), but not the central bond on
+each face denoted b(y, y′). The mapping Z = C ˜Z is the identity on all bonds except the central bonds
+and assigns a value to the central bonds so that QZ = 0, τZ = 0. If we deﬁne Ck = (CT ∆kC)−1 then
+the integral can be expressed with the Gaussian measure µCk with covariance Ck as
+Fk+1(A) =
+Z
+Fk
+
+AL + Hx
+kC ˜Z
+
+dµCk( ˜Z)
+(183)
+Integrals of this type can be explicitly evaluated by choosing a basis for the functions ˜Z.
+We
+mention a particular class of bases which will be used in the following. For the ˜Z1 we take functions
+{ey
+i } on bonds in B(y) which are in ker τ and orthonormal with respect to the usual inner product.
+For the ˜Z2 we take delta functions δb for b ∈B(y, y′) −b(y, y′). Together they give an orthonormal
+basis
+{Υα} =
+ [
+y
+{ey
+i }
+ [  [
+y,y′
+{δb}b∈B(y,y′)−b(y,y′).
+
+(184)
+For such a basis integrals over ˜Z are evaluated by
+Z
+f( ˜Z)dµCk( ˜Z) =
+Z
+f
+ X
+α
+zαΥα
+
+dµ ˆ
+Ck(z)
+=(2π)−n/2 det( ˆC−1
+k )
+1
+2
+Z
+f
+ X
+α
+zαΥα
+
+exp
+
+−1
+2
+D
+z, ˆC−1
+k z
+E Y
+α
+dzα
+(185)
+where ˆCαβ = C(Υα, Υβ) and n is the number of elements in the basis. The expression is independent
+of the basis.
+22
+
+=== PAGE 23 ===
+3.2
+Landau gauge
+One also formulate the problem in the Landau gauge. Instead of axial gauge ﬁxing one imposes that
+the divergence vanishes. Instead of (166) we deﬁne for Ak on T0
+N−k and A on T−k
+N−k
+ρk(Ak) = const
+Z
+δ(Ak −QA)δ(RkδA)F0,L−k(A) exp(−1
+2∥dA∥2
+DA
+(186)
+Now δ = dT on one-forms (functions on bonds) is the divergence operator and δA is a scalar. The
+operator Rk is the projection onto the subspace ∆(ker Qk) where Qk is the averaging operator on
+scalars, and δ(RkδA) denotes the delta function in this subspace. A Fadeev-Popov argument shows
+equivalence with the axial gauge expression.
+Evaluation of such integrals depends on
+Ak = HkAk = minimizer of ∥dA∥2 subject to QA = Ak and RkδA = 0
+(187)
+There is an explicit expression for Hk in terms of Landau gauge Green’s functions deﬁned for a > 0
+by
+Gk =
+
+δd + dRkδ + aQT
+k Qk
+−1
+(188)
+It is
+Hk = GkQT
+k (QkGkQT
+k )−1
+(189)
+The minimizer Hk is gauge equivalent to the axial gauge minimizer in the sense that
+Hx
+k = Hk + ∂Ok
+(190)
+for some operator Ok. This means that in gauge invariant expression we can can replace Hx
+k by Hk.
+Hence we can make this replacement in the ﬂuctuation integral (183), and in particular ∥dAx
+k∥2 can
+be replaced by ∥dAk∥2 where Ak = HkAk. This is useful because Hk is more regular than the axial
+Hx
+k. Also ∆k can be expressed in the Landau gauge as
+D
+Z, ∆kZ
+E
+= ∥dHkZ∥2
+(191)
+There is a bound below on ∆k.
+We have Z = QkHkZ, hence dZ = Q(2)
+k dHkZ for a certain
+averaging operator Q(2)
+k
+on two forms, and hence ∥dZ∥2 ≤∥dHkZ∥2. Furthermore Balaban [6] shows
+that there is a constant c0 depending only on L such that ∥dZ∥2 ≥c0∥Z∥2 on the constrained surface
+QZ = 0, τZ = 0. Thus on the same surface we have
+D
+Z, ∆kZ
+E
+≥c0∥Z∥2
+(192)
+This shows that the ﬂuctation integrals of the previous section are well-deﬁned.
+3.3
+random walk expansions
+We quote some results on random walk expansions, essentially all due to Balaban.
+3.3.1
+expansion for ˜Gk
+First consider the Green’s function Gk. With the projection operator Pk = I −Rk it can also be
+written
+Gk = (∆−dPkδ + aQT
+k Qk)−1
+(193)
+23
+
+=== PAGE 24 ===
+Lemma 6. [5], [6], [8] The Landau gauge Green’s function Gk has a random walk expansion Gk =
+P
+ω Gk,ω based on blocks of size M, convergent for M suﬃciently large. This yields the bounds
+|Gkf|, |∂Gkf|, ∥δα∂Gkf∥∞≤C∥f∥∞
+(194)
+Furthermore let ∆y, ∆y′ be unit squares centered on unit lattice points y, y′ ∈T0
+N−k and let ζy be a
+smooth partition on unity with supp ζy ⊂˜∆y′.
+|1∆yGk1∆y′ f|, |1∆y∂Gk1∆y′ f|, ∥δαζy∂Gk1∆y′ f∥∞≤Ce−γd(y,y′)∥f∥∞
+(195)
+Remark. These bounds can be obtained more simply by other methods. By deriving them from a
+random walk expansion it gives us freedom to modify the operator without losing the bounds.
+Proof. We sketch the proof. We use a covering of T−k
+N−k by cubes ⊡of width 2M centered on the
+points of the M lattice Tm
+N−k.
+1 Let ˜⊡be the union of all such cubes whose distance to ⊡is zero.
+Similarly deﬁne enlargements ˜⊡
+2, ˜⊡
+3, . . . .
+For each cube ⊡one introduces the inverse on the 3-fold enlargement ˜⊡
+3 :
+Gk,⊡=
+h
+∆−dPk,⊡δ + aQT
+k Qk
+i−1
+˜⊡
+3
+(196)
+Here we take the inverse with periodic boundary conditions, so we are regarding the cube ˜⊡
+3 as a
+little torus. These satisfy the bounds (195).
+Take a partition of unity P
+⊡h2
+⊡= 1 with supp h⊡⊂⊡, and deﬁne a parametrix
+G∗
+k =
+X
+⊡
+h⊡Gk,⊡h⊡
+(197)
+Here we identify supp h⊡with a subset of the torus ˜⊡
+3 so that h⊡Gk,⊡h⊡can be regarded as an operator
+on the full torus T−k
+N−k. Let Dk = ∆−dPkδ + aQT
+k Qk and let Dk,⊡= [∆−dPk,⊡δ + aQT
+k Qk] ˜⊡
+3 so
+that Gk = D−1
+k
+and Gk,⊡= D−1
+k,⊡. Then we compute
+DkG∗
+k =
+X
+⊡
+h⊡Dk,⊡Gk,⊡h⊡−
+X
+⊡
+K⊡Gk,⊡h⊡
+K⊡= h⊡Dk,⊡−Dkh⊡
+(198)
+The ﬁrst term is the identity operator. For the second term we write
+K⊡= −
+h
+∆+ aQT
+k Qk, h⊡
+i
++
+
+h⊡(dPk,⊡δ) −(dPkδ)h⊡
+
+(199)
+Let ζ⊡be a smooth approximation to the characteristic function of ⊡with ζ⊡= 1 on ⊡and all points
+a distance 1
+3M from ⊡, and with ζ⊡= 0 on points greater than 2
+3M from ⊡. In the second term in
+K⊡multiply by ζ⊡+ (1 −ζ⊡). Since (1 −ζ⊡)h⊡= 0 this term can be written
+ζ⊡
+
+(dPkδ −dPk,⊡δ)h⊡−[(dPk,⊡δ), h⊡]
+
+−(1 −ζ⊡)(dPkδ)h⊡
+(200)
+All the terms in (199), (200) are well localized except the last and we insert here 1 = P
+⊡′ h2
+⊡′. Only
+⊡̸= ⊡′ contributes. Now we can write
+DkG∗
+k = I −K = I −
+X
+⊡′,⊡
+K⊡′,⊡Gk,⊡h⊡
+(201)
+1We use a covering by 2M cubes ⊡for consistency with [5], [6]. We could use the partition □into M cubes introduced
+before, but the following discussion would have to be modiﬁed
+24
+
+=== PAGE 25 ===
+where
+K⊡′,⊡=
+(
+−
+h
+∆+ aQT
+k Qk, h⊡
+i
++ ζ⊡
+
+[dPk,⊡δ, h⊡] −d(Pk −Pk,⊡)δh⊡
+
+⊡′ = ⊡
+−h2
+⊡′(1 −ζ⊡)(dPkδ)h⊡
+⊡′ ̸= ⊡
+(202)
+Then
+Gk = G∗
+k(I −K)−1 = G∗
+k
+∞
+X
+n=0
+Kn =
+X
+ω
+Gk,ω
+(203)
+where for a sequence ω = (⊡0, ⊡1, ⊡2 . . . , ⊡2n−1, ⊡2n) of 2M cubes
+Gk,ω =
+
+h⊡0Gk,⊡0h⊡0
+
+K⊡1,⊡2Gk,⊡2h⊡2
+
+· · ·
+
+K⊡2n−1,⊡2nGk,⊡2nh⊡2n
+
+(204)
+Now we claim that
+|1∆yK⊡′,⊡Gk,⊡1∆y′f| ≤CM −1e−γd(y,y′)∥f∥∞
+(205)
+For ⊡̸= ⊡′ the ﬁrst term [∆+aQT
+k Qk, h⊡] in (202) is local and can be expressed in terms of derivatives
+of h which are O(M −1). Combined with the exponential decay for Gk,⊡and its derivatives this gives
+a bound of the form (205). The other terms require some rather detailed knowledge about Pk, Pk,⊡
+which are given by
+Pk = GkQT
+k NkQkGk
+Nk = (QT
+k G2
+kQk)−1
+Pk,⊡= Gk,⊡QT
+k Nk,⊡QkGk,⊡
+Nk,⊡= (QT
+k G2
+k,⊡Qk)−1
+(206)
+Here Qk is the averaging operator on scalars and Gk = (∆+ aQT
+k Qk)−1 on scalars. The operators
+Gk,⊡, Nk,⊡are deﬁned on the torus ˜⊡
+3. Both Gk, Gk,⊡satisfy bounds of the form |1∆yGk1∆y′ f| ≤
+Ce−γd(y,y′)∥f∥∞The same is true for Nk, Nk,⊡(pointwise bounds for these unit lattice operators) and
+hence for Pk, Pk,⊡. The term [dPk,⊡δ, h⊡] in (202) can be expressed in derivatives of h⊡and together
+with the bounds on Pk,⊡yields a bound of the form (205). Furthermore both Gk, Gk,⊡have random
+walk expansions based on the fundamental cubes ⊡. The expansions are locally the same and diﬀer
+only in the global topology. In particular the leading terms are the same and so when localized near
+⊡the diﬀerence Gk −Gk,⊡is O(M −1). The same is true for the pair Nk, Nk,⊡and hence for Pk, Pk,⊡.
+This leads to a bound of the form (205) for the term ζ⊡d(Pk −Pk,⊡)δh⊡in (202). 2 Finally for the
+term h2
+⊡′(1 −ζ⊡)(dPkδ)h⊡in (202) we use the fact that the supports of (1 −ζ⊡) and h⊡are separated
+by 1
+3M. The exponential decay of Pk then gives a factor O(e−1
+3 γM). Hence this term is is O(M −1)
+and satisﬁes (205). All this is a rather long story for which we refer to Balaban [5], [6] .
+Now we write
+1∆yGk1∆y′ =
+X
+ω
+X
+y1,y3,...,y2n−1
+1∆y
+
+h⊡0Gk,⊡0h⊡0
+
+1∆y1
+
+K⊡1,⊡2Gk,⊡2h⊡2
+
+1∆y3 · · · 1∆y2n−1
+
+K⊡2n−1,⊡2nGk,⊡2nh⊡2n
+
+1∆y′
+(207)
+The sums are restricted by the conditions y ∈⊡0, y′ ∈⊡n and for i odd yi ⊂⊡i−1 ∩⊡i ̸= ∅. Then
+(205) gives the bound
+|1∆yGk1∆y′ f|
+≤
+X
+ω
+X
+y1,y3,...,y2n−1
+C(CM −1)|ω| exp
+
+−γ
+
+d(y, y1) + d(y1, y3) + · · · + d(y2n−1, y′)
+
+∥f∥∞
+(208)
+2Note that δh⊡= h⊡δ + [δ, h⊡] does not necessarily involve derivatives of h⊡
+25
+
+=== PAGE 26 ===
+Split the exponent into thirds. In the ﬁrst third we use d(y, y1)+d(y1, y3)+· · ·+d(y2n−1, y′) ≥d(y, y′).
+The second third is used for convergence of the sum over the yi. For the last third let zi ∈Tm
+N−k be
+the center of the cube ⊡i which we could then label as ⊡zi. We claim that for i odd
+d(yi, yi+2) ≥1
+3d′(zi, zi+2)
+(209)
+where d′(z, z′) is the usual distance but set to zero if ⊡z, ⊡z′ are neighbors, i.e. if d(z, z′) ≤2M.
+Indeed if d(zi, zi+2) ≥3M then d(yi, yi+2) ≥d(zi, zi+2)−2M ≥1
+3d(zi, zi+2), while if d(zi, zi+2) ≤2M
+the inequality is trivial. Similarly d(y2n−1, y′) ≥1
+3d′(z2n−1, z2n). Now write the sum over ω as a sum
+over n and z0, z1, . . . , z2n with z0, z2n constrained by the conditions ⊡z0 ∋y and ⊡z2n ∋y′ and for i
+odd ⊡zi−1 ∩⊡zi ̸= ∅. We have then
+|1∆yGk1∆y′f|
+≤e−1
+3 γd(y,y′)
+∞
+X
+n=0
+X
+z0,...,z2n
+C(CM −1)n exp
+
+−1
+9γ
+
+d′(z1, z3) + d′(z3, z5) + · · · + d′(z2n−1, z2n)
+
+∥f∥∞
+(210)
+The sums over zi for i even gives a factor O(1)n, the sum over zi for i odd converges by the exponential
+decay, and the sum over n converges for M suﬃciently large by the factor M −n. We obtain
+|1∆yGk1∆y′ f| ≤Ce−1
+3 γd(y,y′)∥f∥∞
+(211)
+which is the ﬁrst estimate in (195) with a new γ. The derivatives are treated similarly. The bounds
+(194) follow by summing over y′. The results stated in the lemma now follow.
+However because of the presence of long jumps the expansion is not as local as we would like. The
+long jumps arise from the term K⊡′,⊡= h2
+⊡′(1 −ζ⊡)(dPkδ)h⊡in the case ⊡′ ̸= ⊡. The remedy is
+to insert the random walk expansion for Pk. After some rearrangements one ends with the following
+result [8]. The expansion is not based just on cubes but on small connected unions of cubes X, called
+localization domains. There is a constant r0 = O(1) such that the number of M cubes in X satisﬁes
+|X|M ≤r0.
+A walk is a sequence of localization domains X0, X1, . . . , Xn with the property that
+Xi ∩Xi+1 ̸= ∅. For each X there are operators Rα(X) localized in X and indexed by α which ranges
+over a ﬁnite set including 0. If α = 0 then the only localization domain possible is X = ⊡and
+R0(⊡) = h⊡Gk,⊡h⊡
+(212)
+We have the bounds
+|1∆yRα(X)1∆y′f|, |1∆y∂Rα(X)1∆y′f|, ∥δαζy∂Rα(X)1∆y′f∥∞
+≤
+(
+Ce−γd(y,y′)∥f∥∞
+α = 0
+CM −1e−γd(y,y′)∥f∥∞
+α ̸= 0
+(213)
+The expansion has the form Gk = P Gk,ω where the sum is over indexed walks
+ω =
+
+(0, X0), (α1, X1), . . . , (αn, Xn)
+
+(214)
+with αi ̸= 0 if i ̸= 0 and
+Gk,ω = R0(X0)Rα1(X1) · · · Rαn(Xn)
+(215)
+The walk can also be written with |ω| = n
+Gk =
+X
+⊡
+h⊡Gk,⊡h⊡+
+X
+|ω|≥1
+Gk,ω
+(216)
+26
+
+=== PAGE 27 ===
+The results stated in the lemma also follow from this form of the random walk expansion.
+Expansions of this form will be called generalized random walk expansions. We do not require that
+all possible combinations of the (α, X) actually occur in the sum over ω.
+In our expansion we can introduce weakening parameters. Given a walk ω of the form (214) let
+Xω be the connected set Xω = ∪n
+i=0Xi. Then Gk,ω is localized in Xω. For the weakened propagator
+we associate with each M cube □a variable s□and deﬁne
+Gk(s) =
+X
+⊡
+h⊡Gk,⊡h⊡+
+X
+ω:|ω|≥1
+sωGk,ω
+sω =
+Y
+□⊂Xω
+s□
+(217)
+If Y is a union of M cubes and s□= 0 for □⊂Y c, then no path with Xω intersecting Y c contributes
+to Gk(s) and so Gk(s) is localized in Y .
+Lemma 7. There is a small constant α0 = O(1) such that for For |s□| ≤M α0 the weakened propagator
+Gk(s) satisﬁes (194), (195).
+Proof. We have |Xi|M ≤r0 = O(1) and so for |ω| = n
+|Xω| ≤
+n
+X
+i=0
+|Xi|M ≤r0(|ω| + 1)
+(218)
+Therefore if |s□| ≤M α0 and α0 issuﬃciently small
+|sω| ≤exp
+
+α0 log M|Xω|M
+
+≤exp
+
+α0r0 log M(|ω| + 1)
+
+≤O(1)M
+1
+2 |ω|
+(219)
+This changes the convergence factor M −|ω| to M −1
+2 |ω|, but for M suﬃciently large this is still small
+enough to guarantee convergence of the expansion.
+Remarks.
+1. The operator Gk,⊡itself has a random walk expansion of the form of the lemma. The sums over
+⊡would then be over the much smaller set ˜⊡
+3 rather than T−k
+N−k. The expansions are locally
+the same and only diﬀer with the global topology. In particular the leading term G∗
+k is the same
+in each case. It follows that say for y, y′ ∈⊡
+|1∆y(Gk −Gk,⊡)1∆y′f| ≤CM −1e−γd(y,y′)∥f∥∞
+(220)
+2. The operator Gk+1 on T−k−1
+N−k−1 scales up to an operator G0
+k+1 on T−k
+N−k. It is given for any a > 0
+by
+G0
+k+1 =
+
+δd + dR0
+k+1δ + aQT
+k+1Qk+1
+−1
+(221)
+Here R0
+k+1 is the projection onto ∆(ker Qk+1). All the results stated for Gk hold for G0
+k+1 as
+well.
+27
+
+=== PAGE 28 ===
+3.3.2
+expansion for Nk = (QkGkQT
+k )−1
+We consider the operators
+Nk ≡(QkGkQT
+k )−1
+on T0
+N−k
+N 0
+k+1 ≡(Qk+1G0
+k+1QT
+k+1)−1
+on T1
+N−k
+(222)
+Lemma 8. [5], [6], [8] The operator Nk has a random walk expansion Nk = P
+ω Nk,ω based on blocks
+of size M, convergent for M suﬃciently large which yields a bound
+|Nk(b, b′)| ≤Ce−γd(b,b′)
+(223)
+The same is true for N 0
+k+1.
+Proof. The proofs are essentially the same and we give the proof for N 0
+k+1. First consider the operator
+Qk+1G0
+k+1,⊡QT
+k+1 deﬁned on ˜⊡
+3 again regarded as a small torus. This is bounded above independent
+of the volume by our estimates on G0
+k+1,⊡. We claim that it is also bounded below. This relies on the
+identity for A on the L-lattice in ˜⊡
+3
+D
+A, Qk+1G0
+k+1,⊡QT
+k+1A
+E
+=
+D
+[QT A]x, ˜Ck,⊡[QT A]xE
+(224)
+where ˜Ck,⊡is the inverse of ∆k + aQT Q on the subspace ker τ of the unit lattice in ˜⊡
+3 and [QT F]x
+is the projection of QT F onto this subspace. For the proof on a general torus see [6] or Appendix C.
+Now ∆k + aQT Q is bounded above as a quadratic form and so Ck,⊡is bounded below. Hence the
+right side of (224) is bounded below by constant times ∥[QT A]x∥2. However we show in appendix D
+that ∥[QT A]x∥2 ≥L−1∥A∥2. Thus we have
+c∥A∥2 ≤
+D
+A, Qk+1G0
+k+1,⊡QT
+k+1A
+E
+≤C∥A∥2
+(225)
+Hence the inverse has the same bounds. But before we invert it we restict from ˜⊡
+3 to smaller cube
+⊡, that is to functions on bonds with at least one end in ⊡. The restriction satisﬁes the same bounds
+and if we deﬁne
+N 0
+k+1,⊡=
+h
+Qk+1G0
+k+1,⊡QT
+k+1
+i−1
+⊡
+(226)
+then with new constants for A on ⊡
+c∥A∥2 ≤
+D
+A, N 0
+k+1,⊡A
+E
+≤C∥A∥2
+(227)
+Furthermore by (195) we have the bound |(Qk+1G0
+k+1,⊡QT
+k+1)(b, b′)| ≤Ce−γd(b,b′).
+It follows by
+Balaban’s theorem on unit lattice operators (section 5 in [4]) that the same is true for the inverse and
+so
+|N 0
+k+1,⊡(b, b′)| ≤Ce−γd(b,b′)
+(228)
+To generate the random walk for Nk we again take the partition of unity P
+⊡h2
+⊡= 1, identify
+h⊡N 0
+k+1,⊡h⊡with an operator on T1
+N−k and deﬁne the parametrix
+N ∗
+k+1 =
+X
+⊡
+h⊡N 0
+k+1,⊡h⊡
+(229)
+28
+
+=== PAGE 29 ===
+Then we compute
+Qk+1G0
+k+1QT
+k+1N ∗
+k+1 =
+X
+⊡
+h⊡
+h
+1⊡Qk+1G0
+k+1,⊡QT
+k+11⊡N 0
+k+1,⊡
+i
+h⊡
+−
+X
+⊡
+h
+h⊡, 1⊡Qk+1G0
+k+1,⊡QT
+k+11⊡
+i
+N 0
+k+1,⊡h⊡
+−
+X
+⊡
+1 ˜⊡Qk+1
+
+G0
+k+1,⊡−G0
+k+1
+
+QT
+k+1h⊡N 0
+k+1,⊡h⊡
++
+X
+⊡,⊡′
+h2
+⊡′1⊡cQk+1G0
+k+1QT
+k+1h⊡N 0
+k+1,⊡h⊡
+≡I −
+X
+⊡
+K⊡′,⊡N 0
+k+1,⊡h⊡≡I −K
+(230)
+Here we have identiﬁed the ﬁrst term as the identity. Now we have
+N 0
+k+1 = N ∗
+k+1(I −K)−1 = N ∗
+k+1
+∞
+X
+n=0
+Kn =
+X
+ω
+Nk,ω
+(231)
+where for a sequence ω = (⊡0, ⊡1, ⊡2 . . . , ⊡2n−1, ⊡2n)
+N 0
+k+1,ω =
+
+h⊡0N 0
+k+1,⊡0h⊡0
+
+K⊡1,⊡2N 0
+k+1,⊡2h⊡2
+
+· · ·
+
+K⊡2n−1,⊡2nN 0
+k+1,⊡2nh⊡2n
+
+(232)
+Now we claim that
+|K⊡′,⊡N 0
+k+1,⊡h⊡(b, b′)| ≤CM −1e−γd(b,b′)
+(233)
+This is argued as follows. The second term in (230) can be expressed in terms of derivatives of h⊡
+and so is O(M −1). For the third term in (230) we use that G0
+k+1,⊡−G0
+k+1 satisﬁes a bound like (220)
+to get an estimate O(M −1) . For the fourth term in (230) we can assume that ⊡c and supp h⊡are
+separated by at least 1
+3M. By the exponential decay of Gk this term has a decay factor O(e−1
+3 γM)
+and hence O(M −1) as well.
+The estimate (233) gives convergence of the expansion and the stated estimates just as in the
+previous lemma. However again the long jumps are unwelcome. They come from the term K⊡′⊡=
+h2
+⊡′1⊡cQk+1G0
+k+1QT
+k+1h⊡N 0
+k+1,⊡h⊡for ⊡̸= ⊡′. The remedy in this case is to replace the G0
+k+1 by its
+random walk expansion. Again the result is a generalized random walk expansion of the form
+N 0
+k+1 =
+X
+⊡
+h⊡N 0
+k+1,⊡h⊡+
+X
+|ω|≥1
+N 0
+k+1,ω
+(234)
+where
+N 0
+k+1,ω =
+X
+R0(X0)Rα1(X1) · · · Rα1(X1)
+(235)
+and for α ̸= 0, Rα(X) satisﬁes
+|Rα(X; b, b′)| ≤CM −1e−γd(b,b′)
+(236)
+3.3.3
+expansion for Hk
+From the representation Hk = GkQT
+k (QkGkQT
+k )−1 and the last two results we have
+Lemma 9. [5], [6] , [8] The Landau gauge minimizer Hk has a generalized random walk expansion
+based on blocks of size M, convergent for M suﬃciently large. This yields the bounds
+|Hkf|, |∂Hkf|, ∥δα∂Hkf∥∞≤C∥f∥∞
+(237)
+The local version is for y, y′ on T−k
+N−k
+|1∆yHk1∆y′f|, |1∆y∂Hk1∆y′ f|, ∥δαζy∂Hk1∆y′ f∥∞≤Ce−γd(y,y′)∥f∥∞
+(238)
+29
+
+=== PAGE 30 ===
+One can introduce weakening parameters as before and deﬁne Hk(s). For |s□| ≤M α0 and α0
+suﬃciently small these satisfy the same bounds as Hk.
+3.3.4
+expansion for ˜Gk
+The Green’s function Gk can be deﬁned by stating that A = GkJ is the minimizer of the quadratic
+form 1
+2 < A, (δd + dRkδ + aQT
+k Qk)A > −< A, J >. We are also interested in a modiﬁed Green’s
+function ˜Gk deﬁned by stating that A = ˜GkJ is the minimizer of the same quadratic form subject to
+the constraint QkA = 0 (in which case the term aQT
+k Qk is optional). These turn out to be related by
+˜Gk = Gk −GkQT
+k NkQkGk
+(239)
+On the small torus ˜⊡
+3 this takes the form
+˜Gk,⊡= Gk,⊡−Gk,⊡QT
+k Nk,⊡QkGk,⊡
+(240)
+Lemma 10. The operator ˜Gk can has a generalized random walk expansion of the form
+˜Gk =
+X
+⊡
+h⊡˜Gk,⊡h⊡+
+X
+ω:|ω|≥1
+˜Gk,ω
+(241)
+This yields the bounds (195) for ˜Gk. The second term in (241) is O(M −1).
+We have seen that the operators Gk and Nk have a random walk expansions. We can insert these
+in the deﬁnition of ˜Gk and get a random walk expansion. However this would not have the leading
+term we want. We need to modify the procedure and we sketch the idea below. If we had supplied
+full details in the previous theorems we would already be familiar with this strategy taken from [8]
+In (239) insert the expansion for Gk in the ﬁrst term and the expansion for Nk in the second term.
+This yields
+˜Gk =
+X
+⊡
+h⊡Gk,⊡h⊡−
+X
+⊡
+GkQT
+k h⊡Nk,⊡h⊡QkGk + O(M −1)
+(242)
+where as before the sum is over a covering of the M-lattice by 2M cubes. For each ﬁxed ⊡we introduce
+a new cover deﬁned from the old cover by replacing ⊡by ˜⊡, then deleting all cubes contained in
+˜⊡, and leaving the other cubes in the old cover alone. Denote the cubes of the new cover by ⊡0.
+Make a random walk expansion for Gk based on the new cover .
+This will have the form Gk =
+P
+⊡0 h⊡0Gk,⊡0h⊡0 + O(M −1). When this is inserted in two places in the second term in (242) only
+the term with ⊡0 ⊃⊡gives an O(1) contribution which was the goal. Using also h⊡0QT
+k h⊡= QT
+k h⊡
+the second term in (242) can be written with ⊡0 ⊃⊡
+X
+⊡
+h⊡0Gk,⊡0QT
+k h⊡Nk,⊡h⊡QkGk,⊡0h⊡0 + O(M −1)
+(243)
+Next move the h⊡to the outside using [h⊡, Qk] = O(M −1) and [h⊡, Gk,⊡0] = O(M −1) and use
+h⊡0h⊡= h⊡. Then the last expression becomes
+X
+⊡
+h⊡Gk,⊡0QT
+k Nk,⊡QkGk,⊡0h⊡+ O(M −1)
+(244)
+Now write
+h⊡Gk,⊡0 = h⊡Gk,⊡+ h⊡
+
+Gk,⊡0 −Gk,⊡
+
+ζ⊡+ h⊡
+
+Gk,⊡0 −Gk,⊡
+
+(1 −ζ⊡)
+(245)
+30
+
+=== PAGE 31 ===
+The last term here is O(e−1
+3 γM) = O(M −1) since h⊡is separated from 1 −ζ⊡by at least 1
+3M and
+both Gk,⊡0 and Gk,⊡have exponential decay. The second term is localized near ⊡and O(M −1) as in
+(220). Insert (245) in (244) and then back in (242). This gives the desired result
+˜Gk =
+X
+⊡
+h⊡
+
+Gk,⊡−Gk,⊡QT
+k Nk,⊡QkGk,⊡
+
+h⊡+ O(M −1)
+=
+X
+⊡
+h⊡˜Gk,⊡h⊡+ O(M −1)
+(246)
+3.3.5
+expansions for Ck, C
+1
+2
+k
+We also need a random walk expansion for Ck = (CT ∆kC)−1 and C
+1
+2
+k . We have already noted that
+CT ∆kC is bounded below, and it is also bounded above by the bound on Hk. Thus the same is true
+for the inverse:
+c∥˜Z∥2 ≤
+D
+˜Z, Ck ˜Z
+E
+≤C∥˜Z∥2
+(247)
+Here ˜Z is a restricted unit lattice variable deﬁned as in section 3.1.
+We also consider Ck,⊡=
+(CT ∆k,⊡C)−1 deﬁned on the small torus ˜⊡
+3 which satisﬁes
+c∥˜Z∥2
+˜⊡
+3 ≤
+D
+˜Z, Ck,⊡˜Z
+E
+≤C∥˜Z∥2
+˜⊡
+3
+(248)
+Lemma 11. [6], [8], [12] The operators Ck, C
+1
+2
+k have generalized random walk expansions based on
+blocks of size M, convergent for M suﬃciently large. For Ck it has the form
+Ck =
+X
+⊡
+h⊡Ck,⊡h⊡+
+X
+ω:|ω|≥1
+Ck,ω
+(249)
+The expansions yield the bounds:
+|Ck(Υ, Υ′)|, |C
+1
+2
+k (Υ, Υ′)| ≤Ce−γd(Υ,Υ′)
+(250)
+where d(Υ, Υ′) ≡d(suppΥ, suppΥ′) and Υ, Υ′ are taken from the basis {Υα} deﬁned in (184). The
+ﬁrst term in (249) is bounded above and below (by (248)) and the second term in (249) is O(M −1).
+Proof. We give details for Ck. The expansion is based on the representation [8], [28].
+CCkCT = (1 + dM)Qk ˜Gk+1QT
+k (1 + dM)T
+(251)
+where
+˜Gk+1 = G0
+k+1 −G0
+k+1QT
+k+1N 0
+k+1Qk+1G0
+k+1
+(252)
+The operator ˜Gk+1 has a random walk expansion like ˜Gk and satisﬁes the same bounds (195). Also M
+maps one-forms to scalars by
+(MZ)(x) = −(τZ)(y, x) + L−3
+X
+x′∈B(y),x′̸=y
+(τZ)(y, x′)
+(253)
+Insert the expansion (241) for ˜Gk+1 in (251) and obtain
+CCkCT =
+X
+⊡
+(1 + dM)Qkh⊡˜Gk+1,⊡h⊡QT
+k (1 + dM)T
++
+X
+ω:|ω|≥1
+(1 + dM)Qk ˜Gk+1,ωQT
+k (1 + dM)T
+(254)
+31
+
+=== PAGE 32 ===
+In the ﬁrst term move the h⊡to the outside and identify
+CCk,⊡CT = (1 + dM)Qk ˜Gk+1,⊡QT
+k (1 + dM)T
+(255)
+to write it as as
+X
+⊡
+h⊡
+
+CCk,⊡CT 
+h⊡+
+X
+⊡
+L4,⊡
+(256)
+Here L4(⊡) involves the commutators [Qk, h⊡] = O(M −1) and [dM, h⊡] = O(M −1). Using these and
+the exponential decay for ˜Gk+1,⊡one can show
+|L4,⊡(Υ, Υ′)| ≤CM −1e−γd(Υ,Υ′)
+(257)
+Now in the ﬁrst term in (256) move the h⊡back inside and write it as
+C
+ X
+⊡
+h⊡Ck,⊡h⊡
+
+CT +
+X
+⊡
+L5,⊡
+(258)
+The operator L5,⊡involves the commutator [C, h⊡] = O(M −1) (see Appendix A in [29]) and also
+satisﬁes the bound (257). Now (254) becomes
+CCkCT = C
+ X
+⊡
+h⊡Ck,⊡h⊡
+
+CT +
+X
+⊡
+(L4,⊡+L5,⊡)+
+X
+ω:|ω|≥1
+(1+dM)Qk ˜Gk+1,ωQT
+k (1+dM)T (259)
+The operator CT ∆⊡C has an exponentially decaying kernel also inherited from the bounds on Hk.
+By (a slight modiﬁcation of) Balaban’s theorem on unit lattice operators (section 5 in [4]) the same is
+true for the inverse and so
+|Ck,⊡(Υ, Υ′)| ≤Ce−γd(Υ,Υ′′)
+(260)
+The second and third terms satisfy the same bound. Hence CCkCT has a random walk expansion and
+satisﬁes an exponential decay bound.
+Now we argue that the results for CCkCT imply the same for Ck. Recall that C is a map on
+V = V1 ⊕V2 where V1 is functions on bonds in ∪yB(y) in ker τ and V2 is functions on bonds in
+∪y,y′B(y, y′) −b(y, y′).
+and it maps to V ′ = V ⊕V3 where V3 is functions on the central bonds
+b(y, y′).
+As a map from V to V it is the identity.
+The transpose CT goes from V ′ to V , but if
+we restrict it to functions on V it is again the identity. (For Z, ˜Z ∈V we have < CT Z, ˜Z >=<
+Z, C ˜Z >=< Z, ˜Z >.) Thus CCkCT on V × V is the same as Ck on V × V . This gives the result
+for Ck(Υ, Υ′) =< Υ, CkΥ′ >. (These remarks, which mirror similar observations in [8] render the
+discussion of C−1 in [29] unnecessary.)
+The result for C
+1
+2 is based on the representation
+C
+1
+2
+k = 1
+π
+Z ∞
+0
+dx
+√x(CT ∆kC + x)−1dx
+(261)
+and representation like (251) for C(CT ∆kC + x)−1CT . For details see [8], [28].
+3.3.6
+expansion for Ck(Y )
+We will also need an expansion for Ck(Y ) = [CT ∆kC]−1
+Y
+where Y is a union of M-cubes in T0
+N−k.
+The notation means we restrict to functions on bonds with at least one end in Y before taking the
+inverse.
+This is a special case of a multi-scale situation which arises discussed in detail in [6], [8]. We will
+make extensive use of it in [30], here we just sketch the situation. There one has a decreasing sequence
+32
+
+=== PAGE 33 ===
+of regions Ω= (Ω1, Ω2, . . . , Ωk) each Ωj a union of L−(k−j)M-cubes in T−k
+N−k, and associated with it
+an operator ∆k,Ω. One is interested in
+Ck,Ω(Ωk+1) ≡[CT ∆k,ΩC]−1
+Ωk+1
+(262)
+where Ωk+1 ⊂Ωk is a union of LM or M cubes. For this operator one has a representation like (251)
+which has the form with Ω+ = (Ω, Ωk+1)
+CCk,Ω(Ωk+1)CT =
+h
+(1 + dM)Qk ˜Gk+1,Ω
++QT
+k (1 + dM)T i
+Ωk+1
+(263)
+where
+˜Gk+1,Ω
++ = G0
+k+1,Ω
++ −G0
+k+1,Ω
++QT
+k+1
+
+Qk+1G0
+k+1,Ω
++QT
+k+1
+−1
+Qk+1G0
+k+1,Ω
++
+(264)
+and where on T−k
+N−k
+G0
+k+1,Ω
++ =
+
+δd + dR0
+k+1,Ω
++δ + QT
+k+1,Ω
++aQk+1,Ω
++
+−1
+(265)
+Both G0
+k+1,Ω
++ and (Qk+1G0
+k+1,Ω
++QT
+k+1)−1 have (multiscale) random walk expansions and this gener-
+ates expansions for ˜Gk+1,Ω
++ and Ck,Ω(Ωk+1) as in lemmas 10, 11.
+In the case at hand we have Ωj = T−k
+N−k for 1 ≤j ≤k and Ωk+1 = Y . Then Ck(Y ) = [CT ∆kC]−1
+Y
+and the identity (263) reads
+CCk(Y )CT =
+h
+(1 + dM)Qk ˜Gk+1,Y c,Y QT
+k (1 + dM)T i
+Y
+(266)
+where ˜Gk+1,Y c,Y is deﬁned from G0
+k+1,Y c,Y as in (264) and the latter is an operator of the form
+G0
+k+1,Y c,Y ≡
+
+δd + dR0
+k+1,Y c,Y δ + a
+h
+QT
+k Qk
+i
+Y c + a
+h
+QT
+k+1Qk+1
+i
+Y
+−1
+(267)
+Also for ⊡⊂Y we deﬁne on the small torus ˜⊡
+3 the operator Ck,⊡(Y ) = [CT ∆k,⊡C]−1
+Y ∩˜⊡
+3. This is
+bounded above and below and satisﬁes an identity like (266). Then we have the following variation of
+lemma 11.
+Lemma 12. [6], [8], [12] The operators Ck(Y ) have generalized random walk expansions of the form
+Ck(Y ) =
+X
+⊡
+h⊡Ck,⊡(Y )h⊡+
+X
+ω:|ω|≥1
+Ck,ω(Y )
+(268)
+The expansions yield the bounds:
+|Ck(Y ; Υ, Υ′)| ≤Ce−γd(Υ,Υ′)
+(269)
+The the ﬁrst term in (268) is bounded above and below, and the second term in (268) is O(M −1).
+33
+
+=== PAGE 34 ===
+3.3.7
+resummed random walk
+The random walk expansions can be resummed so that any particular union of M-blocks can be treated
+as a unit [8], [12]. This can be done for any of the random walks discussed so far, but we discuss the
+details for Gk. Recall that the generalized random walk expansion can be written in the form
+Gk =
+X
+ω
+Gk,ω =
+X
+X0,α1,X1,...,αn,Xn
+R0(X0)Rα1(X1) · · · Rαn(Xn)
+(270)
+The sum is restricted to sequences where Xi ∩Xi+1 ̸= ∅, but we can regard it as an unrestricted sum
+since the summand vanishes if the constraint is violated.
+Let Y be a connected union of M cubes. Deﬁne
+˜R0(Y ) =
+X
+X0,α1,X1,...,αn,Xn:Xi⊂Y
+R0(X0)Rα1(X1) · · · Rαn(Xn)
+˜R(Y ) =
+X
+α1,X1,...,αn,Xn:Xi⊂Y
+Rα1(X1) · · · Rαn(Xn)
+(271)
+These converge and satisﬁes the same bounds (213) as Rα(X). The proof is the same as the proof for
+the convergence of the overall series.
+For any union of M cubes Y let {Yβ} be the connected components. We resum the expansion
+(270) grouping together parts of the walk which stay in the same Yβ.
+Given a general sequence
+(X0, α1, X1, . . . , αn, Xn) replace each chain of localization domains staying in some Yβ by Yβ. We
+generate a new sequence (X0, X1, . . . , Xm) where X0 is either some Yβ or (0, ⊡) with ⊡⊂Y c, and Xi
+for i ̸= 0 is either some Yβ or a pair (α, X) with α ̸= 0 and X ∩Y c ̸= ∅. We associate with X0 an
+operator
+R′
+0(X0) =
+( ˜R0(Yβ)
+X0 = Yβ
+R0(⊡)
+X0 = (0, ⊡)
+(272)
+and with χi
+R′(Xi) =
+( ˜R(Yβ)
+Xi = Yβ
+Rα(X)
+Xi = (α, X)
+(273)
+These are localized in the associated region and satisfy
+|1∆yR′
+0(X0)1∆y′ f| ≤Ce−γd(y,y′)∥f∥∞
+|1∆yR′(Xi)1∆y′ f| ≤CM −1e−γd(y,y′)∥f∥∞
+(274)
+together with the bounds on derivatives as in (213).
+Classify the terms in the original sum by the sequence (X1, . . . , Xm) that they generate. This gives
+an new expansion
+Gk =
+X
+(X0,X1...Xm)
+X
+(X0,α1,X1,...,αn,Xn)→(X0,X1...,Xm)
+R0(X0)R(X2) · · · R(Xn)
+=
+X
+(X0,X1...Xm)
+
+X
+(X0,α1,X1,...,αn,Xn)→X0
+R0(X0)R(X1) · · · R(Xn)
+
+m
+Y
+i=1
+
+X
+(α1,X1,...,αm,Xn)→Xi
+Rα1(X1) · · · Rαm(Xn)
+
+=
+X
+(X0,X1...Xm)
+R′
+0(X0)R′(X1) · · · R′(Xm)
+(275)
+We must have Xi ∩Xi+1 ̸= ∅for a non-zero contribution. This is our new random walk expansion.
+34
+
+=== PAGE 35 ===
+4
+Polymers
+4.1
+dressed Grassman variables
+As we track the ﬂow of the RG transformations the densities will be expressed in terms of localized
+elements of the Grassman algebra depending on the fundamental variables Ψk on T0
+N−k through the
+ﬁelds ψk(A) = Hk(A)Ψk on T−k
+N−k. We assume A is in the domain (134) so we have good estimates
+on Hk(A).
+Let ξ = (x, β, ω) with x ∈T−k
+N−k, 1 ≤β ≤4, and ω = 0, 1. We treat ψ, ¯ψ as a single ﬁeld by
+ψk(A, ξ) =
+(
+ψk,β(A, x)
+ξ = (x, β, 0)
+¯ψk,β(A, x)
+ξ = (x, β, 1)
+(276)
+We also deﬁne ﬁelds depending on two variables x, y ∈T−k
+N−k . Let ζ = (x, y, β, ω) and deﬁne
+χk(A, ζ) =
+
+δα,Aψk(A)
+
+(ζ) =
+
+
+
+|x −y|−α
+eiekη(τA)(x,y)ψk,β(y) −ψk,β(x)
+
+ζ = (x, y, β, 0)
+|x −y|−α
+e−iekη(τA)(x,y) ¯ψk,β(y) −¯ψk,β(x)
+
+ζ = (x, y, β, 1)
+(277)
+We consider elements of the Grassman algebra generated by Ψk of the form
+E
+
+A, ψk(A), χk(A)
+
+=
+∞
+X
+n,m=0
+1
+n!m!
+Z
+Enm(A, ξ1, . . . , ξn; ζ1, . . . , ζm)
+ψk(A, ξ1) · · · ψk(A, ξn)χk(A, ζ1) · · · χk(A, ζn)dξ1 · · · dξndζ1 · · · dζm
+(278)
+Here with η = L−k
+Z
+dξ =
+X
+x,β,ω
+η3
+Z
+dζ =
+X
+x,y,β,ω
+η6
+(279)
+The kernel is the collection of functions {Enm(A)}. The Enm(A, ξ1, . . . , ξn; ζ1, . . . , ζm) are taken to
+be anti-symmetric the ξi and the ζj separately. Note that the ψk(A), χk(A) are not independent and
+diﬀerent kernels may give the same algebra element.
+We deﬁne a norm on the E(A) by
+∥Enm(A)∥=
+Z
+|Enm(A, ξ1, . . . , ξn, ζ1, . . . , ζm)|dξ1 · · · dξndζ1 · · · dζm
+(280)
+and for a pair of positive real numbers h = (h1, h2)
+∥E(A)∥h =
+∞
+X
+n,m=0
+hn
+1hm
+2
+n!m! ∥Enm(A)∥
+(281)
+This is not a norm on the algebra element but rather on the representation, i.e. on the kernels.
+The norm has the property that if G(A) = E(A)F(A) then the kernels satisfy
+∥G(A)∥h ≤∥E(A)∥h∥F(A)∥h
+(282)
+This is a special case of (635) from Appendix A.3. In the terminology there the two measure spaces
+are (T1, ν1) with T1 equal to all ξ and ν1(ξ) = η3 and (T2, ν2) with T2 equal to all ζ and ν2(ζ) = η6.
+We also want to bound the true norm by the dressed norm. This again is a special case of a result
+from in Appendix A.3. In that terminology our ﬁelds are
+ψ1(ξ) =(H1Ψ)(ξ) = (Hk(A)Ψ)(x, β, ω)
+ψ2(ζ) =(H2Ψ)(ζ) = |x −y|−α
+e(−1)ωiekη(τA)(x,y)(Hk(A)Ψ)(y, β, ω) −(Hk(A)Ψ)(x, β, ω)
+
+(283)
+35
+
+=== PAGE 36 ===
+By (152)
+∥H1∥1,∞=∥Hk(A)∥1,∞≤C
+∥H2∥1,∞≤O(1)∥Hk(A)∥1,∞+ ∥δαHk(A)∥1,∞≤C
+(284)
+Here for the second estimate we consider separately the two cases |x −y| ≤1 and |x −y| ≥1. In the
+case |x −y| ≤1 we identify the norm ∥δαHk(A)∥1,∞. In the case |x −y| ≥1 we bound the parallel
+translation by O(1) and then estimate each term by ∥Hk(A)∥1,∞. It follows by lemma 29 in Appendix
+A.3 that if E′(A, Ψ) = E
+
+A, ψk(A), χk(A)
+
+, then the norm ∥E′(A)∥h as deﬁned in (33) satisﬁes
+∥E′(A)∥h ≤∥E(A)∥Ch,Ch
+(285)
+4.2
+a domain for the gauge ﬁeld
+Before proceeding we make some further restrictions on the gauge ﬁeld. Let ǫ > 0 be a ﬁxed small
+number. A domain our ﬁelds is deﬁned by the following (notation slightly diﬀerent from [29] )
+Deﬁnition 1. Rk is all complex-valued ﬁelds A on T−k
+N−k satisfying
+|A| < e
+−3
+4 +ǫ
+k
+|∂A| < e
+−3
+4 +2ǫ
+k
+|δα∂A| < e
+−3
+4 +3ǫ
+k
+(286)
+We also deﬁne an extended domain with the property that the ﬁelds are locally gauge equivalent a
+ﬁeld in Rk. Choose a constant c0 = O(1) and let □† = ˜□(c0L) be the enlarged union of M-cubes with
+c0L cubes on a side. (□† was called □♮in [29])
+Deﬁnition 2.
+˜Rk is all ﬁelds A = A0 + A1 on T−k
+N−k where A0 is real and on each □† is gauge
+equivalent to a ﬁeld in Rk and A1 is complex and in Rk.
+Assuming c0L ≥5 these conditions are stronger than the conditions (134) which we needed for the
+treatment of the Sk(A), Hk(A). Indeed if A ∈˜Rk then e
+−1
+4
+k
+A satisﬁes these conditions. Also in [29] it
+is established that in each □† the real ﬁeld Ak = HkAk is gauge equivalent to a ﬁeld A satisfying
+|A|, |∂A|, |δα∂A| ≤CM∥dAk∥∞
+(287)
+Thus we only need control over the ﬁeld strength dAk to conclude that Ak ∈˜Rk
+4.3
+polymer functions
+Next we localize. A polymer X in T−k
+N−k is deﬁned to be a connected union of M cubes, with the
+convention that two cubes are connected if they have an entire face in common. The set of all polymers
+is denoted Dk. A polymer function depending on a gauge ﬁeld A in ˜Rk and a polymer X is an element
+of the Grassman algebra of the form
+E(X, A, ψk(A), χk(A)) =
+∞
+X
+n,m=0
+1
+n!m!
+Z
+Enm(X, A, ξ1, . . . , ξn, ζ1, . . . , ζm)
+ψk(A, ξ1) · · · ψk(A, ξn) χk(A, ζ1) · · · χk(A, ζm) dξ1 · · · dξndζ1 · · · dζm
+(288)
+We require that only terms with equal numbers of Ψ, ¯Ψ contribute.
+The kernels Enm(X, A, ξ1, . . . , ξn, ζ1, . . . , ζm) are required to vanish unless all ξi ∈X and all ζi∩X ̸=
+∅, and to depend on A(b) only if b ∩X ̸= ∅. We also require that E(X, A) is bounded and analytic on
+the domain A ∈˜Rk. Norms ∥Enm(X, A)∥and ∥E(X, A)∥h are deﬁned as in (280), (281) and now we
+deﬁne
+∥Enm(X)∥˜
+Rk = sup
+A∈˜
+Rk
+∥Enm(X, A)∥
+∥E(X)∥h, ˜
+Rk = sup
+A∈˜
+Rk
+∥E(X, A)∥h
+(289)
+36
+
+=== PAGE 37 ===
+We have ∥E(X)∥h, ˜
+Rk ≤∥E(X)∥˜
+Rk,h where the latter is deﬁned by
+∥E(X)∥˜
+Rk,h =
+∞
+X
+n,m=0
+hn
+1hm
+2
+n!m! ∥Enm(X)∥˜
+Rk
+(290)
+The polymer functions are required to have tree decay in the polymer X. Size is measured on the
+M-scale and we deﬁne dM(X) by
+MdM(X) = length of the shortest continuum tree joining the M-cubes in X.
+(291)
+If |X|M is the number of M cubes in X, then
+dM(X) ≤|X|M ≤O(1)(dM(X) + 1)
+(292)
+Also there are constants κ0, K0 = O(1) such that for any M-cube □
+X
+X∈Dk,X⊃□
+e−κ0dM(X) ≤K0
+(293)
+We assume κ = O(1) and κ ≥κ0. We deﬁne an associated norm
+∥E∥˜
+Rk,h,κ = sup
+X
+∥E(X)∥˜
+Rk,heκdM(X)
+(294)
+It is useful to let h depend on the running coupling constant ek. Pick a ﬁxed ǫ > 0 small. Then
+deﬁne hk = e
+−1
+4
+k
+and
+hk = (hk,1, hk,2) =
+
+hk, eǫ
+khk
+
+=
+
+e
+−1
+4
+k
+, e
+−1
+4 +ǫ
+k
+
+(295)
+The basic norm after k steps is then
+∥E∥k ≡∥E∥˜
+Rk,hk,κ
+(296)
+The space of all polymer functions with this norm is a Banach space called Kk.
+4.4
+scaling
+At this point drop the reference to the speciﬁc ﬁelds ψk(A, ξ), χk(A, ζ) and consider general Grassman
+variables ψ(ξ), χ(ζ) on T−k
+N−k of the same type, but do not assume any relation between them. Let
+E(X, A, ψ, χ) be a polymer function of these variables as above.
+We will want to scale the polymer function. Since M-cubes do not scale to M-cubes we ﬁrst need
+a blocking operation. If X ∈Dk let ¯XL be the smallest union of LM blocks containing X. Then if Z
+is a connected union of LM blocks we deﬁne
+(BE)(Z, ψ, χ) =
+X
+X: ¯
+XL=Z
+E(X, ψ, χ)
+(297)
+We deﬁne a scaled polymer function (BE)L−1 on T−k−1
+N−k−1 as follows. For Y, A, ψ, χ on T−k−1
+N−k−1
+(BE)L−1(Y, A, ψ, χ) ≡(BE)(LY, AL, ψL, χL) =
+X
+X: ¯
+XL=LY
+E(X, AL, ψL, χL)
+(298)
+Then we have
+X
+X∈Dk
+Ek(X, AL, ψL, χL) =
+X
+Y ∈Dk+1
+(BE)L−1(Y, A, ψ, χ)
+(299)
+37
+
+=== PAGE 38 ===
+The scaled ﬁelds on T−k
+N−k are
+AL(b) =L−1
+2 A(L−1b)
+ψL(ξ) =ψL(x, β, ω) = L−1ψ(L−1x, β, ω)
+χL(ξ) =χL(x, y, β, ω) = L−1−αχ(L−1x, L−1y, β, ω)
+(300)
+If we deﬁne E(X, AL, ψL, χL) = (SLE)(X, A, ψ, χ), then the kernel of SLE is
+(SLE)nm(X, A, ξ1, . . . , ξn, ζ1, . . . , ζm)
+=L3n+6mL−nL−(1+α)mEnm(X, AL, Lξ1, . . . , Lξn, Lζ1, . . . , Lζm)
+(301)
+and it has the norm
+∥(SLE)nm(X, A)∥
+=
+Z
+L3n+6mL−nL−(1+α)m|Enm(X, AL, Lξ1, . . . , Lξn, Lζ1, . . . , Lζm)|dξ1 · · · dξn dζ1 · · · dζm
+=
+Z
+L−nL−(1+α)m|Enm(X, AL, ξ′
+1, . . . , ξ′
+n, ζ′
+1, . . . , ζ′
+m)|dξ′
+1 · · · dξ′
+n dζ′
+1 · · · dζ′
+m
+=L−nL−(1+α)m∥Enm(X, AL)∥
+(302)
+If A ∈Rk+1 then since ek+1 = L
+1
+2 ek
+|AL| <L−1
+2 e
+−3
+4 +ǫ
+k+1
+< L−7
+8 + 1
+2 ǫe
+−3
+4 +ǫ
+k
+|∂AL| <L−3
+2 e
+−3
+4 +2ǫ
+k+1
+< L−15
+8 +ǫe
+−3
+4 +2ǫ
+k
+|δα∂AL| <L−3
+2 −αe
+−3
+4 +3ǫ
+k+1
+< L−15
+8 −α+ 3
+2 ǫe
+−3
+4 +3ǫ
+k
+(303)
+The L factors are all less than L−3
+4 so AL ∈L−3
+4 Rk. It follows also that A ∈˜Rk+1 implies AL ∈
+L−3
+4 ˜Rk. Thus we have
+∥(SLE)nm(X)∥˜
+Rk+1 ≤L−nL−(1+α)m∥Enm(X)∥L−3
+4 ˜
+Rk
+(304)
+For the moment we throw away the contracting factors L−nL−(1+α)m, enlarge L−3
+4 ˜Rk to ˜Rk, and take
+hk+1 < hk to get
+∥(SLE)(X)∥˜
+Rk+1,hk+1 ≤∥E(X)∥˜
+Rk,hk ≤∥E∥ke−κdM(X)
+(305)
+and so
+∥(BE)L−1(Y )∥˜
+Rk+1,hk+1 ≤∥E∥k
+X
+X: ¯
+X=LY
+e−κdM(X)
+(306)
+If ¯X = LY then LdM(Y ) ≤dM(X) so we can extract a factor e−L(κ−κ0)dM(Y ) leaving e−κ0dM(X).
+Then using (293) the sum over X is bounded by O(1)|LY |M ≤O(1)L3edM(Y ). Therefore
+X
+X: ¯
+X=LY
+e−κdM(X) ≤O(1)L3e−L(κ−κ0−1)dM(Y ) ≤O(1)L3e−κdM(Y )
+(307)
+where the second inequality holds for L suﬃciently large. Thus we get the crude bound
+∥(BE)L−1∥k+1 ≤O(1)L3∥E∥k
+(308)
+38
+
+=== PAGE 39 ===
+4.5
+symmetries
+We assume the polymer functions E(X, A, ψ, χ) have the following symmetries:
+• Invariance under T0
+N−k lattice symmetries
+E(rX + a, Aa,r, ψa,r, χa,r) = E(X, A, ψ, χ)
+(309)
+• Gauge invariance
+E(X, Aλ, ψλ, χλ) = E(X, A, ψ, χ)
+(310)
+• Charge conjugation invariance
+E(X, −A, Cψ, Cχ) = E(X, A, ψ, χ)
+(311)
+• Complex conjugation. If A is real the kernels satisfy (now distinguishing ψ, ¯ψ and χ, ¯χ)
+ker E
+
+X, −A, γ3Cψ, [(γ3C)−1]T ¯ψ, γ3Cχ, [(γ3C)−1]T ¯χ
+
+= ker E
+
+X, A, ψ, ¯ψ, χ, ¯χ
+
+(312)
+For the ﬁrst three we also require the corresponding transformation properties for the the kernels.
+In particular the gauge invariance says that Enm(X, A −∂λ) and Enm(X, A) diﬀer by a phase factor.
+It follows that the the norm is gauge invariant:
+∥Enm(X, A −∂λ)∥= ∥Enm(X, A)∥
+(313)
+Here are some consequences for the piece E00(X, A) with no fermion ﬁelds. The pth derivative in
+A is the multilinear functional
+δpE00
+δAp
+
+X, A; f1, . . . , fp
+
+=
+∂p
+∂t1 . . . ∂tp
+h
+E00(X, A + t1f1 + · · · + tpfp, 0)
+i
+t=0
+(314)
+If one of the functions has the form fi = ∂λ, then by gauge invariance there is no dependence on ti
+and the derivative vanishes. Thus we have the Ward identity
+δpE00
+δAp
+
+X, A; f1, . . . , ∂λ, . . . , fp
+
+= 0
+(315)
+Charge conjugation invariance gives E00(X, −A) = E00(X, A) and this implies
+δpE00
+δAp (X, 0) = 0
+if p is odd
+(316)
+4.6
+normalization
+As we iterate the RG transformations the scaling operation can increase the size of the polymer
+functions by as much as O(L3) as is evident from (308). We have to watch this carefully and start by
+introducing a criterion to avoid the growth. The following is similar to the analysis in [22], [25], [29].
+Deﬁnition 3. A polymer function E(X, A, ψk(A), χk(A)) with kernels Enm(X, A) satisfying the stated
+symmetries is said to be normalized if in addition to the vanishing derivatives (315), (316) we have
+E00(X, 0) = 0
+Z
+E20
+
+X, 0; (x, α, 1), (y, β, 0)
+
+dxdy = 0
+(317)
+We generally only require normalization small polymers.
+Deﬁnition 4. A polymer X is small if dM(X) ≤L and large if dM(X) > L. The set of all small
+polymers in denoted S.
+39
+
+=== PAGE 40 ===
+4.6.1
+extraction
+Normalization is achieved by extracting certain relevant terms from the polymer function.
+Given
+E(X, A, ψ, χ) with kernels Enm(X, A) on T−k
+N−k satisfying lattice, gauge, and charge conjugation sym-
+metries we deﬁne (RE)(X, A, ψ, χ) as follows. If X is large then (RE)(X, A) = E(X, A). If X is small
+(X ∈S) then (RE)(X, A) is deﬁned by
+E(X, A, ψ, χ) = α0(E, X)Vol(X) +
+Z
+X
+¯ψ [α2(E, X)] ψ + (RE)(X, A, ψ, χ)
+(318)
+where
+α0(E, X) =
+1
+Vol(X)E00(X, 0)
+[α2(E, X)]αβ =
+1
+Vol(X)
+Z
+E20
+
+X, 0; (x, α, 1), (y, β, 0)
+
+dxdy
+(319)
+Lemma 13. RE is invariant under lattice, gauge, and charge symmetries. RE is normalized for
+small polymers and satisﬁes
+∥RE∥k ≤O(1)∥E∥k
+(320)
+Proof. The invariance follows since everything else in (318) is invariant. The derivatives (317) match
+on the left and right except for the term RE, hence its derivatives vanish. The bound holds since
+everything else in (318) satisﬁes the bound. We omit the details.
+For global quantities we only have to remove energy and mass terms.
+Corollary 1.
+X
+X
+E(X) = −ε(E)Vol(TN−k) −m(E)
+Z
+¯ψψ +
+X
+X
+RE(X)
+(321)
+where
+ε(E) = −
+X
+X⊃□,X∈S
+α0(E, X)
+m(E)δαβ = [m(E)]αβ = −
+X
+X⊃□,X∈S
+[α2(E, X)]αβ
+(322)
+are real and satisfy
+|ε(E)| ≤O(1)∥E∥k
+|m(E)| ≤O(1)h−2
+k ∥E∥k = O(1)e
+1
+2
+k ∥E∥k
+(323)
+Proof. The constant term in P
+X E(X) is P
+X∈S α0(E, X)Vol(X). Insert Vol(X) = P
+□⊂X Vol(□)
+and change the order of the sums to write this as
+−
+X
+□
+ε(E, □)Vol(□)
+where
+ε(E, □) = −
+X
+X⊃□,X∈S
+α0(E, X)
+(324)
+But ε(E, □) is independent of □and is denoted ε(E) to give the ﬁrst term in (321). The bounds on
+ε(E) follows directly.
+40
+
+=== PAGE 41 ===
+The mass term in P
+X E(X) is P
+X
+R
+X ¯ψ [α2(E, X)] ψ. Write
+R
+X = P
+□⊂X
+R
+□and change the
+order of the sums to write this as
+−
+X
+□
+Z
+□
+¯ψ m(E, □)ψ
+where
+m(E, □) = −
+X
+X⊃□,X∈S
+α2(E, X)
+(325)
+But m(E, □) is independent of □and is denoted m(E) and the expression becomes R ¯ψ m(E)ψ.
+Next we explain why the matrix m(E) is a multiple of the identity. Our assumption that E is
+invariant under lattice symmetries implies if S is a spinor representation of a rotation or reﬂection
+r then S−1α(E, rX)S = α(E, X). Specialize to r leaving the center of □invariant and sum over
+X ∈S, X ⊃□to get S−1m(E)S = m(E). Take S = γµ for 0 ≤µ ≤3 which induce reﬂections. We
+conclude that [γµ, m(E)] = 0 and hence that m(E) is a multiple of the identity.
+We also need to show that m(E) is real. This follows since E2,0(X, 0) = (γ3C)−1E2,0(X, 0)γ3C by
+(312) and hence m(E) = (γ3C)−1m(E)γ3C = m(E). Similarly ε(E) is real.
+The bounds on ε(E), m(E) follow from
+Vol(X)|α0(E, X)| ≤e−κdM(X)∥E∥k
+Vol(X)|[α2(E, X)]α,β| ≤∥Ek(X, 0)∥≤h−2
+k ∥Ek(X, 0)∥hk ≤h−2
+k e−κdM(X)∥E∥k
+(326)
+and P
+X⊃□e−κdM(X) ≤O(1)
+Remark.
+For the subsequent paper we generalize this construction to the case where instead of
+P
+X E(X) we have a restricted sum P
+X⊂Λ E(X) where Λ is a union of M blocks. In this case ε(E, □)
+and m(E, □) are replaced by
+εΛ(E, □) = −
+X
+X∈S:□⊂X⊂Λ
+α0(E, X)
+mΛ(E, □) = −
+X
+X∈S:□⊂X⊂Λ
+α2(E, X)
+(327)
+which vanishes unless □⊂Λ. Now we have
+X
+X⊂Λ
+E(X) = −ε(E)Vol(Λ) −m(E)
+Z
+Λ
+¯ψψ +
+X
+X⊂Λ
+RE(X) + BΛ
+(328)
+where the extra term is
+BΛ = −
+X
+□⊂Λ
+(εΛ(E, □) −ε(E))Vol(□) −
+X
+□⊂Λ
+Z
+□
+¯ψ
+
+mΛ(E, □) −m(E)
+
+ψ
+(329)
+Inserting the deﬁnitions (327) only polymers X which intersect both Λ and Λc contribute, denoted
+X#Λ, and this can be rearranged to
+BΛ =
+X
+X∈S,X#Λ
+BΛ(X)
+(330)
+where
+BΛ(X) = −α0(E, X) Vol(Λ ∩X) −
+Z
+X∩Λ
+¯ψ α2(E, X) ψ
+(331)
+This correction term is localized around the boundary of Λ and we have
+∥BΛ∥k ≤O(1)∥E∥k
+(332)
+41
+
+=== PAGE 42 ===
+4.6.2
+adjustment
+The next result shows that if E(X, A, ψk(A), χk(A)) is normalized for small X then we can adjust
+the kernels so that both E00(X, 0) = 0 (there is no energy term) and E20(X, 0) = 0 (there is no mass
+term).
+Lemma 14. If E(X, Ak, ψk(A)) with kernels Enm(X, A) is normalized for X ∈S then it can be
+written with new kernels E♮
+nm(X, A) modiﬁed for X ∈S and n + m = 2 such that E♮
+20(X, 0) = 0.
+Furthermore
+1. For A ∈˜Rk
+∥E♮
+20(X, A)∥≤O(1)∥E20(X, A)∥
+∥E♮
+11(X, A)∥≤O(1)ML∥E20(X, A)∥+ ∥E11(X, A)∥
+∥E♮
+02(X, A)∥≤O(1)(ML)2∥E20(X, A)∥+ ∥E02(X, A)∥
+(333)
+2. Let ek be suﬃciently small (depending on L, M) then
+∥E♮(X, A)∥h ≤O(1)∥E(X, A)∥h
+(334)
+Proof. The modiﬁcation comes in the piece with two ψ ﬁelds which we write in an abreviated notation
+as
+Z
+X×X
+¯ψk(A, x)E20(X, A, x, y)ψk(A, y)dxdy
+(335)
+We introduce dummy variables x0, y0 and write this as
+1
+Vol(X)2
+Z
+X×X×X×X
+¯ψk(A, x)E20(X, A, x, y)ψk(A, y)dxdydx0dy0
+(336)
+Now make the substitution
+ψk(A, y) =eiekη(τA)(y,y0)ψk(A, y0) −χk(A, y, y0)|y −y0|α
+¯ψk(A, x) =e−iekη(τA)(x,x0) ¯ψk(A, x0) −¯χk(A, x, x0)|x −x0|α
+(337)
+This yields four terms (all gauge invariant, all integrals over X )
+1
+Vol(X)2
+Z
+¯ψk(A, x0)
+h Z
+e−iekη(τA)(x,x0)E20(X, A, x, y)eiekη(τA)(y,y0)dxdy
+i
+ψk(A, y0)dx0dy0
+−
+1
+Vol(X)2
+Z
+¯ψk(A, x0)
+h Z
+e−iekη(τA)(x,x0)E20(X, A, x, y)|y −y0|αdx
+i
+χk(A, y, y0)dx0dy0dy
+−
+1
+Vol(X)2
+Z
+¯χk(A, x, x0)
+h Z
+|x −x0|αE20(X, A, x, y)eiekη(τA)(y,y0)dy
+i
+ψk(A, y0)dxdx0dy0
++
+1
+Vol(X)2
+Z
+¯χk(A, x, x0)
+h
+|x −x0|αE20(X, A, x, y)|y −y0|αi
+χk(A, y, y0)dx0dy0dxdy
+(338)
+For the ﬁrst term has a kernel
+E♮
+20(X, A, x0, y0) =
+1
+Vol(X)2
+Z
+e−iekη(τA)(x,x0)E20(X, A, x, y)eiekη(τA)(y,y0)dxdy
+(339)
+This does vanish at A = 0 by the normalization assumption. We want to bound the norm ∥E♮
+20(X, A)∥.
+Since X ∈S it is contained in some □† and so the ﬁeld A ∈˜Rk is gauge equivalent to a ﬁeld
+42
+
+=== PAGE 43 ===
+A ∈Rk. Since ∥E♮
+20(X, A)∥is gauge invariant it suﬃces to assume A ∈Rk. Since x, x0 ∈X we have
+|x −x0| ≤O(1)ML and so
+|ekη(τA)(x, x0)| ≤O(1)ekML∥A∥∞≤O(1)MLe
+1
+4 +ǫ
+k
+≤1
+(340)
+This yields the desired bound
+∥E♮
+20(X, A)∥≤O(1)
+1
+Vol(X)2
+Z
+|E20(X, A, x, y)|dxdydx0dy0
+≤O(1)
+Z
+|E20(X, A, x, y)|dxdy = O(1)∥E20(X, A)∥
+(341)
+The second term has the kernel
+E(1)
+11 (X, A, x0, y0, y) =
+1
+Vol(X)2
+Z
+e−iekη(τA)(x,x0)E20(X, A, x, y)|y −y0|αdx
+(342)
+and we estimate
+∥E(1)
+11 (X, A)∥≤O(1)
+1
+Vol(X)2 ML
+Z
+|E20(X, A, x, y)|dx0dy0dxdy = O(1)ML∥E20(X, A)∥
+(343)
+This gives a contribution to E♮
+11(X, A) as does the third term in (338), as well as the original term
+E11(X, A). The stated bound on E♮
+11(X, A) follows.
+The last term has the kernel
+E(1)
+02 (X, A, x, x0, y, y0) =
+1
+Vol(X)2 |x −x0|αE20(X, A, x, y)|y −y0|α
+(344)
+with norm bounded by O(1)(ML)2∥E20(X, A)∥. This contributes to E♮
+02(X, A) as does the original
+term E02(X, A) and the stated bound follows. This completes the proof of part 1.
+Part 2 is where we use the fact that ψ and χ are weighted diﬀerently. It suﬃces to look at the
+terms E♮
+11(X, A) and E♮
+02(X, A) since E♮
+20(X, A) = 0 and all the others are unchanged. In the ﬁrst
+case we
+hk,1hk,2∥E♮
+11(X, A)∥≤hk,1hk,2
+
+O(1)ML∥E20(X, A)∥+ ∥E11(X, A)∥
+
+≤1
+2h2
+k,1∥E20(X, A)∥+ hk,1hk,2∥E11(X)∥
+≤∥E(X, A)∥hk
+(345)
+Here we used hk,2 = hk,1eǫ
+k and then O(1)MLeǫ
+k < 1
+2 for ek suﬃciently small. The term E♮
+02(X, A) is
+treated similarly and the result follows
+4.6.3
+improved scaling
+After the adjustments of the last two sections are made we have improved scaling.
+Lemma 15. Let L be suﬃciently large and ek suﬃciently small (depending on L, M).
+Suppose
+E(X, A, ψ, χ) has all the symmetries and satisﬁes for small sets X:
+E00(X, 0) = 0
+E20(X, 0) = 0
+(346)
+Then
+∥(BE)L−1∥k+1 ≤O(1)L−1
+4 +2ǫ∥E∥k
+(347)
+43
+
+=== PAGE 44 ===
+Proof. This follows a similar proof in [29]. Refer to the previous bound in section 4.4 and consider
+separately small polymers X ∈S and large polymers X /∈S. For X /∈S we have dM(X) > L and
+so in the sum (307) restricted to X /∈S we can take e−κdM(X) ≤e−Le−(κ−1)dM(X). The rest of the
+estimate proceeds essentially as before and we ﬁnd that these terms are bounded by O(1)L3e−L∥Ek∥
+which is more than enough.
+Thus we consider small sets. It suﬃces to show that (305) can be improved for X ∈S to
+∥(SLE)(X)∥˜
+Rk+1,hk+1 ≤O(1)L−13
+4 +2ǫ∥E(X)∥˜
+Rk,hk
+(348)
+The extra factor L−13
+4 beats the factor L3 in the blocking operation and we have the result. As noted
+in the proof of lemma 14, for small polymers we can replace the extended domain ˜Rk by the more
+managable Rk. So it suﬃces to prove for X ∈S
+∥(SLE)(X)∥Rk+1,hk+1 ≤O(1)L−13
+4 +2ǫ∥E(X)∥Rk,hk
+(349)
+Taking account the total number of fermi ﬁelds is even we write
+∥SLE(X)∥Rk+1,hk+1 = ∥(SLE)00(X)∥Rk+1
++1
+2h2
+k+1,1∥(SLE)20(X)∥Rk+1 + hk+1,1hk+1,2∥(SLE)11(X)∥Rk+1 + 1
+2h2
+k+1,2∥(SLE)02(X)∥Rk+1
++
+X
+n+m≥4
+hn
+k+1,1hm
+k+1,2
+n!m!
+∥(SLE)nm(X)∥Rk+1
+(350)
+and look at each term separately.
+The last term in (350) is bounded by (304) by
+X
+n+m≥4
+hn
+k+1,1hm
+k+1,2
+n!m!
+L−nL−(1+α)m∥Enm(X)∥L−3
+4 Rk ≤L−4
+X
+n+m≥4
+hn
+k,1hm
+k,2
+n!m!
+∥Enm(X)∥Rk
+≤L−4∥E(X)∥Rk,hk
+(351)
+which suﬃces.
+For the third term in (350) we have by (304) and hk+1,i ≤L−1
+8 + 1
+2 ǫhk,i
+hk+1,1hk+1,2∥(SLE)11(X)∥Rk+1 ≤hk+1,1hk+1,2L−1L−(1+α)∥E11(X)∥L−3
+4 Rk
+≤L−9
+4 −α+ǫhk,1hk,2∥E11(X)∥Rk
+≤L−13
+4 +2ǫ∥E(X)∥Rk,hk
+(352)
+Here we have assumed 1 −ǫ < α < 1 so α −ǫ > 1 −2ǫ. The fourth term in (350) is even easier since
+we have L−2(1+α) instead of L−1L−(1+α). But for the second term we only have L−2 which is not
+enough.
+To continue we have to take advantage of the scaling in A. Let x0 be a point in X and for A ∈Rk+1
+deﬁne A′(x) = A(x) −A(x0). Then this is a gauge transformation with λ(x) = A(x0) · (x −x0). For
+any ﬁxed n and x ∈X we have for ek suﬃciently small
+|A′(x)| < O(1)ML∥∂A∥∞≤O(1)MLe
+−3
+4 +2ǫ
+k+1
+< L−ne
+−3
+4 +ǫ
+k
+(353)
+and the same holds for A′
+L. Also |∂A′
+L| < L−7
+4 e
+−3
+4 +2ǫ
+k
+and |δα∂A′
+L|, < L−7
+4 −αe
+−3
+4 +3ǫ
+k
+from (303) and we
+conclude that A′
+L ∈L−7
+4 Rk which improves the original AL ∈L−3
+4 Rk. Since the gauge transformation
+is complex we no longer have that ∥Enm(X, A)∥is gauge invariant. The kernels are transformed by
+44
+
+=== PAGE 45 ===
+phase factors eiekλ. However |iekλ| ≤O(1)MLeǫ
+k ≤1 and so there is a constant c = O(1) (depending
+on n, m) so
+c−1∥Enm(X, AL)∥≤∥Enm(X, A′
+L)∥≤c∥Enm(X, AL)∥
+(354)
+Now for the second term in (350) we have
+1
+2h2
+k+1∥(SLE)20(X, A)∥= 1
+2h2
+k+1L−2∥E20(X, AL)∥≤O(1)h2
+kL−2∥E20(X, A′
+L)∥
+(355)
+Since A′
+L ∈L−7
+4 Rk we have that t →tA′
+L is an analytic function from complex t satisfying |t| < L
+7
+4
+to Rk. Hence t →E20(X, tA′
+L) is analytic with norm bounded by ∥E20(X)∥Rk. Since E20(X, 0) = 0
+we have
+E20(X, A′
+L) =
+1
+2πi
+Z
+|t|=L
+7
+4
+dt
+t(t −1)E20(X, tA′
+L)dt
+(356)
+and this gives the estimate for A ∈Rk+1
+∥E20(X, A′
+L)∥≤L−7
+4 ∥E20(X)∥Rk
+(357)
+Put this in (355) and the second term in (350) is bounded by
+O(1)h2
+kL−15
+4 ∥E20(X)∥Rk ≤O(1)L−15
+4 ∥E(X)∥Rk,hk
+(358)
+Finally consider the ﬁrst term in (350). Since E00(X, A) vanishes at zero and is even in A the
+expansion around A = 0 starts with the second order term. We have for A ∈Rk+1, again making a
+gauge transformation to A′
+(SLE)00(X, A) = E00(X, AL) = E00(X, A′
+L) =
+1
+2πi
+Z
+|t|=L
+7
+4
+dt
+t2(t −1)E00(X, tA′
+L)
+(359)
+which gives for
+∥(SLE)00(X, A)∥≤O(1)L−7
+2 ∥E00(X)∥Rk ≤O(1)L−7
+2 ∥E(X)∥Rk,hk
+(360)
+4.7
+polymer propagators
+We can also localize the fermion propagators with polymers using the random walk expansion (139).
+Assume A is in the domain (134) or the smaller ˜Rk, and for a walk ω = (ω0, ω1, . . . , ωn) deﬁne
+X′
+ω = ∪n
+i=0 ˜□ωi. Then write
+Sk(A) =
+X
+X∈Dk
+Sk(X, A)
+(361)
+where
+Sk(X, A) =
+X
+ω:X′ω=X
+Sk,ω(A) =
+∞
+X
+n=0
+X
+ω:|ω|=n,X′ω=X
+Sk,ω(A)
+(362)
+Then Sk(X, A) only depends on A in X, and the kernel Sk(X, A, x, y) vanishes unless x, y ∈X.
+Recall that if |ω| = n then |Sk,ω(A)f| ≤C(CM −1)n∥f∥∞. But dM(X) ≤|X|M = |X′
+ω|M ≤
+27(n + 1) so we can make the estimate
+(CM −1
+2 )n ≤O(1)(CM −1
+2 )dM(X)/27 ≤O(1)e−κdM(X)
+(363)
+for M suﬃciently large. The remaining factor (CM −1
+2 )n still gives the overall convergence of the series
+and we have the bound
+|Sk(X, A)f| ≤Ce−κdM(X)∥f∥∞
+(364)
+45
+
+=== PAGE 46 ===
+5
+Fermion determinant
+5.1
+a determinant identity
+In [16] Balaban establishes the following identity for the determinant of a positive self-adjoint matrix
+T. It is
+det T = exp( Tr log T )
+(365)
+where for any R0 > 0
+log T = T
+Z ∞
+R0
+dx
+x (T + x)−1 −
+Z R0
+0
+dx(T + x)−1 + log R0
+(366)
+Here we prove a generalization for the case where T has negative spectrum as well. We take the
+branch of the logarithm with the cut on the negative imaginary axis, so log is deﬁned on the entire
+real axis except the origin. Then the identity det T = exp( Tr log T ) still holds and we have
+Lemma 16. Let T be an invertible self-adjoint matrix. Then det T = exp( Tr log T ) where for any
+R0 > 0
+log T = T
+Z ∞
+R0
+dy
+y (T + iy)−1 −i
+Z R0
+0
+dy(T + iy)−1 + log R0 + iπ
+2
+(367)
+Proof. Consider simple closed curve Γ traversed counterclockwise and made up of the pieces
+• ΓR = {z ∈C : |z| = R, −π
+2 + ǫ ≤arg z ≤3π
+2 −ǫ }
+• Γ−= {z ∈C : r ≤|z| ≤R, arg z = 3π
+2 −ǫ }
+• Γr = {z ∈C : |z| = r, −π
+2 + ǫ ≤arg z ≤3π
+2 −ǫ}
+• Γ+ = {z ∈C : r ≤|z| ≤R, arg z = −π
+2 + ǫ }
+For R suﬃciently large and r suﬃciently small this encloses the spectrum of T . The function log z is
+analytic inside Γ and so
+log T =
+1
+2πi
+Z
+Γ
+dz log z (z −T )−1
+(368)
+Now for any r < R0 < R split the contour by Γ = Γ< + Γ> where Γ< = Γ ∩{z : |z| ≤R0} and
+Γ> = Γ ∩{z : |z| ≥R0}. In the integral over Γ> we insert the identity
+(z −T )−1 = z−1 + z−1T (z −T )−1
+(369)
+We take the limit ǫ →0. For the ﬁrst term the discontinuity in log z across the negative imaginary
+axis contributes −2πi and we get
+lim
+ǫ→0
+1
+2πi
+Z
+Γ>
+dz
+z
+log z = −
+Z R
+R0
+dy
+y +
+1
+2πi
+Z
+|z|=R
+dz
+z
+log z
+= −log R + log R0 + 1
+2π
+Z
+3
+2 π
+−1
+2 π
+dθ(log R + iθ)
+= log R0 + iπ
+2
+(370)
+For the integral of the second term we have
+lim
+ǫ→0
+1
+2πi
+Z
+Γ>
+dz
+z log z T (z −T )−1 = T
+Z R
+R0
+dy
+y (iy + T )−1 +
+1
+2πiT
+Z
+|z|=R
+dz
+z log z (z −T )−1
+(371)
+46
+
+=== PAGE 47 ===
+Take the limit R →∞. The second term is O(R−1 log R) and converges to zero. For the ﬁrst term the
+integrand is O(y−2) and it converges to the integral over [R0, ∞). Finally there is the integral over
+Γ< which is
+lim
+ǫ→0
+1
+2πi
+Z
+Γ<
+dz log z (z −T )−1 = −i
+Z R0
+r
+dy(iy + T )−1 +
+1
+2πi
+Z
+|z|=r
+dz log z (z −T )−1
+(372)
+Take the limit r →0. Since zero is not an eigenvalue the second term is O(r log r) and converges to
+zero. For the ﬁrst term the integrand is bounded and it converges to the integral over [0, R0].
+5.2
+determinant of the ﬂuctuation operator
+We want to apply this to Dk(A) + bL−1P(A) where Dk(A) = bk −b2
+kQk(A)Sk(A)QT
+k (−A) and
+Sk(A) =
+
+DA + ¯m + bkPk(A)
+−1
+DA = γ · ∇A −1
+2η∆A
+(373)
+At ﬁrst we assume A is real. Then (γ · ∇A)∗= −γ · ∇A while ∆∗
+A = ∆A, so DA is not self-adjoint.
+However (γ3 γ · ∇A)∗= γ3 γ · ∇A and γ3∆∗
+A = γ3 ∆A, so γ3DA is self-adjoint. The same is true for
+γ3Pk(A) and hence for Sk(A)γ3 and Dk(A)γ3. Therefore (Dk(A) + bL−1P(A))γ3 is self-adjoint. Since
+det γ3 = 1 this has the same determinant as Dk(A) + bL−1P(A) namely δZk(A).
+Lemma 17. For A real and in the domain (134) (or ˜Rk )
+δZk(A) = det
+
+(Dk(A) + bL−1P(A))γ3
+
+= exp
+
+4|T0
+N−k|
+
+(1 −L−3) log bk + L−3 log(bk + bL−1)
+
+−iγ3b2
+k
+Z ∞
+0
+Tr
+h
+Bk,y(A)Qk(A)Sk,y(A)QT
+k (−A)Bk,y(A)
+i
+dy
+
+(374)
+where
+Bk,y(A) =
+1
+bk + iγ3y (I −P(A)) +
+1
+bk + bL−1 + iγ3y P(A)
+Sk,y(A) =
+
+DA + ¯mk + αk,yPk(A) + βk,yPk+1(A)
+−1
+αk,y =
+bkiγ3y
+bk + iγ3y
+βk,y =
+b2
+kbL−1
+(bk + bL−1 + iγ3y)(bk + iγ3y)
+(375)
+Remark. Note that Sk,y(A) interpolates between Sk(A) at y = ∞and S0
+k+1(A) at y = 0 (use (61)).
+Proof. By lemma 16
+δZk(A) = exp
+
+Tr log
+
+(Dk(A) + bL−1P(A)
+
+γ3
+
+(376)
+where for any R0
+log
+
+(Dk(A) + Pk(A)γ3
+
+=
+
+Dk(A) + b
+LPk(A)
+
+γ3
+Z ∞
+R0
+dy
+y
+
+(Dk(A) + bL−1P(A))γ3 + iy
+−1
+−i
+Z R0
+0
+dy
+
+(Dk(A) + bL−1P(A))γ3 + iy
+−1
++ log R0 + iπ
+2
+=
+
+Dk(A) + bL−1P(A)
+ Z ∞
+R0
+dy
+y Γk,y(A) −iγ3
+Z R0
+0
+dyΓk,y(A) + log R0 + iπ
+2
+(377)
+47
+
+=== PAGE 48 ===
+Here we deﬁned
+Γk,y(A) =
+
+Dk(A) + bL−1P(A) + iγ3y
+−1
+(378)
+From appendix B we have the representation
+Γk,y(A) = Bk,y(A) + b2
+kBk,y(A)Qk(A)Sk,y(A)QT
+k (−A)Bk,y(A)
+(379)
+Now in (377) take the limit R0 →∞. We have Γk,y(A) = O(y−1), hence the ﬁrst term in (377)
+goes to zero. The second term in (377) is
+Z R0
+0
+−iγ3dy
+bk + iγ3y(I −P(A)) +
+Z R0
+0
+−iγ3dy
+bk + bL−1 + iγ3y P(A)
+−iγ3b2
+k
+Z R0
+0
+Bk,y(A)Qk(A)Sk,y(A)QT
+k (−A)Bk,y(A) dy
+(380)
+As y →∞we have Bk,y(A) = O(y−1) and we show below that Sk,y(A) = O(1). Hence last term is
+O(y−2) so we can take the limit R0 →∞. For the ﬁrst term we compute
+Z R0
+0
+−iγ3dy
+bk + iγ3y =
+Z R0
+0
+dy −iγ3(bk −iγ3y)
+b2
+k + y2
+dy = −iγ3 tan−1 R0
+bk
+
++ 1
+2
+
+log b2
+k −log(b2
+k + R2
+0)
+
+(381)
+and similarly for the second term. Now use tan−1(R0/bk) →π/2 and −1
+2 log(b2
+k + R2
+0) + log R0 →0.
+and obtain
+log
+
+(Dk(A) + b
+LP(A))γ3
+
+= log bk(I −P(A)) + log(bk + bL−1)P(A)
+−iγ3b2
+k
+Z ∞
+0
+Bk,y(A)Qk(A)Sk,y(A)QT
+k (−A)Bk,ydy + iπ
+2 (1 −γ3)
+(382)
+For the determinant we need to take the trace of this and exponentiate. The trace of the projection
+is is
+Tr P(A) = Tr (QT (−A)Q(A)) = Tr (Q(A)QT (−A)) = 4|T1
+N−k| = 4L−3|T0
+N−k|
+(383)
+independent of A. Similarly Tr (I −P(A)) = 4(1 −L−3)|T0
+N−k|. Furthermore
+Tr iπ
+2 (1 −γ3) = Tr iπ
+2 = iπ
+2 4|T0
+N−k| = 2πi|T0
+N−k|
+(384)
+does not contribute when exponentiated. Hence we have the result (374).
+We will also need a random walk expansion for Sk,y(A). As for Sk(A) the main ingredient is control
+over a local inverses for the modiﬁed Dirac operator. Instead of lemma 4 we have:
+Lemma 18. Under the hypotheses of lemma 4 and for A in the domain (134) there is an operator
+Sk,y(□, A) on functions on ˜□(5) satisfying
+
+DA + ¯mk + αk,yPk(A) + βk,yPk+1(A)
+
+Sk,y(□, A)f
+
+(x) = f(x)
+x ∈˜□
+(385)
+and
+|Sk,y(□, A)f|, ≤C∥f∥∞
+|1∆ySk,y(□, A)1∆y′ f|, ≤Ce−γd(y,y′)∥f∥∞
+(386)
+The proof is similar to the analysis of [21], and is postponed to [30] where multi-scale random walk
+expansions are discussed in detail. Assuming this result we have instead of lemma 5:
+48
+
+=== PAGE 49 ===
+Lemma 19. Under the hypotheses of lemma 5 and for A in the domain (134) (or ˜Rk) there is a
+random walk expansion
+Sk,y(A) =
+X
+ω
+Sk,y,ω(A)
+(387)
+converging to a function analytic in A which satisﬁes
+|Sk(A)f|, ≤C∥f∥∞
+|1∆ySk(A)1∆y′ f|, ≤Ce−γd(y,y′)∥f∥∞
+(388)
+The proof follows the proof of lemma 5.
+As in section 4.7 there is an associated polymer expansion
+Sk,y(A) =
+X
+X
+Sk,y(X, A)
+(389)
+with
+|Sk,y(X, A)f| ≤Ce−κdM(X)∥f∥∞
+(390)
+6
+The main theorem
+6.1
+the theorem
+The starting density on T0
+N from (24) is
+ρ0(A0, Ψ0) = exp
+
+−1
+2∥dA0∥2 −
+D
+¯Ψ0, (DA0 + ¯m0)Ψ0
+E
+−m0
+D
+¯Ψ0, Ψ0
+E
+−ε0
+
+(391)
+For the full analysis of the model we deﬁne a sequence of densities ρk(Ak, Ψk) for ﬁelds on T0
+N−k by
+successive RG transformations. Given ρk we ﬁrst deﬁne as in (46) and (164) for ﬁelds on T1
+N−k
+˜ρk+1(Ak+1, Ψk+1) =
+Z
+δ
+
+Ak+1 −QAk
+
+δ(τAk)δG
+
+Ψk+1 −Q( ˜Ak+1)Ψk
+
+ρk(Ak, Ψk)DΨkDAk
+(392)
+We chose the background ﬁeld ˜Ak+1 on T−k
+N−k to be a smeared out version of Ak+1 deﬁned precisely
+later on. Then we scale to ﬁelds on T0
+N−k−1 as in (51),(165) by
+ρk+1(Ak+1, Ψk+1) = ˜ρk+1(Ak+1,L, Ψk+1,L)L
+1
+2 (bN−bN−k−1)−17
+2 (sN −sN−k−1)
+(393)
+In this paper we consider a bounded ﬁeld approximation in which (392) is replaced by
+˜ρk+1(Ak+1, Ψk+1) =
+Z
+χk ˆχk δ
+
+Ak+1 −QAk
+
+δ(τAk)δG
+
+Ψk+1 −Q( ˜Ak+1)Ψk
+
+ρk(Ak, Ψk)DΨkDAk
+(394)
+and scaling is the same. New are the characteristic functions χk ˆχk enforcing bounds on the ﬁelds.
+The bounds are logarithmic in the coupling constant and depend on the quantities
+pk = (−log ek)p
+p0,k = (−log ek)p0
+(395)
+where p, p0 are suﬃciently large positive integers satisfying p0 < p. Since ek is small these are somewhat
+large. The bounds are on the real minimizer Ak = HkAk on T−k
+N−k and on the real ﬂuctuation ﬁeld
+(Ak −Hx
+kAk+1) on T0
+N−k
+χk =χ
+
+|dAk| ≤pk
+
+ˆχk =χ
+
+|Ak −Hx
+kAk+1| ≤p0,k
+
+(396)
+49
+
+=== PAGE 50 ===
+We have Ak = QkAk and dAk = Q(2)
+k dAk where Q(2)
+k
+is a certain averaging operator on functions on
+plaquettes. Hence χk also enforces that |dAk| ≤pk. These restrictions are natural in Balaban’s formu-
+lation of the renormalization group. Our goal is to study the ﬂow of these modiﬁed transformations.
+As noted earlier this is the location of the renormalization problem.
+We are going to assert that after k steps for real Ak with |dAk| ≤pk we have a density ρk(Ak, Ψk)
+essentially of the form
+ρk(Ak, Ψk) = NkZkZk(0)
+exp
+
+−1
+2∥dAk∥2 −Sk(Ak, ψk(Ak)) −mk
+D
+¯ψk(Ak), ψk(Ak)
+E
+−εkVol(TN−k) + Ek(Ak, ψ#
+k (Ak))
+
+(397)
+Here ψk(A) = Hk(A)Ψk and
+ψ#
+k (A) =
+
+ψk(A), χk(A)
+
+=
+
+ψk(A), δα,Aψk(A)
+
+(398)
+The free fermi action Sk(Ak, ψk(Ak)) is deﬁned in (82), the determinant Zk(Ak) is deﬁned in (84) and
+the determinant Zk is deﬁned in (172). The function Ek(A, ψ#(A)) is a sum over polymer functions
+Ek(A, ψ#(A)) =
+X
+X∈Dk
+Ek(X, A, ψ#(A))
+(399)
+These assumptions are true for k = 0 with Z0 = Z0(A) = 1, E0 = 0, and the convention that
+A0 = A0 and and ψ0(A0) = Ψ0 and D0(A0) = DA0 + ¯m0.
+Theorem 1. Let L be suﬃciently large, let M be suﬃciently large (depending on L), and let e be
+suﬃciently small (depending on L, M). Suppose that ρk(Ak, Ψk) has the representation (397) for Ak
+such that |dAk| ≤pk. Suppose the polymer function Ek(X, A, ψ#
+k (Ak)) has kernels Ek(X, A) deﬁned
+and analytic in A ∈˜Rk with all the symmetries of section 4.5. Suppose also that
+|mk| ≤e
+1
+2
+k
+∥Ek∥k ≤1
+(400)
+Then up to a phase shift ρk+1(Ak+1, Ψk+1) has a representation of the same form for Ak+1 such
+that |dAk+1| ≤pk+1, now with ek+1 = L1/2ek. The bounds (400) do not necessarily hold for k + 1, but
+we do have
+εk+1 =L3
+εk + ε(Ek) + ε0
+k)
+
+mk+1 =L
+
+mk + m(Ek)
+
+Ek+1 =L
+
+REk + Edet
+k
++ E#
+k (mk, Ek)
+
+(401)
+where L : Kk →Kk+1 is the linear reblocking and scaling operator LE = (BE)L−1. The polymer
+function Edet
+k
+= Edet
+k
+(X, A) depends only on A, vanishes at A = 0, and satisﬁes ∥Edet
+k ∥k ≤e
+1
+4 −ǫ
+k
+. The
+polymer function E∗
+k = L(E#
+k ) satisﬁes
+∥E∗
+k∥k+1 ≤e
+1
+4 −6ǫ
+k
+(402)
+Finally ε0
+k = O(en
+k) for any n.
+50
+
+=== PAGE 51 ===
+Remarks.
+1. The quantities ε(Ek), m(Ek) are the extracted corrections from Ek to the energy density and
+mass as deﬁned in (322), and REk is the remaining irrelevant part. They are linear in Ek and
+satisfy
+|ε(Ek)| ≤O(1)∥Ek∥k
+m(Ek) ≤O(1)e
+1
+2
+k ∥Ek∥k
+(403)
+For the kernel of LREk we allow the adjustment of lemma 14 and take LREk = (B(REk)♮)L−1.
+Combining the results of lemma 13, lemma 14, lemma 15 we then have the key contactive estimate
+∥LREk∥k+1 ≤O(1)L−1
+4 +2ǫ∥Ek∥k
+(404)
+2. The reference to the phase shift means we are actually showing that ρk+1(Ak+1, eiθΨk+1) has
+the stated form for some real θ = θ(Ak+1). For iterating the transformation we redeﬁne it as
+ρk+1(Ak+1, Ψk+1). This is allowed since it does not change the crucial normalization property
+(53).
+3. The bound |dAk| ≤pk and the local estimate (287) easily imply that Ak ∈˜Rk, in fact is well in-
+side. Therefore ψ#
+k (Ak) = (ψk(Ak), χk(Ak)), the kernels Ek(X, Ak), and hence Ek(Ak, ψ#
+k (Ak))
+are all well-deﬁned under our assumptions.
+4. The proof follows strategies developed in [11], [12], [19] [25], [29].
+6.2
+proof of the theorem
+6.2.1
+extraction
+First we normalize by extracting the relevant terms from Ek. We have by (321)
+Ek(A, ψk(A), χk(A)) = −ε(Ek)Vol(TN−k) −m(Ek)
+D
+¯ψk(A), ψk(A)
+E
++ E′
+k(A, ψk(A), χk(A))
+(405)
+The last term E′
+k ≡REk has a local expansion E′
+k(A, ψ, χ) = P
+X E′
+k(X, A, ψ, χ) with E′
+k(X, A) which
+are normalized and satisfy
+∥E′
+k∥k ≤O(1)∥Ek∥k ≤O(1)
+(406)
+Then the representation (397) holds with Ek replaced by E′
+k and εk, mk replaced by
+ε′
+k = εk + ε(Ek)
+m′
+k = mk + m(Ek)
+(407)
+A renormalized free action is deﬁned as
+S+
+k (Ak, ψk(Ak)) = Sk(Ak, ψk(Ak)) + m′
+k
+D
+¯ψk(Ak), ψk(Ak)
+E
++ ε′
+kVol(TN−k)
+(408)
+The block averaging now has the form
+˜ρk+1(Ak+1, Ψk+1)
+=NkZkZk(0)
+Z
+DAk DΨk χk ˆχk δ
+
+Ak+1 −QAk
+
+δ(τAk)δG
+
+Ψk+1 −Q( ˜Ak+1)Ψk
+
+exp
+
+−1
+2∥dAk∥2 −S+
+k (Ak, ψk(Ak)) + E′
+k(Ak, ψ#
+k (Ak))
+
+(409)
+What restrictions should we put on Ak+1 on T1
+N−k here? Later when we scale by Ak+1 = A′
+k+1,L
+we will require A′
+k+1 on T0
+N−k−1 to satisfy |dA′
+k+1| ≤pk+1 where A′
+k+1 = Hk+1A′
+k+1. So deﬁne an
+operator H0
+k+1 on T1
+N−k and a ﬁeld A0
+k+1 on T−k
+N−k by
+A0
+k+1 = H0
+k+1Ak+1 = (Hk+1Ak+1,L−1)L = A′
+k+1,L
+(410)
+51
+
+=== PAGE 52 ===
+Then
+|dA0
+k+1| = |d(A′
+k+1,L)| ≤L−3
+2 ∥dA′
+k+1∥∞≤L−3
+2 pk+1
+(411)
+Conversely this condition will scale to |dA′
+k+1| ≤pk+1. Thus we impose (411) as the condition on
+Ak+1. Furthermore the statement that A′
+k+1 is well inside ˜Rk+1 translates to the statement that A0
+k+1
+is well inside ˜Rk.
+6.2.2
+gauge ﬁeld translation
+We translate to the minimum of ∥dAk∥2 on the surface QAk = Ak+1, τAk = 0 as before.
+Write
+Ak = Hx
+kAk+1 + Z and integrate over Z instead of Ak. Then Ak = HkAk becomes ˜Ak+1 + Zk where
+˜Ak+1 = HkHx
+kAk+1
+Zk = HkZ
+(412)
+This is the
+˜Ak+1 that appears in (392).
+With this translation
+1
+2∥dAk∥2 becomes
+1
+2∥d ˜Ak+1∥2 +
+1
+2
+D
+Z, ∆kZ
+E
+as before and our expression becomes
+˜ρk+1(Ak+1, Ψk+1) = NkZkZk(0) exp
+
+−1
+2∥d ˜Ak+1∥2 Z
+DZ DΨk χk ˆχk δ(QZ) δ(τZ)
+δG
+
+Ψk+1 −Q( ˜Ak+1)Ψk
+
+exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+−S+
+k
+
+A0
+k+1 + Zk, ψk(A0
+k+1 + Zk)
+
++E′
+k
+
+˜Ak+1 + Zk, ψ#
+k ( ˜Ak+1 + Zk)
+
+(413)
+Next note that ˜Ak+1 diﬀers from A0
+k+1 by a gauge transformation To see this we use Hx
+k =
+Hk + ∂Ok connecting the axial and Landau gauges. Also deﬁne H0,x
+k+1 by scaling Hx
+k+1 and then
+H0,x
+k+1 = H0
+k+1 + ∂O0
+k+1. But by (181) we also have H0,x
+k+1Ak+1 = Hx
+kHx
+kAk+1 Using these facts
+˜Ak+1 ≡HkHx
+kAk+1
+=Hx
+kHx
+kAk+1 −∂OkHx
+kAk+1
+=H0,x
+k+1Ak+1 −∂OkHx
+kAk+1
+=H0
+k+1Ak+1 −∂
+
+OkHx
+kAk+1 −O0
+k+1Ak+1
+
+≡A0
+k+1 −∂ω
+(414)
+where the last line deﬁnes ω = ω(Ak+1).
+We use this identity to replace ˜Ak+1 by A0
+k+1 in (413). If ω(0) the restriction of ω to the unit
+lattice T0
+N−k then by (119)
+ψk(A −∂ω) =Hk(A −∂ω)Ψk = eiekωHk(A)e−iekω(0)Ψk
+(415)
+We also change variables by Ψk →eiekω(0)Ψk.
+This is a rotation so the Jacobian is one.
+Then
+ψk(A −∂ω) becomes eiekωψk(A) and
+S+
+k
+
+A −∂ω + Z, eiekωψk(A + Z) = S+
+k
+
+A + Z, ψk(A + Z)
+
+(416)
+We also have by (41)
+δG
+
+Ψk+1 −Q(A0
+k+1 −∂ω)eiekω(0)Ψk
+
+= δG
+
+Ψk+1 −eiekω(1)Q(A0
+k+1)Ψk
+
+(417)
+52
+
+=== PAGE 53 ===
+where ω(1) is the restriction of ω to T1
+N−k. We replace Ψk+1 by eiekω(1)Ψk+1 so the phase factor here
+disappears as well. The terms ∥∂A∥2 and Zk(A) and E′
+k(A, ψ#(A)) are all gauge invariant, as are the
+characteristic functions.
+Finally as in section 3 we parametrize the integral replacing Z by C ˜Z, and identify a Gaussian
+integral by
+Z
+f(Z)δ(QZ) δ(τZ) exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+= δZk
+Z
+f(C ˜Z) dµCk( ˜Z)
+(418)
+So now we understand Zk as Zk = HkC ˜Z. The characteristic functions have become
+χk =χ
+
+|d(A0
+k+1 + Zk
+
+| ≤pk)
+ˆχk =χ
+
+|C ˜Z| ≤p0,k
+
+(419)
+But we are assuming |dA0
+k+1| ≤L−3
+2 pk+1 ≤L−3
+2 pk ≤
+1
+2pk and by the bounds (237) on Hk the
+ﬂuctuation ﬁeld Zk = HkC ˜Z satisﬁes |dZk| ≤C∥C ˜Z∥∞≤Cp0,k. ≤1
+2pk. Thus the ﬁrst characteristic
+functiion is always one (and we could have omitted it from the start).
+With all these changes:
+˜ρk+1(Ak+1, eiekω(1)Ψk+1) = NkZkδZkZk(0) exp
+
+−1
+2∥dA∥2 Z
+dµCk( ˜Z) DΨk
+ˆχk δG
+
+Ψk+1 −Q(A)Ψk
+
+exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+−S+
+k
+
+A + Zk, ψk(A + Zk)
+
++ E′
+k
+
+A + Zk, ψ#
+k (A + Zk)
+
+A=A0
+k+1
+(420)
+Next separate out leading terms in an expansion in the ﬂuctuation ﬁeld Zk. Split S+
+k as in (408)
+and deﬁne E(1)
+k , E(2)
+k , E(3)
+k
+by
+E(1)
+k (A, Z, Ψk) =Sk
+
+A, ψk(A)
+
+−Sk
+
+A + Zk, ψk(A + Zk)
+
+E(2)
+k
+
+A, Z, ψ#
+k (A), Ψk
+
+=E′
+k
+
+A + Z, ψ#
+k (A + Z)
+
+−E′
+k
+
+A, ψ#
+k (A)
+
+E(3)
+k (A, Z, ψk(A), Ψk) =m′
+k
+D
+¯ψk(A), ψk(A)
+E
+−m′
+k
+D
+¯ψk(A + Z), ψk(A + Z)
+E
+(421)
+These functions are naturally functions of Ψk but we eventually change back to functions of ψk(A)
+or ψ#
+k (A) using the identity Ψk = Tk(A)ψk(A) where Tk(A) is the left inverse of Hk(A):
+Tk(A)ψ ≡b−1
+k Qk(A)
+
+DA + ¯mk + bkQT
+k (A)Qk(A)
+
+ψ
+(422)
+In appendix C in [29] it is shown that ∥Qk(A)∇A · f∥∞≤C∥f∥∞and that ∥Qk(A)(η∆A)f∥∞≤
+Cη∥∂Af∥∞≤C∥f∥∞and hence |DAf| ≤C∥f∥∞. Since also ∥Qk(A)f∥∞≤C∥f∥∞we have for
+some constant CT
+|Tk(A)f| ≤CT ∥f∥∞
+(423)
+Now with E(≤3) = E(1) + E(2) + E(3) we have the representation
+˜ρk+1(Ak+1, eiekω(1)Ψk+1) = NkZk δZk Zk(0) exp
+
+−1
+2∥dA∥2 Z
+dµCk( ˜Z) DΨk
+ˆχk δG
+
+Ψk+1 −Q(A)Ψk
+
+exp
+
+−S+
+k
+
+A, ψk(A)
+
++ E′
+k
+
+A, ψ#
+k (A)
+
++ E(≤3)
+k
+
+A, Zk, ψ#
+k (A)
+
+A=A0
+k+1
+(424)
+53
+
+=== PAGE 54 ===
+6.2.3
+ﬁrst localization
+We want to localize the terms contributing to E(≤3)
+k
+(A, Z, ψ#
+k (A)). These will be treated in the region
+A ∈1
+2
+˜Rk
+|Z| ≤e−3ǫ
+k
+|∂Z| ≤e−2ǫ
+k
+∥δα∂Z∥≤e−ǫ
+k
+(425)
+The conditions on Z are stronger than the condition Z ∈1
+2Rk. Thus we have A + Z ∈˜Rk so the
+E(i)
+k (A, Z, ψ, Ψk) as given by (421) are well-deﬁned.
+We are particularly interested in the case A = A0
+k+1 and Z = Zk. We have already noted that
+A0
+k+1 ∈1
+2 ˜Rk, but what about Zk = HkC ˜Z? We take as a condition on ˜Z that | ˜Z| ≤e−2ǫ
+k
+and consider
+the domain
+A ∈1
+2
+˜Rk
+| ˜Z| ≤e−2ǫ
+k
+(426)
+On this domain |Zk| ≤Ce−2ǫ
+k
+≤e−ǫ
+k
+and similarly for derivatives so we are in the domain (425).
+Furthermore the characteristic function ˆχk in (420) enforces that | ˜Z| ≤p0,k which puts us in the
+domain (426).
+Lemma 20. The function E(1)
+k
+= E(1)
+k (A, Zk, Ψk) has a local expansion E(1)
+k
+= P
+X E(1)
+k (X) where
+E(1)
+k (X, A, ˜Z, ψk(A)) depends on these ﬁelds only in X, is analytic in (426) and satisﬁes there
+∥E(1)
+k
+
+X, A, ˜Z
+
+∥hk ≤e
+1
+4 −5ǫ
+k
+e−(κ−κ0−2)dM(X)
+(427)
+Proof. First we study E(1)
+k (A, Z, Ψk) in the region (425). By (82)
+E(1)
+k (A, Z, Ψk) =
+D
+¯Ψk,
+
+Dk(A + Z) −Dk(A)
+
+Ψk
+E
+=
+D
+¯Ψk,
+
+Mk(A + Z) −Mk(A)
+
+Ψk
+E
+(428)
+where Mk is the operator on spinors on T0
+N−k
+Mk(A) = −b2
+kQk(A)Sk(A)QT
+k (−A)
+(429)
+Next insert Sk(A) = P
+X Sk(X, A) from (361) and get Mk(X) = P
+X Mk(X, A) where
+Mk(X, A) = −b2
+kQk(A)Sk(X, A)QT
+k (−A)
+(430)
+Then E(1)
+k
+= P
+X ˜E(1)
+k (X) where
+˜E(1)
+k (X, A, Z, Ψk) =
+D
+¯Ψk,
+
+Mk(X, A + Z) −Mk(X, A)
+
+Ψk
+E
+(431)
+This only depends on Ψk in X since Sk(X, A) only connects points in X and Qk(A) is local on M
+scale.
+The matrix elements of Mk(X, A) are
+[Mk(X, A)]xy =
+D
+δx, Mk(X, A, )δy
+E
+= −b2
+k
+D
+QT
+k (A)δx, Sk(X, A)QT
+k (−A)δy
+E
+(432)
+Then by (364)
+|[Mk(X, A)]xy| ≤∥QT
+k (A)δx∥1∥Sk(X, A)QT
+k (−A)δy∥∞
+≤C∥QT
+k (A)δx∥1∥∥QT
+k (−A)δy∥∞e−κdM(X)
+≤Ce−κdM(X)
+(433)
+54
+
+=== PAGE 55 ===
+To estimate ˜E(1)
+k (X) note that under our assumptions (425) on Z if we take complex |t| ≤1
+2e
+−3
+4 +4ǫ
+k
+then tZ ∈1
+2Rk, hence A + tZ is in ˜Rk. Hence we are in the analyticity domain of t →Mk(A + tZ)
+and can write
+[Mk(X, A + Z) −Mk(X, A)]xy =
+1
+2πi
+Z
+|t|= 1
+2 e
+−3
+4 +4ǫ
+k
+dt
+t(t −1)[Mk(A + tZ)]xy
+(434)
+which yields
+|[Mk(X, A + Z) −Mk(X, A)]xy| ≤Ce
+3
+4 −4ǫ
+k
+e−κdM(X)
+(435)
+The kernel of ˜E(1)
+k (X, A, Z, Ψk) has the single non-zero entry (suppressing spin indices)
+˜E(1)
+k,2
+
+X, A, Z, (1, x), (0, y)
+
+= [Mk(X, A + Z) −Mk(X, A)]xy
+(436)
+Since Vol(X) = M 3|X|M ≤O(1)M 3e
+1
+2 κdM(X) and h2
+k = e
+−1
+2
+k
+we have
+∥˜E(1)
+k (X, A, Z)∥hk ≤Ch2
+ke
+3
+4 −4ǫ
+k
+Vol(X)2e−κdM(X) ≤CM 6e
+1
+4 −4ǫ
+k
+e−(κ−1)dM(X)
+(437)
+Specialize to the case Z = Zk = HkC ˜Z and take the domain (426). The ˜E(1)
+k (X, A, Zk, Ψk) is not
+local in ˜Z. To localize we use the random walk expansion for Hk to introduce weakening parameters
+s = {s□} and deﬁne Zk(s) = Hk(s, A)C ˜Z and
+˜E(1)
+k (s, X, A, ˜Z, Ψk) ≡˜E(1)
+k (X, A, Zk(s), Ψk)
+(438)
+For |s□| ≤M α0 and α0 suﬃciently small these s dependent quantities satisfy bounds of the same form
+as the original case s□= 1 so
+∥˜E(1)
+k (s, X, A, ˜Z)∥hk ≤CM 6e
+1
+4 −4ǫ
+k
+e−(κ−1)dM(X)
+(439)
+In each variable s□for □⊂X we interpolate between s□= 1 and s□= 0 by
+f(s□= 1) = f(s□= 0) +
+Z 1
+0
+ds□
+∂f
+∂s□
+(440)
+This yields a new expansion E(1)
+k
+= P
+Y ˘E(1)
+k (Y ) where
+˘E(1)
+k (Y, A, ˜Z, Ψk) =
+X
+X⊂Y
+Z
+dsY −X
+∂
+∂sY −X
+h
+˜E(1)
+k (s, X, A, ˜Z, , Ψk)
+i
+sY c=0,sX=1
+(441)
+and sX = {s□}□⊂X. Then ˘E(1)
+k (Y ) only depends on the indicated ﬁelds in Y since there is no coupling
+through Y c.
+Now ˜E(1)
+k (s, X) is analytic in |s□| ≤M α0 and we estimate the derivatives for 0 ≤s□≤1 by Cauchy
+inequalities. Each derivative then contributes a factor M −α0 and M −α0 ≤e−κ for M suﬃciently large.
+Hence we gain a factor e−κ|Y −X|M from the derivatives in s and have
+∥˘E(1)
+k (Y, A, ˜Z)∥hk ≤CM 6e
+1
+4 −4ǫ
+k
+X
+X⊂Y
+e−κ|Y −X|M−(κ−1)dM(X)
+(442)
+But one can show that |Y −X|M + dM(X) ≥dM(Y ) (see for example [25]). Hence one can extract a
+factor e−(κ−κ0−1)dM(X) leaving a factor e−κ0dM(X) for the convergence of the sum over X. The sum
+is bounded by O(1)|Y |M ≤O(1)edM(Y ) and so we have the announced bound
+∥˘E(1)
+k (Y, A, ˜Z)∥hk ≤CM 6e
+1
+4 −4ǫ
+k
+e−(κ−κ0−2)dM(Y )
+(443)
+55
+
+=== PAGE 56 ===
+Finally as in (422) insert Ψk(A) = Tk(A)ψk(A) deﬁning
+E(1)(X, A, ˜Z, ψk(A)) = ˘E(1)(X, A, ˜Z, Tk(A)ψk(A))
+(444)
+From (423) we have ∥Tk(A)∥1,∞≤CT . Then by (655) in Appendix A, and taking account that the
+function is quadratic in the ﬁelds we have
+∥E(1)
+k (X, A, ˜Z)∥hk ≤∥˘E(1)
+k (X, A, ˜Z)∥CT hk ≤C2
+T ∥˘E(1)
+k (X, A, ˜Z)∥hk
+≤CM 6e
+1
+4 −4ǫ
+k
+e−(κ−κ0−2)dM(X) ≤e
+1
+4 −5ǫ
+k
+e−(κ−κ0−2)dM(X)
+(445)
+In the last step we used CM 6eǫ
+k ≤1. This completes the proof.
+Lemma 21. The function E(2)
+k
+= E(2)
+k (A, Zk, ψ#
+k (A), Ψk) has a local expansion E(2)
+k
+= P
+X E(2)
+k (X)
+where E(2)
+k (X) = E(2)
+k (X, A, ˜Z, ψ#
+k (A)) depends on these ﬁelds only in X, is analytic in (426) and
+satisﬁes there
+∥E(2)
+k
+
+X, A, ˜Z
+
+∥1
+2 hk ≤O(1)e
+3
+4 −5ǫ
+k
+e−(κ−κ0−1)dM(X)
+(446)
+Proof. First we study E(2)
+k (A, Z, ψ#
+k (A), Ψk) in the domain (425). We have E(2)
+k
+= P
+X ˜E(2)
+k (X)
+where
+˜E(2)
+k (X, A, Z, ψ#
+k (A), Ψk) =E′
+k
+
+X, A + Z, ψ#
+k (A + Z)
+
+−E′
+k
+
+X, A, ψ#
+k (A)
+
+≡E′
+k
+
+X, A + Z, ψ#
+k (A) + J #
+k (A, Z)Ψk
+
+−E′
+k
+
+X, A, ψ#
+k (A)
+
+= 1
+2πi
+Z
+|t|=e
+−3
+4 +5ǫ
+k
+dt
+t(t −1)E′
+k
+
+t, X, A, Z, ψ#
+k (A), Ψk
+
+(447)
+Here we deﬁned
+Jk(A, Z)Ψk = ψk(A + Z) −ψk(A) = (Hk(A + Z) −Hk(A))Ψk
+(448)
+and
+J #
+k (A, Z)Ψk = ψ#
+k (A + Z) −ψ#
+k (A) =
+
+Jk(A, Z)Ψk, δαJk(A, Z)Ψk
+
+(449)
+and
+E′
+k
+
+t, X, A, Z, ψ#
+k (A), Ψk
+
+= E′
+k
+
+X, A + tZ, ψ#
+k (A) + tJ #
+k (A, Z)Ψk
+
+(450)
+We need to justify the representation (447) and use it for estimates. As in the previous lemma if
+we take complex |u| < e
+−3
+4 +4ǫ
+k
+then uZ ∈1
+2Rk and A + uZ is in ˜Rk. Hence we are in the analyticity
+domain of u →H(A + uZ). and can write
+Jk(A, Z)f =
+1
+2πi
+Z
+|u|=e
+−3
+4 +4ǫ
+k
+du
+u(u −1)Hk(A + uZ)f
+(451)
+Using the bounds (152) on Hk(A) we get
+|Jk(A, Z)f| ≤Ce
+3
+4 −4ǫ
+k
+∥f∥∞
+(452)
+56
+
+=== PAGE 57 ===
+Then for |t| ≤e
+−3
+4 +5ǫ
+k
+we have |t||Jk(A, Z)f| ≤Ceǫ
+k∥f∥∞. The same bound holds with the Holder
+derivative so |t||J #
+k (A, Z)f| ≤Ceǫ
+k∥f∥∞. Hence by (658) in appendix A E′
+k
+
+t, X, A, Z, ψ#
+k (A), Ψk
+
+satisﬁes (we take CT hk for later purposes)
+∥E′
+k
+
+t, X, A, Z
+
+∥1
+2 hk,CT hk ≤∥E′
+k
+
+X, A + tZ
+
+∥1
+2 hk+CCT eǫ
+khk
+≤∥E′
+k
+
+X, A + tZ
+
+∥hk ≤O(1)e−κdM(X)
+(453)
+Hence the representation (447) holds and we have the bound
+∥˜E(2)
+k (X, A, Z)∥1
+2 hk,CT hk ≤O(1)e
+3
+4 −5ǫ
+k
+e−κdM(X)
+(454)
+Now specialize to the case Z = Zk = HkC ˜Z and study the function ˜E(2)
+k (X, A, Zk, ψ#
+k (A), Ψk) on
+the domain (426). This is not local in ˜Z. To localize introduce weakening parameters s = {s□} based
+on the random walk expansions and deﬁne
+Jk(s, A, Z)Ψk =
+
+Hk(s, A + Z) −Hk(s, A)
+
+Ψk
+J #
+k (s, A, Z)Ψk =
+
+Jk(s, A, Z)Ψk, δαJk(s, A, Z)Ψk
+
+Zk(s) =Hk(s)C ˜Z
+(455)
+and
+˜E(2)
+k (s, X, A, ˜Z, ψ#
+k (A), Ψk) = 1
+2πi
+Z
+|t|=e
+−3
+4 +5ǫ
+k
+dt
+t(t −1)E′
+k
+
+s, t, X, A, ˜Z, ψ#
+k (A), Ψk
+
+E′
+k
+
+s, t, X, A, ˜Z, ψ#
+k (A), Ψk
+
+=E′
+k
+
+X, A + tZk(s), ψ#
+k (A) + tJ #
+k
+
+s, A, Zk(s)
+
+, Ψk
+
+(456)
+For complex |s□| ≤M α0 we get bounds of the same form and so
+∥˜E(2)
+k (s, X, A, ˜Z)∥1
+2 hk,CT hk ≤O(1)e
+3
+4 −5ǫ
+k
+e−κdM(X)
+(457)
+Again interpolate between s□= 1 and s□= 0 and get a new expansion E(2)
+k
+= P
+Y ˘E(2)
+k (Y ) where
+˘E(2)
+k (Y, A, ˜Z, ψ#
+k (A), Ψk) =
+X
+X⊂Y
+Z
+dsY −X
+∂
+∂sY −X
+h
+˜E(2)
+k (s, X, A, ˜Z, ψ#
+k (A), Ψk)
+i
+sY c=0,sX=1
+(458)
+and ˘E(2)
+k (Y ) only depends on the indicated ﬁelds in Y . The derivatives are again estimated by Cauchy
+inequalities which gives a factor e−κ|Y −X|M and then
+∥˘E(2)
+k (Y, A, ˜Z)∥1
+2 hk,CT hk ≤O(1)e
+3
+4 −5ǫ
+k
+X
+X⊂Y
+e−κ|Y −X|M−κdM(X) ≤O(1)e
+3
+4 −5ǫ
+k
+e−(κ−κ0−1)dM(Y )
+(459)
+Finally from (422) we deﬁne
+E(2)
+k (Y, A, ˜Z, ψ#
+k (A)) = ˘E(2)
+k
+
+Y, A, ˜Z, ψ#
+k (A), Tk(A)ψk(A)
+
+(460)
+which yields the desired bound
+∥E(2)
+k (Y, A, ˜Z)∥1
+2 hk ≤∥˘E(2)
+k (Y, A, ˜Z)∥1
+2 hk,CT hk ≤O(1)e
+3
+4 −5ǫ
+k
+e−(κ−κ0−1)dM(Y )
+(461)
+57
+
+=== PAGE 58 ===
+Lemma 22. The function E(3)
+k
+= E(3)
+k (A, Zk, ψk(A), Ψk) has a local expansion E(3)
+k
+= P
+X E(3)
+k (X)
+where E(3)
+k (X, A, ˜Z, ψk(A)) depends on these ﬁelds only in X, is analytic in (426) and satisﬁes there
+∥E(3)
+k
+
+X, A, ˜Z
+
+∥1
+2 hk ≤e
+3
+4 −6ǫ
+k
+e−(κ−κ0−1)dM(X)
+(462)
+Proof. First write
+m′
+k
+D
+¯ψk(A), ψk(A)
+E
+= m′
+k
+X
+□
+D
+¯ψk(A), 1□ψk(A)
+E
+≡m′
+k
+X
+□
+E(□, ψk(A))
+(463)
+The kernel E(□) has the single non-vanishing element E2(□, (x, 1), (y, 0)) = m′
+k1□(y)δ(x −y) which
+satisﬁes ∥E2(□)∥≤M 3m′
+k and so
+∥E(□)∥hk = h2
+k∥E2(□)∥≤h2
+kM 3m′
+k
+(464)
+But we are assuming mk ≤e
+1
+2
+k and by (323) m(Ek) ≤O(1)e
+1
+2
+k . Therefore m′
+k ≤O(1)e
+1
+2
+k . Since also
+h2
+k ≤e
+−1
+2
+k
+we have
+∥E(□)∥hk ≤O(1)M 3
+(465)
+Now we are in the situation of lemma 21 except that our starting bound is worse by the factor M 3.
+Hence we get the result with a constant O(1)M 3e
+3
+4 −5ǫ
+k
+≤e
+3
+4 −6ǫ
+k
+.
+6.2.4
+fermi ﬁeld translation
+Now in (424) with A = A0
+k+1, we diagonalize the quadratic form
+bL−1D
+¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk
+E
++ S(A, ψk(A))
+(466)
+which sits in the exponential. As in section 2.6 this is accomplished by the transformations
+Ψk =Ψcrit
+k
+(A) + W
+ψk(A) =ψ0
+k+1(A) + Wk(A)
+(467)
+Also deﬁne ψ0,#
+k+1(A) = (ψ0,#
+k+1(A), δαψ0,#
+k+1(A)) and W#
+k (A) = (Wk(A), δαWk(A)) and then the trans-
+formation is
+ψ#
+k (A) = ψ0,#
+k+1(A) + W#
+k (A)
+(468)
+By lemma 3 the expression (466) becomes
+S0
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
++
+D
+¯W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+(469)
+Again we identify the Gaussian measure
+δZk(A) dµΓk(A)(W) = exp
+
+−
+D
+¯W,
+
+Dk(A) + bL−1P(A)
+
+W
+E
+DW
+(470)
+We also deﬁne E(4)
+k , E(5)
+k
+with ψ = ψ0
+k+1(A), W = Wk(A) etc. by
+E(4)
+k (A, ψ#, W#) =E′
+k(A, ψ# + W#) −E′
+k(A, ψ#)
+E(5)
+k (A, ψ, W) =m′
+k
+D
+¯ψ, ψ
+E
+−m′
+k
+D
+¯ψ + ¯
+W, ψ + W
+E
+(471)
+58
+
+=== PAGE 59 ===
+and deﬁne
+E(≤5)
+k
+
+A, ˜Z, ψ#, W#
+=
+X
+i=1,2,3
+E(i)
+k
+
+A, ˜Z, ψ# + W#
++ E(4)
+k (A, ψ#, W#) + E(5)
+k (A, ψ#, W#) (472)
+We also deﬁne
+S0,+
+k+1
+
+A, Ψk+1, ψ
+
+= S0
+k+1
+
+A, Ψk+1, ψ
+
++ m′
+k
+D
+¯ψ, ψ
+E
++ ε′Vol(T0
+N−k)
+(473)
+With these changes (424) becomes
+˜ρk+1(Ak+1, eiekω(1)Ψk+1) = NkNkZkδZk+1Zk(0)δZk(A)
+exp
+
+−1
+2∥dA∥2 −S0,+
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
++ E′
+k
+
+A, ψ0,#
+k+1(A)
+
+Ξk
+
+A, ψ0,#
+k+1(A)
+
+A=A0
+k+1
+(474)
+Here we have isolated a ﬂuctuation integral
+Ξk
+
+A, ψ0,#
+k+1(A)
+
+=
+Z
+ˆχk exp
+
+E(≤5)
+k
+
+A, ˜Z, ψ0,#
+k+1(A), W#
+k (A)
+
+dµCk( ˜Z)dµΓk(A)(W)
+(475)
+We re-express the fermion integral in ultralocal form. 3 In general for Gaussian Grassman integrals
+we have the identity
+Z
+F( ¯W, W)dµΓ(W) =
+Z
+F( ¯
+W ′, ΓW ′)dµI(W ′)
+(476)
+That is we can change to a Gaussian integral with identity covariance by making the change of variables
+( ¯
+W, W) = ( ¯
+W ′, ΓW ′). We make this change in the ﬂuctuation integral (475) by the replacement
+Wβ(x) = (˜Γk(A)W ′)β(x) ≡
+(
+(Γk(A)W ′)β(x)
+x = (x, β, 0)
+¯W ′
+β(x)
+x = (x, β, 1)
+(477)
+With this change Wk(A) = Hk(A)W is redeﬁned as
+Wk(A) = Hk(A)˜Γk(A)W ′
+(478)
+and still W#
+k (A) = (Wk(A), δαWk(A)) The ﬂuctuation integral is now
+Ξk
+
+A, ψ0,#
+k+1(A)
+
+=
+Z
+ˆχk exp
+
+E(≤5)
+k
+(A, ˜Z, ψ0,#
+k+1(A), W#
+k (A)
+
+dµCk( ˜Z)dµI(W ′))
+(479)
+6.2.5
+second localization
+To analyze the partition function Ξk we need a polymer expansion for E(≤5)
+k
+which is local in W ′.
+Lemma 23. The function E(≤5)
+k
+= E(≤5)
+k
+(A, ˜Z, ψ0,#
+k+1(A), W#
+k (A)
+
+has a polymer expansion E(≤5)
+k
+=
+P
+X E(≤5)
+k
+(X) where E(≤5)
+k
+(X) = E(≤5)
+k
+(X, A, ˜Z, ψ0,#
+k+1(A), W ′) depends ﬁelds only in X, is analytic in
+(426), and satisﬁes there
+∥E(≤5)
+k
+(X, A, ˜Z)∥1
+4 hk,1 ≤e
+1
+4 −5ǫ
+k
+e−(κ−3κ0−3)dM(X)
+(480)
+3Eventually we do this for the gauge ﬁeld also, but the presence of the characteristic function ˆχ is a temporary
+obstable here
+59
+
+=== PAGE 60 ===
+Proof.
+There are ﬁve terms in E(≤5)
+k
+as deﬁned in (472).
+We ﬁrst consider the term E(4)
+k
+=
+P
+X E(4)
+k (X) where E(4)
+k (X) can be written
+E(4)
+k
+
+X, A, ψ0,#
+k+1(A), W#
+k (A)
+
+=
+1
+2πi
+Z
+|t|= 1
+4 e
+−1
+4 +2ǫ
+k
+dt
+t(t −1)E(4)
+k
+
+t, X, A, ψ0,#
+k+1(A), W#
+k (A)
+
+(481)
+where
+E(4)
+k
+
+t, X, A, ψ#(A), W#(A)
+
+=E+
+k
+
+X, A, ψ#(A), tW#(A)
+
+E+
+k
+
+X, A, ψ#(A), W#(A)
+
+=E′
+k
+
+X, A, ψ#(A) + W#(A)
+
+(482)
+Deﬁne h0,k = (e−ǫ
+k , e−ǫ
+k ). If |t| ≤1
+4e
+−1
+4 +2ǫ
+k
+then |t|h0,k ≤1
+4hk. By (655) in Appendix A , then (654),
+and then ∥E′
+k∥k ≤O(1) we have
+∥E(4)
+k (t, X, A)∥1
+4 hk,h0,k ≤∥E+
+k (X, A)∥1
+4 hk, 1
+4 hk ≤∥E′
+k(X, A)∥1
+2 hk ≤O(1)e−κdM(X)
+(483)
+Hence (482) gives us for ek suﬃciently small
+∥E(4)
+k (X, A)∥1
+4 hk,h0,k ≤O(1)e
+1
+4 −2ǫ
+k
+e−κdM(X)
+(484)
+Next deﬁne
+˜E(4)
+k
+
+X, A, ˜Z, ψ0,#
+k+1(A), W ′
+= E(4)
+k
+
+X, A, ˜Z, ψ0,#
+k+1(A), W#
+k (A)
+
+(485)
+Now Wk(A) = Hk(A)˜Γk(A)W ′ and and by (149), (150)
+|Hk(A)˜Γk(A)f|, |δαHk(A)˜Γk(A)f| ≤C∥f∥∞
+(486)
+Then by a generalization of lemma 29 in Appendix A to four ﬁelds and (484) we have
+∥˜E(4)
+k (X, A)∥1
+4 hk,1 ≤∥E(4)
+k (X, A)∥1
+4 hk,(C,C) ≤∥E(4)
+k (X, A)∥1
+4 hk,h0,k ≤O(1)e
+1
+4 −2ǫ
+k
+e−κdM(X)
+(487)
+To localize in W ′ we use the random walk expansion described in section 2.10 to introduce weakened
+operators Hk(s, A), Γk(s, A) and hence Wk(s, A) = Hk(s, A)˜Γk(s, A)W ′. Then deﬁne the modiﬁed
+version of (485)
+˜E(4)
+k
+
+s, X, A, ˜Z, ψ0,#
+k+1(A), W ′
+= E(4)
+k
+
+X, A, ˜Z, ψ0,#
+k+1(A), W#
+k (s, A)
+
+(488)
+which also satsiﬁes for |s□| ≤M α0
+∥˜E(4)
+k (sX, A, ˜Z)∥1
+4 hk,1 ≤O(1)e
+1
+4 −2ǫ
+k
+e−κdM(X)
+(489)
+Again interpolate between s□= 1 and s□= 0 and get a new expansion E(4)
+k
+= P
+Y ˘E(4)
+k (Y ) where
+˘E(4)
+k (Y, A, ˜Z, ψ#
+k (A), W ′) =
+X
+X⊂Y
+Z
+dsY −X
+∂
+∂sY −X
+h
+˜E(4)
+k (s, X, A, ˜Z, ψ#
+k (A), W ′)
+i
+sY c=0,sX=1
+(490)
+and ˘E(4)
+k (Y ) only depends on the indicated ﬁelds in Y . The derivatives are again estimated by Cauchy
+inequalities which gives a factor e−κ|Y −X|M and then
+∥˘E(4)
+k (Y, A)∥1
+2 hk,1 ≤O(1)e
+1
+4 −2ǫ
+k
+X
+X⊂Y
+e−κ|Y −X|M−κdM(X) ≤O(1)e
+1
+4 −2ǫ
+k
+e−(κ−κ0−1)dM(Y )
+(491)
+60
+
+=== PAGE 61 ===
+This is better than we need for the theorem, and so ˘E(4)
+k (X) contributes to E≤5
+k (X).
+The treatment of E(5)
+k
+is similar.
+Now consider the term E(1),+
+k
+= P
+X E(1),+
+k
+(X) where
+E(1),+
+k
+
+X, A, ˜Z, ψ0,#
+k+1(A), W#
+k (A)
+
+= E(1)
+k
+
+X, A, ˜Z, ψ0,#
+k+1(A) + W#
+k (A)
+
+(492)
+Since h0,k ≤1
+4hk we have by (654) in Appendix A and (427)
+∥E(1),+
+k
+(X, A, ˜Z)∥1
+4 hk,h0,k ≤∥E(1)
+k (X, A, ˜Z)∥1
+4 hk+h0,k
+≤∥E(1)
+k (X, A, ˜Z)∥1
+2 hk
+≤O(1)e
+1
+4 −5ǫ
+k
+e−(κ−κ0−2)dM(X)
+(493)
+Now we are in the same situation as we were at (484) in the analysis of E(4)
+k , but with slightly weaker
+bounds. Localizing in W ′ as we did then we ﬁnd a new expansion E(1),+
+k
+= P
+Y ˘E(1),+
+k
+(Y ) where
+∥˘E(1),+
+k
+(Y, A, ˜Z)∥1
+2 hk,1 ≤O(1)e
+1
+4 −5ǫ
+k
+e−(κ−2κ0−3)dM(Y )
+(494)
+This is again is better than we need so ˘E(4)
+k (X) contributes to E≤5
+k (X).
+The treatment of E(2),+
+k
+and E(3),+
+k
+is similar.
+6.2.6
+cluster expansion
+We study the ﬂuctuation integral which can now be written
+Ξk(A, ψ0,#
+k+1(A)) =
+Z
+exp
+ X
+X
+E(≤5)
+k
+(X, A, ˜Z, ψ0,#
+k+1(A), W ′)
+
+ˆχk(C ˜Z)dµCk( ˜Z)dµI(W ′)
+(495)
+The cluster expansion gives this a local structure. The most straightforward way to proceed would be
+to mimic the fermion treatment and make a change of variables ˜Z = C
+1
+2
+k Z′ which changes the Gaussian
+measure to dµI(Z′). Then localize E≤5
+k (X) in the new variable Z′. With strictly local E≤5
+k (X) and
+both ultralocal measures one might now contemplate using a standard cluster expansion. The trouble
+is that the characteristic function χk is messed up by the change of variables. For the purposes of this
+paper one could ﬁx this by altering the deﬁnition of χk. This is the approach taken in [29] and earlier
+versions of this paper. However this does not generalize very well when we consider the full model in
+[30]. Instead we closely follow the approach used by Balaban [12].
+Theorem 2. (cluster expansion) For A ∈1
+2 ˜Rk
+Ξk(A, ψ0,#
+k+1(A)) = exp
+ X
+X
+E#
+k (X, A, ψ0,#
+k+1(A))
+
+(496)
+where E#
+k (X, A, ψ0,#
+k+1(A)) satisﬁes
+∥ˆE#
+k (X, A)∥1
+4 hk ≤O(1)e
+1
+4 −5ǫ
+k
+e−(κ−10κ0−10)dM(X)
+(497)
+61
+
+=== PAGE 62 ===
+Proof. step I: First make a Mayer expansion writing
+exp
+ X
+X
+E(≤5)
+k
+(X)
+
+=
+Y
+X
+
+(exp E(≤5)
+k
+(X) −1) + 1
+
+=
+X
+Y
+K(Y )
+(498)
+Here in the second step we expand the product and classify the terms in the resulting sum by the
+union of the polymers. Thus
+K(Y ) =
+X
+{Xi}:∪Xi=Y
+Y
+i
+(exp E(≤5)
+k
+(Xi) −1)
+(499)
+where {Xi} is a collection of distinct polymers. Two polymers are connected if they intersect or have
+a face in common. If {Yj} are the connected components of Y then K(Y ) factors as
+K(Y ) =
+Y
+j
+K(Yj)
+(500)
+and each K(Yj) is again given by (499). Instead of distinct unordered {Xi} we can write K(Y ) as a
+sum over distinct ordered sets (X1, . . . Xn) by
+K(Y ) =
+∞
+X
+n=1
+1
+n!
+X
+(X1,···Xn):∪iXi=Y
+Y
+i
+(eE(≤5)
+k
+(Xi) −1)
+(501)
+The partition function is now
+.Ξk =
+X
+Y
+Z
+K(Y )ˆχk(C ˜Z)dµCk( ˜Z)dµI(W ′)
+(502)
+To estimate K(Y ) for Y connected we use the estimate (480) to obtain
+∥eE(≤5)
+k
+(X) −1∥1
+4 hk,1 ≤
+∞
+X
+n=1
+∥E(≤5)
+k
+(X)∥n
+1
+4 hk,1 ≤2∥E(≤5)
+k
+(X)∥1
+4 hk,1 ≤O(1)e
+1
+4 −5ǫ
+k
+e−(κ−3κ0−3)dM(X)
+(503)
+and so
+∥K(Y )∥1
+4 hk,1 ≤
+∞
+X
+n=1
+1
+n!
+X
+(X1,···Xn):∪iXi=Y
+n
+Y
+i=1
+O(1)e
+1
+4 −5ǫ
+k
+e−(κ−3κ0−3)dM(X)
+(504)
+Next extract a factor exp
+
+−(κ −κ0)(dM(Y ) −(n −1))
+
+and drop all conditions on the Xi except
+Xi ⊂Y to obtain (see Appendix B in [25] for details)
+∥K(Y )∥1
+4 hk,1 ≤O(1)e
+1
+4 −5ǫ
+k
+e−(κ−5κ0−5)dM(X)
+(505)
+Now in (502) do the integral over W ′ deﬁning
+K′
+Y, A, ˜Z, ψ0,#
+k+1(A)
+
+=
+Z
+K
+
+Y, A, ˜Z, ψ0,#
+k+1(A), W ′
+dµI(W ′)
+(506)
+Since the integral is strictly local this also factors over its connected components. By lemma 30 in
+Appendix A we have for Y connected
+∥K′(Y )∥1
+4 hk ≤∥K(Y )∥1
+4 hk,1 ≤O(1)e
+1
+4 −5ǫ
+k
+e−(κ−5κ0−5)dM(X)
+(507)
+62
+
+=== PAGE 63 ===
+The ﬂuctuation integral is now written (relabeling Y as X)
+Ξk =
+X
+X
+Z
+K′(X) ˆχk(C ˜Z) dµCk( ˜Z)
+(508)
+The fermion ﬁeld ψ0,#
+k+1(A) is a spectator for the rest of the proof.
+Step II: Next take a ﬁxed X and remove characteristic functions from Xc as follows. Deﬁne
+ˆχk(X) =
+Y
+□⊂X
+ˆχk(□)
+where
+ˆχk(□, C ˜Z) = χ
+
+sup
+b∩□̸=∅
+|(C ˜Z)(b)| ≤p0,k
+
+(509)
+Then deﬁne ˆζk(□) = 1 −ˆχk(□) and write
+ˆχk(Xc) =
+Y
+□⊂Xc
+ˆχk(□) =
+Y
+□⊂Xc
+
+1 −ˆζk(□)
+
+=
+X
+P ⊂Xc
+(−1)|P |ˆζk(P)
+(510)
+where ˆζ(P) = Q
+□⊂P ˆζ(□). Then
+ˆχk = ˆχk(X)ˆχk(Xc) =
+X
+P ⊂Xc
+(−1)|P | ˆχk(X)ˆζk(P)
+(511)
+Insert this back into (508) and classify the the terms in the double sum over X, P by Y = X ∪P.
+Thus we have
+Ξk =
+X
+Y
+Z
+F(Y, ˜Z)dµCk( ˜Z)
+(512)
+where
+F(Y, ˜Z) =
+X
+X,P :X∪P =Y
+(−1)|P |ˆζk(P)ˆχk(X)K′(X)
+(513)
+Then F(Y ) is local in its variables and it factors over its connected components. The characteristic
+function ˆζk(P) forces that there is a point in every cube □in P where |C ˜Z| ≥p0,k. Hence for □⊂P
+we have p2
+0,k ≤∥C ˜Z∥2
+□≤C0∥˜Z∥2
+□and so
+ˆζ(□) ≤exp
+
+−p0,k + p−1
+0,kC0∥˜Z∥2
+□
+
+(514)
+If |P|M = M −3Vol(P) is the number of M cubes in P then
+|ˆζk(P)| ≤exp
+
+−p0,k|P|M + p−1
+0,kC0∥˜Z∥2
+P
+
+(515)
+Using this we have the estimate for connected Y
+∥ˆF(Y )∥1
+4 hk ≤O(1)e
+1
+4 −5ǫ
+k
+X
+X,P :X∪P =Y
+exp
+
+p−1
+0,kC0∥˜Z∥2
+P
+
+e−(κ−5κ0−5)dM(X)−p0,k|P |M
+≤O(1)e
+1
+4 −5ǫ
+k
+exp
+
+p−1
+0,kC0∥˜Z∥2
+P
+
+e−(κ−6κ0−5)dM(Y )
+X
+X,P ⊂Y
+e−κ0dM(X)e−1
+2 p0,k|P |M
+≤O(1)e
+1
+4 −5ǫ
+k
+exp
+
+p−1
+0,kC0∥˜Z∥2
+Y
+
+e−(κ−6κ0−6)dM(Y )
+(516)
+In the second step we used ﬁrst that 1
+2p0,k ≥(κ −6κ0 −5) and then dM(X) + |P|M ≥dM(Y ). In the
+63
+
+=== PAGE 64 ===
+third step the sum over Y is bounded by O(1)|Y |M ≤O(1)(dM(Y ) + 1) ≤O(1) exp( 1
+2dM(Y )). The
+sum over P (which may not be connected) is bounded taking e−1
+2 p0,k ≤λn
+k for any integer n and then
+X
+P ⊂Y
+λn|P |M
+k
+≤(1 + λn
+k)|Y |M ≤eλn
+k|Y |M ≤O(1)e
+1
+2 dM(Y )
+(517)
+Step III: We study the integral in (512) by conditioning on the value of ˜Z on Y c. This has the form
+(see [12] and appendix C)
+Z
+dµCk( ˜Z)F(Y, ˜Z) =
+Z
+dµCk(Z′) exp
+
+−1
+2
+D
+Z′,
+h
+˜∆kCk(Y ) ˜∆k
+i
+Y cZ′E
+h Z
+dµCk(Y )( ˜Z) exp
+
+−
+D
+Z′, [ ˜∆k ˜Z]Y c
+E
+F(Y, ˜Z)
+i
+(518)
+Here we have deﬁned ˜∆k = CT ∆kC so that Ck = ˜∆−1
+k
+and deﬁned Ck(Y ) = [ ˜∆k]−1
+Y
+as in section
+3.3.6. In the outside integral make the change of variables Z′ = (Ck)
+1
+2 Z′′. Note that this does not
+aﬀect the characteristic functions in F(Y, ˜Z) which was our goal. Then we have
+Ξk =
+X
+Y
+Z
+dµI(Z′′)G(Y, Z′′)
+(519)
+where
+G(Y, Z′′) = exp
+
+−1
+2
+D
+Z′′, C
+1
+2
+k [ ˜∆kCk(Y ) ˜∆k]Y cC
+1
+2
+k Z′′E
+Z
+dµCk(Y )( ˜Z) exp
+
+−
+D
+Z′′, C
+1
+2
+k [ ˜∆k ˜Z]Y c
+E
+F(Y, ˜Z)
+(520)
+Step IV: Next localize the expression G(Y ; Z′′) using generalized random walk expansions. First
+consider Ck which has the expansion (249):
+Ck =
+X
+⊡
+h⊡Ck,⊡h⊡+
+X
+ω:|ω|≥1
+Ck,ω
+(521)
+where ω = (X0, α1, X1, . . . , αn, Xn) has localization domains with |Xi|M ≤r0 = O(1). Let r = r0 + 1.
+We resum the expansion so that the basic units include connected components of the enlargement ˜Y r,
+denoted ˜Y r
+β . This operation is explained in section 3.3.7. Resum the nonleading terms (resummation
+of the leading term is optional) and get a similar expansion now with ω = (X0, . . . , Xn) where each Xi
+is either a ˜Y r
+β or an (αi, Xi) such that Xi intersects ( ˜Y r)c. The latter satisfy d(Xi, Y ) ≥M.
+We introduce weakening parameters in ( ˜Y r)c deﬁning
+Ck(s) =
+X
+⊡
+h⊡Ck,⊡h⊡+
+X
+ω:|ω|≥1
+sωCk,ω
+(522)
+Here as before s = {s□} are parameters 0 ≤s□≤1 indexed by a partition into M cubes □, but now
+sω =
+Y
+□⊂Xω∩( ˜Y r)c
+s□
+Xω = ∪iXi
+(523)
+and if Xω ∩( ˜Y r)c = ∅then sω ≡1. Only walks leaving ˜Y r are suppressed. If s = 0 then the only terms
+in the second sum which contribute are those with Xω ⊂˜Y r. These have the form ω = ( ˜Y r
+β , . . . , ˜Y r
+β )
+for some β.
+64
+
+=== PAGE 65 ===
+Similarly one can use resummed random walks to deﬁne a weakened version C
+1
+2
+k (s) of C
+1
+2
+k and a
+weakened version Ck(s, Y ) of Ck(Y ). (Ck(Y ) is an operator on Y , but the random walk expansion
+involves the whole space.) We also have a weakened version ∆k(s) = HT
+k (s)δdHk(s) of ∆k = HT
+k δdHk
+and deﬁne ˜∆k(s) = CT ∆k(s)C.
+Making these substitutions in G(Y ; Z′′) we get a new function
+G(s, Y, Z′′) = exp
+
+−1
+2
+D
+Z′′, C
+1
+2
+k (s)[ ˜∆k(s)Ck(s, Y ) ˜∆k(s)]Y cC
+1
+2
+k (s)Z′′E
+Z
+dµCk(s,Y )( ˜Z) exp
+
+−
+D
+Z′′, C
+1
+2
+k (s)[ ˜∆k(s) ˜Z]Y c ˜Z
+E
+F(Y, ˜Z)
+(524)
+The covariance of the Gaussian measure is still positive deﬁnite since Ck(s) is a small O(M −1) pertur-
+bation of Ck(0) which in turn is a small O(M −1) perturbation of the positive deﬁnite P
+□h□Ck,□h□.
+Expanding around s□= 1 we ﬁnd
+X
+Y
+G(Y ; Z′′) =
+X
+Y ′
+˘G(Y ′; Z′′)
+(525)
+where
+˘G(Y ′; Z′′) =
+X
+Y : ˜Y r⊂Y ′
+Z
+dsY ′−˜Y r
+∂
+∂sY ′−˜Y r [G(s, Y, Z′′)]s(Y ′)c =0
+(526)
+Since s(Y ′)c = 0 no operator in (526) connects points in diﬀerent connected components of Y ′. Hence
+˘G(Y ′; Z′′) factors over its connected components and only depends on ﬁelds in Y ′. (To see the measure
+factors look at the characteristic function).
+Now we can write
+Ξk =
+X
+Y ′
+H(Y ′)
+(527)
+where
+H(Y ′) ≡
+Z
+˘G(Y, Z′′)dµI( ˜Z′′)
+(528)
+also factors over its connected components and depends on ﬁelds only in Y ′.
+Step V: We would like to estimate the s derivatives in (526) by Cauchy bounds.
+This requires
+considering G(s, Y, Z′′) for complex s□. In particular we need control over the complex covariance
+C(s, Y ). We collect some relevant bounds.
+First we note that for Υ, Υ′ in the basis (184) and Υ, Υ′ ∈Y (i.e. supp Υ, supp Υ′ ⊂Y )
+|Ck(0, Y )(Υ, Υ′)| ≤Ce−γdM(Υ,Υ′)
+(529)
+This follows just as the bound (269) on Ck(Y ). It is also positive deﬁnite and then by (a modiﬁcation
+of) Balaban’s lemma on unit lattice operators [4]. we have a bound of the same form for the inverse:
+|Ck(0, Y )−1(Υ, Υ′)| ≤Ce−γdM(Υ,Υ′)
+(530)
+Next deﬁne δCk(s, Y ) and δC−1
+k (s, Y ) by
+C(s, Y ) =C(0, Y ) + δC(s, Y )
+C(s, Y )−1 =C(0, Y )−1 + δC−1(s, Y )
+(531)
+65
+
+=== PAGE 66 ===
+We claim that for M suﬀciently large, α0 suﬃciently small, and |s□| ≤M α0 and Υ, Υ′ ∈Y
+|δCk(s, Y )(Υ, Υ′)| ≤CM −1
+2 e−γdM(Υ,Υ′)
+|Ck(s, Y )(Υ, Υ′)| ≤Ce−γdM(Υ,Υ′)
+|C−1
+k (s, Y )(Υ, Υ′)| ≤Ce−γdM(Υ,Υ′)
+|δC−1
+k (s, Y )(Υ, Υ′)| ≤CM −1
+2 e−γdM(Υ,Υ′)
+(532)
+Indeed the operator δCk(s, Y ) only involves walks with |ω| ≥1 so if |s□| ≤1 the ﬁrst bound holds
+with M −1 rather than M −1
+2 . For |s□| ≤M α0 the bound erodes to M −1
+2 just as in lemma 7 (since sω
+only involves the localization domains Xi, not the ˜Y r0+1
+β
+). The second bound follows from the ﬁrst
+and (529). For the third bound make the expansion
+C−1
+k (s, Y ) = (Ck(0, Y ) + δCk(s, Y ))−1 = C(0, Y )−1(I + δCk(s, Y )C(0, Y )−1)−1
+=
+∞
+X
+n=0
+C(0, Y )−1(−δCk(s, Y )C(0, Y )−1)n
+(533)
+This converges for M suﬃciently large, and the result follows by the bounds on δCk(s, Y ) and
+C(0, Y )−1. The expansion also gives the fourth bound.
+Actually the ﬁrst and last bounds in (532) can be made even stronger. We have excluded from
+δC(s, Y ) walks which stay in ˜Y r0+1. We are starting (and ﬁnishing) in Y so some step must then go to
+a localization domain Xi which necessarily satisﬁes d(Xi, Y ) ≥M. The accumulated exponent factors
+in a bound like (208) result in any overall factor e−γd(Xi,Y ) ≤e−γM. Thus we have the improved
+bounds
+|δCk(s, Y )(Υ, Υ′)| ≤Ce−γMe−γdM(Υ,Υ′)
+|δC−1
+k (s, Y )(Υ, Υ′)| ≤Ce−γMe−γdM(Υ,Υ′)
+(534)
+Step VI: We proceed with the estimate on G(s, Y, Z′′) for |s□| ≤M α0 and s(Y ′)c = 0. Write as
+G(s, Y, Z′′) = exp
+
+−1
+2
+D
+Z′′, ΓT
+k (s, Y )Ck(s, Y )Γk(s, Y )Z′′E
+Z
+dµCk(s,Y )( ˜Z) exp
+
+−
+D
+˜Z, Γk(s, Y )Z′′E
+F(Y, ˜Z)
+(535)
+where
+Γk(s, Y ) = [ ˜∆k(s)]Y,Y cC
+1
+2
+k (s)
+(536)
+For any f( ˜Z)
+|
+Z
+f( ˜Z)dµCk(s,Y )( ˜Z)| ≤
+
+det
+
+Ck(s, Y )−1
+det
+
+Re Ck(s, Y )−1
+
+
+1
+2 Z
+|f( ˜Z)|dµ(Re Ck(s,Y )−1)−1( ˜Z)
+(537)
+Thus we get the bound
+|G(s, Y, Z′′)| ≤exp
+
+−1
+2
+D
+Z′′, Re
+
+ΓT
+k (s, Y )Ck(s, Y )Γk(s, Y )
+
+Z′′E
+≤
+
+det
+
+(Ck(s, Y ))−1
+det
+
+Re Ck(s, Y )−1
+
+
+1
+2 Z
+dµ(Re Ck(s,Y )−1)−1( ˜Z) exp
+
+−
+D
+˜Z, Re (Γk(s, Y )Z′′E
+|F(Y, ˜Z)|
+(538)
+66
+
+=== PAGE 67 ===
+To estimate this we start by replacing every object with weakening parameters s by the same with
+s = 0. There are several steps.
+(1.) First consider the ratio of determinants. We have
+det(Ck(s, Y )−1) = det Ck(0, Y )−1 det
+
+I + Ck(0, Y )δC−1
+k (s, Y )
+
+det(Re Ck(s, Y )−1) = det Ck(0, Y )−1 det
+
+I + Ck(0, Y )Re δC−1
+k (s, Y )
+
+(539)
+The terms det Ck(0, Y )−1 cancel. In general we have for ∥T ∥< 1
+e−O(1)∥T ∥1 ≤| det(I + T )| ≤eO(1)∥T ∥1
+(540)
+where the trace norm is ∥T ∥1 = Tr (T T T )
+1
+2 . Therefore
+| det
+
+I + Ck(0, Y )δC−1
+k (s, Y )
+
+| ≤exp
+
+O(1)∥Ck(0, Y )δC−1
+k (s, Y )∥1
+
+(541)
+We dominate the trace norm by Hilbert-Schmidt norms and use (529), (534)
+O(1)∥Ck(0, Y )δC−1
+k (s, Y )∥1 ≤O(1)∥Ck(0, Y )∥HS∥δC−1
+k (s, Y )∥HS
+=O(1)
+
+X
+Υ,Υ′∈Y
+|Ck(0, Y )(Υ, Υ′)|2 1
+2 
+X
+Υ,Υ′∈Y
+|δC−1
+k (s, Y )(Υ, Υ′)|2 1
+2
+≤Ce−γMVol(Y ) = Ce−γMM 3|Y |M ≤O(M −1)|Y |M
+(542)
+Then we have
+| det
+
+I + Ck(0, Y )δC−1
+k (s, Y )
+
+| ≤eO(M−1)|Y |M
+(543)
+Similarly det(I + Ck(0, Y )Re δC−1
+k (s, Y ))−1 is bounded by eO(M−1)|Y |M. Hence the ratio of determi-
+nants in (538) is bounded by eO(M−1)|Y |M
+(2.) Next consider the term in the ﬁrst exponential in (538). We deﬁne a quadratic form R1 by
+D
+Z′′, R1Z′′E
+=
+D
+Z′′,
+h
+Re
+
+ΓT
+k (s, Y )Ck(s, Y )Γk(s, Y )
+
+−ΓT
+k (0, Y )Ck(0, Y )Γk(0, Y )
+i
+Z′′E
+(544)
+We have the estimate (534) for δCk(s, Y ). By similar arguments the same holds for Γk(s, Y )−Γk(0, Y )
+and so
+|Γk(s, Y )(Υ, Υ′) −Γk(0, Y )(Υ, Υ′))| ≤Ce−γMe−γd(Υ,Υ′)
+(545)
+These imply that |R1(Υ, Υ′)| ≤Ce−γMe−γd(Υ,Υ′). Since Γk(s, Y ) only connects to Y ′ this gives
+|
+D
+Z′′, R1Z′′E
+| ≤Ce−γM∥Z′′∥2
+Y ′
+(546)
+We also have in the integrand
+∥
+D
+˜Z,
+
+Re Γk(s, Y ) −Γk(0, Y )
+
+Z′′E
+| ≤Ce−γM∥Z′′∥Y ′∥˜Z∥Y ≤Ce−γM(∥Z′′∥2
+Y ′ + ∥˜Z∥2
+Y )
+(547)
+We change the Gaussian measure by
+Z
+f( ˜Z)dµ(Re Ck(s,Y )−1)−1( ˜Z)
+=
+
+
+det
+
+Re Ck(s, Y )−1
+det
+
+Ck(0, Y )−1
+
+
+
+1
+2 Z
+f( ˜Z) exp
+
+−1
+2
+D
+˜Z, Re δC−1
+k (s, Y ) ˜Z
+E
+dµCk(0,Y )( ˜Z)
+(548)
+67
+
+=== PAGE 68 ===
+The ratio of determinants is again bounded by eO(M−1)|Y |M and
+|
+D
+˜Z, Re δC−1
+k (s, Y ) ˜Z
+E
+| ≤Ce−γM∥˜Z∥2
+Y
+(549)
+We also bound F(Y ) which is a product over its connected components F(Y ) = Q
+α F(Yα)and each
+F(Yα) is bounded by (516). Combining all of this we have
+∥G(s, Y, Z′′)∥1
+4 hk ≤eO(M−1)|Y |M Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−(κ−6κ0−6)dM(Yα)
+exp
+
+−1
+2
+D
+Z′′, ΓT
+k (0, Y )Ck(0, Y )Γk(0, Y )Z′′E
++ Ce−γM∥Z′′∥2
+Y ′
+
+Z
+dµCk(0,Y )( ˜Z) exp
+
+−
+D
+˜Z, Γk(0, Y )Z′′E
++ (C0p−1
+0,k + Ce−γM)∥˜Z∥2
+Y
+
+(550)
+(3.) Let 1
+2βk = C0p−1
+0,k + Ce−γM which is tiny. The integral is evaluated as
+Z
+dµCk(0,Y )( ˜Z) exp
+
+−
+D
+˜Z, Γk(0, Y )Z′′E
++ βk∥˜Z∥2
+Y
+
+=
+
+
+det
+
+Ck(0, Y )−1
+det
+
+Ck(0, Y )−1 −βk1Y
+
+
+
+1
+2
+exp
+1
+2
+D
+Z′′, ΓT
+k (0, Y )
+
+Ck(0, Y )−1 −βk1Y
+−1
+Γk(0, Y )Z′′E
+(551)
+The ratio of the determinants is bounded by
+|
+h
+det(I −βkCk(0, Y ))
+i−1
+| ≤exp
+
+βk∥Ck(0, Y )∥1
+
+≤exp
+
+βkCM 3|Y |M
+
+≤eO(M−1)Y |M
+(552)
+Next consider the quadratic form 1
+2
+D
+Z′′, ΓT
+k (0, Y )
+
+Ck(0, Y )−1 −βk1Y
+−1
+Γk(0, Y )Z′′E
+. Expand it in
+powers of the small parameter αk. The leading term 1
+2
+D
+Z′′, ΓT
+k (0, Y )Ck(0, Y )Γk(0, Y )Z′′E
+is canceled
+by a corresponding term in (550). The remainder has the form
+D
+Z′′, R2Z′′E
+=
+D
+Z′′, ΓT
+k (0, Y )
+h ∞
+X
+n=1
+βn
+k Ck(0, Y )n+1i
+Γk(0, Y )Z′′E
+(553)
+Arguing as before this satisﬁes |R2(Υ, Υ′)| ≤Cβke−γd(Υ,Υ′) and so | < Z′′, R2Z′′ > | ≤Cβk∥Z′′∥2.
+We also take in (550)
+O(M −1)|Y |M =
+X
+α
+O(M −1)|Yα|M ≤
+X
+α
+dM(Yα) + 1
+(554)
+Let β′
+k ≡Ce−γM + Cβk which is tiny. The bound is now for Y with connected components {Yα} and
+|s□| ≤M α0 and s(Y ′)c = 0:
+∥G(s, Y, Z′′)∥1
+4 hk ≤eβ′
+k∥Z′′∥2
+Y ′ Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−(κ−6κ0−7)dM(Y )
+(555)
+(4.) The function ˘G(Y ′; Z′′) is given in terms of derivatives of G(s, Y, Z′′) for |s□| ≤1 in (526). Having
+established analyticity in the larger domain |s□| ≤M α0 we can estimate these derivatives by Cauchy
+bounds. Each derivative contributes a factor M −α0. Using also the bound (555) yields
+∥˘G(Y ′; Z′′)∥1
+4 hk ≤eβ′
+k∥Z′′∥2
+Y ′
+X
+Y : ˜Y r⊂Y ′
+M −α0|Y ′−˜Y r|M Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−(κ−6κ0−7)dM(Yα)
+(556)
+68
+
+=== PAGE 69 ===
+For Y ′ connected we want to extract a factor e−(κ−7κ0−7)dM(Y ′) from the exponentials in this
+expression. A connected component ˜Y r
+β or ˜Y r is the union of the ˜Y r
+α contained in it so
+dM( ˜Y r
+β ) ≤
+X
+α:Yα⊂˜Y r
+β
+(dM( ˜Y r
+α ) + 2)
+(557)
+and therefore
+X
+β
+dM( ˜Y r
+β ) ≤
+X
+α
+(dM( ˜Y r
+α ) + 2)
+(558)
+However for connected Y we have dM( ˜Y ) ≤O(1)(dM(Y )+ 1) (see (364) in [29] ) and hence dM( ˜Y r) ≤
+O(1)(dM(Y ) + 1). Therefore
+X
+β
+dM( ˜Y r
+β ) ≤O(1)
+X
+α
+(dM(Yα) + 2)
+(559)
+The same bound holds with P
+β(dM( ˜Y r
+β ) + 2) on the left. Also suppose we divide the connected Y ′
+up into pieces Y ′
+β each containing exactly one ˜Y r
+β . Then
+dM(Y ′) ≤
+X
+β
+(dM(Y ′
+β) + 2)
+≤
+X
+β
+(|Y ′
+β −˜Y r
+β |M + dM( ˜Y r
+β ) + 2)
+=|Y ′ −˜Y r|M +
+X
+β
+(dM( ˜Y r
+β ) + 2)
+(560)
+Combining (559) and (560) we have that there is a constant c1 = O(1), c1 < 1 such that
+c1dM(Y ′) ≤|Y ′ −˜Y r|M +
+X
+α
+(dM(Yα) + 2)
+(561)
+Assuming M −1
+2 α0 ≤e−(κ−7κ0−7) the last estimate allows us to pull a factor e−c1(κ−7κ0−7)dM(Y ′) out
+of the sum (556) leaving
+∥˘G(Y ′; Z′′)∥1
+4 hk ≤e−c1(κ−7κ0−7)dM(Y ′)eβ′
+k∥Z′′∥2
+Y ′
+X
+Y : ˜Y r⊂Y ′
+M −1
+2 α0|Y ′−˜Y r|M Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−κ0dM(Yα)
+(562)
+The sum here can also be written
+X
+Z⊂Y ′
+X
+Y : ˜Y r=Z
+M −1
+2 α0|Y ′−Z|M Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−κ0dM(Yα)
+(563)
+The sum over Y = {Yα} is estimated by
+X
+{Yα}:Yα⊂Z
+Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−κ0dM(Yα) ≤
+∞
+X
+n=1
+1
+n!
+X
+(Y1,...,Yn):Yα⊂Z
+Y
+α
+O(1)e
+1
+4 −5ǫ
+k
+e−κ0dM(Yα)
+=
+∞
+X
+n=1
+1
+n!
+ X
+Y ⊂Z
+O(1)e
+1
+4 −5ǫ
+k
+e−κ0dM(Y )n
+≤
+∞
+X
+n=1
+1
+n!
+
+O(1)e
+1
+4 −5ǫ
+k
+|Z|M
+n
+≤O(1)e
+1
+4 −5ǫ
+k
+|Z|M exp
+
+O(1)e
+1
+4 −5ǫ
+k
+|Z|M
+
+≤O(1)e
+1
+4 −5ǫ
+k
+e
+1
+2 c1dM(Y ′)
+(564)
+69
+
+=== PAGE 70 ===
+The sum over Z is estimated by
+X
+Z⊂Y ′
+M −1
+2 α0|Y ′−Z|M ≤
+
+1 + M −1
+2 α0|Y ′|M
+≤exp
+
+M −1
+2 α0|Y ′|M
+
+≤O(1)e
+1
+2 c1dM(Y ′)
+(565)
+This yields for Y ′ connected
+∥˘G(Y ′; Z′′)∥1
+4 hk ≤O(1)e
+1
+4 −5ǫ
+k
+e−c1(κ−7κ0−8)dM(Y ′)eβk∥Z′′∥2
+Y ′
+(566)
+For H(Y ′) =
+R ˘G(Y ′; Z′′)dµI(Z′′) the integral over Z′′ is estimated by
+Z
+eβk∥Z′′∥2
+Y ′dµI(Z′′) ≤eβ′
+kVol|Y ′| ≤eβ′
+kM3|Y ′|M ≤O(1)ec1dM(Y ′)
+(567)
+and so for Y ′ connected we can take
+∥H(Y ′)∥1
+4 hk ≤O(1)e
+1
+4 −5ǫ
+k
+e−c1(κ−7κ0−9)dM(Y ′)
+(568)
+Step VII: Now H(Y ) factors over its connected components, H(Y ) = Q
+i H(Yi), and is small so we
+can exponentiate Ξk = P
+Y H(Y ) by a standard formula (see for example [25]). This yields
+Ξk = exp
+
+E#
+k
+
+= exp
+ X
+X
+E#
+k (X)
+
+(569)
+where the sum is over connected X and
+E#
+k (X) =
+∞
+X
+n=1
+1
+n!
+X
+(Y1,...,Yn):∪iYi=X
+ρT (Y1, . . . , Yn)
+Y
+i
+H(Yi)
+(570)
+for a certain function ρT (Y1, . . . , Yn) enforcing connectedness. This satisﬁes
+∥E#
+k (X)∥1
+4 hk ≤O(1)e
+1
+4 −5ǫ
+k
+e−c1(κ−10κ0−10)dM(X)
+(571)
+It is straightforward, but somewhat tedious, to check that E#
+k (X, A, ψ) still has all the symmetries.
+This generally comes down to a statement about the covariance. For example for charge conjugation
+invariance we need C−1Γ(−A)C = Γ(A)T . This follows from the representation (115) and the same
+property for S0
+k+1(A) as in (120). This completes the proof of theorem 2.
+We are still working on the proof of theorem 1. Updating the expression (474) we have
+˜ρk+1(Ak+1, eiekω(1)Ψk+1) = NkNkZkδZk+1Zk(0)δZk(A)
+exp
+
+−1
+2∥dA∥2 −S0,+
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
++ E′
+k
+
+A, ψ0,#
+k+1(A)
+
++ E#
+k
+
+A, ψ0,#
+k+1(A)
+
+A=A0
+k+1
+(572)
+70
+
+=== PAGE 71 ===
+6.2.7
+fermion determinant
+We now remove the gauge ﬁeld from the fermion determinant
+Lemma 24. For A ∈˜Rk
+δZk(A)
+δZk(0) = exp
+ X
+X
+Edet
+k (X, A)
+
+(573)
+where Edet
+k
+(X, A) vanishes at A = 0 and satisﬁes
+|Edet(X, A)| ≤e
+1
+4 −ǫ
+k
+e−κdM(X)
+(574)
+Proof. First take A in the larger domain e
+−1
+4
+k
+Rk. This is still in the region of analyticity for propa-
+gators Sk(A), Sy(A). Take the expression for δZk(A) from (374) and insert the polymer expansion for
+Sk,y(A) from (389). Then we have
+δZk(A) = exp
+
+4|T0
+N−k| log bk +
+X
+X
+Ed
+k(X, A)
+
+(575)
+where
+Ed
+k(X, A) = −iγ3b2
+k
+Z ∞
+0
+Tr
+h
+Bk,y(A)Qk(A)Sk,y(X, A)QT
+k (−A)Bk,y(A)
+i
+dy
+(576)
+The bound (390) is easily modiﬁed to |Sk,y(X, A)f| ≤e−(κ+1)dM(X)∥f∥∞and then as in (432), (433)
+
+h
+Qk(A)Sk,y(X, A)QT
+k (−A)
+i
+xx′
+ ≤Ce−(κ+1)dM(X)
+(577)
+The factors Bk,y(A) are local and each supplies a factor O(y−1) for convergence of the integral. The
+trace is only over the region X and gives a factor M 3|X|M ≤M 3edM(X). Therefore
+|Ed(X, A)| ≤CM 3e−κdM(X)
+(578)
+For the ratio δZk(A)/δZk(0) the volume factors cancel and we have the expression (573) with
+Edet
+k
+(X, A) = Ed
+k(X, A) −Ed
+k(X, 0)
+(579)
+which again satisﬁes the bound (578).
+Now take the smaller domain ˜Rk. Since Edet
+k (X, 0) = 0 and e
+−1
+4
+k
+A is in the larger domain we have
+Edet
+k (X, A) =
+1
+2πi
+Z
+|t|=e
+−1
+4
+k
+dt
+t(t −1)Edet
+k (X, tA)
+(580)
+and this gives
+|Ed(X, A)| ≤CM 3e
+1
+4
+k e−κdM(X) ≤e
+1
+4 −ǫ
+k
+e−κdM(X)
+(581)
+to complete the proof.
+Now we have
+˜ρk+1(Ak+1, eiekω(1)Ψk+1) = NkNkZkδZk+1Zk(0)δZk(0)
+exp
+
+−1
+2∥dA∥2 −S0
+k+1
+
+A, Ψk+1, ψ0
+k+1(A)
+
+−(ε′
+k + ε0
+k)Vol(T0
+N−k)
+
+exp
+
+−m′
+k
+D
+¯ψ0
+k+1(A), ψ0
+k+1(A)
+E
++ E′
+k
+
+A, ψ0,#
+k+1(A)
+
++ Edet
+k (A) + E#
+k
+
+A, ψ0,#
+k+1(A)
+
+A=A0
+k+1
+(582)
+71
+
+=== PAGE 72 ===
+6.2.8
+scaling
+The last step is scaling. We reblock E′
+k = REk to BREk, Edet
+k
+to BEdet
+k , and E#
+k to BE#
+k , all deﬁned
+on LM-polymers. Then we scale (572) according to (393). Taking account that A0
+k+1 scales to Ak+1,
+that ψ0
+k+1(A0
+k+1) scales to ψk+1(Ak+1), and (111) we obtain the desired form
+ρk+1(Ak+1, eiθΨk+1) = Nk+1Zk+1Zk+1(0)
+exp
+
+−1
+2∥dAk+1∥2 −Sk+1
+
+A, Ψk+1, ψk+1(A)
+
+−εk+1Vol(T0
+N−k−1)
+
+exp
+
+−mk+1
+D
+¯ψk+1(Ak+1), ψk+1(Ak+1)
+E
++ Ek+1
+
+Ak+1, ψ#
+k+1(Ak+1)
+
+(583)
+Here we have made the identiﬁcation from (113), (181)
+
+NkNkZk(0)δZk(0)L−8(sN−sN−k−1)
+ZkδZk+1L
+1
+2 (bN −bN−k−1)−1
+2 (sN −sN−k−1)
+= Nk+1Zk+1(0)Zk+1
+(584)
+As announced in the theorem we have deﬁned εk+1 = L3(ε′
+k + ε0
+k) = L3(εk + εk(Ek) + ε0
+k), and
+mk+1 = Lm′
+k = L(mk + m(Ek)), and with LE = (BE)L−1
+Ek+1 = L
+
+REk + Edet
+k
++ E#
+k
+
+(585)
+We already have a bound on ε0
+k so all that remains is a bound on the kernel of E∗
+k = LE#
+k . We
+would like to use the bound (308) and ∥E#
+k ∥k ≤O(1)e
+1
+4 −5ǫ
+k
+to obtain
+∥LE#
+k ∥k+1 ≤O(1)L3∥E#
+k ∥k ≤O(1)L3e
+1
+4 −5ǫ
+k
+≤e
+1
+4 −6ǫ
+k
+(586)
+But this is not quite correct since our bound (497) does not give the bound on ∥ˆE#
+k ∥k but on a
+somewhat diﬀerent quantity. We have to revisit the proof of (308) using the actual bound (497). If
+A ∈˜Rk+1 then AL ∈1
+2 ˜Rk so after scaling we are in the domain needed for (497). The fermion ﬁeld
+parameter in (497) is 1
+4hk not hk. But this does not aﬀect the derivation of (308) since we can take
+hk+1 ≤1
+4hk rather than hk+1 ≤hk. Finally the decay factor in (497) is e−c1(κ−10κ0−10)dM(X) rather
+than e−κdM(X). This means that in the bound (307) we get O(1)L3e−Lc1(κ−10κ0−10)dM(X) instead of
+O(1)L3e−L(κ−κ0−1)dM(Y ). For L large this is still dominated by O(1)L3e−κdM(Y ). Thus the conclusion
+of (586) is still valid.
+This completes the proof of theorem 1.
+7
+The ﬂow
+We seek well-behaved solutions of the RG equations (401). Thus we study
+εk+1 =L3
+εk + ε(Ek) + ε0
+k)
+
+mk+1 =L
+
+mk + m(Ek)
+
+Ek+1 =L
+
+REk + Edet
+k
++ E#
+k (mk, Ek)
+
+(587)
+This can be iterated at most up to k = K ≡N −m since at this point we are on the torus T0
+N−K = T0
+m
+which consists of a single M = Lm cube. Our goal is to show that for any N we can choose the initial
+point so that the solution exists for k = 0, 1, . . ., K and ﬁnishes at preassigned values (εK, mK) =
+72
+
+=== PAGE 73 ===
+(εN
+K, mN
+K) independent of N. This procedure is nonperturbative renormalization - the initial values for
+(ε0, m0) = (εN
+0 , mN
+0 ) will depend N. Our proof follows the analysis in [25], [29].
+Arbitrarily ﬁxing the ﬁnal values at zero, and starting with E0 = 0 as dictated by the model, we
+look for solutions εk, mk, Ek for k = 0, 1, 2, . . ., K satisfying
+εK = 0
+mK = 0
+E0 = 0
+(588)
+This makes the eﬀective mass ¯mK + mK = ¯mK = L−m ¯m. At this point we temporarily drop the
+equation for the energy density εk and just study
+mk+1 =L
+
+mk + m(Ek)
+
+Ek+1 =L
+
+REk + Edet
+k
++ E#
+k (mk, Ek)
+
+(589)
+Let ξk = (mk, Ek) be an element of the complete metric space R × Kk where Kk is the Banach
+space deﬁned in section 4.3. Consider sequences
+ξ = (ξ0, . . . , ξK)
+(590)
+Let B be the space of all such sequences with norm
+∥ξ∥=
+sup
+0≤k≤K
+{e
+−3
+4 +8ǫ
+k
+|mk|, e
+−1
+4 +7ǫ
+k
+∥Ek∥k}
+(591)
+Let B0 be the subset of all sequences satisfying the boundary conditions. Thus
+B0 = {ξ ∈B : mK = 0, E0 = 0}
+(592)
+This is a complete metric space with distance ∥ξ −ξ′∥. Finally let
+B1 = B0 ∩{ξ ∈B : ∥ξ∥< 1}
+(593)
+Note that the condition ∥ξ∥≤1 implies
+|mk| < e
+3
+4 −8ǫ
+k
+∥Ek∥k < e
+1
+4 −7ǫ
+k
+(594)
+so we are well within the domain of validity for the main theorem.
+Next deﬁne an operator ξ′ = T ξ by
+m′
+k =L−1mk+1 −m(Ek)
+E′
+k =L
+
+REk−1 + Edet
+k−1 + E#
+k−1(mk−1, Ek−1)
+
+(595)
+Then ξ is a solution of (589) and the boundary conditions iﬀit is a ﬁxed point for T on B0. We look
+for such ﬁxed points in B1.
+Lemma 25. Let L be suﬃciently large and e suﬃciently small. Then for all N
+1. The transformation T maps the set B1 to itself.
+2. There is a unique ﬁxed point T ξ = ξ in this set.
+Proof. We use the bound from (323)
+|m(Ek)| ≤O(1)e
+1
+2
+k ∥Ek∥k
+(596)
+73
+
+=== PAGE 74 ===
+We also use
+∥LREk−1∥k ≤O(1)L−1
+4 +2ǫ∥Ek−1∥k−1
+∥LEdet
+k−1∥k < e
+1
+4 −2ǫ
+k
+∥E∗
+k−1∥k =∥LE#
+k−1∥k ≤e
+1
+4 −6ǫ
+k−1
+(597)
+The ﬁrst is the key contractive estimate (404).
+The second follows since ∥Edet
+k−1∥k−1 ≤e
+1
+4 −ǫ
+k
+so
+∥LEdet
+k−1∥k ≤O(1)L3e
+1
+4 −ǫ
+k
+≤e
+1
+4 −2ǫ
+k
+. The third is (402).
+(1.) To show the the map sends B1 to itself we estimate using ek+1 = L
+1
+2 ek
+e
+−3
+4 +8ǫ
+k
+|m′
+k| ≤e
+−3
+4 +8ǫ
+k
+
+L−1|mk+1| + O(1)e
+1
+2
+k ∥Ek∥k
+
+≤L−5
+8
+h
+e
+−3
+4 +8ǫ
+k+1
+|mk+1|
+i
++ O(1)eǫ
+k
+h
+e
+−1
+4 +7ǫ
+k
+∥Ek∥k
+i
+≤∥ξ∥< 1
+(598)
+We also have
+e
+−1
+4 +7ǫ
+k
+∥E′
+k∥k ≤e
+−1
+4 +7ǫ
+k
+
+O(1)L−1
+4 +2ǫ∥Ek−1∥k−1 + e
+1
+4 −2ǫ
+k
++ e
+1
+4 −6ǫ
+k−1
+
+≤O(1)L−3
+8 +6ǫh
+e
+−1
+4 +7ǫ
+k−1
+∥Ek−1∥k−1
+i
++ eǫ
+k
+≤1
+2∥ξ∥+ 1
+2 < 1
+(599)
+Hence ∥T (ξ)∥< 1 as required.
+(2.) It suﬃces to show that the mapping is a contraction. We show that under our assumptions
+∥ξ′
+1 −ξ′
+2∥= ∥T (ξ1) −T (ξ2)∥≤1
+2∥ξ1 −ξ2∥
+(600)
+First consider the m terms. Since m(E) is linear |m(E1,k) −m(E2,k)| ≤O(1)e
+1
+2
+k ∥E1,k −E2,k∥k so
+e
+−3
+4 +8ǫ
+k
+|m′
+1,k −m′
+2,k| ≤e
+−3
+4 +8ǫ
+k
+
+L−1|m1,k+1 −m2,k+1| +
+m(E1,k) −m(E2,k)
+
+
+≤L−5
+8
+h
+e
+−3
+4 +8ǫ
+k+1
+|m1,k+1 −m2,k+1|
+i
++ O(1)eǫ
+k
+h
+e
+−1
+4 +7ǫ
+k
+∥E1,k −E2,k∥k
+i
+≤1
+2∥ξ1 −ξ2∥
+(601)
+Now consider the E terms. The term LEdet
+k−1 cancels and we have with E∗
+k−1 = LE#
+k−1
+E′
+1,k −E′
+2,k =LR(E1,k−1 −E2,k−1) + (E∗
+k−1(m1,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E2,k−1))
+(602)
+Then
+e
+−1
+4 +7ǫ
+k
+∥E′
+1,k −E′
+2,k∥k ≤O(1)e
+−1
+4 +7ǫ
+k
+L−1
+4 +2ǫ∥E1,k−1 −E2,k−1∥k−1
++e
+−1
+4 +7ǫ
+k
+∥E∗
+k−1(m1,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E2,k−1)∥k
+
+(603)
+For the ﬁrst term in (603) we have
+O(1)e
+−1
+4 +7ǫ
+k
+L−1
+4 +2ǫ∥E1,k−1 −E2,k−1∥k−1 ≤O(1)L−3
+8 +6ǫh
+e
+−1
+4 +7ǫ
+k−1
+∥E1,k−1 −E2,k−1∥k−1
+i
+≤1
+6∥ξ1 −ξ2∥
+(604)
+74
+
+=== PAGE 75 ===
+For the second term in (603) we write
+e
+−1
+4 +7ǫ
+k
+∥E∗
+k−1(m1,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E2,k−1)∥
+≤e
+−1
+4 +7ǫ
+k
+∥
+
+E∗
+k−1(m1,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E1,k−1)
+
+∥
++ e
+−1
+4 +7ǫ
+k
+∥
+
+E∗
+k−1(m2,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E2,k−1)
+
+∥
+(605)
+Now E∗
+k(m, E) is actually an analytic function of its arguments so for the ﬁrst term in (605) we can
+write for r > 1
+E∗
+k−1(m1,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E1,k−1)
+=
+1
+2πi
+Z
+|t|=r
+dt
+t(t −1)E∗
+k−1
+
+m2,k−1 + t(m1,k−1 −m2,k−1), E1,k−1)
+
+(606)
+We can assume m1,k−1 ̸= m2,k−1 and take r = 3e
+3
+4 −8ǫ
+k−1 |m1,k−1 −m2,k−1|−1. This is greater than one
+since |m1,k−1 −m2,k−1| ≤e
+3
+4 −8ǫ
+k−1 ∥ξ1 −ξ2∥≤2e
+3
+4 −8ǫ
+k−1 . Also it keeps us well inside the domain for E∗
+k−1
+as given by the main theorem. Hence we can use the estimate ∥E∗
+k−1∥k ≤e
+1
+4 −6ǫ
+k−1
+from (597). Hence
+the ﬁrst term in (605) is bounded by
+O(1)e
+−1
+4 +7ǫ
+k
+h
+e
+−3
+4 +8ǫ
+k−1
+|m1,k−1 −m2,k−1|
+i
+e
+1
+4 −6ǫ
+k−1
+≤O(1)eǫ
+k∥ξ1 −ξ2∥≤1
+6∥ξ1 −ξ2∥
+(607)
+For the second term in (605) we write for r > 1
+E∗
+k−1(m2,k−1, E1,k−1) −E∗
+k−1(m2,k−1, E2,k−1)
+=
+1
+2πi
+Z
+|t|=r
+dt
+t(t −1)E∗
+k−1
+
+m2,k−1, E2,k−1 + t(E1,k−1 −E2,k−1)
+
+(608)
+Now we take r = 3e
+1
+4 −7ǫ
+k−1 ∥E1,k−1 −E2,k−1∥−1
+k−1 which is bigger than one since ∥E1,k−1 −E2,k−1∥k−1 ≤
+2e
+1
+4 −7ǫ
+k−1 , and it keeps us well within the domain of E∗
+k−1. Again using ∥E∗
+k−1∥k ≤e
+1
+4 −6ǫ
+k−1
+this term is
+bounded by
+O(1)e
+−1
+4 +7ǫ
+k
+h
+e
+−1
+4 +7ǫ
+k−1
+∥E1,k−1 −E2,k−1∥k−1
+i
+e
+1
+4 −6ǫ
+k−1
+≤O(1)eǫ
+k∥ξ1 −ξ2∥≤1
+6∥ξ1 −ξ2∥
+(609)
+Combining (604), (607), (609) yields e
+−1
+4 +7ǫ
+k
+∥E′
+1,k −E′
+2,k∥k ≤1
+2∥ξ1 −ξ2∥which together with (601)
+gives the desired result ∥ξ′
+1 −ξ′
+2∥≤1
+2∥ξ1 −ξ2∥.
+Now we can state:
+Theorem 3. Let L be suﬃciently large and e be suﬃciently small. Then for each N there is a unique
+sequence εk, mk, Ek for k = 0, 1, 2, . . ., K = N −m satisfying of the dynamical equation (587) and the
+boundary conditions (588), and with ek = L−1
+2 (N−k)e
+|mk| ≤e
+3
+4 −8ǫ
+k
+∥Ek∥k ≤e
+1
+4 −7ǫ
+k
+(610)
+Furthermore
+|εk| ≤2e
+1
+4 −7ǫ
+k
+(611)
+75
+
+=== PAGE 76 ===
+Proof. This solution (mk, Ek) is the ﬁxed point from the previous lemma and the bounds (610) are
+a consequence.
+The energy density εk is determined by
+εk = L−3εk+1 −ε(Ek) −ε0
+k
+(612)
+with the ﬁnal condition εK = 0, which however we now treat as a initial condition. From (323) we
+have |ε(Ek)| ≤c∥Ek∥k ≤ce
+1
+4 −7ǫ
+k
+for some constant c = O(1), and we also have |ε0
+k| ≤en0
+k . We claim
+that
+|εk| ≤2ce
+1
+4 −7ǫ
+k
+(613)
+It is true for k = K. We suppose it is true for k + 1 and prove it for k. This follows for L large by
+|εk| ≤L−32ce
+1
+4 −7ǫ
+k+1 + ce
+1
+4 −7ǫ
+k
++ en0
+k ≤2ce
+1
+4 −7ǫ
+k
+(614)
+This completes the proof.
+Remark. The treatment of scalar QED3 in [29] featured a more awkward treatment of the matter
+determinant (as did an earlier version of this paper). This could be improved by adopting the present
+strategy for determinants. Also the iteration in that paper should have been stopped at K = N −m
+rather than N.
+A
+Grassman integrals
+We develop facts about Grassman algebras and associated integrals. General references are [35], [32].
+A.1
+basic estimates
+Consider the Grassman algebra generated by {Ψ(s)}s∈S where (S, µ) is a ﬁnite measure space. The
+general element has the form
+E = E(Ψ) =
+X
+n
+1
+n!
+X
+s1,...,sn
+En(s1, . . . , sn)Ψ(s1) · · · Ψ(sn)µ(s1) · · · µ(sn)
+(615)
+where En(s1, . . . , sn) is totally anti-symmetric in its arguments and Ψ(s)Ψ(s′) = −Ψ(s′)Ψ(s). Pick a
+ﬁxed ordering for S. Then we can also write this as a sum over ordered subsets I = (s1, . . . , sn) of
+variable length as
+E(Ψ) =
+X
+I
+E(I)Ψ(I)µ(I)
+(616)
+where
+E(I) = E(s1, . . . , sn)
+Ψ(I) = Ψ(s1) · · · Ψ(sn)
+µ(I) = µ(s1) · · · µ(sn)
+(617)
+We deﬁne a norm
+∥E∥h =
+X
+n
+hn
+n!
+X
+s1,...,sn
+|En(s1, . . . , sn)|µ(s1) · · · µ(sn)
+(618)
+which can also be written
+∥E∥h =
+X
+I
+h|I||E(I)|µ(I)
+(619)
+Lemma 26.
+∥EF∥h ≤∥E∥h∥F∥h
+(620)
+76
+
+=== PAGE 77 ===
+Proof. We have
+EF =
+X
+I,J
+E(I)F(J)Ψ(I)Ψ(J)µ(I)µ(J)
+(621)
+Only terms with I ∩J = ∅contribute and we classify them by I ∪J so
+EF =
+X
+K
+
+
+X
+I∪J=K,I∩J=∅
+E(I)F(J)sgn((I, J) →K)
+
+Ψ(K)µ(K)
+(622)
+where sgn((I, J) →K) is the sign of the permutation taking (I, J) to K. Then dropping the condition
+I ∩J = ∅
+∥EF∥h =
+X
+K
+h|K|
+
+
+X
+I∪J=K,I∩J=∅
+E(I)F(J)sgn(I, J →K)
+
+µ(K)
+≤
+X
+K
+X
+I∪J=K,I∩J=∅
+h|I|+|J|E(I)F(J)µ(I)µ(J)
+≤
+X
+I,J
+h|I|+|J|E(I)F(J)µ(I)µ(J) = ∥E∥h∥F∥h
+(623)
+Next consider the Grassman algebra generated by Ψ indexed by (S1, µ1) and χ indexed by (S2, µ2).
+The general element can be written
+E = E(Ψ, χ) =
+X
+I⊂S1,J⊂S2
+E(I, J)Ψ(I)χ(J)µ1(I)µ2(J)
+(624)
+An associated norm depends on two parameters h, k and is
+∥E∥h,k =
+X
+I,J
+h|I|k|J||E(I, J)|µ1(I)µ2(J)
+(625)
+Lemma 27. Let Ψ, Ψ′ be indexed by the same (S, µ) and deﬁne
+E+(Ψ, Ψ′) = E(Ψ + Ψ′)
+(626)
+Then
+∥E+∥h,h′ ≤∥E∥h+h′
+(627)
+Proof. With E(Ψ) of the form (616)
+E+(Ψ, Ψ′) =
+X
+K
+E(K)((Ψ + Ψ′)(K))µ(K)
+=
+X
+K
+E(K)
+h
+X
+I∪J=K,I∩J=∅
+sgn((I, J) →K)Ψ(I)Ψ′(J)
+i
+µ(K)
+=
+X
+I∩J=∅
+h
+E(I ∪J)sgn(I, J)
+i
+Ψ(I)Ψ′(J)µ(I)µ(J)
+≡
+X
+I,J
+E+(I, J)Ψ(I)Ψ′(J)µ(I)µ(J)
+(628)
+77
+
+=== PAGE 78 ===
+where sgn(I, J) is the sign of the permutation that puts (I, J) is standard order and E+(I, J) =
+E(I ∪J)sgn(I, J) if I ∩J = ∅and is zero otherwise. Therefore
+∥E+∥h,h′ =
+X
+I,J
+h|I|(h′)|J||E+(I, J)|µ(I)µ(J)
+≤
+X
+I∩J=∅
+h|I|(h′)|J||E(I ∪J)|µ(I)µ(J)
+=
+X
+K
+X
+I∪J=K,I∩J=∅
+h|I|(h′)|J||E(K)|µ(K)
+=
+X
+K
+(h + h′)|K||E(K)|µ(K)
+=∥E∥h+h′
+(629)
+A.2
+dressed Grassman variables
+Now suppose we introduce dressed ﬁelds ψ(t) deﬁned on a new measure space (T, ν) and deﬁned by
+ψ(t) = (HΨ)(t) ≡
+X
+s
+H(t, s)Ψ(s)µ(s)
+(630)
+We consider elements of the algebra of the form
+E = E(ψ) =
+X
+n
+1
+n!
+X
+t1,...,tn
+En(t1, . . . , tn)ψ(t1) · · · ψ(tn)ν(t1) · · · ν(tn)
+(631)
+or for ordered subsets I ⊂T in some ﬁxed ordering
+E(ψ) =
+X
+I
+E(I)ψ(I)ν(I)
+(632)
+We deﬁne a norm on the kernel by
+∥E∥h =
+X
+n
+hn
+n!
+X
+t1,...,tn
+|En(t1, . . . , tn)|ν(t1) · · · ν(tn)
+(633)
+which can also be written
+∥E∥h =
+X
+I
+h|I||E(I)|ν(I)
+(634)
+Since ψ(t)ψ(t′) = −ψ(t′)ψ(t) we have as in lemma 26 that if G = EF then the kernels satisfy
+∥G∥h ≤∥E∥h∥F∥h
+(635)
+Next we estimate the basic norm in terms of the kernel norm. We use the norm
+∥H∥1,∞≡sup
+t∈T
+X
+s∈S
+|H(t, s)|µ(s)
+(636)
+Lemma 28. If E′(Ψ) = E(HΨ) as in (630), (631) then
+∥E′∥h ≤∥E∥∥H∥1,∞h
+(637)
+78
+
+=== PAGE 79 ===
+Proof. Start with
+E′(Ψ) =
+X
+n
+1
+n!
+X
+s1,...,sn
+E′
+n(s1, . . . , sn)Ψ(s1) · · · Ψ(sn)µ(s1) · · · µ(sn)
+(638)
+where
+E′
+n(s1, . . . , sn) =
+X
+t1,...,tn
+En(t1, . . . , tn)
+n
+Y
+i=1
+ν(ti)H(ti, si)
+(639)
+is totally anti-symmetric under permutations. Then
+∥E′∥h ≤
+∞
+X
+n=0
+hn
+n!
+X
+s1,...,sn
+h X
+t1,...,tn
+|En(t1, . . . , tn)|
+n
+Y
+i=1
+|ν(ti)H(ti, si)|
+i
+µ(s1) · · · µ(sn)
+≤
+∞
+X
+n=0
+(∥H∥1,∞h)n
+n!
+X
+t1,...,tn
+|En(t1, . . . , tn)|ν(t1) · · · ν(tn)
+=∥E∥H∥1,∞h
+(640)
+A.3
+several dressed Grassman variables
+The previous results generalize directly to the case of two or more dressed ﬁelds. Again consider the
+Grassman algebra generated by Ψ on measure spaces (S, µ) Deﬁne new ﬁelds ψ1, ψ2 on measure spaces
+(T1, ν1), (T2, ν2) by
+ψi(ti) = (HiΨ)(ti) =
+X
+s∈S
+Hi(ti, s)Ψ(s)µ(s)
+i = 1, 2
+(641)
+We consider elements of the algebra of the form
+E = E(ψ1, ψ2) =
+X
+I,J
+E(I, J)ψ1(I)ψ2(J)ν1(I)ν2(J)
+(642)
+where I is an ordered subset from T1 and J is an ordered subset from T2. This can also be written
+without ordering as
+E(ψ1, ψ2) =
+X
+n,m
+1
+n!m!
+X
+t1,...,tn,t′
+1,...,t′m
+Enm(t1, . . . , tn, t′
+1, . . . t′
+m)
+ψ1(t1) · · · ψ1(tn)ψ2(t′
+1) · · · ψ2(t′
+m)
+n
+Y
+i=1
+ν1(ti)
+m
+Y
+i=1
+ν2(t′
+i)
+(643)
+The associated norm on the kernels depends on parameters h = (h1, h2) and is
+∥E∥h =
+X
+I,J
+h|I|
+1 h|J|
+2 |E(I, J)|ν1(I)ν2(J)
+(644)
+which is also written
+∥E∥h =
+X
+n,m
+hn
+1hm
+2
+n!m!
+X
+t1,...,tn,t′
+1,...,t′m
+|Enm(t1, . . . , tn, t′
+1, . . . t′
+m)|
+n
+Y
+i=1
+ν1(ti)
+m
+Y
+i=1
+ν2(t′
+i)
+(645)
+As in lemma 26 we have again that if G = EF then
+∥G∥h ≤∥E∥h∥F∥h
+(646)
+79
+
+=== PAGE 80 ===
+Lemma 29. If E′(Ψ) = E(H1Ψ, H2Ψ) as above then
+∥E′∥h ≤∥E∥∥H1∥1,∞h,∥H2∥1,∞h
+(647)
+Proof. We have
+E′(Ψ) =
+X
+n,m
+1
+n!m!
+X
+s1,...,sn,s′
+1,...s′n
+E′
+nm(s1, . . . , sn, s′
+1, . . . s′
+n)
+Ψ(s1) · · · Ψ(sn)Ψ(s′
+1) · · · Ψ(s′
+n)
+Y
+i
+µ(si)
+Y
+j
+µ(s′
+j)
+(648)
+where
+E′
+nm(s1, . . . , sn, s′
+1, . . . s′
+n)
+=
+X
+t1,...,tn,t′
+1...,t′n
+Enm(t1, . . . , tn, t′
+1 . . . , t′
+n)
+n
+Y
+i=1
+ν(ti)H1(ti, si)
+m
+Y
+j=1
+ν(t′
+i)H2(t′
+j, s′
+j)
+(649)
+is anti-symmetric under permutations within each group. We can rewrite (648) as
+E′(Ψ) =
+X
+I∩J=∅
+E′(I, J)Ψ(I)Ψ(J)µ(I)µ(J)
+=
+X
+K
+
+
+X
+I∪J=K,I∩J=∅
+E′(I, J)sgn(I, J →K)
+
+Ψ(K)µ(K)
+≡
+X
+k
+E′(K)ψ(K)µ(K)
+(650)
+Then
+∥E′∥h =
+X
+K
+h|K||E′(K)|µ(K)
+≤
+X
+K
+X
+I∪J=K,I∩J=∅
+h|I|h|J|E′(I, J)|µ(I)µ(J)
+≤
+X
+I,J
+h|I|h|J||E′(I, J)|µ(I)µ(J)
+(651)
+which can be rewritten as
+∥E′∥h ≤
+X
+n,m
+hn+m
+n!m!
+h
+X
+s1,...,sn,s′
+1,...s′n
+|E′(s1, . . . , sn, s′
+1, . . . s′
+n)|
+Y
+i
+µ(si)
+Y
+j
+µ(s′
+j)
+i
+≤
+X
+n,m
+hn+m
+n!m! ∥Enm∥∥H1∥n
+1,∞∥H2∥m
+1,∞
+=∥E∥∥H1∥1,∞h,∥H2∥1,∞h
+(652)
+A.4
+further results
+We list some further results. Theses are mostly variations of earlier results, but now involve ﬁelds
+ψ1, ψ2 which can both be dressed ﬁelds. They are straightforward to check.
+80
+
+=== PAGE 81 ===
+• If ψ, ψ′ are deﬁned on the same space (T, ν) and E+(ψ, ψ′) = E(ψ + ψ′) then the kernels satisfy
+∥E+∥h,h′ ≤∥E∥h+h′
+(653)
+More generally if (ψ1, ψ2) and (ψ′
+1, ψ′
+2) are ﬁelds such that ψ1, ψ′
+1 are deﬁned on the same space
+and ψ2, ψ′
+2 are deﬁned on the same space and E+((ψ1, ψ2), (ψ′
+1, ψ′
+2)) = E(ψ1+, ψ′
+1, ψ2 + ψ′
+2) then
+with h = (h1, h2) and h′ = (h′
+1, h′
+2) the kernels satisfy
+∥E+∥h,h′ ≤∥E∥h+h′
+(654)
+• Let A be an operator from functions on (T2, ν2) to (T1, ν1). Let E be deﬁned on ﬁelds indexed
+by (T1, ν1) and deﬁne E′ on ﬁelds indexed by (T2, ν2) by E′(ψ) = E(Aψ). Then the kernels
+satisfy
+∥E′∥h ≤∥E∥∥A∥1,∞h
+(655)
+More generally let ψ1, ψ2 be indexed by (T1, ν1) and (T2, ν2) and suppose
+E′(ψ1, ψ2) = E(A11ψ1 + A12ψ2, A21ψ1 + A22ψ2)
+(656)
+where Aij is an operator mapping functions on (Tj, νj) to functions on (Ti, νi). If
+∥Aij∥1,∞≤Cij
+(657)
+then the kernels satisfy
+∥E′∥h1,h2 ≤∥E∥C11h1+C12h2,C21h1+C22h2
+(658)
+A.5
+Gaussian integrals
+Unitl now we have implicitly treated Ψ, ¯Ψ as diﬀerent components of the same ﬁeld. Now we distinguish
+them and consider our Grassman algebra as generated by Ψ, ¯Ψ each indexed by (S, µ). The general
+element now has the form
+E(Ψ, ¯Ψ)
+=
+X
+nm
+1
+n!m!
+X
+s1,...,sn,t1,...,tn
+E(s1, . . . , sn, t1, . . . , tm)Ψ(s1) · · · Ψ(sn)¯Ψ(t1) · · · ¯Ψ(tm)
+Y
+i
+µ(si)
+Y
+j
+µ(tj)
+(659)
+which can also be written
+E(Ψ, ¯Ψ) =
+X
+I,¯I
+E(I, ¯I)¯Ψ(I)Ψ(¯I)µ(I)µ(¯I)
+(660)
+where I, ¯I are ordered sequences of points. There is an associated norm
+∥E∥h =
+X
+nm
+hn+m
+n!m!
+X
+s1,...,sn,t1,...,tm
+|E(s1, . . . , sn, t1, . . . , tm)|
+Y
+i
+µ(si)
+Y
+j
+µ(tj)
+(661)
+or
+∥E∥h =
+X
+I,¯I
+h|I|+|¯I||E(I, ¯I)|µ(I)µ(¯I)
+(662)
+This norm agrees with the norm used when treating Ψ, ¯Ψ on the same footing.
+The Gaussian integral with covariance Γ satisﬁes
+Z
+Ψ(s1) · · · Ψ(sn)¯Ψ(t1) · · · ¯Ψ(tm)dµΓ(Ψ) =
+(
+det{Γ(si, tj)}
+n = m
+0
+n ̸= m
+(663)
+81
+
+=== PAGE 82 ===
+If we have the identity covariance
+Z
+Ψ(s1) · · · Ψ(sn)¯Ψ(t1) · · · ¯Ψ(tm)dµI(Ψ) =
+(
+det{δsi,tj}
+n = m
+0
+n ̸= m
+(664)
+which is also written
+Z
+Ψ(I)¯Ψ(¯I)dµI(Ψ) =
+(
+1
+I = ¯I
+0
+I ̸= ¯I
+(665)
+It follows that
+Z
+E(Ψ, ¯Ψ)dµI(Ψ) =
+X
+I
+E(I, I)µ(I)2
+(666)
+and so
+|
+Z
+E(Ψ, ¯Ψ)dµI(Ψ)| ≤∥E∥1
+(667)
+Here is a variation. Suppose that in addition to Ψ, ¯Ψ there are independent ﬁelds ψ, ¯ψ indexed by
+(T, ν). (Or there could be more extra ﬁelds). Consider elements of the form
+E(ψ, ¯ψ, Ψ, ¯Ψ) =
+X
+I,¯I,J, ¯
+J
+E(I, ¯I, J, ¯J)ψ(I) ¯ψ(¯I)Ψ(J)¯Ψ( ¯J)ν(I)ν(¯I)µ(J)µ( ¯J)
+(668)
+and deﬁne
+E#(ψ, ¯ψ) =
+Z
+E(ψ, ¯ψ, Ψ, ¯Ψ)dµI(Ψ)
+(669)
+Note that if contributions to E have equal numbers of (ψ, Ψ) and ( ¯ψ, ¯Ψ) variables, the integral selects
+terms with equal numbers of Ψ, ¯Ψ variables and hence E# must hade equal numbers of ψ, ¯ψ variables.
+Lemma 30.
+∥E#∥h ≤∥E∥h,1
+(670)
+Proof. We have
+E#(ψ, ¯ψ) =
+X
+I,¯I,J, ¯
+J
+E(I, ¯I, J, ¯J)ψ(I) ¯ψ(¯I)ν(I)ν(¯I)µ(J)µ( ¯J)
+Z
+Ψ(J)¯Ψ( ¯J)dµI(Ψ)
+=
+X
+I,¯I
+h X
+J
+E(I, ¯I, J, J)µ(J)2i
+ψ(I) ¯ψ(¯I)ν(I)ν(¯I)
+≡
+X
+I,¯I
+h
+E#(I, ¯I)
+i
+ψ(I) ¯ψ(¯I)ν(I)ν(¯I)
+(671)
+Then
+∥E#∥h ≡
+X
+I,¯I
+h|I|+|¯I||E#(I, ¯I)|ν(I)ν(¯I)
+≤
+X
+I,¯I,J
+h|I|+|¯I||E(I, ¯I, J, J)|ν(I)ν(¯I)µ(J)2
+≤
+X
+I,¯I,J, ¯
+J
+h|I|+|¯I||E(I, ¯I, J, ¯J)|ν(I)ν(¯I)µ(J)µ( ¯J)
+≡∥E∥h,1
+(672)
+82
+
+=== PAGE 83 ===
+B
+an identity
+Lemma 31. Γk,y(A) = (Dk(A) + bL−1P(A) + iγ3y)−1 has the representation
+Γk,y(A) = Bk,y(A) + b2
+kBk,y(A)Qk(A)Sk,y(A)QT
+k (−A)Bk,y(A)
+(673)
+where
+Bk,y(A) =
+
+bk + bL−1P(A) + iγ3y
+−1
+=
+1
+bk + iγ3y (I −P(A)) +
+1
+bk + bL−1 + iγ3y P(A)
+Sk,y(A) =
+
+DA + ¯mk +
+bkiγ3y
+bk + iγ3y Pk(A) +
+b2
+kbL−1
+(bk + iγ3y)(bk + bL−1 + iγ3y)Pk+1(A)
+−1
+(674)
+Proof. Start with
+exp
+
+< ¯J, Γk(A)J >
+
+=const
+Z
+dΨ exp
+D
+¯Ψ, J
+E
++
+D
+¯J, Ψ
+E
+−
+D
+¯Ψ,
+
+bL−1P(A) + iγ3y
+
+Ψ
+E
+−
+D
+¯Ψ, Dk(A)Ψ
+E
+(675)
+and from section 2.5
+exp
+
+−
+D
+¯Ψ, Dk(A)Ψ
+E
+= const
+Z
+exp
+
+−bk
+D
+¯Ψ −Qk(−A) ¯ψ, Ψ −Qk(A)ψ
+E
+−
+D
+¯ψ, (DA + ¯mk)ψ
+E
+dψ
+(676)
+Insert the second into the ﬁrst and do the integral over Ψ which is
+Z
+dΨ exp
+D
+¯Ψ, J
+E
++
+D
+¯J, Ψ
+E
+−
+D
+¯Ψ,
+
+bL−1P(A) + iγ3y
+
+Ψ
+E
+−bk
+D
+¯Ψ −Qk(−A) ¯ψ, Ψ −Qk(A)ψ
+E
+=
+Z
+dΨ exp
+D
+¯Ψ, J + bkQk(A)ψ
+E
++
+D
+¯J + bkQk(−A) ¯ψ, Ψ
+E
+−
+D
+¯Ψ,
+
+bk + bL−1P(A) + iγ3y
+
+Ψ
+E
+−bk
+D
+¯ψ, Pk(A)ψ
+E
+=const exp
+D
+( ¯J + bkQk(−A) ¯ψ), Bk,y(A)(J + bkQk(A)ψ)
+E
+−bk
+D
+¯ψ, Pk(A)ψ
+E
+(677)
+This gives
+exp
+
+< ¯J, Γk(A)J >
+
+=const
+Z
+exp
+D
+( ¯J + bkQk(−A) ¯ψ), Bk,y(A)(J + bkQk(A)ψ)
+E
+−
+D
+¯ψ, (DA + ¯mk + bkPk(A))ψ
+E
+dψ
+=const exp
+
+< ¯J, Bk,y(A)J >
+
+Z
+exp
+D
+bkQT
+k (A)BT
+k,y(A) ¯J, ψ
+E
++
+D
+¯ψ, bkQT
+k (−A)Bk,y(A)J
+E
+−
+D
+¯ψ, Sk,y(A)−1ψ
+E
+dψ
+=const exp
+
+< ¯J, Bk,y(A)J > +b2
+k
+D
+¯J, Bk,y(A)Qk(A)Sk,y(A)QT
+k (−A)Bk,y(A)J
+E
+(678)
+where we deﬁned
+Sk,y(A) =
+
+DA + ¯mk + bkPk(A) −b2
+kQT
+k (−A)Bk,y(A)Qk(A)
+−1
+(679)
+83
+
+=== PAGE 84 ===
+This is the same as the deﬁnition in (674) since we can write
+Bk,y(A) =
+1
+bk + iγ3y −
+
+bL−1
+(bk + bL−1 + iγ3y)(bk + iγ3y)
+
+P(A)
+(680)
+and this yields
+bkPk(A) −b2
+kQT
+k (−A)Bk,y(A)Qk(A)
+=
+
+bk −
+b2
+k
+bk + iγ3y
+
+Pk(A) +
+
+b2
+kbL−1
+(bk + bL−1 + iγ3y)(bk + iγ3y)
+
+Pk+1(A)
+=
+ bkiγ3y
+bk + iγ3y
+
+Pk(A) +
+
+b2
+kbL−1
+(bk + bL−1 + iγ3y)(bk + iγ3y)
+
+Pk+1(A)
+(681)
+C
+another identity
+Theorem 4. [6] For F on bonds on T1
+N−k we have QT F on T0
+N−k and QT
+k+1F on T−k
+N−k and the
+identify
+D
+QT
+k+1F, G0
+k+1QT
+k+1F
+E
+=
+D
+[QT F]x, ˜Ck[QT F]xE
+(682)
+Here ˜Ck is the operator on the subspace {Z on T0
+N−k : τZ = 0} deﬁned by
+e
+1
+2 <J, ˜
+CkJ> =
+Z
+DZ δ(τZ) exp
+
+−1
+2
+D
+Z,
+h
+∆k + aQT Q
+i
+Z
+E
+e<Z,J>/{J = 0}
+(683)
+and [QT F]x is the projection of QT F onto ker τ.
+Proof. We sketch the proof and refer to [5], [6] for more details. Let J = QT
+k+1F. Start with
+e
+1
+2 <J, G0
+k+1J> =
+Z
+DA
+
+−1
+2
+D
+A,
+
+δd + dRk+1δ + aQT
+k+1Qk+1
+
+A
+E
+e<A,J>/{J = 0}
+(684)
+Let ∆= δd + dδ and write δd + dRk+1δ = ∆−dPk+1δ where Pk+1 = I −Rk+1 is a projection. We
+change from Pk+1 to Pk using the identities for λ, λ′ on T−k
+N−k
+exp
+
+−1
+2
+D
+δA, PkδA
+E
+=
+Z
+Dλ′ δ(Qkλ′) exp
+
+−1
+2∥δA −∆λ′∥2
+/{δA = 0}
+exp
+
+−1
+2
+D
+δA, Pk+1δA
+E
+=
+Z
+Dλ δ(Qk+1λ) exp
+
+−1
+2∥δA −∆λ∥2
+/{δA = 0}
+(685)
+Also insert for ω on T0
+N−k insert the basic axial gauge identity
+Z
+Dω δ(Qω)δ
+
+τ(QkA + dω)
+
+= const
+(686)
+This yields
+e
+1
+2 <J, G0
+k+1J> =const
+Z
+Dω δ(Qω)
+Z
+DA exp
+
+−1
+2
+D
+A,
+
+∆−dPkδ + aQT
+k+1Qk+1
+
+A
+E
+δ
+
+τ(QkA + dω)
+ R
+Dλ′ δ(Qkλ′) exp
+
+−1
+2∥δA −∆λ′∥2
+R
+Dλ δ(Qk+1λ) exp
+
+−1
+2∥δA −∆λ∥2
+e<A,J>
+(687)
+84
+
+=== PAGE 85 ===
+Next deﬁne λ = H′
+kµ to be the minimizer of ∥∆λ∥2 subject to Qkλ = µ and make the change of
+variables A →A −dH′
+kω. This is constructed to leave the quadratic form in A invariant. It can be
+written < A, (δd+dRkδ+aQT
+k+1Qk+1)A >. To see the invariance note that QkdH′
+kω = dQkH′
+kω = dω
+so QkA →QkA −dω. Then Qk+1A →Qk+1A −Qdω, but Qdω = dQω = 0 so Qk+1A is invariant.
+Furthermore δA →δA −∆H′
+kω since δd = ∆on scalars. But one has the explicit representations
+H′
+k = ∆−2QT
+k (Qk∆−2QT
+k )−1 as well as Pk = ∆−1QT
+k (Qk∆−2QT
+k )−1Qk∆−1 and these combine to give
+Pk∆H′
+kω = ∆H′
+kω and hence Rk∆H′
+kω = 0 and so RkδA is invariant. And of course dA is invariant
+so the form is invariant.
+Other changes are that δ(τ(QkA + dω)) becomes δ(τ(QkA)) and that < A, J >=< Qk+1A, F > is
+invariant. The numerator in the big fraction becomes
+Z
+Dλ′ δ(Qkλ′) exp
+
+−1
+2∥δA −∆(H′
+kω + λ′)∥2
+(688)
+Make make the further change of variables λ′ →λ′ −H′
+kω which gives
+Z
+Dλ′ δ(Qkλ′ −ω) exp
+
+−1
+2∥δA −∆λ′∥2
+(689)
+Similarly the denominator in the big fraction is invariant since the change in Qk+1λ is Qk+1H′
+kω =
+Qω = 0.
+Now we have
+e
+1
+2 <J, G0
+k+1J> = const
+Z
+Dω δ(Qω)
+Z
+DA exp
+
+−1
+2
+D
+A,
+
+δd + dRkδ + aQT
+k+1Qk+1
+
+A
+E
+δ
+
+τQkA
+R
+Dλ′ δ(Qkλ′ −ω) exp
+
+−1
+2∥δA −∆λ′∥2
+R
+Dλ δ(Qk+1λ) exp
+
+−1
+2∥δA −∆λ∥2
+
+e<A,J>
+=const
+Z
+DA exp
+
+−1
+2
+D
+A,
+
+δd + dRkδ + aQT
+k+1Qk+1
+
+A
+E
+δ
+
+τQkA
+
+e<A,J>
+(690)
+In the second step we did the integral over ω and canceled out the big fraction.
+Next insert 1 =
+R
+δ(QkA −Z)DZ and obtain
+e
+1
+2 <J, G0
+k+1J>
+=const
+Z
+DA DZ δ(QkA −Z)δ(τZ) exp
+
+−1
+2
+D
+A,
+
+δd + dRkδ
+
+A
+E
+−1
+2a∥QZ∥2
+e<A,J>
+(691)
+Let ˆHk be the minimizer in A of < A, (δd + dRkδ)A > subject to to QkA = Z. In the integral over A
+make the translation A →A + ˆHkZ. Then the integral factors into
+e
+1
+2 <J, G0
+k+1J> = const
+Z
+DA δ(QkA) exp
+
+−1
+2
+D
+A,
+
+δd + dRkδ
+
+A
+E
+e<A,J>
+Z
+DZ δ(τZ) exp
+
+−1
+2
+D
+ˆHkZ,
+
+δd + dRkδ
+
+ˆHkZ
+E
+−1
+2a∥QZ∥2
+e< ˆ
+HkZ,J>
+(692)
+But in the ﬁrst integral < A, J >=< Qk+1A, F >= 0 so this integral is a constant. In the second
+integral we have < ˆHkZ, J >=< Qk+1 ˆHkZ, F >=< QZ, F >. Also in the second integral we change
+from exponential gauge ﬁxing to delta function gauge ﬁxing by a Fadeev-Popov procedure and identify
+85
+
+=== PAGE 86 ===
+the Landau gauge minimizer Hk to obtain
+exp
+
+−1
+2
+D
+ˆHkZ,
+
+δd + dRkδ
+
+ˆHkZ
+E
+=const
+Z
+DA δ(QkA −Z) exp
+
+−1
+2
+D
+A,
+
+δd + dRkδ
+
+A
+E
+=const
+Z
+DA δ(QkA −Z)δ(RkδA) exp
+
+−1
+2∥dA∥2
+= exp
+
+−1
+2∥dHkZ∥2
+= exp
+
+−1
+2
+D
+Z, ∆kZ
+E
+(693)
+This yields
+e
+1
+2 <J, G0
+k+1J> =const
+Z
+DZ δ(τZ) exp
+
+−1
+2
+D
+Z,
+h
+∆k + aQT Q
+i
+Z
+E
+exp
+D
+Z, QT F
+E
+=const exp
+1
+2
+D
+[QT F]x, ˜Ck[QT F]xE
+(694)
+Setting F = J = 0 we see that the constant must be one. This gives the result.
+D
+an estimate on QT
+Lemma 32. For A on any L-lattice T1
+N−k
+∥QTA∥2 ≥L−1∥A∥2
+(695)
+Also if [QT A]x is the projection of QT A onto ker τ
+∥[QT A]x∥2 ≥L−1∥A∥2
+(696)
+Proof. Let Qs be the operator the averages over surface bonds of the cubes B(y), see [18] for the
+precise deﬁnition. This satisﬁes QsQT
+s = L so L−1QT
+s Qs is an orthogonal projection. Also since
+QQT
+s = I implies QsQT = I we have
+∥QT A∥2 ≥L−2∥QT
+s QsQT A∥2 = L−2∥QT
+s A∥2 = L−1∥A∥2
+(697)
+The projection L−1QT
+s Qs annihilates functions on the interiors of the cubes B(y). The projection
+QT A →[QT A]x only aﬀects the functions on the interiors. Thus L−1QT
+s Qs[QT A]x = L−2QT
+s QsQT A
+and the same proof can be carried out.
+E
+conditioning
+Consider integrals of the form
+I =
+Z
+dµT −1(A)F(AΛ)
+(698)
+where the integral is over functions A on bonds in a unit lattice, µT −1 is a Gaussian measure with
+covariance T −1, Λ is a subset of the lattice, and AΛ = 1ΛA is the restriction to Λ, i.e. to bonds
+intersecting Λ.
+We want to express the integral in terms of a conditional expectation of F(AΛ)
+given the values AΛc.
+This comes in two diﬀerent forms. In general we deﬁne TΛ = 1ΛT 1Λ and
+TΛ,Λc = 1ΛT 1Λc.
+86
+
+=== PAGE 87 ===
+Lemma 33. The integral I can be expressed as
+I =
+Z
+dµT −1(A′)
+h Z
+dµT −1
+Λ (AΛ)F
+
+AΛ −T −1
+Λ TΛΛcA′
+Λc
+i
+(699)
+or as
+I =
+Z
+dµT −1(A′) exp
+
+−1
+2
+D
+A′
+Λc, TΛcΛT −1
+Λ TΛΛcA′
+Λc
+Eh Z
+dµT −1
+Λ (AΛ) exp
+
+−
+D
+A′
+Λc, TΛcΛAΛ
+E
+F(AΛ)
+i
+(700)
+Remark. These formulas were ﬁrst used in [2] and [12] respectively.
+Proof. We have
+I = Z−1
+Z
+DA exp
+
+−1
+2
+D
+A, T A
+E
+F(AΛ)
+Z =
+Z
+DA exp
+
+−1
+2
+D
+A, T A
+E
+(701)
+We write
+1
+2
+D
+A, T A
+E
+= 1
+2
+D
+AΛc, T AΛc
+E
++
+D
+AΛc, T AΛ
+E
++ 1
+2
+D
+AΛ, T AΛ
+E
+(702)
+Diagonalize the quadratic form by the change of variables AΛ →AΛ −T −1
+Λ TΛΛcAΛc. This yields
+I =Z−1
+Z
+DAΛc exp
+
+−1
+2
+D
+AΛc,
+
+TΛ −TΛcΛT −1
+Λ TΛΛc
+
+AΛc
+E
+h Z
+DAΛ exp
+
+−1
+2
+D
+AΛ, T AΛ
+E
+F
+
+AΛ −T −1
+Λ TΛΛcA′
+Λc
+i
+(703)
+Now relabel AΛc as A′
+Λc and insert
+1 = Z−1
+Λ
+Z
+DA′
+Λ exp
+
+−1
+2
+D
+A′
+Λ, T A′
+Λ
+E
+(704)
+Then the change of variables A′
+Λ →A′
+Λc + T −1
+Λ TΛΛcA′
+Λc restores the quadratic form 1
+2
+D
+A′, T A′E
+and
+does not aﬀect the interior integral. Thus
+I = Z−1
+Z
+DA′ exp
+
+−1
+2
+D
+A′, T A′Eh
+Z−1
+Λ
+Z
+DAΛ exp
+
+−1
+2
+D
+AΛ, T AΛ
+E
+F
+
+AΛ −T −1
+Λ TΛΛcA′
+Λc
+i
+(705)
+This is (699). In the interior integral make the inverse change of variables AΛ →AΛ + T −1
+Λ TΛΛcA′
+Λc
+to regain F(AΛ). The quadratic form 1
+2
+D
+AΛ, T AΛ
+E
+becomes
+1
+2
+D
+AΛ, T AΛ
+E
++
+D
+A′
+Λc, TΛcΛAΛ
+E
++ 1
+2
+D
+A′
+Λc, TΛcΛT −1
+Λ TΛΛcA′
+Λc
+E
+(706)
+which gives (700).
+87
+
+=== PAGE 88 ===
+References
+[1] T. Balaban (Higgs)2,3 Quantum ﬁelds in a ﬁnite volume- I Commun. Math. Phys., 85:
+603-636, 1982.
+[2] T. Balaban (Higgs)2,3 Quantum ﬁelds in a ﬁnite volume- II Commun. Math. Phys., 86:
+555-594, 1982.
+[3] T. Balaban (Higgs)2,3 Quantum ﬁelds in a ﬁnite volume- III Commun. Math. Phys., 88:
+411-445, 1983.
+[4] T. Balaban, Regularity and decay of lattice Green’s functions, Commun. Math. Phys., 89:
+571-597, 1983.
+[5] T. Balaban, Propagators and renormalization transformations for lattice gauge ﬁeld the-
+ories -I, Commun. Math. Phys. 95 (1984) 17-40.
+[6] T. Balaban, Propagators and renormalization transformations for lattice gauge ﬁeld
+theories- II, Commun. Math. Phys. 96 (1984) 223-250.
+[7] T. Balaban, Averaging operators for lattice gauge ﬁeld theories. Commun. Math. Phys.
+98 (1985) 17-51.
+[8] T. Balaban, Propagators for lattice gauge ﬁeld theories in a background ﬁeld, Commun.
+Math. Phys. 99 (1985) 389-434.
+[9] T. Balaban, Ultraviolet stability of three-dimensional lattice pure gauge ﬁeld theories.
+Commun. Math. Phys. 102 (1985) 255-275.
+[10] T. Balaban, Variational problem and background ﬁeld in renormalization group method
+for lattice gauge ﬁeld theories. Commun. Math. Phys. 102 (1985) 277-309.
+[11] T. Balaban, Renormalization group approach to lattice gauge ﬁeld theories- I, Commun.
+Math. Phys. 109 (1987) 249-301.
+[12] T. Balaban, Renormalization group approach to lattice gauge ﬁeld theories- II, Commun.
+Math. Phys. 116 (1988) 1-22.
+[13] T. Balaban, Convergent renormalization expansions for lattice gauge ﬁeld theories, Com-
+mun. Math. Phys. 119 (1988) 243-285.
+[14] T. Balaban, Large ﬁeld renormalization-I, Commun. Math. Phys. 122 (1989) 175-202.
+[15] T. Balaban, Large ﬁeld renormalization-II, Commun. Math. Phys. 122 (1989) 355-392.
+[16] T. Balaban, Localization expansions I. function of the background conﬁgurations. Com-
+mun. Math. Phys. 182: 33-82, 1996.
+[17] T. Balaban, A. Jaﬀe, Constructive gauge theory. In Fundamental problems of gauge ﬁeld
+theory, Erice, 1985, G. Velo and A. Wightman, eds., Plenum Press, 1986.
+[18] T. Balaban, J. Imbrie, A. Jaﬀe, Renormalization of the Higgs model: minimizer, propa-
+gators, and the stability of mean ﬁeld theory, Commun. Math. Phys. 97: 299-329, 1985.
+[19] T. Balaban, J. Imbrie, A. Jaﬀe, Eﬀective action and cluster properties of the abelian
+Higgs model, Commun. Math. Phys. 114: 257-315 , 1988.
+88
+
+=== PAGE 89 ===
+[20] T. Balaban, M. O’Carroll, R. Schor, Block renormalization group for Euclidean fermions,
+Commun. Math. Phys. 122: 233-247, 1989.
+[21] T. Balaban, M. O’Carroll, R. Schor, Properties of block renormalization group operators
+for Euclidean fermions in an external ﬁeld, J. Math Phys 32: 3199-3208, 1991.
+[22] D. Brydges, J.Dimock, T.R. Hurd. A non-Gaussian ﬁxed point for φ4 in 4 −ǫ dimensions,
+Commun. Math. Phys. 198: 111-156, 1998.
+[23] J. Dimock, Quantum electrodynamics on the 3-torus -I. arXiv: math-phys/0210020.
+[24] J. Dimock, Quantum electrodynamics on the 3-torus - II. arXiv: math-phys/0407063.
+[25] J. Dimock, The renormalization group according to Balaban - I. small ﬁelds, Rev. Math.
+Phys. 25, 1330010, 1-64, 2013.
+[26] J. Dimock, The renormalization group according to Balaban - II. large ﬁelds, J. Math.
+Phys. 54, 092301, 1-85, 2013.
+[27] J. Dimock, The renormalization group according to Balaban - III. convergence, Annales
+Henri Poincar´e 15, 2133-2175, 2014.
+[28] J. Dimock, Covariant axial gauge, Letters in Mathematical Physics 105, 959-987, 2015.
+[29] J. Dimock, Nonperturbative renormalization of scalar QED in d=3, J. Math. Phys. 56,
+102304, 1-78, 2015.
+[30] J. Dimock, Ultraviolet stability for QED in d=3, to appear.
+[31] J. Dimock, T. Hurd, A renormalization group analysis of infrared QED, J. Math. Phys.
+33, 814-821, 1992.
+[32] J. Feldman, H. Kn¨orrer, E. Trubowitz, Fermion functional integrals and the renormaliza-
+tion group, American Mathematical Society, 2002.
+[33] J. Glimm, A. Jaﬀe, Quantum physics: a functional integral point of view, Springer, 1987.
+[34] J. Imbrie, Renormalization group methods in gauge ﬁeld theories. In K. Osterwalder and
+R. Stora, editors, Critical phenomena, random systems, gauge theories. North-Holland,
+1986.
+[35] M. Salmhofer, Renormalization: An Introduction, Springer, 1999.
+[36] S. Summers, A Perspective on Constructive Quantum Field Theory, ArXiv: 1203.1991
+[37] S. Weinberg, The quantum theory of ﬁelds- I., Cambridge, 1995
+89

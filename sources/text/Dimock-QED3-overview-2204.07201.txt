@@ -1,0 +1,1210 @@
+=== PAGE 1 ===
+arXiv:2204.07201v1  [math-ph]  14 Apr 2022
+Stability for QED in d=3 : an overview
+J. Dimock ∗†
+Dept. of Mathematics
+SUNY at Buﬀalo
+Buﬀalo, NY 14260
+April 18, 2022
+Abstract
+We report on a result on quantum electrodynamics on a three dimensional Euclidean
+spacetime. The model is formulated on a toroidal lattice with unit volume and variable
+lattice spacing. The result is that the renormalized partition function is bounded above
+and below uniformly in the lattice spacing. This is a ﬁrst step toward showing that the
+partition function and correlation functions have limits as the lattice spacing goes to zero.
+1
+Introduction
+The topic is quantum electrodynamics (QED) on a three dimensional Euclidean spacetime,
+one short of the physical dimension. It is a quantum ﬁeld theory for relativistic electrons and
+photons. The model is deﬁned initially in ﬁnite volume and with a short distance regulariza-
+tion. A basic problem in the construction of the model is to remove the regularization and
+take the inﬁnite volume limit. In this note we report on some recent progress toward the ﬁrst
+of these problems.
+The model is formulated on a 3-dimensional toroidal lattice. These will have the general
+form
+T−N
+N′ = (L−NZ/LN′Z)3
+(1)
+where L is a ﬁxed large positive number.
+We start with T−N
+0
+which has lattice spacing
+ǫ ≡L−N and unit volume. The theory is deﬁned by the action
+S(e, A, ψ) = 1
+2∥dA∥2+ < ¯ψ, (De(A) + ¯m)ψ > +mN < ¯ψ, ψ > +εN
+(2)
+Here A(b) is an abelian gauge ﬁeld deﬁned on bonds b (nearest neighbor pairs) in the lattice
+and dA(p) = ǫ−1 P
+b∈∂p A(b) is the ﬁeld strength deﬁned on plaquettes (squares) in the
+lattice. The notation is ∥dA]|2 = P
+p ǫ3|dA(p)|2. The ¯ψα(x), ψα(x) are fermi ﬁelds indexed
+by lattice points and spin indices and < ¯ψ, ψ >= P
+x,α ǫ3 ¯ψα(x)ψα(x). The fermi ﬁelds are
+∗dimock@buﬀalo.edu.
+†Expanded version of talk given at ICMP 2021, Geneva
+1
+
+=== PAGE 2 ===
+anti-commuting generators of a Grassmann algebra. The De(A) is the Wilson form of the
+covariant lattice Dirac operator with charge e deﬁned by
+De(A) = γ · ∇eA −1
+2ǫ∆eA
+(3)
+Here {γµ, γν} = 2δµν are Dirac matrices, the forward covariant derivative is
+(∂eA,µψ)(x) = ǫ−1
+eiǫeA(x,x+ǫeµ)ψ(x + ǫeµ) −ψ(x)
+
+,
+(4)
+∇eA,µ is a symmetric version of this, and ∆eA is the associated Laplacian.
+The ¯m is a
+background mass and mN, εN are respectively mass and energy density counterterms which
+will be chosen to depend on the lattice spacing, thereby renormalizing these quantities. The
+model is super-renormalizable and no renormalization is required for charge or ﬁeld strength.
+A basic item of interest is the partition function which is the exponential of the action
+integrated over all ﬁelds
+ZN(e) =
+Z
+exp(−S(e, A, ψ)) Dψ DA
+(5)
+Here DA = Q
+b d(A(b)) and Dψ stands for Grassmann integral over all fermi ﬁelds ¯ψ, ψ, the
+projection onto the maximal element. Actually the integral over the gauge ﬁelds does not
+converge because the integrand is invariant under gauge transformations. One must ﬁx a
+gauge, that is pick a representative for each gauge orbit and integrate over them. Once this
+choice is made the partition function ZN(e) is well-deﬁned. The main result is a bound on
+the relative partition function uniform in the lattice spacing:
+Theorem 1. (Ultraviolet Stability) Assume ¯m > 0 and e is suﬃciently small. Then one can
+ﬁx the gauge and choose counterterms mN, εN so that for all N
+K−≤ZN(e)
+ZN(0) ≤K+
+for some constants K±.
+The proof can be found in the series of papers [21],[22],[23] (see also [18],[19],[20]). It uses a
+block averaging renormalization group technique due to Balaban, a rigorous version of earlier
+ideas of Wilson. The method was introduced by Balaban [1]-[4] for scalar electrodynamics
+in d=3 . It was further developed by Balaban, Imbrie, and Jaﬀe [14],[15],[24] for the abelian
+Higgs model in d=3 and by Balaban [5]-[13] for Yang Mills in d=3,4 . There is also relevant
+work on block averaged Dirac Green’s functions by Balaban, O’Carroll, and Shor [16],[17].
+The proof should allow one to add local gauge invariant perturbations to the action like
+< dA, J > or < ¯ψγµψ, jµ >. Then the partition function ZN(e) becomes a generating function
+ZN(e, J, j), derivatives of log ZN(e, J, j) in J, j at J = 0, j = 0 give correlation functions.
+Uniform bounds on the generating function and analyticity in J, j would give uniform bounds
+on correlation functions. The continuum limit N →∞for the partition function, generating
+function, and correlation functions should also be feasible. The method works equally well
+2
+
+=== PAGE 3 ===
+for any ﬁnite volume, not just unit volume. But the inﬁnite volume limit would pose new
+diﬃculties.
+In the remainder of the paper we explain some of the ideas that go into the proof. Before
+proceeding it is convenient to ﬁrst reformulate the problem by scaling up to a unit lattice.
+If Ψ0, A0 are ﬁelds on the large unit lattice T0
+N, we deﬁne a new action by S0(e0, Ψ0, A0) =
+S(e, Ψ0,L−N , A0,L−N ) where Ψ0,L−N (x) = LNΨ0(LNx) and A0,L−N(b) = LN/2A0(LNb) are
+functions on the original lattice T−N
+0
+. We ﬁnd that
+S0(e0, A0, Ψ0) = 1
+2∥dA0∥2+ < ¯Ψ0, (De0(A0) + ¯m0)Ψ0 > +m0 < ¯Ψ0, Ψ0 > +ε0|T0
+N|
+(6)
+Here norms, inner products, and operators are now on the unit lattice, and the parameters
+have become tiny
+e0 = eN
+0 = L−N/2e
+¯m0 = ¯mN
+0 = L−N ¯m
+(7)
+as well as m0 = mN
+0 = L−N ¯mN and ε0 = εN
+0 = L−3NεN. Our N →∞problem now has
+become an inﬁnite volume problem with scaled parameters.
+2
+Renormalization group transformations
+The diﬃculty with the problem is that we have an unbounded number of variables. The
+renormalization group method consists of integrating out a few variables at a time, and
+keeping careful track of the eﬀective actions at each stage.
+(The transformations on the
+actions are not invertible and do not actually form a group. Nevertheless the terminology
+”renormalization group” is ubiquitous.)
+In the block averaging method one integrates out all ﬁelds which have a ﬁxed average over
+L-cubes. Let y be a point in the L-lattice T1
+N and let B(y) be the L-cube in the unit lattice
+T0
+N centered on y. For fermion ﬁelds Ψ0 the averaging operator in the presence of the gauge
+ﬁeld A0 is
+(Q(A0)Ψ0)(y) = L−3 X
+x∈B(y)
+eie0A0(Γ(y,x))Ψ0(x)
+(8)
+Here A0(Γ) = P
+b∈Γ A0(b) and Γ(y, x) is a path from x to y. We use it to parallel translate to
+the center of the cube before averaging, so that gauge covariance is preserved. For the gauge
+ﬁeld let (y, y + Leµ) be a bond in the L-lattice, and deﬁne the averaged gauge ﬁeld on this
+bond to be
+(QA0)(y, y + Leµ) =
+X
+x∈B(y)
+L−4A0(Γx,x+Leµ)
+(9)
+This also preserves gauge covariance.
+With these deﬁnitions the renormalization group transformation sends the initial density
+ρ0 = e−S0 to a new density ρ1 deﬁned for ﬁelds A1, Ψ1 deﬁned on the L-lattice T1
+N by
+˜ρ1(A1, Ψ1) = N0
+Z
+DA0DΨ0 δ(A1 −QA0) δx(A0)
+exp
+
+−b/L < ¯Ψ1 −Q(−A0)¯Ψ0, Ψ1 −Q(A0)Ψ0 >
+
+ρ0(A0, Ψ0)
+(10)
+3
+
+=== PAGE 4 ===
+Here b > 0 is a constant and N0 normalizes the fermion integral. We have avoided using
+a delta function for the fermion ﬁelds (which would not work for Grassmann elements) and
+instead used a Gaussian factor. We have also begun to ﬁx the gauge by taking a certain
+maximal tree in each L-cube, and inserting a delta function δx(A0) that sets A0 = 0 on
+the bonds in each tree. With this axial gauge, and the ﬁxed averages, the integral over the
+remaining ﬁelds converges and ˜ρ1 is well-deﬁned.
+After the block averaging we scale back down deﬁning for A1, Ψ1 on the unit lattice T0
+N−1
+ρ1(A1, Ψ1) = ˜ρ1(A1,L, Ψ1,L)
+(11)
+where A1,L(b) = L−1
+2A1(b/L) and Ψ1,L(x) = L−1Ψ1(x/L) are ﬁelds on T1
+N.
+We would like the density ρ1 to give the same partition function as ρ0. Formally this is
+true since it satisﬁes, up to an overall constant,
+Z
+δx(A1)ρ1(A1, Ψ1)DA1DΨ1 =
+Z
+δx(QA0)δx(A0)ρ0(A0, Ψ0)DA0DΨ0
+(12)
+However these integrals do not converge since we do not as yet have a complete gauge ﬁxing.
+Nevertheless one can repeat the transformation generating a sequence ρ0, ρ1, ρ2, . . . . After k
+steps this yields a density ρk(Ak, Ψk) where the ﬁelds are deﬁned on the unit lattice T0
+N−k
+with shrunken volume. We continue to iterate for K steps with K close to N . Then we have
+a density ρK on the lattice T0
+N−K with bounded volume. Instead of (12) we get something
+like
+Z
+δx(AK)ρK(AK, ΨK)DAKDΨK =
+Z  K
+Y
+j=0
+δx(QjA0)
+
+ρ0(A0, Ψ0)DA0DΨ0
+(13)
+The right side of (13) does have a more or less complete gauge ﬁxing [23]. It is an axial
+gauge with a hierarchical structure, and it provides the gauge ﬁxed deﬁnition of the partition
+function ZN(e). Thus the identity (13) shows that the partition function can be computed in
+principle from ρK which has a bounded number of variables. Thus the issue is to keep control
+over the sequence ρ0, ρ1, ρ2, . . . .
+3
+Bounded gauge ﬁelds
+In analyzing the ﬂow of the renormalization group it is useful to have bounds on the gauge
+ﬁeld, the fermion ﬁeld is eﬀectively already bounded. We discuss how to arrange this in a
+simple case. The actual implementation is rather more complicated, but the following gives
+the basic idea.
+In the initial density we have a factor e−1
+2 ∥dA0∥2 which is going to suppress large values
+of dA0. To translate this fact into hard bounds on dA0 we divide the torus into cubes of size
+M = Lm larger than L. Then we introduce the characteristic functions for each M-cube □
+by
+χ0(, □, A0) = χ
+
+suppp∈□|dA0(p)| ≤p(e0)
+
+(14)
+Here
+p(e0) = (−log e0)p
+(15)
+4
+
+=== PAGE 5 ===
+for some positive integer p. Since e0 is tiny p(e0) is large, but not too large in the sense that
+e0p(e0) is still very small. Then with ζ0(□) = 1 −χ0(□) we write
+1 =
+Y
+□
+ζ0(□) + χ0(□) =
+X
+Ω
+Y
+□⊂Ωc
+ζ0(□)
+Y
+□⊂Ω
+χ0(□) ≡
+X
+Ω
+ζ0(Ωc)χ0(Ω)
+(16)
+where Ωis an arbitrary union of M-cubes. The identity could be inserted under the integral
+sign in (52) and then the sum taken outside the integral. For the term Ωthe characteristic
+function χ0(Ω) enforces that |dA0(p)| ≤p(e0) everywhere in Ω. The characteristic function
+ζ0(Ωc) enforces that in each M-cube □in Ωc there is at least one plaquette p such that
+|dA0(p)| > p(e0). It follow that for □⊂Ωc
+ζ0(□)e−1
+4∥dA0∥2
+□≤e−1
+4p(e0)2
+(17)
+The quantity e−1
+4 p(e0)2 is in fact a very small number; it satisﬁes e−1
+4 p(e0)2 = O(en
+0) for any
+positive integer n. The bound (17) gives that
+ζ0(Ωc))e−1
+4 ∥dA0∥2
+Ωc ≤e−1
+4p(e0)2|Ωc|M
+(18)
+where |Ωc|M is the number of M cubes in Ωc. This is enough for the convergence of the sum
+over Ωfor we have
+X
+Ω
+e−1
+4p(e0)2|Ωc|M =
+Y
+□
+(1 + e−1
+4p(e0)2) ≤
+Y
+□
+exp(e−1
+4p(e0)2) ≤exp
+
+e−1
+4p(e0)2|T0
+N|M
+
+(19)
+The last expression is exp(O(en)) ≈1 since e−1
+4 p(e0)2 = O(L−nN/2en) beats |T0
+N|M =
+L3NM−3.
+Tiny factors like e−1
+4p(e0)2 also ensure that contributions from large ﬁeld regions Ωc are
+negligible relative to the contribution of the small ﬁeld region Ω. They do not require renor-
+malization and can be bounded without further processing. The contribution of a small ﬁeld
+region does require careful analysis and renormalization as we will explain.
+4
+The ﬁrst step
+Starting with ρ0 = e−S0 deﬁned in (6), the density after the ﬁrst step deﬁned in (10) has the
+form
+˜ρ1(A1, Ψ1) =
+Z
+DA0 δ(A1 −QA0)δx(A0) exp
+
+−1
+2∥dA0∥2
+ρf(A0, Ψ1)
+(20)
+where the fermion integral is
+ρf(A0, Ψ1) =N0
+Z
+DΨ0 exp
+
+−bL−1 < ¯Ψ1 −Q(−A0)¯Ψ0, Ψ1 −Q(A0)Ψk >
+−< ¯Ψ0, (De0(A0) + ¯m0)Ψ0 > −m0 < ¯Ψ0, Ψ0 > −ε0|T0
+N|
+
+(21)
+Our strategy is to make some large/small ﬁeld splits, and then in the small ﬁeld region
+write the new density as the exponential of an eﬀective action. In the following for simplic-
+ity we only discuss the most important case where the small ﬁeld region is the full torus.
+5
+
+=== PAGE 6 ===
+Furthermore we do not always explicitly record the characteristic functions bounding the
+ﬁelds.
+First for the gauge ﬁeld we deﬁne Amin,x
+0
+to be minimizer in A0 of the quadratic term
+1
+2∥dA0∥2 subject to the constraints that QA0 = A1 and that A0 is in the axial gauge. This is
+a linear function of A1 and is written Amin,x
+0
+= Hx
+0A1. We now substitute A0 = Amin,x
+0
++ Z0
+and integrate over Z0 rather than A0. The free gauge action splits as
+1
+2∥dA0∥2 = 1
+2∥dAmin,x
+0
+∥2 + 1
+2∥dZ0∥2
+(22)
+The delta functions in (20) become δ(QZ0)δx(Z0). We identify a Gaussian measure dµC0 with
+covariance C0 and a normalization factor Z0 by
+Z0 dµC0(Z0) = δ(QZ0)δx(Z0) exp
+
+−1
+2∥dZ0∥2
+DZ0
+(23)
+The conditions QZ0 = 0 and Z0 axial imply ∥dZ0∥2 ≥const∥Z0∥2 so this is non-degenerate.
+The exact meaning of (23) requires parametrizing the hyplane selected by the delta function
+[8], [21].
+Now the expression (20) becomes
+˜ρ1(A1, Ψ1) = Z0 exp(−1
+2∥dAmin,x
+0
+∥2)
+Z
+ρf
+1
+
+Amin,x
+0
++ Z0, Ψ1
+
+)dµC0(Z0)
+(24)
+The integral over Z0 is a ﬂuctuation integral, that is an integral over the deviations from the
+minimizer.
+Before proceeding we change gauges in the minimizer. Instead of the minimizer Amin,x
+0
+in axial gauge we consider the minimizer Amin
+0
+in the Landau gauge.
+It is deﬁned to be
+the minimizer of 1
+2∥dA0∥2 subject to the constraints that QA0 = A1 and a version of the
+condition that the divergence of A0 vanishes. It has the form Amin
+0
+= H0A1. These two
+minimizers are gauge equivalent: Amin,x
+0
+= Amin
+0
++ dω. Thus in gauge invariant positions like
+∥dAmin,x
+0
+∥2 and ρf
+1
+
+Amin,x
+0
++ Z0, Ψ1
+
+) we can replace Amin,x
+0
+by Amin
+0
+. The advantage of the
+Landau gauge is that we have better control over the minimizing operator H0. In particular
+one can establish that it has an exponentially decaying kernel and that it has good bounds
+on low order derivatives. The remark about derivatives is not so important in this ﬁrst step
+where we are on a unit lattice. But after many steps the minimizers will be on increasingly
+ﬁne lattices and control on derivatives is important.
+The Landau gauge minimizer Amin
+0
+is only a function of A1 and we introduce the more
+suggestive notation ˜A1 = Amin
+0
+= H0A1. So now we have
+˜ρ1(A1, Ψ1) = Z0 exp
+
+−1
+2∥dA∥2 Z
+ρf
+1
+
+A + Z0, Ψ1
+
+)dµC0(Z0)
+
+A= ˜A1
+(25)
+Note that the ﬂuctuation ﬁeld stays in axial gauge which is better for convergence of the
+integrals.
+Next in ρf
+1(A + Z0, Ψ1)) we have a term < ¯Ψ0, De0(A + Z0)Ψ0 > and we write
+< ¯Ψ0, De0(A + Z0)Ψ0 >=< ¯Ψ0, De0(A)Ψ0 > +V0(A, Z0, Ψ0)
+(26)
+6
+
+=== PAGE 7 ===
+Then V0 depends on Z0 through
+eie0(A+Z0) −eie0A = eie0A(eie0Z0 −1)
+(27)
+Introducing a large/small ﬁeld split in Z0 (thanks to dµC0(Z0)) one can arrange |Z0| ≤p(e0)
+and so |eie0Z0 −1| ≤O(e0p(e0)) with the same bound for the kernel of V0. So V0 is very small.
+Similar remarks apply to the term < ¯Ψ1 −Q(−A −Z0)¯Ψ0, Ψ1 −Q(A + Z0)Ψk >; subtracting
+oﬀthe expression at Z0 = 0 gives another small term which we include in the deﬁnition of V0.
+Now we have
+ρf
+1(A + Z0, Ψ1)
+= N0
+Z
+DΨ0 exp
+
+−˜S1(A, Ψ1, Ψ0) −V0(A, Z0, Ψ0) −m0 < ¯Ψ0, Ψ0 > −ε0|T0
+N|
+
+(28)
+Here we have isolated the quadratic form
+˜S1(A, Ψ1, Ψ0) ≡bL−1 < ¯Ψ1 −Q(−A)¯Ψ0, Ψ1 −Q(A)Ψ0 > + < ¯Ψ0, (De0(A) + ¯m0)Ψ0 >
+(29)
+Let Ψcrit
+0
+(A) be the critical point of this form in Ψ0. and similarly deﬁne ¯Ψcrit
+0
+(A). Explicitly
+we have
+Ψcrit
+0
+(A) = H0(A)Ψ1 = bL−1 Γ0(A)QT (−A)Ψ1
+(30)
+where
+Γ0(A) =
+
+De0(A) + ¯m0 + bL−1 QT (−A)Q(A)
+−1
+(31)
+There is a similar expression for ¯Ψcrit
+0
+(A).
+We expand around the critical point.
+With the more suggestive notation ˜ψ1(A) =
+Ψcrit
+0
+(A) = H0(A)Ψ1 we substitute Ψ0 = ˜ψ1(A) + W0 and integrate over W0 rather than
+Ψ0. The quadratic form splits as
+˜S1(A, Ψ1, ˜ψ1(A) + W0) = ˜S1(A, Ψ1, ˜ψ1(A))+ < ¯W0, Γ0(A)−1W0 >
+(32)
+We also identity a Grassmann Gaussian integral with covariance Γ0(A) and formal measure
+dµΓ0(A)(W0) given by
+Z0(A) dµΓ0(A)(W0) = exp
+
+−< ¯W0, Γ0(A)−1W0 >
+
+DW0.
+(33)
+where Z0(A) = det(Γ0(A)−1). The interaction is now V0(A, Z0, ˜ψ1(A) + W0). We absorb into
+it the diﬀerence between the mass counterterm at ˜ψ1(A) + W0 and at ˜ψ1(A), and call the
+result V0(A, Z0, ˜ψ1(A), W0). So now (28) has become
+ρf
+1( ˜A1 + Z0, Ψ1) = N0Z0(A) exp
+
+−˜S1(A, Ψ1, ψ) −m0 < ¯ψ, ψ > −ε0|T0
+N|
+
+Z
+dµΓ0(A)(W0) exp
+
+V0(A, Z0, ψ, W0)
+
+A= ˜A1,ψ= ˜ψ1( ˜
+A1)
+(34)
+We add some comments about the operators Γ0(A), H0(A). Controlling the inverse in
+the deﬁnition (31) of Γ0(A) is diﬃcult unless one has a bound on the ﬁeld strength dA.
+7
+
+=== PAGE 8 ===
+Thanks to the factor e−1
+2 ∥dA∥2 in (25) we can supply such a bound with a large/small ﬁeld
+split. In addition it is useful to establish that the kernels of Γ0(A), H0(A) have exponen-
+tial decay.
+The mass ¯m0 in Γ0(A) is too tiny to get any useful estimate, but the term
+bL−1 QT (−A)Q(A) provides an eﬀective mass of order O(L−1) to do the job for Γ0(A) and
+hence for H0(A). [17],[21] The Landau gauge minimizer H0 also has exponential decay. [12],
+[21]. Since V0( ˜A1, Z0, ˜ψ1( ˜A1), W0) has a local structure, some approximate locality in the
+fundamental ﬁelds A1, Ψ1 is preserved.
+We insert the fermion integral (34) back into the full density (25) and ﬁnd
+˜ρ1(A1, Ψ1) = N0Z0Z0(A) Ξ0
+
+A, ψ
+
+exp
+
+−1
+2∥dA∥2 −˜S1(A, Ψ1, ψ) −m0 < ¯ψ, ψ > −ε0|T0
+N|
+
+A= ˜A1,ψ= ˜ψ1( ˜
+A1)
+(35)
+where
+Ξ0
+
+A, ψ
+
+=
+Z
+dµΓ0(A)(W0)dµC0(Z0)χ0(Z0) exp
+
+V0(A, Z0, ψ, W0)
+
+(36)
+is the complete ﬂuctuation integral. Here we have now made explicit a characteristic function
+χ0(Z0) enforcing |Z0| ≤p(e0)
+We need to write the ﬂuctuation integral as the exponential of an expression with good
+local properties. First we need norms on elements of the Grassman algebra. Let {Ψ(x)} be
+the generators of a Grassman algebra indexed by a unit lattice. A general element has the
+form
+E(Ψ) =
+∞
+X
+n=0
+1
+n!
+X
+x1,...,xn
+En(x1, . . . , xn)Ψ(x1) · · · Ψ(xn)
+(37)
+Then for h > 0 a norm is deﬁned by
+∥E∥h =
+∞
+X
+n=0
+hn
+n!
+X
+x1,...,xn
+|En(x1, . . . , xn)|
+(38)
+This generalizes to families of generators like our {¯Ψ0,α(x), Ψ0,α(x)} as well as ﬁelds deﬁned
+on lattices with spacing ǫ in which in which case the sum over xi would be weighted by ǫ3
+approximating integrals.
+Next we write the interaction V0 in a form that can reproduce itself. These are polymer
+expansions. Divide the torus T0
+N into cubes □of width M = Lm much larger than L. A
+polymer is deﬁned to be a connected union of M-cubes. A polymer expansion is a function of
+the form f = P
+X f(X) where the sum is over polymers X and f(X) only depends on ﬁelds
+in X. We generally assume also that f(X) is exponentially decaying in the size of X in the
+sense that ∥f(X)∥h = O(e−κdM(X)) for a suﬃciently large constant κ. The quantity dM(X)
+is deﬁned by
+MdM(X) = length of the shortest continuum tree joining the cubes in X
+(39)
+and the factor e−κdM (X) gives tree decay on the scale M. This is suﬃcient for the convergence
+of the sum over X.
+8
+
+=== PAGE 9 ===
+We express V0 as polymer functions by
+V0 =
+X
+□
+E0(□) =
+X
+X
+E0(X)
+(40)
+where ﬁrst we break the integrals up into integrals E0(□) over M-cubes □and then we deﬁne
+E0(X) to be E0(□) if X = □and zero otherwise. We have ∥E0(□)∥h ≤O(e0p(e0)) and then
+trivially
+∥E0(X, A, Z0)∥h ≤O(e0p(e0))e−κdM (X)
+(41)
+The evaluation of the ﬂuctuation integral (36) uses a standard technique known as the
+cluster expansion. (See for example [18]). This says that there exist polymer functions E#
+0 (X)
+such that
+Z
+dµΓ0(A)(W0)dµC0(Z0)χ0(Z0) exp
+ X
+X
+E0(X, A, Z0, ψ, W0)
+
+= exp
+ X
+X
+E#
+0 (X, A, ψ
+
+(42)
+With our restrictions on the size of dA and for some κ′ < κ they also satisfy a bound
+∥E#
+0 (X, A)∥h ≤O(e0p(e0))e−κ′dM (X)
+(43)
+The key ingredients in the cluster expansion are that the initial functions E0(X) are suﬃ-
+ciently small, true by our assumption that e0p(e0) is small, and the exponential decay of the
+covariances C0, Γ0(A0) of the Gaussian measures. In carrying out the proof it is useful to use
+the identities
+Z
+f(Z0) dµC0(Z0) =
+Z
+f
+
+C
+1
+2
+0 Z0
+
+dµI(Z0)
+Z
+f( ¯W0, W0) dµΓ0(A)( ¯W0, W0) =
+Z
+f
+
+¯W0, Γ0(A)W0
+
+dµI( ¯W0, W0)
+(44)
+which put the non-locality in the function rather than the measure. This compromises the
+polymer expansion since E0(X, A, C
+1
+2
+0 Z0, ψ, ¯
+W0, Γ0(A)W0) now depends on Z0, W0 outside of
+X. But one can restore it by a further decomposition using random walk expansions for C
+1
+2
+0
+and Γ0(A). With a new polymer expansion in the exponent and the ultra-local measures
+dµI(Z0) and dµI( ¯W0, W0) the cluster expansion is just a combinatoric problem.
+With bounds on dA one can also establish a polymer expansion for the normalizing factor
+Z0(A) = det
+
+De0(A) + ¯m0 + bL−1 QT (−A)Q(A)
+
+of the form [21]
+Z0(A) = Z0(0) exp
+ X
+X
+Edet
+0 (X, A)
+
+(45)
+and Edet
+0 (X, A) has a bound similar to (43).
+Now we have with E#
+0 = P
+X E#
+0 (X), etc.
+˜ρ1(A1, Ψ1) = N0Z0Z0(0) exp
+
+−1
+2∥dA∥2 −˜S1(A, Ψ1, ψ)
+−m0 < ¯ψ, ψ > −ε0|T0
+N| + E#
+0 (A, ψ) + Edet
+0
+(A)
+
+A= ˜A1,ψ= ˜ψ1( ˜A1)
+(46)
+9
+
+=== PAGE 10 ===
+Next we scale this expression deﬁning ρ1(A1, Ψ1) = ˜ρ1(A1,L, Ψ1,L) for A1, Ψ1 on T0
+N−1.
+Scaled ﬁelds A1, ψ1(A1) on the L−1 lattice T−1
+N−1 are given by A1,L = H0A1,L and [ψ1(A1)]L =
+H0(A1,L)Ψ1,L. Thanks to our choice of scaling factors the ∥dA∥2 is invariant and the quadratic
+fermion term becomes
+S1(A1, Ψ1, ψ1(A1)) ≡b < ¯Ψ1 −Q(−A1) ¯ψ1(A1), Ψ1 −Q(A1)ψ1(A1) >
++ < ¯ψ1(A1),
+
+De1(A1) + ¯m1
+
+ψ1(A1) >
+(47)
+Parameters change by
+e1 = L
+1
+2e0
+¯m1 = L ¯m0
+m1 = Lm0
+¯ε1 = L3ε0
+(48)
+and we have up to a multiplicative constant
+ρ1(A1, Ψ1) = exp
+
+−1
+2∥dA1∥2 −S1(A1, Ψ1, ψ1(A1))
+−m1 < ¯ψ1(A1), ψ1(A1) > −ε1|T0
+N−1| + E1(A1, ψ1(A1))
+
+(49)
+The function E1(A, ψ) is deﬁned as follows. It has a polymer expansion E1 = P
+X E1(X)
+where
+E1(X, A, ψ) = (LE#
+0 )(X, A, ψ) + (LEdet
+0
+)(X, A, ψ)
+(50)
+Here the linear operator L reblocks and scales. It is deﬁned for an M-polymer X by
+(LE)(X, A, ψ) =
+X
+Y : ¯Y =LX
+E(Y, AL, ψL)
+(51)
+The sum is over all M-polymers Y such that ¯Y = LX, where ¯Y is the union of all LM
+polymers intersecting Y .
+The sum in (51) tends to increase norms by a factor L3. This is not a problem in this
+ﬁrst step, but is a key issue to be dealt with when we repeat the procedure. The remedy will
+involve modifying the simple scaling in (48).
+5
+Iteration
+Now we repeat the ﬁrst step and generate the sequence of densities ρ1, ρ1, ρ2, . . . . With Ak, Ψk
+on T0
+N−k we pass from ρk to ρk+1 by block averaging
+˜ρk+1(Ak+1, Ψk+1) = Nk
+Z
+DAkDΨk δ(Ak+1 −QAk) δx(Ak)
+exp
+
+−bL−1 < ¯Ψk+1 −Q(−˜Ak+1)¯Ψk, Ψk+1 −Q( ˜Ak+1)Ψk >
+
+ρk(Ak, Ψk)
+(52)
+and then scaling ρk+1(Ak+1, Ψk+1) = ˜ρk+1(Ak+1,L, Ψk+1,L).
+The ﬁeld ˜Ak+1 is yet to be
+speciﬁed.
+10
+
+=== PAGE 11 ===
+We continue to consider the case where the small ﬁeld region is the whole torus. If this is
+the only contribution the claim is that up to a multiplicative constant
+ρk(Ak, Ψk) = exp
+
+−1
+2∥dAk∥2 −Sk(Ak, Ψk, ψk(Ak))
+−mk < ¯ψk(Ak), ψk(Ak) > −εk|T0
+N−k| + Ek(Ak, ψk(Ak))
+
+(53)
+Here Ak = HkAk is a k-step Landau gauge minimizer. The operator Hk is generated as
+the composition of k single step operators. Similarly the ψk(Ak) = Hk(Ak)Ψk and Hk(A) is
+generated as the composition of k single step operators. The ﬁelds Ak, ψk(Ak) are deﬁned
+on the ﬁner lattice T−k
+N−k, so we are heading back toward the original problem on T−N
+0
+, even
+though the number of fundamental variables Ak, Ψk is decreasing. The quadratic fermion
+term is
+Sk(Ak, Ψk, ψk(Ak)) ≡bk < ¯Ψk −Qk(−Ak) ¯ψk(Ak), Ψk −Qk(Ak)ψk(Ak) >
++ < ¯ψk(Ak),
+
+Dek(Ak) + ¯mk
+
+ψk(Ak) >
+(54)
+The scaled coupling constant is ek = Lk/2e0 = L−(N−k)/2e and Qk(Ak) is a k-fold averaging
+operator. The function Ek has a polymer expansion Ek = P
+X Ek(X). The Ek(X, Ak, ψk(Ak))
+are restrictions of functions Ek(X, A, ψ) which are invariant under lattice symmetries and
+gauge transformations.
+But note that the gauge invariance only holds in positions corre-
+sponding to the smeared ﬁelds Ak, ψk(Ak), not in the fundamental variables Ak, Ψk.
+We have discussed why ρ1 has the form (53). We now assume ρk has the form (53) and
+discuss why ρk+1 has this form. We insert (53) into (52) and follow the treatment of the
+ﬁrst step. However there are new features. Let Amin,x
+k
+= Hx
+kAk+1 be the minimizer in Ak of
+the term ∥dAk∥2 subject to the constraints Ak+1 = QAk and Ak axial. Expand the action
+around the minimizer by Ak = Amin,x
+k
++ Zk. Then Ak = HkAk becomes HkAmin,x
+k
++ HkZk.
+The HkAmin,x
+k
+= HkHx
+kAk+1 is mixed Landau and axial gauge, but it is gauge equivalent to
+the all Landau ˜Ak+1 ≡HkHkAk+1 which will scale to Ak+1 = Hk+1Ak+1. We make this
+change for better estimates. Also deﬁning Zk = HkZk we can now write
+Ak = ˜Ak+1 + Zk
+(55)
+and in the action we have the split
+1
+2∥dAk∥2 = 1
+2∥d ˜Ak+1∥2 + 1
+2∥dZk∥2
+(56)
+The translation Ak = ˜Ak+1+Zk induces changes in the quadratic fermion action and now also
+in the existing polymer functions. As in (26) we separate out a leading term and a ﬂuctuating
+term by
+Sk
+
+˜Ak+1 + Zk, Ψk, ψk( ˜Ak+1 + Zk)
+
+=Sk
+
+˜Ak+1, Ψk, ψk( ˜Ak+1)
+
++ [· · · ]
+Ek
+
+˜Ak+1 + Zk, ψk( ˜Ak+1 + Zk
+
+=Ek
+
+˜Ak+1, ψk( ˜Ak+1)
+
++ [. . . ]
+(57)
+The ﬂuctuation terms [· · · ] will be discussed further.
+11
+
+=== PAGE 12 ===
+The quadratic fermion term now has the form at A = ˜Ak+1
+bL−1 < ¯Ψk+1 −Q(−A)¯Ψk, Ψk+1 −Q(A)Ψk > +Sk(A, Ψk, ψk(A))
+(58)
+Let Ψcrit
+k
+(A) = Hk(A)Ψk+1 be the critical point in Ψk of this expression. We expand around
+this ﬁeld by by Ψk = Ψcrit(A) + Wk. The ﬁeld ψk(A) becomes
+ψk(A) = ˜ψk+1(A) + Wk(A)
+(59)
+where ˜ψk+1(A) = Hk(A)Hk(A)Ψk+1 will scale to ψk+1(A) and Wk(A) = Hk(A)Wk. The
+quadratic fermion term (58) splits as
+˜Sk+1(A, Ψk+1, ˜ψk+1(A))+ < ¯Wk, Γk(A)−1Wk >
+(60)
+Here Γk(A) is a certain invertible operator similar to (31) and
+˜Sk+1(A, Ψk+1, ψ)
+= bkL−1 < ¯Ψk+1 −Qk+1(−A) ¯ψ, Ψk+1 −Qk+1(A)ψ > + < ¯ψ,
+
+Dek(A) + ¯mk
+
+ψ >
+(61)
+where Qk+1(A) = Q(A)Qk(A). The term Ek(A, ˜ψk+1(A)) in (57) becomes
+Ek
+
+A, ˜ψk+1(A) + Wk(A)
+
+= Ek
+
+A, ˜ψk+1(A)
+
++ [. . . ]
+(62)
+The ﬂuctuation part [. . . ] will be discussed further.
+Continuing as in the ﬁrst step we identify Gaussian integrals by
+Zk dµCk(Zk) = δ(QZk)δx(Zk) exp
+
+−1
+2∥dHkZk∥2
+DZk
+Zk(A)dµΓk(A)(Wk) = exp
+
+−< ¯Wk, Γk(A)−1Wk >
+
+DWk
+(63)
+Then we ﬁnd
+˜ρk+1(Ak+1, Ψk+1) = NkZkZk(A) Ξk
+
+A, ψ
+
+exp
+
+−1
+2∥dA∥2 −˜Sk+1(A, Ψk+1, ψ)
+−mk < ¯ψ, ψ > −εk|T0
+N−k| + Ek(A, ψ)
+
+A= ˜Ak+1,ψ= ˜ψk+1( ˜
+Ak+1)
+(64)
+where the ﬂuctuation integral is
+Ξk
+
+A, ψ
+
+=
+Z
+dµΓk(A)(Wk)dµCk(Zk)χk(Zk) exp
+
+E′
+k(A, Zk, ψ, Wk(A))
+
+(65)
+Here again we have implicitly made a large/small ﬁeld split to introduce a characteristic
+function χk(Zk) enforcing a bound like |Zk| ≤p(ek) = (−log ek)p.
+The E′
+k are the terms [· · · ] in (57),(62). They inherit an expansion E′
+k = P
+X E′
+k(X).
+However the E′
+k(X, A, Zk, ψ, Wk(A)) depend on the fundamental variables Zk, Wk outside X
+since Zk = HkZk and Wk(A) = Hk(A)Wk and the kernels of Hk, Hk(A) are only exponentially
+decaying. When we shift to ultralocal Gaussian measures with unit covariance it gets worse
+12
+
+=== PAGE 13 ===
+with Zk = HkC
+1
+2
+k Zk and Wk(A) = Hk(A)Γk(A)Wk.
+The remedy as before is to break
+Zk, Wk(A) and hence E′
+k(X) into local pieces using random walk expansions, now for each
+the operators of Hk, C
+1
+2
+k , Hk(A), Γk(A). This leads to a polymer expansion with Zk, Wk strictly
+localized. Then one can do a cluster expansion as before. The result is that the ﬂuctuation
+integral has the form
+Ξk(A, ψ) = exp
+
+E#
+k (A, ψ)
+
+= exp
+ X
+X
+E#
+k (X, A, ψ)
+
+(66)
+with good bounds on E#
+k (X).
+We also need a polymer expansion for Zk(A) = det(Γk(A)−1), the Gaussian normalization
+factor in (63). With restrictions on the size of dA one can show
+Zk(A) = Zk(0) exp
+
+Edet
+k (A)
+
+= Zk(0) exp
+ X
+X
+Edet
+k (X, A)
+
+(67)
+with good bounds on Edet
+k (X).
+At this point we have the generalization of the k = 0 case (46)
+˜ρk+1(Ak+1, Ψk+1) = NkZkZk(0) exp
+
+−1
+2∥dA∥2 −˜Sk+1(A, Ψk+1, ψ)
+−mk < ¯ψ, ψ > −εk|T0
+N−k| + Ek(A, ψ) + E#
+k (A, ψ) + Edet
+k (A)
+
+A= ˜Ak+1,ψ= ˜ψk+1( ˜Ak+1)
+(68)
+Before scaling we make some further adjustments. Our goal is to show that things do
+not grow too rapidly as we iterate the procedure. There is a potential problem with the
+polymer functions Ek(X) which tend to grow like L3 in each step as noted at the end of
+section 4. However this only occurs for terms with a few ﬁelds, since scaling also supplies a
+factor L−1
+2 for gauge ﬁelds, and L−1 for fermion ﬁelds. Furthermore we gain powers of L−1
+2
+from ek = L−1
+2 ek+1. Taking account the symmetries of the Ek(X) the only relevant terms are
+the energy density (constants) and the fermion mass (
+R ¯ψψ ). Boson mass terms
+R
+|A|2 are
+forbidden by gauge invariance. Other terms shrink and are said to be irrelevant; for example
+four fermion terms shrink like L−1. There are no marginal terms.
+Accordingly we can write
+Ek(X, A, ψ) = −ε∗
+k(X)Vol(X) −
+Z
+¯ψ[m∗
+k(X)]ψ + (REk)(X, A, ψ)
+(69)
+and with a suitable choice of ε∗
+k(X), m∗
+k(X) the remainder (REk)(X) shrinks under scaling.
+Summing over X gives
+X
+X
+Ek(X, A, ψ) = −ε∗
+k|T0
+N−k| −m∗
+k
+Z
+¯ψψ +
+X
+X
+(REk)(X, A, ψ)
+(70)
+where ε∗
+k = P
+X⊃□ε∗
+k(X) and m∗
+k = P
+X⊃□m∗
+k(X) for any M-cube □.
+We make these adjustments in (68). After scaling we ﬁnd that up to a constant ρk+1 has
+the claimed form:
+ρk+1(Ak+1, Ψk+1) = exp
+
+−1
+2∥dA∥2 −Sk+1(A, Ψk+1, ψ)
+−mk+1 < ¯ψ, ψ > −εk+1|T0
+N−k+1| −Ek+1(A, ψ)
+
+A=Ak+1,ψ=ψk+1(Ak+1)
+(71)
+13
+
+=== PAGE 14 ===
+The coupling constant in Sk+1 is now ek+1 = L
+1
+2ek and we have the new parameters:
+εk+1 =L3(εk + ε∗
+k)
+mk+1 =L(mk + m∗
+k)
+Ek+1 =L(REk + E#
+k + Edet
+k )
+(72)
+Here ε∗
+k = ε∗
+k(Ek), m∗
+k = m∗
+k(Ek), E#
+k = E#
+k (mk, Ek), and L is the reblocking and scaling
+operation (51). The possibility of dangerous growth is now isolated in mk, εk.
+We need to study the ﬂow of these equations, a problem in discrete dynamical systems.
+We start with E0 = 0 and the renormalization problem is to choose initial values ε0 = εN
+0
+m0 = mN
+0 such that εk and mk take speciﬁed ﬁnal values and Ek stays small. We stop after
+K < N steps with N −K = O(1), and arbitrarily ask for ﬁnal values εK = 0, mK = 0. (This
+does not give massless fermions since the background mass is ¯mK = L−(N−K) ¯m > 0.) The
+existence of a unique solution can be formulated as a ﬁxed point problem in a Banach space
+of sequences {εk, mk, Ek}K
+k=0 satisfying the boundary conditions. The ﬁxed point exists if e
+is suﬃciently small. This leads to a result that looks something like the following [21].
+Theorem 2. Let m > 0, and e be suﬃciently small. Then for any N and N −K = O(1)
+there exists a unique sequence {εk, mk, Ek}K
+k=0 satisying (72) with the initial condition E0 = 0
+and the ﬁnal condition εK = 0, mK = 0. With ek = e−(N−k))/2e and hk = e
+−1
+4
+k
+, the solution
+satisﬁes
+|εk| ≤e
+1
+4
+k
+|mk| ≤e
+3
+4
+k
+∥Ek(X)∥hk ≤e
+1
+4
+k e−κdM(X)
+(73)
+With this sequence the density ρk has the form (53) for all 0 ≤k ≤K.
+The fractional exponents here are an artifact of the proof and have no fundamental sig-
+niﬁcance.
+Theorem 2 gives good bounds for the partition function ZN(e) if one takes it to be
+R
+δx(AK)ρK(AK, ΨK)DAkDΨK. But this density ρK is only the global small ﬁeld contri-
+bution. For the true partition function we have to include the contribution from terms which
+have some large ﬁeld regions.
+The history of small ﬁeld regions is given by a non-increasing sequence Ω= (Ω1, · · · , Ωk)
+with Ωj a union of L−(k−j)M cubes in T−k
+N−k. It is created as follows. In passing from k
+to k + 1 a new small ﬁeld region Ωk+1 is created. It is a union of LM cubes (or larger) in
+T−k
+N−k, and is deﬁned with bounds depending on p(ek+1) = (−log ek+1)p to keep pace with the
+running coupling constant ek+1. The p(ek) are decreasing in k so the small ﬁeld constraints
+are becoming tighter as we proceed. The new small ﬁeld regions are introduced only where
+needed, namely inside the old small ﬁeld region: Ωk+1 ⊂Ωk. At the end of step k + 1 the
+Ωk+1 is scaled down to a union of M cubes in T−k−1
+N−k−1.
+The complete expression for ρk involves a sum over histories Ω:
+ρk(Ak, Ψk) =
+X
+Ω
+ρk,Ω(Ak, Ψk)
+(74)
+In the small ﬁeld region Ωk for ρk,Ωthe action density is identical with the global small ﬁeld
+case we have discussed at length. The contribution of the large ﬁeld region Ωc
+k is much smaller
+is estimated along the lines discussed in section 3.
+14
+
+=== PAGE 15 ===
+There are diﬃculties with carrying out this program. The density ρk,Ω(Ak, Ψk) is naturally
+expressed in terms of smeared ﬁelds Ak,Ω, ψk,Ωwhich depend on the history Ω. These depend
+on the fundamental ﬁelds Ak, Ψk through operators Hk,Ωand Hk,Ω(A). Estimates and local
+expansions for these operators are needed and the tool is again random walk expansions.
+But because the history Ωhas a multiscale structure these are multi-scale random walk
+expansions. These operators also embody coupling between large and small ﬁeld regions,
+which is abundant and needs to be controlled. Another area of diﬃculty is the presence of
+localized characteristic functions which can be a source of non-locality when subjected to
+expansions around critical points. Finally at each step there is not a single large/small split
+as our notation would indicate, but several such. Things get rather complicated.
+These diﬃculties can be overcome, and when we divide by the free partition function we
+get the stability bound of Theorem 1, which we recall is the bound uniform in N
+K−≤ZN(e)/ZN(0) ≤K+
+(75)
+References
+[1] T. Balaban (Higgs)2,3 Quantum ﬁelds in a ﬁnite volume- I Commun. Math.
+Phys., 85: 603-636, 1982.
+[2] T. Balaban (Higgs)2,3 Quantum ﬁelds in a ﬁnite volume- II Commun. Math.
+Phys., 86: 555-594, 1982.
+[3] T. Balaban (Higgs)2,3 Quantum ﬁelds in a ﬁnite volume- III Commun. Math.
+Phys., 88: 411-445, 1983.
+[4] T. Balaban, Regularity and decay of lattice Green’s functions, Commun. Math.
+Phys., 89: 571-597, 1983.
+[5] T. Balaban, Propagators and renormalization transformations for lattice gauge
+ﬁeld theories -I, Commun. Math. Phys. 95 (1984) 17-40.
+[6] T. Balaban, Propagators and renormalization transformations for lattice gauge
+ﬁeld theories- II, Commun. Math. Phys. 96 (1984) 223-250.
+[7] T. Balaban, Averaging operators for lattice gauge ﬁeld theories. Commun. Math.
+Phys. 98 (1985) 17-51.
+[8] T. Balaban, Propagators for lattice gauge ﬁeld theories in a background ﬁeld,
+Commun. Math. Phys. 99 (1985) 389-434.
+[9] T. Balaban, Ultraviolet stability of three-dimensional lattice pure gauge ﬁeld
+theories. Commun. Math. Phys. 102 (1985) 255-275.
+[10] T. Balaban, Variational problem and background ﬁeld in renormalization group
+method for lattice gauge ﬁeld theories. Commun. Math. Phys. 102 (1985) 277-
+309.
+15
+
+=== PAGE 16 ===
+[11] T. Balaban, Renormalization group approach to lattice gauge ﬁeld theories- I,
+Commun. Math. Phys. 109 (1987) 249-301.
+[12] T. Balaban, Renormalization group approach to lattice gauge ﬁeld theories- II,
+Commun. Math. Phys. 116 (1988) 1-22.
+[13] T. Balaban, Convergent renormalization expansions for lattice gauge ﬁeld theo-
+ries, Commun. Math. Phys. 119 (1988) 243-285.
+[14] T. Balaban, J. Imbrie, A. Jaﬀe, Renormalization of the Higgs model: minimizer,
+propagators, and the stability of mean ﬁeld theory, Commun. Math. Phys. 97:
+299-329, 1985.
+[15] T. Balaban, J. Imbrie, A. Jaﬀe, Eﬀective action and cluster properties of the
+abelian Higgs model, Commun. Math. Phys. 114: 257-315 , 1988.
+[16] T. Balaban, M. O’Carroll, R. Schor, Block renormalization group for Euclidean
+fermions, Commun. Math. Phys. 122: 233-247, 1989.
+[17] T. Balaban, M. O’Carroll, R. Schor, Properties of block renormalization group
+operators for Euclidean fermions in an external ﬁeld, J. Math Phys 32: 3199-
+3208, 1991.
+[18] J. Dimock, The renormalization group according to Balaban - I. small ﬁelds, Rev.
+Math. Phys. 25, 1330010, 1-64, 2013.
+[19] J. Dimock, The renormalization group according to Balaban - II. large ﬁelds, J.
+Math. Phys. 54, 092301, 1-85, 2013.
+[20] J. Dimock, The renormalization group according to Balaban - III. convergence,
+Annales Henri Poincar´e 15, 2133-2175, 2014.
+[21] J. Dimock, Ultraviolet regularity for QED in d=3, J. Math Phys., 59, 012301,
+2018.
+[22] J. Dimock, Multiscale block averaging for QED in d=3, J. Math. Phys., 61,
+032302, 2020.
+[23] J. Dimock, Ultraviolet stability for QED in d=3, ArXiv 2009.01156 and to appear
+in Annales Henri Poincar´e
+[24] J. Imbrie, Renormalization group methods in gauge ﬁeld theories. In K. Os-
+terwalder and R. Stora, editors, Critical phenomena, random systems, gauge
+theories. North-Holland, 1986.
+16
