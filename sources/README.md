@@ -21,6 +21,12 @@ As of 2026-09-28:
   one; the script can be re-run later. Their full text is still available
   as OCR (see the next section).
 
+## `text/`: clean text extractions
+
+`text/` holds page-by-page text extracted from the PDFs in `papers/`: CMP 102
+and Dimock's papers. It is better than the older OCR for CMP 102. Research
+agents made it on 2026-09-29.
+
 ## `tmp-audit-snapshot-2026-09-28/`: Codex's audit folder
 
 A byte-identical copy of `/private/tmp/balaban_audit/` as of 2026-09-28,
