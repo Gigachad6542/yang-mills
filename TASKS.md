@@ -84,18 +84,44 @@ harmless in 3D"). Do not widen T4 beyond this.
   construction or give a finite-dimensional counterexample isolating the
   missing lower bound. Target note: `research/16-normalized-tail.md`.
 
+## Assigned to Codex (new, 2026-09-30)
+
+### T6 [proof]: M1 in 3D and nondegeneracy (P6-3D)
+Scope: a new note, `research/17-three-dimensional-nondegeneracy.md`, plus
+one row each in `research/02-proof-obligations.md` and `README.md`.
+Use CMP 102 Theorem 1: the bounds (5) for the exact densities
+\(\rho_{k+1}=T\rho_k\). Label it a published input whose proof the paper
+calls "very sketchy". Prove:
+- (a) a precise statement of M1-3D for SU(2): Balaban normalization
+  g_0^2 = g^2 eps, terminal spacing eps_0 (or a fixed coarser l reached by
+  further exact T steps), closed coarse loops. List which ledger items
+  vanish in 3D and why (no R, so Robs/H6-H8 vanish; superrenormalizable,
+  so H0 vanishes), and which remain (P4, P6).
+- (b) the normalized terminal law nu_n on the fixed terminal lattice has
+  a Haar density <= C everywhere and >= c > 0 on the terminal small-field
+  set S, uniformly in n. Handle the minimal configuration U_K(U), the bound
+  on A(U_K(U)) on S, and normalization.
+- (c) inf_n Var_{nu_n}(F) > 0 for every continuous F that is nonconstant on
+  S. Every subsequential limit is nondegenerate, and any two limits are
+  mutually absolutely continuous on S-type sets.
+- (d) if you use a coarser scale l, check that the bounds survive the
+  extra exact pushforward.
+
+Name any extra property of U_K you need as a hypothesis. Done when:
+(a)-(d) are proved or replaced by a precise `failed-attempt`, with one
+commit and one PROGRESS line.
+
 ## Lead (Claude): in progress
 
-- T6 [proof]: M1 in 3D and nondegeneracy (P6-3D) from the two-sided bounds
-  (5) of CMP 102. Target note: `research/17-three-dimensional-nondegeneracy.md`.
 - T7 [proof/failed-attempt]: the 3D adjacent-depth comparison (P4-3D), the
   one real open estimate for M1 in 3D. Target note:
   `research/18-three-dimensional-depth-comparison.md`.
-- T8 [computation/proof]: the Gaussian abelian model. Prove the covariance of
-  a terminal loop with a local gauge-invariant even defect scales like
-  L^{-4m} in 4D, while the fixed-exterior shift does not. This supports T3.
+- T8 [computation/proof]: the Gaussian abelian model. Show that the
+  covariance of a terminal loop with a local gauge-invariant even defect
+  decays like L^{-4m} in 4D once the RG propagation is included, while the
+  fixed-exterior shift does not. This complements T3's counterexamples.
   Target note: `research/19-gaussian-power-counting.md`.
-- T9 [review]: lead review of T1 and T2, for correctness only.
+- T9 [review]: lead review of T1-T5, for correctness only.
 
 ## Proposals
 (Workers: at most 5 lines each.)
