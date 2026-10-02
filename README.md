@@ -86,7 +86,8 @@ estimate. The research notes give the details.
   flow contracts the influence of fine-scale defects in irrelevant
   directions. A proof of that contraction, together with generalized averaged
   H8, (P) and (S), would give M1-4D convergence. Nondegeneracy in 4D (P6) is
-  separately open.
+  reduced (note 28) to a terminal small-field variance bound plus the quantitative
+  R-bias bound; large-field effects are superpolynomially small in the terminal coupling.
 
 ## Repository map
 

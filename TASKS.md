@@ -248,6 +248,8 @@ one PROGRESS line.
 - T13 [computation] by Codex: reviewed by the lead, 2026-10-02. Correct. The O(3)
   increments converge to (N-2)log L/(2 pi) and the edge converges geometrically, so (C)+(S)
   hold in the scalar analogue. The SU(2) stop is honestly stated; it continues as T19.
+- T20 [proof] — completed by Claude, 2026-10-02 (`research/28-4d-nondegeneracy-reduction.md`):
+  P6-4D from a terminal small-field variance bound plus an R-bias bound carrying the large-field factor.
 
 ## Proposals
 (Workers: at most 5 lines each.)
