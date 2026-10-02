@@ -95,6 +95,14 @@ average of them. On the lattice two extra points arise:
 A proof would combine a lattice Uhlenbeck gauge with Balaban's bounds for
 averages of small fields (CMP 98). This is not done here.
 
+*Literature check (2026-10-02, web search).* I found no lattice version of
+Uhlenbeck's small-energy gauge theorem. The continuum results found are
+Uhlenbeck's theorem and its extensions (e.g. arXiv:2202.09535,
+arXiv:1505.06995). The nearest lattice work handles axial gauges with small
+plaquettes, but not small energy: Chatterjee, arXiv:1602.01222;
+Brennecke, arXiv:2511.07297. (SER) therefore looks like a genuinely new
+lattice statement.
+
 ## 4. Theorem 3: (PA) on all events
 
 **Theorem 3.** Assume:
