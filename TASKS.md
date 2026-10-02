@@ -277,6 +277,10 @@ one PROGRESS line.
   sup-norm constant s_L of the abelian 4D minimizer image map (LP over the Bianchi annihilator): s_L = 1.54, 1.12, 0.77, 0.55
   for L = 2..5 (m = 1), mild growth in m. So (D2) holds only as s_L < 1 (L >= 4), not as O(L^-2); note 34 Thm 3 is
   generalized (eta-split) and note 33 §1 reading corrected. Pending: n0 = 8 torus check.
+- T28 [computation + source reading] — completed by Claude, 2026-10-02 (`research/36-d1-d2-from-balaban-variational.md`):
+  (D2) for SU(2) on E_0 follows from CMP 102b Prop 9 (analytic minimizer, linear term H_0) by linearization at the flat
+  configuration, with s^NA <= s^ab(1+C eps_0)+C eps_0; (D1) from Thm 1 uniqueness plus the second variation. Localization and
+  remainder uniformity are sketched. Abelian (D1) constant computed: c_1 = 1/(2 Lambda) ~ 0.6, uniform in the level.
 
 ## Proposals
 (Workers: at most 5 lines each.)
