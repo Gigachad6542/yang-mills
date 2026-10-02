@@ -129,6 +129,25 @@ checking the remaining uses of the coupling in CMP 102's step, namely the
 normalization constants and the large-field characteristic functions. The
 latter are outside (A_s), which concerns the small-field step.
 
+*Sharper source fact for 3D (CMP 102 pp. 261-262).* After the scaling
+A -> g_0 A in (22), CMP 102 computes the fluctuation integral by:
+
+- expanding v(g_0 A) - g_0^{-2} V(g_0 A) to sixth order in g_0, with
+  remainder O(g_0^7 p^{18}(g_0))|Ω_1|;
+- the cumulant expansion of the Gaussian integral, again to sixth order,
+  giving connected vacuum graphs with at most six vertices and eight legs;
+- localization by random-walk expansions with bounds (23)-(25).
+
+Under the deformation g_0 -> s g_0 of the fluctuation coupling, every term up
+to sixth order is a polynomial in s, so it is entire and even. Only the
+remainder needs an estimate. That estimate is a Taylor-remainder and
+cumulant bound, and it holds for complex coupling provided
+|s g_0| p^{18/7}(g_0) is small. So in 3D, (A_s) reduces to **one** check:
+the remainder bounds of CMP 102 (pp. 261-262) hold for complex coupling with
+|s g_0| p(g_0)^{18/7} <= α'. Both are analytic estimates that never use
+reality of g_0. The resulting Lipschitz constant in Theorem 3 is
+O(g_0² p(g_0)^{36/7}), still polylogarithmically close to O(g_0²).
+
 ## 5. Consequences
 
 - **3D.** By the README chain (notes 17, 18, 29), M1-3D ⇐ (S1) + (S2) for
