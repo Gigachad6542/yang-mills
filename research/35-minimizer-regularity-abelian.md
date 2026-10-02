@@ -94,7 +94,12 @@ For the programme:
 2. **Note 33 §1 reading**: the L^{-4} per level for transported
    gauge-invariant functions is a low-momentum statement only. Note 33's
    Theorem 3 does not depend on it.
-3. An **energy (ℓ²)** form of (D2) would avoid the oscillating patterns,
+3. **(S1) in plain sup norms.** For transported irrelevant polymers, the
+   per-step factor in sup norm over the coarse domain is at best about
+   L^d s_L^n for degree-n vanishing. With s_L ~ L^{-1.1} and d = 3, n = 2,
+   this exceeds 1. So the contraction in (S1) must use the regularity
+   (derivative) conditions of Balaban's domains. README caveat added.
+4. An **energy (ℓ²)** form of (D2) would avoid the oscillating patterns,
    because they cost coarse action. It is not developed here.
 
 ## 4. Torus size

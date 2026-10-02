@@ -121,7 +121,14 @@ terminal observables) is:
   shooting is needed, and g_k -> 0 at fine scales;
 - (S1), the transport of existing irrelevant terms with factor L^{-α}, is the
   structure behind CMP 109 (0.29) and Balaban's fifth-order local
-  expansion, i.e. a source-level statement.
+  expansion. **Caveat (note 35):** in plain sup norms over the coarse
+  small-field domain, block-scale oscillating coarse fields give fine
+  curvatures of about L^{-1.1} times the coarse ones, not L^{-2}. Multiplied
+  by the L^3 fine polymers per coarse block, that does not contract. So the
+  contraction has to come from the derivative/regularity structure of
+  Balaban's norms, or be replaced in 3D by the geometric smallness O(g_k) of
+  the generated terms (CMP 102 (25)). (S1) is therefore not yet a verified
+  source-level statement.
 
 By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
 uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).
