@@ -205,6 +205,13 @@ PROGRESS line.
   typo fixed by the lead.
 - T15 [proof/computation] — completed by Claude, 2026-10-02 (`research/24-curved-contraction.md`):
   note 12 (3.3) proved for the CMP 109 average, and H6_Σ reduced to H7_Σ plus component counting.
+- T11 [proof] by Codex: reviewed by the lead, 2026-10-02. Correct. Prop. 1 and the
+  counterexample were checked. Theorem 2 rests on Codex's page-image reading of CMP 122 I
+  (1.100) (the OCR is garbled), and the stated limits (final signed labels, the reverse FP
+  step) are right. The equal-mass hypothesis of notes 13/16 now holds at the R'-stage.
+- T16 [proof] — completed by Claude, 2026-10-02 (`research/25-h7-absorbed.md`):
+  relative-gauge and rough-then-contract lemmas; H7 absorbed into large-field persistence (P)
+  plus a generalized H8.
 
 ## Proposals
 (Workers: at most 5 lines each.)
