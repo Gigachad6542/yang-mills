@@ -59,6 +59,35 @@ estimates while avoiding three later problems:
 | Corrected 4D master reduction | conditional reduction (note 27): M1-4D convergence <= coupling flow with shooting + terminal memory decay + summable R-bias series with memory decay |
 | 4D β-derivative bound H4D-3 | conditional reduction (note 21): follows from two-loop-order, memory-decaying β-function derivatives, step-wise coupling analyticity of the effective action, and an R-bias bound analytic in β; the cutoff-uniform flow-sensitivity lemma is proved |
 
+## Where the 4D programme stands (lead summary, 2026-10-02)
+
+Each item below is proved here, or reduced here to a precisely stated open
+estimate. The research notes give the details.
+
+- **Exact structure (proved):** terminal sources pass exactly through T
+  (notes 04, 14); the zero-free source disc and cumulant control (03, 07);
+  in 3D, nondegeneracy (17) and the conditional depth comparison (18).
+- **Master reduction (note 27):** M1-4D convergence <= (H0) coupling flow
+  with shooting + (T) terminal memory decay + (B) a summable R-bias series
+  with memory decay. (The earlier split in note 18 Thm 5 is superseded; see
+  18 §9a.)
+- **(H0), Balaban's unpublished coupling-flow theorem (note 22):** reduced to
+  (C) geometric convergence of the free one-loop increments, (S) the
+  classical one-loop sum rule, and (D) memory decay. The Codex task T13
+  computes the one-loop window numerically.
+- **(B), the R-bias:**
+  - equal fiber mass for the actual R' (20, proved from CMP 122 I);
+  - curved-background contraction (24, proved), so H6 reduces to H7;
+  - H7 absorbed via rough-then-contract (25) into the persistence bound (P)
+    (Codex task T17) plus a generalized, exterior-averaged H8.
+  - The Gaussian model confirms the averaged H8 mechanism (19).
+- **The one remaining kind of theorem.** The memory-decay statements (D),
+  (T-b) and (B-b) in 4D, and H3D-1 in 3D, all assert one thing: Balaban's
+  flow contracts the influence of fine-scale defects in irrelevant
+  directions. A proof of that contraction, together with generalized averaged
+  H8, (P) and (S), would give M1-4D convergence. Nondegeneracy in 4D (P6) is
+  separately open.
+
 ## Repository map
 
 - `research/00-charter.md` -- scope, conventions, and non-claims.
