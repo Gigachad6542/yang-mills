@@ -281,6 +281,9 @@ one PROGRESS line.
   (D2) for SU(2) on E_0 follows from CMP 102b Prop 9 (analytic minimizer, linear term H_0) by linearization at the flat
   configuration, with s^NA <= s^ab(1+C eps_0)+C eps_0; (D1) from Thm 1 uniqueness plus the second variation. Localization and
   remainder uniformity are sketched. Abelian (D1) constant computed: c_1 = 1/(2 Lambda) ~ 0.6, uniform in the level.
+- T29 [proof, conditional reduction] — completed by Claude, 2026-10-02 (`research/37-pa-large-levels.md`): abelian
+  annular bound (a large level forces Morrey-weighted annular action >= delta) and summation lemma (each large level costs a
+  fixed action); non-abelian (PA) on all events <= (D1), (D2) + lattice small-energy regularity (SER). (P) <= (UB) + (SER) + notes 34-36.
 
 ## Proposals
 (Workers: at most 5 lines each.)
