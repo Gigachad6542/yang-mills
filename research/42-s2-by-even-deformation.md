@@ -117,6 +117,18 @@ D_{g^{-2}} F under (A_s).
   treated by the R-operation in 4D, and by CMP 102's large-field bounds in
   3D). (A_s) concerns the small-field step only.
 
+*Source support (CMP 102, 3D).* In the renormalization of the interaction
+terms (printed pp. 263-264), the field B (27) is bounded by
+|B(c)| < 4L²|c - y| g_0 p(g_0) (eq. (28)), "and for g_0 sufficiently small the
+number on the right-hand side above is small". The expansion is then
+truncated at sixth order, with remainders estimated by analyticity. The
+coupling enters these estimates only through the size g_0 p(g_0) of the
+fluctuation exponent. That is exactly what (A_s) requires, with
+|sg_0| p(g_0) <= α'. Turning this observation into a proof of (A_s) means
+checking the remaining uses of the coupling in CMP 102's step, namely the
+normalization constants and the large-field characteristic functions. The
+latter are outside (A_s), which concerns the small-field step.
+
 ## 5. Consequences
 
 - **3D.** By the README chain (notes 17, 18, 29), M1-3D ⇐ (S1) + (S2) for

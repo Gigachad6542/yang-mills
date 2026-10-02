@@ -27,6 +27,12 @@ Status:
 
 ## 1. Lemma 1: no relevant part
 
+*Source.* Step 1 of the proof below (Ad-invariance kills the first
+derivative at the flat field) is Balaban's own observation, CMP 102 (3D),
+eqs. (31)-(32), printed p. 264: "the only element invariant is 0 ... there
+are no relevant variables in the effective action." What is new here is
+the quantitative Schwarz-lemma form.
+
 Let Y be a finite set of bonds and P_α = {a ∈ sl(2,C)^Y : |a_b| <= α for all b}.
 
 **Lemma 1.** Let h be analytic on P_α, with |h| <= ||h|| there, and globally
