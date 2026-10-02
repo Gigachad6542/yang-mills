@@ -273,6 +273,9 @@ one PROGRESS line.
 - T26 [proof, conditional reduction] — completed by Claude, 2026-10-02 (`research/34-nonabelian-persistence-action.md`):
   non-abelian (PA) on the eps_0-small event from fiber convexity (D1) + minimizer regularity (D2), via exact
   telescoping of minimal actions and a chain/pigeonhole lemma; rate a ~ p(gamma)^2/log(1/gamma). Open: (D1), (D2), eps_0-large event.
+- T27 [computation] — claimed by Claude, 2026-10-02 (`research/scripts/t27_minimizer_regularity.py`): abelian 4D
+  check of (D2) of note 34: the exact-restricted sup norm of the minimizer-to-image kernel, C_I, uniform in m, and rho_L = L^2/(2C_I).
+  Status: script committed; the pseudo-inverse kernel is not l1-summable (row sums grow like log n0), so the LP extension over the Bianchi annihilator is running.
 
 ## Proposals
 (Workers: at most 5 lines each.)
