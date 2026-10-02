@@ -1,6 +1,8 @@
 # (P) from a marked large-field bound for the true measure
 
-Status: **conditional reduction** (T31).
+Status: **conditional reduction** (T31). **See §5:** (T1) as first stated is
+too strong, because the exterior law is R-modified. The repaired route is
+(T1\*) + (T2-R).
 
 - **Proved here.** Proposition 1: (P) of note 25 (4.1) follows from two
   hypotheses.
@@ -120,3 +122,63 @@ the per-level cost of note 37 Theorem 3.
 
 The recommended next step is to settle (T1) from notes 20 and 25 and from
 CMP 122 I §1. That is a definite, finite check of positivity and counting.
+
+## 5. Correction to (T1), and the repaired route (A')
+
+**(T1) as stated is too strong.** In note 25 the exterior measure ν of a
+label at scale k is Balaban's scale-k density, and that density is
+R-modified at earlier scales. At every earlier R'-stage the fiber law inside
+the replaced region was swapped for a template, keeping only the exterior
+marginal (note 20 (1.4)). The law of block variables near earlier replaced
+regions therefore differs from the true law. Domination by the true measure
+μ cannot be expected label by label.
+
+**Repaired route (A').** Use the label's own replacement instead.
+
+**(T1\*) Fiber-law comparison.** Let N_λ be the number of scale-k
+MR-cubes in the label's domain. For every label λ and a.e. V_c,
+
+    sup_W p̂_λ(W | V_c) / q̂_λ(W | V_c) <= exp(C N_λ log g_k^{-2}).
+
+Here q̂_λ = (normalized graph average of q_i/Q_i), from note 20 (3.3)-(3.5).
+
+**Why (T1\*) is plausible.**
+
+1. q_i in (3.4) carries exp(-g_k^{-2} A(ζ_i, U_{k,X_i})), the Wilson action
+   localized by the cutoff ζ_i <= 1. The old summand carries the full
+   Wilson action.
+2. Every Wilson plaquette term 1 - Re tr U_p is >= 0 for G-valued fields,
+   so A(full) >= A(ζ_i, ·) pointwise.
+3. The W-dependent part of A(full) - A(ζ_i, ·) is supported on the boundary
+   layer where ζ_i < 1. If W does not enter there, this part cancels
+   between p̂ and the conditional normalization, and only the
+   non-Wilson terms remain.
+4. The non-Wilson terms are boundary terms, R-terms and normalizations.
+   They are bounded by O(1) per MR-cube, plus O(log g_k^{-2}) per cube for
+   normalizations (CMP 122 II p. 381).
+5. The factor exp(C N_λ log g_k^{-2}) is absorbed by the label's own
+   large-field factor exp(-γ_0 p_0(g_k)² N_λ), since p_0(g)² is much larger
+   than log g^{-2}.
+
+**(T2-R) Marked bound for the R-modified expansion.** In Balaban's
+R-modified history expansion from scale k on, the mass of histories whose
+block variables near Λ are non-small at levels k+1, ..., k+t is at most
+C e^{-at} times the unmarked mass. Note 26 §1 records that the per-scale
+factors exist for exactly these history terms. What is missing is the
+marking (an indicator at fixed Λ), and as in §2 this is natural.
+
+**Proposition 2.** (T1\*) and (T2-R) imply (P).
+
+*Proof.* M_{m,t} = Σ ∫ν C_λ p̂_λ(E). By (T1\*),
+p̂_λ(E) <= e^{C N_λ log g_k^{-2}} q̂_λ(E). Then
+∫ν C_λ q̂_λ(E) is the mass of E for the post-replacement label, which is
+part of the R-modified expansion. Apply (T2-R) and the placement count
+L^{4m}. Absorb e^{C N_λ log g_k^{-2}} into w_m. ∎
+
+**Status after this correction.**
+
+- (P) ⇐ (T1\*) + (T2-R) (route A'), or (P) ⇐ (PA) + (UB-ms) (route B).
+- (T1\*) is a local, single-label statement on O(1) volume, so there is no
+  entropy issue. It needs only a check that W does not enter the boundary
+  layer of ζ_i in CMP 122 I (1.100), together with Balaban's term bounds.
+- Route A (T1 with the true measure) is withdrawn.

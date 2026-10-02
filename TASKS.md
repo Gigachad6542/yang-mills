@@ -290,7 +290,8 @@ one PROGRESS line.
   corrected to (P) <= (PA) + (UB-ms), with a multi-scale bound whose source is Balaban's per-scale factors (transfer to pre-replacement labels is open).
 - T31 [conditional reduction] — completed by Claude, 2026-10-02 (`research/39-persistence-via-true-measure.md`): (P) <= (T1)
   label domination (pre-replacement R'-summands positive and dominated by the scale-k density) + (T2) marked large-field bound for
-  the true measure. Needs no (PA), (SER) or (UB-ms). Next concrete step: settle (T1) from notes 20, 25 and CMP 122 I §1.
+  the true measure. Needs no (PA), (SER) or (UB-ms). Corrected in §5: (T1) is too strong (the exterior law is R-modified); repaired
+  route (P) <= (T1*) fiber-law comparison p_hat/q_hat <= exp(C N log g^-2) + (T2-R). Next step: check that W does not enter the zeta boundary layer in CMP 122 I (1.100).
 
 ## Proposals
 (Workers: at most 5 lines each.)
