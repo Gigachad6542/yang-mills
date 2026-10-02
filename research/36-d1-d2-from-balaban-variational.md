@@ -140,7 +140,7 @@ Script: `research/scripts/t28_d1_abelian.py` (output `.out`). Coarse torus
 | 3 | 3 | 0.8519 | 0.587 |
 | 3 | 9 | 0.8354 | 0.599 |
 
-The L = 3 rows are from the first run; the script reproduces them. Λ_j
+The script reproduces all rows, including L = 3. Λ_j
 decreases with M toward about 0.835, so c_1 ≈ 0.6 uniformly in the level.
 The maximum sits at the smallest nonzero coarse momenta.
 
