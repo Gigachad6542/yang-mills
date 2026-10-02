@@ -1,7 +1,7 @@
 """Checks: weights sum to 1; K_{d,L} and sup_b sum_c omega_c({b}) vs 2d+L^{1-d};
 linearization (3.1)-(3.2); Prop 2 bounds and sharpness; Prop 1 bound."""
 import sys, itertools, numpy as np
-sys.path.insert(0,'/private/tmp/ym-r3/T9a')
+sys.path.insert(0,'/home/user/yang-mills/wip/round3-2026-09-30/T9a')
 from avg04 import *
 rng=np.random.default_rng(1)
 

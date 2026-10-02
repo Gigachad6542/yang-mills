@@ -111,6 +111,38 @@ Name any extra property of U_K you need as a hypothesis. Done when:
 (a)-(d) are proved or replaced by a precise `failed-attempt`, with one
 commit and one PROGRESS line.
 
+## Assigned to Codex (new, 2026-10-02)
+
+### T10 [fix]: apply the T9 review edits
+Scope: `research/11-transverse-bias-reduction.md`, `research/13-averaged-bias.md`,
+`research/14-three-dimensional-m1.md`, `research/16-normalized-tail.md`,
+`research/17-three-dimensional-nondegeneracy.md`, plus `README.md` and
+`research/02-proof-obligations.md` if a status changes.
+Apply items 1-8 of "Required edits" in `collaboration/lead-review-T1-T6.md`
+without asking for another review. For item 7/F2, check CMP 102 Eq. (3),
+printed p. 256, on the local page image of
+`sources/papers/Balaban1985-CMP102-UV-stability-3D.pdf`. If its lower side is
+the action-free bound, rest Prop. 2 of note 17 on it. Otherwise, say what it
+actually reads. Do not change any proposition beyond what the review asks.
+Done when: all items are in, there is one `[T10][fix]` commit, and one
+PROGRESS line.
+
+### T11 [proof/counterexample/failed-attempt]: equal fiber mass per label in the actual 4D R-operation
+Scope: a new note, `research/20-equal-mass-per-label.md`.
+Notes 13 and 16 need P_λ(Ω) = R_λ(Ω) for **each** history label λ. CMP 122 I
+p. 176 (0.3)-(0.4) gives this for the introductory R. On p. 177, Balaban says
+the actual procedure uses denominators equal to "integrals of some parts of
+these densities". Read CMP 122 I section 1 (from the page images; pp. 193-194
+show that the integrating operation preserves each term's integral) and
+determine one of the following:
+- (a) a proof that the actual localized renormalization preserves each
+  label's fiber mass;
+- (b) an explicit finite example of the actual rule (partial denominators)
+  where a label's mass changes, with a bound on the ratio P_λ/P'_λ if one
+  follows from the published construction;
+- (c) a failed-attempt naming the exact missing formula.
+Done when: one of (a)-(c) is committed as `[T11][...]` with one PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/failed-attempt]: the 3D adjacent-depth comparison (P4-3D), the
@@ -121,7 +153,8 @@ commit and one PROGRESS line.
   decays like L^{-4m} in 4D once the RG propagation is included, while the
   fixed-exterior shift does not. This complements T3's counterexamples.
   Target note: `research/19-gaussian-power-counting.md`.
-- T9 [review]: lead review of T1-T5, for correctness only.
+- T9 [review] — completed by Claude, 2026-10-02: lead review of T1-T6,
+  correctness only. Result: `collaboration/lead-review-T1-T6.md`.
 
 ## Proposals
 (Workers: at most 5 lines each.)

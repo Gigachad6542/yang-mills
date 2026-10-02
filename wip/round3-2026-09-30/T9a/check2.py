@@ -1,6 +1,6 @@
 """Linearization (3.1)-(3.2) and Proposition 2 (3.4)-(3.7) checks."""
 import sys, itertools, numpy as np, scipy.linalg as sla
-sys.path.insert(0,'/private/tmp/ym-r3/T9a')
+sys.path.insert(0,'/home/user/yang-mills/wip/round3-2026-09-30/T9a')
 from avg04 import *
 rng=np.random.default_rng(2)
 

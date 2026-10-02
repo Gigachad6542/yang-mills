@@ -1,6 +1,6 @@
 """Prop 1 (2.2),(2.4); Lemma 3 constant; Prop 4 (4.4)-(4.7); branch-cut example."""
 import sys, itertools, numpy as np, scipy.linalg as sla
-sys.path.insert(0,'/private/tmp/ym-r3/T9a')
+sys.path.insert(0,'/home/user/yang-mills/wip/round3-2026-09-30/T9a')
 from avg04 import *
 rng=np.random.default_rng(3)
 d,L,Nc=2,3,3
