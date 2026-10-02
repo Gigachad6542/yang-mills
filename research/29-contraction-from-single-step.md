@@ -71,6 +71,15 @@ decay (T-b) of note 27 at rate θ_1. The same bound gives |Δ_k| = O(θ_1^k),
 i.e. the coupling histories of the two depths agree up to O(θ_1^k), which is
 the input used in note 27 (T-b) and the content of (D) in note 22.
 
+**Numerical check** (`research/scripts/t21_contraction_check.py`, `.out`).
+Worst-case sequences satisfy (i)-(ii) with equality, and Δ_0 is found by
+shooting to Δ_K = 0 (bisection in 400-digit arithmetic; double precision
+cannot resolve |Δ_k| ~ θ_1^k for K = 200). For (θ, b, c, e) =
+(0.3, 0.05, 0.05, 0.002), (0.5, 0.1, 0.05, 0.01) and (0.3, 0.2, 0.2, 0.01),
+with K = 200 and 400, the result is max_k δ_k/(2θ_1^k) = 0.5, and
+max |Δ_k|/θ_1^k = 0.072, 0.104 and 0.319, below the proved 2c̄/(1-θ_1-ē) =
+0.29, 0.29 and 1.18. Both are uniform in K.
+
 ## 3. The single-step hypotheses
 
 - **(S1) Transport contraction.** Re-expressing the scale-k irrelevant data
