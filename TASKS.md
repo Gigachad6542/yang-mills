@@ -288,6 +288,9 @@ one PROGRESS line.
   Wilson term on the label's own large-field domain (single-scale (UB) holds there); Lemma 1: irrelevant polymer differences are
   <= delta_E * action (via Ad-invariance). But a single-scale (UB) cannot give (P), because of entropy exp(c L^{4t}); note 26 Prop 1 is
   corrected to (P) <= (PA) + (UB-ms), with a multi-scale bound whose source is Balaban's per-scale factors (transfer to pre-replacement labels is open).
+- T31 [conditional reduction] — completed by Claude, 2026-10-02 (`research/39-persistence-via-true-measure.md`): (P) <= (T1)
+  label domination (pre-replacement R'-summands positive and dominated by the scale-k density) + (T2) marked large-field bound for
+  the true measure. Needs no (PA), (SER) or (UB-ms). Next concrete step: settle (T1) from notes 20, 25 and CMP 122 I §1.
 
 ## Proposals
 (Workers: at most 5 lines each.)

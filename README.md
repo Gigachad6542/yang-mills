@@ -85,6 +85,8 @@ estimate. The research notes give the details.
     and the eps_0-large event reduced to lattice small-energy regularity (SER) (37), so that
     (P) <= (UB-ms) + (SER), where a single-scale (UB) is not enough because of
     entropy on a region of volume L^{4t} (38),
+    or, more directly, (P) <= (T1) label domination + (T2) a marked large-field
+    bound for the true measure (39),
     plus a generalized, exterior-averaged H8.
   - The Gaussian model confirms the averaged H8 mechanism (19).
   - Generalized averaged H8 is a covariance between a terminal test and a local
