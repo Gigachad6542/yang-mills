@@ -12,3 +12,4 @@ sources/papers/
 sources/tmp-audit-snapshot-2026-09-28/
 tools/bin/
 __pycache__/
+research/scripts/*.err
