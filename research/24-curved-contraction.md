@@ -238,9 +238,22 @@ which is why the Ad-invariant norm is required.
 | rough | 0.189 | 0.15493 | 0.23 |
 | rough | 0.379 | 0.19852 | 0.23 |
 
-**d = 4, L = 3:** `t15_d4.out` (running at the time of writing; appended when complete).
+**d = 4, L = 3, 2⁴ coarse torus** (flat value 1/27; 5184 fine bonds, 10473
+contours per coarse bond). Branch-and-bound over bonds (`t15_bnb.py`, results
+in `t15_d4_results.out`; "exact" means pruning was complete):
 
-In both dimensions θ - L^{1-d} is linear in κ with a constant of order 0.2-0.7, and there is no order-one hub jump.
+| background | κ | θ | θ/L^{1-d} | (θ - L^{1-d})/κ |
+|---|---|---|---|---|
+| flat | 0 | 0.037037 | 1.0000 | - |
+| pure gauge | 0 | 0.037037 | 1.0000 | - |
+| rough | 0.194 | 0.069300 | 1.871 | 0.166 |
+
+Even at κ ≈ 0.19, θ = 0.069 < L^{-2} = 0.111, which is the margin note 12
+(3.4) and Corollary 2 need (L^dθ² < 1). The measured constant c ≈ 0.17 would
+allow curvatures up to about 0.4. The proved c_{4,L} = 12288 L² is far more
+conservative.
+
+In d = 2, 3, 4, θ - L^{1-d} is linear in κ with a constant of order 0.2-0.7 (0.17 in d = 4), and there is no order-one hub jump.
 
 ## 6. Status change
 
