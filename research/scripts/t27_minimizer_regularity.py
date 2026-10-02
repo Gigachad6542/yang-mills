@@ -65,15 +65,17 @@ def pinv_h(C, rel=1e-9, absolute=1e-14):
     return (V[:, keep] / w[keep]) @ V[:, keep].conj().T
 
 
-def kernel(L, m, n0):
+def kernel(L, m, n0, s=1):
+    """Kernel from level-m fluxes to level-(m-s) image fluxes of the minimizer."""
     M = L**m
-    M1 = M // L
+    Ls = L**s
+    M1 = M // Ls
     ells = np.array(list(itertools.product(range(M), repeat=4))).T  # (4, M^4)
-    child = ells % L  # child index l' of each alias
-    child_id = ((child[0] * L + child[1]) * L + child[2]) * L + child[3]
-    offs = np.array(list(itertools.product(range(L), repeat=4))).T  # (4, L^4)
+    child = ells % Ls  # child index l' of each alias
+    child_id = ((child[0] * Ls + child[1]) * Ls + child[2]) * Ls + child[3]
+    offs = np.array(list(itertools.product(range(Ls), repeat=4))).T  # (4, Ls^4)
     nK = n0**4
-    H = np.zeros((L**4, n0, n0, n0, n0, 6, 6), dtype=complex)
+    H = np.zeros((Ls**4, n0, n0, n0, n0, 6, 6), dtype=complex)
     for kidx in itertools.product(range(n0), repeat=4):
         K = 2 * np.pi * np.array(kidx, dtype=float) / n0
         p = (K[:, None] + 2 * np.pi * ells) / M
@@ -83,13 +85,13 @@ def kernel(L, m, n0):
         cov = np.einsum("aN,abN,bN->ab", wM.conj(), P, wM) / M**8
         cinv = pinv_h(cov)
         cross_terms = np.einsum("aN,abN,bN->abN", wM1.conj(), P, wM) / (M1**4 * M**4)
-        B = np.zeros((L**4, 6, 6), dtype=complex)
+        B = np.zeros((Ls**4, 6, 6), dtype=complex)
         np.add.at(B, child_id, np.moveaxis(cross_terms, 2, 0))
         B = B @ cinv  # (L^4 children, 6, 6)
         # H_u(K) = L^-4 sum_l' exp(i (K + 2 pi l') . u / L) B_l'(K)
-        Kp = (K[:, None] + 2 * np.pi * offs) / L  # child momenta, (4, L^4)
+        Kp = (K[:, None] + 2 * np.pi * offs) / Ls  # child momenta
         phase = np.exp(1j * (offs.T @ Kp))  # [u, l']
-        H[(slice(None),) + kidx] = np.einsum("ul,lab->uab", phase, B) / L**4
+        H[(slice(None),) + kidx] = np.einsum("ul,lab->uab", phase, B) / Ls**4
     G = np.fft.ifftn(H, axes=(1, 2, 3, 4))
     return G
 
@@ -168,12 +170,12 @@ def exact_norm(g, n0, Dm=None):
     return res.fun, res.status
 
 
-def exact_report(L, m, n0, rows=None):
+def exact_report(L, m, n0, rows=None, s=1):
     """Exact-restricted row norms; rows = list of (u_index, a) or None for all."""
-    G = kernel(L, m, n0).real  # (u, Y0..Y3, a, b)
+    G = kernel(L, m, n0, s).real  # (u, Y0..Y3, a, b)
     Dm = bianchi_matrix(n0)
     out = []
-    targets = rows if rows is not None else [(u, a) for u in range(L**4) for a in range(6)]
+    targets = rows if rows is not None else [(u, a) for u in range((L**s)**4) for a in range(6)]
     for u, a in targets:
         g = np.moveaxis(G[u, :, :, :, :, a, :], -1, 0)  # (b, Y) ; G maps Phi(Y_0 - D)
         # G[u, D, a, b] multiplies Phi_b(Y0 - D); reindex to Phi_b(Y) at Y0 = 0.
