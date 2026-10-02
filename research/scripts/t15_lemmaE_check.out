@@ -1,0 +1,6 @@
+d=2 L=3 eps=0.01: r=0.0100  ||P_U-P_1|| = 0.0297   Lemma E bound = 12.60   ratio/(L r) = 0.989
+d=2 L=3 eps=0.03: r=0.0300  ||P_U-P_1|| = 0.0906   Lemma E bound = 37.80   ratio/(L r) = 1.007
+d=2 L=3 eps=0.1: r=0.1000  ||P_U-P_1|| = 0.2858   Lemma E bound = 126.00   ratio/(L r) = 0.953
+d=3 L=3 eps=0.01: r=0.0100  ||P_U-P_1|| = 0.0243   Lemma E bound = 19.98   ratio/(L r) = 0.811
+d=3 L=3 eps=0.03: r=0.0300  ||P_U-P_1|| = 0.0682   Lemma E bound = 59.94   ratio/(L r) = 0.758
+d=3 L=3 eps=0.1: r=0.1000  ||P_U-P_1|| = 0.2291   Lemma E bound = 199.80   ratio/(L r) = 0.764

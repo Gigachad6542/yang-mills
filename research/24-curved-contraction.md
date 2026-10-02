@@ -267,3 +267,16 @@ In d = 2, 3, 4, θ - L^{1-d} is linear in κ with a constant of order 0.2-0.7 (0
 | note 12 (3.3) for CMP 109 (0.4) | conjectured strong route; hub worry | proved (Thm. 1), explicit c_{d,L} |
 | note 15 Prop. 4 at curved exterior | trivial exterior only | any exterior, same constant |
 | H6_Σ | open | reduced to H7_Σ on Reg_* plus component counting |
+
+## 7. Check of Lemma E (computation)
+
+`research/scripts/t15_lemmaE_check.py` measures ||P_U - P_1||_{∞→∞} on
+rough backgrounds with maximal link angle r:
+
+| d, L | r = 0.01 | r = 0.03 | r = 0.1 |
+|---|---|---|---|
+| 2, 3 | 0.99 Lr | 1.01 Lr | 0.95 Lr |
+| 3, 3 | 0.81 Lr | 0.76 Lr | 0.76 Lr |
+
+The proved constants are 2(2d+3)(7d+16) = 140 (d = 2) and 222 (d = 3). The
+true constant is about 1, and the linear-in-Lr form of Lemma E is confirmed.
