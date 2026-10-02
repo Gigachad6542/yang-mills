@@ -182,3 +182,36 @@ L^{4m}. Absorb e^{C N_λ log g_k^{-2}} into w_m. ∎
   entropy issue. It needs only a check that W does not enter the boundary
   layer of ζ_i in CMP 122 I (1.100), together with Balaban's term bounds.
 - Route A (T1 with the true measure) is withdrawn.
+
+### 5a. An exact reduction of (T1\*) (proved)
+
+Write the old summand as p = q · e^{-g_k^{-2} D(W) - O(W)} times factors
+independent of W, where:
+
+- D := A(full) - A(ζ_i, ·) >= 0 is the Wilson action weighted by 1 - ζ_i;
+- O collects the non-Wilson terms.
+
+Then:
+
+    p̂/q̂ (W) = e^{-g_k^{-2} D(W) - O(W)} / E_q̂[e^{-g_k^{-2} D - O}]
+             <= exp( 2 sup_W |O| + g_k^{-2} (sup_W D - inf_W D) ).
+
+Hence (T1\*) holds as soon as
+
+    sup_W |O(W)| + g_k^{-2} osc_W D(W) <= C N_λ log g_k^{-2}.   (5.1)
+
+*Source check (CMP 122 I (1.100)-(1.101)).*
+
+- ζ_i rises from 0 to 1 in a neighborhood of ∂X_i^{-2}.
+- The fiber variables sit in Λ_i ⊂ X_i, with |V'(b) - 1| <= M_0 ε_k there.
+- W enters D only through the minimal configuration U_{k,X_i}(V'V_{Λ_i})
+  in the boundary layer. By the decay of δℋ/δB (CMP 102b (190); note 36),
+  that dependence is about e^{-δ dist(Λ_i, ∂X_i)} M_0 ε_k.
+
+So g_k^{-2} osc_W D is roughly g_k^{-2} e^{-δ dist} M_0 ε_k × (layer
+volume) × (layer field size), with ε_k/g_k² = p(g_k)/g_k. Condition (5.1)
+therefore needs dist(Λ_i, ∂X_i) >~ δ^{-1} log(1/g_k). With Balaban's fixed
+M, R it is not automatic. Balaban treats the corresponding terms in
+CMP 122 II (1.14)-(1.37) and states that they are small. Whether that
+treatment yields (5.1) is the remaining check. It is a finite question about
+the sizes in CMP 122 II §1.
