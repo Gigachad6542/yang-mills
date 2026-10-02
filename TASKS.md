@@ -270,6 +270,9 @@ one PROGRESS line.
 - T25 [proof] — completed by Claude, 2026-10-02 (`research/33-hdec-from-local-tangent-bounds.md`): (H-dec)
   with factor L^{-4m}·poly(m) from local extensive tangent bounds (LS) + large fields (LF); Ad-invariance excludes
   dimension-2 parts (Lemma 1); zero-charge redistributions are divergences (Lemma 2); corrects note 32 Cor 5 (still summable).
+- T26 [proof, conditional reduction] — completed by Claude, 2026-10-02 (`research/34-nonabelian-persistence-action.md`):
+  non-abelian (PA) on the eps_0-small event from fiber convexity (D1) + minimizer regularity (D2), via exact
+  telescoping of minimal actions and a chain/pigeonhole lemma; rate a ~ p(gamma)^2/log(1/gamma). Open: (D1), (D2), eps_0-large event.
 
 ## Proposals
 (Workers: at most 5 lines each.)

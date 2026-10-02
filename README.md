@@ -78,8 +78,10 @@ estimate. The research notes give the details.
 - **(B), the R-bias:**
   - equal fiber mass for the actual R' (20, proved from CMP 122 I);
   - curved-background contraction (24, proved), so H6 reduces to H7;
-  - H7 absorbed via rough-then-contract (25) into the persistence bound (P)
-    (Codex task T17) plus a generalized, exterior-averaged H8.
+  - H7 absorbed via rough-then-contract (25) into the persistence bound (P);
+    (P) <= (PA) + (UB) (26), with abelian (PA) proved (26) and non-abelian (PA) on the
+    eps_0-small event reduced to Balaban-type fiber convexity and minimizer regularity (34),
+    plus a generalized, exterior-averaged H8.
   - The Gaussian model confirms the averaged H8 mechanism (19).
   - Generalized averaged H8 is a covariance between a terminal test and a local
     gauge-invariant function, by integration by parts (32). Its decay (H-dec)
