@@ -258,6 +258,9 @@ one PROGRESS line.
 - T17 [failed-attempt/computation] — completed by Claude, 2026-10-02 (`research/26-persistence-bound.md`):
   (P) is not derivable from the published bounds as stated. It is reduced to the persistent-curvature
   action lemma (PA) plus an action-weighted upper bound (UB); (PA) is verified in the abelian case.
+- T19 [failed-attempt] — closed by Claude, 2026-10-02 (`research/23-one-loop-window.md` §7): three routes
+  assessed and each stops at a named step; the universal part of (S) is published, and the SU(2) scheme edge
+  needs second background derivatives of Balaban's composite average (multi-session). Off the critical path.
 
 ## Proposals
 (Workers: at most 5 lines each.)

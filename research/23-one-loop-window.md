@@ -405,3 +405,38 @@ The next implementation step is therefore unambiguous: generate the four vertex
 operators in (2.2), preferably by automatic differentiation of one Wilson
 plaquette and the ghost stencil, and propagate their traces recursively
 through the \(L^4\)-alias Schur complement.
+
+## 7. T19 (lead, 2026-10-02): scoped failed attempt for SU(2)
+
+T19 asked to finish the SU(2) window. Three routes were assessed. Each stops
+at an identified step.
+
+1. **Balaban's actual scheme.** The scheme has a block-constrained,
+   axial-gauge fluctuation operator around the background-dependent
+   minimizer. The F² coefficient needs the first and second background
+   derivatives of that minimizer and of the CMP 109 (0.4) composite average
+   (T13 §2, (2.2)-(2.4)). The averaging-map derivatives exist in
+   `research/scripts/t15_fast.py` (first order, at curved backgrounds). The
+   second-order derivatives and the constrained-minimizer lift do not. This
+   is the missing implementation, estimated at several working sessions.
+2. **Wilson action on a torus, no block constraint.** This is feasible, but
+   its universal part is already published. Dashen-Gross (CMP 109 ref. [27])
+   and Hasenfratz-Hasenfratz give the one-loop bare-Wilson to continuum
+   relation with coefficient 2b_0. It would add nothing to (S) beyond what
+   note 22 already cites.
+3. **Constant-field (spectral) method on the lattice.** With a covariantly
+   constant σ³ background, Landau gauge in x_1 and Fourier in x_2, x_3, x_4,
+   the fluctuation operator block-diagonalizes into 12N_1-dimensional blocks.
+   But in background Feynman gauge the charged spin-aligned lowest Landau
+   level has eigenvalue -f (the Nielsen-Olesen unstable mode). So
+   log det is not real. Flux quantization φ >= 2π/N_1 also prevents the
+   weak-field limit needed for the f² coefficient on feasible lattices. The
+   method stops here unless one uses the real part with an IR prescription,
+   which would make the edge constant prescription-dependent.
+
+**Verdict.** The universal coefficient in (S) is published input (note 22,
+literature status). (C) is supported by the scalar calibration of §4-5
+(geometric convergence of the edge, ratio about L^{-2} per level). The
+scheme-specific SU(2) edge constant needs route 1. That stays open and is
+not on the critical path, because note 22 Prop. D needs only boundedness of
+the edge, which is a finite one-loop matching.
