@@ -278,3 +278,25 @@ regions. So (T2-R) is "published mechanism, unprinted bookkeeping".
 The deterministic notes 34-37 are therefore **not** on the critical path
 for (P). They give an independent, action-based mechanism and remain useful
 for proving (T2-R) in other RG schemes.
+
+### 7a. The growth of R_k (partial resolution)
+
+Dimock's exposition of Balaban's large-field method (Dimock-Balaban RG II,
+arXiv:1212.5562, eqs. (147)-(148)) defines the separation parameters as
+
+    r_k = (-log λ_k)^r,   r a positive integer,
+
+and requires the large-field regions Λ_j, Ω_j to be separated by
+5[r_j] L^{-(k-j)} M.
+
+If Balaban's R_k for Yang-Mills has the same form, R_k = (log g_k^{-2})^r,
+then condition (5.1), R_k >= (8δM)^{-1} log(p(g_k)/g_k):
+
+- holds automatically for small g_k if r >= 2;
+- holds for r = 1 when 16δM > 1 (Balaban's M is a large constant).
+
+This form is also consistent with Balaban's remark that exp(-½δMR_k)
+"suppresses all powers of log g_k^{-2}" (CMP 122 II p. 360). The exact
+definition of R_k in the CMP 109-122 series was not located in the OCR text
+of this repository. So (T1\*) is **conditional on R_k having this form**,
+which the parallel construction in Dimock's exposition supports.
