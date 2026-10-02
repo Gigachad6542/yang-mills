@@ -13,3 +13,4 @@ sources/tmp-audit-snapshot-2026-09-28/
 tools/bin/
 __pycache__/
 research/scripts/*.err
+research/scripts/t15_d4.out
