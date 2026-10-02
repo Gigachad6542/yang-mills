@@ -161,3 +161,15 @@ w_m L^{(2-δ)m}, which is not summable.
 A gain of L^{-(1+δ')(m-t)} from cancellation is required. Note 11 §6
 (color invariance at flat exterior), note 13 (the covariance form) and T8
 (Gaussian power counting for local even defects) are the inputs aimed at it.
+
+**Gaussian evidence (research/19, T8).** In the 4D Gaussian model, the
+exterior-averaged response of a terminal loop to a rooted even defect at
+depth m is exactly of order L^{-4m}. The fixed bounded-exterior response is
+L^{-2m}. Since (19 (3.8)) the L^{4m} placements of a rooted F² defect sum to
+O(1) per scale, the **exterior-averaged** first-order term costs O(w_m) per
+scale. With Σ_m w_m < ∞ it is summable. So in the Gaussian model the
+generalized H8_Σ holds in its averaged (λ-sum inside, exterior-averaged)
+form and fails in pointwise form. This is consistent with note 13's
+covariance formulation. The interacting version needs the averaged
+covariance bound with Balaban's activities. That is the precise remaining
+target.

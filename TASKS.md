@@ -183,6 +183,19 @@ and state exactly how far you got.
 Done when: committed as `[T13][computation]` (or `[failed-attempt]`) with one
 PROGRESS line.
 
+### T17 [proof/failed-attempt]: marked large-field persistence bound (P)
+Scope: a new note, `research/26-persistence-bound.md`. Take it after T13.
+Context: research/25 reduces H7 and the quadratic R-bias terms to the bound
+(P), (4.1) there. Let M_{m,t} be the unnormalized mass, per terminal block,
+of R'-labels at depth m whose true-configuration image stays large-field
+for t further levels. Then (P) is M_{m,t} <= C w_m L^{4m} e^{-a t} with
+L^4 e^{-a} < 1. Using CMP 122 I-II (large-field factors exp(-c p(g_k)^2) per
+region and scale, the history expansion) and CMP 119 (localization), prove
+(P) from the published bounds, or state exactly which "marked" version of
+those bounds is missing. Use page images where the OCR is garbled.
+Done when: committed as `[T17][proof]` or `[T17][failed-attempt]` with one
+PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/computation] — completed by Claude, 2026-10-02: P4-3D as conditional
@@ -212,6 +225,9 @@ PROGRESS line.
 - T16 [proof] — completed by Claude, 2026-10-02 (`research/25-h7-absorbed.md`):
   relative-gauge and rough-then-contract lemmas; H7 absorbed into large-field persistence (P)
   plus a generalized H8.
+- T8 [computation] by Codex: reviewed by the lead, 2026-10-02. Correct; the table
+  reproduces exactly, and the Wick/Parseval identities were checked. Its fixed-exterior
+  correction (M^{-2}, not O(1)) is right and important.
 
 ## Proposals
 (Workers: at most 5 lines each.)
