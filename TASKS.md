@@ -264,6 +264,9 @@ one PROGRESS line.
 - T23 [proof] — completed by Claude, 2026-10-02 (`research/31-s2-model-lemma.md`): the O(g^2)
   mechanism of (S2) proved for one fluctuation integral (Taylor/Cauchy, plus Stein for the tilted mean);
   what remains for full (S2) is localization, background analyticity and large fields.
+- T24 [proof] — completed by Claude, 2026-10-02 (`research/32-h8-by-integration-by-parts.md`): each
+  first-order R-bias term equals -m_lambda Cov(G o U^ref, h_lambda) by integration by parts on the exterior
+  (local right inverse of the linearized block map); generalized averaged H8 reduces to rooted decorrelation (H-dec).
 
 ## Proposals
 (Workers: at most 5 lines each.)
