@@ -154,6 +154,22 @@ make the charge response position dependent.
 
 where S_m is the level-m small-field set and ε_LF(m) <= C L^{-4m}.
 
+*What (LF) contains (remark added with notes 38-39).* A crude bound
+||h|| · P(large field near x at some level) does **not** give L^{-4m}. At
+coarse levels near the terminal scale, the probability of a large field is
+about e^{-c p(γ)²}, which does not decay with m. The L^{-4m} must instead
+come from the same mechanism as for small fields. A large-field region at
+level j near the insertion is a local defect. Its influence on the terminal
+test is transported over m - j levels, giving L^{-4(m-j)} after averaging.
+The insertion's transport up to level j gives L^{-4j}. So the expected form
+is
+
+    ε_LF(m) <= C L^{-4m} Σ_j P_j,   P_j = P(large field near x at level j).
+
+Σ_j P_j converges by the marked bound (T2-R) of note 39. Proving this is
+the large-field analogue of generalized averaged H8. It uses the R-bias
+machinery of notes 25, 32 and 39, not a new kind of estimate.
+
 **Theorem 3.** Assume (LS) and (LF), and suppose sup_{S_m}|O_m(x)| <= o and
 that the polymer norms dominate sup norms. Put K := e + bd/(1-θ). Then
 
