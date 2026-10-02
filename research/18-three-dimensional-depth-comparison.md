@@ -377,6 +377,51 @@ coupling-flow theorem, or exact shooting (note 08). Item (iii) is where the 3D G
 mechanism, δ = 0 and dimension >= 6 tangent decay, is the model. T8
 (research/19) tests its 4D Gaussian analogue.
 
+### 9a. Correction (2026-10-02): H4D-0 in the form Σ|δ_N| < ∞ is expected to fail
+
+Theorem 5 is a correct implication, but its hypothesis H4D-0 is probably
+**false** for the natural convention, and then Theorem 5 is vacuous in 4D.
+Reason (heuristic, one loop):
+
+- Choose the bare couplings by exact shooting, so that depths N and N+1
+  reach the same terminal effective coupling g.
+- The once-blocked Wilson action Tρ_0^{(N+1)} is not a Wilson action. Its
+  tree-level irrelevant terms carry the coefficient β = 1/g_0², and at one
+  loop they feed the dimension-4 coupling of later steps at order
+  g² · g^{-2} = O(1).
+- So the dimension-4 coefficient δ_N of D_N, measured against the shooting
+  value β_N, is O(1) (the Λ-parameter mismatch between the blocked and the
+  Wilson discretizations) and does not tend to 0.
+- In Theorem 2's split, the second bracket δ_N ∂_βΦ_N is then O(1). It
+  cancels against the first bracket at leading order instead of each
+  bracket being small.
+- For the same reason, the absolute placement-summed (L^1) decorrelation of
+  the full defect fails: a dimension-4 defect is marginal, and its L^{4m}
+  rooted responses of size L^{-4m} sum to O(1) (note 19 (3.8)).
+
+**What the correct 4D statement must contain.** The comparison must be made
+at **fixed terminal effective coupling**, with an exact marginal
+cancellation. One formulation is a constant-terminal-coupling interpolation.
+For s ∈ [0,1] let
+
+    μ_s ∝ exp(-(β_N + c(s))A_N + s(D_N + δ_N A_N)) dU,   c(0) = 0, c(1) = δ_N,
+
+with c(s) chosen so that μ_s has terminal effective coupling g for every s.
+This needs Balaban's effective coupling to be defined for these
+Wilson-plus-irrelevant actions. Then
+
+    d/ds Z_s = Cov_{μ_s}(e^{z·F}∘b_N, P_N) + c'(s) ∂_βΦ_s,   P_N := D_N + δ_N A_N (+ const),
+
+and P4-4D requires the **signed** combination to be summable. The marginal
+part of P_N's terminal effect is exactly compensated by c'(s), because the
+terminal coupling stays fixed. Only the residual, irrelevant at the terminal
+scale, must decay. This is the same structure as Balaban's terminal
+representation (terminal action = g^{-2}A + irrelevant + large-field terms)
+and as the route in note 09. H4D-3 (note 21) still controls ∂_βΦ_s, but
+the decay now has to come from the **terminal-scale** irrelevant
+differences between depths N and N+1, not from a fine-scale split.
+Theorem 5, and item (ii) above, should be read with this correction.
+
 ## 10. Next concrete steps
 
 1. **H3D-2 for a single block step at fixed N** in the small-field sector.

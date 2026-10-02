@@ -18,7 +18,7 @@ Status, item by item:
   (CMP 109, the coupling-flow bound (0.31)) is unpublished. **H4D-3 is not
   proved.**
 
-Context: research/18 Thm. 5 splits the 4D adjacent-depth comparison into:
+Context (see the correction in research/18 §9a: in 4D the split must be done at fixed terminal coupling, where ∂_βΦ enters multiplied by an O(1) compensating rate c'(s), so a uniform bound on it is still exactly what is needed): research/18 Thm. 5 splits the 4D adjacent-depth comparison into:
 
 - H4D-3, the uniform β-derivative bound (this note);
 - H4D-0, summable coupling matching;

@@ -55,7 +55,7 @@ estimates while avoiding three later problems:
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
 | Three-dimensional exact-\(T\) pilot: terminal nondegeneracy P6-3D | proved here directly from CMP **102**, Eq. (3)'s published action-free terminal bound, subject to the paper's explicit sketchiness and lower-bound caveats; M1-3D still awaits P4-3D |
 | Three-dimensional adjacent-depth comparison P4-3D | conditional reduction (note 18): follows from terminal tangent decay H3D-1, or from coupling differentiability plus irrelevant-defect decay; open. The exact Gaussian model gives rate L^{-2N} |
-| Four-dimensional P4 split | conditional reduction (note 18, Thm. 5): a uniform β-derivative bound, summable bare-coupling matching (coupling flow), and tangent decay of the irrelevant part plus R-bias |
+| Four-dimensional P4 split | conditional reduction (note 18, Thm. 5), but its summable-matching hypothesis is expected to fail (§9a): the one-step coupling mismatch is O(1), so the 4D comparison must be made at fixed terminal effective coupling with an exact marginal cancellation; open |
 | 4D β-derivative bound H4D-3 | conditional reduction (note 21): follows from two-loop-order, memory-decaying β-function derivatives, step-wise coupling analyticity of the effective action, and an R-bias bound analytic in β; the cutoff-uniform flow-sensitivity lemma is proved |
 
 ## Repository map
