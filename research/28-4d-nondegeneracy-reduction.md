@@ -71,6 +71,51 @@ Taking γ small means choosing the terminal scale ε_0 small in physical units
 (asymptotic freedom), which M1 permits: the terminal scale is fixed but
 arbitrary.
 
+## 3a. (V^R) from published inputs (proof sketch; not upgraded to "proved")
+
+**Proposition 3 (sketch).** Assume H0 and Balaban's terminal representation
+(CMP 109 (0.22)-(0.28) and (1.18); CMP 122 II Theorem 1). Let F be the
+energy of one terminal plaquette. Then Var_{ν_N^R}(F) = g⁴(v_0 + o(1)) as
+g -> 0, uniformly in N, where v_0 > 0 is the variance of the quadratic part
+of F under the limiting Gaussian. In particular (V^R) holds with
+v(γ) >= v_0 γ⁴/2 for small γ (g = γ).
+
+*Sketch, step by step.* Each step uses only the fixed finite terminal
+lattice, whose dimension is independent of N.
+
+1. *Variables.* Fix the complete axial gauge on the terminal lattice and
+   write V = exp(igB) on the small-field set S, where |gB| <= ε_1.
+2. *Leading term.* g^{-2}A(U_K(e^{igB})) = ½⟨B, ΔB⟩ + g C_3(B) + g² C_4(B) + ...
+   Here Δ is the Hessian at V = 1 of the minimal-configuration action
+   restricted to the gauge slice. It is positive definite by Balaban's
+   variational/propagator theory (CMP 102, 277-309; CMP 95, 96).
+3. *Polymer terms.* E_K(X, U) is analytic on |U - 1| <= α_0, with
+   |E_K(X)| <= E_0 e^{-κ d(X)} (CMP 109 (1.18)). By Cauchy, ∂_B E_K = O(g E_0/α_0)
+   and ∂²_B E_K = O(g²). After removing the constant E_K(1), the terms are
+   O(g) on bounded B-sets.
+4. *Domination.* On S, A(U) >= c|curvature|² gives a density bounded by
+   C exp(-c|B|²) uniformly in g and N. Dominated convergence then makes the
+   law of B on S converge to N(0, Δ^{-1}) as g -> 0, with all polynomial
+   moments.
+5. *Large fields.* In the representation, the large-field sectors carry
+   relative weight <= C exp(-c p(g)²). That is o(g^n) for every n, so they do
+   not affect the leading g⁴ term.
+6. *Conclusion.* F = 1 - ½ tr e^{igB_p} = (g²/4)|B_p|²_{(curl)} + O(g³)
+   (the quadratic plaquette form), so Var(F) = g⁴(Var_Gauss(F_2) + o(1)),
+   and Var_Gauss(F_2) > 0 for a nondegenerate Gaussian.
+
+*What would make this a proof.* Each step must be checked against Balaban's
+precise definitions:
+
+- the gauge slice used at the terminal scale;
+- the exact analyticity domain in (1.18);
+- positivity of Δ on that slice, uniformly in N;
+- the relative large-field bound in the CMP 122 representation, as opposed
+  to the global bound (0.1).
+
+None of these is a new estimate, but all are scan-level checks that were not
+done here. With them, P6-4D would follow from H0 and (B-small) alone.
+
 ## 4. Place in the programme
 
 Note 27 gives M1-4D convergence from (H0) + (T) + (B). Theorem 2 adds
