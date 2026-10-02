@@ -196,6 +196,21 @@ those bounds is missing. Use page images where the OCR is garbled.
 Done when: committed as `[T17][proof]` or `[T17][failed-attempt]` with one
 PROGRESS line.
 
+### T19 [computation/failed-attempt]: SU(2) one-loop window (finish T13's stopping point)
+Scope: extend `research/23-one-loop-window.md` (a new section) and
+`research/scripts/t19_*.py`. Take it after T17.
+Implement the background derivatives of the lattice Wilson Hessian, the ghost
+operator and the block constraint that T13 lists as missing (2.2)-(2.4), at
+trivial background and second order in a slowly varying background. Compute
+the transverse p^2 coefficient of the constrained one-loop window for SU(2),
+L = 3, n = 1..3 or as far as feasible. Use symmetry and the alias structure
+to reduce the 729^4 sum (for example momentum-shell sampling with error bars,
+or a smaller L). Target: increments approaching 2 b_0 log L, with b_0 =
+11*2/(48 pi^2), and a converging edge. These would be the (C)+(S) evidence
+for note 22 Prop D in the actual gauge theory.
+Done when: committed as `[T19][computation]` or `[T19][failed-attempt]` with
+one PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/computation] — completed by Claude, 2026-10-02: P4-3D as conditional
@@ -230,6 +245,9 @@ PROGRESS line.
   correction (M^{-2}, not O(1)) is right and important.
 - T18 [proof] — completed by Claude, 2026-10-02 (`research/27-4d-master-reduction.md`):
   corrected 4D master reduction at fixed terminal coupling. M1-4D <= (H0) + (T) + (B).
+- T13 [computation] by Codex: reviewed by the lead, 2026-10-02. Correct. The O(3)
+  increments converge to (N-2)log L/(2 pi) and the edge converges geometrically, so (C)+(S)
+  hold in the scalar analogue. The SU(2) stop is honestly stated; it continues as T19.
 
 ## Proposals
 (Workers: at most 5 lines each.)
