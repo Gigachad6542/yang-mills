@@ -284,6 +284,10 @@ one PROGRESS line.
 - T29 [proof, conditional reduction] — completed by Claude, 2026-10-02 (`research/37-pa-large-levels.md`): abelian
   annular bound (a large level forces Morrey-weighted annular action >= delta) and summation lemma (each large level costs a
   fixed action); non-abelian (PA) on all events <= (D1), (D2) + lattice small-energy regularity (SER). (P) <= (UB) + (SER) + notes 34-36.
+- T30 [failed-attempt] — completed by Claude, 2026-10-02 (`research/38-ub-entropy-obstruction.md`): CMP 122 II keeps a positive
+  Wilson term on the label's own large-field domain (single-scale (UB) holds there); Lemma 1: irrelevant polymer differences are
+  <= delta_E * action (via Ad-invariance). But a single-scale (UB) cannot give (P), because of entropy exp(c L^{4t}); note 26 Prop 1 is
+  corrected to (P) <= (PA) + (UB-ms), with a multi-scale bound whose source is Balaban's per-scale factors (transfer to pre-replacement labels is open).
 
 ## Proposals
 (Workers: at most 5 lines each.)

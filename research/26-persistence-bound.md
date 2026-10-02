@@ -68,7 +68,13 @@ pre-replacement summand of an R'-label at scale k is bounded by
 exp(-(1-δ) g_k^{-2} A_k(U|N) + C|N|) on any region N disjoint from the
 other large-field regions of its history, with constants uniform in k.
 
-**Proposition 1 (proved, conditional).** (PA) and (UB) imply (P) with
+**Correction (note 38).** The proof of Prop. 1 below omits an entropy
+term. The persistence event changes the field on a region of scale-k volume
+about L^{4t}, so a single-scale Peierls bound costs exp(c L^{4t}). The
+corrected statement is (P) ⇐ (PA) + (UB-ms), where (UB-ms) is the multi-scale
+form in note 38 §4.
+
+**Proposition 1 (as originally stated; incomplete, see the correction above).** (PA) and (UB) imply (P) with
 a = (1-δ) c_L min_j p(g_j)² - C', since ε_j = g_j p(g_j) (Balaban's
 small-field threshold) gives ε_j²/g_j² = p(g_j)². Hence L⁴e^{-a} < 1 once
 (1-δ) c_L p(γ)² > 4 log L + C', which holds for small γ.

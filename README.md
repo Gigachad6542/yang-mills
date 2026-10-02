@@ -83,7 +83,8 @@ estimate. The research notes give the details.
     eps_0-small event reduced to Balaban-type fiber convexity and minimizer regularity (34;
     derived from CMP 102b/CMP 99 by linearization in 36; regularity constant computed in 35, needs L >= 4),
     and the eps_0-large event reduced to lattice small-energy regularity (SER) (37), so that
-    (P) <= (UB) + (SER),
+    (P) <= (UB-ms) + (SER), where a single-scale (UB) is not enough because of
+    entropy on a region of volume L^{4t} (38),
     plus a generalized, exterior-averaged H8.
   - The Gaussian model confirms the averaged H8 mechanism (19).
   - Generalized averaged H8 is a covariance between a terminal test and a local
