@@ -166,9 +166,10 @@ Done when: committed as `[T8][computation]` with one PROGRESS line.
 
 ## Lead (Claude): in progress
 
-- T7 [proof/failed-attempt]: the 3D adjacent-depth comparison (P4-3D), the
-  one real open estimate for M1 in 3D. Target note:
-  `research/18-three-dimensional-depth-comparison.md`.
+- T7 [proof/computation] — completed by Claude, 2026-10-02: P4-3D as conditional
+  theorems, plus the 4D split-route transfer (Thm. 5), the Dimock literature
+  check, and the exact 3D Gaussian check. Result:
+  `research/18-three-dimensional-depth-comparison.md`. P4-3D itself is still open.
 - T8: reassigned to Codex on 2026-10-02 (see "Assigned to Codex").
 - T9 [review] — completed by Claude, 2026-10-02: lead review of T1-T6,
   correctness only. Result: `collaboration/lead-review-T1-T6.md`.

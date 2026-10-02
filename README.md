@@ -53,6 +53,8 @@ estimates while avoiding three later problems:
 | SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
 | Three-dimensional exact-\(T\) pilot: terminal nondegeneracy P6-3D | proved here from CMP **102**'s published stability/background inputs, whose proof the paper calls very sketchy; M1-3D still awaits P4-3D |
+| Three-dimensional adjacent-depth comparison P4-3D | conditional reduction (note 18): follows from terminal tangent decay H3D-1, or from coupling differentiability plus irrelevant-defect decay; open. The exact Gaussian model gives rate L^{-2N} |
+| Four-dimensional P4 split | conditional reduction (note 18, Thm. 5): a uniform β-derivative bound, summable bare-coupling matching (coupling flow), and tangent decay of the irrelevant part plus R-bias |
 
 ## Repository map
 
