@@ -84,8 +84,11 @@ estimate. The research notes give the details.
 - **The one remaining kind of theorem.** The memory-decay statements (D),
   (T-b) and (B-b) in 4D, and H3D-1 in 3D, all assert one thing: Balaban's
   flow contracts the influence of fine-scale defects in irrelevant
-  directions. A proof of that contraction, together with generalized averaged
-  H8, (P) and (S), would give M1-4D convergence. Nondegeneracy in 4D (P6) is
+  directions. Note 29 reduces that contraction to three single-step
+  Lipschitz properties of one Balaban RG step: transport of irrelevant data
+  by L^{-alpha}, and O(g^2) dependence of newly generated terms and of the
+  beta-function on the input. Those, together with generalized averaged H8,
+  (P) and (S), would give M1-4D convergence. Nondegeneracy in 4D (P6) is
   reduced (note 28) to a terminal small-field variance bound plus the quantitative
   R-bias bound; large-field effects are superpolynomially small in the terminal coupling.
 
