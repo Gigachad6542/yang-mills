@@ -48,6 +48,7 @@ estimates while avoiding three later problems:
 | Summable projective-density difference \(\Rightarrow\) the required generating-functional comparison | proved here |
 | Four-dimensional source-free \(RT\) density/vacuum bounds | published conditional input; assumes a small effective-coupling sequence |
 | Exact source-dependent lift of the fiber-normalized introductory \(R\) prototype, with a uniform zero-free polydisc | proved here |
+| Curved-background contraction for Balaban's symmetric average (note 12 (3.3)) | proved here (note 24); reduces H6\(_\Sigma\) to H7\(_\Sigma\) plus component counting |
 | Terminal-chart decomposition of one \(R\)-fiber observable bias into a mean shift, a quadratic regular remainder, and a bad-set tail | proved here as an abstract lemma; the required placement-summed Yang--Mills estimates H6\(_\Sigma\)--H8\(_\Sigma\) are open |
 | Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 through Balaban's \(RT\) route |
 | SU(2) coupling-flow claim used by those bounds | open; reduced (note 22) to a free-field one-loop universality statement (U) plus memory decay (D), using Balaban's published smoothness of the beta-functions |

@@ -203,6 +203,8 @@ PROGRESS line.
   H0 reduced to windowed free-field positivity (U) plus memory decay (D).
 - T10 [fix] by Codex: reviewed by the lead, 2026-10-02. Correct; one `qquad`
   typo fixed by the lead.
+- T15 [proof/computation] — completed by Claude, 2026-10-02 (`research/24-curved-contraction.md`):
+  note 12 (3.3) proved for the CMP 109 average, and H6_Σ reduced to H7_Σ plus component counting.
 
 ## Proposals
 (Workers: at most 5 lines each.)

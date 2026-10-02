@@ -1,0 +1,8 @@
+d=3 L=3 Nc=2: fine bonds 648, coarse bonds 24, contours/coarse bond 343; flat L^(1-d)=0.11111
+  flat      eps=0.000 kappa=0.0000 theta=0.111111 theta/L^(1-d)=1.0000 (theta-L^(1-d))/kappa=nan bond=((1, 2, 1), 0) [35s]
+  puregauge eps=0.000 kappa=0.0000 theta=0.111111 theta/L^(1-d)=1.0000 (theta-L^(1-d))/kappa=nan bond=((5, 3, 3), 1) [45s]
+  smooth    eps=0.020 kappa=0.0773 theta=0.134931 theta/L^(1-d)=1.2144 (theta-L^(1-d))/kappa=0.3080 bond=((3, 5, 0), 1) [50s]
+  smooth    eps=0.050 kappa=0.1402 theta=0.144410 theta/L^(1-d)=1.2997 (theta-L^(1-d))/kappa=0.2375 bond=((0, 3, 3), 1) [50s]
+  rough     eps=0.020 kappa=0.0782 theta=0.123571 theta/L^(1-d)=1.1121 (theta-L^(1-d))/kappa=0.1593 bond=((0, 0, 3), 0) [51s]
+  rough     eps=0.050 kappa=0.1894 theta=0.154928 theta/L^(1-d)=1.3944 (theta-L^(1-d))/kappa=0.2313 bond=((2, 3, 3), 0) [51s]
+  rough     eps=0.100 kappa=0.3786 theta=0.198516 theta/L^(1-d)=1.7866 (theta-L^(1-d))/kappa=0.2308 bond=((0, 0, 2), 2) [51s]
