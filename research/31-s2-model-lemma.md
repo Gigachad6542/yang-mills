@@ -121,3 +121,11 @@ version of a step Balaban carries out for a single input. In 3D, where the
 couplings are explicit and there is no R-operation (note 14), items 1-3 for
 CMP 102 are what separates the README's 3D route from a complete M1-3D
 proof.
+
+## 4. Numerical check of Lemma 1
+
+`research/scripts/t23_lemma1_check.py`: f = ½ Re tr of a 4-link loop
+holonomy at a random background, with B i.i.d. standard Gaussian in su(2)
+(4×10⁵ samples). The ratio (E[f(Ue^{igB})] - f(U))/g² is -3.89, -5.27, -5.70
+and -5.81 for g = 0.4, 0.2, 0.1, 0.05. It converges, so the new term is
+O(g²) with no O(g) part, as Lemma 1 states.
