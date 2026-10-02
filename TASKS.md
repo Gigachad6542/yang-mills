@@ -228,6 +228,8 @@ PROGRESS line.
 - T8 [computation] by Codex: reviewed by the lead, 2026-10-02. Correct; the table
   reproduces exactly, and the Wick/Parseval identities were checked. Its fixed-exterior
   correction (M^{-2}, not O(1)) is right and important.
+- T18 [proof] — completed by Claude, 2026-10-02 (`research/27-4d-master-reduction.md`):
+  corrected 4D master reduction at fixed terminal coupling. M1-4D <= (H0) + (T) + (B).
 
 ## Proposals
 (Workers: at most 5 lines each.)
