@@ -247,11 +247,16 @@ in `t15_d4_results.out`; "exact" means pruning was complete):
 | flat | 0 | 0.037037 | 1.0000 | - |
 | pure gauge | 0 | 0.037037 | 1.0000 | - |
 | rough | 0.194 | 0.069300 | 1.871 | 0.166 |
+| smooth | 0.165 | 0.081754 | 2.207 | 0.272 |
+| rough | 0.389 | 0.110542 | 2.985 | 0.189 |
 
-Even at κ ≈ 0.19, θ = 0.069 < L^{-2} = 0.111, which is the margin note 12
-(3.4) and Corollary 2 need (L^dθ² < 1). The measured constant c ≈ 0.17 would
-allow curvatures up to about 0.4. The proved c_{4,L} = 12288 L² is far more
-conservative.
+The margin note 12 (3.4) and Corollary 2 need is θ < L^{-2} = 0.111
+(L^dθ² < 1). The rough background at κ ≈ 0.39 sits exactly at that edge
+(θ = 0.1105). Smooth backgrounds have a larger slope (0.27), so their margin
+ends near κ ≈ 0.27. Empirically, then, the H6 contraction holds for plaquette
+curvature up to about 0.25 in d = 4 with L = 3. The proved c_{4,L} = 12288 L²
+gives a far smaller admissible κ_0. Either way κ_* is a fixed L-dependent
+constant, which Balaban's small-field parameter ε_1 can be chosen below.
 
 In d = 2, 3, 4, θ - L^{1-d} is linear in κ with a constant of order 0.2-0.7 (0.17 in d = 4), and there is no order-one hub jump.
 

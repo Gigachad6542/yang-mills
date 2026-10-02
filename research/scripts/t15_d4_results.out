@@ -7,3 +7,8 @@ d=4 L=3 Nc=2: fine bonds 5184, coarse bonds 64; flat L^(1-d)=0.03704
   puregauge eps=0.000 kappa=0.0000 theta=0.037037 theta/L^(1-d)=1.0000 (theta-L^(1-d))/kappa=nan [SOCPs on 3456 bonds, exact=True, max UB=1.000, total 878s]
 
 [exited with code 0]
+d=4 L=3 Nc=2: fine bonds 5184, coarse bonds 64; flat L^(1-d)=0.03704
+  [rough eps=0.1] Jacobian done in 220s
+  rough     eps=0.100 kappa=0.3886 theta=0.110542 theta/L^(1-d)=2.9846 (theta-L^(1-d))/kappa=0.1891 [SOCPs on 896 bonds, exact=True, max UB=1.017, total 463s]
+  [smooth eps=0.05] Jacobian done in 217s
+  smooth    eps=0.050 kappa=0.1646 theta=0.081754 theta/L^(1-d)=2.2074 (theta-L^(1-d))/kappa=0.2717 [SOCPs on 896 bonds, exact=True, max UB=1.014, total 468s]
