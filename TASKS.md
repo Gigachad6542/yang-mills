@@ -164,7 +164,7 @@ State the exact formula, the table, and the fitted exponent. Prove the exponent
 if you can; otherwise label it a computation.
 Done when: committed as `[T8][computation]` with one PROGRESS line.
 
-### T13 [computation]: one-loop windowed coupling shift for SU(2) in a block scheme
+### T13 [computation] — completed by Codex, 2026-10-02: exact sigma-model window calibration; SU(2) vertex computation stopped
 Scope: a new note, `research/23-one-loop-window.md`, plus scripts
 `research/scripts/t13_*.py`. Take it after T11 and T8.
 Context: research/22 reduces Balaban's coupling-flow theorem H0 to (D) and
