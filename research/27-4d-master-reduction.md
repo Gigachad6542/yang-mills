@@ -60,16 +60,26 @@ holds only on χ = 1_S.
 - Σ_{j=0}^{K_N} e_{N,j}(V) + const, where e_{N,j} collects the terms
 generated at distance j from the terminal scale, with:
 
-- (T-a) size: sup |e_{N,j}| <= C L^{-4j} (CMP 119's (L^jη)^4 bound, read at
-  the terminal scale);
-- (T-b) memory: sup |e_{N+1,j} - e_{N,j}| <= C L^{-4j} θ^{K_N - j}, θ < 1.
-  The two depths differ only through coupling histories, which agree up to
-  θ^{K_N-j} at distance K_N - j from the finest scale (shooting from a
-  common g with memory decay (D) of note 22), and through the extra finest
-  step.
+- (T-a) size: sup |e_{N,j}| <= C n_0^4 L^{-αj} for the small-field
+  (irrelevant) terms. CMP 109 (0.29) bounds a step-j polymer by
+  E_0 (L^jη)^{4+α} e^{-κd}, α > 0 (about 1, from the fifth-order Taylor
+  remainder). There are about (L^jη)^{-4} such polymers per terminal unit
+  cell, so the contribution per terminal cell is about (L^jη)^α = L^{-α·distance}.
+  (Correction, 2026-10-02: an earlier version read the (L^jη)^4 volume factor
+  as an L^{-4j} decay; the decay rate is α, not 4.) The R-terms from step j
+  carry g_j^{κ_0} with κ_0 arbitrarily large (CMP 119 (2.31)). That is only
+  polynomial in the distance, but fast.
+- (T-b) memory: sup |e_{N+1,j} - e_{N,j}| <= C L^{-αj} θ^{K_N - j}, θ < 1, and
+  the analogue with g^{κ_0} weights for the R-terms. The two depths differ
+  only through coupling histories, which agree up to θ^{K_N-j} at distance
+  K_N - j from the finest scale (shooting from a common g with memory decay
+  (D) of note 22), and through the extra finest step.
 
-Then (2.1) holds on S with η_N <= C Σ_j L^{-4j} θ^{K_N-j} + C L^{-4(K_N+1)}
-<= C' max(L^{-4}, θ)^{K_N}. Condition (2.1') concerns the large-field and
+Then (2.1) holds on S with η_N <= C Σ_j L^{-αj} θ^{K_N-j} + C L^{-α(K_N+1)}
+<= C' K_N max(L^{-α}, θ)^{K_N}, which is summable. The R-terms contribute
+at most C Σ_j g_{K_N-j}^{κ_0} θ^{j} + (finest-step term), where g at distance
+j from the finest scale is about (b_0(K_N - j))^{-1/2}; that is
+O(K_N^{-κ_0/2}), summable in N for κ_0 > 2. Condition (2.1') concerns the large-field and
 boundary terms R_K, B_K. CMP 122 II's two-sided bound (0.1) controls their
 size, but their depth-differences are part of (T).
 
