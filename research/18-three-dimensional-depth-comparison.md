@@ -317,9 +317,12 @@ coupling renormalization, no large fields, and no non-abelian structure.
 ## 9. Transfer to four dimensions (proved implication; the target is d = 4)
 
 Everything in sections 2 and 4 is dimension-free, given a common terminal
-lattice and the exact block map. In 4D the R-operation must first be absorbed
-into the one-step defect. Write μ̃_N for the true once-blocked depth-(N+1)
-measure, including R (H6-H8 of notes 11-13 control exactly this). Two things
+lattice and the exact block map. That holds verbatim for the **physical** 4D
+Wilson measures: μ̃_N = (q_N)_*μ_{N+1} is an exact T-pushforward, and **no
+R-operation enters the comparison itself**. (Correction, 2026-10-02: an
+earlier version said the R-bias had to be absorbed into the defect here. That
+is wrong. R enters only when the hypotheses below are proved from Balaban's
+R-modified densities; see note 21 Prop. 5 and notes 24-25.) Two things
 change.
 
 1. **The coupling is marginal.** β = 1/g_0² is dimensionless. Asymptotic
@@ -340,7 +343,7 @@ change.
    lie on the exact one-step matching trajectory up to a summable error.
 
 **Theorem 5 (proved implication).** Assume H3D-0, H4D-3, H4D-0, and H3D-4(b)
-with defect P_N (which now includes the R-bias and the irrelevant operators)
+with the physical one-step defect P_N (the irrelevant operators; no R-term)
 and rate Σ_N ε_N' < ∞, where ε_N' := C_4 L^{-σ'N} or any summable sequence.
 Then Σ_N sup_{D_ρ}|Z_{N+1} - Z_N| < ∞, and conclusions (c)-(d) of Thm. 1
 hold.
@@ -356,8 +359,14 @@ comparison splits into exactly three estimates:
   expectations. This is a susceptibility bound, not an ε-gain.
 - (ii) H4D-0: summable matching of bare couplings. This is the
   coupling-flow theorem.
-- (iii) H3D-4(b) in 4D: tangent decay of the irrelevant part, together with
-  the R-bias (H6-H8).
+- (iii) H3D-4(b) in 4D: tangent decay of the irrelevant part of the physical
+  one-step defect. In the L^1 form of Thm. 1' this is a placement-summed
+  decorrelation bound, sup_s Σ_x |Cov_{μ_s}(e^{z·F}∘b_N, P_{N,x})| <= ε_N'.
+  If it is proved through Balaban's R-modified densities, the R-bias must be
+  controlled (notes 11-16, 20, 24, 25). There the remaining core,
+  generalized averaged H8, is the same kind of estimate: decorrelation of a
+  local even defect from terminal tests. Note 19 (T8) verifies it in the
+  Gaussian model, with L^{-4m} per placement for dimension 4.
 
 Heuristically, a finite-loop explicit choice of β_N leaves δ_N = O(N^{-p}),
 with p depending on the loop order and the scheme. Since β_N ~ b0 N log L,
