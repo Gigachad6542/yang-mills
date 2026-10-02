@@ -143,7 +143,7 @@ determine one of the following:
 - (c) a failed-attempt naming the exact missing formula.
 Done when: one of (a)-(c) is committed as `[T11][...]` with one PROGRESS line.
 
-### T8 [computation/proof]: Gaussian abelian 4D power counting (reassigned from the lead, 2026-10-02)
+### T8 [computation/proof] — completed by Codex, 2026-10-02: Gaussian abelian 4D power counting (reassigned from the lead, 2026-10-02)
 Scope: a new note, `research/19-gaussian-power-counting.md`, plus scripts in
 `research/scripts/t8_*.py`. Take it after T10 and T11.
 Model: 4D noncompact U(1), fine torus (Z/n)^4, n = n0*L^N, action
