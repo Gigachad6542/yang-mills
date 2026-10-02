@@ -195,6 +195,17 @@ Assume:
   shift). It is classical lattice perturbation theory: the coefficient of
   log(a μ) in the one-loop vacuum polarization is universal. Matching it to
   Balaban's normalization of β_j is part of (S).
+  *Literature status.* The universal part is published: the one-loop
+  relation between the bare Wilson coupling and a continuum coupling,
+  1/g_0² = 1/g²(μ) + 2b_0 log(1/(aμ)) + c_W, is in Dashen-Gross, Phys. Rev.
+  D23 (1981) 2340, which CMP 109 itself cites as ref. [27], and in the
+  Hasenfratz-Hasenfratz lattice Λ-parameter computation (1980). What (S)
+  adds beyond those papers is a **finite** one-loop matching. Balaban's
+  terminal coupling (the coefficient of A in his terminal effective action)
+  must equal a continuum coupling at scale ε_0 up to an O(1) constant,
+  uniformly in K. Equivalently, his scheme has a finite Λ-parameter ratio to
+  the Wilson scheme. That is a one-loop computation in his scheme (Codex T19
+  computes the SU(2) window), not a new conceptual input.
 
 Then (U) holds with C_U = 2C_c/(1-ϑ) + C_S.
 
@@ -203,7 +214,7 @@ for K -> ∞ gives β_∞^0 = 2b_0 log L. For any window,
 Σ_{j=i+1}^{i+n} β_j^0 = nβ_∞^0 + O(C_c/(1-ϑ)) = 2b_0 n log L + O(1). ∎
 
 So H0 now rests on (C), (S) and (D). Of these, (S) is classical perturbative
-input, and (C) and (D) are geometric-decay statements about Balaban's own
+input (its universal log is published; only a finite scheme matching remains), and (C) and (D) are geometric-decay statements about Balaban's own
 operators.
 
 ## 6. Status of H0 after this note
