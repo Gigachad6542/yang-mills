@@ -261,6 +261,9 @@ one PROGRESS line.
 - T19 [failed-attempt] — closed by Claude, 2026-10-02 (`research/23-one-loop-window.md` §7): three routes
   assessed and each stops at a named step; the universal part of (S) is published, and the SU(2) scheme edge
   needs second background derivatives of Balaban's composite average (multi-session). Off the critical path.
+- T23 [proof] — completed by Claude, 2026-10-02 (`research/31-s2-model-lemma.md`): the O(g^2)
+  mechanism of (S2) proved for one fluctuation integral (Taylor/Cauchy, plus Stein for the tilted mean);
+  what remains for full (S2) is localization, background analyticity and large fields.
 
 ## Proposals
 (Workers: at most 5 lines each.)
