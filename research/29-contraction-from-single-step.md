@@ -82,6 +82,13 @@ max |Δ_k|/θ_1^k = 0.072, 0.104 and 0.319, below the proved 2c̄/(1-θ_1-ē) =
 
 ## 3. The single-step hypotheses
 
+*Remark (note 40).* In the exactly computable 4D SU(2) Migdal-Kadanoff RG,
+b and c separately depend on how the irrelevant coordinate is normalized
+(there b ∝ g⁶ and c ∝ g^{-2}). The invariant quantity is the product
+b̄c̄ = O(γ⁴), and Theorem 1 uses only that product. The marginal constant
+e_k also picks up a term linear in the current irrelevant size. In that
+model e_k <= C(γ⁴ + δ̄_k), and θ = L^{-4} for the leading irrelevant shape.
+
 - **(S1) Transport contraction.** Re-expressing the scale-k irrelevant data
   at scale k+1 (pull-back by the minimal configuration, with no new
   integration) is linear and contracts the irrelevant norm by θ_0 = L^{-α}.

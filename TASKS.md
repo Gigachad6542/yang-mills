@@ -293,6 +293,10 @@ one PROGRESS line.
   the true measure. Needs no (PA), (SER) or (UB-ms). Corrected in §5: (T1) is too strong (the exterior law is R-modified); repaired
   route (P) <= (T1*) fiber-law comparison p_hat/q_hat <= exp(C N log g^-2) + (T2-R). Next step: check that W does not enter the zeta boundary layer in CMP 122 I (1.100).
 
+- T32 [computation] — completed by Claude, 2026-10-02 (`research/40-mk-single-step-check.md`): 4D SU(2) Migdal-Kadanoff
+  single-step Jacobian: theta -> 1/16 = L^-4, e = O(g^4) at heat-kernel shape, b*c = O(g^4) (b, c separately coordinate dependent),
+  e ~ 3.4 w linear in irrelevant size. Note 29's hypotheses are consistent with asymptotic freedom; note 29 §3 remark added.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
