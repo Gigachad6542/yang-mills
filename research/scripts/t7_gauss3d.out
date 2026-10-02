@@ -1,0 +1,9 @@
+n0=4 L=2: sup_K max_jk |C_N - C_(N-1)|, and successive ratio
+  N=1 M=   2  diff=7.5000e-01
+  N=2 M=   4  diff=1.2500e-01  ratio=6.000
+  N=3 M=   8  diff=3.1250e-02  ratio=4.000
+  N=4 M=  16  diff=7.8125e-03  ratio=4.000
+  N=5 M=  32  diff=1.9531e-03  ratio=4.000
+  N=6 M=  64  diff=4.8828e-04  ratio=4.000
+  N=7 M= 128  diff=1.2207e-04  ratio=4.000
+  |C| scale: max|C_N| = 0.6667
