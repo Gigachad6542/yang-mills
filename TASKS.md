@@ -183,7 +183,7 @@ and state exactly how far you got.
 Done when: committed as `[T13][computation]` (or `[failed-attempt]`) with one
 PROGRESS line.
 
-### T17 [proof/failed-attempt]: marked large-field persistence bound (P)
+### T17 [proof/failed-attempt]: marked large-field persistence bound (P) — reassigned to Claude (lead), 2026-10-02 (Codex out of credits, per Daniel)
 Scope: a new note, `research/26-persistence-bound.md`. Take it after T13.
 Context: research/25 reduces H7 and the quadratic R-bias terms to the bound
 (P), (4.1) there. Let M_{m,t} be the unnormalized mass, per terminal block,
@@ -196,7 +196,7 @@ those bounds is missing. Use page images where the OCR is garbled.
 Done when: committed as `[T17][proof]` or `[T17][failed-attempt]` with one
 PROGRESS line.
 
-### T19 [computation/failed-attempt]: SU(2) one-loop window (finish T13's stopping point)
+### T19 [computation/failed-attempt]: SU(2) one-loop window (finish T13's stopping point) — reassigned to Claude (lead), 2026-10-02
 Scope: extend `research/23-one-loop-window.md` (a new section) and
 `research/scripts/t19_*.py`. Take it after T17.
 Implement the background derivatives of the lattice Wilson Hessian, the ghost
