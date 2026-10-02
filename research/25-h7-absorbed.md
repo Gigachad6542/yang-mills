@@ -45,7 +45,7 @@ a neighborhood of Λ at every level of the history up to the scale of λ.
 agree outside a set S, both small-field (plaquette ϑ <= κ_1) on the box N of
 side R ⊃ S, with S at distance >= 1 from ∂N. Then there is a gauge
 transformation u, equal to 1 outside N, such that
-max_b ϑ(U^u_b{}^{-1} U'_b) <= 4(d-1)Rκ_1.
+max_b ϑ(U^u_b{}^{-1} U'_b) <= 2(d-1)R²κ_1.
 
 *Proof.*
 
@@ -60,8 +60,11 @@ max_b ϑ(U^u_b{}^{-1} U'_b) <= 4(d-1)Rκ_1.
    off S, this equals a conjugate of hol_U(ℓ) hol_{U'}(ℓ)^{-1}, with
    ℓ = σ_x^{-1}τ_x a loop in N of area <= (d-1)R². Each loop holonomy has
    ϑ <= (d-1)R²κ_1 by the lasso argument.
-4. Choosing σ_x along ∂N for x near ∂N, the loops have area <= (d-1)R, so
-   ϑ(u(x)) <= 2(d-1)Rκ_1 on bonds crossing ∂N. ∎
+4. So ϑ(u(x)) <= 2(d-1)R²κ_1. On bonds crossing ∂N (u = 1 outside, and U, U'
+   agree there) the distance is ϑ(u(x)) <= 2(d-1)R²κ_1. Inside N it is at
+   most 2(d-1)Rκ_1 by step 2. (The earlier draft bound 4(d-1)Rκ_1 assumed
+   boundary loops of area O(R); a minimal surface between the tree path and
+   a boundary path can have area of order R², so the safe bound is used.) ∎
 
 **Lemma 2 (rough-then-contract).** Let F be a gauge-invariant terminal test
 whose differential is bounded by C_F in the dual sup norm. For two fiber
@@ -70,16 +73,16 @@ configurations W, W', suppose there is a level j such that:
 - U_j(W) and U_j(W') are both small-field with κ_1 near S_j (box side R_j);
 - every later level j' < j is small-field with curvature <= κ_* on the
   transport neighborhoods along the interpolation below;
-- κ_1(1 + 16(d-1)R_j) <= κ_*.
+- κ_1(1 + 8(d-1)R_j²) <= κ_*.
 
 Then
 
-    |F(Φ(W)) - F(Φ(W'))| <= C_F θ^{j} · 4(d-1)R_j κ_1 |N_j|,   θ := L^{1-d} + c_{d,L}κ_*.   (2.1)
+    |F(Φ(W)) - F(Φ(W'))| <= C_F θ^{j} · 2(d-1)R_j² κ_1 |N_j|,   θ := L^{1-d} + c_{d,L}κ_*.   (2.1)
 
 *Proof.* Apply Lemma 1 at level j. F∘Φ is gauge invariant, and gauge
 transformations at level j act on coarser levels by the restricted gauge
 (note 24 Lemma A). Join U_j(W)^u to U_j(W') by the bondwise geodesic. Its
-ℓ¹ length is <= 4(d-1)R_jκ_1|N_j|. Along it plaquette angles change by at
+ℓ¹ length is <= 2(d-1)R_j²κ_1|N_j|. Along it plaquette angles change by at
 most 4 times the link change, so they stay <= κ_*. Pull back the terminal
 differential through the remaining j levels with note 24 Thm. 1 and note 12
 Lemma 2, then use ℓ^∞-ℓ¹ duality. ∎
@@ -107,7 +110,7 @@ current at level j (conserved, ||J_j||_∞ <= C_F θ^{j}). Then
 
 The first sum consists of **first-order mean shifts at the persistence
 level** (generalized H8). R_λ is quadratic (H6-type). Each quantity has
-||δU_{m-t}||_∞ <= 4(d-1)Rκ_1.
+||δU_{m-t}||_∞ <= 2(d-1)R²κ_1.
 
 *Proof.* For each W, Taylor-expand F∘Φ along the interpolation of Lemma 2
 from the reference image, at the level j(W). The first-order term is
@@ -137,7 +140,7 @@ persistence recorded.
 
 **Corollary 4.** Under (P) and the component counting of note 11 (3.11),
 
-    Σ_m Σ_λ ∫ν C_λ |R_λ| <= C Σ_m w_m Σ_t L^{4m} e^{-a t} L^{-(4+2δ)(m-t)} (R κ_1|N|)² < ∞.
+    Σ_m Σ_λ ∫ν C_λ |R_λ| <= C Σ_m w_m Σ_t L^{4m} e^{-a t} L^{-(4+2δ)(m-t)} (R² κ_1|N|)² < ∞.
 
 *Proof.* Insert θ^{2(m-t)} <= L^{-(4+2δ)(m-t)} (note 24 Cor. 2) and (4.1).
 The t-sum equals Σ_t L^{-2δ(m-t)} (L^4 e^{-a})^t
