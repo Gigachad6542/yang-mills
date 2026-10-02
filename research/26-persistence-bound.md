@@ -165,5 +165,7 @@ gauge, while axial-gauge link sizes grow like R·κ over regions of size R
 (note 24 Lemma B). A fine plaquette of angle >= ε_0 already costs g_k^{-2}cε_0²
 by itself. Otherwise all fine plaquettes are small, but linearization over a
 region of size L^t still needs L^t·κ small. The non-abelian (PA) is
-therefore proved here only on the sub-event where the persistence region has
-diameter <= c/κ, and (UB) is still needed. Both remain open in general.
+expected to follow from the abelian argument on the sub-event where the
+persistence region has diameter <= c/κ (linearize in axial gauge and control
+the O(curvature²) corrections). That is **not carried out here**. The general
+non-abelian (PA) and (UB) remain open.
