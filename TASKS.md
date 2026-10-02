@@ -174,7 +174,7 @@ Done when: committed as `[T8][computation]` with one PROGRESS line.
 - T9 [review] — completed by Claude, 2026-10-02: lead review of T1-T6,
   correctness only. Result: `collaboration/lead-review-T1-T6.md`.
 
-- T12 [proof/failed-attempt] (lead, next): H4D-3 in 4D. Prove or refute a
+- T12 [proof] — completed by Claude, 2026-10-02 (`research/21-beta-derivative-4d.md`): H4D-3 in 4D. Prove or refute a
   uniform bound on ∂_β of normalized terminal expectations along the
   asymptotic-freedom trajectory. The tools are research/18 Thm. 5, exact
   T-transport (note 14), and Balaban's CMP 109/116 effective-coupling bounds.

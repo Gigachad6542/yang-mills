@@ -1,0 +1,20 @@
+(i) autonomous two-loop correction r = b/x (dr/dx = O(g^4))
+   K=    10  x_0=     3.036  J_K = 1.006317
+   K=   100  x_0=    12.273  J_K = 1.015847
+   K=  1000  x_0=   104.190  J_K = 1.018691
+   K= 10000  x_0=  1022.609  J_K = 1.019034
+   K=100000  x_0= 10205.996  J_K = 1.019070
+(ii) non-autonomous correction r_{k+1}(x) = c (x - xbar_k)/xbar_k, which vanishes on the
+     reference trajectory xbar (so the flow is unchanged) but has dr/dx = c/xbar_k = O(g^2)
+   c=+0.05 K=    10  J_K = 0.8247   K^(-c/a) = 0.3236
+   c=+0.05 K=   100  J_K = 0.4232   K^(-c/a) = 0.1047
+   c=+0.05 K=  1000  J_K = 0.1491   K^(-c/a) = 0.0339
+   c=+0.05 K= 10000  J_K = 0.0487   K^(-c/a) = 0.0110
+   c=+0.05 K=100000  J_K = 0.0158   K^(-c/a) = 0.0035
+   c=-0.05 K=    10  J_K = 1.2231   K^(-c/a) = 3.0904
+   c=-0.05 K=   100  J_K = 2.4145   K^(-c/a) = 9.5508
+   c=-0.05 K=  1000  J_K = 6.8777   K^(-c/a) = 29.5162
+   c=-0.05 K= 10000  J_K = 21.0581   K^(-c/a) = 91.2179
+   c=-0.05 K=100000  J_K = 65.0151   K^(-c/a) = 281.9034
+(i) with autonomous bounded r: sum_k r'(x_k) ~ (1/a) int r' dx is bounded, so J_K is bounded;
+    an O(g^2) derivative destroys uniformity only through scale dependence (memory, lattice effects).
