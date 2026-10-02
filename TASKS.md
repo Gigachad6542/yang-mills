@@ -164,6 +164,25 @@ State the exact formula, the table, and the fitted exponent. Prove the exponent
 if you can; otherwise label it a computation.
 Done when: committed as `[T8][computation]` with one PROGRESS line.
 
+### T13 [computation]: one-loop windowed coupling shift for SU(2) in a block scheme
+Scope: a new note, `research/23-one-loop-window.md`, plus scripts
+`research/scripts/t13_*.py`. Take it after T11 and T8.
+Context: research/22 reduces Balaban's coupling-flow theorem H0 to (D) and
+(U): the free (g=0) one-loop coupling shift over n block steps is
+2 b_0 n log L + O(1), with bounded edges. Compute, by exact lattice momentum
+sums (no Monte Carlo), the transverse p^2 coefficient of the one-loop vacuum
+polarization of SU(2) gauge fluctuations, with the background-field method
+(gluon and ghost loops), in a simplified block scheme: the fluctuation field
+is constrained to have zero linear block average at the coarse end (the T7
+kernel `research/scripts/t7_*.py` is Balaban's linear average), with any fixed
+lattice gauge. Report beta^0_[i,i+n] for n = 1..6 and L = 2, 3. Check the
+slope 2 b_0 log L, with b_0 = 11*2/(48 pi^2), and the boundedness of the edge
+constant. If the full scheme is too large, do the scalar-field analogue
+first (O(N) sigma model in d=2, coefficient (N-2)/(2 pi)) as a calibration,
+and state exactly how far you got.
+Done when: committed as `[T13][computation]` (or `[failed-attempt]`) with one
+PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/computation] — completed by Claude, 2026-10-02: P4-3D as conditional
@@ -180,6 +199,10 @@ Done when: committed as `[T8][computation]` with one PROGRESS line.
   T-transport (note 14), and Balaban's CMP 109/116 effective-coupling bounds.
   Also identify exactly where the R-operation breaks transport of
   ∂_β = -Cov(·, A_N). Target note: `research/21-beta-derivative-4d.md`.
+- T14 [proof] — completed by Claude, 2026-10-02 (`research/22-coupling-flow-free-field-reduction.md`):
+  H0 reduced to windowed free-field positivity (U) plus memory decay (D).
+- T10 [fix] by Codex: reviewed by the lead, 2026-10-02. Correct; one `qquad`
+  typo fixed by the lead.
 
 ## Proposals
 (Workers: at most 5 lines each.)

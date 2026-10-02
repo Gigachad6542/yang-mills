@@ -33,7 +33,7 @@ bookkeeping in Robs.
 
 | ID | Statement | Status | Evidence needed |
 |---|---|---|---|
-| H0 | Prove the SU(2) effective-coupling trajectory stated in CMP **109**, Theorem 2, keeping a prescribed terminal coupling while every \(g_k\) remains small. | open; announced proof unpublished | A complete replacement for the missing proof. The scalar shooting step is proved in `08-coupling-flow-reduction.md`; uniform positive beta-increment bounds are not. |
+| H0 | Prove the SU(2) effective-coupling trajectory stated in CMP **109**, Theorem 2, keeping a prescribed terminal coupling while every \(g_k\) remains small. | open; announced proof unpublished | A complete replacement for the missing proof. The scalar shooting step is proved in `08-coupling-flow-reduction.md`; `22` reduces positivity to windowed free-field one-loop universality (U) plus memory decay (D), both open. |
 | H1 | Source-free four-dimensional \(RT\) density/stability bounds, assuming \(0<g_k\le\gamma\). | published conditional input | CMP **109**, Theorems 1 and 3; CMP **119**, Corollary 3; CMP **122 II**, Theorem 1. These control the vacuum integral and an auxiliary stabilized density, not the physical terminal law. |
 | P0a | A source depending only on the output of an exact block kernel factors through that RG step. | proved here | `04-terminal-source-identity.md`. |
 | P0b | Match P0a to Balaban's exact deterministic average inside the group-delta constraint. | proved here from published formulas | CMP **98**, Eqs. (10)--(15); CMP **119**, Eq. (0.1); `04-terminal-source-identity.md`. This is an identity for \(T\), not for the large-field \(R\)-replacement. |

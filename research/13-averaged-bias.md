@@ -193,7 +193,7 @@ lattice gauge action, put
 
 \[
  F(U)={1\over2}\operatorname{tr}U(\partial p),\qquad
- dP=(1-tF)dU,\qquad dR=(1+tF)dU,qquad 0<t<1.
+ dP=(1-tF)dU,\qquad dR=(1+tF)dU,\qquad 0<t<1.
  \tag{3.3$'$}
 \]
 

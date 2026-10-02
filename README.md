@@ -50,7 +50,7 @@ estimates while avoiding three later problems:
 | Exact source-dependent lift of the fiber-normalized introductory \(R\) prototype, with a uniform zero-free polydisc | proved here |
 | Terminal-chart decomposition of one \(R\)-fiber observable bias into a mean shift, a quadratic regular remainder, and a bad-set tail | proved here as an abstract lemma; the required placement-summed Yang--Mills estimates H6\(_\Sigma\)--H8\(_\Sigma\) are open |
 | Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 through Balaban's \(RT\) route |
-| SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
+| SU(2) coupling-flow claim used by those bounds | open; reduced (note 22) to a free-field one-loop universality statement (U) plus memory decay (D), using Balaban's published smoothness of the beta-functions |
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
 | Three-dimensional exact-\(T\) pilot: terminal nondegeneracy P6-3D | proved here directly from CMP **102**, Eq. (3)'s published action-free terminal bound, subject to the paper's explicit sketchiness and lower-bound caveats; M1-3D still awaits P4-3D |
 | Three-dimensional adjacent-depth comparison P4-3D | conditional reduction (note 18): follows from terminal tangent decay H3D-1, or from coupling differentiability plus irrelevant-defect decay; open. The exact Gaussian model gives rate L^{-2N} |
