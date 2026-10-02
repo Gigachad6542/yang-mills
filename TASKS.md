@@ -250,6 +250,9 @@ one PROGRESS line.
   hold in the scalar analogue. The SU(2) stop is honestly stated; it continues as T19.
 - T20 [proof] — completed by Claude, 2026-10-02 (`research/28-4d-nondegeneracy-reduction.md`):
   P6-4D from a terminal small-field variance bound plus an R-bias bound carrying the large-field factor.
+- T21 [proof] — completed by Claude, 2026-10-02 (`research/29-contraction-from-single-step.md`):
+  memory decay (D, T-b, B-b, and H3D-1 in 3D) reduced to single-step Lipschitz bounds (S1)-(S3)
+  by a weighted forward/backward bootstrap.
 
 ## Proposals
 (Workers: at most 5 lines each.)
