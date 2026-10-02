@@ -258,3 +258,7 @@ one PROGRESS line.
 
 ## Proposals
 (Workers: at most 5 lines each.)
+- Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
+  (fixed: note 18 Thm 5 hypothesis, note 25 Lemma 1 constant, note 27 (T-a) rate). AGENTS.md
+  gives no reviewer for lead work. Daniel may want one independent correctness pass, by Codex
+  as a one-time task, on notes 24 (Thm 1), 25 (Lemmas 1-2), 27 (Thm 1) and 29 (Thm 1).
