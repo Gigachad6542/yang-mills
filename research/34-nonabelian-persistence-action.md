@@ -209,11 +209,11 @@ linearizing. It is harmless.
 
 ## 6. Net effect on (P)
 
-(P) ⇐ (PA) + (UB) (note 26 Prop. 1). With this note:
+(P) ⇐ (PA) + (UB-ms) (note 26 Prop. 1 as corrected by note 38). With this note:
 
 - (PA) on E_0 ⇐ (D1) + (D2), which are uniform variational properties of
   Balaban's minimizers;
-- (PA) off E_0 is merged with (UB), as a large-field density statement.
+- (PA) off E_0 is handled by note 37 under (SER).
 
 The deterministic part of (P) therefore no longer needs any new idea beyond
 Balaban's variational theory, applied uniformly across levels.

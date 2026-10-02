@@ -139,17 +139,18 @@ with R = ⌈log(ε_0/ε_min)/log ρ_L⌉ as in note 34.
 
 using g_k <= γ. Both terms in the minimum grow as γ -> 0. The first grows
 like (log γ^{-1})^{2p_0}, the second like γ^{-2}. R grows only like
-log(1/γ). So L⁴e^{-a} < 1 for small γ. Through note 26 Prop. 1, this gives
-(P) from (PA) + (UB), with (PA) now reduced to (D1), (D2) (note 36) and
-(SER).
+log(1/γ). So L⁴e^{-a} < 1 for small γ. Combined with the multi-scale bound
+(UB-ms) of note 38, this gives (P). (Note 26 Prop. 1 with a single-scale
+(UB) is incomplete because of entropy; see note 38.) (PA) is now reduced to
+(D1), (D2) (note 36) and (SER).
 
 ## 5. Status of (P) after notes 34-37
 
-(P) ⇐ (UB) + (SER) + [(D1), (D2): published-input derivation in note 36,
+(P) ⇐ (UB-ms) + (SER) + [(D1), (D2): published-input derivation in note 36,
 with localization sketched]. The abelian versions of (SER), (D1) and (D2)
 are proved or computed exactly (Lemma 1; notes 35, 36). The two genuinely
 open statements are:
 
-- (UB): an action-weighted upper bound for the pre-replacement R'-label
-  density (note 26 §3);
+- (UB-ms): the multi-scale, per-level action-weighted bound for the
+  pre-replacement R'-label and its future history (note 38 §4);
 - (SER): lattice small-energy regularity for Balaban's average.
