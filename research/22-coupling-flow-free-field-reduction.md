@@ -177,11 +177,42 @@ says this is so).
   heuristic: the convergence of β_j^0 is not extracted from the sources
   here.
 
+### Proposition D: (U) from convergence plus the one-loop sum rule (proved)
+
+Assume:
+
+- **(C) geometric convergence of the free increments.**
+  |β_j^0 - β_∞^0| <= C_c ϑ^j for some β_∞^0 and ϑ < 1. This is expected
+  from Balaban's definitions: the step-j fluctuation operator involves the
+  composite average Q_j (whose kernel converges at rate L^{-j}, cf. the
+  kernels of research/18 §8 and research/19 §2) and the weights
+  a_j = a(1-L^{-2})/(1-L^{-2j}) (rate L^{-2j}). Not extracted from the
+  sources here.
+- **(S) one-loop sum rule.**
+  Σ_{j=1}^{K} β_j^0 = 2b_0 K log L + O(1), uniformly in K. This is one-loop
+  universality of the relation between the bare Wilson coupling and
+  Balaban's terminal coupling (by Lemma B, the sum is the composite one-loop
+  shift). It is classical lattice perturbation theory: the coefficient of
+  log(a μ) in the one-loop vacuum polarization is universal. Matching it to
+  Balaban's normalization of β_j is part of (S).
+
+Then (U) holds with C_U = 2C_c/(1-ϑ) + C_S.
+
+*Proof.* By (C), Σ_{j<=K} β_j^0 = Kβ_∞^0 + O(C_c/(1-ϑ)). Comparing with (S)
+for K -> ∞ gives β_∞^0 = 2b_0 log L. For any window,
+Σ_{j=i+1}^{i+n} β_j^0 = nβ_∞^0 + O(C_c/(1-ϑ)) = 2b_0 n log L + O(1). ∎
+
+So H0 now rests on (C), (S) and (D). Of these, (S) is classical perturbative
+input, and (C) and (D) are geometric-decay statements about Balaban's own
+operators.
+
 ## 6. Status of H0 after this note
 
     H0  <=  (B) [published]  +  regularity at g = 0 [published, CMP 109 p. 265]
           + (D) [memory decay of the history dependence; open]
-          + (U) [one-loop universality with bounded edges, free field; open]
+          + (U) [one-loop universality with bounded edges, free field; open;
+                 by Prop. D it follows from (C) geometric convergence of the free
+                 increments plus (S) the classical one-loop sum rule]
           + γ small [Balaban's regime].
 
 Next concrete steps:
