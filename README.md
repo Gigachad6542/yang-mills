@@ -123,7 +123,11 @@ terminal observables) is:
   structure behind CMP 109 (0.29) and Balaban's fifth-order local
   expansion, i.e. a source-level statement.
 
-So **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
+By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
+uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).
+The argument is an even complex deformation plus a Schwarz lemma. So
+**M1-3D reduces to (S1) + (A_s)**, two statements about CMP 102's single-step
+analysis. In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
 CMP 102 RG step depend Lipschitz-continuously on the input irrelevant data,
 with constant O(g_k²) in Balaban's norms. Together with CMP 102's own
 "very sketchy" proof, this is the remaining gap for the 3D continuum limit

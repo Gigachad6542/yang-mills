@@ -302,6 +302,11 @@ one PROGRESS line.
   geometric operator convergence, via the resolvent identity. (O2) is done for the averaging kernels (note 19 (2.1)) and the weights a_j;
   the discretization part needs a two-scale (O1).
 
+- T34 [proof, conditional] — completed by Claude, 2026-10-02 (`research/42-s2-by-even-deformation.md`): (S2) for a full
+  RG step. Deforming the fluctuation coupling g -> sg gives an exactly even step in s that is pure transport at s = 0; with the even
+  Schwarz lemma, D_E F = transport + O(g^2 p(g)^2), under (A_s): Balaban's single-step bounds uniform for complex |sg| <= alpha'/p(g).
+  M1-3D <= (S1) + (A_s) for CMP 102.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
