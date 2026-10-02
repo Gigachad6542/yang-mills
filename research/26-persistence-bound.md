@@ -1,6 +1,6 @@
 # The persistence bound (P): source reading and the exact missing step
 
-Status: **failed attempt** (T17), with an abelian computation (§6) supporting the missing lemma (PA). (P) of note 25, (4.1), is not derivable
+Status: **failed attempt** (T17) for the full statement; the abelian case of the missing lemma (PA) is **proved** (§7) and checked numerically (§6). (P) of note 25, (4.1), is not derivable
 from the published bounds as stated. This note records:
 
 - what Balaban's large-field factors give (a source reading);
@@ -127,3 +127,43 @@ the last level at each n is affected by the torus size). So 1ᵀG^{-1}1 grows
 case, holding the block flux >= ε on t nested levels costs action at least
 ½ε² Σ_j 1/G_jj ≈ ½ε² t/0.105, which is (PA) with c_L > 0. The non-abelian,
 Balaban-average version and (UB) remain open.
+
+## 7. Abelian (PA): proof
+
+**Proposition 2 (proved).** Take an abelian lattice field A on the scale-k
+lattice with B = dA. For levels j = 1, ..., t, let w_j be the level-j
+block-flux functional of note 19 (2.1)/(3.6): the M_j-box average times the
+M_j×M_j square, M_j = L^j, at arbitrary placements and orientations. If
+|⟨w_j, B⟩| >= ε_j for every j, then
+
+    ½|B|² >= ½ (Σ_j ε_j)² (L² - 1) / (t (L² + 1)).
+
+In particular ½|B|² >= ½ ε² t (L²-1)/(L²+1) when every ε_j = ε, which is
+linear in t.
+
+*Proof.*
+
+1. *Sizes.* The kernel is w_j = M_j^{-4} T_{M_j} ⊗ T_{M_j} ⊗ 1_{M_j} ⊗ 1_{M_j},
+   with T_M = 1_M * 1_M. So
+   - ||w_j||_1 = M_j^{-4}(M_j²)² M_j² = M_j²;
+   - ||w_j||_∞ = M_j^{-4} · M_j · M_j = M_j^{-2};
+   - ||w_j||_2² = M_j^{-8}((2M_j³+M_j)/3)² M_j² <= 1 (decreasing from 1 at
+     M = 1 to 4/9).
+2. *Near-orthogonality.* For i < j, |⟨w_i, w_j⟩| <= ||w_i||_1 ||w_j||_∞ = L^{-2(j-i)}.
+3. *Sum.* With s_j = sign⟨w_j, B⟩,
+   ||Σ_j s_j w_j||² <= Σ_j ||w_j||² + 2Σ_{i<j} L^{-2(j-i)} <= t(1 + 2/(L²-1)).
+4. *Cauchy-Schwarz.* Σ_j ε_j <= Σ_j |⟨w_j,B⟩| = ⟨Σ s_j w_j, B⟩ <= ||Σ s_j w_j|| |B|.
+   Square and use step 3. ∎
+
+The FFT Gram values of §6 (about 5 to 9 per level, against the proved
+(L²-1)/(L²+1) = 0.6 for L = 2) show that the bound is conservative but has
+the right linear form.
+
+**Non-abelian gap.** For SU(2) with Balaban's average, the level-j image
+angle is ⟨w_j, F⟩ + O(curvature²) only where the fine field is small in a
+gauge, while axial-gauge link sizes grow like R·κ over regions of size R
+(note 24 Lemma B). A fine plaquette of angle >= ε_0 already costs g_k^{-2}cε_0²
+by itself. Otherwise all fine plaquettes are small, but linearization over a
+region of size L^t still needs L^t·κ small. The non-abelian (PA) is
+therefore proved here only on the sub-event where the persistence region has
+diameter <= c/κ, and (UB) is still needed. Both remain open in general.
