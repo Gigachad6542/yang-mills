@@ -92,6 +92,27 @@ estimate. The research notes give the details.
   reduced (note 28) to a terminal small-field variance bound plus the quantitative
   R-bias bound; large-field effects are superpolynomially small in the terminal coupling.
 
+## Shortest remaining route: three dimensions
+
+For SU(2) in 3D, the chain to M1-3D (convergence and nondegeneracy of fixed
+terminal observables) is:
+
+- nondegeneracy P6-3D: proved from CMP 102 (note 17);
+- P4-3D <= terminal memory decay H3D-1 (note 18 Thm. 1);
+- H3D-1 <= (S1) + (S2) of note 29. There is no R-operation in 3D, the
+  couplings g_k² = g² L^k ε are explicit and identical across depths, so no
+  shooting is needed, and g_k -> 0 at fine scales;
+- (S1), the transport of existing irrelevant terms with factor L^{-α}, is the
+  structure behind CMP 109 (0.29) and Balaban's fifth-order local
+  expansion, i.e. a source-level statement.
+
+So **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
+CMP 102 RG step depend Lipschitz-continuously on the input irrelevant data,
+with constant O(g_k²) in Balaban's norms. Together with CMP 102's own
+"very sketchy" proof, this is the remaining gap for the 3D continuum limit
+of terminal observables. That would be a new theorem: the 3D Yang-Mills
+measure on a torus, at the level of fixed-scale block observables.
+
 ## Repository map
 
 - `research/00-charter.md` -- scope, conventions, and non-claims.
