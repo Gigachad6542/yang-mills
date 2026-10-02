@@ -143,16 +143,33 @@ determine one of the following:
 - (c) a failed-attempt naming the exact missing formula.
 Done when: one of (a)-(c) is committed as `[T11][...]` with one PROGRESS line.
 
+### T8 [computation/proof]: Gaussian abelian 4D power counting (reassigned from the lead, 2026-10-02)
+Scope: a new note, `research/19-gaussian-power-counting.md`, plus scripts in
+`research/scripts/t8_*.py`. Take it after T10 and T11.
+Model: 4D noncompact U(1), fine torus (Z/n)^4, n = n0*L^N, action
+(beta/2)|dA|^2 with beta = 1/g^2 (dimensionless in 4D), and Balaban's linear block average Q
+(research/10 (7.1)-(7.2)). The lead's 3D version is the template: the
+aliasing formula and the brute-force checks in `research/scripts/t7_*.py`
+(coming with T7). Compute exactly:
+- (a) the covariance of a terminal plaquette flux, or a small terminal loop, with a
+  local even gauge-invariant defect inserted at depth m below the terminal
+  scale, once the exact block propagation is included. Show whether it decays like
+  L^{-4m} (or say which power appears);
+- (b) the same defect's effect at a fixed exterior field (the "fixed-exterior
+  shift" of research/13), showing that it does not decay;
+- (c) brute-force real-space checks on small tori against the Fourier formula,
+  to machine precision. Use an eigendecomposition, not `pinv`; `pinv`'s default
+  tolerance gave 1e-5 errors in 3D.
+State the exact formula, the table, and the fitted exponent. Prove the exponent
+if you can; otherwise label it a computation.
+Done when: committed as `[T8][computation]` with one PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/failed-attempt]: the 3D adjacent-depth comparison (P4-3D), the
   one real open estimate for M1 in 3D. Target note:
   `research/18-three-dimensional-depth-comparison.md`.
-- T8 [computation/proof]: the Gaussian abelian model. Show that the
-  covariance of a terminal loop with a local gauge-invariant even defect
-  decays like L^{-4m} in 4D once the RG propagation is included, while the
-  fixed-exterior shift does not. This complements T3's counterexamples.
-  Target note: `research/19-gaussian-power-counting.md`.
+- T8: reassigned to Codex on 2026-10-02 (see "Assigned to Codex").
 - T9 [review] — completed by Claude, 2026-10-02: lead review of T1-T6,
   correctness only. Result: `collaboration/lead-review-T1-T6.md`.
 
