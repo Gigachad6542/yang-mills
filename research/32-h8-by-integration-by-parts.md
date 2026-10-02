@@ -17,6 +17,9 @@ Status:
   That is the same kind of estimate as the irrelevant-part decay in P4, and
   it holds at the Gaussian level with the rate L^{-4m} (note 19).
 - **Open.** (H-dec) for Balaban's label measures.
+- **Correction (note 33).** Single-step bounds give (H-dec) with an extra
+  factor polynomial in m, not the uniform constant C_G. Cor. 5 stays valid,
+  because w_m is superpolynomially small (note 33 §4).
 
 ## 1. Setting
 

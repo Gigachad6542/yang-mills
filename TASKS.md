@@ -267,6 +267,9 @@ one PROGRESS line.
 - T24 [proof] — completed by Claude, 2026-10-02 (`research/32-h8-by-integration-by-parts.md`): each
   first-order R-bias term equals -m_lambda Cov(G o U^ref, h_lambda) by integration by parts on the exterior
   (local right inverse of the linearized block map); generalized averaged H8 reduces to rooted decorrelation (H-dec).
+- T25 [proof] — completed by Claude, 2026-10-02 (`research/33-hdec-from-local-tangent-bounds.md`): (H-dec)
+  with factor L^{-4m}·poly(m) from local extensive tangent bounds (LS) + large fields (LF); Ad-invariance excludes
+  dimension-2 parts (Lemma 1); zero-charge redistributions are divergences (Lemma 2); corrects note 32 Cor 5 (still summable).
 
 ## Proposals
 (Workers: at most 5 lines each.)

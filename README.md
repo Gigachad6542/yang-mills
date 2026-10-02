@@ -81,6 +81,11 @@ estimate. The research notes give the details.
   - H7 absorbed via rough-then-contract (25) into the persistence bound (P)
     (Codex task T17) plus a generalized, exterior-averaged H8.
   - The Gaussian model confirms the averaged H8 mechanism (19).
+  - Generalized averaged H8 is a covariance between a terminal test and a local
+    gauge-invariant function, by integration by parts (32). Its decay (H-dec)
+    follows from local, extensive single-step tangent bounds (LS) plus large
+    fields (LF). The rate L^{-4m} is charge conservation plus volume
+    normalization, up to a power of m that the large-field weight absorbs (33).
 - **The one remaining kind of theorem.** The memory-decay statements (D),
   (T-b) and (B-b) in 4D, and H3D-1 in 3D, all assert one thing: Balaban's
   flow contracts the influence of fine-scale defects in irrelevant
