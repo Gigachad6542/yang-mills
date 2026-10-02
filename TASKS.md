@@ -127,7 +127,7 @@ actually reads. Do not change any proposition beyond what the review asks.
 Done when: all items are in, there is one `[T10][fix]` commit, and one
 PROGRESS line.
 
-### T11 [proof/counterexample/failed-attempt]: equal fiber mass per label in the actual 4D R-operation
+### T11 [proof] — completed by Codex, 2026-10-02: equal fiber mass per label in the actual 4D R-operation
 Scope: a new note, `research/20-equal-mass-per-label.md`.
 Notes 13 and 16 need P_λ(Ω) = R_λ(Ω) for **each** history label λ. CMP 122 I
 p. 176 (0.3)-(0.4) gives this for the introductory R. On p. 177, Balaban says
