@@ -1,12 +1,14 @@
 # Three-dimensional M1 reduction and terminal nondegeneracy
 
 Status: **The normalized-density and nondegeneracy propositions below are
-proved here from Balaban's published three-dimensional stability bound and
-the stated minimal-background regularity input.**  The latter is part of the
-small-field background construction used in the published proof.  Balaban
-explicitly describes that proof as "very sketchy" and says that many technical
-details are omitted.  The result therefore remains a deduction from a
-published input, not an independent completion of those omitted details.
+proved here from Balaban's published action-free terminal bound, CMP 102,
+Eq. (3).**  Proposition 1 separately explains the scale cancellation
+behind the sharper flow bound by using the stated minimal-background
+regularity; it is not an extra input to P6-3D.  Balaban explicitly describes
+the stability proof as "very sketchy," says that many technical details are
+omitted, and gives only a few remarks about the easier lower bound.  The result
+therefore remains a deduction from a published input, not an independent
+completion of those omitted details.
 
 This note discharges P6 for the three-dimensional exact-
 \(T\) pilot.  It does not prove the adjacent-depth estimate P4-3D and hence
@@ -93,11 +95,34 @@ open subset of \(X\), so
  \tag{1.9}
 \]
 
+For the explanatory background estimate in Section 2, choose
+\(\varepsilon_1\) no larger than the fixed terminal small-field threshold
+\(g_*p(g_*)\) (in the paper's terminal normalization).  This is allowed
+because Eq. (4) says that \(\varepsilon_1\) is chosen later.  With this choice,
+\(S\) lies in the all-small-field sector \(\Omega_{K_n}\), so the p. 267
+regularity estimate applies throughout \(S\).
+
+The primary scan on printed p. 256 confirms that CMP **102**, Eq. (3), is
+the action-free two-sided terminal estimate
+
+\[
+ \mathbf1_S(V)e^{-C_3V_*}
+ \le \rho^{(n)}_{K_n}(V)\le e^{C_3V_*},
+ \qquad
+ V_*:=|T_{\varepsilon_n}|
+ =\sum_{x\in T_{\varepsilon_n}}\varepsilon_n^3 .
+ \tag{1.9a}
+\]
+
+The physical volume \(V_*\) is independent of \(n\), and \(C_3\) depends only
+on \(g\) and \(\varepsilon_0\).  Propositions 2--3 will use (1.9a) directly.
+
 The constant \(C_0\) may depend on \(g\), \(\varepsilon _0\), the torus,
 and \(L\), but not on \(n\).  Theorem 1, printed p. 257, states (1.6) for
 the exact densities (1.3).  Its following paragraph explicitly says that the
-proof is very sketchy and omits many technical details.  We use (1.6) with
-that qualification.
+proof is very sketchy and omits many technical details; the preceding
+paragraph also says that only a few remarks are given about the easier lower
+bound.  We use the published estimates with those qualifications.
 
 The terminal observables in the three-dimensional M1 pilot are bounded
 continuous functions of finitely many closed coarse holonomies, for example
@@ -114,9 +139,11 @@ their sources through every step of (1.3).
 
 ## 2. The minimal-background action on \(S\)
 
-The action in the lower bound (1.6) cannot simply be discarded: a uniform
-bound on \(A^{\eta_n}(U_{K_n}(V))\) is the bridge from source-free stability
-to a positive terminal density.  We record that bridge explicitly.
+If one derives terminal positivity from the sharper flow estimate (1.6), its
+action term cannot simply be discarded: one needs a uniform bound on
+\(A^{\eta_n}(U_{K_n}(V))\).  Proposition 1 records that explanatory bridge.
+The nondegeneracy proof itself instead rests directly on the published
+action-free estimate (1.9a).
 
 ### Minimal-background regularity input
 
@@ -138,7 +165,8 @@ variational paper, CMP **102**, 277--309, Theorem 1, constructs the minimizing
 orbit for small coarse plaquettes and places it in this regular class.  If one
 does not accept that published background-regularity construction, then
 (2.1), or equivalently the uniform action bound (2.2) below, must be retained
-as an explicit hypothesis.
+as an explicit hypothesis for Proposition 1's explanation.  Propositions
+2--3 do not require it.
 
 Here \(g_-=g_{K_n-1}=g_*/\sqrt L\), and \(p(g)\) is Balaban's fixed
 logarithmic large-field threshold.  Only the fact that
@@ -188,11 +216,10 @@ There are at most \(C_{\rm plaq}N_*\eta_n^{-3}\) fine plaquettes.  Combining
 
 All powers of \(\eta_n\) cancel.  This proves (2.2)--(2.3). \(\square\)
 
-CMP **102**, Eq. (3), printed p. 256, also states the resulting action-free
-terminal estimate directly, with an exponent proportional to the fixed
-physical volume \(|T_{\varepsilon_n}|\).  Proposition 1 explains why the
-sharper flow bound (1.6) has the same consequence and makes clear which
-property of the minimal configuration is being used.
+CMP **102**, Eq. (3), printed p. 256, states the action-free terminal estimate
+(1.9a) directly.  Proposition 1 explains why the sharper flow bound (1.6) has
+the same consequence and makes clear which property of the minimal
+configuration is being used; it is not needed below.
 
 ## 3. Normalization and two-sided terminal density bounds
 
@@ -215,7 +242,7 @@ The exact normalization identity is CMP **102**, Eq. (6), printed p. 257:
 \]
 
 It proves mass preservation, but the quantitative normalization bounds below
-also use the pointwise estimates in (1.6).
+also use the action-free pointwise estimates in (1.9a).
 
 ### Proposition 2: uniform normalized terminal law
 
@@ -233,12 +260,11 @@ There are constants \(0<c<C<\infty\), independent of \(n\), such that
 Put
 
 \[
- B_*=C_{\rm geom}D^2L^{-1}p(g_-)^2N_*,\qquad
- a=e^{-B_*-C_0N_*},\qquad b=e^{C_0N_*}.
+ a=e^{-C_3V_*},\qquad b=e^{C_3V_*}.
  \tag{3.4}
 \]
 
-Equations (1.6) and (2.3) imply
+The action-free terminal estimate (1.9a) gives directly
 
 \[
  a\mathbf 1_S\le\rho^{(n)}_{K_n}\le b.
@@ -353,9 +379,9 @@ The three-dimensional obligation ledger is now:
 | Interface | Three-dimensional status |
 |---|---|
 | H0, effective-coupling shooting | absent: superrenormalizability gives the explicit dimensional flow \(g_k^2=g^2L^k\varepsilon_n\); there is no four-dimensional marginal beta-function trajectory to construct |
-| H1, conditional four-dimensional \(RT\) stability | replaced by the published three-dimensional exact-\(T\) bound (1.6), with the paper's explicit sketchiness caveat |
+| H1, conditional four-dimensional \(RT\) stability | replaced by the published three-dimensional exact-\(T\) bound (1.9a), with the paper's explicit sketchiness and lower-bound caveats |
 | Robs and H6\(_\Sigma\)--H8\(_\Sigma\) | absent: \(\rho_{k+1}=T\rho_k\) exactly and no observable-changing \(R\)-operation occurs |
-| P6-3D | proved in Proposition 3 from the published stability/background inputs |
+| P6-3D | proved in Proposition 3 directly from the published action-free terminal estimate (1.9a); Proposition 1's background input is explanatory only |
 | P4-3D | open: compare adjacent ultraviolet depths on this common terminal lattice |
 
 Consequently, for any finite family of closed-loop terminal observables, the
@@ -406,20 +432,23 @@ Balaban's stopping scale from the outset and apply Theorem 1 there, provided
 
 ## 7. Conclusion
 
-For the exact three-dimensional terminal laws, Balaban's small-field lower
-bound is strong enough to survive normalization.  The minimizing background
-has uniformly bounded action because its fine curvature is \(O(\eta_n^2)\),
-and the three-dimensional plaquette count cancels that scale exactly.  The
-resulting terminal densities are uniformly bounded above everywhere and below
-on one fixed open set.  This proves P6-3D, makes every subsequential limit
-nondegenerate, and makes all subsequential limits locally equivalent on the
-small-field set.  The sole remaining M1-3D interface is the adjacent-depth
-comparison P4-3D.
+For the exact three-dimensional terminal laws, Balaban's published
+action-free small-field lower bound is strong enough to survive normalization,
+subject to the paper's explicit sketchiness and lower-bound caveats.  The
+sharper flow estimate has the same scale behavior because the minimizing
+background's fine curvature is \(O(\eta_n^2)\) and the three-dimensional
+plaquette count cancels that scale; this is the separate explanation in
+Proposition 1, not an additional P6-3D hypothesis.  The terminal densities are
+uniformly bounded above everywhere and below on one fixed open set.  This
+proves P6-3D, makes every subsequential limit nondegenerate, and makes all
+subsequential limits locally equivalent on the small-field set.  The sole
+remaining M1-3D interface is the adjacent-depth comparison P4-3D.
 
 ## Primary sources
 
 - T. Balaban, *Ultraviolet Stability of Three-Dimensional Lattice Pure Gauge
-  Field Theories*, CMP **102** (1985), 255--275: Eqs. (1)--(6), printed
+  Field Theories*, CMP **102** (1985), 255--275: especially the action-free
+  terminal estimate Eq. (3), printed p. 256, and Eqs. (1)--(6), printed
   pp. 256--257; the variational definition (42) and background regularity
   preceding Eq. (44), printed pp. 266--267; Eqs. (68)--(71), printed p. 273.
 - T. Balaban, *The Variational Problem and Background Fields in

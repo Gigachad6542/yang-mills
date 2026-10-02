@@ -242,10 +242,11 @@ Let \(Z>0\) be the common total mass, which every fiber-normalized
 \]
 
 Thus \(\varpi_\lambda\) is a \(Z^{-1}\)-normalized absolute majorant, not an
-unnormalized exterior-integrated mass.  It may strictly dominate a signed
-localized activity.  For positive conditional fiber laws use Lemma 1; for
-normalized signed fiber terms use (3.5\(^{\prime}\)) and replace every
-conditional probability below by the corresponding total-variation mass.
+unnormalized exterior-integrated mass.  It may strictly dominate a localized
+activity.  Equation (3.9) below is for positive conditional fiber laws and
+uses Lemma 1.  Signed localized terms require the product-space definition
+(3.9s) below; one must not divide a signed fiber measure by a possibly zero or
+small signed marginal.
 Regard \(\Delta_\lambda\), \(M_\lambda\), and the two conditional bad-event
 masses as measurable functions of \(V_c\), defined
 \(\varpi_\lambda\)-almost everywhere.  Here \(\Delta_\lambda(V_c)\) and the
@@ -257,14 +258,57 @@ that fixed exterior field.  Define
  \mathcal Q_m&=\sum_{\lambda\in\mathscr C_m}
    \int \Delta_\lambda(V_c)^2\,\varpi_\lambda(dV_c),\\
  \mathcal B_m&=\sum_{\lambda\in\mathscr C_m}
-   \int\!\bigl[|p_\lambda|(\mathrm{Reg}^c\mid V_c)
-              +|q_\lambda|(\mathrm{Reg}^c\mid V_c)\bigr]
+   \int\!\bigl[\widehat p_\lambda(\mathrm{Reg}^c\mid V_c)
+              +\widehat q_\lambda(\mathrm{Reg}^c\mid V_c)\bigr]
               \,\varpi_\lambda(dV_c),\\
  \mathcal A_m&=\sum_{\lambda\in\mathscr C_m}
    \int |M_\lambda(V_c)|\,\varpi_\lambda(dV_c).
  \end{aligned}
  \tag{3.9}
 \]
+
+For signed localized terms, let \(\mathsf S_\lambda^p\) and
+\(\mathsf S_\lambda^q\) be the finite signed pre- and post-replacement
+measures on the joint fiber--exterior space, write \(Y_\lambda\) for the
+exterior space, and let
+\(\mathrm{Reg}_\lambda\) be the corresponding joint regular event.  Define
+the vector measure on exterior sets \(B\) by
+
+\[
+ \mathbf M_\lambda(B)
+ ={1\over Z}\int_{\mathrm{Reg}_\lambda\cap\{V_c\in B\}}
+   (\Phi_\lambda-\Phi_{0,\lambda})\,
+   d(\mathsf S_\lambda^p-\mathsf S_\lambda^q).
+ \tag{3.9b}
+\]
+
+The signed product-form quantities are
+
+\[
+ \begin{aligned}
+ \mathcal Q_m^{\rm sgn}
+ &= {1\over Z}\sum_{\lambda\in\mathscr C_m}
+    \int_{\mathrm{Reg}_\lambda}
+    |\Phi_\lambda-\Phi_{0,\lambda}|^2\,
+    d\bigl(|\mathsf S_\lambda^p|+|\mathsf S_\lambda^q|\bigr),\\
+ \mathcal B_m^{\rm sgn}
+ &= {1\over Z}\sum_{\lambda\in\mathscr C_m}
+    \bigl(|\mathsf S_\lambda^p|+|\mathsf S_\lambda^q|\bigr)
+       (\mathrm{Reg}_\lambda^c),\\
+ \mathcal A_m^{\rm sgn}
+ &=\sum_{\lambda\in\mathscr C_m}|\mathbf M_\lambda|(Y_\lambda),
+ \end{aligned}
+ \tag{3.9s}
+\]
+
+where \(|\mathbf M_\lambda|\) is the total variation of the vector measure.
+These quantities remain defined when a signed exterior marginal vanishes and
+introduce no inverse marginal.  Applying the unnormalized version of
+(3.5\(^{\prime}\)) on the product space gives the same Taylor bound with
+\(\mathcal Q_m^{\rm sgn}\), \(\mathcal B_m^{\rm sgn}\), and
+\(\mathcal A_m^{\rm sgn}\).  This statement assumes the paired signed terms
+have equal total mass so the constant term cancels; otherwise their mass-
+transfer term must be retained separately.
 
 The three missing inputs in their minimal sufficient form are
 
@@ -328,10 +372,14 @@ condition is
 \[
  \sum_m\varepsilon_mL^{dm}
  \mathop{\rm ess\,sup}_{\lambda,V_c}
- \bigl[|p_\lambda|(\mathrm{Reg}^c\mid V_c)
-      +|q_\lambda|(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
+ \bigl[\widehat p_\lambda(\mathrm{Reg}^c\mid V_c)
+      +\widehat q_\lambda(\mathrm{Reg}^c\mid V_c)\bigr]<\infty.
  \tag{3.14}
 \]
+
+This last sufficient condition is only for positive conditional laws.  For
+signed localized terms the corresponding requirement is summability of
+\(\mathcal B_m^{\rm sgn}\) in (3.9s).
 
 The placement hypothesis and normalized majorants in this termwise package are
 not theorems of CMP **122 II**.  Its activity and combinatorial estimates make

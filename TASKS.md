@@ -113,7 +113,7 @@ commit and one PROGRESS line.
 
 ## Assigned to Codex (new, 2026-10-02)
 
-### T10 [fix]: apply the T9 review edits
+### T10 [fix] — completed by Codex, 2026-10-02: apply the T9 review edits
 Scope: `research/11-transverse-bias-reduction.md`, `research/13-averaged-bias.md`,
 `research/14-three-dimensional-m1.md`, `research/16-normalized-tail.md`,
 `research/17-three-dimensional-nondegeneracy.md`, plus `README.md` and

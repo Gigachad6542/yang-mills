@@ -99,7 +99,7 @@ unmatched cutoffs.  It is therefore more robust than a likelihood-ratio
 interpolation between \(\widehat p_\Lambda\) and
 \(\widehat q_\Lambda\).
 
-The universal bounds obtained from (2.3) are only
+The first universal bound obtained from (2.3) is
 
 \[
  \left|{1\over a}\int F\,d(R-P)\right|
@@ -107,7 +107,17 @@ The universal bounds obtained from (2.3) are only
  \tag{2.4}
 \]
 
-and
+Keeping the size of the signed defect instead of using only \(|h|\le1\)
+gives the sharper total-variation form
+
+\[
+ \left|{1\over a}\int F\,d(R-P)\right|
+ \le 2\inf_{c\in\mathbb C}\|F-c\|_\infty\,\mathbb E_\mu|h|
+ ={\inf_c\|F-c\|_\infty\over a}\,\|R-P\|_{\rm TV}.
+ \tag{2.4$'$}
+\]
+
+Cauchy--Schwarz also gives
 
 \[
  \left|{1\over a}\int F\,d(R-P)\right|
@@ -116,7 +126,9 @@ and
  \tag{2.5}
 \]
 
-Neither contains a power of the distance \(m\) from the terminal scale.
+Thus a scale gain can come either from
+\(\mathbb E_\mu|h|=\|R-P\|_{\rm TV}/(2a)\), or from decorrelation of \(F\)
+and \(h\).  Neither gain is supplied by gauge symmetry alone.
 
 ## 3. Gauge invariance does not kill the covariance
 
@@ -124,6 +136,19 @@ If \(P\) and \(R\) are gauge invariant, then \(\mu\) and \(h\) in (2.1) are
 gauge invariant.  A gauge-invariant terminal loop \(F\) is another scalar in
 the trivial representation.  There is no representation-theoretic reason for
 the covariance of two invariant scalars to vanish.
+
+Strictly, the Radon--Nikodym representative \(h\) is initially defined only
+\((P+R)\)-almost everywhere.  For a jointly measurable action of the compact
+gauge group, choose the invariant version
+
+\[
+ \widetilde h(x)=\int_G h(g\mathbin\cdot x)\,dg.
+ \tag{3.0}
+\]
+
+Gauge invariance of \(P\) and \(R\) implies
+\(\widetilde h=h\) \((P+R)\)-almost everywhere, so this choice leaves every
+identity above unchanged.
 
 ### Proposition 2: explicit \(SU(2)\) counterexample
 
@@ -162,6 +187,28 @@ normalization to a geometric gain.  Tensoring it with any gauge-invariant
 exterior probability space leaves (3.2) unchanged, so exterior averaging
 alone does not repair the implication.
 
+The conclusion does not depend on singular or disjoint supports.  On the
+one-plaquette lattice \(SU(2)^4\) with product Haar measure \(dU\) and the
+lattice gauge action, put
+
+\[
+ F(U)={1\over2}\operatorname{tr}U(\partial p),\qquad
+ dP=(1-tF)dU,\qquad dR=(1+tF)dU,qquad 0<t<1.
+ \tag{3.3$'$}
+\]
+
+These are full-support, mutually absolutely continuous, gauge-invariant
+probability measures.  The plaquette holonomy is Haar distributed,
+\(\int F\,dU=0\), and character orthogonality gives
+\(\int F^2dU=1/4\).  Hence
+
+\[
+ \int F\,d(R-P)=2t\int F^2dU={t\over2},
+ \tag{3.3$''$}
+\]
+
+again an order-one defect with no scale gain.
+
 There is a related representation-theoretic trap.  If an invariant law acts
 on an equivariant vector \(X:\Omega\to\mathfrak{su}(2)\), then
 \(\mathbb E X=0\).  But the scalar appearing in an observable bias can pair
@@ -196,8 +243,20 @@ curvature-coupled terms.
 
 At scale \(m\), let \(\lambda\in\mathscr C_m\) enumerate the history,
 placement, and position in the sequential component ordering.  Let
-\(P_\lambda,R_\lambda\) be the positive pre- and post-replacement measures
-and let their common mass be \(a_\lambda\).  Define
+\(P_\lambda,R_\lambda\) be the positive pre- and post-replacement measures.
+For this section assume explicitly that
+
+\[
+ P_\lambda(\Omega)=R_\lambda(\Omega)=a_\lambda
+ \quad\text{for every label }\lambda.
+ \tag{4.0}
+\]
+
+This labelwise hypothesis holds for the introductory replacement in CMP
+**122 I**, Eqs. (0.3)--(0.4), but it has not been verified for the actual
+localized procedure described on printed p. 177, whose denominators are
+integrals of only parts of the densities.  Task T11 isolates that missing
+check.  Subject to (4.0), define
 \(\mu_\lambda,h_\lambda\) by (2.1).  The exact scale-\(m\) contribution is
 
 \[
@@ -273,8 +332,10 @@ prove a connected estimate of the schematic form
  \tag{5.2}
 \]
 
-together with the stated history/placement majorants.  A direct
-placement-summed version of (5.1) is weaker and is the primary target.
+together with the stated history/placement majorants.  Condition (5.1) is
+already placement-summed, but it takes absolute values term by term.  The
+weaker primary target is (4.4), with the \(\lambda\)-sum kept inside the
+absolute value as in (4.2).
 
 Formula (5.2) is not a consequence of Cauchy--Schwarz: (2.5) has no small
 factor.  It requires a Yang--Mills-specific connected-correlation or
@@ -295,9 +356,11 @@ argument.
 ## 6. Comparison with the published construction
 
 - CMP **122 I**, Eq. (0.3), printed p. 176, gives the equal-fiber-mass
-  replacement needed for Proposition 1.  Its localized implementation has
-  history-dependent fibers, so (4.1) must be formed before histories are
-  merged.
+  replacement needed for Proposition 1.  Printed p. 177 immediately warns
+  that the actual procedure instead uses denominators formed from integrals
+  of parts of the densities.  Therefore the labelwise hypothesis (4.0) is
+  verified for the prototype but not yet for the localized implementation;
+  its history-dependent fibers must be checked before histories are merged.
 - CMP **122 I**, pp. 193--194, explicitly changes equality of densities to
   equality only after integration.  This is why the physical and stabilized
   measures in (2.1) are genuinely different.
@@ -313,5 +376,6 @@ into a connected correlation, which is potentially much smaller than the
 fixed-exterior bias.  But the \(SU(2)\) example (3.1) proves that neither
 gauge invariance nor normalization supplies that smallness.  The next
 mathematical input must be a marked connected-correlation estimate such as
-(5.1); the Gaussian computation assigned as research note 19 tests its
-expected power in a model where that estimate can be calculated explicitly.
+(5.1), together with the labelwise mass issue above.  The Gaussian computation
+assigned as research note 19 (assigned, not yet written) tests its expected
+power in a model where that estimate can be calculated explicitly.

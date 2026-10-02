@@ -2,10 +2,14 @@
 
 Status: **Propositions 1--2 and the scale-series computation are proved
 here.**  The identification of Balaban's three-dimensional flow as the exact
-\(T\)-iteration is a published input, verified on the primary scan.  This
-removes the complete-\(R\) observable obstruction from the three-dimensional
-terminal-source problem.  It does **not** prove adjacent-cutoff convergence
-or M1.
+\(T\)-iteration is a published input, verified on the primary scan.  Theorem 1
+is used only as a published stability input: Balaban calls its proof "very
+sketchy," says that many technical details are omitted, and gives "only few
+remarks about the easier lower bound."  Proposition 1 does not use Theorem 1;
+it uses only the exact definition (1.2) and the group-delta definition of
+\(T\) in CMP **98**, Eq. (10).  Exact \(T\)-iteration removes the complete-
+\(R\) observable obstruction from the three-dimensional terminal-source
+problem.  It does **not** prove adjacent-cutoff convergence or M1.
 
 ## 1. The decisive source fact
 
@@ -35,11 +39,24 @@ the exact normalization identity
  \tag{1.3}
 \]
 
+The paper immediately qualifies Theorem 1 by calling its proof very sketchy,
+noting omitted technical details, and saying that it gives only a few remarks
+about the easier lower bound.  None of those stability estimates is needed
+for the algebraic terminal-source identity in Proposition 1.
+
 There is no large-field \(R\)-replacement in this flow.  The \(R\)-operation
 was introduced later to repair the four-dimensional large-field induction.
 The decompositions of unity, saddle expansions, and resummations inside the
 three-dimensional proof analyze \(T\rho_k\); they do not replace it by a
 different equal-integral density.
+
+More precisely, Section C of CMP **102**, printed p. 267, applies the positive
+operator \(T\) to the inductive **inequality** (41): \(\rho_{k+1}\) is bounded
+by a sum obtained by applying \(T\) to terms on the right-hand side.  Equation
+(41) is not an exact polymer representation of \(\rho_k\).  Consequently the
+paper supplies no exact expansion that can simply be differenced at adjacent
+ultraviolet depths; P4-3D needs either a new exact, Dimock-style expansion or a
+comparison argument that works directly with bounds.
 
 ## 2. Terminal sources pass through every step exactly
 
@@ -55,6 +72,13 @@ group-delta form
 
 where \(Q_k\) is Balaban's gauge-covariant block average.  This is the
 published \(T\)-dictionary audited in research note 04.
+
+CMP **98**, Eq. (15), uses a logarithm in defining the average.  Fix a Borel
+branch once and for all and regard every
+\(Q_k:G^{\mathrm{bonds}}\to G^{\mathrm{bonds}}\) as a Borel map on the full
+configuration space; its branch-discontinuity set is Haar-null.  This makes
+the delta kernel (2.1) and identity (2.5) globally meaningful.  Analyticity is
+claimed only on the regular small-field chart.
 
 ### Proposition 1: exact three-dimensional terminal-source identity
 
@@ -130,15 +154,16 @@ compare two different bare lattices.  For M1 one still has to place
  \tag{3.1}
 \]
 
-on their first common terminal lattice and prove a summable adjacent-depth
+on their same terminal lattice and prove a summable adjacent-depth
 bound.  The two-sided ultraviolet-stability bounds (5) control each density
 separately; they are not a Cauchy estimate for the pair (3.1).  This is the
-three-dimensional P4 problem assigned separately in research note 18.
+three-dimensional P4 problem assigned separately in research note 18
+(assigned, not yet written).
 
 Likewise, a uniform upper and lower bound on the densities does not by itself
-prove a positive limiting variance.  Three-dimensional nondegeneracy is a
-separate question assigned in research note 17.  Nothing in this note
-upgrades the published stability theorem to convergence.
+prove a positive limiting variance.  Three-dimensional nondegeneracy is proved
+separately in research note 17.  Nothing in this note upgrades the published
+stability theorem to convergence.
 
 ## 4. Why the crude power count would also be harmless
 
@@ -161,8 +186,16 @@ turns the original large-field factor into an arbitrarily large power of
  \tag{4.2}
 \]
 
-The published arbitrary-power statement has the form: for every \(N>0\),
-after changing a constant,
+The following is a **source reading**, not a new estimate proved in this note.
+CMP **122 I**, printed p. 176, gives the arbitrary bare-\(\varepsilon\) power
+at the first step; CMP **102**, printed p. 258, likewise says the first-step
+factor is smaller than every positive power of \(\varepsilon\).  At scale
+\(k\), CMP **102**, printed pp. 257 and 267, uses
+\(\varepsilon_1=g_kp(g_k)\), with
+\(p(g)=b_0(1+\log g^{-1})^{p_0}\), \(p_0>2\).  The resulting per-plaquette
+factor \(\exp[-c p(g_k)^2]\) is superpolynomially small in
+\(g_k^2=g^2\delta_m\).  Thus, for every \(N>0\), after changing a constant,
+the published reading is
 
 \[
  w_m\le C_N\delta_m^N
@@ -212,6 +245,17 @@ When \(H_L=1\), the large-field factor loses exactly three powers to
 refining-lattice placements, so any \(N>3\) suffices.  At the newly added
 ultraviolet level \(M=K\), \(L^{-K}=\varepsilon/\varepsilon_0\), and the
 tail is \(O(\varepsilon^{N-3})\) up to fixed terminal-scale constants.
+For general \(H_L\),
+
+\[
+ (H_LL^{3-N})^K
+ =H_L^K(\varepsilon/\varepsilon_0)^{N-3}
+ =(\varepsilon/\varepsilon_0)^{N-3-\log_LH_L},
+ \tag{4.7}
+\]
+
+so the tail is \(O(\varepsilon^{N-3-\log_LH_L})\), again up to fixed
+terminal-scale constants.  Its exponent is positive precisely under (4.5).
 
 This calculation is only a consistency check.  It neither inserts an
 unpublished \(R\)-operation into the 1985 proof nor supplies the
@@ -237,7 +281,8 @@ program is absent from Balaban's three-dimensional construction:
 
 - T. Balaban, *Ultraviolet Stability of Three-Dimensional Lattice Pure Gauge
   Field Theories*, CMP **102** (1985), 255--275: Eqs. (1)--(6), printed
-  pp. 256--257, especially \(\rho_{k+1}=T\rho_k\) and Theorem 1.
+  pp. 256--257, especially \(\rho_{k+1}=T\rho_k\) and Theorem 1; printed
+  pp. 258 and 267 for the superpolynomial small-factor reading in Section 4.
 - T. Balaban, *Averaging Operations for Lattice Gauge Theories*, CMP **98**
   (1985), 17--51: Eqs. (10)--(15), printed pp. 19--20, for the exact
   group-delta \(T\)-map and its deterministic gauge-covariant average.

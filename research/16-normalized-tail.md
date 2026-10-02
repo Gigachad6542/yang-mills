@@ -1,11 +1,13 @@
 # Normalization, bad-event tails, and H7\(_\Sigma\)
 
 Status: **Propositions 1--2 and Corollary 3 are proved here.**  They give an exact
-unnormalized reformulation of H7\(_\Sigma\) for positive sequential
-fiber replacements and sharp counterexamples when the required marginal
-weight or denominator comparison is absent.  The comparison with Balaban's
-published construction is a source audit.  The history-resolved Yang--Mills
-tail estimate isolated in (5.2) remains **open**.
+unnormalized reformulation of H7\(_\Sigma\) for positive sequential fiber
+replacements under the explicit labelwise equal-mass hypothesis in Section 3,
+and sharp counterexamples when the required marginal weight or denominator
+comparison is absent.  That hypothesis is verified for the introductory
+\(R\)-prototype but not for Balaban's actual localized procedure.  The
+comparison with the published construction is a source audit.  The
+history-resolved Yang--Mills tail estimate isolated in (5.2) remains **open**.
 
 The purpose of this note is narrow.  A small unnormalized component weight
 does not make its normalized conditional law close to a regular law.  On the
@@ -165,9 +167,31 @@ At a fixed ultraviolet depth, order all \(R\)-components deterministically
 and replace them one at a time, as in research note 11.  Let \(\lambda\)
 record the scale, history, placement, and position in this order.  Immediately
 before replacement \(\lambda\), let \(M_\lambda\) be the positive current
-term and let \(M_\lambda^R\) be the term after replacing that fiber.  Both
-have mass \(Z_\lambda\); in the application all terms are ultimately
-normalized by the common vacuum mass \(Z\).
+term and let \(M_\lambda^R\) be the term after replacing that fiber.  Assume
+explicitly throughout this section that the replacement preserves the fiber
+mass pointwise in the exterior field for each label.  Writing
+\(P_\lambda^R\) for the post-replacement fiber mass, assume
+
+\[
+ P_\lambda^R(V_c)=P_\lambda(V_c)
+ \quad\nu_\lambda\text{-a.e.},\qquad
+ M_\lambda(X)=M_\lambda^R(X)=Z_\lambda,
+ \tag{3.0a}
+\]
+
+so the common pre- and post-replacement exterior marginal is
+
+\[
+ P_\lambda(V_c)\nu_\lambda(dV_c).
+ \tag{3.0}
+\]
+
+This holds for the introductory CMP **122 I** prototype, Eqs. (0.3)--(0.4).
+It is unverified for the actual procedure described on printed p. 177, where
+the denominators are integrals of only parts of the densities.  Without (3.0),
+the post-replacement marginal need not be \(P_\lambda\nu_\lambda\), and (3.2)
+acquires an uncontrolled marginal-mass ratio.  In the application all terms
+are ultimately normalized by the common vacuum mass \(Z\).
 
 Let \(E_\lambda\) be the complement of the regular terminal chart and regular
 propagation event used for that component.  If
@@ -191,8 +215,8 @@ then Proposition 2 gives the exact identity
 
 ### Corollary 3: an unnormalized form of H7\(_\Sigma\)
 
-For positive sequential terms with the exact exterior marginals (3.1),
-H7\(_\Sigma\) is equivalent to
+For positive sequential terms satisfying (3.0), H7\(_\Sigma\) with the exact
+choice \(\varpi_\lambda=\alpha_\lambda\) is equivalent to
 
 \[
  \boxed{
@@ -201,8 +225,11 @@ H7\(_\Sigma\) is equivalent to
  \tag{3.3}
 \]
 
-Moreover, the tail of the series in (3.3) is exactly the H7 contribution to
-the physical-versus-stabilized observable telescope.
+For a general admissible majorant \(\varpi_\lambda\ge\alpha_\lambda\), the
+condition H7\(_\Sigma(\varpi)\) implies (3.3), but the converse need not hold.
+Moreover, after multiplication by \(\sup|F|\), the tail of the series in
+(3.3) bounds the H7 contribution to the physical-versus-stabilized observable
+telescope; it is not itself that signed observable contribution.
 
 For a finite signed localized term \(S_\lambda\), disintegrate its total
 variation and denote the resulting conditional probability kernel by
@@ -260,6 +287,9 @@ The following points are direct consequences of Balaban's formulas.
    densities are positive, the integration domains are nonempty, and the
    denominators are positive.  Eq. (0.4) is the mass-preservation identity.
    This supplies (2.1)--(2.2), but no quantitative lower bound on \(Q_y\).
+   Printed p. 177 then says that the actual procedure uses denominators equal
+   to integrals of parts, rather than of the whole densities.  It therefore
+   does not establish the labelwise equal-mass hypothesis (3.0).
 
 2. The detailed preparatory transformations through Eq. (1.75), printed
    pp. 193--194, preserve the density.  The next integration changes the
@@ -337,14 +367,20 @@ is
  \tag{5.2}
 \]
 
+After division by \(P_\lambda\) and \(Q_\lambda\), (5.2) is (3.3) written
+conditionally, with the optimal choices
+\(a_\lambda=\widehat p_\lambda(E_\lambda\mid V_c)\) and
+\(b_\lambda=\widehat q_\lambda(E_\lambda\mid V_c)\).  It is a useful
+termwise restatement, not a stronger or intrinsically easier estimate.
+
 The weaker but sometimes easier direct-mass route is to use
 \(M_\lambda(E)\le M_\lambda(X)\) and the same inequality after replacement.
 It closes H7 whenever the **sum of the selected sequential component masses**
-is itself summable after history and placement counting.  Whether Balaban's
-large-field powers beat that counting in three dimensions is the separate
-computation in research note 14.  In four dimensions the published
-source-free convergence bounds are not already the common-terminal,
-adjacent-depth sequential estimate (5.1).
+is itself summable after history and placement counting.  In three dimensions
+Balaban's flow contains no \(R\)-components at all, so H7\(_\Sigma\) is
+vacuous; Section 4 of research note 14 is only a counterfactual power-counting
+check.  In four dimensions the published source-free convergence bounds are
+not already the common-terminal, adjacent-depth sequential estimate (5.1).
 
 This is the exact stopping point: H7\(_\Sigma\) does not fail merely because
 fiber denominators might be small.  It remains open because the published

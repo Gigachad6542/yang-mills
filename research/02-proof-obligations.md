@@ -48,7 +48,7 @@ bookkeeping in Robs.
 | P5 | Establish a cutoff-independent zero-free source polydisc for finitely many uniformly bounded observables. | proved here | Elementary estimate in `01-milestone-theorem.md` and `03-source-cumulant-lemma.md`. |
 | A1 | Holomorphic Cauchy control implies convergence and factorial bounds for all fixed cumulants. | proved here | `03-source-cumulant-lemma.md`. |
 | P6 | Show at least one limiting variance is positive. | open | A lower bound surviving the cutoff; upper bounds do not imply nondegeneracy. |
-| P6-3D | For the exact three-dimensional terminal laws, prove a cutoff-uniform positive variance for every continuous real test nonconstant on the fixed small-field set. | proved here from published input | CMP **102**, Theorem 1 and Eqs. (3), (5), with its explicitly sketchy-proof caveat, plus the minimal-background regularity used there; `17-three-dimensional-nondegeneracy.md`. This does not change the open four-dimensional P6 row. |
+| P6-3D | For the exact three-dimensional terminal laws, prove a cutoff-uniform positive variance for every continuous real test nonconstant on the fixed small-field set. | proved here from published input | CMP **102**, Eq. (3)'s action-free terminal bound, with the paper's explicit sketchiness and lower-bound caveats; `17-three-dimensional-nondegeneracy.md`. The minimal-background regularity explains the sharper Eq. (5) but is not an extra P6-3D input. This does not change the open four-dimensional P6 row. |
 | M1b | Prove robustness under a stated change of finite-volume boundary condition. | open extension | Comparison of boundary polymer sectors after M1. |
 
 ## Highest-risk interfaces
