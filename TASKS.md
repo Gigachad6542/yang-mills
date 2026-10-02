@@ -86,7 +86,7 @@ harmless in 3D"). Do not widen T4 beyond this.
 
 ## Assigned to Codex (new, 2026-09-30)
 
-### T6 [proof]: M1 in 3D and nondegeneracy (P6-3D)
+### T6 [proof] — completed by Codex, 2026-10-01: M1 in 3D and nondegeneracy (P6-3D)
 Scope: a new note, `research/17-three-dimensional-nondegeneracy.md`, plus
 one row each in `research/02-proof-obligations.md` and `README.md`.
 Use CMP 102 Theorem 1: the bounds (5) for the exact densities

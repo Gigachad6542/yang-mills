@@ -52,6 +52,7 @@ estimates while avoiding three later problems:
 | Source-stable localization/exponentiation bounds for the complete large-field \(R\)-operation, or vanishing cumulative \(R\)-bias | open; prerequisite for observable M1 through Balaban's \(RT\) route |
 | SU(2) coupling-flow claim used by those bounds | open in this project; announced proof was not published |
 | Adjacent-cutoff comparison of physical terminal measures | open; principal M1 estimate |
+| Three-dimensional exact-\(T\) pilot: terminal nondegeneracy P6-3D | proved here from CMP **102**'s published stability/background inputs, whose proof the paper calls very sketchy; M1-3D still awaits P4-3D |
 
 ## Repository map
 
