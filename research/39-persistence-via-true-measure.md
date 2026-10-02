@@ -230,3 +230,51 @@ slowly, the R'-template would have to be built on a slightly larger region
 (R_k ~ log g_k^{-1}). The entropy cost of that is O(log g_k^{-1}) per
 label, which the label's large-field factor exp(-γ_0 p_0(g_k)²) still
 absorbs.
+
+## 6. (T2-R) from CMP 122 II (1.73)-(1.81)
+
+CMP 122 II p. 380 states: "All the expressions in the definition (1.71), for
+the configuration U, are real, and the exponential density in the integral
+is positive." From this, (1.73)-(1.75) give, for any function F of the
+integration variables,
+
+    |T_k(X, (U, J)) F| <= e^{3 sup|σ|} sup|F| · T_k(X, (U, 0)) 1,   (6.1)
+
+where σ is the small first-order term. Then (1.79)-(1.81) bound
+T_k(X, (U, 0))1 by the product of the per-scale large-field factors
+exp(-γ_0 p_0(g_j)² ...) with entropy factors exp O(1)(MR_j)^{-d}|Z_j| (all
+volumes at the scale of the step).
+
+**Marking.** Write 1_{E_t(Λ)} = Π_{j=0}^{t} 1_{E^{(j)}}, where E^{(j)} is the
+event that a level-(k+j) plaquette near Λ is non-small. The indicator
+1_{E^{(j)}} is a function of the integration variables of the scale-(k+j)
+operation, and sup 1_{E^{(j)}} = 1, so it can be inserted as F in (6.1).
+On E^{(j)} every term with small-field χ near Λ at that scale vanishes.
+Hence each marked step carries at least one large-field factor near Λ, with
+entropy O(1) level-(k+j) cubes. That is (T2-R), with
+a = γ_0 min_j p_0(g_{k+j})² - O(1).
+
+**Status.** The per-step inequality (6.1) and the factors (1.79)-(1.81)
+are published. The marking itself is not printed. Two things are needed
+and not written out:
+
+- carrying the fixed-Λ markers through the localization and exponentiation
+  that follow each step;
+- the ratio to the unmarked normalization Z.
+
+Both are the same bookkeeping Balaban does for unmarked large-field
+regions. So (T2-R) is "published mechanism, unprinted bookkeeping".
+
+## 7. Net status of (P)
+
+(P) ⇐ (T1\*) + (T2-R).
+
+- (T2-R): CMP 122 II (6.1) and (1.79)-(1.81) with markers. Bookkeeping
+  only.
+- (T1\*): reduced exactly (§5a) to the oscillation bound (5.1). That needs
+  R_k >~ log(1/g_k), or a template built on a slightly larger region. One
+  source fact (the growth of R_k) is unresolved.
+
+The deterministic notes 34-37 are therefore **not** on the critical path
+for (P). They give an independent, action-based mechanism and remain useful
+for proving (T2-R) in other RG schemes.
