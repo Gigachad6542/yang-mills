@@ -253,6 +253,8 @@ one PROGRESS line.
 - T21 [proof] — completed by Claude, 2026-10-02 (`research/29-contraction-from-single-step.md`):
   memory decay (D, T-b, B-b, and H3D-1 in 3D) reduced to single-step Lipschitz bounds (S1)-(S3)
   by a weighted forward/backward bootstrap.
+- T22 [computation] — completed by Claude, 2026-10-02 (`research/30-su2-2d-sup-check.md`):
+  exact 2D SU(2) check that the sup-oscillation depth comparison holds with rate L^{-2N}.
 
 ## Proposals
 (Workers: at most 5 lines each.)

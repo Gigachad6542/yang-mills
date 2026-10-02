@@ -1,0 +1,14 @@
+b = 2.0 (heat-kernel time t = 1/b... continuum limit check)
+  L=2 N=1 M=   2  sup|log f_N - log f_(N-1)| = 1.5746e+00
+  L=2 N=2 M=   4  sup|log f_N - log f_(N-1)| = 5.5957e-01  ratio=2.814
+  L=2 N=3 M=   8  sup|log f_N - log f_(N-1)| = 1.0165e-01  ratio=5.505
+  L=2 N=4 M=  16  sup|log f_N - log f_(N-1)| = 2.2972e-02  ratio=4.425
+  L=2 N=5 M=  32  sup|log f_N - log f_(N-1)| = 5.5918e-03  ratio=4.108
+  L=2 N=6 M=  64  sup|log f_N - log f_(N-1)| = 1.3886e-03  ratio=4.027
+  L=3 N=1 M=   3  sup|log f_N - log f_(N-1)| = 2.0121e+00
+  L=3 N=2 M=   9  sup|log f_N - log f_(N-1)| = 2.3019e-01  ratio=8.741
+  L=3 N=3 M=  27  sup|log f_N - log f_(N-1)| = 2.1287e-02  ratio=10.814
+  L=3 N=4 M=  81  sup|log f_N - log f_(N-1)| = 2.3129e-03  ratio=9.203
+b = 8.0 (heat-kernel time t = 1/b... continuum limit check)
+  nonpositive density 2
+  nonpositive density 3
