@@ -73,7 +73,9 @@ estimate. The research notes give the details.
   18 §9a.)
 - **(H0), Balaban's unpublished coupling-flow theorem (note 22):** reduced to
   (C) geometric convergence of the free one-loop increments, (S) the
-  classical one-loop sum rule, and (D) memory decay. The Codex task T13
+  classical one-loop sum rule, and (D) memory decay. (C) follows from geometric
+  convergence of Balaban's free step operators, which holds for the averaging kernels
+  and weights; the discretization part is stated (note 41). The Codex task T13
   computes the one-loop window numerically.
 - **(B), the R-bias:**
   - equal fiber mass for the actual R' (20, proved from CMP 122 I);

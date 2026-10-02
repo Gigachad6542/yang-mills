@@ -297,6 +297,11 @@ one PROGRESS line.
   single-step Jacobian: theta -> 1/16 = L^-4, e = O(g^4) at heat-kernel shape, b*c = O(g^4) (b, c separately coordinate dependent),
   e ~ 3.4 w linear in irrelevant size. Note 29's hypotheses are consistent with asymptotic freedom; note 29 §3 remark added.
 
+- T33 [proof, conditional] — completed by Claude, 2026-10-02 (`research/41-free-increments-convergence.md`): (C) of note 22
+  (geometric convergence of the free increments beta_j^0) from (O1) uniform weighted propagator bounds [published at U = 1] and (O2)
+  geometric operator convergence, via the resolvent identity. (O2) is done for the averaging kernels (note 19 (2.1)) and the weights a_j;
+  the discretization part needs a two-scale (O1).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
