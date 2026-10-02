@@ -10,7 +10,7 @@ Status:
     (dynamic programming).
   - Theorem 3 (chain lemma): on the event that every image plaquette near
     the persistence region is below a fixed ε_0, the non-abelian (PA) of
-    note 26 holds with c_L = c/(4C_F²(R+1)), where R = ⌈log(ε_0/ε_min)/log ρ_L⌉,
+    note 26 holds with c_L = c η²/(C_F²(R+1)), where R = ⌈log(ε_0/ε_min)/log ρ_L⌉,
     **assuming** two variational inputs, (D1) and (D2).
 - **Conditional reduction.**
   - Non-abelian (PA) on the ε_0-small event ⇐ (D1) uniform fiber strong
@@ -106,27 +106,31 @@ with equality, and each bracket is >= 0. Under (D1), on E_0,
 
 ## 4. The chain lemma
 
-Put C_F := 4 and ρ_L := L²/(2C_I). Assume ρ_L > 1, which holds for L large.
+Put C_F := 4 and s_L := C_I L^{-2}, the sup-to-sup norm of the one-level minimizer
+image map. Fix η ∈ (0, 1) and put ρ_L := (1-η)/s_L. Assume ρ_L > 1, that is,
+s_L < 1 - η. The abelian computation of note 35 gives s_L ≈ 1.6, 1.1, 0.77,
+0.55 for L = 2, 3, 4, 5, so this assumption holds for L >= 4 and fails for
+L <= 3 (§5, item 4).
 Let ε_min := min_{j<=t} ε_j and R := ⌈log(ε_0/ε_min)/log ρ_L⌉.
 
 **Theorem 3.** Assume (D1), (D2) and the event E_0. If U is persistent on
 levels 1, ..., t, then
 
-    g_k^{-2} A_k(U) >= (c_1/(4C_F²(R+1))) Σ_{j=1}^t ε_j²/g_{k+j}².
+    g_k^{-2} A_k(U) >= (c_1 η²/(C_F²(R+1))) Σ_{j=1}^t ε_j²/g_{k+j}².
 
-This is (PA) of note 26 with c_L = c_1/(4C_F²(R+1)).
+This is (PA) of note 26 with c_L = c_1 η²/(C_F²(R+1)).
 
 *Proof.*
 
 1. *Dichotomy at one level.* Let q be a level-j plaquette with
    ϑ_j(q) =: α >= ε_j. By Lemma 1 applied with W = U_j, and then (D2),
 
-       α <= C_I L^{-2} sup_{p'} e^{-δ dist(q,p')} ϑ_{j+1}(p') + C_F |φ_j|_∞.
+       α <= s_L sup_{p'} e^{-δ dist(q,p')} ϑ_{j+1}(p') + C_F |φ_j|_∞.
 
    So one of the following holds:
-   - (G) |φ_j|_∞ >= α/(2C_F) >= ε_j/(2C_F);
+   - (G) |φ_j|_∞ >= ηα/C_F >= ηε_j/C_F;
    - (N) some level-(j+1) plaquette p' has
-     ϑ_{j+1}(p') >= ρ_L α e^{δ dist(q,p')} >= ρ_L α.
+     ϑ_{j+1}(p') >= ((1-η)α/s_L) e^{δ dist(q,p')} >= ρ_L α.
 2. *Chains.* Start from the persistence witness p_j. While (N) holds, move
    to the plaquette p' it provides and repeat at the next level, with α
    replaced by the new angle. After r consecutive (N) steps the angle is at
@@ -134,15 +138,15 @@ This is (PA) of note 26 with c_L = c_1/(4C_F²(R+1)).
    e^{δ dist} <= ε_0/ε_min, each step moves O(log(1/ε_min)) level units, so
    the chain stays inside the region of E_0.
 3. So for each j ∈ {1, ..., t} there is a level σ(j) ∈ [j, j + R] at which
-   (G) holds with |φ_{σ(j)}|_∞ >= ε_j/(2C_F). The angle only grows along the
+   (G) holds with |φ_{σ(j)}|_∞ >= ηε_j/C_F. The angle only grows along the
    chain, so the threshold ε_j is kept.
 4. *Pigeonhole.* Each level i equals σ(j) for at most R + 1 values of j.
    Hence
 
-       |φ_i|_∞² >= max_{σ(j)=i} ε_j²/(4C_F²) >= (1/(R+1)) Σ_{σ(j)=i} ε_j²/(4C_F²),
+       |φ_i|_∞² >= max_{σ(j)=i} η²ε_j²/C_F² >= (1/(R+1)) Σ_{σ(j)=i} η²ε_j²/C_F²,
 
    and summing over i gives
-   Σ_i |φ_i|_∞² >= Σ_{j=1}^t ε_j² / (4C_F²(R+1)).
+   Σ_i |φ_i|_∞² >= η² Σ_{j=1}^t ε_j² / (C_F²(R+1)).
 5. *Action.* By Lemma 2 (with t + R in place of t),
    A_k(U) >= c_1 Σ_i |φ_i|_∞². Multiply by g_k^{-2} and use g_k <= g_{k+j}
    (the coupling grows toward the infrared). ∎
@@ -150,7 +154,7 @@ This is (PA) of note 26 with c_L = c_1/(4C_F²(R+1)).
 **Rate.** By note 26 Prop. 1, with ε_j²/g_{k+j}² = p(g_{k+j})²,
 
     a = (1-δ) c_L min_j p(g_{k+j})² - C'
-      ≈ (1-δ) (c_1/(4C_F²)) p(γ)² log ρ_L / log(ε_0/(γ p(γ))).
+      ≈ (1-δ) (c_1 η²/C_F²) p(γ)² log ρ_L / log(ε_0/(γ p(γ))).
 
 Since p(γ)² = b_0²(1 + log γ^{-1})^{2p_0} with p_0 > 2, a grows like
 (log γ^{-1})^{2p_0 - 1}. So L⁴e^{-a} < 1 for small γ. The loss of
@@ -186,6 +190,22 @@ linearizing. It is harmless.
    Matching them needs (D1) in a local form, with the action restricted to
    a neighborhood of the chain. That neighborhood is C L^j log(1/ε_min) at
    level j, which is the region used in E_0.
+
+4. *The size of s_L (note 35).* In the abelian 4D theory (D2) holds exactly,
+   and its best sup-norm constant was computed by linear programming.
+   - The worst rows are the far-corner children: s_L ≈ 1.54, 1.12, 0.77,
+     0.55 for L = 2, 3, 4, 5 at one level. These are lower bounds on the
+     maximum over rows, on a 6⁴ coarse torus.
+   - At L = 2, s_L grows with the depth: 1.54, 1.63, 1.69 for m = 1, 2, 3,
+     with shrinking increments.
+
+   The reason s_L is not O(L^{-2}): coarse flux patterns that oscillate at
+   the block scale are suppressed by the averaging kernel, so the minimizer
+   that reproduces them must have larger fine fluxes. So the "coarse
+   curvature over L²" reading of (D2) is wrong in the sup norm; only s_L < 1
+   is available, and only for L >= 4. Theorem 3 needs exactly that. With
+   L = 2 or 3 the chain argument fails, and an energy (ℓ²) form of (D2)
+   would be needed.
 
 ## 6. Net effect on (P)
 

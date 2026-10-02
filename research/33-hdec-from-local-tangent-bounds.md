@@ -57,6 +57,16 @@ dimension-2 term would be linear in the curvature, and it is excluded by
 Ad-invariance. This is the same group-theoretic fact as note 11 §6 (color
 invariance at a flat exterior).
 
+*Correction (note 35).* The size C_reg κ'/L² holds for coarse fields that are
+smooth on the block scale. It does **not** hold uniformly over Balaban's
+coarse small-field domain. That domain contains coarse fluxes that oscillate
+at the block scale, and the exact abelian minimizer turns these into fine
+fluxes of size s_L κ', with s_L ≈ 1.5, 1.1, 0.8, 0.55 for L = 2, 3, 4, 5
+(not O(L^{-2})). So in the sup norm over the whole domain, Lemma 1 gives
+only 2||h||(s_L κ'/α)² per level. The factor L^{-4} holds on the smooth
+(low-momentum) part. This affects only this reading. Theorem 3 below does
+not use it: it assumes (LS) and gets L^{-4m} from charge conservation.
+
 **Why this does not iterate.** Applied once per level, Lemma 1 gives the
 factor 2C_reg²L^{-4} per level, hence (2C_reg²)^m L^{-4m} after m levels. In
 note 32 Cor. 5 the L^{-4} per level exactly cancels the L^4 placement
