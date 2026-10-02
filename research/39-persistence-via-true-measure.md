@@ -215,3 +215,18 @@ M, R it is not automatic. Balaban treats the corresponding terms in
 CMP 122 II (1.14)-(1.37) and states that they are small. Whether that
 treatment yields (5.1) is the remaining check. It is a finite question about
 the sizes in CMP 122 II §1.
+
+*Source status of the distance.* The components X_i carry layers of
+MR_k-cubes, and ζ_i is localized at depth about 8MR_k from the fiber
+support (CMP 122 II p. 364: "the distance is larger than 8MR_k, hence ... the
+additional exponential factor exp(-δ8MR_k)"). Balaban says this factor
+"suppresses all powers of log g_k^{-2}, and all powers of M" (CMP 122 II
+p. 360). Condition (5.1) needs more: e^{-8δMR_k} p(g_k)/g_k = O(1), that is,
+R_k >= (8δM)^{-1} log(p(g_k)/g_k). Whether Balaban's R_k grows that fast
+(like log g_k^{-1}) or only like a power of log log g_k^{-1} could not be
+settled from the OCR text here. The definition of R_k (CMP 119 §1 or
+CMP 116) is the one remaining source fact for (T1\*). If R_k grows more
+slowly, the R'-template would have to be built on a slightly larger region
+(R_k ~ log g_k^{-1}). The entropy cost of that is O(log g_k^{-1}) per
+label, which the label's large-field factor exp(-γ_0 p_0(g_k)²) still
+absorbs.
