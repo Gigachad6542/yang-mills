@@ -255,6 +255,9 @@ one PROGRESS line.
   by a weighted forward/backward bootstrap.
 - T22 [computation] — completed by Claude, 2026-10-02 (`research/30-su2-2d-sup-check.md`):
   exact 2D SU(2) check that the sup-oscillation depth comparison holds with rate L^{-2N}.
+- T17 [failed-attempt/computation] — completed by Claude, 2026-10-02 (`research/26-persistence-bound.md`):
+  (P) is not derivable from the published bounds as stated. It is reduced to the persistent-curvature
+  action lemma (PA) plus an action-weighted upper bound (UB); (PA) is verified in the abelian case.
 
 ## Proposals
 (Workers: at most 5 lines each.)

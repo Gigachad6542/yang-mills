@@ -1,0 +1,28 @@
+L=2 n=32: Gram diagonal (variance of level-j flux, scale-invariant ~ const): [0.23483 0.17198 0.15334 0.10577]
+correlation matrix:
+ [[ 1.      0.0675 -0.0044 -0.0073]
+ [ 0.0675  1.      0.08   -0.0324]
+ [-0.0044  0.08    1.     -0.    ]
+ [-0.0073 -0.0324  0.      1.    ]]
+  t=1: 1^T G^-1 1 = 4.2585   per level = 4.2585
+  t=2: 1^T G^-1 1 = 9.4446   per level = 4.7223
+  t=3: 1^T G^-1 1 = 15.1438   per level = 5.0479
+  t=4: 1^T G^-1 1 = 25.1183   per level = 6.2796
+L=2 n=48: Gram diagonal (variance of level-j flux, scale-invariant ~ const): [0.23483 0.17209 0.15514 0.1437 ]
+correlation matrix:
+ [[ 1.      0.0676 -0.0036 -0.0022]
+ [ 0.0676  1.      0.0825 -0.0081]
+ [-0.0036  0.0825  1.      0.0768]
+ [-0.0022 -0.0081  0.0768  1.    ]]
+  t=1: 1^T G^-1 1 = 4.2583   per level = 4.2583
+  t=2: 1^T G^-1 1 = 9.4403   per level = 4.7201
+  t=3: 1^T G^-1 1 = 15.0373   per level = 5.0124
+  t=4: 1^T G^-1 1 = 21.2093   per level = 5.3023
+L=3 n=54: Gram diagonal (variance of level-j flux, scale-invariant ~ const): [0.18869 0.15394 0.10481]
+correlation matrix:
+ [[ 1.00e+00  5.00e-04 -6.40e-03]
+ [ 5.00e-04  1.00e+00 -5.02e-02]
+ [-6.40e-03 -5.02e-02  1.00e+00]]
+  t=1: 1^T G^-1 1 = 5.2997   per level = 5.2997
+  t=2: 1^T G^-1 1 = 11.7902   per level = 5.8951
+  t=3: 1^T G^-1 1 = 22.2590   per level = 7.4197
