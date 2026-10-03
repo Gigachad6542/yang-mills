@@ -134,7 +134,9 @@ terminal observables) is:
   these terms do not behave in a regular way under the renormalization
   transformations." His (0.29) is a bound uniform in k, obtained from
   scale-dependent localization. It is not a per-step contraction. **(S1) is
-  a new theorem to be proved**, not a published input.
+  a new theorem to be proved**, not a published input. In the energy (l2) norm the
+  expected gain does appear: neighbouring-child differences contract by about
+  2.3/L per step (note 43). So (S1) should be stated in energy or averaged norms.
 
 By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
 uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).

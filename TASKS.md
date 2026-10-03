@@ -311,6 +311,10 @@ one PROGRESS line.
   explicitly not a per-step RG contraction. So (S1) of note 29 is a new theorem, not a published input. README and note 29 corrected.
   (S1) is now the main unproved single-step statement on both the 3D and 4D routes, together with (A_s) of note 42.
 
+- T36 [computation] — completed by Claude, 2026-10-03 (`research/43-energy-norm-transport.md`): in the energy (l2) norm on
+  exact coarse fluxes, transport conserves energy (L^4 mean^2 -> 1) and neighbouring-child differences (dimension 5) gain 2.3/L per step;
+  sup norms miss this gain (note 35). Suggests formulating (S1) in energy/averaged norms.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
@@ -321,3 +325,6 @@ one PROGRESS line.
   note 33 §1 L^-4 reading, note 34 (D2) constant, note 39 (T1)); all are fixed in place. If Codex gets
   one review task, the highest-value targets are now note 39 (§5a, §6: the (P) route), note 42 (Lemma 1,
   Thm 3: the (S2) route), note 33 (Thm 3) and note 37 (Lemmas 1-2).
+- Lead, 2026-10-03: (S1) is now the central open single-step theorem (CMP 109 p. 259 disclaims it). Proposal: define a mixed
+  norm (energy norm for transport and contraction, Balaban's sup norms for analytic remainders) and prove (S1) for the abelian
+  linearization first, using note 43's kernel data as the target constants.
