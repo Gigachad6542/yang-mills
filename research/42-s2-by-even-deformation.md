@@ -175,6 +175,18 @@ and prove the bounds"). The check of (A_s) for 4D is therefore a reading of
 CMP 116/119 for uses of the sign or reality of g. None was found in the
 passages read for notes 36-39, but the full check is not done.
 
+*Supporting 4D source fact (CMP 116, printed pp. 15-16).* In estimating
+the fluctuation integral for complex configurations U'U (U' = exp(iη A')
+with A' complex and small), Balaban writes: "the operators in it are not
+symmetric, and the second measure is complex ... For the pair (U, 0) the
+operators are symmetric, and the measure is positive, and then the
+estimates are simpler. The general case is handled by a perturbative
+argument" ((2.15)-(2.16)). So his 4D single-step estimates already allow
+complex data, controlled by smallness alone. The s-deformation is milder:
+the Gaussian part stays real and positive, and only the interaction I_{sg}
+is complex, with |sg| p(g) <= α. This supports (A_s) in 4D. It does not
+replace a line-by-line check of CMP 116/119.
+
 ## 5. Consequences
 
 - **3D.** By the README chain (notes 17, 18, 29), M1-3D ⇐ (S1) + (S2) for
