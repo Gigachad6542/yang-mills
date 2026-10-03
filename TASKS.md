@@ -346,6 +346,10 @@ one PROGRESS line.
   (T2-R) from CMP 122 II (1.79)-(1.89). Correction to note 39 §6: carried domains get no new factor for K <= n_0 + R_j steps (1.83),
   so a_eff ~ p_0^2/R ~ (log)^{2p_0 - r}; needs 2p_0 > r (source check) and the KP form of Balaban's expansion.
 
+- T44 [proof + sketch] — completed by Claude, 2026-10-03 (`research/50-sum-rule-from-multiplicativity.md`): (S) of note 22.
+  Exact multiplicativity of the limit step (box formula + Lemma B + note 48) gives beta_inf^0(L) = c log L; an O(1) edge bound (E)
+  (power-law propagator corrections at both edges; sketched) forces c = 2b_0. The scheme constant from T19 is no longer needed.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

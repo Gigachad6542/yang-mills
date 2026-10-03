@@ -78,8 +78,9 @@ estimate. The research notes give the details.
     rate O(log M/M) proved, about M^-2 measured (47). Assembled in 48:
     all quadratic and linear ingredients converge geometrically; the vertex
     Riemann sums are stated;
-  - (S) the one-loop sum rule. Its universal part is published; a finite
-    scheme matching remains;
+  - (S) the one-loop sum rule. By exact multiplicativity of the limit step
+    (note 50), beta_inf^0 = c log L, and an O(1) edge bound (sketched)
+    forces c = 2b_0. No finite scheme constant is needed;
   - (D) memory decay.
 - **(B), the R-bias:**
   - equal fiber mass for R' (20) and curved-background contraction (24),
@@ -230,6 +231,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/44-abelian-energy-s1-theorem.md` -- (S1) for first differences, abelian, energy norm: a theorem
 - `research/45-nonabelian-energy-s1-transfer.md` -- Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
 - `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
+- `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22 from exact multiplicativity of the limit step
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction
 - `research/48-free-increments-assembly.md` -- (C) of note 22 assembled: free increments converge geometrically
 - `research/47-marginal-form-convergence.md` -- Depth convergence of the marginal form: the block-flux covariance converges geometrically
