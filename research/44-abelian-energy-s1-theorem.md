@@ -111,3 +111,31 @@ Apply Theorem 1. ∎
 
 So (S1)'s transport part is now a theorem in the abelian linearization. The
 remaining (S1) work is the nonlinear, non-abelian transfer.
+
+## Addendum: second differences (dimension 6), computed
+
+Sharp ratios sup ||∇_μ∇_ν F_min|| / ||F_min|| (same script, `run2`):
+
+| M | ratio | M × ratio | M^{1.5} × ratio |
+|---|---|---|---|
+| 2 | 1.897 | 3.79 | 5.37 |
+| 4 | 1.025 | 4.10 | 8.20 |
+| 8 | 0.475 | 3.80 | 10.75 |
+| 16 | 0.193 | 3.08 | 12.33 |
+
+The local exponent rises from 1.0 to 1.3 (M = 8 -> 16). It appears to
+tend to 3/2, not 2.
+
+The reason is that J = d* W^T λ has jumps: the derivatives of the tent
+factors are piecewise constant. So ∇F_min has kinks on block faces, and
+F_min is in H^{3/2-} but not H². This matches Balaban's C^{1,β} (β < 1)
+regularity of minimal configurations (CMP 102b (9), with constant
+B_4(β_0)).
+
+For one RG step this gives a heuristic estimate. Second differences of the
+level-(m-1) image over cells of size M/L see the kinks only within M/L of a
+face. The energy is then about (M/L)·(F/M) in amplitude on a fraction
+(M/L)/M of the positions, so the norm gain is about L^{-3/2}.
+Dimension-6 data therefore contract by about L^{-3/2} per step in the
+energy norm, not L^{-2}. That is still a contraction, but weaker than naive
+power counting. This part is computed, not proved.

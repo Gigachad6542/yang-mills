@@ -6,3 +6,10 @@ M=6: sharp C_M = M*sup ratio = 3.652; min alias-0 fraction = 0.1311
 M=8: sharp C_M = M*sup ratio = 3.773; min alias-0 fraction = 0.1291
 M=12: sharp C_M = M*sup ratio = 3.872; min alias-0 fraction = 0.1277
 M=16: sharp C_M = M*sup ratio = 3.911; min alias-0 fraction = 0.1272
+M=2: ratio 1.8967  M*ratio 3.793  M^1.5*ratio 5.365  M^2*ratio 7.587
+M=3: ratio 1.3412  M*ratio 4.024  M^1.5*ratio 6.969  M^2*ratio 12.071
+M=4: ratio 1.0254  M*ratio 4.102  M^1.5*ratio 8.203  M^2*ratio 16.406
+M=6: ratio 0.6671  M*ratio 4.002  M^1.5*ratio 9.804  M^2*ratio 24.015
+M=8: ratio 0.4749  M*ratio 3.800  M^1.5*ratio 10.747  M^2*ratio 30.396
+M=12: ratio 0.2834  M*ratio 3.401  M^1.5*ratio 11.780  M^2*ratio 40.808
+M=16: ratio 0.1927  M*ratio 3.083  M^1.5*ratio 12.334  M^2*ratio 49.334
