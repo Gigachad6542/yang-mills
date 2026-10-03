@@ -59,55 +59,55 @@ estimates while avoiding three later problems:
 | Corrected 4D master reduction | conditional reduction (note 27): M1-4D convergence <= coupling flow with shooting + terminal memory decay + summable R-bias series with memory decay |
 | 4D β-derivative bound H4D-3 | conditional reduction (note 21): follows from two-loop-order, memory-decaying β-function derivatives, step-wise coupling analyticity of the effective action, and an R-bias bound analytic in β; the cutoff-uniform flow-sensitivity lemma is proved |
 
-## Where the 4D programme stands (lead summary, 2026-10-02)
+## Where the 4D programme stands (lead summary, updated 2026-10-03)
 
 Each item below is proved here, or reduced here to a precisely stated open
 estimate. The research notes give the details.
 
-- **Exact structure (proved):** terminal sources pass exactly through T
-  (notes 04, 14); the zero-free source disc and cumulant control (03, 07);
-  in 3D, nondegeneracy (17) and the conditional depth comparison (18).
+- **Exact structure (proved):**
+  - terminal sources pass exactly through T (notes 04, 14);
+  - the zero-free source disc and cumulant control (03, 07);
+  - in 3D, nondegeneracy (17) and the conditional depth comparison (18).
 - **Master reduction (note 27):** M1-4D convergence <= (H0) coupling flow
   with shooting + (T) terminal memory decay + (B) a summable R-bias series
-  with memory decay. (The earlier split in note 18 Thm 5 is superseded; see
-  18 §9a.)
-- **(H0), Balaban's unpublished coupling-flow theorem (note 22):** reduced to
-  (C) geometric convergence of the free one-loop increments, (S) the
-  classical one-loop sum rule, and (D) memory decay. (C) follows from geometric
-  convergence of Balaban's free step operators, which holds for the averaging kernels
-  and weights; the discretization part is stated (note 41). The Codex task T13
-  computes the one-loop window numerically.
+  with memory decay.
+- **(H0), coupling flow (notes 22, 41):** reduced to:
+  - (C) geometric convergence of the free one-loop increments. This follows
+    from convergence of Balaban's free step operators: proved for the
+    averaging kernels and weights; the discretization part is stated;
+  - (S) the one-loop sum rule. Its universal part is published; a finite
+    scheme matching remains;
+  - (D) memory decay.
 - **(B), the R-bias:**
-  - equal fiber mass for the actual R' (20, proved from CMP 122 I);
-  - curved-background contraction (24, proved), so H6 reduces to H7;
-  - H7 absorbed via rough-then-contract (25) into the persistence bound (P);
-    (P) <= (PA) + (UB) (26), with abelian (PA) proved (26) and non-abelian (PA) on the
-    eps_0-small event reduced to Balaban-type fiber convexity and minimizer regularity (34;
-    derived from CMP 102b/CMP 99 by linearization in 36; regularity constant computed in 35, needs L >= 4),
-    and the eps_0-large event reduced to lattice small-energy regularity (SER) (37), so that
-    (P) <= (UB-ms) + (SER), where a single-scale (UB) is not enough because of
-    entropy on a region of volume L^{4t} (38),
-    or, more directly, (P) <= (T1*) a fiber-law comparison for each label + (T2-R)
-    a marked large-field bound for Balaban's R-modified expansion (39 §5); (T2-R) follows
-    from CMP 122 II (1.73)-(1.81) with markers (bookkeeping), and (T1*) reduces exactly
-    to a boundary-layer oscillation bound that needs R_k >~ log(1/g_k) (39 §5a-§7),
-    plus a generalized, exterior-averaged H8.
-  - The Gaussian model confirms the averaged H8 mechanism (19).
-  - Generalized averaged H8 is a covariance between a terminal test and a local
-    gauge-invariant function, by integration by parts (32). Its decay (H-dec)
-    follows from local, extensive single-step tangent bounds (LS) plus large
-    fields (LF). The rate L^{-4m} is charge conservation plus volume
-    normalization, up to a power of m that the large-field weight absorbs (33).
-- **The one remaining kind of theorem.** The memory-decay statements (D),
-  (T-b) and (B-b) in 4D, and H3D-1 in 3D, all assert one thing: Balaban's
-  flow contracts the influence of fine-scale defects in irrelevant
-  directions. Note 29 reduces that contraction to three single-step
-  Lipschitz properties of one Balaban RG step: transport of irrelevant data
-  by L^{-alpha}, and O(g^2) dependence of newly generated terms and of the
-  beta-function on the input. Those, together with generalized averaged H8,
-  (P) and (S), would give M1-4D convergence. Nondegeneracy in 4D (P6) is
-  reduced (note 28) to a terminal small-field variance bound plus the quantitative
-  R-bias bound; large-field effects are superpolynomially small in the terminal coupling.
+  - equal fiber mass for R' (20) and curved-background contraction (24),
+    both proved;
+  - H7 absorbed into the persistence bound (P) (25).
+  - **(P)**, shortest route (39): (T1*), a per-label fiber-law comparison,
+    reduced exactly to a boundary-layer bound that needs R_k >~ log(1/g_k);
+    plus (T2-R), Balaban's positivity insertion CMP 122 II (1.73)-(1.81)
+    with markers (bookkeeping). An independent action-based route is in
+    notes 34-38 ((PA), (D1), (D2), (SER), (UB-ms)).
+  - **Generalized averaged H8** is a covariance (32). Its decay (H-dec)
+    follows from local extensive tangent bounds (LS) plus large fields (LF)
+    (33).
+- **Single-step theorems (the remaining core).** Note 29 reduces all memory
+  decay ((D), (T-b), (B-b) in 4D; H3D-1 in 3D) to (S1) transport
+  contraction, (S2) O(g²) generation, and (S3) β-dependence. Note 40 checks
+  the scheme in an exact Migdal-Kadanoff RG. Status:
+  - **(S1)** is *not* a published input: CMP 109 p. 259 disclaims RG
+    contraction. It fails in Balaban's plain sup norms (35). It holds in the
+    energy norm. For the abelian linearization the transport part is
+    **proved**: ||grad F_min|| <= C M^-1 ||F_min||, with C <= 60 (about 4
+    sharp), so first differences of images gain L^-1 per step (44).
+    Dimension-6 data gain about L^-3/2 (computed). Open: the non-abelian
+    transfer (linearize as in note 36).
+  - **(S2)** follows for a whole step from (A_s), Balaban's single-step
+    bounds for complex fluctuation coupling, by an exact even deformation
+    and a Schwarz lemma (42). In 3D, (A_s) reduces to CMP 102's
+    sixth-order remainder bound.
+  - **(S3)** has the order structure confirmed in the MK model (40).
+- **Nondegeneracy (P6-4D)** <= (V^R) + (B-small) (28). Three of the four
+  source checks for (V^R) are now cited.
 
 ## Shortest remaining route: three dimensions
 
