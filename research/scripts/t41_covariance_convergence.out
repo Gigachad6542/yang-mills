@@ -1,3 +1,4 @@
 M=2->4: sup_K ||C^(M) - C^(2M)|| = 1.765e-01
 M=4->8: sup_K ||C^(M) - C^(2M)|| = 5.877e-02   ratio prev/this = 3.00
 M=8->16: sup_K ||C^(M) - C^(2M)|| = 1.681e-02   ratio prev/this = 3.50
+M=16->32: sup_K ||C^(M) - C^(2M)|| = 4.418e-03   ratio prev/this = 3.81

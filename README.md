@@ -75,8 +75,9 @@ estimate. The research notes give the details.
   - (C) geometric convergence of the free one-loop increments. This follows
     from convergence of Balaban's free step operators: proved for the
     averaging kernels and weights (41) and for the marginal quadratic form,
-    rate O(log M/M) proved, about M^-2 measured (47). The one-loop vertex
-    part is open;
+    rate O(log M/M) proved, about M^-2 measured (47). Assembled in 48:
+    all quadratic and linear ingredients converge geometrically; the vertex
+    Riemann sums are stated;
   - (S) the one-loop sum rule. Its universal part is published; a finite
     scheme matching remains;
   - (D) memory decay.
@@ -226,6 +227,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/44-abelian-energy-s1-theorem.md` -- (S1) for first differences, abelian, energy norm: a theorem
 - `research/45-nonabelian-energy-s1-transfer.md` -- Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
 - `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
+- `research/48-free-increments-assembly.md` -- (C) of note 22 assembled: free increments converge geometrically
 - `research/47-marginal-form-convergence.md` -- Depth convergence of the marginal form: the block-flux covariance converges geometrically
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.

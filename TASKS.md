@@ -338,6 +338,10 @@ one PROGRESS line.
   (alias weights 1/sin^2 - 1/x^2 <= 1, Fejer/Parseval, projector and phase errors); measured rate ~M^-2 (ratios 3.0, 3.5 per doubling).
   This is the marginal-form part of (O2) in note 41; the one-loop vertex part remains.
 
+- T42 [proof, partly stated] — completed by Claude, 2026-10-03 (`research/48-free-increments-assembly.md`): (C) of note 22
+  assembled. Covariance, minimizer-map symbol (cross alias sum x C^-1; measured ratios 3.53, 3.38 per level) and weights all converge
+  geometrically by the note 47 argument; the vertex Riemann sums are stated. |beta_k^0 - beta_inf^0| <= C (1+log L^k) L^-k.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

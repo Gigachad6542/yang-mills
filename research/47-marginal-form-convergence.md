@@ -73,6 +73,7 @@ On a coarse 4⁴ momentum grid (K ≠ 0):
 | 2 -> 4 | 1.77e-1 | — |
 | 4 -> 8 | 5.88e-2 | 3.00 |
 | 8 -> 16 | 1.68e-2 | 3.50 |
+| 16 -> 32 | 4.42e-3 | 3.81 |
 
 The ratio per doubling rises towards 4. The true rate is close to M^{-2},
 faster than the proved O(log M/M). The first-order errors of step 5 cancel
