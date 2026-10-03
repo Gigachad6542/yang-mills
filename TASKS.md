@@ -329,6 +329,10 @@ one PROGRESS line.
   energy norm. (NA) follows from CMP 99 Thm 3.4 (analyticity in the background) by Cauchy and Schur; C_1(L) is not tracked.
   Transport part of (S1) in the energy norm for SU(2), given (NA).
 
+- T40 [proof] — completed by Claude, 2026-10-03 (`research/46-quadratic-form-norm.md`): the norm for (S1) is the form norm
+  relative to the minimal energy. Gauge invariance makes the leading part of delta E a quadratic form; transport is Q -> Q o T;
+  dimension-6 forms contract by (C/L)^2 and dimension-8 forms by C_3^2 L^-3 per step, and marginal forms by <= 1 (from note 44).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
