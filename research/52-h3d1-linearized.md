@@ -76,7 +76,8 @@ c_N = O(g² ε_N) from the one-step defect, this is O(g² ε_N ε_N^{σ'}) with
 - The interacting version needs:
   - (i) the generated terms of each step, O(g_k² p²) by note 42 / (A_s),
     with g_k² = g² ε_k geometric in 3D;
-  - (ii) the non-abelian transfer (note 45, (NA));
+  - (ii) the non-abelian transfer (note 45, (NA); corrected to (NA♭) in
+    note 54, to cover holonomy sectors);
   - (iii) the large-field sectors of CMP 102. There the factors are
     arbitrary powers of ε (CMP 119 introduction: "for d < 4 ... the bound
     ... can be estimated by an arbitrarily large power of ε"), so they are

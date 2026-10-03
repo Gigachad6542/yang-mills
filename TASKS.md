@@ -362,6 +362,10 @@ one PROGRESS line.
   H3D-0(b) proved. One private link per coarse bond (exact), conditional Jacobian >= c_L > 0 (operator concavity of
   P_h + |h|cot|h|(I - P_h)), a.e. injectivity (degree count, checked 150/150 by Newton). So M1-3D <= (A_s) + (NA).
 
+- T48 [counterexample + proof] — completed by Claude, 2026-10-03 (`research/54-flat-backgrounds-and-na.md`): note 45's (NA)
+  fails on the torus (flat backgrounds with holonomy). Proved: note 44's transport bound holds exactly at every flat SU(2)
+  background (twisted Bloch sectors); small-field backgrounds are o(1)-close to flat ones (compactness). Corrected (NA♭).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

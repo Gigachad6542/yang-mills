@@ -1,5 +1,12 @@
 # Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
 
+**Correction (note 54).** On the torus, (NA) as stated below is false. Flat
+backgrounds with nontrivial holonomy lie in E_0 for every ε_0, yet H(U) ≠ H_0
+for them. The corrected input (NA♭) compares H(U) with H(U♭) for the nearest
+flat background U♭. Proposition 1 holds with ∇_{U♭} and with C_1 ε_0 replaced
+by C_1(L) ω(ε_0) (note 54 §4). The transport constant at flat backgrounds is
+exactly the abelian one (note 54 Theorem 2).
+
 Status: **derivation from published bounds** (T39). The structure is proved
 here. One input, (NA), is obtained from CMP 99 by Cauchy estimates and
 Schur's test, but its constants C(L) are not tracked.

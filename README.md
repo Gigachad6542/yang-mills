@@ -109,7 +109,9 @@ estimate. The research notes give the details.
     sharp), so first differences of images gain L^-1 per step (44).
     Dimension-6 data gain L^-3/2 (proved, note 44 Thm 3). Non-abelian
     transfer on the small-field event (45): the same rates up to C_1(L) eps_0,
-    given (NA), a Cauchy-plus-Schur consequence of CMP 99 Thm 3.4.
+    given (NA), a Cauchy-plus-Schur consequence of CMP 99 Thm 3.4. (Note 54:
+    on the torus (NA) must be taken relative to the nearest flat background,
+    (NA♭); at flat backgrounds the transport constant is exactly abelian.)
   - **(S2)** follows for a whole step from (A_s), Balaban's single-step
     bounds for complex fluctuation coupling, by an exact even deformation
     and a Schwarz lemma (42). In 3D, (A_s) reduces to CMP 102's
@@ -163,7 +165,9 @@ The argument is an even complex deformation plus a Schwarz lemma. So
 analysis. **Update (note 52):** H3D-1' now holds at the linearized level
 (sigma >= 2), from the energy-norm transport theorem (notes 44, 51). So
 M1-3D <= (A_s) [CMP 102 remainder bound for complex coupling] + (NA) [3D
-background perturbation]. **Update (note 53):** the qualitative input H3D-0(b) is
+background perturbation; corrected to (NA♭) in note 54: compare with the
+nearest flat background, since a flat background with nontrivial holonomy
+refutes the original (NA)]. **Update (note 53):** the qualitative input H3D-0(b) is
 proved. Balaban's one-step average has one private link per coarse bond, its
 conditional Jacobian is >= c_L > 0 (operator concavity of the SU(2) log-Hessian),
 and it is injective a.e. (a degree count). So the push-forward density is bounded
@@ -244,6 +248,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
 - `research/52-h3d1-linearized.md` -- H3D-1' at the linearized level, from note 44
 - `research/53-average-pushforward-density.md` -- H3D-0(b): the push-forward density of Balaban's average is bounded above and below
+- `research/54-flat-backgrounds-and-na.md` -- (NA) on the torus: flat backgrounds with holonomy, a counterexample and the corrected statement
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction
