@@ -19,7 +19,10 @@ a0 + i a.sigma.
 """
 import sys
 import time
+import os
 import numpy as np
+
+HOT = os.environ.get("HOT") == "1"   # random (hot) start instead of cold
 
 rng = np.random.default_rng(int(sys.argv[1]) if len(sys.argv) > 1 else 50)
 
@@ -229,6 +232,8 @@ def run(N, n0, L, beta0, ntherm, nmeas, every):
     n = n0 * L ** N
     beta = beta0 * L ** N
     U = cold(n)
+    if HOT:
+        U = qnormalize(rng.normal(size=U.shape))
     masks = parity_mask(n)
     t0 = time.time()
     for it in range(ntherm):
