@@ -83,6 +83,25 @@ tensored with the identity on su(2).
    between the two configurations, which stays in the small-field domain on
    E_0. The weight e^{-δ dist} in (D2) absorbs this.
 
+*Holonomy caveat (note 54).* Step 4 and the use of Prop. 9 at V_0 = 1 assume
+that E_0 configurations are globally small in one gauge. On the torus this
+fails for nontrivial holonomy. The replacement:
+
+- use note 54 Lemma 3 (dist(V, Flat) <= ω(ε_0) in a suitable gauge);
+- apply Prop. 9 at the flat background V_0 = V♭, which satisfies (7) with zero
+  curvature;
+- step 4 is then not needed.
+
+The cost is twofold:
+
+- ε_0 is replaced by ω(ε_0) in the remainders;
+- the linear part at V♭ is the twisted abelian map on the charged
+  components (note 54 §1).
+
+Its sup-norm constant equals s_L^{ab} up to wrap-around corrections
+O(e^{-δ n_0}), because unimodular phases do not change |kernel|. This was not
+recomputed with the exact-flux LP of note 35.
+
 Hence on E_0, s_L^{NA} <= s_L^{ab}(1 + Cε_0) + Cε_0, with the weighted form
 of note 35. For L >= 4 (s_L^{ab} <= 0.88 including the observed m-growth)
 and small ε_0, the chain lemma's condition s_L < 1 - η holds.
