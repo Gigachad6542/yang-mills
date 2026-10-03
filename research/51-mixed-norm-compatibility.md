@@ -105,8 +105,9 @@ Balaban's activity bounds provide.
    renormalization, the β-function term), the remaining quadratic part is
    irrelevant. By Lemma 4 it splits into a dimension-5 redistribution and a
    dimension-6 gradient form, controlled by kernel moments.
-3. Transport multiplies the form norm of such irrelevant forms by
-   (C/L)² per step (note 46; SU(2) via note 45). Generation adds
+3. Transport multiplies the form norm of dimension-6 forms by (C/L)² and
+   of dimension-5 redistributions by C/L per step (Lemma 4, note 46; SU(2)
+   via note 45). Generation adds
    O(g² p(g)²) (note 42, given (A_s)). The higher-order parts stay
    O(ε_0) in the form norm and are controlled analytically in sup norms.
 
