@@ -74,3 +74,23 @@ if __name__ == "__main__":
     for M in (2, 3, 4, 6, 8, 12, 16):
         w = run2(M)
         print(f"M={M}: ratio {w:.4f}  M*ratio {M*w:.3f}  M^1.5*ratio {M**1.5*w:.3f}  M^2*ratio {M*M*w:.3f}", flush=True)
+
+
+def run_potential(M, nK=6):
+    """Sharp M * sup ||grad A_min|| / ||A_min|| for the Landau-gauge potential (|A|^2 = |J|^2/|r|^4)."""
+    ells = np.array(list(itertools.product(range(M), repeat=4))).T
+    worst = 0.0
+    ks = [2 * np.pi * (k + 0.5) / nK - np.pi for k in range(nK)]
+    for K in itertools.product(ks, repeat=4):
+        K = np.array(K)
+        p = (K[:, None] + 2 * np.pi * ells) / M
+        Dp = D(p, M)
+        base = np.abs(np.prod(Dp, axis=0)) ** 2
+        s2 = 4 * np.sin(p / 2) ** 2
+        r4 = s2.sum(0) ** 2
+        for rho in range(4):
+            A2 = base * np.abs(Dp[rho]) ** 2
+            Dn = np.sum(A2 / r4)
+            for nu in range(4):
+                worst = max(worst, np.sqrt(np.sum(s2[nu] * A2 / r4) / Dn))
+    return M * worst

@@ -91,7 +91,21 @@ by the same proof. In Landau gauge A_min = d* Δ^{-1} F_min, so
 - ||A||² >= c_0 (M/2π)⁴ Σ_K Σ_ℓ |J|², by the alias-0 fraction of note 44,
   step 4.
 
-Split by alias. For the lowest alias, |r_ν|² <= |r|² <= (2π/M)². For the
-others, |r| >= 2/M, so |J|²/|r|⁴ <= (M²/4)|J|²/|r|² and the gradient factor
-is <= 1 in the corresponding Fejér sums. This gives
-||∇_ν A_min|| <= C' M^{-1} ||A_min||, with C' explicit and comparable to C.
+*Proof.* Fix K and ρ. Write A_ℓ := A_ρ(p_ℓ) for the alias factor of note 44
+step 2, and r_ℓ := r(p_ℓ). Then
+
+    ||∇_ν A||²/||A||² <= max over K, ρ of  [Σ_ℓ |r_ν,ℓ|² |A_ℓ|²/|r_ℓ|⁴] / [Σ_ℓ |A_ℓ|²/|r_ℓ|⁴].
+
+1. *Numerator.* Since |r_ν|² <= |r|², it is <= Σ_ℓ |A_ℓ|²/|r_ℓ|². Split off
+   ℓ = 0. For ℓ != 0, |r_ℓ| >= (2/π)|p_ℓ| >= 2/M. So the rest is
+   <= (M²/4) Σ_ℓ |A_ℓ|² <= (M²/4) |A_0|²/c_0, by the alias-0 fraction.
+2. *Denominator.* It is >= |A_0|²/|r_0|⁴.
+3. *Ratio.* Hence ratio² <= |r_0|² + (M²/(4c_0)) |r_0|⁴. With
+   |r_0|² <= 4π²/M² this gives
+
+       ||∇_ν A_min|| <= (2π/M) √(1 + π²/c_0) ||A_min||.
+
+The same argument without the extra factor 1/|r|², for F, reproduces
+note 44 Theorem 1 with constant 2π/√c_0. The constant here is crude (about
+190). The sharp constant computed in `t37_energy_s1_constant.py`
+(`run_potential`) is 2.68, 3.09, 3.13, 3.11 for M = 2, 4, 8, 16. ∎

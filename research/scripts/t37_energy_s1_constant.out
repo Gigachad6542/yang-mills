@@ -13,3 +13,7 @@ M=6: ratio 0.6671  M*ratio 4.002  M^1.5*ratio 9.804  M^2*ratio 24.015
 M=8: ratio 0.4749  M*ratio 3.800  M^1.5*ratio 10.747  M^2*ratio 30.396
 M=12: ratio 0.2834  M*ratio 3.401  M^1.5*ratio 11.780  M^2*ratio 40.808
 M=16: ratio 0.1927  M*ratio 3.083  M^1.5*ratio 12.334  M^2*ratio 49.334
+potential: M=2: M*sup ratio = 2.683
+potential: M=4: M*sup ratio = 3.087
+potential: M=8: M*sup ratio = 3.129
+potential: M=16: M*sup ratio = 3.107
