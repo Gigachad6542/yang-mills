@@ -93,6 +93,18 @@ shows that plain sup norms do not give it. A proof must use the
 regularity-domain structure of Balaban's norms, or averaged norms as in
 note 33's extensive (LS) formulation.
 
+*Update (note 44).* In the energy norm the transport part of (S1) is proved
+for the abelian linearization:
+
+- first differences of images contract by C/L per step (C <= 60 proved,
+  about 4 sharp);
+- second differences contract by C_3 L^{-3/2} per step;
+- the marginal (block-average) part has norm <= 1.
+
+Theorem 1 here is norm-agnostic, so it applies with these energy-norm
+constants once the non-transport parts ((S2) via note 42, (S3)) are bounded
+in the same norm.
+
 *Remark (note 40).* In the exactly computable 4D SU(2) Migdal-Kadanoff RG,
 b and c separately depend on how the irrelevant coordinate is normalized
 (there b ∝ g⁶ and c ∝ g^{-2}). The invariant quantity is the product

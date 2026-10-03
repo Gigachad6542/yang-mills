@@ -138,6 +138,11 @@ Use **extensive** norms (weights per fine volume):
 
     n_j := L^{4j} Σ_x |λ_j(x)|,   r_j := L^{4j} Σ_X ||ρ_{j,X}||_j.
 
+*Remark (note 44).* In the abelian linearization and energy norms,
+(LS)(b) holds for the transport part: θ <= C/L for first differences and
+C_3 L^{-3/2} for second differences. The marginal transport is the exact block
+average with norm <= 1 (note 44, Theorems 1, 3 and Corollary 2).
+
 **Hypothesis (LS), local single-step tangent bounds.** For 0 <= j < m:
 
 - (a) λ_{j+1} = Aλ_j + E_jλ_j + B_jρ_j. Here A is the exact block average,
