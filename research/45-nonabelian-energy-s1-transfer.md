@@ -79,3 +79,19 @@ CMP 99 Theorem 3.4 and CMP 102b Prop. 9. What remains for (S1) as a whole:
 - writing Balaban's polymer activities in the energy norm. This is the
   mixed-norm framework proposed in notes 43-44. Analytic remainders stay in
   sup norms; transport and contraction are measured in energy.
+
+## Remark: the potential version of note 44 (used in step 2)
+
+Step 2 applies note 44 to the Landau-gauge potential ℋ = H_0 B, while
+note 44 Theorem 1 is stated for the curvature F. The potential version holds
+by the same proof. In Landau gauge A_min = d* Δ^{-1} F_min, so
+|A(p)|² = |J(p)|²/|r(p)|⁴. Then:
+
+- ||∇_ν A||² = Σ |r_ν|² |J|²/|r|⁴;
+- ||A||² >= c_0 (M/2π)⁴ Σ_K Σ_ℓ |J|², by the alias-0 fraction of note 44,
+  step 4.
+
+Split by alias. For the lowest alias, |r_ν|² <= |r|² <= (2π/M)². For the
+others, |r| >= 2/M, so |J|²/|r|⁴ <= (M²/4)|J|²/|r|² and the gradient factor
+is <= 1 in the corresponding Fejér sums. This gives
+||∇_ν A_min|| <= C' M^{-1} ||A_min||, with C' explicit and comparable to C.
