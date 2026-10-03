@@ -1,7 +1,8 @@
 # (S1) for first differences, abelian, energy norm: a theorem
 
 Status: **proved** (T37), for the abelian 4D theory with Balaban's linear
-block flux. The sharp constant is computed in
+block flux: Theorem 1 (first differences, M^{-1}), Corollary 2 (image
+differences, L^{-1}) and Theorem 3 (image second differences, L^{-3/2}). The sharp constant is computed in
 `research/scripts/t37_energy_s1_constant.py` (output `.out`).
 
 ## Statement
@@ -139,3 +140,39 @@ face. The energy is then about (M/L)·(F/M) in amplitude on a fraction
 Dimension-6 data therefore contract by about L^{-3/2} per step in the
 energy norm, not L^{-2}. That is still a contraction, but weaker than naive
 power counting. This part is computed, not proved.
+
+## Theorem 3 (second differences of images; proved)
+
+With M_1 = M/L and Δ²_ν := (τ_{M_1 e_ν} - 1)²,
+
+    ||W_{M_1} Δ²_ν F_min||_2 <= ||Δ²_ν F_min||_2 <= C_3 L^{-3/2} ||F_min||_2,
+
+where C_3 depends only on d = 4 (an explicit, crude constant). So
+dimension-6 data on the level-(m-1) lattice contract by L^{-3/2} per step in
+the energy norm, uniformly in the depth m.
+
+*Proof.*
+
+1. *Multiplier.* ||Δ²_ν F||² = Σ_K Σ_ℓ |e^{iM_1 p_ν} - 1|⁴ |J(p_ℓ)|²/|r(p_ℓ)|².
+   Since |e^{ix} - 1| <= min(|x|, 2) and |p| <= (π/2)|r_ν| for |p| <= π,
+   we have |e^{iM_1 p_ν} - 1|⁴ <= min((π/2)⁴ M_1⁴ |r_ν|⁴, 16). Also
+   1/|r|² <= 1/|r_ν|².
+2. *The ν coordinate.* Write J_ρ = A_ρ c_ρ, as in Theorem 1. A_ρ contains
+   |D_M(p_ν)|², and |r_ν|² |D_M(p_ν)|² = |1 - e^{-iK_ν}|² <= K_ν². So the
+   ν factor is
+
+       Σ_{ℓ_ν} min((π/2)⁴ M_1⁴, 16/|r_ν(p_ℓ)|⁴) K_ν².
+
+   The alias at distance d >= 1 from the lowest has |r_ν| >= 2(2d - 1)/M.
+   Splitting at d ~ L gives a total <= C(L M_1⁴ + M⁴/L³) = 2C M⁴/L³.
+3. *Other coordinates.* Use the Parseval identities of Theorem 1: Σ_ℓ |D|² = M²
+   and Σ_ℓ |D|⁴ <= M⁴. They give at most M⁸ (for ν = ρ the extra |D_ν|²
+   gives the same total). Hence ||Δ²_ν F||² <= C|K|² M^{12} L^{-3} Σ_K |c|².
+4. *Lower bound.* As in Theorem 1, steps 3-4,
+   ||F_min||² >= (M²/4π²)(2/π)^{10} M^{10} Σ_K |c|².
+5. Divide, using |K| <= 2π. ||W_{M_1}|| <= 1 by the Corollary 2 proof. ∎
+
+This turns the addendum's heuristic L^{-3/2} into a theorem. The computed
+fine-scale exponent rises towards 3/2 (local 1.3 at M = 16), which is
+consistent: the M^{-3/2} rate for fine second differences follows from the
+same proof with M_1 = 1.
