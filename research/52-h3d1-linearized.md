@@ -83,6 +83,13 @@ c_N = O(g² ε_N) from the one-step defect, this is O(g² ε_N ε_N^{σ'}) with
     ... can be estimated by an arbitrarily large power of ε"), so they are
     harmless for H3D-1'.
 
+*Status of this paragraph: conditional reduction, outlined.* The passage from
+(i)-(iii) to the interacting H3D-1' is not written out. It goes through
+note 29's memory-decay theorem and the polymer form H3D-2 (note 18, research/09
+Prop. 4). Under the interacting measures μ_{N,s} the conditioning step 1 of §2
+is no longer an exact Gaussian split, so it must be replaced by the transport
+of polymer activities. With that caveat:
+
 So **M1-3D ⇐ (A_s) [3D: reduced to CMP 102's sixth-order remainder bound]
 + (NA) [3D] + H3D-0(b) [qualitative, fixed-N]**, together with notes 17,
 18, 44-46, 51-52. Each of these is either a reading of CMP 102 or a

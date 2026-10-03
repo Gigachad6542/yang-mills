@@ -163,7 +163,10 @@ uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).
 The argument is an even complex deformation plus a Schwarz lemma. So
 **M1-3D reduces to (S1) + (A_s)**, two statements about CMP 102's single-step
 analysis. **Update (note 52):** H3D-1' now holds at the linearized level
-(sigma >= 2), from the energy-norm transport theorem (notes 44, 51). So
+(sigma >= 2), from the energy-norm transport theorem (notes 44, 51). As a
+conditional reduction (the assembly of the interacting H3D-1' from the
+single-step inputs, through note 29 and H3D-2 with CMP 102's large-field
+factors, is outlined in note 52 §3 but not written out),
 M1-3D <= (A_s) [CMP 102 remainder bound for complex coupling] + (NA) [3D
 background perturbation; corrected to (NA♭) in note 54: compare with the
 nearest flat background, since a flat background with nontrivial holonomy
