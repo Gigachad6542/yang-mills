@@ -300,3 +300,20 @@ This form is also consistent with Balaban's remark that exp(-½δMR_k)
 definition of R_k in the CMP 109-122 series was not located in the OCR text
 of this repository. So (T1\*) is **conditional on R_k having this form**,
 which the parallel construction in Dimock's exposition supports.
+
+### 7b. The growth of R_k: resolved
+
+CMP 119, printed p. 245 (OCR `sources/ocr/cmp119.md`, line 46): "R_0 is the
+smallest power of L such that R_0 >= (log g_0^{-2})^r, r >= 2". The k-th
+step uses R_k defined the same way from g_k. That is why exp(-½δMR_k)
+"suppresses all powers of log g_k^{-2}" (CMP 122 II p. 360).
+
+With R_k >= (log g_k^{-2})^r and r >= 2,
+
+    e^{-8δMR_k} p(g_k)/g_k <= exp(-8δM (log g_k^{-2})² + log g_k^{-1} + p_0 log log g_k^{-1}) -> 0,
+
+so condition (5.1) holds for all small g_k. **(T1\*) therefore holds**,
+given the exact reduction of §5a and Balaban's bounds on the non-Wilson
+terms. The parallel construction in Dimock's exposition (§7a) is consistent
+with this. Status of (P): (P) <= (T2-R), whose only gap is the unprinted
+marker bookkeeping of §6.

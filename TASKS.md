@@ -320,6 +320,10 @@ one PROGRESS line.
   J_rho(p_l) = A_rho(p_l) c_rho(K) and the alias-0 energy fraction) and sharp C -> ~4 (computed). Corollary: one-step image differences
   are O(L^-1) of the energy, across faces too. This is the transport part of (S1) in the energy norm, abelian linearization.
 
+- T38 [fix/source reading] — completed by Claude, 2026-10-03: CMP 119 p. 245 defines R_0 as the smallest power of L with
+  R_0 >= (log g_0^-2)^r, r >= 2, and R_k likewise. So condition (5.1) of note 39 holds and (T1*) holds; (P) now needs only the
+  marker bookkeeping of (T2-R) (note 39 §6, §7b).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

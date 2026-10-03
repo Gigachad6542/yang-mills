@@ -83,9 +83,10 @@ estimate. The research notes give the details.
     both proved;
   - H7 absorbed into the persistence bound (P) (25).
   - **(P)**, shortest route (39): (T1*), a per-label fiber-law comparison,
-    reduced exactly to a boundary-layer bound that needs R_k >~ log(1/g_k);
-    plus (T2-R), Balaban's positivity insertion CMP 122 II (1.73)-(1.81)
-    with markers (bookkeeping). An independent action-based route is in
+    holds: it reduces exactly to a boundary-layer bound, and that bound holds
+    because R_k >= (log g_k^-2)^r with r >= 2 (CMP 119 p. 245). Plus (T2-R),
+    Balaban's positivity insertion CMP 122 II (1.73)-(1.81) with markers.
+    So (P) <= marker bookkeeping only. An independent action-based route is in
     notes 34-38 ((PA), (D1), (D2), (SER), (UB-ms)).
   - **Generalized averaged H8** is a covariance (32). Its decay (H-dec)
     follows from local extensive tangent bounds (LS) plus large fields (LF)
