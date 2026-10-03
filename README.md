@@ -192,6 +192,41 @@ measure on a torus, at the level of fixed-scale block observables.
   contraction and the actual placement-summed H6\(_\Sigma\) target; the
   nonlinear Eq. (0.12) remains conditional on its small-diameter domain and a
   Lipschitz estimate for the group mean.
+- `research/13-averaged-bias.md` -- Averaged \(R\)-bias as a connected correlation
+- `research/14-three-dimensional-m1.md` -- Three dimensions: exact \(T\)-transport and the absence of \(R\)-bias
+- `research/15-h6-symmetric-average.md` -- The symmetric CMP 109 average: rough and trivial-background H6 bounds
+- `research/16-normalized-tail.md` -- Normalization, bad-event tails, and H7\(_\Sigma\)
+- `research/17-three-dimensional-nondegeneracy.md` -- Three-dimensional M1 reduction and terminal nondegeneracy
+- `research/18-three-dimensional-depth-comparison.md` -- The three-dimensional adjacent-depth comparison (P4-3D)
+- `research/19-gaussian-power-counting.md` -- Four-dimensional Gaussian power counting for a rooted even defect
+- `research/20-equal-mass-per-label.md` -- Equal mass per label: the \(R'\)-proof and the complete-\(R\) stopping point
+- `research/21-beta-derivative-4d.md` -- The β-derivative bound H4D-3 in four dimensions
+- `research/22-coupling-flow-free-field-reduction.md` -- Reducing the coupling-flow theorem H0 to a free-field statement
+- `research/23-one-loop-window.md` -- One-loop window sums: exact scalar calibration and the SU(2) stopping point
+- `research/24-curved-contraction.md` -- Curved-background contraction for the CMP 109 average: note 12's (3.3) proved
+- `research/25-h7-absorbed.md` -- H7 absorbed: rough-then-contract and large-field persistence
+- `research/26-persistence-bound.md` -- The persistence bound (P): source reading and the exact missing step
+- `research/27-4d-master-reduction.md` -- Corrected 4D master reduction: comparison at fixed terminal coupling
+- `research/28-4d-nondegeneracy-reduction.md` -- P6-4D: nondegeneracy from superpolynomial large-field suppression
+- `research/29-contraction-from-single-step.md` -- Memory decay from single-step Lipschitz bounds
+- `research/30-su2-2d-sup-check.md` -- Exact 2D SU(2) check of the sup-oscillation depth comparison
+- `research/31-s2-model-lemma.md` -- (S2) at the level of one fluctuation integral: the O(g²) mechanism, proved
+- `research/32-h8-by-integration-by-parts.md` -- Generalized averaged H8 as a decorrelation estimate (integration by parts)
+- `research/33-hdec-from-local-tangent-bounds.md` -- Rooted decorrelation (H-dec) from local single-step tangent bounds
+- `research/34-nonabelian-persistence-action.md` -- Non-abelian (PA) on the ε_0-small event, from fiber convexity and minimizer regularity
+- `research/35-minimizer-regularity-abelian.md` -- Minimizer regularity (D2) in the abelian 4D theory: exact sup-norm constants
+- `research/36-d1-d2-from-balaban-variational.md` -- (D1) and (D2) of note 34 from Balaban's variational theory (CMP 102b, CMP 99)
+- `research/37-pa-large-levels.md` -- (PA) on all events: large levels cost a fixed action each
+- `research/38-ub-entropy-obstruction.md` -- (UB): what CMP 122 II gives, a lemma, and why a single-scale (UB) cannot give (P)
+- `research/39-persistence-via-true-measure.md` -- (P) from a marked large-field bound for the true measure
+- `research/40-mk-single-step-check.md` -- Note 29's single-step hypotheses in the 4D SU(2) Migdal-Kadanoff RG
+- `research/41-free-increments-convergence.md` -- (C) of note 22: geometric convergence of the free increments from operator convergence
+- `research/42-s2-by-even-deformation.md` -- (S2) for a whole RG step by an even complex deformation of the fluctuation coupling
+- `research/43-energy-norm-transport.md` -- Transport in the energy norm: the gain sup norms miss
+- `research/44-abelian-energy-s1-theorem.md` -- (S1) for first differences, abelian, energy norm: a theorem
+- `research/45-nonabelian-energy-s1-transfer.md` -- Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
+- `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
+- `research/47-marginal-form-convergence.md` -- Depth convergence of the marginal form: the block-flux covariance converges geometrically
 - `references/primary-sources.md` -- annotated primary-source bibliography.
 - `manuscript/main.tex` -- paper-style draft assembled from the research notes.
 - `output/pdf/constructive-ym-fixed-volume-milestone.pdf` -- verified nine-page
