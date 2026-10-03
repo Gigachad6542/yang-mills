@@ -324,6 +324,11 @@ one PROGRESS line.
   R_0 >= (log g_0^-2)^r, r >= 2, and R_k likewise. So condition (5.1) of note 39 holds and (T1*) holds; (P) now needs only the
   marker bookkeeping of (T2-R) (note 39 §6, §7b).
 
+- T39 [proof, conditional] — completed by Claude, 2026-10-03 (`research/45-nonabelian-energy-s1-transfer.md`): SU(2) on E_0:
+  ||grad H(B)|| <= (C_ab + C_1(L) eps_0) M^-1 ||H(B)||, from note 44 (flat part) plus (NA), the background-perturbation bound in
+  energy norm. (NA) follows from CMP 99 Thm 3.4 (analyticity in the background) by Cauchy and Schur; C_1(L) is not tracked.
+  Transport part of (S1) in the energy norm for SU(2), given (NA).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

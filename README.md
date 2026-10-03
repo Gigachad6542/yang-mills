@@ -100,8 +100,9 @@ estimate. The research notes give the details.
     energy norm. For the abelian linearization the transport part is
     **proved**: ||grad F_min|| <= C M^-1 ||F_min||, with C <= 60 (about 4
     sharp), so first differences of images gain L^-1 per step (44).
-    Dimension-6 data gain about L^-3/2 (computed). Open: the non-abelian
-    transfer (linearize as in note 36).
+    Dimension-6 data gain L^-3/2 (proved, note 44 Thm 3). Non-abelian
+    transfer on the small-field event (45): the same rates up to C_1(L) eps_0,
+    given (NA), a Cauchy-plus-Schur consequence of CMP 99 Thm 3.4.
   - **(S2)** follows for a whole step from (A_s), Balaban's single-step
     bounds for complex fluctuation coupling, by an exact even deformation
     and a Schwarz lemma (42). In 3D, (A_s) reduces to CMP 102's
