@@ -313,7 +313,7 @@ one PROGRESS line.
 
 - T36 [computation] — completed by Claude, 2026-10-03 (`research/43-energy-norm-transport.md`): in the energy (l2) norm on
   exact coarse fluxes, transport conserves energy (L^4 mean^2 -> 1) and neighbouring-child differences (dimension 5) gain 2.3/L per step;
-  sup norms miss this gain (note 35). Suggests formulating (S1) in energy/averaged norms.
+  sup norms miss this gain (note 35). Corrected: cross-face pairs gain only ~L^-0.6 for L <= 5 (worst row ~1 at L = 5). Pre-asymptotic face effects.
 
 ## Proposals
 (Workers: at most 5 lines each.)
