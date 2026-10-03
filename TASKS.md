@@ -315,6 +315,11 @@ one PROGRESS line.
   exact coarse fluxes, transport conserves energy (L^4 mean^2 -> 1) and neighbouring-child differences (dimension 5) gain 2.3/L per step;
   sup norms miss this gain (note 35). Corrected: cross-face pairs gain only ~L^-0.6 for L <= 5 (worst row ~1 at L = 5). Pre-asymptotic face effects.
 
+- T37 [proof] — completed by Claude, 2026-10-03 (`research/44-abelian-energy-s1-theorem.md`): abelian 4D, Balaban linear block
+  flux: ||grad F_min||_2 <= C M^-1 ||F_min||_2 for all exact coarse data, with C <= 60 (proved, via the co-closed factorization
+  J_rho(p_l) = A_rho(p_l) c_rho(K) and the alias-0 energy fraction) and sharp C -> ~4 (computed). Corollary: one-step image differences
+  are O(L^-1) of the energy, across faces too. This is the transport part of (S1) in the energy norm, abelian linearization.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

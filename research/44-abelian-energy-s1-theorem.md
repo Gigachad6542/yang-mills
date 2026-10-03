@@ -1,0 +1,113 @@
+# (S1) for first differences, abelian, energy norm: a theorem
+
+Status: **proved** (T37), for the abelian 4D theory with Balaban's linear
+block flux. The sharp constant is computed in
+`research/scripts/t37_energy_s1_constant.py` (output `.out`).
+
+## Statement
+
+Fine torus (Z/(n_0 M))^4 with M = L^m. Fine fluxes F are exact 2-forms, and
+the level-m block fluxes Φ = W F are given by note 19 (2.1). For exact
+coarse data Φ let F_min be the minimizer of ||F||_2 subject to W F = Φ.
+Write ∇_ν F(x) = F(x + e_ν) - F(x).
+
+**Theorem 1.** For every exact Φ and every direction ν,
+
+    ||∇_ν F_min||_2 <= C M^{-1} ||F_min||_2,   C = 2π/√c_0,   c_0 = 1024/π^{10},
+
+so C <= 60.1. Numerically the sharp constant is C_M = 2.71, 3.13, 3.39,
+3.65, 3.77, 3.87, 3.91 for M = 2, 3, 4, 6, 8, 12, 16, tending to about 4.
+
+**Corollary 2 (one RG step).** Let Φ' = W_{M/L} F_min be the level-(m-1)
+image fluxes, and ∇' the difference operator on the level-(m-1) lattice.
+Then
+
+    ||∇'_ν Φ'||_2 <= C L^{-1} ||F_min||_2.
+
+So the first differences of the image (dimension-5 data) are O(L^{-1}) of
+the energy, uniformly in m. This bound covers every pair of neighbouring
+level-(m-1) cells, including pairs across block faces.
+
+## Proof of Theorem 1
+
+1. *Euler-Lagrange.* Minimizing ||F||² over exact F with W F = Φ gives
+   F_min = P_2 W^T λ, where P_2 = d Δ^{-1} d* is the projection onto exact
+   2-forms and λ is a Lagrange multiplier. Hence F_min = d Δ^{-1} J with
+   J := d* W^T λ. The 1-form J is co-closed.
+2. *Exact factorization of J in Fourier.* For coarse momentum K the fine
+   aliases are p_ℓ = (K + 2πℓ)/M. By note 19 (2.3) the (μν) component of
+   W^T λ has the factor Π_j D_M(p_j) · D_M(p_μ) D_M(p_ν), times λ̂_{μν}(K).
+   The divergence multiplies the (νρ) component by the backward difference
+   (1 - e^{-ip_ν}), and
+
+       (1 - e^{-ip_ν}) D_M(p_ν) = 1 - e^{-iM p_ν} = 1 - e^{-iK_ν},
+
+   which is the same for every alias. So
+
+       J_ρ(p_ℓ) = A_ρ(p_ℓ) c_ρ(K),   A_ρ(p) := Π_j D_M(p_j) · D_M(p_ρ),
+
+   with c_ρ(K) = M^{-4} Σ_ν (1 - e^{-iK_ν}) λ̂_{νρ}(K), up to unimodular
+   phases. All alias dependence sits in the explicit product A_ρ.
+3. *Energy of F.* Since J is co-closed, |(dΔ^{-1}J)(p)|² = |J(p)|²/|r(p)|²,
+   with |r(p)|² = Σ_j 4 sin²(p_j/2). Choose the alias p_0 with |K_j| <= π.
+   Then |r(p_0)|² <= 4π²/M², so
+
+       ||F_min||² >= Σ_K |J(p_0(K))|² M²/(4π²).
+4. *Alias-0 fraction.* By the Fejér/Parseval identity
+   Σ_ℓ |D_M(p_ℓ,j)|² = M², and |D_M(K_j/M)| >= 2M/π for |K_j| <= π
+   (using |sin(K/2)| >= |K|/π and |sin(K/2M)| <= |K|/(2M)):
+   - each coordinate j != ρ contributes a fraction |D|²/Σ|D|² >= 4/π²;
+   - the coordinate ρ carries |D|⁴, and since Σ_ℓ|D|⁴ <= M² Σ_ℓ|D|² = M⁴,
+     its fraction is >= (2M/π)⁴/M⁴ = 16/π⁴.
+
+   Hence |A_ρ(p_0)|² >= c_0 Σ_ℓ |A_ρ(p_ℓ)|² with c_0 = (4/π²)³ · 16/π⁴, and
+   so |J(p_0)|² >= c_0 Σ_ℓ |J(p_ℓ)|² for each K. With step 3,
+   ||F_min||² >= c_0 M² ||J||²/(4π²).
+5. *Gradient.* ∇_ν F = ∇_ν d Δ^{-1} J has Fourier multiplier of modulus
+   |e^{ip_ν} - 1| |J|/|r| <= |J|. Hence ||∇_ν F_min|| <= ||J||.
+6. Combine steps 4 and 5. ∎
+
+## Proof of Corollary 2
+
+A level-(m-1) cell difference in direction ν equals the image of the fine
+shift by M/L sites:
+
+    ∇'_ν Φ' = W_{M/L} (τ_{(M/L)e_ν} F - F).
+
+Telescoping gives ||τ_{(M/L)e} F - F|| <= (M/L) ||∇_ν F||.
+
+Next, ||W_{M_1}||_{2->2} <= 1 with M_1 = M/L. Per coarse momentum, apply
+Cauchy-Schwarz over the M_1⁴ aliases. The kernel M_1^{-4} Π_j D · D_μ D_ν
+has squared alias sum <= M_1^{-8} · (M_1²)² · (M_1⁴)² = M_1⁴, using
+Σ_ℓ |D|² = M_1² for the two transverse coordinates and Σ_ℓ |D|⁴ <= M_1⁴ for
+the two tent coordinates. Together with the sampling factor M_1^{-4}, this
+gives norm <= 1. The bound is attained on constant fields: a constant flux
+F gives Φ' = M_1² F on M_1^{-4} times as many cells.
+
+Apply Theorem 1. ∎
+
+## What this settles, and what it does not
+
+- **Settled.** For the abelian linearization, the energy-norm form of (S1)
+  holds for the first irrelevant structure (first differences, dimension 5).
+  The rate is the power-counting one, L^{-1} per step, with an explicit
+  constant (<= 60 proved, about 4 sharp). It covers all positions,
+  including block faces. Note 43's per-row data are a different (dual,
+  worst-row) quantity. Their slower cross-face decay at small L does not
+  contradict this global energy bound.
+- **Why the sup norm failed** (note 35). The theorem uses the co-closed
+  factorization, the identity (1 - e^{-ip}) D_M(p) = 1 - e^{-iK}, and the
+  energy of the lowest alias. All three are ℓ² facts. The worst-case
+  sup-norm configurations of note 35 are inputs whose energy sits mostly in
+  high aliases. In the energy norm they are penalized by the factor
+  1/|r|², which is large for the lowest alias.
+- **Not settled.**
+  - Higher differences (dimension >= 6) need the same argument with ∇²; the
+    same factorization should give M^{-2}.
+  - The non-abelian theory linearizes to this one (note 36), with nonlinear
+    remainders controlled in Balaban's sup norms.
+  - The full (S1) also needs the generated (non-transport) terms. Those are
+    (S2) (note 42).
+
+So (S1)'s transport part is now a theorem in the abelian linearization. The
+remaining (S1) work is the nonlinear, non-abelian transfer.

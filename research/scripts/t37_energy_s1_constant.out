@@ -1,0 +1,8 @@
+proven c0 = 1024/pi^10 = 0.010934557928306216  -> proven constant 2 pi/sqrt(c0) = 60.086824598456516
+M=2: sharp C_M = M*sup ratio = 2.707; min alias-0 fraction = 0.1852
+M=3: sharp C_M = M*sup ratio = 3.133; min alias-0 fraction = 0.1473
+M=4: sharp C_M = M*sup ratio = 3.389; min alias-0 fraction = 0.1374
+M=6: sharp C_M = M*sup ratio = 3.652; min alias-0 fraction = 0.1311
+M=8: sharp C_M = M*sup ratio = 3.773; min alias-0 fraction = 0.1291
+M=12: sharp C_M = M*sup ratio = 3.872; min alias-0 fraction = 0.1277
+M=16: sharp C_M = M*sup ratio = 3.911; min alias-0 fraction = 0.1272

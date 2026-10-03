@@ -138,7 +138,10 @@ terminal observables) is:
   partly appears: interior neighbouring-child differences contract by 2.3/L per
   step, but across block faces only by about L^-0.6 for L <= 5 (note 43). The worst row contracts from L = 6 on (0.95, 0.90 at L = 6, 7), and the
   cross-face rate approaches L^-1. So (S1) should be stated in energy or
-  averaged norms, with L >= 6.
+  averaged norms, with L >= 6. **Proved for the abelian linearization (note 44):** the
+  minimizer's fine gradients satisfy ||grad F_min|| <= C M^-1 ||F_min|| in the
+  energy norm (C <= 60 proved, about 4 sharp), so one-step image differences
+  are O(L^-1) of the energy.
 
 By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
 uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).
