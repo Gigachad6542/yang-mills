@@ -21,7 +21,9 @@ Status, item by item:
   convergence as the cutoff is removed, or analyticity in the coupling.
 - **Heuristic.** σ = 1 for Yang-Mills without improvement, and that the
   vacuum constant is the only counterterm.
-- **Open.** H3D-0(b), H3D-1 (or H3D-3 + H3D-4) for SU(2) Yang-Mills.
+- **Proved later.** H3D-0(b) (note 53: the push-forward density of Balaban's
+  average is bounded above and below at each fixed N).
+- **Open.** H3D-1 (or H3D-3 + H3D-4) for SU(2) Yang-Mills.
   P4-3D, and hence M1-3D, are **not** proved.
 
 Draft history: lead drafts in `wip/round3-2026-09-30/T7a` (sections 1-6 below)
@@ -55,6 +57,7 @@ uniformity in N is assumed.
 (a) holds when the same lattice-unit average Q is used at every scale. CMP 102
 iterates a single T. (b) is not published: the lower bound of CMP 102 (5)
 holds only on the small-field set χ. (b) is a qualitative, fixed-N statement.
+It is proved in note 53 (Theorem 5).
 
 ## 2. Exact identities (proved)
 

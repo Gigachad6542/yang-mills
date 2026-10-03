@@ -114,6 +114,9 @@ contributes through CMP 102's large-field factors, which are arbitrary
 powers of ε. This adaptation is not carried out here. H3D-0(b) remains the
 one qualitative item on the 3D route.
 
+*Superseded by note 53, which proves H3D-0(b) itself (density bounded above
+and below). §4 and §4a remain correct but are no longer needed.*
+
 ### 4a. Weakening H3D-0(b) (proved, except one integrability input)
 
 **(b')** μ̃_N and μ_N are mutually absolutely continuous, with density

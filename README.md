@@ -163,9 +163,11 @@ The argument is an even complex deformation plus a Schwarz lemma. So
 analysis. **Update (note 52):** H3D-1' now holds at the linearized level
 (sigma >= 2), from the energy-norm transport theorem (notes 44, 51). So
 M1-3D <= (A_s) [CMP 102 remainder bound for complex coupling] + (NA) [3D
-background perturbation] + an L^p (p > 1) bound for the fixed-N push-forward
-density of Balaban's average (H3D-0(b) weakened to finite relative entropy,
-52 §4a). In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
+background perturbation]. **Update (note 53):** the qualitative input H3D-0(b) is
+proved. Balaban's one-step average has one private link per coarse bond, its
+conditional Jacobian is >= c_L > 0 (operator concavity of the SU(2) log-Hessian),
+and it is injective a.e. (a degree count). So the push-forward density is bounded
+above and below at each fixed N. In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
 CMP 102 RG step depend Lipschitz-continuously on the input irrelevant data,
 with constant O(g_k²) in Balaban's norms. Together with CMP 102's own
 "very sketchy" proof, this is the remaining gap for the 3D continuum limit
@@ -241,6 +243,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/45-nonabelian-energy-s1-transfer.md` -- Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
 - `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
 - `research/52-h3d1-linearized.md` -- H3D-1' at the linearized level, from note 44
+- `research/53-average-pushforward-density.md` -- H3D-0(b): the push-forward density of Balaban's average is bounded above and below
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction

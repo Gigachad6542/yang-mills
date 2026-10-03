@@ -1,0 +1,14 @@
+L=2: central terms |Y_x - X| max = 2.5e-16; Y_x change when b* resampled = 0.0e+00
+L=3: central terms |Y_x - X| max = 1.8e-16; Y_x change when b* resampled = 0.0e+00
+L=2: F at U=1 times L^6 = 1.000000
+L=3: F at U=1 times L^6 = 1.000000
+L=2, n=200000: |F|/L^-6 quantiles [  3.4537   5.5024  11.59    33.4601 116.6007]
+  fraction F<0: 0.0000; min F/L^-6 = 1.8207; proved bound c_L/L^-6 = 0.0901
+L=3, n=40000: |F|/L^-6 quantiles [  97.7161  152.914   273.9611  572.8417 1276.261 ]
+  fraction F<0: 0.0000; min F/L^-6 = 50.1405; proved bound c_L/L^-6 = 0.0150
+concavity of S: min eigenvalue of S(mix) - mix(S) over 200000 tests = 8.60e-16
+|S|=6, N=8: distinct solutions per (Y,V) over 30 trials: {np.int64(0): np.int64(2), np.int64(1): np.int64(28)}; count formula agrees in 30/30
+|S|=24, N=27: distinct solutions per (Y,V) over 30 trials: {np.int64(1): np.int64(30)}; count formula agrees in 30/30
+|S|=2, N=3: distinct solutions per (Y,V) over 30 trials: {np.int64(0): np.int64(12), np.int64(1): np.int64(18)}; count formula agrees in 30/30
+|S|=1, N=2: distinct solutions per (Y,V) over 30 trials: {np.int64(0): np.int64(17), np.int64(1): np.int64(13)}; count formula agrees in 30/30
+|S|=3, N=4: distinct solutions per (Y,V) over 30 trials: {np.int64(0): np.int64(9), np.int64(1): np.int64(21)}; count formula agrees in 30/30

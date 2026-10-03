@@ -358,6 +358,10 @@ one PROGRESS line.
   (abelian Gaussian, 3D) level with sigma >= 2, from the d-dimensional note 44 Theorem 1 and note 51 Lemma 4. Hence
   M1-3D <= (A_s) [CMP 102 remainder bound] + (NA) [3D] + H3D-0(b) [fixed-N, qualitative], plus notes 17, 18, 44-46, 51-52.
 
+- T47 [proof] — completed by Claude, 2026-10-03 (`research/53-average-pushforward-density.md`, script `t47_average_jacobian.py`):
+  H3D-0(b) proved. One private link per coarse bond (exact), conditional Jacobian >= c_L > 0 (operator concavity of
+  P_h + |h|cot|h|(I - P_h)), a.e. injectivity (degree count, checked 150/150 by Newton). So M1-3D <= (A_s) + (NA).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
