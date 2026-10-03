@@ -342,6 +342,10 @@ one PROGRESS line.
   assembled. Covariance, minimizer-map symbol (cross alias sum x C^-1; measured ratios 3.53, 3.38 per level) and weights all converge
   geometrically by the note 47 argument; the vertex Riemann sums are stated. |beta_k^0 - beta_inf^0| <= C (1+log L^k) L^-k.
 
+- T43 [proof + correction] — completed by Claude, 2026-10-03 (`research/49-t2r-rooted-lemma.md`): rooted Kotecky-Preiss lemma;
+  (T2-R) from CMP 122 II (1.79)-(1.89). Correction to note 39 §6: carried domains get no new factor for K <= n_0 + R_j steps (1.83),
+  so a_eff ~ p_0^2/R ~ (log)^{2p_0 - r}; needs 2p_0 > r (source check) and the KP form of Balaban's expansion.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

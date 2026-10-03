@@ -265,6 +265,13 @@ and not written out:
 Both are the same bookkeeping Balaban does for unmarked large-field
 regions. So (T2-R) is "published mechanism, unprinted bookkeeping".
 
+*Correction (note 49).* "Each marked step carries at least one large-field
+factor" is too strong. Inside an unprocessed large-field domain, levels
+pass with no new factor for up to K <= n_0 + R_j steps (CMP 122 II (1.83)).
+The correct rate is a_eff ~ c p_0(γ)²/(R(γ) + n_0 + 1). This still diverges
+as γ -> 0 if 2p_0 > r. Note 49 gives the rooted polymer lemma and the
+corrected Proposition.
+
 ## 7. Net status of (P)
 
 (P) ⇐ (T1\*) + (T2-R).

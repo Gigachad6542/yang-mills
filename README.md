@@ -88,8 +88,10 @@ estimate. The research notes give the details.
   - **(P)**, shortest route (39): (T1*), a per-label fiber-law comparison,
     holds: it reduces exactly to a boundary-layer bound, and that bound holds
     because R_k >= (log g_k^-2)^r with r >= 2 (CMP 119 p. 245). Plus (T2-R),
-    Balaban's positivity insertion CMP 122 II (1.73)-(1.81) with markers.
-    So (P) <= marker bookkeeping only. An independent action-based route is in
+    Balaban's domain factors CMP 122 II (1.79)-(1.89) via a rooted
+    Kotecky-Preiss lemma (49). Persistence costs a factor only once per
+    domain lifetime K <= n_0 + R_k, so the rate is a_eff ~ p_0(gamma)^2/R(gamma),
+    which diverges if 2p_0 > r (a source check). An independent action-based route is in
     notes 34-38 ((PA), (D1), (D2), (SER), (UB-ms)).
   - **Generalized averaged H8** is a covariance (32). Its decay (H-dec)
     follows from local extensive tangent bounds (LS) plus large fields (LF)
@@ -227,6 +229,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/44-abelian-energy-s1-theorem.md` -- (S1) for first differences, abelian, energy norm: a theorem
 - `research/45-nonabelian-energy-s1-transfer.md` -- Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
 - `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
+- `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction
 - `research/48-free-increments-assembly.md` -- (C) of note 22 assembled: free increments converge geometrically
 - `research/47-marginal-form-convergence.md` -- Depth convergence of the marginal form: the block-flux covariance converges geometrically
 - `references/primary-sources.md` -- annotated primary-source bibliography.
