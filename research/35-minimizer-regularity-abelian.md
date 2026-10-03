@@ -104,5 +104,14 @@ For the programme:
 
 ## 4. Torus size
 
-The L = 2, m = 1 corner row at n_0 = 8 (pending at the time of writing; see
-the PROGRESS line) checks the n_0-dependence of the exact-restricted value.
+**Not verified.** The L = 2, m = 1 corner row on an 8⁴ coarse torus was
+attempted twice. One run was lost to a container restart. The other was
+stopped at the 2-hour background limit before HiGHS finished. That LP has
+6 · 8⁴ residual variables and 4 · 8⁴ + 6 free variables.
+
+So all exact-restricted values in §2 are for the 6⁴ coarse torus only.
+Their n_0-dependence is unknown. For comparison, the pseudo-inverse row
+sums grow with n_0 (3.30, 3.58, 3.78 for n_0 = 6, 8, 10), but those are not
+the exact-restricted norms. If this check is repeated, a first-order method
+or a smaller symmetric subproblem (cubic symmetry of the corner row) would be
+needed.
