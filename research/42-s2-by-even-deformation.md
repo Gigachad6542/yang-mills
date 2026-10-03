@@ -148,6 +148,33 @@ the remainder bounds of CMP 102 (pp. 261-262) hold for complex coupling with
 reality of g_0. The resulting Lipschitz constant in Theorem 3 is
 O(g_0² p(g_0)^{36/7}), still polylogarithmically close to O(g_0²).
 
+*Exact form of the deformation (4D and 3D).* Write the Wilson
+interaction as
+
+    I_g(B) := g^{-2}[A(Ue^{igB}) - A(U)] - ½⟨B, H B⟩ = g^{-2} Ĩ(gB),
+
+where Ĩ is analytic and starts at cubic order. Then
+
+    s^{-2} I_g(sB) = I_{sg}(B)   exactly.
+
+So the deformed step S_s is Balaban's step with:
+
+- the quadratic (Gaussian) part unchanged;
+- the Wilson interaction at complex coupling sg;
+- the effective-action terms E evaluated at the complex exponent isgB.
+
+For |sg| p(g) <= α these exponents lie in Balaban's complex analyticity
+domains (CMP 109 (1.18), domains U^c(X, α_0, α_1)). (A_s) is therefore
+equivalent to this statement: **Balaban's single-step estimates use the
+coupling only through bounds on |g| p(g) and on the complex-domain
+activities, never through g > 0.** In 3D this was checked above against
+CMP 102 pp. 261-262. In 4D, the localization and cluster expansion of the
+fluctuation integral (2.13) is deferred by CMP 109 to the next papers
+(CMP 109, end of §5: "In the next paper we will construct such localizations
+and prove the bounds"). The check of (A_s) for 4D is therefore a reading of
+CMP 116/119 for uses of the sign or reality of g. None was found in the
+passages read for notes 36-39, but the full check is not done.
+
 ## 5. Consequences
 
 - **3D.** By the README chain (notes 17, 18, 29), M1-3D ⇐ (S1) + (S2) for
