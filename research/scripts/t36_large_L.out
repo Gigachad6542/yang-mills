@@ -1,0 +1,2 @@
+L=6 n0=6: cross-face mean 0.498 max 0.951 (L*mean 2.99, sqrtL*mean 1.22) | interior mean ratio 0.394 (L*r 2.37) | 553s
+L=7 n0=6: cross-face mean 0.442 max 0.896 (L*mean 3.09, sqrtL*mean 1.17) | interior mean ratio 0.342 (L*r 2.39) | 1969s

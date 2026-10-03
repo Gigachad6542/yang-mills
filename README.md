@@ -136,9 +136,9 @@ terminal observables) is:
   scale-dependent localization. It is not a per-step contraction. **(S1) is
   a new theorem to be proved**, not a published input. In the energy (l2) norm the gain
   partly appears: interior neighbouring-child differences contract by 2.3/L per
-  step, but across block faces only by about L^-0.6 for L <= 5 (note 43). So
-  (S1) should be stated in energy or averaged norms, with L >= 6 or a separate
-  treatment of block faces.
+  step, but across block faces only by about L^-0.6 for L <= 5 (note 43). The worst row contracts from L = 6 on (0.95, 0.90 at L = 6, 7), and the
+  cross-face rate approaches L^-1. So (S1) should be stated in energy or
+  averaged norms, with L >= 6.
 
 By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
 uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).

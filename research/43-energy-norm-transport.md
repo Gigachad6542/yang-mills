@@ -57,7 +57,20 @@ pairs inside one block. Data: `t36_cross_face.out`.
 | 4 | 0.665 | 1.084 | 2.66 | 1.33 |
 | 5 | 0.571 | 1.015 | 2.85 | 1.28 |
 
-Across faces the mean ratio decays like L^{-0.6}, between L^{-1/2} and
+Larger L (coarse torus 6⁴, `t36_large_L.out`):
+
+| L | cross-face mean | cross-face max | L × mean | interior mean ratio × L |
+|---|---|---|---|---|
+| 6 | 0.498 | 0.951 | 2.99 | 2.37 |
+| 7 | 0.442 | 0.896 | 3.09 | 2.39 |
+
+Across faces the local decay exponent rises from about 0.6 (L <= 5) to
+about 0.77 (between L = 5 and 7). L × mean grows more and more slowly
+(2.85, 2.99, 3.09). This fits the predicted L^{-1} rate up to a logarithmic
+correction from block edges, where faces meet. The worst cross-face row is
+below 1 from L = 6 on. Interior pairs stay at 2.37-2.39/L.
+
+At L <= 5 alone the mean ratio decays like L^{-0.6}, between L^{-1/2} and
 L^{-1}. The worst row is about 1 at L = 5. A direct real-space check
 (`t36_realspace_check.py`, random exact coarse data) agrees:
 
@@ -105,9 +118,10 @@ over small-field domains. In that norm:
   33's charge conservation, and here it is seen in kernels;
 - the first irrelevant (difference, dimension 5) part contracts **on
   average** for L >= 3. For interior pairs the rate is 2.3/L. Across block
-  faces it is about 1.33/√L in the range L <= 5. The worst row only reaches
-  1 at L = 5. A uniform (worst-row) contraction needs L >= 6 on this data,
-  or a norm that treats block faces separately.
+  faces it is about 1.33/√L in the range L <= 5. The worst row is 0.95 at L = 6
+  and 0.90 at L = 7, so the worst-row contraction holds for L >= 6. The
+  cross-face rate approaches L^{-1}, consistent with a logarithmic edge
+  correction.
 
 This is a computation in the abelian (linear) theory. The non-abelian
 statement would linearize as in note 36. The analytic (sup-norm) control of
