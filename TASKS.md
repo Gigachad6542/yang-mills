@@ -371,6 +371,10 @@ one PROGRESS line.
   the Gaussian is g-independent. CMP 109 p. 266 states a variant of chi_k that makes E^(j), beta_j analytic in the couplings,
   but with radius ~ gamma_k, not alpha'/p(g_k). CMP 109 sections 3-5 not checked.
 
+- T50 [computation] — completed by Claude, 2026-10-03 (`research/55-mc-terminal-convergence.md`): Monte Carlo, SU(2), d = 3,
+  n0 = 4, L = 2, beta_N = beta0 2^N, N <= 3. Terminal averaged observables converge geometrically (ratio about 2.6 per step at beta0 = 4;
+  onset at finest beta >= 8 for beta0 = 2). The N = 4 run (64^3) is pending.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

@@ -174,7 +174,8 @@ refutes the original (NA)]. **Update (note 53):** the qualitative input H3D-0(b)
 proved. Balaban's one-step average has one private link per coarse bond, its
 conditional Jacobian is >= c_L > 0 (operator concavity of the SU(2) log-Hessian),
 and it is injective a.e. (a degree count). So the push-forward density is bounded
-above and below at each fixed N. In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
+above and below at each fixed N. **Numerics (note 55):** Monte Carlo for SU(2), d = 3, depths N <= 3, shows the
+terminal Balaban-averaged plaquette and 1x2 loop converging geometrically (ratio about 2.6 per step for L = 2). In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
 CMP 102 RG step depend Lipschitz-continuously on the input irrelevant data,
 with constant O(g_k²) in Balaban's norms. Together with CMP 102's own
 "very sketchy" proof, this is the remaining gap for the 3D continuum limit
@@ -252,6 +253,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/52-h3d1-linearized.md` -- H3D-1' at the linearized level, from note 44
 - `research/53-average-pushforward-density.md` -- H3D-0(b): the push-forward density of Balaban's average is bounded above and below
 - `research/54-flat-backgrounds-and-na.md` -- (NA) on the torus: flat backgrounds with holonomy, a counterexample and the corrected statement
+- `research/55-mc-terminal-convergence.md` -- Monte Carlo test of M1-3D: terminal block observables converge across depths
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction
