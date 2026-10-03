@@ -55,6 +55,47 @@ norm.
 *Proof.* Cauchy gives |D³h_X| <= C||h_X||/α³. Then
 |a|³ <= (C R_X ε_0)·(C R_X)² max|F|², and sum as in Proposition 2. ∎
 
+## Lemma 4 (marginal/irrelevant split by kernel moments; proved)
+
+By linearized gauge invariance at the flat background, the quadratic part
+Q is a quadratic form in the curvature: Q(F) = Σ_{x,y} F(x) q(x,y) F(y).
+Here q is symmetric, block-periodic, and decays exponentially, because the
+activities are local and the axial-gauge reconstruction of a from F is
+confined to X. Put c(x) := Σ_y q(x, y). Then exactly
+
+    Q(F) = Σ_x c(x) F(x)² - ½ Σ_{x,y} q(x,y) (F(x) - F(y))².
+
+Moreover:
+
+1. *Second term (dimension 6).* |F(x) - F(y)|² <= |x - y|_1 Σ_{path} |∇F|²
+   along a monotone lattice path. Hence
+   |½ Σ q (F(x) - F(y))²| <= M_2(q) Q_1(F), with
+   M_2(q) := sup_x Σ_y |q(x,y)| |x - y|_1², finite by exponential decay.
+2. *First term, constant part (marginal).* c̄ Σ_x F(x)², where c̄ is the block
+   average of c. This is the coefficient absorbed into the coupling (the
+   β-function term).
+3. *First term, zero-mean part (dimension 5).* c - c̄ has zero sum over each
+   block. By note 33 Lemma 2,
+   Σ_x (c - c̄)(x) F(x)² = Σ_{x,ν} v_ν(x) (F(x)² - F(x+e_ν)²), with
+   ||v||_∞ <= C ||c - c̄||_∞ L. So its absolute value is
+   <= 2 ||v||_∞ ||F|| ||∇F||.
+
+After transport F = TΦ (note 44: ||∇TΦ|| <= C M^{-1} ||TΦ||):
+
+- the dimension-6 part has form norm <= 8 C² M_2(q) M^{-2};
+- the dimension-5 part has form norm <= 4 C ||v||_∞ M^{-1}.
+
+In coarse-lattice units (multiply by M² and M respectively) these are
+O(1) quantities. One step therefore gains (C/L)² and C/L.
+
+*Proof.* The identity follows by expanding (F(x) - F(y))² and using the
+symmetry of q. Items 1-3 are as stated. ∎
+
+This replaces the appeal to Balaban's fifth-order local expansion. The
+split into marginal, dimension-5 and dimension-6 quadratic parts uses only
+the symmetry, block-periodicity and exponential decay of the kernel, which
+Balaban's activity bounds provide.
+
 ## Consequence: the mixed-norm framework is consistent
 
 1. Balaban's activities have quadratic parts of form norm O(E_0)
@@ -62,8 +103,8 @@ norm.
    (Proposition 3).
 2. After subtracting the marginal F² coefficient (Balaban's
    renormalization, the β-function term), the remaining quadratic part is
-   irrelevant. By CMP 109's fifth-order local expansion it is a form in
-   gradients of F (dimension >= 6), with the same Cauchy bounds.
+   irrelevant. By Lemma 4 it splits into a dimension-5 redistribution and a
+   dimension-6 gradient form, controlled by kernel moments.
 3. Transport multiplies the form norm of such irrelevant forms by
    (C/L)² per step (note 46; SU(2) via note 45). Generation adds
    O(g² p(g)²) (note 42, given (A_s)). The higher-order parts stay
@@ -73,10 +114,11 @@ So (S1) and (S2) of note 29, with δ_k := form norm of the irrelevant
 quadratic part plus ε_0^{-1} times the sup norm of the higher-order part,
 hold with:
 
-- θ = (C/L)² + O(ε_0);
+- θ = C/L + O(ε_0) (the dimension-5 part dominates; see Lemma 4);
 - b, c = O(g² p²);
 - e = O(g⁴) (smoothness of β, CMP 109 p. 265).
 
-Note 29 Theorem 1 then gives memory decay. What remains open is only what
-was already listed: (A_s), (NA) constants, and Balaban's fifth-order
-expansion statement in the form used in item 2.
+Here θ = max(C/L, (C/L)²) + O(ε_0), because the dimension-5 redistribution
+gains only C/L. Note 29 Theorem 1 then gives memory decay. What remains
+open is only what was already listed: (A_s) and the (NA) constants. Item 2
+is now Lemma 4.
