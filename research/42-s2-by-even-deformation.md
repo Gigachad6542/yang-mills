@@ -187,6 +187,39 @@ the Gaussian part stays real and positive, and only the interaction I_{sg}
 is complex, with |sg| p(g) <= α. This supports (A_s) in 4D. It does not
 replace a line-by-line check of CMP 116/119.
 
+*Source check, 4D (CMP 116 Part II §1 and CMP 109 §2; T49).*
+
+- **Part II §1 (CMP 116).** In the localization of the fluctuation-field
+  action, g_k enters in three places:
+  - the analyticity domains in B, which are {|B| < ε_1 g_k^{-1}} ((1.34));
+  - the substitution B' = g_k CB - hD(g_k CB) ((1.19)-(1.20));
+  - the prefactor 1/g_k² at V(H_1 B'). That prefactor is cancelled by
+    expanding to second order in B', and the zeroth and first orders vanish
+    (pp. 9-10).
+
+  This is exactly the identity s^{-2} I_g(sB) = I_{sg}(B) of §4. The
+  Gaussian measure dμ_{C^{(k)}} with C^{(k)} = (C* Δ^{(k)} C)^{-1} does not
+  depend on g_k (CMP 109 (2.11)-(2.12)). The passages read here use no
+  reality or positivity of g_k.
+- **CMP 109 p. 266, after (2.9).** Balaban notes that replacing ε_1 by
+  (g_k/γ_k) ε_1 in the characteristic function χ_k "has the advantage that
+  the functions E^{(j)}, β_j are analytic functions of the effective
+  coupling constants". The inductive assumptions are stated for both
+  versions: E^{(j)} is "a C^∞-function of g_{j-1} ∈ [0, γ] (or analytic)"
+  (p. 270).
+
+  So analyticity in the step coupling is part of Balaban's own inductive
+  framework. The radius differs, though:
+  - Balaban's variant gives a disc in g_k of radius comparable to γ_k;
+  - (A_s) needs radius α'/p(g_k), which is larger by the factor
+    1/(g_k p(g_k)).
+
+  For that radius the fluctuation cutoff must be χ(|B| <= p(g_k)), the
+  small-field cutoff of the later papers (CMP 119/122), not CMP 109's
+  |g_k B| < ε_1.
+- **Not checked.** The CMP 109 §§3-5 expansions with this cutoff, and the
+  normalization constants. The latter are entire in s and drop out of D_E F.
+
 ## 5. Consequences
 
 - **3D.** By the README chain (notes 17, 18, 29), M1-3D ⇐ (S1) + (S2) for

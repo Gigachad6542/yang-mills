@@ -366,6 +366,11 @@ one PROGRESS line.
   fails on the torus (flat backgrounds with holonomy). Proved: note 44's transport bound holds exactly at every flat SU(2)
   background (twisted Bloch sectors); small-field backgrounds are o(1)-close to flat ones (compactness). Corrected (NA♭).
 
+- T49 [fix] — completed by Claude, 2026-10-03 (note 42 §4): (A_s) source check, 4D. CMP 116 Part II §1 uses g_k only via
+  analyticity domains in g_k B, the substitution B' = g_k CB - hD(g_k CB), and the 1/g_k^2 prefactor cancelled at second order;
+  the Gaussian is g-independent. CMP 109 p. 266 states a variant of chi_k that makes E^(j), beta_j analytic in the couplings,
+  but with radius ~ gamma_k, not alpha'/p(g_k). CMP 109 sections 3-5 not checked.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
