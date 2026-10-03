@@ -333,6 +333,11 @@ one PROGRESS line.
   relative to the minimal energy. Gauge invariance makes the leading part of delta E a quadratic form; transport is Q -> Q o T;
   dimension-6 forms contract by (C/L)^2 and dimension-8 forms by C_3^2 L^-3 per step, and marginal forms by <= 1 (from note 44).
 
+- T41 [proof] — completed by Claude, 2026-10-03 (`research/47-marginal-form-convergence.md`): the block-flux covariance
+  C^(M)(K) (the marginal minimal-energy form) converges to a continuum symbol with ||C^(M) - C^inf|| <= C(1+log M)/M uniformly in K
+  (alias weights 1/sin^2 - 1/x^2 <= 1, Fejer/Parseval, projector and phase errors); measured rate ~M^-2 (ratios 3.0, 3.5 per doubling).
+  This is the marginal-form part of (O2) in note 41; the one-loop vertex part remains.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

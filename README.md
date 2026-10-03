@@ -74,7 +74,9 @@ estimate. The research notes give the details.
 - **(H0), coupling flow (notes 22, 41):** reduced to:
   - (C) geometric convergence of the free one-loop increments. This follows
     from convergence of Balaban's free step operators: proved for the
-    averaging kernels and weights; the discretization part is stated;
+    averaging kernels and weights (41) and for the marginal quadratic form,
+    rate O(log M/M) proved, about M^-2 measured (47). The one-loop vertex
+    part is open;
   - (S) the one-loop sum rule. Its universal part is published; a finite
     scheme matching remains;
   - (D) memory decay.
