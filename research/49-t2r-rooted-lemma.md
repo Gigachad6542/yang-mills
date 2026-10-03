@@ -100,3 +100,21 @@ and only if 2p_0 > r, the source check listed above.
 So (P) is reduced to two source facts: the KP form of Balaban's
 convergence (his cluster expansion), and the inequality 2p_0 > r. Neither
 is a new estimate.
+
+## 5. Source check 2p_0 > r: resolved
+
+- CMP 119, introduction (printed p. 243): the large-field threshold is
+  |U(∂p) - 1| <= g_0 p_0(g_0), with "p_0(g_0) = A_0 (log g_0^{-2})^{p_0} with a
+  positive integer p_0".
+- CMP 119 p. 245: R_0 >= (log g_0^{-2})^r, r >= 2.
+- Balaban's own induction needs the large-field factor
+  γ_0 A p_0(g_j)² (d' + 1) to dominate the domain entropy
+  O(1) M^d R_j^{d+1} d' (CMP 122 II (1.81)-(1.82); "this condition is
+  satisfied for p_0 large, and g_1 sufficiently small"). With the forms above
+  this requires 2p_0 > (d+1) r for small g. In particular 2p_0 > r.
+
+So a_eff ~ (log γ^{-2})^{2p_0 - r} -> ∞, and L⁴ e^{-a_eff} < 1 for small γ.
+The remaining assumption of Proposition 2 is the KP form of Balaban's final
+cluster expansion. That is how his convergence is proved (Mayer expansion
+of the exponential, CMP 122 II after (1.89)), not a new estimate. (P) is
+thereby reduced to published structure.
