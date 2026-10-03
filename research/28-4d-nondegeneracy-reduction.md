@@ -114,7 +114,22 @@ precise definitions:
   to the global bound (0.1).
 
 None of these is a new estimate, but all are scan-level checks that were not
-done here. With them, P6-4D would follow from H0 and (B-small) alone.
+done here.
+
+*Update (notes 36, 39).* Three of the four checks now point to explicit
+source statements. The first is still open.
+
+- Positivity of Δ on the slice, uniformly in N: CMP 99 Theorem 3.11
+  (Δ_a, G positive definite), with the uniform bounds of CMP 99
+  Theorem 3.3. See note 36 §1.
+- Analyticity domain: CMP 109 (1.18), |E^{(j)}(X, g, U, J)| <= E_0 exp(-κ d(X))
+  on the complex spaces U^c_j(X, α_0, α_1), and gauge invariance (1.19).
+- Relative large-field bound (step 5): the positivity insertion
+  CMP 122 II (1.73)-(1.75), |T(F)| <= e^{3 sup|σ|} sup|F| T(1), together
+  with the per-scale factors (1.79)-(1.81). Insert F = indicator of a
+  large field at the terminal scale (note 39 §6). This gives the relative
+  bound exp(-c p(g)²) directly, as opposed to the global (0.1).
+- The terminal gauge slice remains a definitional check. With them, P6-4D would follow from H0 and (B-small) alone.
 
 ## 4. Place in the programme
 
