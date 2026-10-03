@@ -354,6 +354,10 @@ one PROGRESS line.
   activities have quadratic parts bounded in the form norm by C E_0 alpha^-2 (Cauchy + Ad-invariance + axial gauge), and higher orders
   are O(eps_0) smaller. With note 46 transport and note 42 generation this makes note 29's single-step hypotheses consistent in a mixed norm.
 
+- T46 [proof] — completed by Claude, 2026-10-03 (`research/52-h3d1-linearized.md`): H3D-1' (note 18) proved at the linearized
+  (abelian Gaussian, 3D) level with sigma >= 2, from the d-dimensional note 44 Theorem 1 and note 51 Lemma 4. Hence
+  M1-3D <= (A_s) [CMP 102 remainder bound] + (NA) [3D] + H3D-0(b) [fixed-N, qualitative], plus notes 17, 18, 44-46, 51-52.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
