@@ -307,6 +307,10 @@ one PROGRESS line.
   Schwarz lemma, D_E F = transport + O(g^2 p(g)^2), under (A_s): Balaban's single-step bounds uniform for complex |sg| <= alpha'/p(g).
   M1-3D <= (S1) + (A_s) for CMP 102.
 
+- T35 [fix] — completed by Claude, 2026-10-03: source reading of CMP 109 p. 259 shows that Balaban's irrelevance bound (0.29) is
+  explicitly not a per-step RG contraction. So (S1) of note 29 is a new theorem, not a published input. README and note 29 corrected.
+  (S1) is now the main unproved single-step statement on both the 3D and 4D routes, together with (A_s) of note 42.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

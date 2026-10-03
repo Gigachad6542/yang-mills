@@ -128,7 +128,13 @@ terminal observables) is:
   contraction has to come from the derivative/regularity structure of
   Balaban's norms, or be replaced in 3D by the geometric smallness O(g_k) of
   the generated terms (CMP 102 (25)). (S1) is therefore not yet a verified
-  source-level statement.
+  source-level statement. Balaban says so explicitly (CMP 109 p. 259): terms
+  satisfying (0.29) "should not suggest that these terms are irrelevant
+  operators in that sense. There are no scaling transformations here, and
+  these terms do not behave in a regular way under the renormalization
+  transformations." His (0.29) is a bound uniform in k, obtained from
+  scale-dependent localization. It is not a per-step contraction. **(S1) is
+  a new theorem to be proved**, not a published input.
 
 By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
 uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).

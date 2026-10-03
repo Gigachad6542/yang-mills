@@ -82,6 +82,17 @@ max |Δ_k|/θ_1^k = 0.072, 0.104 and 0.319, below the proved 2c̄/(1-θ_1-ē) =
 
 ## 3. The single-step hypotheses
 
+*Source status of (S1) (added).* CMP 109 does **not** prove a per-step
+contraction of irrelevant data. Balaban writes (p. 259) that terms
+satisfying (0.29) "should not suggest that these terms are irrelevant
+operators in that sense ... these terms do not behave in a regular way under
+the renormalization transformations". (0.29) is the bound
+|V^{(j)}(X)| <= O(1)(L^jη)^{4+α} e^{-κ d_j(X)}, which is uniform in k because of
+the scale-dependent localization. (S1) is therefore a new statement. Note 35
+shows that plain sup norms do not give it. A proof must use the
+regularity-domain structure of Balaban's norms, or averaged norms as in
+note 33's extensive (LS) formulation.
+
 *Remark (note 40).* In the exactly computable 4D SU(2) Migdal-Kadanoff RG,
 b and c separately depend on how the irrelevant coordinate is normalized
 (there b ∝ g⁶ and c ∝ g^{-2}). The invariant quantity is the product
