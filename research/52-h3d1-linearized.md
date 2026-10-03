@@ -113,3 +113,45 @@ the small-field set (CMP 102 (5)). The large-field complement then
 contributes through CMP 102's large-field factors, which are arbitrary
 powers of ε. This adaptation is not carried out here. H3D-0(b) remains the
 one qualitative item on the 3D route.
+
+### 4a. Weakening H3D-0(b) (proved, except one integrability input)
+
+**(b')** μ̃_N and μ_N are mutually absolutely continuous, with density
+f = e^{D_N}/Ξ(1), and the relative entropy ∫ f log f dμ_N is finite.
+
+**Proposition 4.** Under (b'), note 18 Proposition 1(iii) and Theorem 1' hold
+as stated (with H3D-1' in place of H3D-1).
+
+*Proof.*
+
+1. Ξ(1) = μ_N(e^{D}) is finite, because μ̃_N is a probability measure. By
+   Hölder, Ξ(s) = μ_N(e^{sD}) <= Ξ(1)^s < ∞ for s ∈ [0, 1], and Ξ(s) > 0
+   because D is finite a.e.
+2. For s ∈ [0, 1), D e^{sD} is integrable, since |D| e^{sD} <= C_s(1 + e^{D}).
+   At s = 1, integrability of D e^{D} is the finite-entropy assumption. So
+   s ↦ Z_s is differentiable on [0, 1) with derivative Cov_{μ_s}(G, D), and
+   continuous on [0, 1] by dominated convergence with dominating function
+   e^{S_ρ}(1 + e^{D}). Hence Z_{N+1} - Z_N = ∫_0^1 Cov_{μ_s}(G, D) ds,
+   possibly as an improper integral at s = 1.
+3. Theorem 1' uses only this identity, the tower property
+   Cov(G, D) = Cov(G, E[D | b]) (valid for D ∈ L¹(μ_s)), and H3D-1'. ∎
+
+**Where (b') comes from.**
+
+- *Mutual absolute continuity.* Q is real-analytic off a measure-zero set,
+  and its derivative is surjective at small fields. So it is surjective on
+  an open dense full-measure set, and the push-forward of the absolutely
+  continuous measure e^{-βA}dU is absolutely continuous. Its density is
+  positive a.e. because a.e. fibre contains regular points (Sard). So (b')
+  minus the entropy condition holds.
+- *Finite entropy (assumed).* This holds if the push-forward density lies
+  in L^p for some p > 1. That is the typical behaviour for push-forwards
+  under real-analytic maps with generically surjective derivative
+  (Łojasiewicz-type bounds on the Jacobian near the critical set). It is
+  not verified here for Balaban's Q.
+
+With Proposition 4, the 3D route is:
+
+    M1-3D <= (A_s) + (NA) + [L^p, p > 1, push-forward density for fixed N],
+
+together with notes 17, 18, 44-46, 51-52.
