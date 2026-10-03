@@ -350,6 +350,10 @@ one PROGRESS line.
   Exact multiplicativity of the limit step (box formula + Lemma B + note 48) gives beta_inf^0(L) = c log L; an O(1) edge bound (E)
   (power-law propagator corrections at both edges; sketched) forces c = 2b_0. The scheme constant from T19 is no longer needed.
 
+- T45 [proof] — completed by Claude, 2026-10-03 (`research/51-mixed-norm-compatibility.md`): Balaban's sup-norm analytic
+  activities have quadratic parts bounded in the form norm by C E_0 alpha^-2 (Cauchy + Ad-invariance + axial gauge), and higher orders
+  are O(eps_0) smaller. With note 46 transport and note 42 generation this makes note 29's single-step hypotheses consistent in a mixed norm.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

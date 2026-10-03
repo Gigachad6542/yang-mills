@@ -115,6 +115,10 @@ estimate. The research notes give the details.
     and a Schwarz lemma (42). In 3D, (A_s) reduces to CMP 102's
     sixth-order remainder bound.
   - **(S3)** has the order structure confirmed in the MK model (40).
+  - **Glue (51):** Balaban's sup-norm activities have quadratic parts bounded
+    in the form norm by C E_0, with higher orders O(eps_0) smaller. So
+    (S1)-(S3) hold together in a mixed norm, given (A_s), (NA) and Balaban's
+    fifth-order expansion.
 - **Nondegeneracy (P6-4D)** <= (V^R) + (B-small) (28). Three of the four
   source checks for (V^R) are now cited.
 
@@ -231,6 +235,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/44-abelian-energy-s1-theorem.md` -- (S1) for first differences, abelian, energy norm: a theorem
 - `research/45-nonabelian-energy-s1-transfer.md` -- Non-abelian transfer of note 44 (energy-norm transport) from Balaban's bounds
 - `research/46-quadratic-form-norm.md` -- The norm in which (S1) holds: quadratic forms relative to the marginal energy
+- `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction
 - `research/48-free-increments-assembly.md` -- (C) of note 22 assembled: free increments converge geometrically
