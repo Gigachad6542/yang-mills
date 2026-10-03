@@ -88,3 +88,28 @@ So **M1-3D ⇐ (A_s) [3D: reduced to CMP 102's sixth-order remainder bound]
 fixed-N qualitative statement. The 3D continuum limit of terminal
 observables is within reach of a careful check of CMP 102's single-step
 analysis.
+
+## 4. Remark on H3D-0(b) (qualitative, fixed N; not resolved)
+
+H3D-0(b) asks, for each fixed N, that D_N = log(Tρ_0^{(N+1)}/ρ_0^{(N)}) be
+bounded. ρ_0^{(N)} = e^{-β_N A_N} is bounded above and below, so the question
+is whether the push-forward density of e^{-β A} dU under Balaban's average Q
+(CMP 98 (15)) is bounded above and below.
+
+- *Lower bound (plausible).* Q is real-analytic away from the measure-zero
+  set where the logarithms of the loop holonomies U(Γ_{c,x}) U(Γ_c)^{-1}
+  are undefined (SU(2) angle π). Its derivative at small fields is the
+  linear average (CMP 98 (14)), which is surjective. If every fibre
+  Q^{-1}(V) contains a regular point, then by lower semicontinuity and
+  compactness the density is bounded below.
+- *Upper bound (may fail).* Near critical values the coarea formula gives
+  densities like ∫_{fibre} 1/J, which can be unbounded although integrable.
+  Then D_N is unbounded above on a small set.
+
+Note 18 uses boundedness of D_N to differentiate under the integral
+(Prop. 1(ii)) and to get osc bounds. If the upper bound fails, the natural
+replacement is exponential integrability of D_N together with bounds on
+the small-field set (CMP 102 (5)). The large-field complement then
+contributes through CMP 102's large-field factors, which are arbitrary
+powers of ε. This adaptation is not carried out here. H3D-0(b) remains the
+one qualitative item on the 3D route.
