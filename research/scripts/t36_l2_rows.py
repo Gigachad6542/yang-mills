@@ -75,3 +75,38 @@ if __name__ == "__main__":
     for L in (2, 3, 4, 5):
         b, r = diff_rows(L, 1, 8)
         print(f"{L} | {b:.4f} | {r:.3f}", flush=True)
+
+
+def cross_face_rows(L, m, n0):
+    """Pairs u (u_nu = L-1, block Y) and u' (u'_nu = 0, block Y + e_nu)."""
+    G = t.kernel(L, m, n0).real
+    P = coarse_projector_fft(n0).reshape(6, 6, -1)
+    offs = list(itertools.product(range(L), repeat=4))
+    idx = {o: i for i, o in enumerate(offs)}
+
+    def pnorm(g):
+        gh = np.fft.fftn(g, axes=(1, 2, 3, 4)).reshape(6, -1)
+        ph = np.einsum("bcK,cK->bK", P, gh)
+        return np.sqrt(np.sum(np.abs(ph) ** 2) / n0**4)
+
+    ratios = []
+    for o in offs:
+        for nu in range(4):
+            if o[nu] != L - 1:
+                continue
+            o2 = list(o); o2[nu] = 0
+            for a in range(6):
+                g1 = np.moveaxis(G[idx[o], :, :, :, :, a, :], -1, 0)          # block Y0, Phi(Y0 - D)
+                g2 = np.moveaxis(G[idx[tuple(o2)], :, :, :, :, a, :], -1, 0)  # block Y0 + e_nu
+                # express g2 against Phi(Y0 - D): Phi((Y0+e) - D') with D' = D + e
+                g2 = np.roll(g2, -1, axis=1 + nu)  # coefficient of Phi(Y0 - D) is G[u2, D + e]
+                ratios.append(pnorm(g1 - g2) / pnorm(g1))
+    return float(np.mean(ratios)), float(np.max(ratios))
+
+
+if __name__ == "__main__":
+    print("\nCross-face neighbouring children (u_nu = L-1 -> next block u_nu = 0):")
+    print("L | mean ratio | max ratio | L*mean | sqrt(L)*mean")
+    for L in (2, 3, 4, 5):
+        mr, xr = cross_face_rows(L, 1, 8)
+        print(f"{L} | {mr:.3f} | {xr:.3f} | {L*mr:.2f} | {np.sqrt(L)*mr:.2f}", flush=True)

@@ -1,0 +1,6 @@
+L=2: rms|F|=0.7840  cross-face rms|dF|/rms|F|=1.215  interior=0.817
+L=3: rms|F|=0.4050  cross-face rms|dF|/rms|F|=1.022  interior=0.621
+L=4: rms|F|=0.2472  cross-face rms|dF|/rms|F|=0.882  interior=0.511
+
+Sanity (seed 2, n0 = 6): F_min exactly closed, rms(dF)/rms(F) ~ 4e-15 for L = 2, 3, 4;
+rms(d*F)/rms(F) = 2.535, 1.905, 1.514 (L * ratio = 5.07, 5.71, 6.06).
