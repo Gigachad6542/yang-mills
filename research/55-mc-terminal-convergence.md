@@ -39,6 +39,7 @@ conjecture P4-3D / M1-3D. It is not a proof.
 | 4 | 1 | 8³ | 8 | 0.8183(6) | 0.6564(11) | 0.274(3) | 0.8708 |
 | 4 | 2 | 16³ | 16 | 0.8504(7) | 0.7057(17) | 0.295(8) | 0.9365 |
 | 4 | 3 | 32³ | 32 | 0.8627(7) | 0.7251(19) | 0.271(8) | 0.9685 |
+| 4 | 4 | 64³ | 64 | 0.8681(16) | 0.7321(39) | 0.315(14) | 0.9843 |
 | 2 | 0 | 4³ | 2 | 0.4534(22) | 0.2078(22) | 0.249(2) | 0.4534 |
 | 2 | 1 | 8³ | 4 | 0.5530(16) | 0.2773(23) | 0.249(2) | 0.7275 |
 | 2 | 2 | 16³ | 8 | 0.6474(14) | 0.3754(25) | 0.250(2) | 0.8705 |
@@ -48,8 +49,8 @@ Increments Δ_N = X_{N+1} - X_N and their successive ratios:
 
 | β_0 | X | Δ_0, Δ_1, Δ_2 | ratios | geometric extrapolation |
 |---|---|---|---|---|
-| 4 | P | 0.089, 0.032, 0.012 | 2.77, 2.61 | 0.870 |
-| 4 | W12 | 0.107, 0.049, 0.020 | 2.17, 2.53 | 0.738 |
+| 4 | P | 0.089, 0.032, 0.012, 0.0054 | 2.77, 2.61, 2.3 | 0.872 |
+| 4 | W12 | 0.107, 0.049, 0.020, 0.0069 | 2.17, 2.53, 2.8 | 0.736 |
 | 2 | P | 0.100, 0.094, 0.036 | 1.06, 2.65 | 0.705 |
 | 2 | W12 | 0.069, 0.098, 0.042 | 0.71, 2.32 | 0.450 |
 
@@ -75,8 +76,10 @@ Increments Δ_N = X_{N+1} - X_N and their successive ratios:
 
 ## Limits
 
-- The data reach only N <= 3 (32³). A β_0 = 4, N = 4 run (64³) is in
-  progress and will be added.
+- The data reach N <= 4 (64³) at β_0 = 4 and N <= 3 at β_0 = 2. The N = 4
+  point has larger errors (one run, 5800 s). Its increments, 0.0054 for P
+  and 0.0069 for W12, continue the geometric decay, and the predicted limits
+  of P (0.870 from N <= 3, 0.872 with N = 4) agree.
 - n_0 = 4 is a small terminal lattice, and the statistics are modest. The
   geometric extrapolations are indicative only.
 - Only L = 2 was tested. CMP 109 uses odd L > 11 for symmetry, and CMP 98's

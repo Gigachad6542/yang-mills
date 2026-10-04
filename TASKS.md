@@ -373,7 +373,7 @@ one PROGRESS line.
 
 - T50 [computation] — completed by Claude, 2026-10-03 (`research/55-mc-terminal-convergence.md`): Monte Carlo, SU(2), d = 3,
   n0 = 4, L = 2, beta_N = beta0 2^N, N <= 3. Terminal averaged observables converge geometrically (ratio about 2.6 per step at beta0 = 4;
-  onset at finest beta >= 8 for beta0 = 2). The N = 4 run (64^3) is pending.
+  onset at finest beta >= 8 for beta0 = 2). N = 4 (64^3) added: increments 0.0054 (P), 0.0069 (W12), still geometric.
 
 ## Proposals
 (Workers: at most 5 lines each.)
