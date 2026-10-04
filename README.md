@@ -121,6 +121,10 @@ estimate. The research notes give the details.
     in the form norm by C E_0, with higher orders O(eps_0) smaller. So
     (S1)-(S3) hold together in a mixed norm, given (A_s), (NA) and Balaban's
     fifth-order expansion.
+- **Numerics (note 56):** in 4D SU(2), matching the terminal averaged plaquette at
+  depths N = 1, 2 also fixes the terminal 1x2 loop: the difference is 0.000(2),
+  against 0.015 between N = 0 and 1. The beta step falls toward the one-loop 0.2575
+  (0.36 -> 0.30). This is evidence for (H0)/M1-4D, not a proof.
 - **Nondegeneracy (P6-4D)** <= (V^R) + (B-small) (28). Three of the four
   source checks for (V^R) are now cited.
 
@@ -254,6 +258,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/53-average-pushforward-density.md` -- H3D-0(b): the push-forward density of Balaban's average is bounded above and below
 - `research/54-flat-backgrounds-and-na.md` -- (NA) on the torus: flat backgrounds with holonomy, a counterexample and the corrected statement
 - `research/55-mc-terminal-convergence.md` -- Monte Carlo test of M1-3D: terminal block observables converge across depths
+- `research/56-mc-4d-universality.md` -- Monte Carlo test in 4D: universality of Balaban-averaged terminal observables
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction

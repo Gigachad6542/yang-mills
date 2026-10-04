@@ -388,3 +388,7 @@ one PROGRESS line.
 - Lead, 2026-10-03: (S1) is now the central open single-step theorem (CMP 109 p. 259 disclaims it). Proposal: define a mixed
   norm (energy norm for transport and contraction, Balaban's sup norms for analytic remainders) and prove (S1) for the abelian
   linearization first, using note 43's kernel data as the target constants.
+
+- T51 [computation] — completed by Claude, 2026-10-04 (`research/56-mc-4d-universality.md`): 4D SU(2) Monte Carlo with
+  Balaban's iterated average. At matched terminal P, W12 differs by 0.015 between N = 0 and 1, and by 0.000(2) between
+  N = 1 and 2. The beta step falls 0.36 -> 0.30 toward the one-loop 0.2575.
