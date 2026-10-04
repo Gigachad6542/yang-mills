@@ -1,0 +1,6 @@
+L=2 beta0=4.0 P    model L^-N + L^-2N : params [ 0.8727 -0.0695 -0.0786], chi2 = 0.01 (dof 1)
+L=2 beta0=4.0 P    model L^-N only    : params [ 0.8781 -0.1188], chi2 = 11.33 (dof 2)
+L=2 beta0=4.0 P    model L^-2N only   : params [ 0.8646 -0.1868], chi2 = 21.97 (dof 2)
+L=2 beta0=4.0 W12  model L^-N + L^-2N : params [ 0.74   -0.1067 -0.1211], chi2 = 0.08 (dof 1)
+L=2 beta0=4.0 W12  model L^-N only    : params [ 0.749  -0.1841], chi2 = 4.92 (dof 2)
+L=2 beta0=4.0 W12  model L^-2N only   : params [ 0.7272 -0.2848], chi2 = 9.09 (dof 2)

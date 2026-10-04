@@ -54,14 +54,30 @@ Increments Δ_N = X_{N+1} - X_N and their successive ratios:
 | 2 | P | 0.100, 0.094, 0.036 | 1.06, 2.65 | 0.705 |
 | 2 | W12 | 0.069, 0.098, 0.042 | 0.71, 2.32 | 0.450 |
 
+## Fit of the approach to the limit (`t50_fit.py`)
+
+The β_0 = 4 points N = 1..4 were fitted with X_N = X_∞ + a L^{-N} + b L^{-2N},
+weighted by the errors:
+
+| X | X_∞ | a | b | χ² (dof 1) | χ², L^{-N} only (dof 2) | χ², L^{-2N} only (dof 2) |
+|---|---|---|---|---|---|---|
+| P | 0.8727 | -0.070 | -0.079 | 0.01 | 11.3 | 22.0 |
+| W12 | 0.740 | -0.107 | -0.121 | 0.08 | 4.9 | 9.1 |
+
+Both terms are needed. The L^{-N} term is the expected O(g²ε_N) correction
+of a superrenormalizable theory, so σ = 1 asymptotically. The L^{-2N} term
+matches the dimension-6 rate σ = 2 of the linearized analysis (note 52).
+The measured per-step ratios, about 2.3-2.8 for L = 2, are therefore a
+crossover between L and L² at these depths, not a separate exponent. Note
+18 Theorem 1' needs only σ > 0.
+
 ## What this shows
 
 1. **Convergence.** The terminal Balaban-averaged observables converge as
    the cutoff is removed at fixed g²ε_0. The fine-lattice plaquette, in
    contrast, tends to 1. At β_0 = 4 the increments decay geometrically from
-   the first step, with ratio about 2.6 ≈ L^{1.4}. That gives an empirical
-   σ ≈ 1.4 in note 18's L^{-σN}, consistent with σ >= 1 from the O(g²ε_N)
-   one-step defects.
+   the first step, with ratio about 2.6 per step. The fit above separates this into
+   σ = 1 (O(g²ε_N) defects) plus an O(L^{-2N}) part.
 2. **Onset at stronger coupling.** At β_0 = 2 (g²ε_0 = 2, so g²ℓ = 8) the
    first two increments are flat. Geometric decay with the same ratio,
    about 2.5, sets in once the finest coupling β_N >= 8. This matches the
