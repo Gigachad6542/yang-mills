@@ -54,6 +54,26 @@ Increments Δ_N = X_{N+1} - X_N and their successive ratios:
 | 2 | P | 0.100, 0.094, 0.036 | 1.06, 2.65 | 0.705 |
 | 2 | W12 | 0.069, 0.098, 0.042 | 0.71, 2.32 | 0.450 |
 
+## Block factor L = 3
+
+The same runs with L = 3 (fine lattices 4³, 12³, 36³; β_N = β_0 3^N):
+
+| β_0 | N | P | W12 | increments of P | ratio |
+|---|---|---|---|---|---|
+| 4 | 0 | 0.7304(9) | 0.5519(16) | | |
+| 4 | 1 | 0.8103(9) | 0.6413(20) | 0.080 | |
+| 4 | 2 | 0.8214(12) | 0.6572(26) | 0.0111 | 7.2 |
+| 2 | 0 | 0.4528(22) | 0.2084(26) | | |
+| 2 | 1 | 0.5690(19) | 0.2985(24) | 0.116 | |
+| 2 | 2 | 0.6183(15) | 0.3534(29) | 0.049 | 2.4 |
+
+At β_0 = 4 the first ratio, 7.2, lies between L = 3 (σ = 1) and L² = 9
+(σ = 2). So in this early regime the L^{-2N} part dominates, consistent with
+the L = 2 fit, where both coefficients are comparable. The limits for L = 2
+and L = 3 differ (about 0.873 against about 0.823). They are different
+observables: the iterated 2-block and 3-block averages define different
+terminal fields on the same terminal lattice.
+
 ## Fit of the approach to the limit (`t50_fit.py`)
 
 The β_0 = 4 points N = 1..4 were fitted with X_N = X_∞ + a L^{-N} + b L^{-2N},
@@ -98,5 +118,5 @@ crossover between L and L² at these depths, not a separate exponent. Note
   of P (0.870 from N <= 3, 0.872 with N = 4) agree.
 - n_0 = 4 is a small terminal lattice, and the statistics are modest. The
   geometric extrapolations are indicative only.
-- Only L = 2 was tested. CMP 109 uses odd L > 11 for symmetry, and CMP 98's
-  average is defined for any L.
+- L = 2 (N <= 4) and L = 3 (N <= 2) were tested. CMP 109 uses odd L > 11 for
+  symmetry, and CMP 98's average is defined for any L.
