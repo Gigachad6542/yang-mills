@@ -47,7 +47,7 @@ conjecture P4-3D / M1-3D. It is not a proof.
 
 Increments Δ_N = X_{N+1} - X_N and their successive ratios:
 
-| β_0 | X | Δ_0, Δ_1, Δ_2 | ratios | geometric extrapolation |
+| β_0 | X | Δ_0, Δ_1, ... | ratios | geometric extrapolation |
 |---|---|---|---|---|
 | 4 | P | 0.089, 0.032, 0.012, 0.0054 | 2.77, 2.61, 2.3 | 0.872 |
 | 4 | W12 | 0.107, 0.049, 0.020, 0.0069 | 2.17, 2.53, 2.8 | 0.736 |
@@ -71,7 +71,7 @@ Increments Δ_N = X_{N+1} - X_N and their successive ratios:
    O(g_k²), which is summable in 3D. A one-shot average along contours of
    physical length would carry a logarithmically divergent self-energy.
 4. **Polyakov loops.** PL2 stays near the Haar value 1/4 at β_0 = 2. At
-   β_0 = 4 it lies between 0.26 and 0.30, with larger errors, because of
+   β_0 = 4 it lies between 0.26 and 0.32, with larger errors, because of
    slow tunnelling in this small box. It is not used for rates.
 
 ## Limits
