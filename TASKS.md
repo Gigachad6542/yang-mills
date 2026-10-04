@@ -375,6 +375,10 @@ one PROGRESS line.
   n0 = 4, L = 2, beta_N = beta0 2^N, N <= 3. Terminal averaged observables converge geometrically (ratio about 2.6 per step at beta0 = 4;
   onset at finest beta >= 8 for beta0 = 2). N = 4 (64^3) added: increments 0.0054 (P), 0.0069 (W12), still geometric.
 
+- T51 [computation] — completed by Claude, 2026-10-04 (`research/56-mc-4d-universality.md`): 4D SU(2) Monte Carlo with
+  Balaban's iterated average. At matched terminal P, W12 differs by 0.015 between N = 0 and 1, and by 0.000(2) between
+  N = 1 and 2. The beta step falls 0.36 -> 0.30 toward the one-loop 0.2575.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
@@ -389,6 +393,3 @@ one PROGRESS line.
   norm (energy norm for transport and contraction, Balaban's sup norms for analytic remainders) and prove (S1) for the abelian
   linearization first, using note 43's kernel data as the target constants.
 
-- T51 [computation] — completed by Claude, 2026-10-04 (`research/56-mc-4d-universality.md`): 4D SU(2) Monte Carlo with
-  Balaban's iterated average. At matched terminal P, W12 differs by 0.015 between N = 0 and 1, and by 0.000(2) between
-  N = 1 and 2. The beta step falls 0.36 -> 0.30 toward the one-loop 0.2575.
