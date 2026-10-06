@@ -444,6 +444,10 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
   Balaban's iterated average. At matched terminal P, W12 differs by 0.015 between N = 0 and 1, and by 0.000(2) between
   N = 1 and 2. The beta step falls 0.36 -> 0.30 toward the one-loop 0.2575.
 
+- T56 [fix] — completed by Claude, 2026-10-06 (note 49 §6): the KP form of Balaban's final expansion is checked against CMP 122 II
+  (1.97)-(1.99). After the Mayer expansion, the activities are bounded by c_1 e^{-(1+beta) kappa d_k}; with domain counting this gives KP for
+  a = kappa d/2 when kappa is large. This was the last listed source item for (P).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

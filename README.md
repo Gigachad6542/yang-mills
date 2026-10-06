@@ -90,7 +90,8 @@ estimate. The research notes give the details.
     holds: it reduces exactly to a boundary-layer bound, and that bound holds
     because R_k >= (log g_k^-2)^r with r >= 2 (CMP 119 p. 245). Plus (T2-R),
     Balaban's domain factors CMP 122 II (1.79)-(1.89) via a rooted
-    Kotecky-Preiss lemma (49). Persistence costs a factor only once per
+    Kotecky-Preiss lemma (49). Its KP hypothesis is checked against Balaban's
+    activity bound CMP 122 II (1.97)-(1.99) (49 §6). Persistence costs a factor only once per
     domain lifetime K <= n_0 + R_k, so the rate is a_eff ~ p_0(gamma)^2/R(gamma).
     It diverges because 2p_0 > (d+1)r, which Balaban's own induction requires
     (49 §5). So (P) rests on published structure. An independent action-based route is in

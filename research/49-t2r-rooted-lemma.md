@@ -118,3 +118,36 @@ The remaining assumption of Proposition 2 is the KP form of Balaban's final
 cluster expansion. That is how his convergence is proved (Mayer expansion
 of the exponential, CMP 122 II after (1.89)), not a new estimate. (P) is
 thereby reduced to published structure.
+
+## 6. Source check: the KP form of Balaban's final expansion (T56)
+
+CMP 122 II, after (1.89) (printed pp. 388-390).
+
+- "The next step is a construction of an exponentiated cluster expansion
+  for the expression in the curly bracket in (1.72). The first operation is
+  the Mayer expansion of the exponential, the same as in (7.1) [I]."
+- The activities obey (1.92)-(1.97). The final bound (1.97) has the form
+
+      |activity(X')| <= c_1 exp(-(1 + β) κ d_k(X')),
+
+  with c_1 = exp(-p_0(g_k)) when X' meets no large-field region Y_h, and
+  c_1 = α_1^{1/3} otherwise. Balaban states: "The estimate (1.97) is
+  sufficient for convergence of the exponentiated cluster expansion".
+- He then gets {...} = exp Σ_X R'^{(k)}(X) ((1.98)), "given by the
+  convergent series (7.13) [I]", with |R'^{(k)}(X)| <= O(1) c_1
+  exp(-(1 + β/2) κ d_k(X)) ((1.99)).
+
+*KP condition.* The localization domains are connected unions of cubes. So
+the number containing a given cube, with d_k(X) = n, is at most e^{c_d n}.
+Hence, with a(X) = ½ κ d_k(X),
+
+    Σ_{X ∋ □} |activity(X)| e^{a(X)} <= c_1 Σ_n e^{c_d n - (½ + β) κ n} <= 2 c_1 e^{c_d - (½+β)κ},
+
+which is <= a(□) = ½κ once κ >= 4 c_d and c_1 <= 1. Balaban's κ is "large
+enough" throughout. So his expansion satisfies the KP condition with
+a(X) = ½ κ d(X), the form assumed in Proposition 2.
+
+*Status.* The last open source item for (P) is now a reading of CMP 122 II,
+(1.97)-(1.99), plus a standard counting step. Assembling the per-step
+exponentiated expansions into the multi-scale final density (CMP 122 III,
+(2.18)) is the structure note 39 §6 already uses. It is not re-derived here.
