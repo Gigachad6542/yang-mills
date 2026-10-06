@@ -458,6 +458,10 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
   Symanzik at beta_N = 4·2^N. The terminal differences shrink from 0.083 to 0.009 (P) and from 0.115 to 0.017 (W12) over N = 0..3, at
   about the rate L^-N, and the limits agree within the extrapolation uncertainty.
 
+- T59 [proof] — completed by Claude, 2026-10-06 (note 53 §6): H3D-0(b) also holds for Balaban's symmetric 4D average CMP 109 (0.4).
+  The central crossing link is private, the weights are positive and sum to 1 - L^{1-d}, and Theorems 2, 4, 5 hold verbatim. This supplies
+  the H3D-0 input of note 18 Theorem 5 (4D).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

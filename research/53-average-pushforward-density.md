@@ -1,6 +1,6 @@
 # H3D-0(b): the push-forward density of Balaban's average is bounded above and below
 
-Status: **proved** (T47). For each fixed N, the push-forward of the depth-(N+1)
+Status: **proved** (T47; §6, the extension to CMP 109 (0.4), T59). For each fixed N, the push-forward of the depth-(N+1)
 measure under one step of Balaban's average (CMP 98 (42)) has a density that
 is bounded above and below. Hence D_N of note 18 is bounded, and H3D-0(b)
 holds as stated in note 18. The weaker condition (b') of note 52 §4a is no
@@ -253,13 +253,59 @@ of note 18 holds.
   correct.
 - The 3D route now reads
 
-      M1-3D <= (A_s) [CMP 102 remainder bound, complex coupling] + (NA) [3D],
+      M1-3D <= (A_s) [CMP 102 remainder bound, complex coupling] + (NA♭) [3D; note 54],
 
-  together with notes 17, 18, 42, 44-46, 51-53. The remaining inputs are
-  both statements about CMP 102 / CMP 99's single-step analysis. The
-  qualitative fixed-N input is gone.
+  together with notes 17, 18, 42, 44-46, 51-54. This is a conditional
+  reduction: the interacting H3D-1' assembly is outlined in note 52 §3 and
+  not written out. The qualitative fixed-N input is gone.
 - Theorem 2 is a statement about Balaban's average that does not depend on
   scale: one step never collapses volume by more than c_L in the private
   link. The sharp constant appears to be ε³ (attained at U = 1). Haar
   sampling gives min J/ε³ = 1.82 (L = 2) and 50.1 (L = 3), but the sampled
   minimum does not prove a bound.
+
+## 6. Extension to Balaban's symmetric 4D average (CMP 109 (0.4))
+
+Balaban's 4D papers use the Euclidean-symmetric average of CMP 109 (0.4).
+There L is odd and the blocks B(y) are centred at y. Then
+
+    Ū(c) = exp( Σ_{x ∈ B(c_-)} L^{-d} Σ_{Γ ∈ G(c_-, x)} Σ_{Γ' ∈ G(c_+, x')} |G|^{-1} |G'|^{-1}
+                Log U(Γ ∪ [x, x'] ∪ (-Γ') ∪ (-c)) ) U(c),
+
+where G(y, x) is the set of shortest axis-ordered contours from y to x
+(all axis orders), x' = x + L e_μ, and U(c) is the straight product through
+the block centres.
+
+**Proposition 6.** Lemma 1 and Theorems 2, 4 and 5 hold verbatim for (0.4),
+with "x ∈ S" replaced by the pairs (x, Γ, Γ') with x off the central line.
+In particular H3D-0(b) holds for the 4D route, which is the H3D-0 input of
+note 18 Theorem 5.
+
+*Proof.*
+
+1. *Lemma 1.* Each contour Γ ∈ G(c_-, x) is a monotone path inside the box
+   spanned by c_- and x, so it lies inside B(c_-). The same holds for Γ' in
+   B(c_+). [x, x'] crosses the face between the two blocks once, at the
+   transverse position of x.
+   - For x on the central line, every Γ and Γ' is straight along μ, and the
+     contour reduces to c. So those terms are Log 1 = 0.
+   - For x off the central line, the contour avoids the central crossing
+     link b*_c.
+   - No contour of another coarse bond contains b*_c, by the argument of
+     Lemma 1, item 3.
+
+   So (qU)(c) = exp(Σ_k w_k Log(Y_k X^{-1})) X, where X = U(c) = W_c U_{b*_c},
+   the Y_k do not depend on U_{b*_c}, and the weights w_k > 0 sum to
+   1 - L·L^{-d} = 1 - ε.
+2. *Theorems 2 and 4.* Their proofs use only this form, with positive
+   weights summing to 1 - ε (after grouping equal Y_k). They apply
+   unchanged, with the same c_L.
+3. *Theorem 5.* The mixture formula and the upper bound are as before. For
+   the lower bound, U⁰ again has in-block links equal to 1 and every
+   crossing link of c equal to V⁰_c. Then every contour of c gives
+   Y = V⁰_c. ∎
+
+*Remark.* The variant (0.12), with Federbush group averages
+M({U(Γ)}_{Γ ∈ G(y,x)}), has the same structure wherever it is defined. It is
+defined only for contour sets of small diameter, so it does not give a
+global map on Ω_N. (0.4), with the principal logarithm, does.
