@@ -216,7 +216,7 @@ one PROGRESS line.
 Codex is back online. Take these in order (lowest number first), one at a time,
 under the rules of `AGENTS.md`. Each one is self-contained.
 
-### T52 [proof]: quantitative near-flat lemma (note 54, Lemma 3)
+### T52 [proof] — completed by Codex, 2026-10-06: quantitative near-flat lemma (note 54, Lemma 3)
 Scope: a new note, `research/57-near-flat-quantitative.md`. Also note 54, but
 only to add a one-line pointer.
 Note 54 Lemma 3 shows by compactness that an SU(2) lattice configuration on
@@ -475,4 +475,3 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
 - Lead, 2026-10-03: (S1) is now the central open single-step theorem (CMP 109 p. 259 disclaims it). Proposal: define a mixed
   norm (energy norm for transport and contraction, Balaban's sup norms for analytic remainders) and prove (S1) for the abelian
   linearization first, using note 43's kernel data as the target constants.
-

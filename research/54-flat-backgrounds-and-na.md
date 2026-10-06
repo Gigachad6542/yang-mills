@@ -129,7 +129,7 @@ the fine minimizers, use the continuity of the minimizer map on the
 small-field set (CMP 102b Theorem 1, uniqueness), and the fact that the
 minimizer of a flat coarse configuration is flat (§1). ∎
 
-The rate is not quantified. Examples suggest ω(ε) is of order √ε, not ε.
+Note 57 proves the explicit sharp bound ω(ε) <= d n_0 sqrt(ε) in operator norm, and shows that the square-root exponent cannot be improved.
 Two almost-commuting holonomies e^{iασ_3}, e^{iασ_1} have commutator of
 order α², spread over n_0² plaquettes, but their distance to a commuting
 pair is of order α. A √ε rate is harmless for Proposition 1, which needs
