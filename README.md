@@ -262,6 +262,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/54-flat-backgrounds-and-na.md` -- (NA) on the torus: flat backgrounds with holonomy, a counterexample and the corrected statement
 - `research/55-mc-terminal-convergence.md` -- Monte Carlo test of M1-3D: terminal block observables converge across depths
 - `research/56-mc-4d-universality.md` -- Monte Carlo test in 4D: universality of Balaban-averaged terminal observables
+- `research/57-near-flat-quantitative.md` -- (Codex, T52) quantitative near-flat lemma: dist(U, Flat) <= d n sqrt(eps), sharp exponent
 - `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
 - `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print

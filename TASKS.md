@@ -217,6 +217,8 @@ Codex is back online. Take these in order (lowest number first), one at a time,
 under the rules of `AGENTS.md`. Each one is self-contained.
 
 ### T52 [proof] — completed by Codex, 2026-10-06: quantitative near-flat lemma (note 54, Lemma 3)
+Reviewed by the lead, 2026-10-06: correct. I checked the commutator identity (3.5), both commuting candidates of Lemma 3
+(min <= sqrt(delta)), the swap counts of Lemma 2, the seam-bond bound (d-1)rho^2 + rho <= d rho, and the sharpness example.
 Scope: a new note, `research/57-near-flat-quantitative.md`. Also note 54, but
 only to add a one-line pointer.
 Note 54 Lemma 3 shows by compactness that an SU(2) lattice configuration on
