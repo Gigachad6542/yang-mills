@@ -448,6 +448,11 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
   (1.97)-(1.99). After the Mayer expansion, the activities are bounded by c_1 e^{-(1+beta) kappa d_k}; with domain counting this gives KP for
   a = kappa d/2 when kappa is large. This was the last listed source item for (P).
 
+- T57 [proof] — completed by Claude, 2026-10-06 (`research/58-vertex-alias-sums.md`): Lemma A, convergence of alias sums with
+  Dirichlet-product weights and symbols of growth (1+|q|)^s, s < 1, at rate (1+log M) M^{s_+-1}. Proposition B: the vertex Riemann sums
+  (note 48 item 4) follow from the structural form (V), which is checked for the leading gluon vertices (s = -3, -4). Not written out: the
+  two-alias extension for background aliases, and the ghost and covariant-average terms.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

@@ -77,7 +77,8 @@ estimate. The research notes give the details.
     averaging kernels and weights (41) and for the marginal quadratic form,
     rate O(log M/M) proved, about M^-2 measured (47). Assembled in 48:
     all quadratic and linear ingredients converge geometrically; the vertex
-    Riemann sums are stated;
+    Riemann sums are reduced by a general alias-sum lemma (58) to a
+    bookkeeping form (V), checked for the leading gluon vertices;
   - (S) the one-loop sum rule. With (C) and Schur additivity, an O(1) edge
     bound for composites (sketched) forces beta_inf^0 = 2b_0 log L (note 50).
     No finite scheme constant is needed;
@@ -260,6 +261,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/54-flat-backgrounds-and-na.md` -- (NA) on the torus: flat backgrounds with holonomy, a counterexample and the corrected statement
 - `research/55-mc-terminal-convergence.md` -- Monte Carlo test of M1-3D: terminal block observables converge across depths
 - `research/56-mc-4d-universality.md` -- Monte Carlo test in 4D: universality of Balaban-averaged terminal observables
+- `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction

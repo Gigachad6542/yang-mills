@@ -43,7 +43,8 @@ second moment of it (note 41 §1).
    | 3 -> 4 | 2.74e-2 | 3.38 |
 
 3. **Averaging weights** a_k: rate L^{-2k} (note 41).
-4. **Vertices (stated, not written out).** V', V'' evaluated on H_k B are
+4. **Vertices (reduced, note 58: Lemma A proved; the structural form (V) is checked
+   for the leading gluon vertices).** V', V'' evaluated on H_k B are
    sums over the L^{4k} fine sites of a block of local polynomials (degree
    2-4) in the fine field H_k B. In rescaled units, with H_k B smooth at the
    block scale (note 44: gradients O(M^{-1}) in energy), these are Riemann
