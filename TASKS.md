@@ -287,7 +287,7 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
 overrides the lowest-number rule for these tasks. Note 61 reduces M1-3D to
 three readings of Balaban's papers, which are below.
 
-### T62 [fix]: (H4) — CMP 119 Sect. 2 at d = 3 (note 61 §6) — claimed by Claude, 2026-10-06
+### T62 [fix]: (H4) — CMP 119 Sect. 2 at d = 3 (note 61 §6) — completed by Claude (partial reading), 2026-10-06; see note 61 §6a
 Scope: `research/61-3d-assembly-conditional.md` §6 only.
 CMP 119's introduction (printed pp. 244-245) says that for d < 4 the
 large-field factors are arbitrary powers of ε and control the large-field

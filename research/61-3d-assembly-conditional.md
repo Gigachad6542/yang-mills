@@ -246,3 +246,53 @@ What then gives (H4):
 **Status.** (H4) is a reading of CMP 119 Sect. 2 at d = 3, which Balaban
 asserts in the introduction but writes out only for d = 4, plus note 49.
 It is not a new construction. The line-by-line check for d = 3 is open.
+
+### 6a. Reading report on CMP 119 at d = 3 (T62, partial)
+
+Source: `sources/ocr/cmp119.md` (OCR; formulas partly garbled).
+
+1. **Explicit statements.**
+   - Introduction, printed pp. 244-245. For d < 4, "the bound above can be
+     estimated by an arbitrarily large power of ε. This is enough to control
+     expressions arising in the large field regions ... for all steps".
+     The R-operation is introduced only for d = 4.
+   - Printed p. 276, Sect. 3, on the terms R_k: "the analysis presented in
+     [16] for three-dimensional models is enough here". [16] is CMP 102.
+   - The framework gives "not bounds, but a precise description of the
+     effective densities in the form of convergent expansions" (p. 244).
+2. **Dimension-dependent inputs of the inductive assumption (Sect. 2).**
+   - *(2.4)-(2.5).* Thresholds ε_j = g_j p_0(g_j) and domain sizes R_j, the
+     smallest power of L with R_j >= (log g_j^{-2})^r. These definitions do
+     not depend on d.
+   - *(2.6)-(2.9).* Inequalities between couplings and thresholds at scales
+     m < n. As far as the OCR shows, they bound the finer-scale quantity by
+     the coarser one up to (1 + β_0) and polynomial factors in (n - m),
+     derived from the 4D RG equations. In 3D, g_k² = g² ε L^k increases
+     geometrically with k. Since g p_0(g) increases for small g, ε_j
+     increases with j as well. So these inequalities hold in 3D, with room.
+     No inequality in the reverse direction (coarser bounded by finer),
+     which would fail in 3D, was found in Sect. 2.
+   - *Entropy versus large-field factors.* The induction needs the
+     large-field factor exp(-c p_0(g_j)²) per unit of domain to beat entropy
+     factors exp(O(1) M^d R_j^{d+1}) (CMP 122 II (1.80)-(1.82); note 49 §5).
+     For d = 3 this asks for 2p_0 > 4r instead of 2p_0 > 5r, which is weaker.
+     And in 3D, p_0(g_j)² ~ (log ε_j^{-1})^{2p_0} grows, so the factor is
+     smaller than any power of ε_j, as Balaban says.
+   - *Coupling renormalization.* The terms needing "the second
+     renormalization connected with the coupling constant renormalization
+     counterterm" (p. 276) are absent in 3D, by superrenormalizability
+     (CMP 109 p. 255: "in that case it is not necessary to consider the
+     β-functions").
+3. **Not checked.** The bounds of Sect. 3 (the (k+1)-st step) and of CMP 122
+   I/II line by line at d = 3, with the R-operation removed. The OCR quality
+   of those pages does not allow a reliable equation-level reading. A check
+   against the original page images would be needed.
+
+**Verdict.** (H4) is supported:
+- Balaban states the d < 4 case explicitly in two places;
+- the dimension-dependent inputs found in Sect. 2 hold, or hold with room,
+  at d = 3.
+
+This is a partial reading, not a line-by-line proof. (H4) keeps the status
+"published conditional input (asserted for d < 4 by Balaban), checked at the
+level of the inductive assumptions".
