@@ -174,6 +174,9 @@ So
 - (NA♭): CMP 99 Theorem 3.4 around a flat background (Cauchy plus Schur;
   note 54). Read in T64: supported, provided n_0 > O(1)M (Balaban's
   localization cubes must not wrap the torus) and d n_0 sqrt(eps_0) <= alpha_1/2.
+  Caveat: the decay bound CMP 102b (190) for the minimizer derivative, used in
+  the Schur step, is stated by Balaban without proof ("we do not perform these
+  calculations here").
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
   reduced to its sixth-order remainder bound (note 42). Read in T63: no use of
   reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.

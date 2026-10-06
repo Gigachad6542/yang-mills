@@ -195,9 +195,23 @@ conditions:
 - (iii) the induced fine-scale deviation obeys the scaled bounds (3.37).
   This is the regularity of minimal configurations, CMP 102b Theorem 1.
 
-The passage from G to the minimizer map H goes through CMP 102b
-(182)-(190), which expresses H and δℋ/δB by these operators. It was not
-re-checked here. The constants C_1(L) remain untracked.
+*From G to H (CMP 102b, read in the same task).* Proposition 9 of CMP 102b
+(printed p. 309) asserts that ℋ(B) is analytic in B and in the external
+background U satisfying CMP 99's regularity conditions (3.35)-(3.38).
+That is the analyticity the Cauchy step needs. The decay bound (190) for
+δℋ/δB, which the Schur step needs, is **stated without proof**. Balaban
+writes (p. 308) that the required second-derivative kernel estimate (189)
+is "a very awkward and complicated problem, although quite
+straightforward. ... We do not perform these calculations here ... let us
+formulate a final result only."
+
+So (NA♭) rests on:
+- CMP 99 Theorems 3.1-3.4 (proved there);
+- CMP 102b Proposition 9's analyticity (sketched);
+- CMP 102b (190) (proof omitted by Balaban).
+
+Its status is therefore "published conditional input, with one step whose
+proof the source omits". The constants C_1(L) remain untracked.
 
 **Proposition 1 (corrected).** Assume (NA♭). For B in the small-field
 domain,
