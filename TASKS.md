@@ -211,6 +211,71 @@ for note 22 Prop D in the actual gauge theory.
 Done when: committed as `[T19][computation]` or `[T19][failed-attempt]` with
 one PROGRESS line.
 
+## Assigned to Codex (new, 2026-10-06)
+
+Codex is back online. Take these in order (lowest number first), one at a time,
+under the rules of `AGENTS.md`. Each one is self-contained.
+
+### T52 [proof]: quantitative near-flat lemma (note 54, Lemma 3)
+Scope: a new note, `research/57-near-flat-quantitative.md`. Also note 54, but
+only to add a one-line pointer.
+Note 54 Lemma 3 shows by compactness that an SU(2) lattice configuration on
+the torus (Z/n)^d with max_p |U(dp) - 1| <= ε is within ω(ε) -> 0 of a flat
+configuration, after a gauge transformation. No rate is given.
+Prove an explicit bound ω(ε) <= C(d) n^a ε^b, with stated a and b; b = 1/2 is
+expected. The route is a complete axial (maximal-tree) gauge, which makes
+the non-tree links products of plaquettes, followed by a lemma that almost
+commuting SU(2) elements are close to commuting ones. That lemma must have
+an explicit constant, and note 54 §3's example (commutator of order α²,
+distance of order α) shows that b = 1/2 is sharp.
+Done when: the bound is proved with all constants explicit, or there is a
+`failed-attempt` naming the exact step that fails. Commit `[T52][proof]`
+plus one PROGRESS line.
+
+### T53 [computation]: sup-norm constant s_L in twisted sectors (note 36 caveat)
+Scope: `research/scripts/t27_minimizer_regularity.py` (add a twist option),
+its output, and a short section in `research/35-minimizer-regularity-abelian.md`.
+Note 36 (holonomy caveat) claims that the exact-flux sup-norm constant s_L of
+note 35 is unchanged, up to O(e^{-δ n_0}), in the twisted Bloch sectors
+created by a flat background with holonomy (note 54 §1). Test this. Add a
+quasi-periodic twist e^{iθ} to the fine Fourier grid, so that coarse momenta
+become K ∈ (2π/n_0)(Z^4 + θ/(2π)). Rerun the LP of note 35 for L = 2, 3, 4,
+m = 1, at θ = π/4 and π/2. Report s_L(θ) next to s_L(0).
+Done when: the table is in note 35 and states whether the claim of note 36
+holds. Commit `[T53][computation]` plus one PROGRESS line.
+
+### T54 [computation]: 4D universality test, third depth and a third observable (note 56)
+Scope: `research/scripts/t51_mc_universality_4d.py` (add a 2x2 loop
+observable if needed), new output files, and a new section in
+`research/56-mc-4d-universality.md`.
+Note 56 matched the terminal plaquette at depths N = 1, 2 (8^4, 16^4). There
+the terminal 1x2 loop agreed (difference 0.000(2)), and the beta step was
+0.30 against the one-loop 0.2575.
+1. Add the terminal 2x2 loop and repeat the N = 1, 2 matching for it.
+2. Run N = 3 (32^4) at 3 beta values bracketing the matching point P = 0.64.
+   Extrapolating the beta step suggests beta_3 is about 3.37-3.40. Use
+   `t51_matching.py` (extend DATA).
+3. Report the beta steps beta_3 - beta_2 and the W12 differences.
+
+Expect about 2 h per beta at 32^4 in numpy. Use 150 thermalization updates
+and at least 200 measurements, as in note 56.
+Done when: the N = 3 matching row and the 2x2 comparison are in note 56.
+Commit `[T54][computation]` plus one PROGRESS line.
+
+### T55 [fix]: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
+Scope: `research/42-s2-by-even-deformation.md` §4 only.
+Note 42 §4 (T49) checked CMP 116 Part II §1 and CMP 109 §2. Read CMP 109
+§§3-5 (`sources/ocr/cmp109.md`, fluctuation-field action, Ward identities,
+beta-function extraction). List every place where the coupling g_k enters an
+estimate, and say for each whether the estimate uses only |g_k| p(g_k) (or
+|g_k| |B|) or something more: the sign, reality or positivity of g_k, or of
+g_k^{-2} A. Under the deformation g_k -> s g_k with |s g_k| p(g_k) <= α', the
+generated marginal coefficient becomes complex. Say whether any step of §§3-5
+uses that coefficient being real.
+Done when: note 42 §4 has the list, with page and equation numbers, and a
+one-line verdict: "no use of reality found", or the exact place where it is
+used. Commit `[T55][fix]` plus one PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/computation] — completed by Claude, 2026-10-02: P4-3D as conditional
