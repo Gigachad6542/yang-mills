@@ -315,7 +315,7 @@ equation number and the property it uses.
 Done when: a list and a one-line verdict are in note 42 §4. Commit
 `[T63][fix]` plus one PROGRESS line.
 
-### T64 [fix]: (NA♭) — CMP 99 Theorem 3.4 around a flat background (note 54 §4)
+### T64 [fix]: (NA♭) — CMP 99 Theorem 3.4 around a flat background (note 54 §4) — claimed by Claude, 2026-10-06
 Scope: `research/54-flat-backgrounds-and-na.md` §4 only.
 (NA♭) claims analyticity of the background-field operators at
 configurations U'U♭, with U♭ flat (possibly with nontrivial holonomy) and
