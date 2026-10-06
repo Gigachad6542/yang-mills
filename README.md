@@ -172,8 +172,8 @@ analysis. **Update (note 52):** H3D-1' now holds at the linearized level
 (sigma >= 2), from the energy-norm transport theorem (notes 44, 51). As a
 conditional reduction, written out in note 61 (Theorem 1: hypotheses (H1)-(H5),
 a summable-coupling bootstrap in physical-coupling units, rate
-max(theta', 1/L)^N; (H3) follows from (A_s), so the remaining inputs are (NA♭), (A_s),
-large fields (H4) and the terminal conversion (H5); (H4) reduces to
+max(theta', 1/L)^N; (H3) follows from (A_s), and (H5) is proved (Prop. 3), so the remaining
+inputs are (NA♭), (A_s) and large fields (H4); (H4) reduces to
 CMP 119's exact expansions at d = 3, where large-field factors are arbitrary powers of
 eps and no R-operation is needed (Balaban, CMP 119 introduction), plus note 49 (note 61 §6)),
 M1-3D <= (A_s) [CMP 102 remainder bound for complex coupling] + (NA) [3D

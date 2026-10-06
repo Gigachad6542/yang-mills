@@ -152,6 +152,43 @@ of the Remarks.
 So (H3) is not an independent input: it follows from the same (A_s) as
 (H2).
 
+**Proposition 3 ((H5), terminal conversion).** Assume the terminal
+effective density has the small-field representation
+ρ_0(W) = exp(-y ε_0^{-1} A_0(W) + Σ_X E_0(X, W)) (CMP 102 at k = 0), plus the
+large-field terms of (H4). Assume E_0 has Balaban's exponential polymer
+decay. Then the terminal tangent defect satisfies
+
+    osc m_{N,s} <= C_T (δ_N + Δ_N) + (large-field part of (H4)),
+
+with C_T depending only on n_0, g²ε_0 and the terminal small-field radius.
+
+*Proof.*
+
+1. *Tangent as a log-density derivative.* By note 18 Prop. 2,
+   m_{N,s}(W) = ∂_s log(dν_s/dW) + const, where ν_s is the terminal law of
+   μ_{N,s}. So m_{N,s} is the s-derivative of the terminal effective action,
+   up to constants, and osc removes constants.
+2. *Marginal part.* ∂_s y · ε_0^{-1} A_0(W) has oscillation
+   <= ε_0^{-1}|∂_s y| · osc A_0 <= C n_0³ Δ_N, since A_0 is a sum of 3n_0³
+   bounded plaquette terms.
+3. *Quadratic irrelevant part.* By note 46, |Q(F(W))| <= ||Q||_S S(Φ(W)). On
+   the terminal small-field set S(Φ) <= C n_0³, because the terminal lattice
+   is fixed and the curvatures are bounded.
+4. *Higher-order part.* Sup norms on the small-field set. Polymer sums over
+   the finite terminal lattice converge by exponential decay and contribute
+   a factor <= C n_0³.
+5. Summing 2-4 gives C_T (δ_N + Δ_N). ∎
+
+**Input sizes.** δ_0 <= C_0 and Δ_0 <= C_0 ε_N follow from CMP 102's first
+step at depth N:
+
+- the irrelevant output obeys CMP 102 (25)/(33);
+- the generated F²-coefficient is O(1) in units of x_N = g_N^{-2}, hence
+  O(ε_N) in units of y.
+
+So (H5) is proved, given the representations above (CMP 102 for small
+fields, (H4) for large fields).
+
 ## 4. Status of the hypotheses
 
 | Hypothesis | Status |
@@ -160,10 +197,11 @@ So (H3) is not an independent input: it follows from the same (A_s) as
 | (H2) | Note 42 Theorem 3, given (A_s) for CMP 102 (reduced to its sixth-order remainder bound for complex coupling). |
 | (H3) | Follows from (A_s) by Proposition 2 (charge conservation of transport, note 42 Theorem 3, and note 51 Lemma 4 extraction). |
 | (H4) | **Reduced to a reading of CMP 119 at d = 3** (see §6, as corrected). CMP 102 alone gives only stability bounds. CMP 119 builds exact convergent expansions with large-field regions. Its introduction says that for d < 4 the large-field factors are arbitrary powers of ε and "enough to control expressions arising in the large field regions ... for all steps", so no R-operation is needed. With note 49's rooted KP lemma this gives (H4a). (H4b) follows from the ε^q factors. Not checked line by line for d = 3. |
-| (H5) | The terminal conversion is a fixed-dimensional statement: n_0 and g²ε_0 are fixed, and all norms on the terminal small-field data are equivalent. The input sizes are CMP 102's first-step bounds. Not written out. |
+| (H5) | Proved (Proposition 3), given CMP 102's small-field representation at k = 0 and its first-step bounds for the input sizes. |
 
-So M1-3D <= (NA♭) + (A_s) + (H4) + (H5), as a written-out conditional
-theorem. (H4) is the one item that is neither proved here nor a reading. Every remaining item is a statement about a single CMP 102 step
+So M1-3D <= (NA♭) + (A_s) + (H4), as a written-out conditional
+theorem. All three remaining inputs are readings of Balaban's papers:
+(NA♭) of CMP 99, (A_s) of CMP 102, and (H4) of CMP 119 at d = 3. Every remaining item is a statement about a single CMP 102 step
 or about the fixed terminal lattice.
 
 ## 5. Comparison with the numerics
