@@ -110,6 +110,22 @@ crossover between L and L² at these depths, not a separate exponent. Note
    β_0 = 4 it lies between 0.26 and 0.32, with larger errors, because of
    slow tunnelling in this small box. It is not used for rates.
 
+## Remark: H3D-3 (uniform coupling differentiability)
+
+Note 18's H3D-3 asks that terminal expectations have g²-derivatives bounded
+uniformly in N. The two couplings g²ε_0 = 1 (β_0 = 4) and 2 (β_0 = 2) give
+finite-difference slopes at each depth:
+
+| N | ΔP/Δ(g²ε_0) | ΔW12/Δ(g²ε_0) |
+|---|---|---|
+| 0 | -0.276 | -0.342 |
+| 1 | -0.265 | -0.379 |
+| 2 | -0.203 | -0.330 |
+| 3 | -0.180 | -0.307 |
+
+The slopes stay bounded and settle as N grows, in line with H3D-3. This is
+a coarse two-point difference, not a derivative bound.
+
 ## Limits
 
 - The data reach N <= 4 (64³) at β_0 = 4 and N <= 3 at β_0 = 2. The N = 4
