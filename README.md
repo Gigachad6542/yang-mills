@@ -170,9 +170,9 @@ The argument is an even complex deformation plus a Schwarz lemma. So
 **M1-3D reduces to (S1) + (A_s)**, two statements about CMP 102's single-step
 analysis. **Update (note 52):** H3D-1' now holds at the linearized level
 (sigma >= 2), from the energy-norm transport theorem (notes 44, 51). As a
-conditional reduction (the assembly of the interacting H3D-1' from the
-single-step inputs, through note 29 and H3D-2 with CMP 102's large-field
-factors, is outlined in note 52 §3 but not written out),
+conditional reduction, written out in note 61 (Theorem 1: hypotheses (H1)-(H5),
+a summable-coupling bootstrap in physical-coupling units, rate
+max(theta', 1/L)^N),
 M1-3D <= (A_s) [CMP 102 remainder bound for complex coupling] + (NA) [3D
 background perturbation; corrected to (NA♭) in note 54: compare with the
 nearest flat background, since a flat background with nontrivial holonomy
@@ -265,6 +265,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/57-near-flat-quantitative.md` -- (Codex, T52) quantitative near-flat lemma: dist(U, Flat) <= d n sqrt(eps), sharp exponent
 - `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
 - `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
+- `research/61-3d-assembly-conditional.md` -- The 3D assembly: H3D-1 from single-step bounds, written out (conditional)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed

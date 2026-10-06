@@ -468,6 +468,11 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
   proves M1-3D/M1-4D or Balaban's coupling-flow theorem. Related: Chatterjee 2024 (Gaussian Higgs scaling limit) and Cao-Chatterjee (state
   space). Unrefereed 4D existence claims are listed as unverified and not used.
 
+- T61 [proof, conditional] — completed by Claude, 2026-10-06 (`research/61-3d-assembly-conditional.md`): the interacting H3D-1
+  is written out. Lemma G (proved) is a summable-coupling bootstrap with physical-coupling bookkeeping. Theorem 1: (H1) transport (NA♭),
+  (H2) generation (A_s), (H3) 3D marginal structure, (H4) large fields and (H5) terminal conversion imply H3D-1 with rate
+  (N+1) max(theta', 1/L)^N, hence M1-3D. This explains the sigma = 1 component seen in the Monte Carlo.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
