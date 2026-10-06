@@ -178,8 +178,9 @@ So
   the Schur step, is stated by Balaban without proof ("we do not perform these
   calculations here").
   Note 63 avoids this: an energy-norm perturbation lemma for constrained
-  minimizers (proved) gives (NA♭) from flat coercivity, CMP 102b's sup bounds
-  and a small multiplier term.
+  minimizers (proved) plus flat coercivity (proved, Lemma 3) give (NA♭) from
+  CMP 102b's sup bounds (19)-(21) on the minimizer (I2) and a small
+  Lagrange-multiplier term (I3).
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
   reduced to its sixth-order remainder bound (note 42). Read in T63: no use of
   reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
