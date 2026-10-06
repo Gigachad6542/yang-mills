@@ -159,11 +159,11 @@ So (H3) is not an independent input: it follows from the same (A_s) as
 | (H1) | Proved for the abelian linearization and at flat backgrounds (notes 44, 45, 54). For general small-field backgrounds it rests on (NA♭) (Cauchy plus Schur from CMP 99 Thm 3.4; constants untracked). It needs L large enough that C_ab/L < 1 with room; the sharp C_ab is about 3.1, so L >= 6 or so. |
 | (H2) | Note 42 Theorem 3, given (A_s) for CMP 102 (reduced to its sixth-order remainder bound for complex coupling). |
 | (H3) | Follows from (A_s) by Proposition 2 (charge conservation of transport, note 42 Theorem 3, and note 51 Lemma 4 extraction). |
-| (H4) | Expected from CMP 102's large-field factors (arbitrary powers of ε). Not written out. |
+| (H4) | **Open, and not a reading.** CMP 102 controls large fields only through the inductive stability inequality (41): an upper bound with factors exp(-p²(g_j)/4) per large-field plaquette ((67)-(71)), and a lower bound. Balaban: "we have estimated ρ_{k+1} by an expression almost equal to the right-hand side of the inductive assumption (41)" (printed p. 272). There is no exact large-field representation in 3D, unlike the 4D R-operation of CMP 119-122. So the tangent (Lipschitz) control of large-field terms that (H4) asks for is not available from the source. See §6. |
 | (H5) | The terminal conversion is a fixed-dimensional statement: n_0 and g²ε_0 are fixed, and all norms on the terminal small-field data are equivalent. The input sizes are CMP 102's first-step bounds. Not written out. |
 
 So M1-3D <= (NA♭) + (A_s) + (H4) + (H5), as a written-out conditional
-theorem. Every remaining item is a statement about a single CMP 102 step
+theorem. (H4) is the one item that is neither proved here nor a reading. Every remaining item is a statement about a single CMP 102 step
 or about the fixed terminal lattice.
 
 ## 5. Comparison with the numerics
@@ -174,3 +174,30 @@ the O(ε_k)-weighted marginal generation), with a subleading L^{-2N} part.
 This agrees with θ' < 1/L, which is consistent with the dimension-6
 transport rate. The fitted two-term form X_∞ + aL^{-N} + bL^{-2N}
 (note 55) is exactly what Lemma G's structure predicts.
+
+## 6. The large-field gap in 3D (H4)
+
+What CMP 102 gives:
+
+- two-sided stability bounds (5) on the effective densities;
+- in the upper bound, a small factor exp(-p²(g_j)/4) for each plaquette of
+  each large-field region at scale j, where p(g_j)² ~ (log ε_j^{-1})^{2p_0}.
+  This is smaller than any power of ε_j.
+
+What (H4) needs is a **localized** statement. Two forms would do:
+
+- **(H4a) Localized large-field probability.** Under every μ_{N,s}, the
+  probability that a given scale-j block is in a large-field region is
+  <= C_q ε_j^q, uniformly in N and s, for some q > 4.
+- **(H4b) Influence.** A large-field region at scale j changes the terminal
+  tangent defect by at most C ε_j^{q'} times its volume, summed over regions.
+
+Under (H4a) and (H4b), the small-field Lemma G bound changes by
+Σ_j (#blocks at scale j) ε_j^{q - q''}, which is O(ε_N^{q-3-q''}) and summable,
+so Theorem 1 survives. Neither (H4a) nor (H4b) follows directly from (5). The
+upper and lower bounds in (5) carry extensive constants O(1)|T|, so their
+ratio does not localize. This is the 3D counterpart of the 4D problem that
+note 49 solves with a rooted KP lemma on Balaban's *exact* 4D
+representation. In 3D the exact representation would have to be built
+first, by a 3D version of the R-operation of CMP 119-122. Superrenormalizability
+should make it simpler, but it is a construction, not a citation.
