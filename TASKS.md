@@ -302,7 +302,7 @@ Done when: §6 has the list, with page and equation numbers, and a one-line
 verdict ((H4) supported, or the exact obstruction). Commit `[T62][fix]` plus
 one PROGRESS line.
 
-### T63 [fix]: (A_s) for CMP 102 — the complex-coupling remainder bound (note 42 §4)
+### T63 [fix]: (A_s) for CMP 102 — the complex-coupling remainder bound (note 42 §4) — claimed by Claude, 2026-10-06
 Scope: `research/42-s2-by-even-deformation.md` §4 ("Sharper source fact for
 3D") only.
 Read CMP 102 pp. 261-264 (`sources/ocr/cmp102uv3.md`). Check that the
