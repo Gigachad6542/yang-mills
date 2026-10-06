@@ -5,7 +5,7 @@ Status:
 - **Proved here.** Lemma 1, an abstract perturbation lemma for
   constrained quadratic minimization: the minimizers move by O(δ) in the
   energy norm when the forms and the constraints move by δ.
-- **Conditional.** Proposition 2 gives (NA♭) of note 54 in the
+- **Conditional on published input only** (CMP 102b (173); §3a). Proposition 2 gives (NA♭) of note 54 in the
   energy-norm form used by note 45 Proposition 1. It needs:
   - (I1) uniform coercivity of the flat-background problem;
   - (I2) a sup bound Cω/M on the fine background deviation;
@@ -191,6 +191,29 @@ which is (NA♭) with C_1(L) ω(ε_0) replaced by K(C_ab + C)(ω + ε_0).
    - ||∇_{U♭} u|| <= N(u) and ||u|| <= M N(u);
    - N(H(U♭)B) <= (C_ab + C) M^{-1} ||H(U♭) B||, by note 54 Theorem 2 (the
      potential version) and the definition of N. ∎
+
+## 3a. Source status of (I2) and (I3)
+
+- **(I2)** is CMP 102b (173), printed p. 305 (OCR line 862). The minimizer
+  ℋ(B) relative to the background V_0 satisfies the regularity conditions
+  (19)-(21) with ε_2 = B_5 ε_1, where B_5 is an absolute constant depending
+  on d and L. (19) is a sup bound on ℋ and its differences in scaled units,
+  |A| < ε_2 (L^jη)^{-1}. In the fully small-field region this makes the
+  fine-link deviation from the background O(ε_2/M) in fine units.
+  - Here V_0 = V♭ is flat with arbitrary holonomy, which is allowed by
+    Prop. 9 (orbits V'V_0), and ε_1 ~ ω = dist(V, Flat) (note 57).
+  - Unlike (190), the bound (173) is derived in the text, from Sects. C and
+    F of the same paper.
+- **(I3)** At the flat background the minimizer is unconstrained, and its
+  multiplier vanishes. The multiplier is a linear function of the
+  minimizer's Euler-Lagrange residual. That residual is analytic in B,
+  with the same scaled sup bounds. So |λ| = O(ε_2) = O(ω) in scaled units,
+  and the term λ·D²Q is O(ω) relative to N.
+
+So (NA♭), in the energy form of Proposition 2, rests on:
+- Lemma 1 and Lemma 3 (proved here);
+- note 54 Theorem 2 and note 57 (proved);
+- CMP 102b (173) (published, derived in the source).
 
 ## 4. Effect on the 3D chain
 

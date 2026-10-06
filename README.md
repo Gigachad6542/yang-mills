@@ -179,8 +179,9 @@ So
   calculations here").
   Note 63 avoids this: an energy-norm perturbation lemma for constrained
   minimizers (proved) plus flat coercivity (proved, Lemma 3) give (NA♭) from
-  CMP 102b's sup bounds (19)-(21) on the minimizer (I2) and a small
-  Lagrange-multiplier term (I3).
+  CMP 102b (173), the sup bounds (19)-(21) on the minimizer, which are derived
+  in that paper; the multiplier term (I3) follows from the same bounds. So
+  (NA♭) now rests on proved notes plus published, proved input.
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
   reduced to its sixth-order remainder bound (note 42). Read in T63: no use of
   reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
