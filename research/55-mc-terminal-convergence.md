@@ -74,6 +74,22 @@ and L = 3 differ (about 0.873 against about 0.823). They are different
 observables: the iterated 2-block and 3-block averages define different
 terminal fields on the same terminal lattice.
 
+## Terminal volume 8³
+
+The same β_0 = 4, L = 2 runs with n_0 = 8 (fine lattices 8³, 16³, 32³):
+
+| N | P (n_0 = 8) | P (n_0 = 4) | W12 (n_0 = 8) | W12 (n_0 = 4) |
+|---|---|---|---|---|
+| 0 | 0.7271(4) | 0.7292(12) | 0.5439(6) | 0.5497(26) |
+| 1 | 0.8152(3) | 0.8183(6) | 0.6479(6) | 0.6564(11) |
+| 2 | 0.8471(2) | 0.8504(7) | 0.6947(7) | 0.7057(17) |
+
+The increments of P are 0.0881 and 0.0319, ratio 2.76, against 0.089 and
+0.032, ratio 2.77, at n_0 = 4. So the convergence rate does not depend on
+the terminal volume. The values themselves shift slightly: -0.003 in P and
+-0.006 to -0.011 in W12. That is the expected finite-volume effect, and it
+is roughly constant in N.
+
 ## Fit of the approach to the limit (`t50_fit.py`)
 
 The β_0 = 4 points N = 1..4 were fitted with X_N = X_∞ + a L^{-N} + b L^{-2N},
