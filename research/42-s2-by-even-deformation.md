@@ -148,6 +148,48 @@ the remainder bounds of CMP 102 (pp. 261-262) hold for complex coupling with
 reality of g_0. The resulting Lipschitz constant in Theorem 3 is
 O(g_0² p(g_0)^{36/7}), still polylogarithmically close to O(g_0²).
 
+*Reading report on CMP 102 (T63).* Printed pp. 261-264, eqs. (18)-(33),
+`sources/ocr/cmp102uv3.md`.
+
+1. **Gaussian measure and cutoff ((22)).** The fluctuation integral is
+   ∫dμ χ exp[v(g_0 A) - g_0^{-2} V(g_0 A)] with χ = Π_b χ(|A(b)| < p²(g_0)).
+   dμ is a Gaussian with an exponentially decaying covariance, and it does
+   not depend on g_0. χ is a real cutoff on the fluctuation field. Both
+   are unchanged by g_0 -> s g_0. Note that the cutoff is p², not p.
+2. **Sixth-order expansion.** The integrand v(zA) - z^{-2}V(zA) is analytic
+   in z on |z| p(g_0)² <= c, since V starts at third order and the
+   function is analytic in zA. Its Taylor remainder after order six is
+   bounded by Cauchy's estimate in z. That bound, O(|z|^7 p^{18}) per site,
+   uses only |z|. So it holds for complex z = s g_0 with
+   |s| g_0 p(g_0)² <= α'.
+3. **Cumulant expansion.** It uses formula (3.24) of [8] up to sixth order.
+   The formula is analytic in the perturbation and needs only smallness on
+   supp χ. The localization by decomposition of unity and the random-walk
+   expansions of C^{(0)}, with bound (23), involve only the s-independent
+   propagator. The output bounds (24)-(25) follow from (23) and the vertex
+   bounds of step 2.
+4. **Renormalization ((26)-(33)).** This step:
+   - expands the localized terms in the background field ℋ(B), (27)-(30);
+   - uses gauge invariance (26) to get (31)-(32), "there are no relevant
+     variables";
+   - uses the exponential decay of propagators.
+
+   None of these involves the fluctuation coupling. The background
+   coupling g_0 multiplies the background term, which (A_s) does not
+   deform.
+5. **Constants.** Normalization constants such as log σ_0, and Jacobians,
+   are independent of the input data E. They drop out of D_E F. In note
+   42's formulation, B is not rescaled, so there is no (s g_0)^{#bonds}
+   Jacobian.
+
+*Verdict.* No use of the reality or positivity of g_0 was found in the
+CMP 102 single-step analysis (pp. 261-264). (A_s) is supported for CMP 102.
+Because χ is |A| < p²(g_0), the deformation domain is
+|s| g_0 p(g_0)² <= α'. So Theorem 3 gives ||R|| <= 2M (g_0 p(g_0)²/α')² =
+O(g_0² p⁴), still polylogarithmically close to O(g_0²). Not checked: the
+pages of [7] and [5] that CMP 102 cites for the variational problem and
+the propagators, which do not involve the fluctuation coupling.
+
 *Exact form of the deformation (4D and 3D).* Write the Wilson
 interaction as
 

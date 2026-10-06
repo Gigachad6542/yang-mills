@@ -175,14 +175,19 @@ So
   note 54). Read in T64: supported, provided n_0 > O(1)M (Balaban's
   localization cubes must not wrap the torus) and d n_0 sqrt(eps_0) <= alpha_1/2.
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
-  reduced to its sixth-order remainder bound (note 42). Codex task T63.
+  reduced to its sixth-order remainder bound (note 42). Read in T63: no use of
+  reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
 - (H4): CMP 119's exact convergent expansions at d = 3 (read in T62, partially: supported). There the
   large-field factors are arbitrary powers of ε, and no R-operation is
   needed, by Balaban's own statement in the CMP 119 introduction. Add note
   49's rooted KP lemma (note 61 §6). Codex task T62.
 
-None of the three is a new estimate. But until each is checked line by line,
-M1-3D stays a conditional reduction, not a theorem.
+None of the three is a new estimate, and all three have now been read against
+the sources: (NA♭) and (A_s) are supported with stated conditions, and (H4) is
+supported at the level of CMP 119's inductive assumptions. The remaining
+uncertainty is in the parts of the sources not checked line by line: CMP 119
+Sect. 3 and CMP 122 at d = 3, CMP 102b (182)-(190), and the cited
+sub-papers. M1-3D therefore stays a conditional reduction, not a theorem.
 
 **Numerical evidence**
 

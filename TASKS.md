@@ -283,7 +283,7 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
 
 ## Assigned to Codex (new, 2026-10-06, second batch): close the 3D chain
 
-**Priority order for Codex: T55, T62, T63, T64, then T53, T54.** This
+**Priority order for Codex: T55, then T53, T54.** (T62-T64 were done by Claude on 2026-10-06.) This
 overrides the lowest-number rule for these tasks. Note 61 reduces M1-3D to
 three readings of Balaban's papers, which are below.
 
@@ -302,7 +302,7 @@ Done when: §6 has the list, with page and equation numbers, and a one-line
 verdict ((H4) supported, or the exact obstruction). Commit `[T62][fix]` plus
 one PROGRESS line.
 
-### T63 [fix]: (A_s) for CMP 102 — the complex-coupling remainder bound (note 42 §4) — claimed by Claude, 2026-10-06
+### T63 [fix]: (A_s) for CMP 102 — the complex-coupling remainder bound (note 42 §4) — completed by Claude, 2026-10-06; see note 42 §4 reading report
 Scope: `research/42-s2-by-even-deformation.md` §4 ("Sharper source fact for
 3D") only.
 Read CMP 102 pp. 261-264 (`sources/ocr/cmp102uv3.md`). Check that the
