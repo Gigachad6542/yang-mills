@@ -211,7 +211,10 @@ So (NA♭) rests on:
 - CMP 102b (190) (proof omitted by Balaban).
 
 Its status is therefore "published conditional input, with one step whose
-proof the source omits". The constants C_1(L) remain untracked.
+proof the source omits". **Alternative (note 63):** an energy-norm
+perturbation lemma for constrained minimizers gives (NA♭) without (190) and
+without Schur's test. It needs only flat coercivity (I1), CMP 102b's sup
+bounds (I2), and a small multiplier term (I3). The constants C_1(L) remain untracked.
 
 **Proposition 1 (corrected).** Assume (NA♭). For B in the small-field
 domain,

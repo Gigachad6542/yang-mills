@@ -177,6 +177,9 @@ So
   Caveat: the decay bound CMP 102b (190) for the minimizer derivative, used in
   the Schur step, is stated by Balaban without proof ("we do not perform these
   calculations here").
+  Note 63 avoids this: an energy-norm perturbation lemma for constrained
+  minimizers (proved) gives (NA♭) from flat coercivity, CMP 102b's sup bounds
+  and a small multiplier term.
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
   reduced to its sixth-order remainder bound (note 42). Read in T63: no use of
   reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
@@ -282,6 +285,7 @@ sub-papers. M1-3D therefore stays a conditional reduction, not a theorem.
 - `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
 - `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
 - `research/61-3d-assembly-conditional.md` -- The 3D assembly: H3D-1 from single-step bounds, written out (conditional)
+- `research/63-na-energy-perturbation.md` -- (NA♭) in the energy norm without CMP 102b (190): a constrained-minimizer perturbation lemma
 - `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm

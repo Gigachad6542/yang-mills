@@ -527,6 +527,10 @@ note 54 §4. Commit `[T64][fix]` plus one PROGRESS line.
 - T58b [computation] — completed by Claude, 2026-10-06 (`research/62-mc-4d-action-memory.md`): 4D Wilson vs Symanzik at matched
   terminal P. The W12 gap is -0.0075(18) at N = 1 and -0.0057(19) at N = 2. Inconclusive: decay not established; N = 3 needed.
 
+- T65 [proof] — completed by Claude, 2026-10-06 (`research/63-na-energy-perturbation.md`): Lemma 1 (proved) — constrained quadratic
+  minimizers move by O(delta) in energy norm when forms and constraints move by delta. Prop. 2: (NA♭) in energy form from (I1) flat
+  coercivity, (I2) CMP 102b sup bounds and (I3) a small multiplier term, avoiding the unproved CMP 102b (190) and Schur's test.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

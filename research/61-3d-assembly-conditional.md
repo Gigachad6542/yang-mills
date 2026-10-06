@@ -195,7 +195,7 @@ fields, (H4) for large fields).
 
 | Hypothesis | Status |
 |---|---|
-| (H1) | Proved for the abelian linearization and at flat backgrounds (notes 44, 45, 54). For general small-field backgrounds it rests on (NA♭) (Cauchy plus Schur from CMP 99 Thm 3.4; constants untracked). It needs L large enough that C_ab/L < 1 with room; the sharp C_ab is about 3.1, so L >= 6 or so. |
+| (H1) | Proved for the abelian linearization and at flat backgrounds (notes 44, 45, 54). For general small-field backgrounds it rests on (NA♭), now obtained in the energy norm by note 63 Prop. 2 from (I1) flat coercivity, (I2) CMP 102b sup bounds and (I3) a small multiplier term. This route avoids the unproved CMP 102b (190). It needs L large enough that C_ab/L < 1 with room; the sharp C_ab is about 3.1, so L >= 6 or so. |
 | (H2) | Note 42 Theorem 3, given (A_s) for CMP 102 (reduced to its sixth-order remainder bound for complex coupling). |
 | (H3) | Follows from (A_s) by Proposition 2 (charge conservation of transport, note 42 Theorem 3, and note 51 Lemma 4 extraction). |
 | (H4) | **Reduced to a reading of CMP 119 at d = 3** (see §6, as corrected). CMP 102 alone gives only stability bounds. CMP 119 builds exact convergent expansions with large-field regions. Its introduction says that for d < 4 the large-field factors are arbitrary powers of ε and "enough to control expressions arising in the large field regions ... for all steps", so no R-operation is needed. With note 49's rooted KP lemma this gives (H4a). (H4b) follows from the ε^q factors. Not checked line by line for d = 3. |
