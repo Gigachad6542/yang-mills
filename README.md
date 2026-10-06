@@ -172,10 +172,11 @@ So
     M1-3D <= (NA♭) + (A_s) + (H4):
 
 - (NA♭): CMP 99 Theorem 3.4 around a flat background (Cauchy plus Schur;
-  note 54). Codex task T64.
+  note 54). Read in T64: supported, provided n_0 > O(1)M (Balaban's
+  localization cubes must not wrap the torus) and d n_0 sqrt(eps_0) <= alpha_1/2.
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
   reduced to its sixth-order remainder bound (note 42). Codex task T63.
-- (H4): CMP 119's exact convergent expansions at d = 3. There the
+- (H4): CMP 119's exact convergent expansions at d = 3 (read in T62, partially: supported). There the
   large-field factors are arbitrary powers of ε, and no R-operation is
   needed, by Balaban's own statement in the CMP 119 introduction. Add note
   49's rooted KP lemma (note 61 §6). Codex task T62.

@@ -152,6 +152,53 @@ satisfies with zero curvature, and they involve no holonomy. Cauchy's
 estimate in U' and Schur's test then give (NA♭), with C_1(L) untracked, as
 before.
 
+**Reading report on CMP 99 (T64).** Source: `sources/ocr/cmp99prop.md`, Sect. 3.
+
+- **(a) Regularity of flat backgrounds.**
+  - The hypotheses (3.35)-(3.36) are local. For each cube □ of size
+    O(1) M L^j η in a fixed class, some gauge u on □ gives U^u = e^{iηA}
+    with |A| < O(1)M α_0 (L^jη)^{-1} and |∇A| < O(1)M α_0 (L^jη)^{-2}.
+  - A flat configuration is pure gauge on every simply connected cube. So
+    it satisfies (3.35)-(3.36) with A = 0, whatever its holonomy around the
+    torus.
+  - **Caveat:** this needs the cubes not to wrap the torus. At the coarsest
+    level the cubes have size O(1)M in terminal units, so the terminal
+    torus must satisfy n_0 > O(1) M, where M >= M_1 is Balaban's fixed
+    localization constant.
+  - For smaller n_0 the coarsest levels would need a separate
+    (finite-dimensional) treatment. For the M1 problem, n_0 is a fixed
+    choice, and n_0 > O(1) M can be imposed.
+- **(b) Analyticity domain.** Theorem 3.4 extends G', (Q'G'²Q'*)^{-1}, R and
+  G analytically to U'U with U' = e^{iηA'} and
+  |A'| < α_1 (L^jη)^{-1}, |∇A'| < α_1 (L^jη)^{-2} on Ω_j ((3.37)), for
+  α_1 <= a_1. In scale-j units this is a sup-norm ball of fixed radius α_1,
+  independent of the depth.
+- **(c) Derivative bounds with scale factors.**
+  - Theorems 3.1-3.3 give pointwise kernel bounds (3.42)-(3.47) for G' and
+    G, with exponential decay e^{-δ_0 d(y, y')} and a factor (L^jη)^{-1}
+    per covariant derivative. These include ∇G'∇* in (3.44), the Hölder
+    bounds in (3.43), and global weighted bounds in (3.47). Their constants
+    B_0 depend only on d and L.
+  - Theorem 3.4 states that the extended operators "satisfy all the
+    inequalities of Theorems 3.1-3.3".
+  - This is the input of the Cauchy-plus-Schur step of note 45:
+    - Schur's test turns the decaying kernels into ℓ² operator bounds with
+      the scale factors;
+    - Cauchy's estimate on the ball of (b) bounds the difference at a
+      background U'U♭ by |A'|/α_1 times the sup over the ball.
+
+*Verdict.* (NA♭) is supported by CMP 99 Theorems 3.1-3.4, under three
+conditions:
+- (i) n_0 > O(1) M, so the regularity cubes do not wrap the torus;
+- (ii) the deviation U' = U U♭^{-1} lies in the domain (3.37), which for the
+  coarse configuration needs d n_0 √ε_0 <= α_1/2 (note 57);
+- (iii) the induced fine-scale deviation obeys the scaled bounds (3.37).
+  This is the regularity of minimal configurations, CMP 102b Theorem 1.
+
+The passage from G to the minimizer map H goes through CMP 102b
+(182)-(190), which expresses H and δℋ/δB by these operators. It was not
+re-checked here. The constants C_1(L) remain untracked.
+
 **Proposition 1 (corrected).** Assume (NA♭). For B in the small-field
 domain,
 
