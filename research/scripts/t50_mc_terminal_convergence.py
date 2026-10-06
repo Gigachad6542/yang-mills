@@ -262,7 +262,8 @@ def run(N, n0, L, beta0, ntherm, nmeas, every):
 
 
 if __name__ == "__main__":
-    n0, beta0 = 4, float(sys.argv[2]) if len(sys.argv) > 2 else 4.0
+    beta0 = float(sys.argv[2]) if len(sys.argv) > 2 else 4.0
+    n0 = int(sys.argv[6]) if len(sys.argv) > 6 else 4
     L = int(sys.argv[5]) if len(sys.argv) > 5 else 2
     Nmax = int(sys.argv[3]) if len(sys.argv) > 3 else 3
     Nmin = int(sys.argv[4]) if len(sys.argv) > 4 else 0

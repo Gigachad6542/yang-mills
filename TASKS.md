@@ -257,7 +257,8 @@ the terminal 1x2 loop agreed (difference 0.000(2)), and the beta step was
    `t51_matching.py` (extend DATA).
 3. Report the beta steps beta_3 - beta_2 and the W12 differences.
 
-Expect about 2 h per beta at 32^4 in numpy. Use 150 thermalization updates
+Expect about 4-5 h per beta at 32^4 in numpy, single core: the 16^4 points took about 1000 s, and 32^4 is 16 times larger. Run the three
+beta values in parallel. Use 150 thermalization updates
 and at least 200 measurements, as in note 56.
 Done when: the N = 3 matching row and the 2x2 comparison are in note 56.
 Commit `[T54][computation]` plus one PROGRESS line.
