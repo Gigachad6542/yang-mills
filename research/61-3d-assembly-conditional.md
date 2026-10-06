@@ -127,17 +127,42 @@ Lemma G with Δ_0 <= C_0 ε_N = C_0 ε_0 L^{-N} <= C_0 ε_0 λ^N gives
   on N. So Theorem 1 holds for every fixed g²ε_0, with θ' and λ computed
   over k >= k_0.
 
+**Proposition 2 ((H3) from (A_s)).** Assume (A_s) for the CMP 102 step.
+Then (H3) holds with γ = C g² p(g_k)², up to the replacement ε_k -> ε_k^{1-η}
+of the Remarks.
+
+*Proof.*
+
+1. *Transport creates no marginal part.* Irrelevant data have zero marginal
+   charge in each block: the block average c̄ of note 51 Lemma 4 vanishes.
+   Pure transport acts on the marginal sector by the exact block average,
+   which preserves zero sums (note 33 §2, Lemma 2 and its "Use"). So the
+   transported data again have c̄ = 0, and y is unchanged.
+2. *Generated part.* By note 42 Theorem 3 (under (A_s)), the derivative of
+   the step output with respect to the input data is transport plus R,
+   with ||R|| <= 2M (g_k p(g_k)/α')² in the input-to-output norm.
+3. *Extraction.* The marginal coefficient is c̄, the block average of the
+   F²-coefficient field c of the quadratic part (note 51 Lemma 4). It is a
+   linear functional of the output, bounded by the form norm. So the
+   generated marginal shift satisfies
+   |Δx_k| <= C (g_k p(g_k))² δ_j in units of x_k = g_k^{-2}.
+4. *Units.* Since y = ε_k x_k, we get |Δy| <= C ε_k g_k² p(g_k)² δ_j
+   <= C g² ε_k^{1-η} δ_j, because g_k² = g²ε_k <= g²ε_0. ∎
+
+So (H3) is not an independent input: it follows from the same (A_s) as
+(H2).
+
 ## 4. Status of the hypotheses
 
 | Hypothesis | Status |
 |---|---|
 | (H1) | Proved for the abelian linearization and at flat backgrounds (notes 44, 45, 54). For general small-field backgrounds it rests on (NA♭) (Cauchy plus Schur from CMP 99 Thm 3.4; constants untracked). It needs L large enough that C_ab/L < 1 with room; the sharp C_ab is about 3.1, so L >= 6 or so. |
 | (H2) | Note 42 Theorem 3, given (A_s) for CMP 102 (reduced to its sixth-order remainder bound for complex coupling). |
-| (H3) | Published structure of CMP 102 (no coupling renormalization in 3D; F²-terms of the step expansion are O(g_k²)). The Lipschitz form in the input data is not printed, but it is of the same kind as (H2). |
+| (H3) | Follows from (A_s) by Proposition 2 (charge conservation of transport, note 42 Theorem 3, and note 51 Lemma 4 extraction). |
 | (H4) | Expected from CMP 102's large-field factors (arbitrary powers of ε). Not written out. |
 | (H5) | The terminal conversion is a fixed-dimensional statement: n_0 and g²ε_0 are fixed, and all norms on the terminal small-field data are equivalent. The input sizes are CMP 102's first-step bounds. Not written out. |
 
-So M1-3D <= (NA♭) + (A_s) + (H3)-(H5), as a written-out conditional
+So M1-3D <= (NA♭) + (A_s) + (H4) + (H5), as a written-out conditional
 theorem. Every remaining item is a statement about a single CMP 102 step
 or about the fixed terminal lattice.
 
