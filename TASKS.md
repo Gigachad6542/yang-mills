@@ -462,6 +462,10 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
   The central crossing link is private, the weights are positive and sum to 1 - L^{1-d}, and Theorems 2, 4, 5 hold verbatim. This supplies
   the H3D-0 input of note 18 Theorem 5 (4D).
 
+- T60 [fix] — completed by Claude, 2026-10-06 (`research/60-literature-check-2026-10.md`): literature check. No accepted publication
+  proves M1-3D/M1-4D or Balaban's coupling-flow theorem. Related: Chatterjee 2024 (Gaussian Higgs scaling limit) and Cao-Chatterjee (state
+  space). Unrefereed 4D existence claims are listed as unverified and not used.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

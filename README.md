@@ -264,6 +264,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/56-mc-4d-universality.md` -- Monte Carlo test in 4D: universality of Balaban-averaged terminal observables
 - `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
 - `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
+- `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction
