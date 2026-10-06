@@ -5,8 +5,10 @@ Status:
 - **Proved here.** Lemma A, a quantitative convergence lemma for alias sums
   Σ_n f_M(n) W_M(n) with Dirichlet-product weights and symbols growing like
   (1 + |q|)^s, s < 1. It contains note 47 Theorem 1 as the case s = 0.
-- **Conditional.** Proposition B. Assume the structural form (V) below,
-  including its two-alias extension for background aliases (§4).
+- **Proved here (§2a).** Lemma A2, the extension to several coupled alias
+  variables (the background's own aliases), and convergence of the
+  P-derivatives by analyticity in a strip.
+- **Conditional.** Proposition B. Assume the structural form (V) below.
   Then item 4 of note 48 (the vertex Riemann sums) holds with rate
   O((1 + log M)/M), and (C) of note 22 follows with rate
   ϑ = L^{-1+ε}.
@@ -80,6 +82,43 @@ converges absolutely, and
 - The constant is uniform in K. If F depends on K, as an alias-0 symbol
   singular at K = 0 does, the bound holds pointwise with F(K).
 
+## 2a. Lemma A2 (several coupled alias variables) and P-derivatives
+
+**Lemma A2.** Consider sums over r alias variables n^{(1)}, ..., n^{(r)} ∈ Z^d.
+Their weights are Π_i W^{(i)}(ℓ_i), where each ℓ_i is an integer linear
+combination of the n^{(k)}, with independent coordinates. Example: for the
+background-coupled vertex, r = 2 and the weights are
+W(n) W'(n - m) W_b(m), with coarse momenta K, K - P and P. Each W^{(i)} is a
+Dirichlet product as in §1, with exponents >= 2. Suppose the symbols satisfy
+(F1)-(F2) with (1 + |q|)^s replaced by Π_i (1 + |q^{(i)}|)^{s_i}, each s_i < 1,
+and |p| replaced by max_i |p^{(i)}|. Suppose also that the map
+(n^{(1)}, ..., n^{(r)}) ↦ (ℓ_i)_i, restricted to any r of the ℓ_i, is
+injective. Then the conclusion of Lemma A holds with s_+ := max(0, s_1, ..., s_r)
+and a constant depending on r.
+
+*Proof.* Everything factorizes by coordinates, as in Lemma A step 1. For
+fixed j, change variables to r of the ℓ_i, which is injective by
+assumption. Each remaining factor (1 + |q^{(i)}|)^{s_i - 2} is <= 1. So the
+sum is at most a product of r one-dimensional sums of the type in Lemma A
+step 1. The rest is the same:
+- one coordinate, in one variable, carries |p|;
+- one weight factor is changed at a time, at cost M^{-2} per term over the
+  M values of that variable;
+- tails are as in Lemma A step 4.
+
+The coupling n' = n - m holds exactly mod M on the fine torus. The
+wrap-around terms lie in the tails. ∎
+
+**P-derivatives.** Without absolute values, the weights are products of
+D_M(p) = sin(Mp/2)/sin(p/2) and phases, with p = (P + 2πm)/M. These are
+analytic in P on the strip |Im P_j| <= η, and for small η the bounds (W1)
+and (W2) hold there with constants depending only on η. So the sums of
+Lemmas A and A2 converge uniformly on a complex neighbourhood of P = 0, at
+the stated rate. By Cauchy's estimate, so do their P-derivatives of every
+fixed order. In particular the P² coefficients converge, and these define
+β_j^0 (note 41 §1). They include the background's own alias components,
+which contribute at order P_j in every coordinate with m_j ≠ 0.
+
 ## 3. Proposition B (vertex sums, conditional on (V))
 
 **(V) Structural form.** At the trivial background, each contribution to
@@ -146,14 +185,10 @@ is bounded with exponential decay (O1). So the integrand of the second
 moment is integrable. This is the integrability clause of (V)(b), checked
 for these terms.
 
-**Background aliases (not written out).** The background b on the fine
-lattice is itself H_j applied to a coarse field of momentum P. Its alias
-components at p'_m = (P + 2πm)/M, m ≠ 0, vanish linearly in P_j in every
-coordinate with m_j ≠ 0 (the factor |sin(P_j/2)| in δ). So they contribute
-to the P² coefficient. These terms are sums over two alias variables
-coupled by momentum conservation, with weights W(n) W(n - m) W_b(m). Lemma
-A's proof should extend, because per coordinate Σ_n δ(n)² δ(n - m)² <= C(1 + |m|)^{-2}.
-This extension is not written out.
+**Background aliases.** The background b on the fine lattice is itself
+H_j applied to a coarse field of momentum P. Its alias components (P + 2πm)/M
+contribute to the P² coefficient through sums coupled by n' = n - m. These
+are covered by Lemma A2 together with the P-derivative remark of §2a.
 
 **Not checked here.** The same form for:
 

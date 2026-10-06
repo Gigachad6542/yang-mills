@@ -450,8 +450,8 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
 
 - T57 [proof] — completed by Claude, 2026-10-06 (`research/58-vertex-alias-sums.md`): Lemma A, convergence of alias sums with
   Dirichlet-product weights and symbols of growth (1+|q|)^s, s < 1, at rate (1+log M) M^{s_+-1}. Proposition B: the vertex Riemann sums
-  (note 48 item 4) follow from the structural form (V), which is checked for the leading gluon vertices (s = -3, -4). Not written out: the
-  two-alias extension for background aliases, and the ghost and covariant-average terms.
+  (note 48 item 4) follow from the structural form (V), which is checked for the leading gluon vertices (s = -3, -4). Lemma A2 (§2a)
+  covers the two-alias extension for background aliases and the P-derivatives. Still open: the ghost and covariant-average terms.
 
 ## Proposals
 (Workers: at most 5 lines each.)
