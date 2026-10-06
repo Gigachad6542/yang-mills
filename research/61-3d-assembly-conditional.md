@@ -72,15 +72,17 @@ Then
   at flat backgrounds (note 54), and ω(ε_0) <= d n_0 √ε_0 (note 57).
 - **(H2) Generation.** The newly generated irrelevant data at step j depend
   on:
-  - the input irrelevant data with Lipschitz constant C g_k² p(g_k)²
+  - the input irrelevant data with Lipschitz constant C g_k² p(g_k)⁴
     (note 42);
   - the input physical coupling with Lipschitz constant β ε_k^{1-η}, for any
     η > 0. A change Δy is the relative change Δx_k/x_k = Δy/y = g²Δy of
-    x_k = g_k^{-2}. Generation is O(g_k² p(g_k)²) times that relative change,
-    so its Lipschitz constant is C g⁴ ε_k p(g_k)² <= β ε_k^{1-η}, because
-    p(g_k)² grows only like a power of log(1/ε_k).
+    x_k = g_k^{-2}. Generation is O(g_k² p(g_k)⁴) times that relative change,
+    so its Lipschitz constant is C g⁴ ε_k p(g_k)⁴ <= β ε_k^{1-η}, because
+    p(g_k)⁴ grows only like a power of log(1/ε_k).
+    (The fourth power is because CMP 102's fluctuation cutoff is |A| < p², so
+    the deformation domain is |s| g p² <= α'; see note 42 §4, T63.)
 
-  So (i) holds with θ' := θ_T + C sup_k g_k² p(g_k)² < 1.
+  So (i) holds with θ' := θ_T + C sup_k g_k² p(g_k)⁴ < 1.
 - **(H3) 3D marginal structure.** The marginal (F²) coefficient generated
   at step j depends on the input irrelevant data with Lipschitz constant
   γ ε_k in physical units, and pure transport preserves y. So (ii) holds.
@@ -119,7 +121,7 @@ Lemma G with Δ_0 <= C_0 ε_N = C_0 ε_0 L^{-N} <= C_0 ε_0 λ^N gives
 - *ε_k^{1-η} in place of ε_k.* Lemma G holds with ε_k replaced by
   ε_k^{1-η} throughout: replace L by L^{1-η} in its proof. The rate becomes
   λ = max(θ'', L^{-(1-η)}).
-- *Coarse steps.* (H1)-(H2) need g_k² p(g_k)² small, so that θ' < 1. That
+- *Coarse steps.* (H1)-(H2) need g_k² p(g_k)⁴ small, so that θ' < 1. That
   holds for k >= k_0(g²ε_0). The last k_0 steps, near the terminal scale,
   are a fixed finite number of steps on fixed lattices. Each is Lipschitz
   in the mixed norm with some constant C_k, by Balaban's single-step
@@ -128,7 +130,7 @@ Lemma G with Δ_0 <= C_0 ε_N = C_0 ε_0 L^{-N} <= C_0 ε_0 λ^N gives
   over k >= k_0.
 
 **Proposition 2 ((H3) from (A_s)).** Assume (A_s) for the CMP 102 step.
-Then (H3) holds with γ = C g² p(g_k)², up to the replacement ε_k -> ε_k^{1-η}
+Then (H3) holds with γ = C g² p(g_k)⁴, up to the replacement ε_k -> ε_k^{1-η}
 of the Remarks.
 
 *Proof.*
@@ -146,7 +148,7 @@ of the Remarks.
    linear functional of the output, bounded by the form norm. So the
    generated marginal shift satisfies
    |Δx_k| <= C (g_k p(g_k))² δ_j in units of x_k = g_k^{-2}.
-4. *Units.* Since y = ε_k x_k, we get |Δy| <= C ε_k g_k² p(g_k)² δ_j
+4. *Units.* Since y = ε_k x_k, we get |Δy| <= C ε_k g_k² p(g_k)⁴ δ_j
    <= C g² ε_k^{1-η} δ_j, because g_k² = g²ε_k <= g²ε_0. ∎
 
 So (H3) is not an independent input: it follows from the same (A_s) as
