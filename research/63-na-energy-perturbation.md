@@ -97,8 +97,7 @@ K < ∞, depending only on (ρ, C_a, c), such that for δ <= δ_0,
     is part of (I1): the minimal extension is no larger than the
     block-constant extension, up to a constant, by coercivity.
   - All constants are scale invariant, hence uniform in M.
-  - This is an elementary flat-lattice statement. It is not written out
-    here.
+  - Proved in Lemma 3 (§2a).
 - **(I2) Fine background deviation.** In the global gauge of note 57, the
   fine background U = U_k(V) satisfies U = e^{ia'} U♭ with
   |a'|_∞ <= C ω/M in fine units, where ω = dist(V, Flat) <= d n_0 √ε_0.
@@ -108,6 +107,57 @@ K < ∞, depending only on (ρ, C_a, c), such that for δ <= δ_0,
   Lagrangian contains λ · D²Q_U. Here λ is the multiplier, of the size of
   the background current, O(ε_0) in scaled units. So this term is a bounded
   form of size O(ε_0) relative to N.
+
+## 2a. Lemma 3 ((I1), flat coercivity)
+
+At a flat background U♭ (note 54 normal form), on the fine torus with
+composite block size M:
+
+- (a) ||D_♭A||² = ||d_♭A||² + ||d_♭*A||² exactly, where
+  ||D_♭A||² = Σ_{x,μ,ν} |∇_{♭,μ} A_ν(x)|².
+- (b) If Q_♭ A = 0 (Balaban's composite linear average at U♭), then
+  M^{-2} ||A||² <= C_P ||D_♭ A||², with C_P independent of M.
+- (c) There is a right inverse R of Q_♭ with N(R y) <= C M^{d/2-1} |y|_{ℓ²}
+  and ||R y|| <= C M^{d/2} |y|.
+- (d) On {Q_♭ A = 0, d_♭*A = 0}, a_♭(A, A) = ||d_♭A||² >= c N(A)², with
+  c = 1/(1 + C_P). Moreover, N(H(U♭) y) <= C M^{d/2-1}|y| and
+  ||H(U♭) y|| <= C M^{d/2}|y|.
+
+*Proof.*
+
+1. *(a).* In the normal form the problem splits into a neutral sector and
+   twisted charged sectors (note 54 §2). In each sector, after Fourier
+   transform, the forward differences are multiplication by complex
+   numbers r_μ(p), and they commute. Also (dA)_{μν} = r_μ Â_ν - r_ν Â_μ and
+   d*A = Σ_μ r̄_μ Â_μ. The complex Lagrange identity
+   (Σ_μ|r_μ|²)(Σ_ν|Â_ν|²) = Σ_{μ<ν}|r_μÂ_ν - r_νÂ_μ|² + |Σ_μ r̄_μÂ_μ|²
+   gives (a) mode by mode.
+2. *(b).* Let P_0 be the projection onto fields that are covariantly
+   constant on each M-block. On a block, the flat background is pure
+   gauge. So the standard lattice Poincaré inequality on a cube of side M
+   gives ||A - P_0A|| <= C M ||D_♭A||.
+   - Q_♭ restricted to block-constant fields is a coarse operator whose
+     symbol is bounded below. This is the alias-0 positivity of note 47
+     §3 / note 44 step 4. So ||P_0A|| <= C M^{d/2} |Q_♭ P_0 A|.
+   - If Q_♭A = 0, then |Q_♭P_0A| = |Q_♭(P_0A - A)| <= C M^{-d/2} ||A - P_0A||.
+   - Hence ||A|| <= C M ||D_♭A||.
+3. *(c).* Let S be the smooth extension: S y is the block-constant
+   extension of y, mollified at scale M. Then ||D_♭ S y|| <= C M^{d/2-1}|y|
+   and ||S y|| <= C M^{d/2}|y|. The coarse operator Q_♭S has a symbol
+   bounded below, by the same alias-0 argument, so it is invertible with
+   a bounded inverse. Put R := S (Q_♭ S)^{-1}.
+4. *(d).* By (a), on {d_♭*A = 0}, ||D_♭A||² = ||d_♭A||². With (b),
+   N(A)² <= (1 + C_P) ||d_♭A||². For H(U♭)y:
+   - a_♭(H y) <= a_♭(R y) <= N(R y)² <= C M^{d-2}|y|², since H y minimizes;
+   - H y - R y ∈ ker Q_♭, so by (b),
+     ||H y|| <= ||R y|| + C M (||D_♭ H y|| + ||D_♭ R y||) <= C M^{d/2}|y|.
+
+   Here R y is first projected onto the gauge slice, which changes it only
+   by a gradient and does not increase ||D_♭ ·||. ∎
+
+So (I1) is proved, up to the standard Poincaré inequality on cubes and the
+alias-0 positivity already proved in notes 44 and 47. Proposition 2 then
+rests on (I2) and (I3) only.
 
 ## 3. Proposition 2 ((NA♭), energy form)
 
