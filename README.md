@@ -132,65 +132,67 @@ estimate. The research notes give the details.
 
 ## Shortest remaining route: three dimensions
 
-For SU(2) in 3D, the chain to M1-3D (convergence and nondegeneracy of fixed
-terminal observables) is:
+Status as of 2026-10-06, for SU(2) on a fixed 3D torus. M1-3D asks for
+convergence and nondegeneracy of fixed terminal block observables as the
+cutoff is removed.
 
-- nondegeneracy P6-3D: proved from CMP 102 (note 17);
-- P4-3D <= terminal memory decay H3D-1 (note 18 Thm. 1);
-- H3D-1 <= (S1) + (S2) of note 29. There is no R-operation in 3D, the
-  couplings g_k² = g² L^k ε are explicit and identical across depths, so no
-  shooting is needed, and g_k -> 0 at fine scales;
-- (S1), the transport of existing irrelevant terms with factor L^{-α}, is the
-  structure behind CMP 109 (0.29) and Balaban's fifth-order local
-  expansion. **Caveat (note 35):** in plain sup norms over the coarse
-  small-field domain, block-scale oscillating coarse fields give fine
-  curvatures of about L^{-1.1} times the coarse ones, not L^{-2}. Multiplied
-  by the L^3 fine polymers per coarse block, that does not contract. So the
-  contraction has to come from the derivative/regularity structure of
-  Balaban's norms, or be replaced in 3D by the geometric smallness O(g_k) of
-  the generated terms (CMP 102 (25)). (S1) is therefore not yet a verified
-  source-level statement. Balaban says so explicitly (CMP 109 p. 259): terms
-  satisfying (0.29) "should not suggest that these terms are irrelevant
-  operators in that sense. There are no scaling transformations here, and
-  these terms do not behave in a regular way under the renormalization
-  transformations." His (0.29) is a bound uniform in k, obtained from
-  scale-dependent localization. It is not a per-step contraction. **(S1) is
-  a new theorem to be proved**, not a published input. In the energy (l2) norm the gain
-  partly appears: interior neighbouring-child differences contract by 2.3/L per
-  step, but across block faces only by about L^-0.6 for L <= 5 (note 43). The worst row contracts from L = 6 on (0.95, 0.90 at L = 6, 7), and the
-  cross-face rate approaches L^-1. So (S1) should be stated in energy or
-  averaged norms, with L >= 6. **Proved for the abelian linearization (note 44):** the
-  minimizer's fine gradients satisfy ||grad F_min|| <= C M^-1 ||F_min|| in the
-  energy norm (C <= 60 proved, about 4 sharp), so one-step image differences
-  are O(L^-1) of the energy.
+**Proved here**
 
-By note 42, (S2) itself follows from (A_s): CMP 102's single-step bounds hold
-uniformly when the fluctuation coupling is made complex, |sg| <= alpha'/p(g).
-The argument is an even complex deformation plus a Schwarz lemma. So
-**M1-3D reduces to (S1) + (A_s)**, two statements about CMP 102's single-step
-analysis. **Update (note 52):** H3D-1' now holds at the linearized level
-(sigma >= 2), from the energy-norm transport theorem (notes 44, 51). As a
-conditional reduction, written out in note 61 (Theorem 1: hypotheses (H1)-(H5),
-a summable-coupling bootstrap in physical-coupling units, rate
-max(theta', 1/L)^N; (H3) follows from (A_s), and (H5) is proved (Prop. 3), so the remaining
-inputs are (NA♭), (A_s) and large fields (H4); (H4) reduces to
-CMP 119's exact expansions at d = 3, where large-field factors are arbitrary powers of
-eps and no R-operation is needed (Balaban, CMP 119 introduction), plus note 49 (note 61 §6)),
-M1-3D <= (A_s) [CMP 102 remainder bound for complex coupling] + (NA) [3D
-background perturbation; corrected to (NA♭) in note 54: compare with the
-nearest flat background, since a flat background with nontrivial holonomy
-refutes the original (NA)]. **Update (note 53):** the qualitative input H3D-0(b) is
-proved. Balaban's one-step average has one private link per coarse bond, its
-conditional Jacobian is >= c_L > 0 (operator concavity of the SU(2) log-Hessian),
-and it is injective a.e. (a degree count). So the push-forward density is bounded
-above and below at each fixed N. **Numerics (note 59):** the Wilson/Symanzik difference in the terminal observables shrinks geometrically
-(0.083, 0.035, 0.014, 0.009 in P), the nonperturbative counterpart of memory decay. **Numerics (note 55):** Monte Carlo for SU(2), d = 3, depths N <= 3, shows the
-terminal Balaban-averaged plaquette and 1x2 loop converging geometrically (ratio about 2.6 per step for L = 2). In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
-CMP 102 RG step depend Lipschitz-continuously on the input irrelevant data,
-with constant O(g_k²) in Balaban's norms. Together with CMP 102's own
-"very sketchy" proof, this is the remaining gap for the 3D continuum limit
-of terminal observables. That would be a new theorem: the 3D Yang-Mills
-measure on a torus, at the level of fixed-scale block observables.
+- Nondegeneracy P6-3D, from CMP 102 (note 17).
+- The depth-comparison theorems: H3D-0 + H3D-1 => P4-3D => M1-3D convergence
+  (note 18 Theorem 1).
+- H3D-0, at every fixed depth (note 53). One step of Balaban's average has a
+  push-forward density bounded above and below. The proof:
+  - each coarse bond has a private link;
+  - the conditional Jacobian is >= c_L > 0, by operator concavity of the
+    SU(2) log-Hessian;
+  - the map is injective a.e., by a degree count.
+
+  This also holds for the symmetric 4D average CMP 109 (0.4).
+- Energy-norm transport (single-step (S1), transport part):
+  - abelian linearization (note 44);
+  - every flat SU(2) background, including nontrivial holonomy (note 54);
+  - with the quantitative near-flat lemma (note 57, Codex).
+- H3D-1' at the linearized level, σ >= 2 (note 52).
+- The interacting assembly, as a conditional theorem (note 61). In
+  physical-coupling units, a bootstrap for two flows gives H3D-1 with rate
+  (N + 1) max(θ', 1/L)^N from:
+  - (H1) transport;
+  - (H2) generation;
+  - (H3) 3D marginal structure;
+  - (H4) large fields;
+  - (H5) terminal conversion.
+
+  (H3) follows from (A_s) (Prop. 2), and (H5) is proved (Prop. 3).
+
+**Remaining inputs, all readings of Balaban's papers**
+
+So
+
+    M1-3D <= (NA♭) + (A_s) + (H4):
+
+- (NA♭): CMP 99 Theorem 3.4 around a flat background (Cauchy plus Schur;
+  note 54). Codex task T64.
+- (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
+  reduced to its sixth-order remainder bound (note 42). Codex task T63.
+- (H4): CMP 119's exact convergent expansions at d = 3. There the
+  large-field factors are arbitrary powers of ε, and no R-operation is
+  needed, by Balaban's own statement in the CMP 119 introduction. Add note
+  49's rooted KP lemma (note 61 §6). Codex task T62.
+
+None of the three is a new estimate. But until each is checked line by line,
+M1-3D stays a conditional reduction, not a theorem.
+
+**Numerical evidence**
+
+- Terminal Balaban-averaged observables converge geometrically in the
+  depth (note 55). The fitted form X_∞ + aL^{-N} + bL^{-2N} is what note 61
+  predicts.
+- The rate does not depend on L or on the terminal volume.
+- Two bare actions that differ by an irrelevant term give converging
+  terminal observables (note 59).
+- In 4D, matching the terminal plaquette across depths fixes the terminal
+  1×2 loop (note 56).
 
 ## Repository map
 
