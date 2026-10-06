@@ -279,6 +279,55 @@ Done when: note 42 §4 has the list, with page and equation numbers, and a
 one-line verdict: "no use of reality found", or the exact place where it is
 used. Commit `[T55][fix]` plus one PROGRESS line.
 
+## Assigned to Codex (new, 2026-10-06, second batch): close the 3D chain
+
+**Priority order for Codex: T55, T62, T63, T64, then T53, T54.** This
+overrides the lowest-number rule for these tasks. Note 61 reduces M1-3D to
+three readings of Balaban's papers, which are below.
+
+### T62 [fix]: (H4) — CMP 119 Sect. 2 at d = 3 (note 61 §6)
+Scope: `research/61-3d-assembly-conditional.md` §6 only.
+CMP 119's introduction (printed pp. 244-245) says that for d < 4 the
+large-field factors are arbitrary powers of ε and control the large-field
+regions "for all steps", so no R-operation is needed. Read CMP 119 Sect. 2
+(`sources/ocr/cmp119.md`), the inductive description of the effective
+densities. For each inductive assumption, say whether it holds verbatim at
+d = 3 with R = identity, or what changes: powers of L^j, ε-exponents,
+entropy factors. Then state precisely the large-field activity bound that
+results. It should have the form |activity(X)| <= C ε_j^q e^{-κ d(X)},
+with q arbitrary.
+Done when: §6 has the list, with page and equation numbers, and a one-line
+verdict ((H4) supported, or the exact obstruction). Commit `[T62][fix]` plus
+one PROGRESS line.
+
+### T63 [fix]: (A_s) for CMP 102 — the complex-coupling remainder bound (note 42 §4)
+Scope: `research/42-s2-by-even-deformation.md` §4 ("Sharper source fact for
+3D") only.
+Read CMP 102 pp. 261-264 (`sources/ocr/cmp102uv3.md`). Check that the
+sixth-order expansion of v(g_0A) - g_0^{-2}V(g_0A), its remainder
+O(g_0^7 p^{18}), the cumulant expansion to sixth order, and the
+random-walk localization bounds (23)-(25) hold verbatim when g_0 is
+replaced by a complex s g_0 with |s g_0| p(g_0)^{18/7} <= α'. That is, check
+that no step uses reality or positivity of g_0. List each estimate with its
+equation number and the property it uses.
+Done when: a list and a one-line verdict are in note 42 §4. Commit
+`[T63][fix]` plus one PROGRESS line.
+
+### T64 [fix]: (NA♭) — CMP 99 Theorem 3.4 around a flat background (note 54 §4)
+Scope: `research/54-flat-backgrounds-and-na.md` §4 only.
+(NA♭) claims analyticity of the background-field operators at
+configurations U'U♭, with U♭ flat (possibly with nontrivial holonomy) and
+U' small. Read CMP 99 Theorem 3.4 and its hypotheses, conditions (3.37) and
+around (`sources/ocr/cmp99prop.md`, `cmp99regular.md`). Check that:
+- (a) a flat background with arbitrary holonomy satisfies the regularity
+  hypotheses;
+- (b) the analyticity domain is a sup-norm ball of radius independent of
+  the depth;
+- (c) the derivative bounds come with the scale factor (L^k η)^{-1} per
+  derivative, which is what the Schur step of note 45 needs.
+Done when: the three checks, with equation numbers, and a verdict are in
+note 54 §4. Commit `[T64][fix]` plus one PROGRESS line.
+
 ## Lead (Claude): in progress
 
 - T7 [proof/computation] — completed by Claude, 2026-10-02: P4-3D as conditional
