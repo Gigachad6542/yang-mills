@@ -180,7 +180,8 @@ refutes the original (NA)]. **Update (note 53):** the qualitative input H3D-0(b)
 proved. Balaban's one-step average has one private link per coarse bond, its
 conditional Jacobian is >= c_L > 0 (operator concavity of the SU(2) log-Hessian),
 and it is injective a.e. (a degree count). So the push-forward density is bounded
-above and below at each fixed N. **Numerics (note 55):** Monte Carlo for SU(2), d = 3, depths N <= 3, shows the
+above and below at each fixed N. **Numerics (note 59):** the Wilson/Symanzik difference in the terminal observables shrinks geometrically
+(0.083, 0.035, 0.014, 0.009 in P), the nonperturbative counterpart of memory decay. **Numerics (note 55):** Monte Carlo for SU(2), d = 3, depths N <= 3, shows the
 terminal Balaban-averaged plaquette and 1x2 loop converging geometrically (ratio about 2.6 per step for L = 2). In the older formulation, **M1-3D reduces to (S2)**: the newly generated irrelevant terms of one
 CMP 102 RG step depend Lipschitz-continuously on the input irrelevant data,
 with constant O(g_k²) in Balaban's norms. Together with CMP 102's own
@@ -262,6 +263,7 @@ measure on a torus, at the level of fixed-scale block observables.
 - `research/55-mc-terminal-convergence.md` -- Monte Carlo test of M1-3D: terminal block observables converge across depths
 - `research/56-mc-4d-universality.md` -- Monte Carlo test in 4D: universality of Balaban-averaged terminal observables
 - `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
+- `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
 - `research/49-t2r-rooted-lemma.md` -- (T2-R) from Balaban's domain factors: a rooted polymer lemma and a correction

@@ -454,6 +454,10 @@ used. Commit `[T55][fix]` plus one PROGRESS line.
   (note 48 item 4) follow from the structural form (V), which is checked for the leading gluon vertices (s = -3, -4). Lemma A2 (§2a)
   covers the two-alias extension for background aliases and the P-derivatives. Still open: the ghost and covariant-average terms.
 
+- T58 [computation] — completed by Claude, 2026-10-06 (`research/59-mc-action-universality.md`): 3D SU(2), Wilson vs tree-level
+  Symanzik at beta_N = 4·2^N. The terminal differences shrink from 0.083 to 0.009 (P) and from 0.115 to 0.017 (W12) over N = 0..3, at
+  about the rate L^-N, and the limits agree within the extrapolation uncertainty.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
