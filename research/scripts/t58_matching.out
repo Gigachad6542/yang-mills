@@ -1,0 +1,6 @@
+N=1 P=0.583: beta_sym=1.9397 beta_wil=2.6131 W12_sym - W12_wil = -0.00862 (0.00239)
+N=1 P=0.621: beta_sym=2.0390 beta_wil=2.7266 W12_sym - W12_wil = -0.00750 (0.00184)
+N=1 P=0.660: beta_sym=2.1579 beta_wil=2.8774 W12_sym - W12_wil = -0.00732 (0.00167)
+N=2 P=0.608: beta_sym=2.3148 beta_wil=2.9936 W12_sym - W12_wil = -0.00678 (0.00176)
+N=2 P=0.645: beta_sym=2.4267 beta_wil=3.1102 W12_sym - W12_wil = -0.00567 (0.00205)
+N=2 P=0.681: beta_sym=2.5617 beta_wil=3.2678 W12_sym - W12_wil = -0.00505 (0.00170)

@@ -262,6 +262,8 @@ the terminal 1x2 loop agreed (difference 0.000(2)), and the beta step was
 Expect about 4-5 h per beta at 32^4 in numpy, single core: the 16^4 points took about 1000 s, and 32^4 is 16 times larger. Run the three
 beta values in parallel. Use 150 thermalization updates
 and at least 200 measurements, as in note 56.
+Optional extension (note 62): also run the tree-level Symanzik action at N = 3 with `t58_mc_action_universality.py`
+(masked staples, about 11 h per beta at 32^4), to decide the 4D memory test.
 Done when: the N = 3 matching row and the 2x2 comparison are in note 56.
 Commit `[T54][computation]` plus one PROGRESS line.
 
@@ -521,6 +523,9 @@ note 54 §4. Commit `[T64][fix]` plus one PROGRESS line.
   is written out. Lemma G (proved) is a summable-coupling bootstrap with physical-coupling bookkeeping. Theorem 1: (H1) transport (NA♭),
   (H2) generation (A_s), (H3) 3D marginal structure, (H4) large fields and (H5) terminal conversion imply H3D-1 with rate
   (N+1) max(theta', 1/L)^N, hence M1-3D. This explains the sigma = 1 component seen in the Monte Carlo.
+
+- T58b [computation] — completed by Claude, 2026-10-06 (`research/62-mc-4d-action-memory.md`): 4D Wilson vs Symanzik at matched
+  terminal P. The W12 gap is -0.0075(18) at N = 1 and -0.0057(19) at N = 2. Inconclusive: decay not established; N = 3 needed.
 
 ## Proposals
 (Workers: at most 5 lines each.)

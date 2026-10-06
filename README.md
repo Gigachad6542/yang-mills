@@ -193,6 +193,8 @@ M1-3D stays a conditional reduction, not a theorem.
   terminal observables (note 59).
 - In 4D, matching the terminal plaquette across depths fixes the terminal
   1×2 loop (note 56).
+- In 4D, the Wilson/Symanzik gap at matched terminal P is -0.0075(18) at N = 1
+  and -0.0057(19) at N = 2. Decay is not established at these depths (note 62).
 
 ## Repository map
 
@@ -271,6 +273,7 @@ M1-3D stays a conditional reduction, not a theorem.
 - `research/58-vertex-alias-sums.md` -- Vertex Riemann sums for (C): a general alias-sum convergence lemma
 - `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
 - `research/61-3d-assembly-conditional.md` -- The 3D assembly: H3D-1 from single-step bounds, written out (conditional)
+- `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
 - `research/50-sum-rule-from-multiplicativity.md` -- (S) of note 22: only bounded edges are needed
