@@ -114,11 +114,11 @@ def run(action, D, N, n0, beta, L=2, ntherm=150, nmeas=200, every=2):
     ms = [masks(D, n, mu) for mu in range(D)]
     t0 = time.time()
     for _ in range(ntherm):
-        sweep(U, beta, c0, c1, ms)
+        sweep_fast(U, beta, c0, c1, ms)
     data = []
     for _ in range(nmeas):
         for _ in range(every):
-            sweep(U, beta, c0, c1, ms)
+            sweep_fast(U, beta, c0, c1, ms)
         V = U
         for _ in range(N):
             V = t.average(V, L)
@@ -129,6 +129,61 @@ def run(action, D, N, n0, beta, L=2, ntherm=150, nmeas=200, every=2):
     m, e = bl.mean(0), bl.std(0, ddof=1) / np.sqrt(nb)
     print(f"{action} D={D} N={N} n={n} beta={beta:.4f}: P={m[0]:.5f}({e[0]:.5f}) "
           f"W12={m[1]:.5f}({e[1]:.5f}) fine plaq={m[2]:.5f} [{time.time()-t0:.0f}s]", flush=True)
+
+
+# ---------- faster masked staples (gather only the sites being updated) ----------
+def _flat(coords, n):
+    idx = np.zeros(coords.shape[0], dtype=np.int64)
+    for ax in range(coords.shape[1]):
+        idx = idx * n + (coords[:, ax] % n)
+    return idx
+
+
+def staple_masked(Uflat, n, D, coords, mu, c0, c1):
+    """Staple sum at the sites `coords` (m x D) only. Uflat[mu] is U[mu]
+    reshaped to (n^D, 4)."""
+    S = np.zeros((coords.shape[0], 4))
+    e = np.zeros(D, int); e[mu] = 1
+    for nu in range(D):
+        if nu == mu:
+            continue
+        for key, steps in loop_shapes(mu, nu):
+            w = c0 if key == "p" else c1
+            if w == 0:
+                continue
+            out = np.zeros((coords.shape[0], 4)); out[:, 0] = 1.0
+            pos = e.copy()
+            for a, sgn in steps:
+                off = pos.copy()
+                if sgn == -1:
+                    off[a] -= 1
+                link = Uflat[a][_flat(coords + off, n)]
+                out = qmul(out, link if sgn == 1 else qinv(link))
+                pos[a] += sgn
+            S += w * out
+    return S
+
+
+def sweep_fast(U, beta, c0, c1, ms):
+    D, n = U.shape[0], U.shape[1]
+    coords_all = [[np.argwhere(m) for m in ms[mu]] for mu in range(D)]
+    Uflat = [U[a].reshape(-1, 4) for a in range(D)]   # views into U
+    for over in (False, True):
+        for mu in range(D):
+            for ci, m in enumerate(ms[mu]):
+                coords = coords_all[mu][ci]
+                S = staple_masked(Uflat, n, D, coords, mu, c0, c1)
+                k = np.linalg.norm(S, axis=-1)
+                Vbar = S / k[:, None]
+                fl = _flat(coords, n)
+                if not over:
+                    a0 = q.sample_a0(beta * k)
+                    v = rng.normal(size=(len(k), 3)); v /= np.linalg.norm(v, axis=-1, keepdims=True)
+                    X = np.concatenate([a0[:, None], np.sqrt(np.maximum(1 - a0 ** 2, 0))[:, None] * v], axis=-1)
+                    Uflat[mu][fl] = qnormalize(qmul(X, qinv(Vbar)))
+                else:
+                    Vi = qinv(Vbar)
+                    Uflat[mu][fl] = qnormalize(qmul(qmul(Vi, qinv(Uflat[mu][fl])), Vi))
 
 
 if __name__ == "__main__":
