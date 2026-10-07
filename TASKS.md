@@ -390,6 +390,23 @@ The covariant-average terms are out of scope.
 Done when: (V) is verified for both families with stated s, or a
 `failed-attempt` names the vertex whose growth exponent is >= 1.
 
+### T73 [proof] — assigned to Sonnet: (E) for the scalar loop in note 48's model (note 50 §2.5)
+Scope: `research/50-sum-rule-from-multiplicativity.md`, a new §2.6, plus
+`research/scripts/t73_*.py`.
+T67 showed that (E) cannot be proved termwise from the fine-lattice G_0. Do
+the scalar (orbital) case only. (1) Write the propagator of the free step in
+note 48's model: the fluctuation B on the scale-k block lattice, entering
+through the minimizer map H_k (child symbol, note 48 item 2), with
+covariance from C^{(M)} (note 47); take the limit k -> ∞ at fixed block
+ratio L. (2) Write the p² coefficient of the scalar bubble plus seagull with
+it, by Lemma A2 (note 58), treating alias 0 jointly with its correction
+(note 50 Prop. 2.2). (3) Bound the bulk, IR-shell and UV-shell
+contributions uniformly in L, and show the bulk gives c log L + O(1) with the
+scalar constant c identified. Check the result numerically for L = 2, 3, 4,
+(6) if feasible.
+Done when: the scalar (E) is proved with explicit O(1), or a `failed-attempt`
+names the shell integral that is not uniformly bounded.
+
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
 T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
