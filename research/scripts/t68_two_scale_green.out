@@ -1,0 +1,27 @@
+== Laplacian resolvent gap (d=1, K=pi): sup_{n!=0} |1/lam_M - 1/lam_inf| ==
+M=   4  gap=7.048e-03  gap*M^2=0.113
+M=   8  gap=1.993e-03  gap*M^2=0.128
+M=  16  gap=5.357e-04  gap*M^2=0.137
+M=  32  gap=1.393e-04  gap*M^2=0.143
+M=  64  gap=3.554e-05  gap*M^2=0.146
+M= 128  gap=8.979e-06  gap*M^2=0.147
+== Schur formula vs dense eigh ==
+d=2 M=8 e=1,2: max|dense-schur| = 6.11e-16
+d=2 M=8 e=1,1: max|dense-schur| = 6.11e-16
+d=2 M=16 e=1,2: max|dense-schur| = 9.42e-15
+d=2 M=16 e=1,1: max|dense-schur| = 9.42e-15
+d=4 M=4 e=1,2: max|dense-schur| = 2.36e-16
+d=4 M=4 e=1,1: max|dense-schur| = 2.36e-16
+d=4 M=6 e=1,2: max|dense-schur| = 8.06e-15
+d=4 M=6 e=1,1: max|dense-schur| = 8.06e-15
+== d=2: sup_K |Xi_M - Xi_2M|, Xi = (<w1,G w1>, <w1,G w2>, G_00), a=1.0 ==
+M=  2->  4: 2.540e-02  5.129e-02  1.580e-02
+M=  4->  8: 6.578e-03  2.301e-02  3.601e-03   ratios 3.86 2.23 4.39
+M=  8-> 16: 1.659e-03  1.116e-02  8.793e-04   ratios 3.96 2.06 4.10
+M= 16-> 32: 4.157e-04  5.539e-03  2.185e-04   ratios 3.99 2.02 4.02
+M= 32-> 64: 1.040e-04  2.764e-03  5.455e-05   ratios 4.00 2.00 4.01
+== d=4: sup_K |Xi_M - Xi_2M|, Xi = (<w1,G w1>, <w1,G w2>, G_00), a=1.0 ==
+M=  2->  4: 1.796e-02  8.053e-02  5.586e-03
+M=  4->  8: 5.101e-03  3.811e-02  1.409e-03   ratios 3.52 2.11 3.96
+M=  8-> 16: 1.361e-03  1.878e-02  3.528e-04   ratios 3.75 2.03 3.99
+M= 16-> 32: 3.497e-04  9.358e-03  8.824e-05   ratios 3.89 2.01 4.00

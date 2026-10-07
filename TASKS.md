@@ -367,7 +367,7 @@ Prop. 3 assumes.
 Done when: Lemma 2 is proved with an explicit O(1) dependence, or a
 `failed-attempt` names the integral that is not uniformly bounded.
 
-### T68 [proof] — assigned to Sonnet: two-scale (O1) (note 41, item 3)
+### T68 [proof] — completed by Sonnet, 2026-10-07; reviewed by the lead: correct, for the single-level alias model (lower penalty levels, general-α gauge fixing and the constrained ghost are open, as the note says): two-scale (O1) (note 41, item 3)
 Scope: `research/41-free-increments-convergence.md`, a new section.
 Note 41 states, without proof, that the Laplacian, gauge-fixing and ghost
 operators on the fine lattice of step j converge at rate L^{-j} on the range
