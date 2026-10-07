@@ -427,6 +427,21 @@ term depends on V near Z only).
 Done when: proved with explicit constants, or a `failed-attempt` naming the
 step (e.g. the extension's action for large holonomies) that fails.
 
+### T75 [proof] — assigned to Sonnet: two-scale (O1) with all penalty levels (note 41 §5)
+Scope: `research/41-free-increments-convergence.md`, a new §5a, plus
+`research/scripts/t75_*.py`.
+T68 proved the two-scale (O1) for K_M = Λ_M + a w w^† (top-level average
+only). Balaban's free step operator at level j carries the penalties of all
+levels i <= j (note 41 §1, CMP 99 recursion before (3.26), weights a_i), so
+K = Λ + Σ_i a_i Q_i^† Q_i, a finite-rank-per-K perturbation at each level
+but with rank growing with the number of levels. Extend Theorem 2: either by
+iterating the Schur/Sherman-Morrison step level by level with bounds uniform
+in the number of levels, or by showing that levels i < j - k_0 contribute
+O(L^{-2(j-i)}) and can be absorbed. Keep the alias-sum convergence rate.
+Check numerically (eigh) for L = 2, d = 2 and 4, j <= 4.
+Done when: Theorem 2 holds for the full multi-level operator with explicit
+rate, or a `failed-attempt` names the term that is not uniform in j.
+
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
 T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
