@@ -353,7 +353,7 @@ complex |s| <= s_0; (b) the influence bound (H4b) for large-field activities.
 If D_N is not local in this sense, write a `failed-attempt` naming the term.
 Done when: §6b has the lemma with proof (or the failed attempt).
 
-### T67 [proof] — assigned to Sonnet: the edge bound (E) (note 50 Lemma 2)
+### T67 [proof] — failed-attempt by Sonnet, 2026-10-07; reviewed by the lead: correct after one wording fix: the edge bound (E) (note 50 Lemma 2)
 Scope: `research/50-sum-rule-from-multiplicativity.md` §2 only.
 Replace the sketch of Lemma 2, β_∞^0(L) = 2b_0 log L + O(1) uniformly in L,
 by a proof. Write the propagator of the limit step as G_0 + (UV edge) +
