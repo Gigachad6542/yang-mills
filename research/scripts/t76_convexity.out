@@ -1,0 +1,63 @@
+L=2 n0=4 N=1: level-N lattice 8^3; eig(Pi_1 - P) on B: min 0.0790, max 3.0000  (r = 1 + eig: 1.079 .. 4.000)
+  j=0 level 8^3: eig(Pi_j^(s)) over s, K in [1.0000, 4.0000]
+     (A1) max violation +3.50e-16   (A2) max violation +4.46e-16   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 3.0000  ||T_j^(1/2)D|| 3.0000  ||T_j^(1)D|| 3.0000   ||Pi_j^(1)-Pi_j^(0)|| 3.0000  ||Pi_j^(1/2)-Pi_j^(0)|| 1.5000  (bound s*max = 1.5000)
+  j=1 level 4^3: eig(Pi_j^(s)) over s, K in [1.3333, 7.6620]
+     (A1) max violation +2.49e-15   (A2) max violation +4.90e-15   (A4) +2.68e-15 +5.42e-15
+     ||T_j^(0)D|| 3.6620  ||T_j^(1/2)D|| 3.6620  ||T_j^(1)D|| 3.6620   ||Pi_j^(1)-Pi_j^(0)|| 3.6620  ||Pi_j^(1/2)-Pi_j^(0)|| 1.8310  (bound s*max = 1.8310)
+  consistency: max|terminal_cov(K,L^(N+1)) - (Pi_N^(1))^+| = 9.99e-16
+  WORST violations: {'A1': np.float64(2.49212060339917e-15), 'A2': np.float64(4.902556580230529e-15), 'A4a': np.float64(2.6821599149339015e-15), 'A4b': np.float64(5.4202478222082016e-15)}
+  all orderings hold to 1e-09: True
+L=2 n0=4 N=2: level-N lattice 16^3; eig(Pi_1 - P) on B: min 0.0194, max 3.0000  (r = 1 + eig: 1.019 .. 4.000)
+  j=0 level 16^3: eig(Pi_j^(s)) over s, K in [1.0000, 4.0000]
+     (A1) max violation +4.24e-16   (A2) max violation +4.81e-16   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 3.0000  ||T_j^(1/2)D|| 3.0000  ||T_j^(1)D|| 3.0000   ||Pi_j^(1)-Pi_j^(0)|| 3.0000  ||Pi_j^(1/2)-Pi_j^(0)|| 1.5000  (bound s*max = 1.5000)
+  j=1 level 8^3: eig(Pi_j^(s)) over s, K in [1.0790, 7.6620]
+     (A1) max violation +2.49e-15   (A2) max violation +4.90e-15   (A4) +2.68e-15 +5.42e-15
+     ||T_j^(0)D|| 3.6620  ||T_j^(1/2)D|| 3.6620  ||T_j^(1)D|| 3.6620   ||Pi_j^(1)-Pi_j^(0)|| 3.6620  ||Pi_j^(1/2)-Pi_j^(0)|| 1.8310  (bound s*max = 1.8310)
+  j=2 level 4^3: eig(Pi_j^(s)) over s, K in [1.4545, 9.6551]
+     (A1) max violation -0.00e+00   (A2) max violation +0.00e+00   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 2.1988  ||T_j^(1/2)D|| 1.9724  ||T_j^(1)D|| 1.8790   ||Pi_j^(1)-Pi_j^(0)|| 1.9931  ||Pi_j^(1/2)-Pi_j^(0)|| 1.0331  (bound s*max = 1.0994)
+  consistency: max|terminal_cov(K,L^(N+1)) - (Pi_N^(1))^+| = 2.55e-15
+  WORST violations: {'A1': np.float64(2.49212060339917e-15), 'A2': np.float64(4.902556580230529e-15), 'A4a': np.float64(2.6821599149339015e-15), 'A4b': np.float64(5.4202478222082016e-15)}
+  all orderings hold to 1e-09: True
+L=2 n0=4 N=3: level-N lattice 32^3; eig(Pi_1 - P) on B: min 0.0048, max 3.0000  (r = 1 + eig: 1.005 .. 4.000)
+  j=0 level 32^3: eig(Pi_j^(s)) over s, K in [1.0000, 4.0000]
+     (A1) max violation +4.34e-16   (A2) max violation +8.87e-16   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 3.0000  ||T_j^(1/2)D|| 3.0000  ||T_j^(1)D|| 3.0000   ||Pi_j^(1)-Pi_j^(0)|| 3.0000  ||Pi_j^(1/2)-Pi_j^(0)|| 1.5000  (bound s*max = 1.5000)
+  j=1 level 16^3: eig(Pi_j^(s)) over s, K in [1.0194, 7.6620]
+     (A1) max violation +2.49e-15   (A2) max violation +4.90e-15   (A4) +2.68e-15 +5.42e-15
+     ||T_j^(0)D|| 3.6620  ||T_j^(1/2)D|| 3.6620  ||T_j^(1)D|| 3.6620   ||Pi_j^(1)-Pi_j^(0)|| 3.6620  ||Pi_j^(1/2)-Pi_j^(0)|| 1.8310  (bound s*max = 1.8310)
+  j=2 level 8^3: eig(Pi_j^(s)) over s, K in [1.1008, 9.6551]
+     (A1) max violation -0.00e+00   (A2) max violation +0.00e+00   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 2.1988  ||T_j^(1/2)D|| 1.9724  ||T_j^(1)D|| 1.8790   ||Pi_j^(1)-Pi_j^(0)|| 1.9931  ||Pi_j^(1/2)-Pi_j^(0)|| 1.0331  (bound s*max = 1.0994)
+  j=3 level 4^3: eig(Pi_j^(s)) over s, K in [1.4884, 10.3250]
+     (A1) max violation -0.00e+00   (A2) max violation +0.00e+00   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 0.7432  ||T_j^(1/2)D|| 0.6636  ||T_j^(1)D|| 0.6240   ||Pi_j^(1)-Pi_j^(0)|| 0.6699  ||Pi_j^(1/2)-Pi_j^(0)|| 0.3489  (bound s*max = 0.3716)
+  consistency: max|terminal_cov(K,L^(N+1)) - (Pi_N^(1))^+| = 5.83e-15
+  WORST violations: {'A1': np.float64(2.49212060339917e-15), 'A2': np.float64(4.902556580230529e-15), 'A4a': np.float64(2.6821599149339015e-15), 'A4b': np.float64(5.4202478222082016e-15)}
+  all orderings hold to 1e-09: True
+L=3 n0=4 N=1: level-N lattice 12^3; eig(Pi_1 - P) on B: min 0.0413, max 5.2758  (r = 1 + eig: 1.041 .. 6.276)
+  j=0 level 12^3: eig(Pi_j^(s)) over s, K in [1.0000, 6.2758]
+     (A1) max violation +4.44e-16   (A2) max violation +8.72e-16   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 5.2758  ||T_j^(1/2)D|| 5.2758  ||T_j^(1)D|| 5.2758   ||Pi_j^(1)-Pi_j^(0)|| 5.2758  ||Pi_j^(1/2)-Pi_j^(0)|| 2.6379  (bound s*max = 2.6379)
+  j=1 level 4^3: eig(Pi_j^(s)) over s, K in [1.4211, 9.8333]
+     (A1) max violation -0.00e+00   (A2) max violation +0.00e+00   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 4.0109  ||T_j^(1/2)D|| 3.5025  ||T_j^(1)D|| 3.3905   ||Pi_j^(1)-Pi_j^(0)|| 3.5575  ||Pi_j^(1/2)-Pi_j^(0)|| 1.8393  (bound s*max = 2.0055)
+  consistency: max|terminal_cov(K,L^(N+1)) - (Pi_N^(1))^+| = 8.33e-16
+  WORST violations: {'A1': np.float64(4.440892098500626e-16), 'A2': np.float64(8.724111314189386e-16), 'A4a': np.float64(-0.0), 'A4b': np.float64(-0.0)}
+  all orderings hold to 1e-09: True
+L=3 n0=4 N=2: level-N lattice 36^3; eig(Pi_1 - P) on B: min 0.0045, max 5.2758  (r = 1 + eig: 1.005 .. 6.276)
+  j=0 level 36^3: eig(Pi_j^(s)) over s, K in [1.0000, 6.2758]
+     (A1) max violation +8.30e-16   (A2) max violation +9.10e-16   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 5.2758  ||T_j^(1/2)D|| 5.2758  ||T_j^(1)D|| 5.2758   ||Pi_j^(1)-Pi_j^(0)|| 5.2758  ||Pi_j^(1/2)-Pi_j^(0)|| 2.6379  (bound s*max = 2.6379)
+  j=1 level 12^3: eig(Pi_j^(s)) over s, K in [1.0413, 9.8333]
+     (A1) max violation -0.00e+00   (A2) max violation +0.00e+00   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 4.0109  ||T_j^(1/2)D|| 3.5025  ||T_j^(1)D|| 3.3905   ||Pi_j^(1)-Pi_j^(0)|| 3.5575  ||Pi_j^(1/2)-Pi_j^(0)|| 1.8393  (bound s*max = 2.0055)
+  j=2 level 4^3: eig(Pi_j^(s)) over s, K in [1.4908, 10.4832]
+     (A1) max violation -0.00e+00   (A2) max violation +0.00e+00   (A4) -0.00e+00 -0.00e+00
+     ||T_j^(0)D|| 0.7437  ||T_j^(1/2)D|| 0.6407  ||T_j^(1)D|| 0.5980   ||Pi_j^(1)-Pi_j^(0)|| 0.6499  ||Pi_j^(1/2)-Pi_j^(0)|| 0.3414  (bound s*max = 0.3718)
+  consistency: max|terminal_cov(K,L^(N+1)) - (Pi_N^(1))^+| = 7.83e-15
+  WORST violations: {'A1': np.float64(8.30133251546897e-16), 'A2': np.float64(9.099302944000274e-16), 'A4a': np.float64(-0.0), 'A4b': np.float64(-0.0)}
+  all orderings hold to 1e-09: True
+ALL OK

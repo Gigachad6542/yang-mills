@@ -442,7 +442,7 @@ Check numerically (eigh) for L = 2, d = 2 and 4, j <= 4.
 Done when: Theorem 2 holds for the full multi-level operator with explicit
 rate, or a `failed-attempt` names the term that is not uniform in j.
 
-### T76 [proof] — assigned to Sonnet: (I-S) along the real s-orbit by convexity (note 61 §6b)
+### T76 [proof] — completed by Sonnet, 2026-10-07; reviewed by the lead: correct for the quadratic (Schur) sector, abelian skeleton; SU(2) flat-background version conditional on note 54 §2; R1-R5 of §6c.6 open: (I-S) along the real s-orbit by convexity (note 61 §6b)
 Scope: `research/61-3d-assembly-conditional.md`, a new §6c, plus
 `research/scripts/t76_*.py` if a constant is checked.
 Note 61 §6b's Lemma 6b.1 assumes (I-S): the step maps are analytic and obey
@@ -477,6 +477,22 @@ bonds outside Z⁺ may be restricted to the small-field set if that is what
 the s-weights of note 61 Lemma 6b.2 actually need; say so explicitly.
 Done when: (R) is proved with explicit constants (or for the restricted
 case that Lemma 6b.2 needs), or a `failed-attempt` names the step.
+
+### T78 [proof] — assigned to Sonnet: kernel locality of the interpolated forms (note 61 §6c.6, R2)
+Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
+T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
+(R2) that a Loewner sandwich does not give locality: the real-space kernel of
+Π_j^{(s)} (and of its minimizer map B_s(Φ), (6c.1)) must decay exponentially,
+uniformly in s ∈ [0,1], j, N, for the polymer/mixed norm of note 51 to apply.
+Prove this by a Combes-Thomas argument: conjugate the composite fibre problem
+(6c.1) by e^{μ·x}, show the conjugated form stays coercive on the fibre for
+|μ| <= μ_0 (with μ_0 independent of s, j, N, using S <= S + sΔ <= (1+ρ)S
+and the finite range of w), and deduce |kernel(x,y)| <= C e^{-μ_0|x-y|} in
+coarse units. Note whether the decay rate is in units of the level N-j lattice
+(it must be, for the mixed norm). Check numerically on the abelian model
+(`t76_convexity.py` setup) for L = 2, 3.
+Done when: exponential decay is proved with explicit μ_0, C, or a
+`failed-attempt` names the step (e.g. the constraint space under conjugation).
 
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).

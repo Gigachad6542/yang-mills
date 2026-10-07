@@ -561,3 +561,259 @@ structure, so it checks the mechanism only.
   SU(2), using the surjectivity and fibre-volume estimates of note 53), and
   state the first-step expansion of CMP 122 II for the Wilson initial density at
   d = 3 to localize T4.
+
+### 6c. (I-S) along the real s-orbit by convexity (T76)
+
+**Question.** §6b.4 item 4 observed that the one-step defect T1 is an O(1)
+*relative* change of the quadratic form, so the s-orbit leaves the
+small-perturbation class of CMP 102 (41) and of note 63 Lemma 1. But
+e^{sD_N}ρ_0 = ρ_0^{1-s}(Tρ_1)^s is a geometric mean of two Balaban densities, so
+the quadratic part of −log of it is a *convex combination* of two forms. Does
+convexity give (I-S) along the orbit?
+
+**Answer (partial).** In the quadratic (Schur-complement) sector, yes, with
+explicit constants and **without** smallness of T1 (Theorem 6c.3, Proposition
+6c.4). The sector is exact for the abelian Gaussian model of note 18 §8 and is the
+Hessian skeleton of the flat-background problem. What convexity does **not**
+give is listed in 6c.6: kernel locality of the interpolated forms at j >= 1, the
+contraction θ' < 1 on the irrelevant sector for complex perturbations, the
+generated (fluctuation) terms, and the non-flat non-abelian transport. Status:
+**proved here** for the abelian Gaussian skeleton (scripts `t76_*`); **conditional**
+(inputs named in 6c.5) for SU(2) at flat backgrounds; **open** for the rest of
+(I-S).
+
+#### 6c.1 Setting: the quadratic skeleton
+
+Work in the dimensionless units of note 18 §8 (3D, g²ε_0 = 1, scale covariance).
+At every level the Wilson flux form is S(B) = |B|² on the closed fluxes
+B ∈ ran d (a factor ½ is dropped throughout). Forms are Hermitian, gauge
+invariant, and Fourier-diagonal in the terminal momentum K up to aliasing.
+
+One block step is the Schur complement. For a fine form Π and a coarse flux Φ,
+
+    (ΣΠ)(Φ) := min { Π(B) : B ∈ ran d_fine, w B = Φ },
+
+where w is the kernel of note 18 §8(a): w_j = b(x_j) ∏_{i≠j} (b*s)(x_i), with
+b = L^{-1}1_{[0,L)}, s = 1_{[0,L)} on the fine lattice. In Fourier variables
+this is the formula of `t7_gauss3d.py`, covariance side
+(GF)(K) = L^{-4} Σ_m conj(W) F(p_m) W, p_m = (K + 2πm)/L, and ΣΠ = (G Π^+)^+.
+`t76_convexity.py` reproduces `terminal_cov(K, L^{N+1})` from the flow to 6e-15
+(output `.out`, "consistency").
+
+*Orbit.* At level N the s-data are the log-linear interpolation
+
+    Π_N^{(s)} = (1-s) S + s Π_1 = S + sΔ,   Π_1 := Σ(S),  Δ := Π_1 − S,
+
+because −log ρ_s = (1−s)(−log ρ_0) + s(−log Tρ_1) and the Hessian of −log Tρ_1
+at flat fields is the Schur complement of the finer Wilson form (the quadratic
+part of T1; T2-T5 are not in this sector). At level N−j (j steps down)
+
+    Π_j^{(s)} := Σ^j Π_N^{(s)},   W_n := Σ^n S   (the Wilson orbit).
+
+Then Π_j^{(0)} = W_j and Π_j^{(1)} = W_{j+1} (the depth-(N+1) Wilson flow), and
+W_n does not depend on N. A composite of Schur complements is the Schur
+complement of the composite constraint, so
+
+    Π_j^{(s)}(Φ) = min { S(B) + sΔ(B) : B ∈ ran d_N, w_{N→N−j} B = Φ }.   (6c.1)
+
+**Lemma 6c.1 (proved).** Σ is (a) monotone: Π ≤ Π' ⇒ ΣΠ ≤ ΣΠ'; (b) positively
+homogeneous; (c) concave: Σ((1−s)Π + sΠ') ≥ (1−s)ΣΠ + sΣΠ'. Hence Σ^j has the
+same three properties. *Proof.* (a) a minimum of a larger function; (c) the minimum
+of a sum is at least the sum of the minima; monotone concave maps compose to a
+monotone concave map. ∎
+
+**Lemma 6c.2 (proved; (R): the Wilson step is non-decreasing).** Σ(S) ≥ S, i.e.
+Δ ≥ 0, i.e. r(K) ≥ 1 in the notation of §6b.5.
+
+*Proof.* In coarse units the fine Wilson form is L|B|² (β_{N+1} = Lβ_N), so the
+claim is |wB|² ≤ L|B|² for every fine flux field B. Fix an orientation j and a
+coarse plaquette Y. Since w ≥ 0 has mass L² (b has mass 1, b*s has mass L),
+Cauchy-Schwarz gives (wB)_Y² ≤ L² Σ_x w(x−Y)B(x)². Sum over Y ∈ (LZ)³: the
+periodization of w over (LZ)³ is the constant Σ_Y w(x−Y) = 1/L, because b tiles
+with weight 1/L along j (Σ_{y∈LZ} b(t−y) = 1/L), and
+Σ_{y∈LZ}(b*s)(t−y) = mass(b) = 1 in the perpendicular directions (s is the
+indicator of a fundamental domain of LZ). Hence
+Σ_Y (wB)_Y² ≤ L² (1/L) Σ_x B(x)² = L|B|². Sum over j. ∎
+
+(The kernel facts are checked for L = 2,...,5 by `t76_kernel_bounds.py`, part (1).
+Equality is approached as K → 0, where r → 1: the sampled continuum minimum of r
+is 1.000026 for L = 2, part (2).) For SU(2) at a flat background the same proof
+works if the linearized covariant average is w with each term transported by an
+isometry R_{x,Y}, because then |(wB)_Y| ≤ Σ w|B| still holds; that is an input
+from note 54 §2 (the neutral/charged sector decomposition), not re-derived here.
+
+#### 6c.2 Theorem 6c.3 (the orbit lies in the form class; proved, abelian skeleton)
+
+For every L ≥ 2, N ≥ 0, 0 ≤ j ≤ N, 0 ≤ s ≤ s' ≤ 1 (order = Loewner order of forms
+on ran d at level N−j):
+
+1. **Sandwich, no loss of constants.**
+
+       S ≤ W_j ≤ Π_j^{(s)} ≤ Π_j^{(s')} ≤ W_{j+1}.
+
+   So the coercivity constant is 1 for every s, j, N (the value at both endpoints),
+   and the upper constant is that of the endpoint W_{j+1}, which does not depend on
+   N. In particular ‖Π_j^{(s)} − W_j‖_S ≤ ‖W_{j+1} − W_j‖_S, with the form norm
+   ‖Q‖_S := sup|Q(Φ)|/S(Φ) of note 46 (reference S; the reference W_1 of note 46 is
+   equivalent, ‖·‖_{W_1} ≤ ‖·‖_S ≤ r_max ‖·‖_{W_1}, by S ≤ W_1 ≤ r_max S).
+2. **Concavity and tangent domination.** For each Φ, s ↦ Π_j^{(s)}(Φ) is concave,
+   real-analytic, and with B_s(Φ) the minimizer in (6c.1),
+
+       ∂_s Π_j^{(s)}(Φ) = Δ(B_s(Φ)),   0 ≤ ∂_sΠ_j^{(s)} ≤ ∂_sΠ_j^{(0)} = Δ(B_0(Φ)) =: (T_jΔ)(Φ),
+
+   where T_jΔ is the transport of the initial defect Δ along the **Wilson** minimizers
+   (the linearized flow of note 18 Prop. 2(v) at s = 0). Also
+   Π_j^{(s)} ≤ W_j + s T_jΔ and Π_j^{(s)} ≥ (1−s)W_j + sW_{j+1}.
+3. **Consequence for the tangent.** For every s ∈ [0,1],
+   ‖∂_sΠ_j^{(s)}‖_S ≤ ‖T_jΔ‖_S, and the same for the oscillation of the quadratic
+   part of m_{N,s} on the terminal lattice (j = N). So the s-integral of Theorem 1
+   (H3D-1, quadratic sector) is controlled by the s = 0 linearized Wilson flow
+   alone; the difference inequalities (i)-(ii) of Lemma G are not needed at interior s.
+
+*Proof.* (1) Π_N^{(s)} = S + sΔ with Δ ≥ 0 gives S ≤ Π_N^{(s)} ≤ Π_N^{(s')} ≤ Π_N^{(1)} = Σ(S).
+Apply the monotone Σ^j (Lemma 6c.1(a)); Σ^jS = W_j, Σ^{j+1}S = W_{j+1}.
+(2) By (6c.1), Π_j^{(s)}(Φ) is a minimum of functions affine in s, hence concave. The
+constrained minimizer is unique (S is strictly convex on the fibre), so the envelope
+theorem gives the derivative formula, which is ≥ 0 because Δ ≥ 0. The derivative of
+a concave C¹ function is non-increasing, so it is ≤ its value at 0. The two bounds
+are the tangent line at 0 (test B_0 in the minimum) and the chord (concavity).
+(3) A sandwich of forms 0 ≤ A ≤ B implies ‖A‖_S ≤ ‖B‖_S. ∎
+
+*Numerical check* (`t76_convexity.py`, `.out`; abelian model, L = 2 with N ≤ 3 and
+L = 3 with N ≤ 2, n_0 = 4, all momenta of the level-N lattice,
+s ∈ {0, ¼, ½, ¾, 1}). The Loewner violations of the concavity bound, the
+tangent-line bound and the tangent ordering T^{(1)}Δ ≤ T^{(s)}Δ ≤ T^{(0)}Δ are at
+most 5.5e-15. The eigenvalues of Π_j^{(s)} lie in [1, 10.33] for L = 2, N = 3. The
+maximum eigenvalue of Δ at level N is 3.0000 (r_max = 4) for L = 2 and 5.2758
+(r_max = 6.276) for L = 3. Sampled Wilson-orbit upper constants
+(`t76_kernel_bounds.py` part (3), 300 random K plus special points, **not
+certified**): sup_K λ_max(W_n) = 4.000, 7.662, 9.655, 10.325, 10.508 for L = 2,
+n = 1,...,5, still increasing slowly. A certified bound on sup_n ‖W_n‖_S would
+need an interval argument or a Fourier estimate that is not given here.
+
+*What this resolves of §6b.4 item 4.* The O(1) size of Δ does not matter. The step
+is not a small perturbation of S: it is a Schur complement of a coercive form
+(c = 1), and every statement above is an order statement about that form.
+
+#### 6c.3 Proposition 6c.4 (complex s: an N- and j-independent analytic disc; proved, abelian skeleton)
+
+Let ρ := ‖Δ‖_S = max eig Δ (= r_max − 1: 3.0000 for L = 2, 5.2758 for L = 3,
+`t76_convexity.out`). Let s = σ + iς with σ ∈ [0,1], and put
+
+    ε := |ς| ρ / (1 + σρ)  (≤ |ς|ρ).
+
+If ε < 1, then Π_j^{(s)} (the holomorphic continuation of (6c.1): the critical value of
+the form S + sΔ on the fibre) is well defined for every j, N and satisfies, for all Φ,
+
+    | Π_j^{(s)}(Φ) − Π_j^{(σ)}(Φ) | ≤ (ε/(1−ε)) Π_j^{(σ)}(Φ) ≤ (ε/(1−ε)) W_{j+1}(Φ).
+
+In particular Π_j^{(s)} is analytic in s on |Im s| < 1/ρ around [0,1], uniformly in
+N and j. The radius 1/ρ is the zero-free radius of §6b.5 (0.333 for L = 2,
+0.190 for L = 3).
+
+*Proof.* Whiten the composite fibre problem by the real form Π_N^{(σ)} ≥ S. Write
+the fibre as b + Z, where Z is the kernel of the composite constraint and b is the
+Π_N^{(σ)}-minimal element (b ⊥ Z, |b|² = Π_j^{(σ)}(Φ)). The perturbation Q = iςΔ has
+whitened operator norm |ς| max eig(Δ(Π_N^{(σ)})^{-1}). The eigenvalues of
+Δ(S + σΔ)^{-1} are x/(1+σx) with x ∈ spec(S^{-1/2}ΔS^{-1/2}) ⊂ [0, ρ], so this is
+≤ ε. With G = 1 + Q in the whitened coordinates, the critical value is
+
+    v = b†Gb − b†GZ (Z†GZ)^{-1} Z†Gb = |b|² + b†Qb − (b†QZ)(1 + Z†QZ)^{-1}(Z†Qb),
+
+since Z†b = 0. The inverse exists with norm ≤ 1/(1−ε), so
+|v − |b|²| ≤ ε|b|² + ε²|b|²/(1−ε) = ε|b|²/(1−ε). The right-hand side is a rational
+function of s, equal to the real minimum for real s, so it is the analytic
+continuation. The last inequality is Theorem 6c.3(1). ∎
+
+The point is that the whole composite of j steps is **one** Schur complement, so no
+constant is lost per step: the estimate does not go through Lemma G's induction and
+needs no contraction θ' < 1. This is the quadratic-sector analogue of Lemma 6b.1:
+for |s − σ| ≤ θ/ρ, θ < 1, the relative distance is ≤ θ/(1−θ), uniformly in N, j.
+`t76_complex_disc.py` (`.out`) checks the bound for L = 2 (N = 2, 3) and L = 3
+(N = 2) at ε between 0.22 and 0.90: the largest ratio of the numerical radius of the
+whitened difference to ε/(1−ε) is 0.775, attained at j = 0, where the ratio is
+exactly 1 − ε. (The script's zero-mode divide warnings, at K = 0 only and masked,
+are filtered from the `.out`.)
+
+#### 6c.4 Corollary 6c.5 (H3D-1 in the quadratic sector)
+
+In the abelian Gaussian skeleton, for all s ∈ [0,1],
+‖∂_sΠ_N^{(s)}‖_S ≤ ‖T_NΔ‖_S, and T_NΔ is the s = 0 linearized Wilson flow of the
+one-step defect Δ (the content of note 18 §8(b): terminal differences
+(2/3)(L²−1)/M²). So the interior of the orbit is no harder than its endpoint s = 0,
+and in Theorem 1 the Lemma-G step at s ∈ (0,1) is replaced, for the quadratic
+sector, by the order argument above. This is a reduction, not a decay proof:
+‖T_NΔ‖_S → 0 is the abelian P4-3D input.
+
+#### 6c.5 Inputs used, with sources
+
+| Used for | Input | Status |
+|---|---|---|
+| Hessian of −log Tρ_1 = Σ(S_{N+1}) (T1 quadratic part) | CMP 102b Thm. 1 / Prop. 9 minimal configuration; abelian model: exact | published (abelian: proved here) |
+| Lemma 6c.2 for SU(2) | linearized average at a flat background = transported w (isometries), note 54 §2 | conditional on note 54; not re-derived |
+| w and the tiling facts | note 18 §8(a) kernel identity (`t7_kernel_check.py`); `t76_kernel_bounds.py` (1) | proved / checked |
+| Upper constant sup_n ‖W_n‖_S | sampled only | numerical |
+| Coercivity for note 63 Lemma 1 (ii) at each s | a^{(s)}(A,A) = Π^{(s)}(dA) ≥ ‖dA‖², same N-norm and constant c = 1/(1+C_P) as note 63 Lemma 3(d) | follows from Theorem 6c.3(1), flat background |
+
+So at a flat background hypotheses (i), (ii) of note 63 Lemma 1 hold uniformly in s
+and j for the interpolated forms (with C_a ≤ sup_n ‖W_n‖_S). What is not covered is
+(iii), see R2 below.
+
+#### 6c.6 What remains of (I-S), and where convexity does not suffice
+
+Closed here (quadratic sector, abelian, flat): C1 coercivity and two-sided bound
+along the real orbit, uniform in N, j (Theorem 6c.3(1)); C2 tangent domination for
+real s (6c.3(2)-(3)); C3 an N- and j-independent complex disc (6c.4).
+
+Not closed. Each item is a step where an *order* statement (Loewner sandwich,
+concavity) does not imply what is needed:
+
+- **R1. Generated terms (the published (A_s)/(H2) input, now at re-centred data).**
+  The true step is Φ_j = Σ + G_j, with G_j the fluctuation corrections (T2, T3 of
+  §6b.1: one-loop determinant, polymer terms; and the cubic and higher orders). G_j is
+  not monotone or concave in the interpolated data, so convexity says nothing about
+  its s-dependence. Balaban's bounds (note 42 Theorem 3, given (A_s)) are for the
+  fluctuation measure of the classical action plus *small* irrelevant terms. Here the
+  Gaussian part must be re-centred on Π_j^{(s)}, not S. What Theorem 6c.3 supplies is
+  the hypothesis such a re-centring needs: S ≤ Π_j^{(s)} ≤ W_{j+1} with constants
+  independent of s, N. That Balaban's estimates are stable under this replacement is
+  the **remaining analytic part of (I-S)**. It is the (A_s)/(H2) input, not a new one,
+  but its formulation at Π^{(s)} instead of Π^{(0)} is new and not proved.
+- **R2. Kernel locality of Π_j^{(s)} for j ≥ 1 and s ∈ (0,1).** At level N (j = 0) the
+  kernel is affine in s, so decay rates and the moments M_2(q), ‖v‖_∞ of note 51 Lemma 4
+  are bounded by the max over the endpoints. For j ≥ 1, Π_j^{(s)} is a Schur
+  complement, a nonlinear function of s; a Loewner sandwich does not bound off-diagonal
+  kernel entries or the cross terms between smooth fibre elements and rough ones. Such
+  cross terms control the minimizer's smoothness: with S ≤ Π ≤ CS on a fibre b + Z
+  (b ⊥ Z), the Π-minimizer is b + z with z = −(Π_ZZ)^{-1}Π_Z b, and Π(b, z_r) =
+  (Π−S)(b, z_r) can be as large as (C−1)|b||z_r| for a rough z_r, which the sandwich
+  allows. So gradient bounds ‖∇B_s‖ ≲ M^{-1}‖B_s‖ (note 44 Theorem 1, proved for
+  T_S) are not implied. Likely route: Combes-Thomas for the fibre Green function from
+  the gap c = 1 and the exponential locality of Δ (T1, CMP 102b (190)). **Not carried
+  out.** R2 is needed for (H1) at non-flat backgrounds (note 63 (iii)) and for the
+  Lipschitz inequality (i) at interior s.
+- **R3. Contraction θ' < 1 for complex perturbations in the full data.** The quadratic
+  sector avoids it (6c.3), because the j-step composite is one Schur complement. For
+  the coupled data (quadratic ⊕ generated ⊕ higher order) the induction of Lemma 6b.1
+  still needs (i) with θ' < 1 on N_r. Convexity gives, for real perturbations, only
+  non-expansion in the Thompson (log-ratio) metric, which is contraction factor 1; for
+  complex ones it gives the factor 1/(1−ε) at each application if iterated. The gain
+  C/L from irrelevance must come from R2.
+- **R4. Non-abelian, non-flat.** Lemma 6c.2 and the Schur structure need the
+  linearized average at a flat background (note 54). Away from flat backgrounds the
+  step is the Schur complement plus O(ω+ε_0) corrections (note 63 Prop. 2); by Lemma 1
+  there these are small perturbations of the s-form, but only once R2 gives the
+  locality needed for (iii).
+- **R5. Large fields (I-LF).** Untouched. For s < 0 in the Gaussian model positivity
+  of S + sΔ fails at s = −1/ρ (the zero-free radius of §6b.5); the nonlinear lower
+  bound I-LF(b) is T74.
+
+**Verdict.** (I-S) along the real orbit holds in the quadratic sector by convexity and
+coercivity, with c = 1 and the upper constant of the Wilson orbit, uniformly in
+s, N, j, and gives the tangent bound at every s from s = 0. The part of (I-S) that
+remains is R1 (generated terms at the re-centred Gaussian Π^{(s)}) and R2 (kernel
+locality of the Schur complements at j ≥ 1), with R3-R5 downstream. Next concrete
+step: Combes-Thomas for the composite fibre problem (6c.1) in the abelian model (R2),
+which would give uniform exponential decay of Π_j^{(s)} and the gradient bound for
+B_s, and then the one-step estimate of note 42 Theorem 3 with Π_j^{(s)} as Gaussian
+part (R1).

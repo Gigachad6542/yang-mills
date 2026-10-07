@@ -1,0 +1,18 @@
+L=2 n0=4 N=2: rho = max eig Delta = 3.0000, 1/rho = 0.3333
+  s=0.0+0.1i: eps=0.300, bound eps/(1-eps)=0.429, max_j,K ratio (numerical radius)/(bound) = 0.7000  OK
+  s=0.0+0.2i: eps=0.600, bound eps/(1-eps)=1.500, max_j,K ratio (numerical radius)/(bound) = 0.4000  OK
+  s=0.0+0.3i: eps=0.900, bound eps/(1-eps)=9.000, max_j,K ratio (numerical radius)/(bound) = 0.1000  OK
+  s=0.5+0.2i: eps=0.240, bound eps/(1-eps)=0.316, max_j,K ratio (numerical radius)/(bound) = 0.7600  OK
+  s=0.5+0.4i: eps=0.480, bound eps/(1-eps)=0.923, max_j,K ratio (numerical radius)/(bound) = 0.5200  OK
+  s=1.0+0.3i: eps=0.225, bound eps/(1-eps)=0.290, max_j,K ratio (numerical radius)/(bound) = 0.7750  OK
+  s=1.0+0.6i: eps=0.450, bound eps/(1-eps)=0.818, max_j,K ratio (numerical radius)/(bound) = 0.5500  OK
+L=2 n0=4 N=3: rho = max eig Delta = 3.0000, 1/rho = 0.3333
+  s=0.0+0.2i: eps=0.600, bound eps/(1-eps)=1.500, max_j,K ratio (numerical radius)/(bound) = 0.4000  OK
+  s=0.5+0.4i: eps=0.480, bound eps/(1-eps)=0.923, max_j,K ratio (numerical radius)/(bound) = 0.5200  OK
+  s=1.0+0.6i: eps=0.450, bound eps/(1-eps)=0.818, max_j,K ratio (numerical radius)/(bound) = 0.5500  OK
+L=3 n0=4 N=2: rho = max eig Delta = 5.2758, 1/rho = 0.1895
+  s=0.0+0.1i: eps=0.528, bound eps/(1-eps)=1.117, max_j,K ratio (numerical radius)/(bound) = 0.4724  OK
+  s=0.0+0.15i: eps=0.791, bound eps/(1-eps)=3.793, max_j,K ratio (numerical radius)/(bound) = 0.2086  OK
+  s=0.5+0.2i: eps=0.290, bound eps/(1-eps)=0.409, max_j,K ratio (numerical radius)/(bound) = 0.7100  OK
+  s=1.0+0.3i: eps=0.252, bound eps/(1-eps)=0.337, max_j,K ratio (numerical radius)/(bound) = 0.7478  OK
+ALL OK

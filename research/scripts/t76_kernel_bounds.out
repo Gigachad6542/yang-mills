@@ -1,0 +1,21 @@
+(1) kernel facts
+  L=2: mass(w_j)=1*2*2=4 (=L^2=4), periodization along j = 0.5000 (1/L), perpendicular = 1.0000 (1) -> sum_Y w(x-Y) = 0.5000 (1/L=0.5000); all checks True
+  L=3: mass(w_j)=1*3*3=9 (=L^2=9), periodization along j = 0.3333 (1/L), perpendicular = 1.0000 (1) -> sum_Y w(x-Y) = 0.3333 (1/L=0.3333); all checks True
+  L=4: mass(w_j)=1*4*4=16 (=L^2=16), periodization along j = 0.2500 (1/L), perpendicular = 1.0000 (1) -> sum_Y w(x-Y) = 0.2500 (1/L=0.2500); all checks True
+  L=5: mass(w_j)=1*5*5=25 (=L^2=25), periodization along j = 0.2000 (1/L), perpendicular = 1.0000 (1) -> sum_Y w(x-Y) = 0.2000 (1/L=0.2000); all checks True
+(2) r = eig(Pi_1) on transverse space, random continuum K (1500 points + special points)
+  L=2: min r = 1.000026, max r = 4.0000, r>=1 for all samples: True
+  L=3: min r = 1.000031, max r = 6.2758, r>=1 for all samples: True
+  L=4: min r = 1.000033, max r = 7.6620, r>=1 for all samples: True
+  L=5: min r = 1.000034, max r = 8.5090, r>=1 for all samples: True
+(3) Wilson orbit W_n = Sigma^n(S): lambda_min, lambda_max over sampled K (300 points + special)
+  L=2 n=1: min eig 1.000088, max eig 4.0000
+  L=2 n=2: min eig 1.000110, max eig 7.6620  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
+  L=2 n=3: min eig 1.000115, max eig 9.6551  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
+  L=2 n=4: min eig 1.000117, max eig 10.3250  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
+  L=2 n=5: min eig 1.000117, max eig 10.5083  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
+  L=3 n=1: min eig 1.000104, max eig 6.2758
+  L=3 n=2: min eig 1.000116, max eig 9.8333  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
+  L=3 n=3: min eig 1.000117, max eig 10.4832  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
+  L=4 n=1: min eig 1.000110, max eig 7.6620
+  L=4 n=2: min eig 1.000117, max eig 10.3250  min over K of (lam_max_n - lam_max_(n-1)) = +0.0000
