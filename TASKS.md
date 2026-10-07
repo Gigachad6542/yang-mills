@@ -267,7 +267,7 @@ Optional extension (note 62): also run the tree-level Symanzik action at N = 3 w
 Done when: the N = 3 matching row and the 2x2 comparison are in note 56.
 Commit `[T54][computation]` plus one PROGRESS line.
 
-### T55 [fix]: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
+### T55 [fix] — claimed by Codex, 2026-10-07: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
 Scope: `research/42-s2-by-even-deformation.md` §4 only.
 Note 42 §4 (T49) checked CMP 116 Part II §1 and CMP 109 §2. Read CMP 109
 §§3-5 (`sources/ocr/cmp109.md`, fluctuation-field action, Ward identities,
