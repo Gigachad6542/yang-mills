@@ -1,0 +1,24 @@
+A: k=0 (seagull type, s=-4), d=4
+  M=  2 ->   4  S_M= 0.24053945  |S_M-S_2M|=1.194e-02
+  M=  4 ->   8  S_M= 0.25248018  |S_M-S_2M|=2.805e-03  ratio 4.26
+  M=  8 ->  16  S_M= 0.25528508  |S_M-S_2M|=6.900e-04  ratio 4.07
+  M= 16 ->  32  S_M= 0.25597504  |S_M-S_2M|=1.718e-04  ratio 4.02
+A: k=1 (one difference,  s=-3), d=4
+  M=  2 ->   4  S_M= 0.26281460  |S_M-S_2M|=5.126e-03
+  M=  4 ->   8  S_M= 0.25768901  |S_M-S_2M|=1.268e-03  ratio 4.04
+  M=  8 ->  16  S_M= 0.25642143  |S_M-S_2M|=3.156e-04  ratio 4.02
+  M= 16 ->  32  S_M= 0.25610581  |S_M-S_2M|=7.882e-05  ratio 4.00
+A: scalar ghost coarse covariance C_M(K) (s=-2), d=4
+  M=  2 ->   4  S_M= 0.50083159  |S_M-S_2M|=2.198e-02
+  M=  4 ->   8  S_M= 0.47885371  |S_M-S_2M|=5.671e-03  ratio 3.88
+  M=  8 ->  16  S_M= 0.47318278  |S_M-S_2M|=1.431e-03  ratio 3.96
+  M= 16 ->  32  S_M= 0.47175199  |S_M-S_2M|=3.586e-04  ratio 3.99
+B: coupled (n,m), k=1, d=2, P != 0, squared weights
+  M=  4 ->   8  S_M= 2.18526998  |S_M-S_2M|=1.757e-02
+  M=  8 ->  16  S_M= 2.16769564  |S_M-S_2M|=4.366e-03  ratio 4.03
+  M= 16 ->  32  S_M= 2.16332978  |S_M-S_2M|=1.090e-03  ratio 4.01
+C: coupled (n,m), k=1, d=2, P != 0, exponent-1 weights
+  M=  4 ->   8  S_M= 4.56734396  |S_M-S_2M|=2.359e-02
+  M=  8 ->  16  S_M= 4.54375149  |S_M-S_2M|=5.870e-03  ratio 4.02
+  M= 16 ->  32  S_M= 4.53788180  |S_M-S_2M|=1.466e-03  ratio 4.00
+  M= 32 ->  64  S_M= 4.53641581  |S_M-S_2M|=3.664e-04  ratio 4.00

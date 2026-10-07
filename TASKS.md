@@ -379,7 +379,7 @@ linear average. Use the alias-sum lemmas of notes 47 and 58. Say whether the
 argument extends verbatim to the gauge-fixing and ghost operators.
 Done when: the bound is proved with explicit rate, or a `failed-attempt`.
 
-### T69 [proof] — assigned to Sonnet: structural form (V) for ghost and gauge-fixing vertices (note 58)
+### T69 [proof] — completed by Sonnet, 2026-10-07; reviewed by the lead: correct, conditional on the OCR readings R1-R4 and the §6.8 exclusions (unconstrained Schur terms, b^(2), wrap-around): structural form (V) for ghost and gauge-fixing vertices (note 58)
 Scope: `research/58-vertex-alias-sums.md`, a new section.
 Note 58 checks (V) for the leading gluon vertices (s = -3, -4) and lists
 the ghost and gauge-fixing vertices as open (line ~195). Write those
@@ -441,6 +441,26 @@ O(L^{-2(j-i)}) and can be absorbed. Keep the alias-sum convergence rate.
 Check numerically (eigh) for L = 2, d = 2 and 4, j <= 4.
 Done when: Theorem 2 holds for the full multi-level operator with explicit
 rate, or a `failed-attempt` names the term that is not uniform in j.
+
+### T76 [proof] — assigned to Sonnet: (I-S) along the real s-orbit by convexity (note 61 §6b)
+Scope: `research/61-3d-assembly-conditional.md`, a new §6c, plus
+`research/scripts/t76_*.py` if a constant is checked.
+Note 61 §6b's Lemma 6b.1 assumes (I-S): the step maps are analytic and obey
+Lemma G's difference inequalities on a neighbourhood of the real orbit
+{E_j^{(s)} : s ∈ [0, 1]}. T66 noted that the one-step defect T1 is an O(1)
+*relative* change of the quadratic form at high momentum, outside CMP 102's
+class (41) and outside note 63's small-perturbation lemma. But the
+interpolated density e^{sD_N}ρ_0 = ρ_0^{1-s}(Tρ_1)^s is a geometric mean of
+two genuine Balaban densities, so its quadratic form is a convex combination
+of two coercive forms. Prove that the s-interpolated data lie, uniformly in
+s ∈ [0,1] and N, in the form-norm class of notes 46, 51 and 63 (coercivity,
+mixed-norm bounds, flat-background transport (H1)), with constants no worse
+than the max over the two endpoints. Then state exactly which part of (I-S)
+remains (the higher-order analytic part along the orbit, which is the
+published (A_s)/(H2) input). Check the coercivity claim on the abelian
+Gaussian model (note 18 §8, `t7_gauss3d.py`).
+Done when: proved with explicit constants, or a `failed-attempt` naming the
+step where convexity does not suffice.
 
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
