@@ -407,7 +407,7 @@ scalar constant c identified. Check the result numerically for L = 2, 3, 4,
 Done when: the scalar (E) is proved with explicit O(1), or a `failed-attempt`
 names the shell integral that is not uniformly bounded.
 
-### T74 [proof] — assigned to Sonnet: the large-field lower bound (I-LF)(b) (note 61 §6b)
+### T74 [proof] — failed-attempt by Sonnet, 2026-10-07; reviewed by the lead: correct (absolute bound Theorem 64.1 proved; the Z-local relative form (R) is open, see T77): the large-field lower bound (I-LF)(b) (note 61 §6b)
 Scope: a new note, `research/64-large-field-lower-bound.md`, plus
 `research/scripts/t74_*.py` if a constant is checked numerically.
 T66 found that the s-analyticity of note 61 §6b needs, on each large-field
@@ -461,6 +461,22 @@ published (A_s)/(H2) input). Check the coercivity claim on the abelian
 Gaussian model (note 18 §8, `t7_gauss3d.py`).
 Done when: proved with explicit constants, or a `failed-attempt` naming the
 step where convexity does not suffice.
+
+### T77 [proof] — assigned to Sonnet: the Z-local relative bound (R) by matched Gaussian-width bounds (note 64 §6)
+Scope: `research/64-large-field-lower-bound.md`, new §7, plus `research/scripts/t77_*.py`.
+T74 proved the absolute lower bound (Theorem 64.1) but not the relative form
+(R): D_N(V) - D_N(V^Z) >= -C_- β_N A_Z(V) - e_ent |Z| log β_N. It fails
+because the 1/β-ball entropy is extensive and does not match the vacuum
+constant c_N. Carry out note 64 §6: with a collar Z⁺ ⊃ Z, prove the matched
+pair (lower bound on Tρ(V) with Gaussian-width balls, radius κβ^{-1/2},
+outside Z⁺; upper bound on Tρ(V^Z) with the same per-bond factors outside
+Z⁺), so that the extensive parts cancel with g_-/g_+ = e^{O(1)} per bond.
+Use the fibre Hessian of A_{N+1} at the constrained minimizer (CMP 102b
+Thm 1; note 63 Lemma 3 for flat coercivity; note 57 near-flat lemma). The
+bonds outside Z⁺ may be restricted to the small-field set if that is what
+the s-weights of note 61 Lemma 6b.2 actually need; say so explicitly.
+Done when: (R) is proved with explicit constants (or for the restricted
+case that Lemma 6b.2 needs), or a `failed-attempt` names the step.
 
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
