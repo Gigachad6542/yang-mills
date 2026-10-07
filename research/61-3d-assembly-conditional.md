@@ -298,3 +298,266 @@ Source: `sources/ocr/cmp119.md` (OCR; formulas partly garbled).
 This is a partial reading, not a line-by-line proof. (H4) keeps the status
 "published conditional input (asserted for d < 4 by Balaban), checked at the
 level of the inductive assumptions".
+
+### 6b. Localized s-analyticity and (H4b) (T66)
+
+**Question.** The proof of Theorem 1 differentiates the two flows along
+μ_s ∝ e^{sD_N}μ_0 (note 18 §2). Note 18 Prop. 3 gives a zero-free strip for
+the normalization Ξ(s) of width π/osc D_N, which is O(ε_N^3) because D_N is
+extensive (note 18 §8, F2). So Cauchy estimates in s on the *measure* cannot
+be uniform in N. T66 asks for a localized replacement: D_N is a sum of local
+terms with Balaban decay, so that the activities of the s-deformed expansion
+are analytic on a disc |s| <= s_0 with s_0 independent of N.
+
+**Result.** What is needed is a statement about *activities*, not about Ξ(s).
+It is proved here (Lemmas 6b.1, 6b.2) from three explicitly labelled inputs:
+(I-L) locality of D_N, (I-S) an analytic Lipschitz step map on a complex
+neighbourhood of the real s-orbit, and (I-LF) a large-field comparison. The
+unconditional claim **fails** at two terms of D_N, which CMP 102 does not
+localize: the sixth-order remainder T4 and the large-field part T5 (§6b.4).
+The classical term T1 is local only through CMP 102b (190), whose proof Balaban
+omits. So the status is **conditional reduction**, not a theorem. The deliverable
+is therefore a proof of the reduction plus a failed attempt at the unconditional
+statement, with the failing terms named.
+
+#### 6b.1 Anatomy of D_N (proved here: bookkeeping from CMP 102)
+
+Let V be the coarse configuration on Λ_N. The first step of depth N+1 is T
+applied to the Wilson density, so by CMP 102 (36), (33)-(34), (62)-(63), on the
+small-field set (|V(∂p) - 1| < ε_1 on every plaquette),
+
+    D_N(V) = c_N + T1 + T2 + T3 + T4.
+
+- **c_N**: vacuum constants (CMP 102 (62), (35)). Constant in V; drops out of
+  m_s and of every oscillation.
+- **T1 (classical).** T1(V) = β_N A_N(V) - β_{N+1} A^η(U_1(V)), where U_1(V) is
+  the minimal fine configuration with block average V (CMP 102b Thm. 1, p. 279).
+  The second part is the leading term g_1^{-2}A^η(U_1(V)) of CMP 102 (36), (41).
+- **T2 (interaction polymers).** Σ_Y 𝒫_1(Y, U_1(V)), CMP 102 (33)-(34): at least
+  second order in the loop variable B, gauge invariant (26), depending on U_1
+  only through X^5 (the localization property after (26)), analytic in U_1, with
+  no linear term (32), and bounded by (25) with 𝔏(X) the tree length and κ
+  arbitrarily large once M_1 is large.
+- **T3 (determinants).** -Σ_c log det S(U_1, b_0(c)) and the contour-integral
+  term (63) of CMP 102, expanded by the random-walk representation (3.185) of
+  CMP 99 into gauge-invariant localized terms ("with proper exponential decay").
+- **T4 (sixth-order remainder).** R_6(V), the difference between the Gaussian
+  integral and its sixth-order cumulant expansion, CMP 102 (22)-(24). CMP 102
+  bounds it only in sup norm: |R_6| <= O(g_0^7 p^{18}(g_0))|Ω_1|
+  <= O(ε^{3+κ_0})|T^{(1)}|. It is **not** written as a sum of localized terms.
+- **T5 (large fields).** If some plaquette of V is large there is no such
+  decomposition. CMP 102 gives only the bounds (5), (41): an upper bound with a
+  factor exp(-p²/4) per large plaquette (from (70)-(71)), and a lower bound (47)
+  valid **only on the small-field set χ_k**.
+
+#### 6b.2 The three inputs
+
+Let 𝔅 be the Banach space of polymer activity systems E = (E(X)), X a connected
+union of big blocks of Λ_N, with E(X) gauge invariant, depending on V|_{X^5},
+analytic on a complex polydisc 𝒟_α, with norm
+
+    ‖E‖_κ := sup_X e^{κ𝔏(X)} sup_{𝒟_α} |E(X)|
+
+(the norm of CMP 109 (1.18), as in note 51). The data of step j are measured by
+the pair (δ_j, Δ_j) of §1.
+
+**(I-L) Locality of the small-field defect.** T1+T2+T3+T4 = Σ_X d_X with
+d = (d_X) ∈ 𝔅, ‖d‖_κ <= C_D, no linear term, and F²-coefficient (note 51
+Lemma 4, in units of x_N = g_N^{-2}) |c̄(d)| <= C_D'. So Δ_0 <= C_D' ε_N, with
+y = ε_N x_N.
+
+The classical term does not contribute to c̄. At constant curvature Φ, the
+constant fine configuration with plaquette flux Φ/L² is feasible for the block
+constraint and minimizes the L² norm of the fluxes (Cauchy-Schwarz); and
+β_{N+1}·3L³·(Φ/L²)² = 3β_NΦ², the coarse value. This is the abelian/flat
+quadratic part, which is all that c̄ sees.
+
+*Source status.* T1: CMP 102b Prop. 9 with (182), (190). (190) is stated
+without proof, and note 36 §2 step 4 (holonomy, cube localization) is only
+sketched. Note 63 avoids (190) for (NA♭) but not for the exponential decay of
+δℋ/δB. T2, T3: CMP 102 (25), (33)-(34), (62)-(63), which Balaban calls "very
+sketchy" (p. 257). T4: needs an *exponentiated* expansion (CMP 122 II
+(1.92)-(1.99); note 49 §6), see §6b.4. Status: **published conditional input**
+for T1-T3, **open** for T4.
+
+**(I-S) Analytic Lipschitz step on a complex neighbourhood.** Let 𝒞_j be the real
+orbit {E_j^{(s)}: s ∈ [0,1]} and N_r(𝒞_j) its r-neighbourhood in the data norm,
+r = (r_δ, r_Δ). Every step map Φ_j is analytic on N_r(𝒞_j), and on it the
+difference inequalities (i)-(ii) of Lemma G hold with the same θ', β, γ, as
+inequalities between *differences* of two data in N_r. This is note 42's (A_s)
+(Theorem 3 bounds D_E F) together with Balaban's analyticity of the effective
+action (CMP 109 p. 270). Status: **published conditional input**, the same as
+(H2).
+
+**(I-LF) Large-field comparison.** (a) Upper side. There is c_1 ∈ (0,1] such that
+every fine configuration with block average V has β_{N+1}A^η >= c_1 β_N A_P(V)
+on the large-field plaquette set P; this is the content of CMP 102 (70)-(71),
+whose numerical constant the OCR does not preserve. Hence Tρ_1 <= e^{-c_1β_NA_P}
+up to entropy. (b) Lower side. There is C_- > 0 with
+D_N(V|_Z) >= -C_- β_N A_Z(V) - e_ent|Z| log β_N on each large-field region Z
+(the entropy is that of the fibre near an explicit extension of V). Status: (a)
+**published**; (b) is **not in CMP 102**, whose lower bound (47) holds only
+on χ_k.
+
+#### 6b.3 Lemmas
+
+**Lemma 6b.1 (volume-independent analytic neighbourhood; proved here from
+(I-L), (I-S)).** Let Λ_* := sup_N (N+1)λ^N <= 1/(eλ ln(1/λ)), assume
+4βγε_0²/L <= 1/2, and put K := 1 + Λ_*/2 + (4βε_0²/L)(C_D'/C_D),
+
+    s_0 := min{ r_δ / (K C_D),  r_Δ / (2ε_0 (C_D' + γΛ_* C_D)) }.
+
+Then for every N, every real s ∈ [0,1], every complex h with |h| <= s_0 and
+every j <= N: E_j^{(s+h)} ∈ N_r(𝒞_j); h ↦ E_j^{(s+h)} is analytic on |h| < s_0;
+and the distance (δ_j, Δ_j) between E_j^{(s+h)} and E_j^{(s)} satisfies
+
+    δ_j <= K |h| C_D,    Δ_j <= 2 |h| ε_0 (C_D' + γΛ_* C_D).
+
+At j = 0: δ_0 = |h|‖d‖_κ <= |h|C_D and Δ_0 <= |h| C_D' ε_N. None of the
+constants depends on N or on the volume.
+
+*Proof.* The initial data are E_0^{(s+h)} = E_0^{(s)} + h d: affine in h, hence
+analytic, at distance |h|‖d‖_κ in the irrelevant sector and |h||c̄(d)|ε_N in the
+marginal sector (y = ε x), by (I-L). Induct on j. Suppose E_i^{(s+h)} ∈ N_r(𝒞_i)
+for i <= j. Then N_r(𝒞_i) contains the segment from E_i^{(s)} to E_i^{(s+h)}, so
+(I-S) gives (i)-(ii) for this pair. Lemma G uses only (i)-(ii), so with
+δ_0 = |h|C_D and Δ_0 <= |h|C_D'ε_0,
+
+    M := max_i Δ_i <= 2(Δ_0 + γε_0(N+1)λ^N δ_0) <= 2|h| ε_0 (C_D' + γΛ_*C_D),
+    δ_i <= δ_0 + (2βε_0/L) M
+        <= |h| [ C_D + (4βγε_0²/L) Λ_* C_D + (4βε_0²/L) C_D' ] <= K|h|C_D,
+
+using 4βγε_0²/L <= 1/2. By the choice of s_0 both bounds are <= r, so
+E_{j+1}^{(s+h)} = Φ_j(E_j^{(s+h)}) ∈ N_r(𝒞_{j+1}). Analyticity in h is the
+composition of the analytic maps Φ_i on N_r. ∎
+
+*Why this evades Prop. 3.* Ξ(s) never appears. By note 18 Prop. 2(v),
+m_{N,s} = D_N^{(s)} = ∂_s log T^Nρ^{(s)} up to constants, and log T^Nρ^{(s)} is
+(classical term) + Σ_X E_N^{(s)}(X) + const. So m_{N,s} is the s-derivative of a
+sum of *activities*. Their radius of analyticity is set by C_D and r, not by
+osc D_N. If (I-L) is replaced by CMP 102's extensive sup bound, then C_D is
+replaced by osc D_N ~ ε_N^{-3} and s_0 ~ r/osc D_N: Prop. 3 again. Locality is
+exactly what makes C_D finite and N-independent.
+
+**Corollary 6b.1 (a): input sizes for complex s.** Under (I-L), (I-S), for
+|s| <= s_0 the s-flow starts from data of sizes δ_0 <= |s| C_D and
+Δ_0 <= |s| C_D' ε_N. So (H5) holds with C_0 := max(C_D, C_D') for complex
+|s| <= s_0, and Lemma 6b.1 with s = 0 gives, for the Wilson flow versus the
+s-flow, δ_N <= K|s|C_D and Δ_N <= 2|s|ε_0(C_D' + γΛ_*C_D). (By Theorem 1's proof,
+H3D-1 then holds with the explicit prefactor of Lemma G.)
+
+**Lemma 6b.2 ((H4b); proved here from (I-LF) and Lemma 6b.1).** Let
+s_0^{LF} := min{ c_1/(2(1-c_1)) [∞ if c_1 = 1],  1/(2C_-) },
+s_1 := min(s_0, s_0^{LF}). Let s = σ + iς with dist(s,[0,1]) < s_0^{LF}. Since D_N is
+real, |e^{sD_N}ρ_0| = ρ_0 e^{σD_N}, so on a large-field region Z with large-field
+plaquette set P:
+
+- σ ∈ [0,1]: the weight is the geometric mean ρ_0^{1-σ}(Tρ_1)^σ, which is
+  <= e^{-c_1β_NA_P} (both factors are, by (I-LF)(a); entropy aside);
+- σ = 1 + τ, τ > 0: <= exp(-β_NA_P (c_1 - τ(1-c_1)));
+- σ = -τ < 0: <= exp(-β_NA_P (1 - τC_-) + τ e_ent|Z| log β_N).
+
+On each side (|τ| <= s_0^{LF}) the exponent is at least (c_1/2)β_NA_P minus entropy, and this
+beats ε_k^q for every q: p²(g_k) ~ (log ε_k^{-1})^{2p_0} dominates log β_N (note
+49 §5; CMP 122 II (1.81)-(1.82)). Hence, if the large-field activities satisfy
+|𝒜_k^{(s')}(Z)| <= C_LF ε_k^q e^{-κ d(Z)} on dist(s',[0,1]) <= s_1, then for real
+s ∈ [0,1], by Cauchy on the disc of radius s_1,
+
+    |∂_s 𝒜_k^{(s)}(Z)| <= C_LF ε_k^q e^{-κ d(Z)} / s_1.
+
+Summing over polymers Z meeting a block (KP counting, κ >= 4c_d, note 49 §6) and
+over the (n_0L^j)³ = n_0³ε_0³ε_k^{-3} blocks of scale k = N - j,
+
+    Σ_Z |∂_s 𝒜_k^{(s)}(Z)| <= C n_0³ ε_0³ C_LF ε_k^{q-3} / s_1.
+
+This is (H4b); q >= 4 makes the correction to θ' in (H4) decay. ∎
+
+The hypothesis on the large-field activities for complex s' is the persistence
+of Balaban's large-field estimate under the weight bounds above (CMP 119 Sect. 2
+at d = 3, §6a). It is part of (H4), not new.
+
+#### 6b.4 Where the unconditional claim fails
+
+1. **T4, the sixth-order remainder (CMP 102 (22)-(24)).** CMP 102 truncates the
+   cumulant expansion at sixth order and bounds the rest by an extensive sup norm
+   O(g_0^7 p^{18})|Ω_1|. A function known only to be bounded by |Ω_1|ε^{3.5} has
+   s-derivative bounded only by the same extensive quantity (Cauchy in s on the
+   whole remainder): Prop. 3's problem again. Localization needs R_6 as
+   Σ_X r_X with e^{-κ'𝔏(X)} decay, i.e. an exponentiated cluster expansion of the
+   fluctuation integral. CMP 102 does not contain one. Balaban proves such a
+   statement in CMP 122 II (1.92)-(1.99), |R'(X)| <= O(1)c_1 exp(-(1+β/2)κ d_k(X))
+   (note 49 §6), written for d = 4 with the R-operation; its d = 3 reading is the
+   open reading of §6a. So (I-L) for T4 is **open**, and equivalent in content
+   to (H4).
+2. **T1, the classical term.** Its locality is the exponential decay of
+   δℋ/δB, CMP 102b (190), "proof omitted". Prop. 9 is stated for coarse fields
+   that are small globally in one gauge; on the torus with holonomy it needs the
+   flat-background replacement of note 36 §2, not carried out. The naive
+   localization "freeze V outside an r-neighbourhood" fails: in an axial gauge the
+   bond variables at distance r are O(rε_1), not small, so the patched
+   configuration need not lie in the small-field domain of Thm. 1. Status:
+   published conditional on (190).
+3. **T5, the lower side of (I-LF).** For complex s with Re s < 0 one needs a
+   *lower* bound for Tρ_1 on large-field V, D_N >= -C_-β_NA - .... Without it the
+   published bounds do not control the real tangent uniformly in N (at fixed
+   N, D_N is bounded, note 18 §3; the issue is uniformity): for s -> 0 the quantity
+   |D_N|ρ^{(s)} = ρ_0^{1-s}(Tρ_1)^s log(ρ_0/Tρ_1) is only O(ρ_0/s) (sup of
+   t^s log(1/t) is 1/(es)), and ∫_0 ds/s diverges. CMP 102 (47) is a lower bound
+   on χ_k only, and note 53's lower bound is at fixed N, not uniform. So a
+   neighbourhood of s = 0 that includes Re s < 0 is not available for
+   large-field activities. The endpoint derivative at s = 0 is the weak point of
+   (H4b). The side Re s > 1 uses only the published upper bounds.
+4. **Relative size of T1.** T1 is not a g²-small perturbation of the Wilson
+   action: the one-step defect is an O(1) relative change of the quadratic form at
+   high momentum (note 18 §8(c), F2). The class (41) of CMP 102 has irrelevant
+   terms with O(1) coefficients against the leading g^{-2} (relative g²), so sT1
+   lies outside it in the sup norm. It lies inside the *form-norm* framework of
+   notes 43-46, 51 (relative O(1) allowed). Hence (I-S) is an assumption about the
+   step map in that framework; note 63's constrained-minimizer perturbation lemma
+   covers only perturbations small relative to the energy.
+
+#### 6b.5 Gaussian check: the disc is N-independent (computation)
+
+In the abelian Gaussian model of note 18 §8, the one-step defect is a quadratic
+form. For transverse flux at terminal momentum K, the Wilson precision is 1 and
+the once-blocked precision is r(K) = 1/λ(C_L(K)), where C_L is the covariance of
+§8(b) with M = L, restricted to the transverse eigenspace of C_1. The s-deformed
+precision is 1 + s(r(K) - 1), so Ξ(s) is a product over modes of
+(1 + s(r(K) - 1))^{-1/2} (degeneracy aside). Since r depends only on L (scale
+covariance in 3D, units g²ε_0 = 1), Ξ(s) is zero-free on |s| < 1/(r_max - 1) for
+**every** N and every volume, and the disc cannot be enlarged: the factor vanishes
+at s = -1/(r_max - 1). Evaluation with `terminal_cov` of `research/scripts/t7_gauss3d.py` over all
+nonzero K of the grid, by `research/scripts/t66_gauss_disc.py` (output `.out`;
+r_max is a grid maximum; the lead reproduced the table exactly):
+
+| L | grid n_0 | min r | max r | 1/(max r - 1) |
+|---|---|---|---|---|
+| 2 | 16 | 1.019 | 4.000 | 0.333 |
+| 3 | 12 | 1.041 | 6.276 | 0.190 |
+| 4 | 8 | 1.101 | 7.662 | 0.150 |
+
+(i) A volume- and N-independent disc exists for the Gaussian s-flow, whereas
+Prop. 3 gives a strip O(ε_N³): the locality mechanism is real. (ii) The
+singularity is on the side Re s < 0 (r > 1), the disc shrinks with L, and it is
+set by the high-momentum modes where D_N is O(1) relative. This is the same
+endpoint s = 0 that item 3 above identifies as the weak point in the nonlinear
+problem. The model has unbounded fields, no large fields and no non-abelian
+structure, so it checks the mechanism only.
+
+#### 6b.6 Verdict and next step
+
+- **Proved here:** the decomposition T1-T5 of D_N with sources (§6b.1); Lemma 6b.1
+  (explicit N- and volume-independent s_0 and input sizes, given (I-L), (I-S));
+  Lemma 6b.2 (complex-s large-field weights and the Cauchy bound (H4b), given
+  (I-LF) and the large-field activity bound); the Gaussian N-independent disc.
+- **Published conditional input:** (I-L) for T1-T3 (CMP 102b (190); CMP 102 (25),
+  (33)-(34), (62)-(63); CMP 99 (3.185)); (I-S) (note 42 (A_s)); (I-LF)(a)
+  (CMP 102 (70)-(71)).
+- **Open:** (I-L) for T4 (a first-step exponentiated expansion, CMP 122 II
+  (1.92)-(1.99) at d = 3); (I-LF)(b), a large-field lower bound for Tρ_1.
+- So (H4b) and the complex-s form of (H5) are **conditional reductions** to
+  (H4) plus (I-LF)(b), not proved. Next concrete step: prove
+  D_N >= -C_-β_NA_Z - e_ent|Z|log β_N by an explicit block extension of V (for
+  SU(2), using the surjectivity and fibre-volume estimates of note 53), and
+  state the first-step expansion of CMP 122 II for the Wilson initial density at
+  d = 3 to localize T4.

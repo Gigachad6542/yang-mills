@@ -339,7 +339,7 @@ two sketched items of H0 ((E) and two-scale (O1)).
 **Codex priority (overrides earlier orderings): T55 (claimed), T71, T72, T53,
 T54.** T71-T72 need the page images in `sources/papers/` on Daniel's Mac.
 
-### T66 [proof] — assigned to Sonnet: localized s-analyticity and (H4b) (note 61)
+### T66 [proof] — failed-attempt by Sonnet, 2026-10-07; reviewed by the lead: correct (Gaussian table reproduced by `t66_gauss_disc.py`; one overstatement in §6b.4 item 3 softened): localized s-analyticity and (H4b) (note 61)
 Scope: `research/61-3d-assembly-conditional.md`, a new §6b only.
 The proof of note 61 Theorem 1 differentiates the two flows along
 μ_s = e^{sD_N} μ_0 / Ξ(s) (note 18 §2). Note 18 Prop. 3 shows the global
@@ -407,6 +407,26 @@ scalar constant c identified. Check the result numerically for L = 2, 3, 4,
 Done when: the scalar (E) is proved with explicit O(1), or a `failed-attempt`
 names the shell integral that is not uniformly bounded.
 
+### T74 [proof] — assigned to Sonnet: the large-field lower bound (I-LF)(b) (note 61 §6b)
+Scope: a new note, `research/64-large-field-lower-bound.md`, plus
+`research/scripts/t74_*.py` if a constant is checked numerically.
+T66 found that the s-analyticity of note 61 §6b needs, on each large-field
+region Z of the coarse configuration V, a lower bound uniform in N:
+
+    D_N(V) >= -C_- β_N A_Z(V) - e_ent |Z| log β_N   (locally on Z),
+
+where D_N = log(Tρ^{(N+1)}/ρ^{(N)}) (note 18), 3D SU(2), Wilson action,
+β_{N+1} = L β_N, and T is Balaban's average (CMP 98 (42)). CMP 102's lower
+bound (47) covers only the small-field set. Prove the bound directly: build an
+explicit fine extension U_ext(V) of V (for example by note 53's private-link
+structure, spreading each coarse holonomy over the L² fine plaquettes), bound
+β_{N+1} A(U_ext) by C β_N A(V) plus a per-block constant, and lower-bound the
+Haar volume of a neighbourhood of U_ext in the fibre with note 53's Jacobian
+bound c_L. State C_-, e_ent explicitly. Say whether the bound is local (each
+term depends on V near Z only).
+Done when: proved with explicit constants, or a `failed-attempt` naming the
+step (e.g. the extension's action for large holonomies) that fails.
+
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
 T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
@@ -422,7 +442,9 @@ Scope: `research/49-t2r-rooted-lemma.md` §6 and `research/61-3d-assembly-condit
 From the page images, check that Balaban's domain factors (1.79)-(1.89) and
 the final activity bound (1.97)-(1.99) hold at d = 3 when the R-operation is
 the identity, so that note 49's rooted KP lemma gives (H4a). List each
-inequality used, with its d-dependence.
+inequality used, with its d-dependence. Also (added after T66): say whether
+the exponentiated expansion (1.92)-(1.99) at d = 3 localizes CMP 102's
+sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: both notes have the list and a one-line verdict. Commit `[T72][fix]`.
 
 ## Lead (Claude): in progress
