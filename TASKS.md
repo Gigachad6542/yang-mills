@@ -1,6 +1,6 @@
 # Task board
 
-Owner: the lead (Claude; lead returned by Daniel on 2026-09-29, 14:31 PDT). The rules are in `AGENTS.md`. Take the
+Owner: the lead (Claude, session "Yang Mills research loop setup", appointed by Daniel on 2026-10-07). The rules are in `AGENTS.md`. Take the
 lowest-numbered unclaimed task assigned to you.
 
 ## Infrastructure
@@ -329,6 +329,84 @@ around (`sources/ocr/cmp99prop.md`, `cmp99regular.md`). Check that:
   derivative, which is what the Schur step of note 45 needs.
 Done when: the three checks, with equation numbers, and a verdict are in
 note 54 §4. Commit `[T64][fix]` plus one PROGRESS line.
+
+## Round 2026-10-07 (lead: "Yang Mills research loop setup")
+
+Goal of the round: turn M1-3D from a conditional reduction into a theorem
+whose only inputs are published statements read line by line, and close the
+two sketched items of H0 ((E) and two-scale (O1)).
+
+**Codex priority (overrides earlier orderings): T55 (claimed), T71, T72, T53,
+T54.** T71-T72 need the page images in `sources/papers/` on Daniel's Mac.
+
+### T66 [proof] — assigned to Sonnet: localized s-analyticity and (H4b) (note 61)
+Scope: `research/61-3d-assembly-conditional.md`, a new §6b only.
+The proof of note 61 Theorem 1 differentiates the two flows along
+μ_s = e^{sD_N} μ_0 / Ξ(s) (note 18 §2). Note 18 Prop. 3 shows the global
+zero-free strip in s has width π/osc D_N, which shrinks with the volume, so
+Cauchy estimates in s cannot be taken globally. Prove that D_N (note 18 §8,
+F2: the one-step defect) is a sum Σ_X d_X of local terms with Balaban-type
+decay, so that every polymer activity of the s-deformed CMP 102 expansion is
+analytic in a disc |s| <= s_0 with s_0 independent of N. Deduce, with
+constants: (a) the input sizes δ_0 <= C_0, Δ_0 <= C_0 ε_N of (H5) for
+complex |s| <= s_0; (b) the influence bound (H4b) for large-field activities.
+If D_N is not local in this sense, write a `failed-attempt` naming the term.
+Done when: §6b has the lemma with proof (or the failed attempt).
+
+### T67 [proof] — assigned to Sonnet: the edge bound (E) (note 50 Lemma 2)
+Scope: `research/50-sum-rule-from-multiplicativity.md` §2 only.
+Replace the sketch of Lemma 2, β_∞^0(L) = 2b_0 log L + O(1) uniformly in L,
+by a proof. Write the propagator of the limit step as G_0 + (UV edge) +
+(IR edge), with the IR edge the W^T C^{-1} W term (notes 47-48), and prove
+the stated power-law bounds on both edges. Then show that the edge
+contributions to the p² coefficient are O(1) uniformly in L, and that the
+window contribution is 2b_0 log L + O(1). The vertex algebra may be quoted
+from a standard background-field reference, stated in the form used. Also
+prove the bound for the n-step composites uniformly in n, which is what
+Prop. 3 assumes.
+Done when: Lemma 2 is proved with an explicit O(1) dependence, or a
+`failed-attempt` names the integral that is not uniformly bounded.
+
+### T68 [proof] — assigned to Sonnet: two-scale (O1) (note 41, item 3)
+Scope: `research/41-free-increments-convergence.md`, a new section.
+Note 41 states, without proof, that the Laplacian, gauge-fixing and ghost
+operators on the fine lattice of step j converge at rate L^{-j} on the range
+where G_j smooths. Work with the induced coarse-lattice kernels (no common
+continuum space needed). Prove a two-scale (O1): a bound on the induced
+kernel of G_j (K_j - K_∞) in the exponentially weighted norm of note 41,
+with rate C L^{-j}, for the free abelian (Gaussian) step with Balaban's
+linear average. Use the alias-sum lemmas of notes 47 and 58. Say whether the
+argument extends verbatim to the gauge-fixing and ghost operators.
+Done when: the bound is proved with explicit rate, or a `failed-attempt`.
+
+### T69 [proof] — assigned to Sonnet: structural form (V) for ghost and gauge-fixing vertices (note 58)
+Scope: `research/58-vertex-alias-sums.md`, a new section.
+Note 58 checks (V) for the leading gluon vertices (s = -3, -4) and lists
+the ghost and gauge-fixing vertices as open (line ~195). Write those
+vertices in Balaban's gauge-fixed background-field scheme (CMP 99, CMP 109;
+`sources/ocr/`), expand them in the background to second order, and check
+(V) with explicit growth exponents s < 1, so that Lemma A / A2 applies.
+The covariant-average terms are out of scope.
+Done when: (V) is verified for both families with stated s, or a
+`failed-attempt` names the vertex whose growth exponent is >= 1.
+
+### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
+Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
+T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
+(k+1)-st step), whose OCR is unreadable. Read Sect. 3 from the page images
+in `sources/papers/`. For each estimate, with equation number, say whether
+it holds at d = 3 with R = identity, or what changes (powers of L, ε
+exponents, entropy). Then state the resulting localized large-field
+activity bound in the form |activity(X)| <= C ε_j^q e^{-κ d(X)}.
+Done when: §6a has the list and a one-line verdict. Commit `[T71][fix]`.
+
+### T72 [fix] — assigned to Codex: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
+Scope: `research/49-t2r-rooted-lemma.md` §6 and `research/61-3d-assembly-conditional.md` §6a (append).
+From the page images, check that Balaban's domain factors (1.79)-(1.89) and
+the final activity bound (1.97)-(1.99) hold at d = 3 when the R-operation is
+the identity, so that note 49's rooted KP lemma gives (H4a). List each
+inequality used, with its d-dependence.
+Done when: both notes have the list and a one-line verdict. Commit `[T72][fix]`.
 
 ## Lead (Claude): in progress
 

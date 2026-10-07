@@ -5,13 +5,17 @@ Effective 2026-09-28. These rules override earlier arrangements in
 
 ## Roles
 
-- **Lead:** Claude (Anthropic), Claude Code session "Recent project review
-  with Codex". Daniel appointed Claude on 2026-09-28, handed the lead to
+- **Lead:** Claude (Anthropic), Claude Code cloud session "Yang Mills research
+  loop setup". Daniel appointed Claude on 2026-09-28, handed the lead to
   Codex on 2026-09-29 while Claude was out of usage, and returned it to
-  Claude on 2026-09-29 at 14:31 PDT. The lead owns `TASKS.md`, sets
-  priorities, integrates deliverables, and is the only reviewer.
-- **Workers:** Codex, subagents dispatched by Codex for a task it owns, and
-  any other agent Daniel starts here. Workers take work only from
+  Claude on 2026-09-29 at 14:31 PDT (session "Recent project review with
+  Codex"). On 2026-10-07 Daniel moved the lead to the session "Yang Mills
+  research loop setup", which runs a self-paced research loop. The lead owns
+  `TASKS.md`, sets priorities, integrates deliverables, and is the only
+  reviewer.
+- **Workers:** Codex, subagents dispatched by Codex for a task it owns,
+  Claude Sonnet subagents dispatched by the lead (see "Sonnet workers"
+  below), and any other agent Daniel starts here. Workers take work only from
   `TASKS.md`. A worker finishes the tasks it has already claimed before
   taking new ones.
 - If the lead is unavailable for a long time, Daniel may appoint Codex as
@@ -78,6 +82,19 @@ is not acceptable. Every rule below exists to prevent that.
   enforced.
 - `sources/text/` and `sources/ocr/` are committed only because the
   repository is private (see `sources/README.md`).
+
+## Sonnet workers (from 2026-10-07)
+
+- The lead dispatches Claude Sonnet subagents in the cloud session, one per
+  task marked `assigned to Sonnet` in `TASKS.md`. Each works in its own git
+  worktree and branch, commits its deliverable there with the rule-5 subject,
+  and does **not** edit `TASKS.md` or `PROGRESS.md` (the lead does, to avoid
+  conflicts). It ends with a report: kind, result, and a draft PROGRESS line.
+- The lead reviews the deliverable once, for correctness, then cherry-picks it
+  onto `main` and pushes.
+- Codex keeps taking tasks marked `assigned to Codex` from `TASKS.md` on
+  `main`. `TASKS.md`, `PROGRESS.md` and the commit log are the only channel
+  between agents; the `CODEX_TO_CLAUDE*` / `CLAUDE_TO_CODEX` files stay retired.
 
 ## Build
 
