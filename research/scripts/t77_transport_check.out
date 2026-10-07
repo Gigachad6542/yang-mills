@@ -1,0 +1,33 @@
+[Part 1] covariance Phi_{RY}(RX) = R Phi_Y(X), J invariance
+  max |R Phi_Y(X) - Phi_RY(RX)| = 5.6e-16; max relative |J_Y(X) - J_RY(RX)| = 2.9e-09
+
+[Parts 2,3, L=2] coarse side 3, sigma = 0.02
+  trial 0: max|q(U)-Vt| = 5.4e-14; max|q(T U) - R Vt| = 5.4e-14  (|Z| = 4 bonds, mu = 2)
+    type A: max identity defect = 5.6e-16; max [A(h') - (d(M,1)+d(N,1))^2/2] = 0.0e+00 (<= 0)
+    fine action after T: 155.9825 (before: 138.9526); L * A_N(V) = 47.5832; difference (fine - L A_N(V)) = 108.3994
+    corner (30 fine corner plaquettes): chain identity defect 8.9e-16; max [A(h')-A(h) - RHS(eta=1/2)] = -2.750e+00 (<= 0)
+    all changed plaquettes: sum_A + sum_corner = 17.0299491591; A(T U) - A(U) = 17.0299491591
+  trial 1: max|q(U)-Vt| = 6.9e-14; max|q(T U) - R Vt| = 6.9e-14  (|Z| = 4 bonds, mu = 2)
+    type A: max identity defect = 7.8e-16; max [A(h') - (d(M,1)+d(N,1))^2/2] = 0.0e+00 (<= 0)
+    fine action after T: 144.8039 (before: 128.8785); L * A_N(V) = 41.1001; difference (fine - L A_N(V)) = 103.7038
+    corner (30 fine corner plaquettes): chain identity defect 1.2e-15; max [A(h')-A(h) - RHS(eta=1/2)] = -1.694e+00 (<= 0)
+    all changed plaquettes: sum_A + sum_corner = 15.9254286396; A(T U) - A(U) = 15.9254286396
+
+[Parts 2,3, L=3] coarse side 3, sigma = 0.01
+  trial 0: max|q(U)-Vt| = 5.7e-14; max|q(T U) - R Vt| = 5.7e-14  (|Z| = 4 bonds, mu = 2)
+    type A: max identity defect = 1.2e-15; max [A(h') - (d(M,1)+d(N,1))^2/2] = 0.0e+00 (<= 0)
+    fine action after T: 328.9394 (before: 293.2236); L * A_N(V) = 78.0318; difference (fine - L A_N(V)) = 250.9076
+    corner (45 fine corner plaquettes): chain identity defect 1.3e-15; max [A(h')-A(h) - RHS(eta=1/2)] = -2.112e+00 (<= 0)
+    all changed plaquettes: sum_A + sum_corner = 35.7157582430; A(T U) - A(U) = 35.7157582430
+
+[Part 4, L=2] mu NOT the last axis: reference path t = 0
+  mu = 0: |q(T U) - R| at the modified bond = 2.06e-02
+  mu = 1: |q(T U) - R| at the modified bond = 1.20e-02
+  mu = 2: |q(T U) - R| at the modified bond = 2.48e-16
+  (mu = 2 is exact; mu = 0, 1 are not: the Y_x sharing one crossing link have different a_x.)
+
+[Part 4, L=3] mu NOT the last axis: reference path t = 0
+  mu = 0: |q(T U) - R| at the modified bond = 1.50e-02
+  mu = 1: |q(T U) - R| at the modified bond = 1.29e-02
+  mu = 2: |q(T U) - R| at the modified bond = 1.00e-15
+  (mu = 2 is exact; mu = 0, 1 are not: the Y_x sharing one crossing link have different a_x.)

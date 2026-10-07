@@ -18,6 +18,10 @@ Status:
   **extensive** constant n_c·3(L³-1) log β_{N+1} that is not comparable with
   the vacuum constant c_N of CMP 102. Section 5 names the step that fails and
   the next concrete step.
+- **Update (T77, §7).** For Z in the last axis, (R) is reduced to an
+  equipartition bound (EQ) on local loops under the fibre Gibbs measure, via an
+  exact transport identity (Theorem 64.2). (EQ) is not proved. The claim in §5
+  that local transport fails is corrected in §7.
 
 Script: `research/scripts/t74_extension_check.py`, output
 `research/scripts/t74_extension_check.out`. Every number below is printed
@@ -287,3 +291,302 @@ above, and e_ent can be lowered to (3/2)(L³-1) per bond of Z.
 
 Status labels: Theorem 64.1: **proved here**. (R): **open** (target). Note 61 §6b.2 (I-LF)(b): **not discharged**;
 only its absolute form is.
+
+## 7. T77: exact left-translation transport; (R) reduced to an equipartition bound (failed-attempt at the last step)
+
+Script: `research/scripts/t77_transport_check.py`, output
+`research/scripts/t77_transport_check.out`. Every number below is printed
+there.
+
+**Status.**
+
+- **Proved here:** Lemma 64.4, Lemma 64.5a, Theorem 64.2 (an exact identity for
+  Tρ(V)/Tρ(V^Z)), Lemma 64.5 (the changed fine plaquettes and their bounds),
+  Proposition 64.3 ((R) with C_- = (1+η)L² - 1, **given** the bound (EQ)
+  below), Lemma 64.6 (log-convexity bound on local plaquette energies). All of
+  it is for sets Z of coarse bonds in the **last axis** direction only (axis 3,
+  the last axis in the contour order of CMP 95 (1.7)).
+- **Not proved (the failed steps):** (EQ), an a priori bound on the Gibbs
+  measure of the fibre over V^Z; and the extension to bonds in axes 1, 2.
+- **Correction to §5.** The paragraph "The natural local-transport argument
+  also fails" is wrong about the obstacle. The fibre over V is *exactly* the
+  image of the fibre over V^Z under an explicit Haar-preserving map that
+  changes only the crossing links of Z. The spread of the Y's is not an
+  obstruction: the map sends Y to RY. No collar, no Hessian and no
+  Gaussian-width ball is needed for the reduction, and the matched pair of §6
+  is not the route. What remains is a bound on fluctuations of *local loops*
+  under the Gibbs measure of the fibre.
+
+No Balaban input is used in §7. It rests on note 53 Lemma 1 and the definition
+CMP 98 (42) only.
+
+### 7.1 Structure of Y for a last-axis bond
+
+Let c = (y, μ) with μ the last axis (index 3). For a transverse offset
+ξ ∈ {0,..,L-1}² (coordinates in the two other axes), the crossing link
+u_{c,ξ} is the μ-link from y + ξ + (L-1)e_μ to y + ξ + L e_μ. The link with
+ξ = 0 is the private link b*_c. Let a_{c,ξ} be the in-block path from y along
+axes 1, 2 (contour order) to y + ξ, then along μ to y + ξ + (L-1)e_μ. Let
+a'_{c,ξ} be the in-block path from the head y + ξ + L e_μ back to y + L e_μ
+(axis 2, then axis 1, reversed). For ξ = 0, a_{c,0} = W_c and a'_{c,0} is empty.
+
+**Lemma 64.4.** For x ∈ S of transverse offset ξ ≠ 0 and any μ-coordinate t,
+Y_{c,x} = a_{c,ξ} u_{c,ξ} a'_{c,ξ}. Put Y_{c,0} := X_c = W_c b*_c. Then for
+every ξ, u_{c,ξ} = a_{c,ξ}^{-1} Y_{c,ξ} a'_{c,ξ}^{-1}.
+
+*Proof.* With μ last, γ(y,x) runs along axes 1, 2 to the transverse position
+and then along μ from 0 to t. The straight segment [x, x+Le_μ] continues the
+μ-run from t to L-1, crosses at u_{c,ξ}, and runs t more steps. The return
+path γ(y', x+Le_μ) reversed first undoes these t steps and then runs along
+axes 2, 1 back to y'. The t steps cancel in the group product. ∎
+
+So the Y_{c,x} that share a crossing link are equal, as note 53 §1 says for
+this case. (For μ = 1 or 2 the paths differ; see §7.5.)
+
+### 7.2 The transport map and the exact identity
+
+Let Z be a set of coarse bonds in the last axis, R = (R_c)_{c∈Z} ⊂ SU(2),
+V^Z as in §5 (V^Z_c = 1 for c ∈ Z, V_c otherwise), so V_c = R_c V^Z_c with
+R_c = V_c on Z and R_c = 1 off Z. Define 𝒯_R on Ω_{N+1}: for c ∈ Z and every
+ξ (private link included)
+
+    u_{c,ξ}  ->  a_{c,ξ}^{-1} R_c a_{c,ξ} u_{c,ξ},
+
+all other links fixed.
+
+**Lemma 64.5a.** (i) 𝒯_R is a bijection of Ω_{N+1} preserving Haar measure;
+its inverse is 𝒯_{R^{-1}}. (ii) For every U and every coarse bond c,
+q(𝒯_R U)_c = R_c q(U)_c.
+
+*Proof.* (i) The paths a_{c,ξ} contain in-block links only, which 𝒯_R does not
+change, so each modified link is left-multiplied by an element that does not
+depend on any modified link. A triangular left translation preserves the
+product Haar measure. (ii) For c ∈ Z, Lemma 64.4 gives Y'_{c,ξ} =
+a (a^{-1} R a u) a' = R Y_{c,ξ}, including X'_c = W_c (W_c^{-1} R_c W_c b) =
+R_c X_c. Covariance: Log(R Y X^{-1} R^{-1}) = Ad_R Log(Y X^{-1}), so
+Φ_{RY}(RX) = R Φ_Y(X). For c ∉ Z, Y_{c,x} and X_c involve only in-block links
+and the crossing links of c itself (note 53 Lemma 1), none modified. ∎
+
+*Check (script, Parts 1-2).* max |R Φ_Y(X) - Φ_{RY}(RX)| = 5.6e-16 over 300
+random cases; max relative |J_Y(X) - J_{RY}(RX)| = 2.9e-9. On a 3³ coarse torus
+with L = 2, 3, fine links exp(iσ g·σ) (σ = 0.02, 0.01), private links solved so
+that q(U) = Ṽ for random near-1 coarse values Ṽ: after 𝒯_R on four last-axis
+bonds with Haar R_c, max |q(𝒯_R U) - R Ṽ| = 5.4e-14, 6.9e-14 (L = 2), 5.7e-14
+(L = 3).
+
+**Theorem 64.2 (exact transport identity; proved here).** For Z and R as above
+and a.e. V,
+
+    Tρ^{(N+1)}(V) / Tρ^{(N+1)}(V^Z) = E_{μ_{V^Z}} [ exp( -β_{N+1} ( A_{N+1}(𝒯_R U) - A_{N+1}(U) ) ) ],
+
+where μ_{V'} is the conditional law of the Wilson Gibbs measure
+e^{-β_{N+1}A_{N+1}} dU given q(U) = V'. Consequently, with
+ΔA := A_{N+1}(𝒯_R U) - A_{N+1}(U),
+
+    D_N(V) - D_N(V^Z) = β_N (A_N(V) - A_N(V^Z)) + log E_{μ_{V^Z}}[ e^{-β_{N+1} ΔA} ]
+                       >= β_N (A_N(V) - A_N(V^Z)) - β_{N+1} E_{μ_{V^Z}}[ ΔA ].        (7.1)
+
+*Proof.* For a test function f on Ω_N, substituting U -> 𝒯_R U (Lemma
+64.5a(i)) and then using (ii),
+
+    ∫ f(qU) ρ(U) dU = ∫ f(R·qU) ρ(𝒯_R U) dU,
+
+where R· acts by V'_c -> R_c V'_c, which preserves Haar measure on Ω_N. So
+Tρ(V) = T(ρ∘𝒯_R)(R^{-1}V) = T(ρ∘𝒯_R)(V^Z). Write ρ∘𝒯_R = ρ · g with g =
+e^{-β_{N+1}ΔA} (E_{N+1} cancels). T(ρ g) = Tρ · (conditional expectation of g
+under the fibre law). The second line is D_N = log Tρ + β_N A_N + E_N and
+Jensen. ∎
+
+Tρ(V^Z) > 0 for every V^Z by Theorem 64.1, so the ratio is defined. No
+Jacobian, degree count or existence statement for Φ_Y is used: the fibre over
+V is the image of the fibre over V^Z, point by point.
+
+### 7.3 The changed plaquettes
+
+A fine plaquette changes only if it contains a crossing link of a bond in Z.
+In d = 3 these are of two kinds (the classification of Lemma 64.1(ii)):
+
+- **Type A:** two crossing links u_1 = u_{c,ξ}, u_2 = u_{c,ξ'} of the same bond
+  (ξ' = ξ + e_ν) and two in-block ν-links, ν_1 in B(y), ν_2 in B(y + Le_μ):
+  h = u_1 ν_2 u_2^{-1} ν_1^{-1}.
+- **Corner:** the L fine plaquettes (third-axis position r = 0..L-1) of each
+  coarse plaquette p touching Z; four crossing links of the bonds
+  c_1 = (y,μ), c_2 = (y+Le_μ, ν), c_3 = (y+Le_ν, μ), c_4 = (y,ν), and
+  h = u_1 u_2 u_3^{-1} u_4^{-1}.
+
+*Check (script, Part 3).* On the sampled configurations ΔA equals the sum of
+the type-A and corner differences to 1e-9 (17.0299491591 = 17.0299491591;
+15.9254286396 = 15.9254286396; 35.7157582430 = 35.7157582430), so there are
+no other changed plaquettes.
+
+Write A(g) = 1 - (1/2) tr g = 1 - cos d(g,1). For a closed lattice path ℓ let
+|ℓ| := d(hol ℓ, 1).
+
+**Lemma 64.5.** Let U be any fine configuration with q(U) = V^Z.
+
+(a) For a type-A plaquette define the closed loops at y
+
+    M = a_1 u_1 ν_2 u_2^{-1} a_2^{-1},    N = a_2 ν_1^{-1} a_1^{-1}
+
+(a_i := a_{c,ξ_i}, ξ_1 = ξ, ξ_2 = ξ'). Then a_1 h a_1^{-1} = MN,
+a_1 h' a_1^{-1} = R_c M R_c^{-1} N, and
+A(h') - A(h) <= A(h') <= (|M| + |N|)²/2 <= |M|² + |N|².
+
+(b) For a corner plaquette let Y_i := Y_{c_i,ξ_i}, Ṽ_i := V^Z_{c_i} = q(U)_{c_i},
+V_i = R_i Ṽ_i, and let Λ_1, Λ_2, Λ_24, Λ_3 be the four in-block loops (at the
+corners y, y+Le_μ, y+L(e_μ+e_ν), y+Le_ν)
+
+    Λ_2^{-1} = a'_1^{-1} a_2^{-1},  Λ_24 = a'_2^{-1} a'_3,  Λ_3 = a_3 a'_4,  Λ_1 = a_4 a_1^{-1}
+
+(a_i, a'_i the paths of the i-th crossing link). Then
+a_1 h a_1^{-1} = Y_1 Λ_2^{-1} Y_2 Λ_24 Y_3^{-1} Λ_3 Y_4^{-1} Λ_1, and h' is the
+same product with every Y_i replaced by R_i Y_i. With
+κ_c := max_{x∈S} |Y_{c,x} X_c^{-1}|,
+
+    d(Y_i, Ṽ_i) <= (2-ε) κ_{c_i},    δ := Σ_i 2κ_{c_i} + Σ_j |Λ_j|,
+
+and for every η ∈ (0,1]
+
+    A(h') - A(h) <= (1+η) A(V(∂p)) - (1-η) A(V^Z(∂p)) + (1 + 1/η) δ²,
+
+with δ² <= 32 Σ_i κ_{c_i}² + 8 Σ_j |Λ_j|².
+
+*Proof.* (a) Conjugate h' by a_1 and use a_1 G_1 = R a_1, G_2^{-1} a_2^{-1} =
+a_2^{-1} R^{-1} (G_i = a_i^{-1} R a_i), u'_i = G_i u_i. For the bound:
+d(R M R^{-1} N, 1) <= |M| + |N| by bi-invariance, and 1 - cos θ <= θ²/2.
+(b) The chain is u_i = a_i^{-1} Y_i a'_i{}^{-1} multiplied out; each junction is
+a loop inside one block. The replacement Y_i -> R_i Y_i is what 𝒯_R does. Next
+Ṽ_i = e^{w} X with w = Σ p_j Log(Y_j X^{-1}) and |w| <= (1-ε)κ, so
+d(Y_i, Ṽ_i) <= d(Y_i, X) + |w| <= (2-ε)κ (for the private position Y = X,
+and the distance is |w|). In H' = (R_1Y_1) Λ_2^{-1} (R_2Y_2) Λ_24 (R_3Y_3)^{-1}
+Λ_3 (R_4Y_4)^{-1} Λ_1 replace each Y_i by Ṽ_i and each Λ_j by 1: the result is
+V_1V_2V_3^{-1}V_4^{-1} = V(∂p), at distance <= δ (bi-invariance, subadditivity
+of d). The same replacement in H gives V^Z(∂p), also at distance <= δ. For
+θ = d(g,1), θ' = d(g',1), |θ - θ'| <= d(g,g') <= δ, Taylor gives
+A(θ') <= A(θ) + sin θ·δ + δ²/2 and A(θ') >= A(θ) - sin θ·δ - δ²/2. Also
+sin²θ <= 2A(θ), so sin θ·δ <= √(2A) δ <= ηA + δ²/(2η). Combine the upper
+bound for h' (around V(∂p)) with the lower bound for h (around V^Z(∂p)). The
+last bound is Cauchy-Schwarz over eight terms. ∎
+
+*Check (script, Part 3).* Type A: identity defects <= 1.2e-15 and
+A(h') <= (|M|+|N|)²/2 on all type-A plaquettes tested. Corner (30, 30 and 45
+fine corner plaquettes): chain identity defect <= 1.3e-15, and the inequality
+of (b) with η = 1/2 holds, the worst slack being -1.694 (that is, LHS - RHS <=
+-1.694 on every sample). The sampled fibres are not tuned to be tight; they test
+the algebra, not the size of the constant.
+
+### 7.4 Proposition 64.3: (R) given an equipartition bound
+
+For Z, R as above and 0 < η <= 1 - L^{-2}, put (all sums over the loops of
+Lemma 64.5; p ∼ Z means that p touches Z)
+
+    G_η(U) := Σ_{c∈Z} Σ_{(ξ,ξ',ν)} ( |M|² + |N|² )
+              + (1 + 1/η) Σ_{p∼Z} Σ_{r=0}^{L-1} [ 32 Σ_{i=1}^4 κ_{c_i(p)}² + 8 Σ_{j=1}^4 |Λ_j(p,r)|² ].
+
+**Proposition 64.3 (proved here).** For every V,
+
+    D_N(V) - D_N(V^Z) >= -[(1+η)L² - 1] β_N A_Z(V) - β_{N+1} E_{μ_{V^Z}}[ G_η ],       (7.2)
+
+with A_Z(V) := Σ_{p∼Z} A_N(V(∂p)).
+
+*Proof.* In (7.1), ΔA = Σ_A + Σ_corner. Lemma 64.5 gives
+ΔA <= L Σ_{p∼Z} [ (1+η) A_N(V∂p) - (1-η) A_N(V^Z∂p) ] + G_η, since every coarse
+plaquette has L corner plaquettes (Lemma 64.1(ii)). With β_{N+1} = Lβ_N,
+
+    β_N (A_N(V) - A_N(V^Z)) - β_{N+1} E[ΔA]
+      >= -[(1+η)L² - 1] β_N A_Z(V) + [(1-η)L² - 1] β_N A_Z(V^Z) - β_{N+1} E[G_η],
+
+and the middle term is >= 0 because η <= 1 - L^{-2}. ∎
+
+So the coefficient is C_- = (1+η)L² - 1, as close to Theorem 64.1's L² - 1 as
+one likes. There is no entropy term: all the cost is in E[G_η].
+
+**The bound that remains.**
+
+**(EQ)** *There is Γ(L,η) < ∞, independent of N, of β_{N+1} >= β_*(L), of V and
+of Z (last axis), with β_{N+1} E_{μ_{V^Z}}[G_η] <= Γ |Z|.*
+
+Given (EQ), (R) holds in the form D_N(V) - D_N(V^Z) >= -C_- β_N A_Z(V) - Γ|Z|,
+which is stronger than (R) (e_ent|Z| log β_N is replaced by a constant). Why
+(EQ) has the right size: G_η is a sum of O(|Z|) terms (at most 4|Z| coarse
+plaquettes touch Z), each the squared distance from 1 of the holonomy of a
+loop of length at most 8L-6 inside a bounded cell. Such a loop is a product of
+conjugated plaquette holonomies (cone from the base point), so |loop|² is at
+most a constant (depending on L) times the sum of A_q over a bounded set of
+plaquettes q, using θ² <= (π²/2)(1 - cos θ). Hence (EQ) follows from the
+plaquette form
+
+**(EQ')** E_{μ_{V^Z}}[ β_{N+1} A_q ] <= C_A for every fine plaquette q within
+bounded distance (in coarse units) of Z, uniformly in V.
+
+The constant relating Γ to C_A is a finite, explicit function of L and η (cone
+multiplicities); it was not worked out because (EQ') is not proved.
+
+### 7.5 What fails
+
+**(1) (EQ') is not proved.** It says that the Gibbs measure conditioned on a
+coarse configuration has bounded plaquette energy per plaquette (equipartition),
+uniformly in the coarse configuration and the rest of the lattice. What was
+done:
+
+- *Log-convexity (proved, but it only reduces the question).*
+  **Lemma 64.6.** Let 𝒫 be a set of fine plaquettes, ρ_λ := exp(-E - β A_{rest}
+  - λ β A_𝒫) and F(λ) := log Tρ_λ(V'). Then F is convex and
+
+      E_{μ_{V'}}[ β_{N+1} A_𝒫 ] <= F(0) - F(1) = log( Tρ_{drop 𝒫}(V') / Tρ(V') ).
+
+  *Proof.* Tρ_λ(V') is a Laplace transform in λ of a positive measure (the
+  law of βA_𝒫 on the fibre with weight e^{-E-βA_rest}), so log-convex;
+  F'(1) = -E[βA_𝒫]; convexity gives F(0) >= F(1) + F'(1)(0 - 1). ∎
+  So (EQ') follows from: dropping the plaquettes of 𝒫 changes the fibre
+  partition function by at most e^{C|𝒫|} (or e^{C|𝒫| log β}, which would give
+  e_ent|Z| log β in (7.2), still enough for (R)).
+- *The step that fails: bounding Tρ_{drop 𝒫} / Tρ.* One needs a lower bound
+  for Tρ, i.e. a lower bound for the probability, under the drop measure, that
+  the links of 𝒫 sit in small balls around a configuration compatible with
+  their neighbours. If one drops every plaquette touching a link set 𝔏, the
+  links of 𝔏 are independent of the rest except through the Y's and the
+  Jacobian weight Σ_X 1/J_c. But the in-block links of a block B(y) lie in the
+  contours Γ_{c,x} of the six bonds at y, whose far endpoints lie in six other
+  blocks, and so on: there is no finite link set 𝔏 closed under "appears in
+  the same contour". For a bond c with one end in 𝔏 and one end outside, the
+  weight Σ_X 1/J_c vanishes unless Y_c lies in the επ-ball around V^Z_c, and
+  Y_c depends on outside links. So "all links of 𝒫 in a ball" has no
+  probability bound uniform in the outside configuration. The missing
+  statement is a finite-energy (conditional Gaussian-width lower bound) property
+  of the fibre Gibbs measure for a rough outside. It is the boundary-condition
+  version of the matched comparison of §6, in a smaller form, and was not
+  obtained.
+- *Gauge zero modes.* The fibre over V' contains L³-1 gauge directions per
+  block (gauge transformations equal to 1 at the block corners; they leave all
+  Y's invariant). The loops in G_η are gauge invariant under these modes (they
+  are loops based at block corners), so (EQ) is not affected, but a proof of
+  it that uses balls of radius ~ β^{-1/2} around 1 loses about
+  (3/2)(L³-1) log β per block against the true orbit volume, and so has to be
+  done in an orbit-saturated or gauge-fixed form.
+
+**(2) Bonds in axes 1, 2.** For μ not the last axis, the Y_{c,x} that share a
+crossing link have different a_x (the μ-run comes first or in the middle of
+γ(y,x)), so no single left translation of a crossing link gives Y' = RY for all
+x. *Check (script, Part 4).* With the reference path t = 0 and Haar R, the error
+|q(𝒯_R U) - R| at the modified bond is 2.1e-2 (axis 1) and 1.2e-2 (axis 2) at
+L = 2, and 1.5e-2, 1.3e-2 at L = 3 (σ = 0.02, 0.01), against 2.5e-16 and
+1.0e-15 for the last axis. For those axes 𝒯_R is only an approximate map of
+fibres. The next step is not to make it exact but to take the unique solution
+X' of Φ_{Y'}(X') = V for the perturbed Y' (within 2 max_x |a_x a_{x_0}^{-1}| of
+RY), compare Jacobians with c_L <= J <= J_max (note 53 Theorem 2, Lemma 64.2(3))
+at cost (J_max/c_L)^{|Z|} = e^{O(|Z|)}, and add the displacement of the private
+link to G_η. Not done.
+
+**Impact on note 61 Lemma 6b.2.** The lemma needs (R) for large-field regions
+of all directions. Proposition 64.3 covers regions whose changed bonds Z lie in
+the last axis; a coarse plaquette in the plane of axes 1, 2 contains no such
+bond. So (I-LF)(b) stays **not discharged**. What §7 changes is the shape of
+the gap: it is now (EQ) for the fibre Gibbs measure (a Gaussian-equipartition
+type bound on local loops) plus the approximate transport for axes 1, 2, and
+no longer a matched Gaussian evaluation of two partition functions.
+
+Status labels: Lemma 64.4, 64.5a, 64.5, 64.6, Theorem 64.2, Proposition 64.3:
+**proved here** (last axis). (EQ), (EQ'): **open** (target). (R): **conditional
+reduction** on (EQ) for last-axis Z; **open** otherwise. Note 61 §6b.2
+(I-LF)(b): **not discharged**.

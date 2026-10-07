@@ -462,7 +462,7 @@ Gaussian model (note 18 §8, `t7_gauss3d.py`).
 Done when: proved with explicit constants, or a `failed-attempt` naming the
 step where convexity does not suffice.
 
-### T77 [proof] — assigned to Sonnet: the Z-local relative bound (R) by matched Gaussian-width bounds (note 64 §6)
+### T77 [proof] — failed-attempt by Sonnet, 2026-10-07; reviewed by the lead: correct (exact transport identity Thm 64.2 for last-axis bonds; (R) given (EQ); (EQ) and axes 1-2 open): the Z-local relative bound (R) (note 64 §6)
 Scope: `research/64-large-field-lower-bound.md`, new §7, plus `research/scripts/t77_*.py`.
 T74 proved the absolute lower bound (Theorem 64.1) but not the relative form
 (R): D_N(V) - D_N(V^Z) >= -C_- β_N A_Z(V) - e_ent |Z| log β_N. It fails
@@ -493,6 +493,24 @@ coarse units. Note whether the decay rate is in units of the level N-j lattice
 (`t76_convexity.py` setup) for L = 2, 3.
 Done when: exponential decay is proved with explicit μ_0, C, or a
 `failed-attempt` names the step (e.g. the constraint space under conjugation).
+
+### T79 [proof] — assigned to Sonnet: exact fibre transport for all three bond axes (note 64 §7.5)
+Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.
+T77 built a Haar-preserving map 𝒯_R on fine configurations with
+q(𝒯_R U) = R·q(U) exactly for coarse bonds in the last axis of Balaban's
+contour order (CMP 95 (1.7), CMP 98 (42)), giving the exact identity
+Tρ(V)/Tρ(V^Z) = E_{fibre over V^Z}[e^{-β_{N+1}ΔA}] (Thm 64.2). For axes 1, 2
+the contours Y_{c,x} sharing a crossing link have different in-block paths,
+and the script shows q errors of order 1e-2. Find an exact transport for all
+axes: e.g. act on the private link only (note 53 Lemma 1) after a fibre
+change of variables, compose a gauge transformation inside the block with a
+crossing-link rotation, or otherwise exploit Φ_{RY}(RX) = RΦ_Y(X). Prove
+q∘𝒯 = R·q and Haar preservation (or compute the Jacobian), and extend Lemma
+64.5's plaquette classification to the new map. Check q exactness to 1e-14
+in the script for all three axes, L = 2, 3. If no exact map exists, give the
+obstruction and the best approximate map with an explicit Jacobian bound.
+Done when: Theorem 64.2 holds for all axes, or a `failed-attempt` with the
+obstruction.
 
 ### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
