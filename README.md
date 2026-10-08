@@ -59,7 +59,7 @@ estimates while avoiding three later problems:
 | Corrected 4D master reduction | conditional reduction (note 27): M1-4D convergence <= coupling flow with shooting + terminal memory decay + summable R-bias series with memory decay |
 | 4D β-derivative bound H4D-3 | conditional reduction (note 21): follows from two-loop-order, memory-decaying β-function derivatives, step-wise coupling analyticity of the effective action, and an R-bias bound analytic in β; the cutoff-uniform flow-sensitivity lemma is proved |
 
-## Where the 4D programme stands (lead summary, updated 2026-10-03)
+## Where the 4D programme stands (lead summary, updated 2026-10-08)
 
 Each item below is proved here, or reduced here to a precisely stated open
 estimate. The research notes give the details.
@@ -78,10 +78,17 @@ estimate. The research notes give the details.
     rate O(log M/M) proved, about M^-2 measured (47). Assembled in 48:
     all quadratic and linear ingredients converge geometrically; the vertex
     Riemann sums are reduced by a general alias-sum lemma (58) to a
-    bookkeeping form (V), checked for the leading gluon vertices;
+    bookkeeping form (V), checked for the leading gluon vertices and (T69,
+    58 §6) for the ghost and gauge-fixing vertices, with Lemma A3 replacing
+    Lemma A2 for background-coupled sums. The two-scale (O1) needed for the
+    discretization part is proved for the single-level free abelian step
+    (T68, 41 §5); the multi-level penalty is open (T75);
   - (S) the one-loop sum rule. With (C) and Schur additivity, an O(1) edge
-    bound for composites (sketched) forces beta_inf^0 = 2b_0 log L (note 50).
-    No finite scheme constant is needed;
+    bound (E) for composites forces beta_inf^0 = 2b_0 log L (note 50). No
+    finite scheme constant is needed. T67 showed the earlier sketch of (E)
+    cannot be completed termwise: at the lowest alias the block constraint
+    removes 100% of the free propagator, so only the constrained propagator
+    is integrable (50 §2). (E) is open; the scalar loop is T73;
   - (D) memory decay.
 - **(B), the R-bias:**
   - equal fiber mass for R' (20) and curved-background contraction (24),
@@ -132,7 +139,7 @@ estimate. The research notes give the details.
 
 ## Shortest remaining route: three dimensions
 
-Status as of 2026-10-06, for SU(2) on a fixed 3D torus. M1-3D asks for
+Status as of 2026-10-08, for SU(2) on a fixed 3D torus. M1-3D asks for
 convergence and nondegeneracy of fixed terminal block observables as the
 cutoff is removed.
 
@@ -165,37 +172,51 @@ cutoff is removed.
 
   (H3) follows from (A_s) (Prop. 2), and (H5) is proved (Prop. 3).
 
-**Remaining inputs, all readings of Balaban's papers**
+**Remaining inputs (updated 2026-10-08)**
 
-So
+Note 61 Theorem 1 gives
 
-    M1-3D <= (NA♭) + (A_s) + (H4):
+    M1-3D <= (NA♭) + (A_s) + (H4) + (L_s),
 
-- (NA♭): CMP 99 Theorem 3.4 around a flat background (Cauchy plus Schur;
-  note 54). Read in T64: supported, provided n_0 > O(1)M (Balaban's
-  localization cubes must not wrap the torus) and d n_0 sqrt(eps_0) <= alpha_1/2.
-  Caveat: the decay bound CMP 102b (190) for the minimizer derivative, used in
-  the Schur step, is stated by Balaban without proof ("we do not perform these
-  calculations here").
-  Note 63 avoids this: an energy-norm perturbation lemma for constrained
-  minimizers (proved) plus flat coercivity (proved, Lemma 3) give (NA♭) from
-  CMP 102b (173), the sup bounds (19)-(21) on the minimizer, which are derived
-  in that paper; the multiplier term (I3) follows from the same bounds. So
-  (NA♭) now rests on proved notes plus published, proved input.
+where (L_s) is the localized s-analyticity that the proof of Theorem 1 uses
+when it differentiates along the interpolation μ_s ∝ e^{sD_N} μ_N. T66
+(note 61 §6b) found that this input is not automatic: the global zero-free
+strip in s shrinks with the volume (note 18 Prop. 3), so the s-derivatives
+must be controlled polymer by polymer.
+
+- (NA♭): CMP 99 Theorem 3.4 around a flat background (note 54; read in
+  T64: supported, given n_0 > O(1)M and d n_0 sqrt(eps_0) <= alpha_1/2).
+  Note 63 obtains it in the energy norm from flat coercivity (proved) and
+  CMP 102b (173), avoiding CMP 102b (190), whose proof Balaban omits. It now
+  rests on proved notes plus published, proved input.
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
-  reduced to its sixth-order remainder bound (note 42). Read in T63: no use of
-  reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
-- (H4): CMP 119's exact convergent expansions at d = 3 (read in T62, partially: supported). There the
-  large-field factors are arbitrary powers of ε, and no R-operation is
-  needed, by Balaban's own statement in the CMP 119 introduction. Add note
-  49's rooted KP lemma (note 61 §6). Codex task T62.
+  reduced to its sixth-order remainder bound (note 42). Read in T63: no use
+  of reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
+- (H4): CMP 119's exact convergent expansions at d = 3 (T62 read the
+  inductive assumptions of Sect. 2: supported). Sect. 3 of CMP 119 and
+  CMP 122 II at d = 3 are being read from the page images (T71, T72).
+- (L_s), reduced in note 61 §6b (Lemma 6b.1, proved) to three inputs:
+  - (I-L) locality of the one-step defect D_N. Its classical part is local
+    through CMP 102b (190) (proof omitted by Balaban); its sixth-order
+    remainder is only bounded extensively in CMP 102, and needs the
+    exponentiated expansion of CMP 122 II at d = 3 (part of T72). Open.
+  - (I-S) the step map is analytic along the s-orbit. In the quadratic
+    (Schur) sector this is **proved** by convexity (note 61 §6c, T76:
+    S <= W_j <= Π_j^(s) <= W_{j+1}, an analytic disc uniform in N and j).
+    Kernel locality of the interpolated forms (T78) and the higher-order
+    parts are open.
+  - (I-LF) a large-field comparison. The upper side is published (CMP 102
+    (70)-(71)). For the lower side, note 64 proves an absolute bound
+    (Theorem 64.1, explicit constants) and an exact fibre-transport identity
+    for bonds in the last contour axis (Theorem 64.2, T77), which reduces
+    the needed Z-local bound (R) to an equipartition bound (EQ') for the
+    fibre Gibbs measure. (EQ') (T80) and the other two bond axes (T79) are
+    open.
 
-None of the three is a new estimate, and all three have now been read against
-the sources: (NA♭) and (A_s) are supported with stated conditions, and (H4) is
-supported at the level of CMP 119's inductive assumptions. The remaining
-uncertainty is in the parts of the sources not checked line by line: CMP 119
-Sect. 3 and CMP 122 at d = 3, CMP 102b (182)-(190), and the cited
-sub-papers. M1-3D therefore stays a conditional reduction, not a theorem.
+So M1-3D stays a **conditional reduction**. (NA♭) and (A_s) are supported
+readings; (H4) is supported at the level of the inductive assumptions; (L_s)
+is the main open item on the 3D route, and it is a new estimate, not a
+reading.
 
 **Numerical evidence**
 
@@ -288,6 +309,7 @@ sub-papers. M1-3D therefore stays a conditional reduction, not a theorem.
 - `research/59-mc-action-universality.md` -- Monte Carlo: the terminal observables forget an irrelevant term in the bare action (3D)
 - `research/61-3d-assembly-conditional.md` -- The 3D assembly: H3D-1 from single-step bounds, written out (conditional)
 - `research/63-na-energy-perturbation.md` -- (NA♭) in the energy norm without CMP 102b (190): a constrained-minimizer perturbation lemma
+- `research/64-large-field-lower-bound.md` -- The large-field lower bound for the one-step defect D_N: an absolute bound, and an exact fibre transport reducing the Z-local form to equipartition
 - `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
