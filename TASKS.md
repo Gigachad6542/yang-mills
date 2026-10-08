@@ -270,6 +270,11 @@ Lead, 2026-10-08: the three N = 3 runs (32^4, betas 3.30, 3.40, 3.50, seeds
 54330, 54340, 54350) were started at 23:16 UTC in the cloud container
 (about 5.6 h each, one core each; output `research/scripts/t54_n3_beta*.out`).
 The 2x2 loop and the write-up follow when they finish.
+Update: container restarts kill background processes, so the runs now use
+the checkpointed driver `t54_mc_checkpointed.py` (adds the 2x2 loop) and the
+N = 0, 1, 2 points are re-run with it for W22 (`t54_chain.sh`). **On every lead
+wake, run `sh research/scripts/t54_supervise.sh`**; it resumes any killed run
+from its checkpoint and reports which are done.
 
 ### T55 [fix] — claimed by Codex, 2026-10-07 (no deliverable; Codex out of usage); reassigned to a subagent, 2026-10-08: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
 Scope: `research/42-s2-by-even-deformation.md` §4 only.
