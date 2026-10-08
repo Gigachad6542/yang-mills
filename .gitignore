@@ -17,3 +17,4 @@ research/scripts/t15_d4.out
 research/scripts/t54_state_*.npz
 research/scripts/t54_*.log
 research/scripts/t54_*_data.npy
+research/scripts/t54_*.out  # committed by hand at the T54 write-up
