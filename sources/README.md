@@ -21,6 +21,12 @@ As of 2026-09-28:
   one; the script can be re-run later. Their full text is still available
   as OCR (see the next section).
 
+As of 2026-10-08 the script also works from the Claude Code cloud container
+(set `FETCH_SLEEP=30` to shorten the pause between downloads). There, every
+paper above is present except CMP 99 "background propagators", which still
+fails; its OCR is in `ocr/cmp99*.md`. Page images for reading garbled
+formulas: `pdftoppm -r 200 -f P -l P -png <pdf> <prefix>`.
+
 ## Committed text (private repository only)
 
 `text/` and `ocr/` are committed so that cloud sessions can read the

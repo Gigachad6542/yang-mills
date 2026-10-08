@@ -12,7 +12,7 @@ fetch() { # name url
   if [ -s "$OUT/$1" ] && file "$OUT/$1" | grep -q PDF; then echo "have $1"; return; fi
   curl -sSL -A "$UA" -o "$OUT/$1" "$2"
   if file "$OUT/$1" | grep -q PDF; then echo "ok   $1"; else echo "FAIL $1"; rm -f "$OUT/$1"; fi
-  sleep 60
+  sleep ${FETCH_SLEEP:-60}
 }
 fetch Balaban1984-CMP95-propagators-I.pdf            "${PE}1103941451"
 fetch Balaban1984-CMP96-propagators-II.pdf           "${PE}1103941783"

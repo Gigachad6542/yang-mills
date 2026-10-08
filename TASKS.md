@@ -234,7 +234,7 @@ Done when: the bound is proved with all constants explicit, or there is a
 `failed-attempt` naming the exact step that fails. Commit `[T52][proof]`
 plus one PROGRESS line.
 
-### T53 [computation]: sup-norm constant s_L in twisted sectors (note 36 caveat)
+### T53 [computation] — reassigned from Codex to a subagent, 2026-10-08: sup-norm constant s_L in twisted sectors (note 36 caveat)
 Scope: `research/scripts/t27_minimizer_regularity.py` (add a twist option),
 its output, and a short section in `research/35-minimizer-regularity-abelian.md`.
 Note 36 (holonomy caveat) claims that the exact-flux sup-norm constant s_L of
@@ -246,7 +246,7 @@ m = 1, at θ = π/4 and π/2. Report s_L(θ) next to s_L(0).
 Done when: the table is in note 35 and states whether the claim of note 36
 holds. Commit `[T53][computation]` plus one PROGRESS line.
 
-### T54 [computation]: 4D universality test, third depth and a third observable (note 56)
+### T54 [computation] — reassigned from Codex to the lead, 2026-10-08 (runs in progress): 4D universality test, third depth and a third observable (note 56)
 Scope: `research/scripts/t51_mc_universality_4d.py` (add a 2x2 loop
 observable if needed), new output files, and a new section in
 `research/56-mc-4d-universality.md`.
@@ -266,8 +266,12 @@ Optional extension (note 62): also run the tree-level Symanzik action at N = 3 w
 (masked staples, about 11 h per beta at 32^4), to decide the 4D memory test.
 Done when: the N = 3 matching row and the 2x2 comparison are in note 56.
 Commit `[T54][computation]` plus one PROGRESS line.
+Lead, 2026-10-08: the three N = 3 runs (32^4, betas 3.30, 3.40, 3.50, seeds
+54330, 54340, 54350) were started at 23:16 UTC in the cloud container
+(about 5.6 h each, one core each; output `research/scripts/t54_n3_beta*.out`).
+The 2x2 loop and the write-up follow when they finish.
 
-### T55 [fix] — claimed by Codex, 2026-10-07: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
+### T55 [fix] — claimed by Codex, 2026-10-07 (no deliverable; Codex out of usage); reassigned to a subagent, 2026-10-08: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
 Scope: `research/42-s2-by-even-deformation.md` §4 only.
 Note 42 §4 (T49) checked CMP 116 Part II §1 and CMP 109 §2. Read CMP 109
 §§3-5 (`sources/ocr/cmp109.md`, fluctuation-field action, Ward identities,
@@ -336,8 +340,17 @@ Goal of the round: turn M1-3D from a conditional reduction into a theorem
 whose only inputs are published statements read line by line, and close the
 two sketched items of H0 ((E) and two-scale (O1)).
 
-**Codex priority (overrides earlier orderings): T55 (claimed), T71, T72, T53,
-T54.** T71-T72 need the page images in `sources/papers/` on Daniel's Mac.
+**2026-10-08: Codex is out of usage. Daniel gave the lead full control of the
+repository, and every open Codex task is reassigned to subagents dispatched
+by the lead** (Sonnet workers in worktrees, each deliverable checked by
+independent adversarial verifiers and then by the lead). The Balaban PDFs are
+now fetched in the cloud container (`sh sources/fetch_papers.sh`, not
+committed; absolute path `/home/user/yang-mills/sources/papers/`), so the
+page-image readings T71-T72 no longer need the Mac. CMP 99 "background
+propagators" still fails to download; its OCR is in `sources/ocr/`.
+The Sonnet workers on T73, T75, T78 and T79 stopped on 2026-10-07 at the
+Sonnet session limit before committing; their partial scripts were salvaged
+and the tasks are re-dispatched.
 
 ### T66 [proof] — failed-attempt by Sonnet, 2026-10-07; reviewed by the lead: correct (Gaussian table reproduced by `t66_gauss_disc.py`; one overstatement in §6b.4 item 3 softened): localized s-analyticity and (H4b) (note 61)
 Scope: `research/61-3d-assembly-conditional.md`, a new §6b only.
@@ -390,7 +403,7 @@ The covariant-average terms are out of scope.
 Done when: (V) is verified for both families with stated s, or a
 `failed-attempt` names the vertex whose growth exponent is >= 1.
 
-### T73 [proof] — assigned to Sonnet: (E) for the scalar loop in note 48's model (note 50 §2.5)
+### T73 [proof] — assigned to Sonnet (re-dispatched 2026-10-08 after the session-limit stop; partial scripts `t73_*.py` salvaged): (E) for the scalar loop in note 48's model (note 50 §2.5)
 Scope: `research/50-sum-rule-from-multiplicativity.md`, a new §2.6, plus
 `research/scripts/t73_*.py`.
 T67 showed that (E) cannot be proved termwise from the fine-lattice G_0. Do
@@ -427,7 +440,7 @@ term depends on V near Z only).
 Done when: proved with explicit constants, or a `failed-attempt` naming the
 step (e.g. the extension's action for large holonomies) that fails.
 
-### T75 [proof] — assigned to Sonnet: two-scale (O1) with all penalty levels (note 41 §5)
+### T75 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t75_multilevel_green.py` salvaged): two-scale (O1) with all penalty levels (note 41 §5)
 Scope: `research/41-free-increments-convergence.md`, a new §5a, plus
 `research/scripts/t75_*.py`.
 T68 proved the two-scale (O1) for K_M = Λ_M + a w w^† (top-level average
@@ -478,7 +491,7 @@ the s-weights of note 61 Lemma 6b.2 actually need; say so explicitly.
 Done when: (R) is proved with explicit constants (or for the restricted
 case that Lemma 6b.2 needs), or a `failed-attempt` names the step.
 
-### T78 [proof] — assigned to Sonnet: kernel locality of the interpolated forms (note 61 §6c.6, R2)
+### T78 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
 Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
 T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
 (R2) that a Loewner sandwich does not give locality: the real-space kernel of
@@ -494,7 +507,7 @@ coarse units. Note whether the decay rate is in units of the level N-j lattice
 Done when: exponential decay is proved with explicit μ_0, C, or a
 `failed-attempt` names the step (e.g. the constraint space under conjugation).
 
-### T79 [proof] — assigned to Sonnet: exact fibre transport for all three bond axes (note 64 §7.5)
+### T79 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t79_center_obstruction.py` salvaged): exact fibre transport for all three bond axes (note 64 §7.5)
 Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.
 T77 built a Haar-preserving map 𝒯_R on fine configurations with
 q(𝒯_R U) = R·q(U) exactly for coarse bonds in the last axis of Balaban's
@@ -512,25 +525,51 @@ obstruction and the best approximate map with an explicit Jacobian bound.
 Done when: Theorem 64.2 holds for all axes, or a `failed-attempt` with the
 obstruction.
 
-### T71 [fix] — assigned to Codex: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
-Scope: `research/61-3d-assembly-conditional.md` §6a only (append).
+### T80 [proof] — assigned to Sonnet, 2026-10-08: the equipartition bound (EQ') for the fibre Gibbs measure (note 64 §7.4-7.5)
+Scope: a new note `research/67-fibre-equipartition.md`, plus
+`research/scripts/t80_*.py`. (T79 edits note 64 §8 in parallel; do not edit note 64.)
+T77 reduced the Z-local bound (R), hence (I-LF)(b) of note 61 §6b, to (EQ'):
+E_{μ_{V'}}[β_{N+1} A_q] <= C_A for every fine plaquette q near Z, uniformly in
+N, in β_{N+1} >= β_*(L), and in the coarse configuration V' (μ_{V'} is the
+Wilson Gibbs measure on the fibre q(U) = V' of Balaban's average). Its
+log-convexity route (Lemma 64.6) stalls at a lower bound for the fibre
+partition function with a rough outside. Try an integration-by-parts
+(Ward-identity) route instead: parametrize the fibre by U_rest with the
+private links b(U_rest) determined (note 53 Lemma 1, Theorems 2, 4), take a
+left-invariant vector field on one free link ℓ, and integrate by parts against
+the fibre density. For the Wilson action this gives
+E[β² |∇_ℓ A|²] = E[β Δ_ℓ A] + (terms from ∇_ℓ b and ∇_ℓ log J), and
+Δ_ℓ(1 - ½ tr U_p) is a bounded multiple of ½ tr U_p. Bound the extra terms by
+note 53's Jacobian bounds and Lemma 64.2. Then pass from the gradient bound
+(which controls sin² of the plaquette angle) to A_q itself, handling angles
+near π separately (for example by a large-deviation bound at that plaquette).
+Gauge zero modes (note 64 §7.5) must be handled: work with gauge-invariant
+quantities only.
+Done when: (EQ') is proved with explicit C_A, or a `failed-attempt` names the
+step (and says whether the boundary terms or the near-π angles are the
+obstruction).
+
+### T71 [fix] — reassigned from Codex to a subagent, 2026-10-08: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
+Scope (changed 2026-10-08, to avoid edit conflicts): a new note
+`research/65-cmp119-sect3-d3-reading.md`; the lead adds the pointer in note 61 §6a.
 T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
 (k+1)-st step), whose OCR is unreadable. Read Sect. 3 from the page images
 in `sources/papers/`. For each estimate, with equation number, say whether
 it holds at d = 3 with R = identity, or what changes (powers of L, ε
 exponents, entropy). Then state the resulting localized large-field
 activity bound in the form |activity(X)| <= C ε_j^q e^{-κ d(X)}.
-Done when: §6a has the list and a one-line verdict. Commit `[T71][fix]`.
+Done when: note 65 has the list and a one-line verdict. Commit `[T71][fix]`.
 
-### T72 [fix] — assigned to Codex: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
-Scope: `research/49-t2r-rooted-lemma.md` §6 and `research/61-3d-assembly-conditional.md` §6a (append).
+### T72 [fix] — reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
+Scope (changed 2026-10-08): a new note `research/66-cmp122ii-d3-reading.md`;
+the lead adds the pointers in notes 49 §6 and 61 §6a.
 From the page images, check that Balaban's domain factors (1.79)-(1.89) and
 the final activity bound (1.97)-(1.99) hold at d = 3 when the R-operation is
 the identity, so that note 49's rooted KP lemma gives (H4a). List each
 inequality used, with its d-dependence. Also (added after T66): say whether
 the exponentiated expansion (1.92)-(1.99) at d = 3 localizes CMP 102's
 sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
-Done when: both notes have the list and a one-line verdict. Commit `[T72][fix]`.
+Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 
 ## Lead (Claude): in progress
 

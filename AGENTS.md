@@ -20,6 +20,10 @@ Effective 2026-09-28. These rules override earlier arrangements in
   taking new ones.
 - If the lead is unavailable for a long time, Daniel may appoint Codex as
   acting lead again. That appointment is recorded here and in `TASKS.md`.
+- **2026-10-08:** Codex is out of usage. Daniel gave the lead full access to
+  and control of the repository, and asked that Codex's open tasks be
+  reassigned to subagents. Codex may take tasks again when it is back, but
+  only tasks marked `assigned to Codex` in `TASKS.md`.
 - Daniel's direct instructions outrank this file.
 
 ## Why these rules exist
@@ -90,8 +94,10 @@ is not acceptable. Every rule below exists to prevent that.
   worktree and branch, commits its deliverable there with the rule-5 subject,
   and does **not** edit `TASKS.md` or `PROGRESS.md` (the lead does, to avoid
   conflicts). It ends with a report: kind, result, and a draft PROGRESS line.
-- The lead reviews the deliverable once, for correctness, then cherry-picks it
-  onto `main` and pushes.
+- Each deliverable is first checked by independent verifier subagents that
+  try to refute it (a correctness check, not a review request: workers never
+  ask for it). The lead then reviews it once, for correctness, with the
+  verifier reports in hand, fixes or rejects, and cherry-picks it onto `main`.
 - Codex keeps taking tasks marked `assigned to Codex` from `TASKS.md` on
   `main`. `TASKS.md`, `PROGRESS.md` and the commit log are the only channel
   between agents; the `CODEX_TO_CLAUDE*` / `CLAUDE_TO_CODEX` files stay retired.
