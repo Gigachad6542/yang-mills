@@ -36,6 +36,7 @@ exponents, entropy). Then state the resulting localized large-field
 activity bound in the form |activity(X)| <= C ε_j^q e^{-κ d(X)}.
 Done when: note 65 has the list and a one-line verdict. Commit `[T71][fix]`.
 Partial work: `wip/round-2026-10-08/t71/` holds an essentially complete draft of note 65 and its script (unverified; see the README there). Start from it.
+Lead, 2026-10-09: **blocked on the page images.** On Daniel's Mac, Project Euclid answers `fetch_papers.sh` with a bot-check page after three downloads; CMP 119, 109, 116, 122 II, both CMP 99 and CMP 102 (variational) are missing from `sources/papers/`. The lead does not bypass the check; Daniel can download them in a browser (links in `fetch_papers.sh`), or the lead retries later. The worker brief is ready.
 
 ### T72 [fix] — reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
 Scope (changed 2026-10-08): a new note `research/66-cmp122ii-d3-reading.md`;
@@ -49,7 +50,7 @@ sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read the T71 draft first: it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 
-### T80 [proof] — assigned to Sonnet, 2026-10-08: the equipartition bound (EQ') for the fibre Gibbs measure (note 64 §7.4-7.5)
+### T80 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09, **rescoped** (see the lead's note at the end of this entry); assigned to Sonnet, 2026-10-08: the equipartition bound (EQ') for the fibre Gibbs measure (note 64 §7.4-7.5)
 Scope: a new note `research/67-fibre-equipartition.md`, plus
 `research/scripts/t80_*.py`. (T79 edits note 64 §8 in parallel; do not edit note 64.)
 T77 reduced the Z-local bound (R), hence (I-LF)(b) of note 61 §6b, to (EQ'):
@@ -73,6 +74,7 @@ Done when: (EQ') is proved with explicit C_A, or a `failed-attempt` names the
 step (and says whether the boundary terms or the near-π angles are the
 obstruction).
 Partial work: `wip/round-2026-10-08/t80/` (scripts only).
+Lead, 2026-10-09 (rescope): the salvaged `t80_abelian_fibre.py` shows that (EQ') as stated is false (abelian Gaussian fibre: E[βA_q] = βθ_cl²/2 + O(1), unbounded in β when V' has coarse flux near q), and that G_η of Prop. 64.3 at the classical minimizer exceeds the slack (1-η)L² - 1 by factors 10²-10⁴. New scope: write these up (counterexample), then decide (R) itself in the abelian Gaussian model, where D_N = β_N(A_N - L A_min) + const exactly: is Q - P_ZᵀQP_Z + C A_Z ⪰ 0 for a finite C, and which Z-local form of (R) holds.
 
 ### T79 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t79_center_obstruction.py` salvaged): exact fibre transport for all three bond axes (note 64 §7.5)
 Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.
