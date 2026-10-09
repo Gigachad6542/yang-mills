@@ -19,3 +19,6 @@ research/scripts/t54_*.log
 research/scripts/t54_*_data.npy
 # T54 outputs are committed by hand at the write-up (git add -f)
 research/scripts/t54_*.out
+
+# Agent worktrees (Claude Code)
+.claude/worktrees/

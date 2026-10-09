@@ -1,0 +1,60 @@
+
+[Parts 1-3, L=2, coarse side n=3] fine side 6
+  Part 1: dim ker Q = 567, gauge zero modes of H_K = 189 (predicted (L^3-1)n^3 = 189), spectral gap of H_K = 1.9336, max eigenvalue 12.000
+  Part 1: max_q beta Var(theta_q | fibre) = 0.647730; unconditional max_q beta Var = 0.663580 (<= 1: projection); conditional <= unconditional: True
+  Part 2: coarse plaquette p=(y0,0,2) flux theta_p = +1.000; fine plaquettes of its cell: 8 (= L^3); sum theta_cl^2 over the cell = 0.81062; uniform-spread value L^3 (theta_p/L^2)^2 = 0.50000
+          total classical fine energy sum_q theta_cl^2 = 4.67850 over all plaquettes; coarse sum_p theta_p^2 = 4.00000
+          min fine action / coarse action, L*sum th^2 / sum thp^2 = 2.33925  (A_N(V) term: T1 = beta_N A_N - beta_N+1 A_min; this ratio is the coefficient of -T1 + A_N)
+          beta_(N+1) =      10.0: max_q E[beta A_q] =        1.710 (classical) + <= 0.324 (fluct)  [theta_cl,max = 0.58481]
+          beta_(N+1) =    1000.0: max_q E[beta A_q] =      171.003 (classical) + <= 0.324 (fluct)  [theta_cl,max = 0.58481]
+          beta_(N+1) =  100000.0: max_q E[beta A_q] =    17100.276 (classical) + <= 0.324 (fluct)  [theta_cl,max = 0.58481]
+  Part 3: |theta_p| / sum_q |theta_cl,q| (all q) = 0.0519; corner plaquettes (a=b=L-1, L of them): classical flux each = [0.58481, 0.58481] vs concentrated value theta_p = +1.000
+
+[Parts 1-3, L=3, coarse side n=3] fine side 9
+  Part 1: dim ker Q = 2106, gauge zero modes of H_K = 702 (predicted (L^3-1)n^3 = 702), spectral gap of H_K = 0.8341, max eigenvalue 11.637
+  Part 1: max_q beta Var(theta_q | fibre) = 0.657227; unconditional max_q beta Var = 0.665752 (<= 1: projection); conditional <= unconditional: True
+  Part 2: coarse plaquette p=(y0,0,2) flux theta_p = +1.000; fine plaquettes of its cell: 27 (= L^3); sum theta_cl^2 over the cell = 0.55747; uniform-spread value L^3 (theta_p/L^2)^2 = 0.33333
+          total classical fine energy sum_q theta_cl^2 = 3.99138 over all plaquettes; coarse sum_p theta_p^2 = 4.00000
+          min fine action / coarse action, L*sum th^2 / sum thp^2 = 2.99354  (A_N(V) term: T1 = beta_N A_N - beta_N+1 A_min; this ratio is the coefficient of -T1 + A_N)
+          beta_(N+1) =      10.0: max_q E[beta A_q] =        0.684 (classical) + <= 0.329 (fluct)  [theta_cl,max = 0.36985]
+          beta_(N+1) =    1000.0: max_q E[beta A_q] =       68.394 (classical) + <= 0.329 (fluct)  [theta_cl,max = 0.36985]
+          beta_(N+1) =  100000.0: max_q E[beta A_q] =     6839.412 (classical) + <= 0.329 (fluct)  [theta_cl,max = 0.36985]
+  Part 3: |theta_p| / sum_q |theta_cl,q| (all q) = 0.0259; corner plaquettes (a=b=L-1, L of them): classical flux each = [0.314, 0.36985, 0.314] vs concentrated value theta_p = +1.000
+
+[Part 4, L=2, n=3] G_eta (note 64 Prop 64.3) at the classical minimiser, Z = {(y0, 2)}
+  4 type-A plaquettes (expected 2 L (L-1) = 4), 8 corner plaquettes (4 coarse plaquettes x L layers = 8)
+  c' (bond carrying the flux)   A_Z(V^Z)   S_A     S_kappa   S_Lam  |   R_G(eta)=L G/A_Z  for eta = 0.1, 0.25, 0.5, 0.75
+  ((0, 0, 0), 0)                 0.5000   0.1266    40.003    0.000 |    1760.65     800.57     480.55     373.87
+  ((0, 0, 0), 1)                 0.5000   0.1266    44.125    0.078 |    1945.43     884.56     530.94     413.07
+  ((0, 0, 1), 0)                 0.5000   0.2580    58.621    0.161 |    2587.44    1176.67     706.42     549.66
+  ((0, 0, 1), 1)                 0.5000   0.2580    62.817    0.233 |    2775.24    1262.04     757.63     589.50
+  ((0, 1, 0), 2)                 0.5000   0.2321    52.709    0.294 |    2333.08    1061.00     636.97     495.63
+  ((0, 2, 0), 1)                 0.5000   0.1266    44.332    0.078 |    1954.56     888.71     533.43     415.00
+  ((0, 2, 0), 2)                 0.5000   0.2321    52.682    0.150 |    2325.53    1057.57     634.91     494.03
+  ((0, 2, 1), 1)                 0.5000   0.2580    62.758    0.360 |    2778.22    1263.39     758.45     590.13
+  ((1, 0, 0), 2)                 0.5000   0.2321    52.709    0.294 |    2333.08    1061.00     636.97     495.63
+  ((2, 0, 0), 0)                 0.5000   0.1266    40.842    0.000 |    1797.57     817.35     490.61     381.70
+  ((2, 0, 0), 2)                 0.5000   0.2321    52.682    0.150 |    2325.53    1057.57     634.91     494.03
+  ((2, 0, 1), 0)                 0.5000   0.2580    59.653    0.288 |    2638.42    1199.85     720.32     560.48
+  slack (1-eta) L^2 - 1 = 2.600, 2.000, 1.000, 0.000  (eta <= 1 - L^-2 = 0.750)
+  max over c' of R_G = 2778.22, 1263.39, 758.45, 590.13
+  min over c' of R_G = 1760.65, 800.57, 480.55, 373.87
+
+[Part 4, L=3, n=3] G_eta (note 64 Prop 64.3) at the classical minimiser, Z = {(y0, 2)}
+  12 type-A plaquettes (expected 2 L (L-1) = 12), 12 corner plaquettes (4 coarse plaquettes x L layers = 12)
+  c' (bond carrying the flux)   A_Z(V^Z)   S_A     S_kappa   S_Lam  |   R_G(eta)=L G/A_Z  for eta = 0.1, 0.25, 0.5, 0.75
+  ((0, 0, 0), 0)                 0.5000   0.1195   120.304    0.058 |    7944.62    3611.58    2167.24    1685.79
+  ((0, 0, 0), 1)                 0.5000   0.1677   151.737    0.378 |   10040.59    4564.45    2739.07    2130.61
+  ((0, 0, 1), 0)                 0.5000   0.5012   191.889    1.225 |   12748.54    5796.43    3479.06    2706.61
+  ((0, 0, 1), 1)                 0.5000   0.5148   252.564    1.555 |   16774.92    7626.65    4577.23    3560.75
+  ((0, 1, 0), 2)                 0.5000   0.4677   215.465    2.137 |   14364.52    6530.86    3919.64    3049.23
+  ((0, 2, 0), 1)                 0.5000   0.1720   150.369    0.546 |    9961.42    4528.48    2717.50    2113.84
+  ((0, 2, 0), 2)                 0.5000   0.4672   210.602    1.098 |   13975.01    6353.81    3813.40    2966.60
+  ((0, 2, 1), 1)                 0.5000   0.5161   251.841    2.550 |   16792.90    7634.82    4582.13    3564.57
+  ((1, 0, 0), 2)                 0.5000   0.4602   209.084    2.084 |   13939.82    6337.79    3803.78    2959.11
+  ((2, 0, 0), 0)                 0.5000   0.1195   121.761    0.099 |    8043.48    3656.52    2194.20    1706.76
+  ((2, 0, 0), 2)                 0.5000   0.4602   204.065    1.071 |   13541.76    6156.85    3695.21    2874.67
+  ((2, 0, 1), 0)                 0.5000   0.5012   194.200    2.064 |   12956.49    5890.95    3535.77    2750.71
+  slack (1-eta) L^2 - 1 = 7.100, 5.750, 3.500, 1.250  (eta <= 1 - L^-2 = 0.889)
+  max over c' of R_G = 16792.90, 7634.82, 4582.13, 3564.57
+  min over c' of R_G = 7944.62, 3611.58, 2167.24, 1685.79

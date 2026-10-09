@@ -1,0 +1,154 @@
+
+=== L = 2, coarse side n = 3 (fine side 6) ===
+  ker(dc) dim 29 (expected n^3 + 2 = 29); |M N0| = 6.07e-15; M symmetric PSD: min eig -6.52e-15
+  A_min(single-bond flux 1): direct 2.33924954 vs (1/2)V^T M V 2.33924954; A_N = 2.0000
+  (a) Q = A_N - L A_min: eigenvalues of Qm in [-15.46602, 0.00000] (Q <= 0 iff max <= 0); Q/A_N in [-1.71845, -0.60000]  (Thm 64.1: >= -(L^2-1) = -3)
+  Z = 1 bond, axis 2                         ker(A_Z) dim  77  min eig of Dd on ker(A_Z) = -5.258e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6773, V_Z = -0.2314, near-plaquette flux energy A_Z(V) = 4.82e-18, far flux energy 2.0844, Dd(V) = -2.6292e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -1.6279e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -3.4682e-18
+  Z = 1 bond, axis 1                         ker(A_Z) dim  77  min eig of Dd on ker(A_Z) = -5.258e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6773, V_Z = +0.2314, near-plaquette flux energy A_Z(V) = -2.41e-18, far flux energy 2.0844, Dd(V) = -2.6292e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -1.6279e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -7.5914e-18
+  Z = 1 bond, axis 0                         ker(A_Z) dim  77  min eig of Dd on ker(A_Z) = -5.258e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6773, V_Z = -0.2314, near-plaquette flux energy A_Z(V) = -6.42e-18, far flux energy 2.0844, Dd(V) = -2.6292e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -1.6279e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.4748e-18
+  Z = 2 bonds, collinear last axis           ker(A_Z) dim  73  min eig of Dd on ker(A_Z) = -5.695e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.9469, V_Z = +0.3301, near-plaquette flux energy A_Z(V) = -1.15e-17, far flux energy 2.1178, Dd(V) = -2.8475e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -2.1464e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.5917e-17
+  Z = 2 bonds sharing a vertex (axes 2,1)    ker(A_Z) dim  74  min eig of Dd on ker(A_Z) = -5.716e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.7354, V_Z = -0.4062, near-plaquette flux energy A_Z(V) = 9.87e-18, far flux energy 1.9897, Dd(V) = -2.8579e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -1.1773e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -6.4106e-18
+  gauge-fixed, Z = 1 bond, axis 2               comb tree (cut at Z)     slice dim  59, ker(A_Z) dim  55: min eig Dd -2.806e-02, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #0  slice dim  55, ker(A_Z) dim  51: min eig Dd -3.126e-01, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #1  slice dim  55, ker(A_Z) dim  51: min eig Dd -9.327e-02, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #2  slice dim  55, ker(A_Z) dim  51: min eig Dd -4.400e-01, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               comb tree (cut at Z)     slice dim  59, ker(A_Z) dim  55: min eig Dd -2.806e-02, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #0  slice dim  55, ker(A_Z) dim  51: min eig Dd -2.774e-01, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #1  slice dim  55, ker(A_Z) dim  51: min eig Dd -4.698e-01, inf Dd/A_N -1.628e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #2  slice dim  55, ker(A_Z) dim  51: min eig Dd -2.759e-15, inf Dd/A_N -1.278e-15 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #0  slice dim  55, ker(A_Z) dim  47: min eig Dd -4.722e-01, inf Dd/A_N -2.146e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #1  slice dim  55, ker(A_Z) dim  47: min eig Dd -2.962e-01, inf Dd/A_N -8.226e-02 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #2  slice dim  55, ker(A_Z) dim  47: min eig Dd -1.213e-01, inf Dd/A_N -2.146e-01 -> NO finite C
+
+=== L = 2, coarse side n = 4 (fine side 8) ===
+  ker(dc) dim 66 (expected n^3 + 2 = 66); |M N0| = 2.01e-14; M symmetric PSD: min eig -3.47e-14
+  A_min(single-bond flux 1): direct 2.43564066 vs (1/2)V^T M V 2.43564066; A_N = 2.0000
+  (a) Q = A_N - L A_min: eigenvalues of Qm in [-36.00000, 0.00000] (Q <= 0 iff max <= 0); Q/A_N in [-3.00000, -0.33333]  (Thm 64.1: >= -(L^2-1) = -3)
+  Z = 1 bond, axis 2                         ker(A_Z) dim 188  min eig of Dd on ker(A_Z) = -1.224e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5447, V_Z = -0.2858, near-plaquette flux energy A_Z(V) = -1.19e-17, far flux energy 2.6124, Dd(V) = -6.1201e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -3.8218e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.2604e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -1.3955e-02
+  Z = 1 bond, axis 1                         ker(A_Z) dim 188  min eig of Dd on ker(A_Z) = -1.224e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5447, V_Z = -0.2858, near-plaquette flux energy A_Z(V) = -9.92e-18, far flux energy 2.6124, Dd(V) = -6.1201e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -3.8218e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.2604e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -1.3955e-02
+  Z = 1 bond, axis 0                         ker(A_Z) dim 188  min eig of Dd on ker(A_Z) = -1.224e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5447, V_Z = -0.2858, near-plaquette flux energy A_Z(V) = 3.57e-17, far flux energy 2.6124, Dd(V) = -6.1201e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -3.8218e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.2604e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -1.3955e-02
+  Z = 2 bonds, collinear last axis           ker(A_Z) dim 184  min eig of Dd on ker(A_Z) = -1.381e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6146, V_Z = +0.0000, near-plaquette flux energy A_Z(V) = 1.23e-17, far flux energy 2.9125, Dd(V) = -6.9046e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -3.0083e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.2471e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -2.5638e-05
+  Z = 2 bonds sharing a vertex (axes 2,1)    ker(A_Z) dim 185  min eig of Dd on ker(A_Z) = -1.048e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5309, V_Z = -0.4732, near-plaquette flux energy A_Z(V) = 3.06e-18, far flux energy 2.3243, Dd(V) = -5.2402e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -2.8832e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.2476e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = +0.0000e+00
+  gauge-fixed, Z = 1 bond, axis 2               comb tree (cut at Z)     slice dim 138, ker(A_Z) dim 134: min eig Dd -4.965e-01, inf Dd/A_N -3.822e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #0  slice dim 129, ker(A_Z) dim 125: min eig Dd -9.324e-01, inf Dd/A_N -3.466e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #1  slice dim 129, ker(A_Z) dim 125: min eig Dd -5.626e-01, inf Dd/A_N -3.822e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #2  slice dim 129, ker(A_Z) dim 125: min eig Dd -7.445e-01, inf Dd/A_N -3.822e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               comb tree (cut at Z)     slice dim 138, ker(A_Z) dim 134: min eig Dd -4.965e-01, inf Dd/A_N -3.822e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #0  slice dim 129, ker(A_Z) dim 125: min eig Dd -9.755e-01, inf Dd/A_N -3.706e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #1  slice dim 129, ker(A_Z) dim 125: min eig Dd -9.723e-01, inf Dd/A_N -3.822e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #2  slice dim 129, ker(A_Z) dim 125: min eig Dd -7.456e-01, inf Dd/A_N -3.822e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #0  slice dim 129, ker(A_Z) dim 121: min eig Dd -7.818e-01, inf Dd/A_N -3.008e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #1  slice dim 129, ker(A_Z) dim 121: min eig Dd -9.008e-01, inf Dd/A_N -2.755e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #2  slice dim 129, ker(A_Z) dim 121: min eig Dd -9.561e-01, inf Dd/A_N -3.008e-01 -> NO finite C
+
+=== L = 3, coarse side n = 3 (fine side 9) ===
+  ker(dc) dim 29 (expected n^3 + 2 = 29); |M N0| = 7.78e-15; M symmetric PSD: min eig -2.52e-14
+  A_min(single-bond flux 1): direct 1.99569189 vs (1/2)V^T M V 1.99569189; A_N = 2.0000
+  (a) Q = A_N - L A_min: eigenvalues of Qm in [-23.68509, 0.00000] (Q <= 0 iff max <= 0); Q/A_N in [-2.63168, -0.80000]  (Thm 64.1: >= -(L^2-1) = -8)
+  Z = 1 bond, axis 2                         ker(A_Z) dim  77  min eig of Dd on ker(A_Z) = -8.460e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6611, V_Z = -0.2355, near-plaquette flux energy A_Z(V) = 1.80e-17, far flux energy 2.0467, Dd(V) = -4.2299e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -2.7253e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -4.7387e-18
+  Z = 1 bond, axis 1                         ker(A_Z) dim  77  min eig of Dd on ker(A_Z) = -8.460e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6611, V_Z = +0.2355, near-plaquette flux energy A_Z(V) = 1.31e-17, far flux energy 2.0467, Dd(V) = -4.2299e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -2.7253e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.1936e-17
+  Z = 1 bond, axis 0                         ker(A_Z) dim  77  min eig of Dd on ker(A_Z) = -8.460e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.6611, V_Z = -0.2355, near-plaquette flux energy A_Z(V) = 8.17e-18, far flux energy 2.0467, Dd(V) = -4.2299e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -2.7253e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.4299e-18
+  Z = 2 bonds, collinear last axis           ker(A_Z) dim  73  min eig of Dd on ker(A_Z) = -8.989e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.9335, V_Z = +0.3329, near-plaquette flux energy A_Z(V) = -8.07e-18, far flux energy 2.0801, Dd(V) = -4.4944e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -3.6155e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -1.8455e-17
+  Z = 2 bonds sharing a vertex (axes 2,1)    ker(A_Z) dim  74  min eig of Dd on ker(A_Z) = -9.237e-01  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.7188, V_Z = -0.4145, near-plaquette flux energy A_Z(V) = 3.33e-18, far flux energy 1.9717, Dd(V) = -4.6187e-01
+      flux confined to distance >= 1.0: inf Dd/A_flux = -1.9666e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.0716e-17
+  gauge-fixed, Z = 1 bond, axis 2               comb tree (cut at Z)     slice dim  59, ker(A_Z) dim  55: min eig Dd -5.906e-02, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #0  slice dim  55, ker(A_Z) dim  51: min eig Dd -5.089e-01, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #1  slice dim  55, ker(A_Z) dim  51: min eig Dd -1.673e-01, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #2  slice dim  55, ker(A_Z) dim  51: min eig Dd -7.012e-01, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               comb tree (cut at Z)     slice dim  59, ker(A_Z) dim  55: min eig Dd -5.906e-02, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #0  slice dim  55, ker(A_Z) dim  51: min eig Dd -4.509e-01, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #1  slice dim  55, ker(A_Z) dim  51: min eig Dd -7.569e-01, inf Dd/A_N -2.725e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #2  slice dim  55, ker(A_Z) dim  51: min eig Dd -4.379e-15, inf Dd/A_N -2.016e-15 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #0  slice dim  55, ker(A_Z) dim  47: min eig Dd -7.480e-01, inf Dd/A_N -3.615e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #1  slice dim  55, ker(A_Z) dim  47: min eig Dd -4.810e-01, inf Dd/A_N -1.416e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #2  slice dim  55, ker(A_Z) dim  47: min eig Dd -2.019e-01, inf Dd/A_N -3.615e-01 -> NO finite C
+
+=== L = 3, coarse side n = 4 (fine side 12) ===
+  ker(dc) dim 66 (expected n^3 + 2 = 66); |M N0| = 3.77e-14; M symmetric PSD: min eig -7.11e-15
+  A_min(single-bond flux 1): direct 2.15792453 vs (1/2)V^T M V 2.15792453; A_N = 2.0000
+  (a) Q = A_N - L A_min: eigenvalues of Qm in [-63.30960, 0.00000] (Q <= 0 iff max <= 0); Q/A_N in [-5.27580, -0.42105]  (Thm 64.1: >= -(L^2-1) = -8)
+  Z = 1 bond, axis 2                         ker(A_Z) dim 188  min eig of Dd on ker(A_Z) = -2.372e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5132, V_Z = -0.2999, near-plaquette flux energy A_Z(V) = -1.25e-17, far flux energy 2.6000, Dd(V) = -1.1859e+00
+      flux confined to distance >= 1.0: inf Dd/A_flux = -7.8673e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.8240e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -4.3643e-02
+  Z = 1 bond, axis 1                         ker(A_Z) dim 188  min eig of Dd on ker(A_Z) = -2.372e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5132, V_Z = -0.2999, near-plaquette flux energy A_Z(V) = 4.16e-18, far flux energy 2.6000, Dd(V) = -1.1859e+00
+      flux confined to distance >= 1.0: inf Dd/A_flux = -7.8673e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.8240e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -4.3643e-02
+  Z = 1 bond, axis 0                         ker(A_Z) dim 188  min eig of Dd on ker(A_Z) = -2.372e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5132, V_Z = +0.2999, near-plaquette flux energy A_Z(V) = -4.16e-18, far flux energy 2.6000, Dd(V) = -1.1859e+00
+      flux confined to distance >= 1.0: inf Dd/A_flux = -7.8673e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.8240e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -4.3643e-02
+  Z = 2 bonds, collinear last axis           ker(A_Z) dim 184  min eig of Dd on ker(A_Z) = -2.811e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5921, V_Z = -0.0000, near-plaquette flux energy A_Z(V) = 8.89e-18, far flux energy 2.8301, Dd(V) = -1.4053e+00
+      flux confined to distance >= 1.0: inf Dd/A_flux = -6.6093e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.7630e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = -1.4005e-04
+  Z = 2 bonds sharing a vertex (axes 2,1)    ker(A_Z) dim 185  min eig of Dd on ker(A_Z) = -2.026e+00  -> NO finite C
+      worst V (|V|=1): max|theta| = 0.5295, V_Z = -0.4985, near-plaquette flux energy A_Z(V) = -1.41e-18, far flux energy 2.3506, Dd(V) = -1.0128e+00
+      flux confined to distance >= 1.0: inf Dd/A_flux = -6.0778e-01
+      flux confined to distance >= 1.5: inf Dd/A_flux = -2.6869e-01
+      flux confined to distance >= 2.0: inf Dd/A_flux = +0.0000e+00
+  gauge-fixed, Z = 1 bond, axis 2               comb tree (cut at Z)     slice dim 138, ker(A_Z) dim 134: min eig Dd -1.003e+00, inf Dd/A_N -7.867e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #0  slice dim 129, ker(A_Z) dim 125: min eig Dd -1.767e+00, inf Dd/A_N -6.948e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #1  slice dim 129, ker(A_Z) dim 125: min eig Dd -1.166e+00, inf Dd/A_N -7.867e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 2               random spanning tree #2  slice dim 129, ker(A_Z) dim 125: min eig Dd -1.469e+00, inf Dd/A_N -7.867e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               comb tree (cut at Z)     slice dim 138, ker(A_Z) dim 134: min eig Dd -1.003e+00, inf Dd/A_N -7.867e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #0  slice dim 129, ker(A_Z) dim 125: min eig Dd -1.858e+00, inf Dd/A_N -7.564e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #1  slice dim 129, ker(A_Z) dim 125: min eig Dd -1.860e+00, inf Dd/A_N -7.867e-01 -> NO finite C
+  gauge-fixed, Z = 1 bond, axis 0               random spanning tree #2  slice dim 129, ker(A_Z) dim 125: min eig Dd -1.466e+00, inf Dd/A_N -7.867e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #0  slice dim 129, ker(A_Z) dim 121: min eig Dd -1.583e+00, inf Dd/A_N -6.609e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #1  slice dim 129, ker(A_Z) dim 121: min eig Dd -1.817e+00, inf Dd/A_N -5.890e-01 -> NO finite C
+  gauge-fixed, Z = 2 bonds, collinear last axis random spanning tree #2  slice dim 129, ker(A_Z) dim 121: min eig Dd -1.929e+00, inf Dd/A_N -6.609e-01 -> NO finite C

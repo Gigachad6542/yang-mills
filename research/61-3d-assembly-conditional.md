@@ -397,7 +397,14 @@ up to entropy. (b) Lower side. There is C_- > 0 with
 D_N(V|_Z) >= -C_- β_N A_Z(V) - e_ent|Z| log β_N on each large-field region Z
 (the entropy is that of the fibre near an explicit extension of V). Status: (a)
 **published**; (b) is **not in CMP 102**, whose lower bound (47) holds only
-on χ_k.
+on χ_k. [T80, note 67 §5: read as the relative form (R),
+D_N(V) - D_N(V^Z) >= -C_-β_NA_Z(V) - e_ent|Z| log β_N, (b) is **false** in the
+abelian Gaussian model (the Schur complement A_min couples Z to flux at every
+distance). The form that holds there, (I-LF)(b′), adds the tail
+-C_T β_N Σ_{c∈Z} Σ_{x∌Z} e^{-m d(x,c)} A_x(V^Z), m < 2m_w; in a small-field
+exterior it costs O(p²(g_k)) per bond of Z, which Lemma 6b.2 can absorb with
+one more condition on τ and with large-field regions closer than
+r_0 = m^{-1} log(2τC_T/c_1) merged. Lemma 6b.2 has not been redone with it.]
 
 #### 6b.3 Lemmas
 

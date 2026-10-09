@@ -1,0 +1,40 @@
+[check] L=2, n=3: Bloch gap 1.9336; max|M_bloch - M_real| = 2.04e-14 (convention A), 1.33e+00 (convention B); max imaginary part of the kernel 1.79e-15
+[check] L=3, n=3: Bloch gap 0.8341; max|M_bloch - M_real| = 6.22e-14 (convention A), 1.17e+00 (convention B); max imaginary part of the kernel 9.45e-15
+
+[sign of Q = A_N - L A_min, all momenta] Q^(k)/D^(k) on the transverse space
+  L=2: 4000 random k: Q/A_N in [-2.99709, -0.01075]; max eigenvalue of Q^(k) over all samples 1.7e-14 (0 = the gauge direction); least gap of H_K 1.5145; Theorem 64.1: Q/A_N >= -3
+        at the 7 nonzero corners k in {0,pi}^3: Q/A_N = [-1.00000,-1.00000], [-1.00000,-1.00000], [-3.00000,-1.00000], [-1.00000,-1.00000], [-3.00000,-1.00000], [-3.00000,-1.00000], [-3.00000,-3.00000]
+        small k along (1, 0, 0): max Q/A_N / |k|^2 = -0.12521, -0.12505, -0.12501   (limit -0.12500 = -(L-1)^2/L^3)
+        small k along (1, 1, 0): max Q/A_N / |k|^2 = -0.09379, -0.09376, -0.09375   (limit -0.12500 = -(L-1)^2/L^3)
+        small k along (1, 1, 1): max Q/A_N / |k|^2 = -0.10429, -0.10420, -0.10417   (limit -0.12500 = -(L-1)^2/L^3)
+  L=3: 4000 random k: Q/A_N in [-5.24297, -0.01277]; max eigenvalue of Q^(k) over all samples 2.6e-14 (0 = the gauge direction); least gap of H_K 0.6197; Theorem 64.1: Q/A_N >= -8
+        at the 7 nonzero corners k in {0,pi}^3: Q/A_N = [-1.45455,-1.45455], [-1.45455,-1.45455], [-5.02479,-1.57962], [-1.45455,-1.45455], [-5.02479,-1.57962], [-5.02479,-1.57962], [-5.27580,-5.27580]
+        small k along (1, 0, 0): max Q/A_N / |k|^2 = -0.14853, -0.14824, -0.14817   (limit -0.14815 = -(L-1)^2/L^3)
+        small k along (1, 1, 0): max Q/A_N / |k|^2 = -0.11127, -0.11115, -0.11112   (limit -0.14815 = -(L-1)^2/L^3)
+        small k along (1, 1, 1): max Q/A_N / |k|^2 = -0.12370, -0.12352, -0.12347   (limit -0.14815 = -(L-1)^2/L^3)
+
+[decay of the kernel Qm(r), Chebyshev radius r; max over the shell]
+  L=2, n=24:
+      r= 0: max|Qm(r)| = 5.6885e+00   ratio nan
+      r= 1: max|Qm(r)| = 1.8504e+00   ratio 0.3253
+      r= 2: max|Qm(r)| = 4.7724e-01   ratio 0.2579
+      r= 3: max|Qm(r)| = 8.1059e-02   ratio 0.1699
+      r= 4: max|Qm(r)| = 1.3751e-02   ratio 0.1696
+      r= 5: max|Qm(r)| = 2.3334e-03   ratio 0.1697
+      r= 6: max|Qm(r)| = 3.9595e-04   ratio 0.1697
+      r= 7: max|Qm(r)| = 6.7194e-05   ratio 0.1697
+      r= 8: max|Qm(r)| = 1.1404e-05   ratio 0.1697
+      r= 9: max|Qm(r)| = 1.9354e-06   ratio 0.1697
+      r=10: max|Qm(r)| = 3.2854e-07   ratio 0.1698
+      r=11: max|Qm(r)| = 5.6030e-08   ratio 0.1705
+      r=12: max|Qm(r)| = 1.1123e-08   ratio 0.1985
+      asymptotic ratio 0.1697 -> decay rate m_w = 1.7736 per coarse unit; 2 m_w = 3.5472
+  L=3, n=12:
+      r= 0: max|Qm(r)| = 8.7762e+00   ratio nan
+      r= 1: max|Qm(r)| = 3.0018e+00   ratio 0.3420
+      r= 2: max|Qm(r)| = 8.4060e-01   ratio 0.2800
+      r= 3: max|Qm(r)| = 1.8287e-01   ratio 0.2176
+      r= 4: max|Qm(r)| = 3.9790e-02   ratio 0.2176
+      r= 5: max|Qm(r)| = 8.7394e-03   ratio 0.2196
+      r= 6: max|Qm(r)| = 2.6896e-03   ratio 0.3078
+      asymptotic ratio 0.2176 -> decay rate m_w = 1.5253 per coarse unit; 2 m_w = 3.0505

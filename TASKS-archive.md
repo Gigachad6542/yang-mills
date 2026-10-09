@@ -783,6 +783,35 @@ Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
   minimizers move by O(delta) in energy norm when forms and constraints move by delta. Prop. 2: (NA♭) in energy form from (I1) flat
   coercivity, (I2) CMP 102b sup bounds and (I3) a small multiplier term, avoiding the unproved CMP 102b (190) and Schur's test.
 
+## Completed in lean mode (from 2026-10-09)
+
+### T80 [counterexample] — **completed 2026-10-09** (Sonnet worker, lead-reviewed); rescoped (see the lead's note at the end of this entry); assigned to Sonnet, 2026-10-08: the equipartition bound (EQ') for the fibre Gibbs measure (note 64 §7.4-7.5)
+Scope: a new note `research/67-fibre-equipartition.md`, plus
+`research/scripts/t80_*.py`. (T79 edits note 64 §8 in parallel; do not edit note 64.)
+T77 reduced the Z-local bound (R), hence (I-LF)(b) of note 61 §6b, to (EQ'):
+E_{μ_{V'}}[β_{N+1} A_q] <= C_A for every fine plaquette q near Z, uniformly in
+N, in β_{N+1} >= β_*(L), and in the coarse configuration V' (μ_{V'} is the
+Wilson Gibbs measure on the fibre q(U) = V' of Balaban's average). Its
+log-convexity route (Lemma 64.6) stalls at a lower bound for the fibre
+partition function with a rough outside. Try an integration-by-parts
+(Ward-identity) route instead: parametrize the fibre by U_rest with the
+private links b(U_rest) determined (note 53 Lemma 1, Theorems 2, 4), take a
+left-invariant vector field on one free link ℓ, and integrate by parts against
+the fibre density. For the Wilson action this gives
+E[β² |∇_ℓ A|²] = E[β Δ_ℓ A] + (terms from ∇_ℓ b and ∇_ℓ log J), and
+Δ_ℓ(1 - ½ tr U_p) is a bounded multiple of ½ tr U_p. Bound the extra terms by
+note 53's Jacobian bounds and Lemma 64.2. Then pass from the gradient bound
+(which controls sin² of the plaquette angle) to A_q itself, handling angles
+near π separately (for example by a large-deviation bound at that plaquette).
+Gauge zero modes (note 64 §7.5) must be handled: work with gauge-invariant
+quantities only.
+Done when: (EQ') is proved with explicit C_A, or a `failed-attempt` names the
+step (and says whether the boundary terms or the near-π angles are the
+obstruction).
+Partial work: `wip/round-2026-10-08/t80/` (scripts only).
+Lead, 2026-10-09 (rescope): the salvaged `t80_abelian_fibre.py` shows that (EQ') as stated is false (abelian Gaussian fibre: E[βA_q] = βθ_cl²/2 + O(1), unbounded in β when V' has coarse flux near q), and that G_η of Prop. 64.3 at the classical minimizer exceeds the slack (1-η)L² - 1 by factors 10²-10⁴. New scope: write these up (counterexample), then decide (R) itself in the abelian Gaussian model, where D_N = β_N(A_N - L A_min) + const exactly: is Q - P_ZᵀQP_Z + C A_Z ⪰ 0 for a finite C, and which Z-local form of (R) holds.
+Verdict (lead review): accepted, with one sentence of note 67 §3.4 corrected by the lead. Note 67: (EQ') and (EQ) are false as stated (exact Gaussian fibre, Prop. 67.1); Prop. 64.3's G_η route misses the slack by 10²-10⁴; (R) with a Z-local right-hand side is false in the abelian Gaussian model (Prop. 67.3: the column of the Schur complement A_min at c is not finite-range; explicit V with A_Z(V) = 0 and D = -0.234θ²β_N at L = 2, checked by brute force); the corrected form with an exponentially decaying tail holds there (Prop. 67.5; C_near = 2.84, C_T(2) = 8.8 at L = 2). Q = A_N - L A_min <= 0 numerically, with Theorem 64.1's L² - 1 sharp at L = 2. Follow-up: T81.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

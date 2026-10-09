@@ -22,6 +22,15 @@ Status:
   equipartition bound (EQ) on local loops under the fibre Gibbs measure, via an
   exact transport identity (Theorem 64.2). (EQ) is not proved. The claim in §5
   that local transport fails is corrected in §7.
+- **Update (T80, note 67).** (EQ') and (EQ) of §7.4 are **false** as stated
+  (exact abelian Gaussian fibre: the classical part of E[β_{N+1}A_q] grows
+  linearly in β_{N+1} when V' has coarse flux near q), and G_η at the
+  classical minimizer exceeds the slack of Prop. 64.3 by factors 10²-10⁴, so
+  the route of §7.4 cannot close (R). Moreover **(R) itself, with a Z-local
+  right-hand side, is false in the abelian Gaussian model** (note 67 §3); the
+  form that holds there has an exponentially decaying tail of the coarse
+  energy of V^Z away from Z (note 67 Prop. 67.5, (I-LF)(b′)). In the same
+  model the coefficient L² - 1 of Theorem 64.1 is sharp for L = 2.
 
 Script: `research/scripts/t74_extension_check.py`, output
 `research/scripts/t74_extension_check.out`. Every number below is printed
@@ -587,6 +596,8 @@ type bound on local loops) plus the approximate transport for axes 1, 2, and
 no longer a matched Gaussian evaluation of two partition functions.
 
 Status labels: Lemma 64.4, 64.5a, 64.5, 64.6, Theorem 64.2, Proposition 64.3:
-**proved here** (last axis). (EQ), (EQ'): **open** (target). (R): **conditional
+**proved here** (last axis). (EQ), (EQ'): **open** (target) [superseded:
+**false** as stated, note 67 §1 (T80); (R) is false in the abelian Gaussian
+model, note 67 §3]. (R): **conditional
 reduction** on (EQ) for last-axis Z; **open** otherwise. Note 61 §6b.2
 (I-LF)(b): **not discharged**.

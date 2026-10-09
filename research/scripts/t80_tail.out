@@ -1,0 +1,147 @@
+[brute force, L=2, n=4] q = -5.74256, Q_bc = 1.68987; D(t) = (1/2)|q|t^2 + t Q_bc against the fine-lattice solver:
+    t = -0.40: A_Z(V) = 0.0e+00, D(V) = -0.216541, formula -0.216541
+    t = -0.20: A_Z(V) = 0.0e+00, D(V) = -0.223122, formula -0.223122
+    t = +0.00: A_Z(V) = 0.0e+00, D(V) = +0.000000, formula +0.000000
+    t = +0.10: A_Z(V) = 0.0e+00, D(V) = +0.197699, formula +0.197699
+    t = +0.30: A_Z(V) = 0.0e+00, D(V) = +0.765375, formula +0.765375
+    t* = -0.29427: D = -0.24864
+[brute force, L=3, n=3] q = -7.97415, Q_bc = 2.03032; D(t) = (1/2)|q|t^2 + t Q_bc against the fine-lattice solver:
+    t = -0.40: A_Z(V) = 0.0e+00, D(V) = -0.174195, formula -0.174195
+    t = -0.20: A_Z(V) = 0.0e+00, D(V) = -0.246581, formula -0.246581
+    t = +0.00: A_Z(V) = 0.0e+00, D(V) = +0.000000, formula +0.000000
+    t = +0.10: A_Z(V) = 0.0e+00, D(V) = +0.242903, formula +0.242903
+    t = +0.30: A_Z(V) = 0.0e+00, D(V) = +0.967932, formula +0.967932
+    t* = -0.25461: D = -0.25847
+[formula] L=2, n=4: max error of (i) 1.24e-14, of (ii) 2.22e-15 (20 random V each); q = -5.74256
+[formula] L=3, n=4: max error of (i) 3.20e-14, of (ii) 7.11e-15 (20 random V each); q = -8.94755
+
+[explicit counterexample, L=2] q = Q_cc = -5.68846; V = e_b + t d(lambda_head(c)), A_Z(V) = 0, min_t D = -Q_bc^2/(2|q|):
+    b at Chebyshev distance 1 from c, best b = ((0, 0, 1), 2): Q_bc = +1.631734, t* = -0.286850, min D = -2.340e-01
+    b at Chebyshev distance 2 from c, best b = ((15, 0, 2), 0): Q_bc = -0.477237, t* = +0.083896, min D = -2.002e-02
+    b at Chebyshev distance 3 from c, best b = ((15, 0, 3), 0): Q_bc = +0.081059, t* = -0.014250, min D = -5.775e-04
+    b at Chebyshev distance 4 from c, best b = ((12, 0, 0), 0): Q_bc = +0.013751, t* = -0.002417, min D = -1.662e-05
+    b at Chebyshev distance 5 from c, best b = ((0, 11, 0), 1): Q_bc = -0.002333, t* = +0.000410, min D = -4.786e-07
+    b at Chebyshev distance 6 from c, best b = ((0, 10, 0), 1): Q_bc = +0.000396, t* = -0.000070, min D = -1.378e-08
+
+[explicit counterexample, L=3] q = Q_cc = -8.77619; V = e_b + t d(lambda_head(c)), A_Z(V) = 0, min_t D = -Q_bc^2/(2|q|):
+    b at Chebyshev distance 1 from c, best b = ((0, 0, 1), 2): Q_bc = +2.761571, t* = -0.314666, min D = -4.345e-01
+    b at Chebyshev distance 2 from c, best b = ((0, 11, 2), 1): Q_bc = -0.840597, t* = +0.095781, min D = -4.026e-02
+    b at Chebyshev distance 3 from c, best b = ((0, 0, 3), 1): Q_bc = -0.182873, t* = +0.020837, min D = -1.905e-03
+    b at Chebyshev distance 4 from c, best b = ((0, 0, 4), 1): Q_bc = +0.039790, t* = -0.004534, min D = -9.020e-05
+    b at Chebyshev distance 5 from c, best b = ((7, 0, 0), 0): Q_bc = -0.008739, t* = +0.000996, min D = -4.351e-06
+    b at Chebyshev distance 6 from c, best b = ((0, 0, 6), 2): Q_bc = -0.002690, t* = +0.000306, min D = -4.121e-07
+[explicit constants, L=2, n=6]  (C_near, C_T) for m = 0.0: (2.845, 0.669), 1.0: (2.845, 2.260), 2.0: (2.845, 9.043), 3.0: (2.845, 49.309);  C_0 = |q|/4 = 1.4225;  N_m = sum_far exp(-m d) = 0.0: 644.00, 1.0: 81.73, 2.0: 16.22, 3.0: 4.87
+[explicit constants, L=2, n=8]  (C_near, C_T) for m = 0.0: (2.844, 0.664), 1.0: (2.844, 2.225), 2.0: (2.844, 8.826), 3.0: (2.844, 52.927);  C_0 = |q|/4 = 1.4221;  N_m = sum_far exp(-m d) = 0.0: 1532.00, 1.0: 108.75, 2.0: 17.14, 3.0: 4.91
+[explicit constants, L=3, n=6]  (C_near, C_T) for m = 0.0: (4.392, 1.317), 1.0: (4.392, 4.677), 2.0: (4.392, 21.091), 3.0: (4.392, 142.288);  C_0 = |q|/4 = 2.1960;  N_m = sum_far exp(-m d) = 0.0: 644.00, 1.0: 81.73, 2.0: 16.22, 3.0: 4.87
+[explicit constants, L=3, n=8]  (C_near, C_T) for m = 0.0: (4.388, 1.296), 1.0: (4.388, 4.531), 2.0: (4.388, 20.629), 3.0: (4.388, 180.944);  C_0 = |q|/4 = 2.1941;  N_m = sum_far exp(-m d) = 0.0: 1532.00, 1.0: 108.75, 2.0: 17.14, 3.0: 4.91
+
+--- L=2, n=6, Z = {(0,0,0) last axis}: Qm_cc = q = -5.68992, C_0(1 bond) = |q|/4 = 1.42248  (setup 0.1s)
+    Q <= 0 on this torus: max eig Qm = 1.20e-14
+    violation per unit far-flux energy,  kappa(r) = sup -D/A_flux (flux at distance >= r):
+        r >=  1.0: kappa = 3.34576e-01
+        r >=  1.5: kappa = 9.17521e-02  ratio 0.2742
+        r >=  2.0: kappa = 1.07921e-02  ratio 0.1176
+        r >=  2.5: kappa = 3.46066e-03  ratio 0.3207
+        r >=  3.0: kappa = 3.96592e-04  ratio 0.1146
+    LP: ell_* = sup w^T V (|theta_far| <= 1, near flux 0, V_c = 0) = 7.29617;  small-field loss Lambda = ell_*^2/(2|q|) = 4.67793   [beta*D >= -Lambda p^2 when beta*theta_x^2 <= p^2 at every far plaquette]
+    least C_T with  D + C A_Z + C_T T_m >= 0   (T_m weight e^{-m d}):
+        m \ C         1.43        1.50        2.00        3.00        6.00       20.00
+         0.00     63.6262      6.4740      1.1587      0.6363      0.4385      0.3602
+         1.00    214.9161     21.8679      3.9137      2.1492      1.4813      1.2167
+         2.00    859.8518     87.4908     15.6583      8.5986      5.9266      4.8677
+         3.00   4688.5588    477.0656     85.3811     46.8862     32.3161     26.5424
+         3.40  10408.7902   1059.1049    189.5495    104.0892     71.7431     58.9253
+         3.80  24833.2937   2526.8128    452.2271    248.3361    171.1648    140.5839
+
+--- L=2, n=8, Z = {(0,0,0) last axis}: Qm_cc = q = -5.68850, C_0(1 bond) = |q|/4 = 1.42213  (setup 0.3s)
+    Q <= 0 on this torus: max eig Qm = 1.94e-14
+    violation per unit far-flux energy,  kappa(r) = sup -D/A_flux (flux at distance >= r):
+        r >=  1.0: kappa = 3.32097e-01
+        r >=  1.5: kappa = 8.96498e-02  ratio 0.2700
+        r >=  2.0: kappa = 9.47324e-03  ratio 0.1057
+        r >=  2.5: kappa = 2.53298e-03  ratio 0.2674
+        r >=  3.0: kappa = 3.08281e-04  ratio 0.1217
+        r >=  3.5: kappa = 9.79947e-05  ratio 0.3179
+        r >=  4.0: kappa = 1.14206e-05  ratio 0.1165
+    LP: ell_* = sup w^T V (|theta_far| <= 1, near flux 0, V_c = 0) = 7.30746;  small-field loss Lambda = ell_*^2/(2|q|) = 4.69359   [beta*D >= -Lambda p^2 when beta*theta_x^2 <= p^2 at every far plaquette]
+    least C_T with  D + C A_Z + C_T T_m >= 0   (T_m weight e^{-m d}):
+        m \ C         1.43        1.50        2.00        3.00        6.00       20.00
+         0.00     60.3074      6.3968      1.1494      0.6314      0.4353      0.3575
+         1.00    202.0005     21.4261      3.8498      2.1149      1.4579      1.1975
+         2.00    801.3479     84.9985     15.2726      8.3901      5.7837      4.7506
+         3.00   4805.6146    509.7285     91.5883     50.3144     34.6842     28.4890
+         3.40  12237.1349   1297.9852    233.2227    128.1219     88.3206     72.5452
+         3.80  36409.8572   3861.9706    693.9211    381.2085    262.7853    215.8479
+
+--- L=2, n=8, Z = two collinear last-axis bonds: Qm_cc = q = -5.68850, C_0(1 bond) = |q|/4 = 1.42213  (setup 0.3s)
+    Q <= 0 on this torus: max eig Qm = 1.94e-14
+    violation per unit far-flux energy,  kappa(r) = sup -D/A_flux (flux at distance >= r):
+        r >=  1.0: kappa = 2.26577e-01
+        r >=  1.5: kappa = 9.53945e-02  ratio 0.4210
+        r >=  2.0: kappa = 6.49232e-03  ratio 0.0681
+        r >=  2.5: kappa = 2.76574e-03  ratio 0.4260
+        r >=  3.0: kappa = 2.43084e-04  ratio 0.0879
+        r >=  3.5: kappa = 9.84436e-05  ratio 0.4050
+        r >=  4.0: kappa = 3.36818e-12  ratio 0.0000
+    least C_T with  D + C A_Z + C_T T_m >= 0   (T_m weight e^{-m d}):
+        m \ C         1.43        1.50        2.00        3.00        6.00       20.00
+         0.00         inf         inf      2.6667      0.5810      0.3260      0.2494
+         1.00         inf         inf      9.7087      2.1153      1.1869      0.9080
+         2.00         inf         inf     41.8999      9.1288      5.1224      3.9186
+         3.00         inf         inf    259.2977     56.4934     31.6999     24.2500
+         3.40         inf         inf    637.1953    138.8262     77.8991     59.5918
+         3.80         inf         inf   1757.8288    382.9795    214.8999    164.3957
+
+--- L=3, n=6, Z = {(0,0,0) last axis}: Qm_cc = q = -8.78380, C_0(1 bond) = |q|/4 = 2.19595  (setup 0.9s)
+    Q <= 0 on this torus: max eig Qm = 2.85e-14
+    violation per unit far-flux energy,  kappa(r) = sup -D/A_flux (flux at distance >= r):
+        r >=  1.0: kappa = 6.58702e-01
+        r >=  1.5: kappa = 1.96429e-01  ratio 0.2982
+        r >=  2.0: kappa = 3.62623e-02  ratio 0.1846
+        r >=  2.5: kappa = 1.27583e-02  ratio 0.3518
+        r >=  3.0: kappa = 2.01376e-03  ratio 0.1578
+    LP: ell_* = sup w^T V (|theta_far| <= 1, near flux 0, V_c = 0) = 14.22907;  small-field loss Lambda = ell_*^2/(2|q|) = 11.52499   [beta*D >= -Lambda p^2 when beta*theta_x^2 <= p^2 at every far plaquette]
+    least C_T with  D + C A_Z + C_T T_m >= 0   (T_m weight e^{-m d}):
+        m \ C         2.20        3.00        5.00        8.00       20.00
+         0.00    357.8179      2.4577      1.1746      0.9079      0.7399
+         1.00   1270.3608      8.7255      4.1700      3.2234      2.6270
+         2.00   5728.4549     39.3462     18.8039     14.5353     11.8461
+         3.00  38646.6266    265.4464    126.8595     98.0613     79.9190
+         3.40  94405.1021    648.4265    309.8895    239.5418    195.2242
+
+--- L=3, n=8, Z = {(0,0,0) last axis}: Qm_cc = q = -8.77654, C_0(1 bond) = |q|/4 = 2.19414  (setup 2.3s)
+    Q <= 0 on this torus: max eig Qm = 2.80e-14
+    violation per unit far-flux energy,  kappa(r) = sup -D/A_flux (flux at distance >= r):
+        r >=  1.0: kappa = 6.47794e-01
+        r >=  1.5: kappa = 1.87468e-01  ratio 0.2894
+        r >=  2.0: kappa = 3.04787e-02  ratio 0.1626
+        r >=  2.5: kappa = 8.98223e-03  ratio 0.2947
+        r >=  3.0: kappa = 1.70205e-03  ratio 0.1895
+        r >=  3.5: kappa = 5.95191e-04  ratio 0.3497
+        r >=  4.0: kappa = 9.51007e-05  ratio 0.1598
+    LP: ell_* = sup w^T V (|theta_far| <= 1, near flux 0, V_c = 0) = 14.26964;  small-field loss Lambda = ell_*^2/(2|q|) = 11.60038   [beta*D >= -Lambda p^2 when beta*theta_x^2 <= p^2 at every far plaquette]
+    least C_T with  D + C A_Z + C_T T_m >= 0   (T_m weight e^{-m d}):
+        m \ C         2.20        3.00        5.00        8.00       20.00
+         0.00    243.0268      2.4116      1.1544      0.8926      0.7276
+         1.00    849.9685      8.4342      4.0373      3.1218      2.5448
+         2.00   3869.5380     38.3974     18.3800     14.2123     11.5853
+         3.00  33941.5262    336.8012    161.2195    124.6629    101.6205
+         3.40  105974.1447   1051.5798    503.3687    389.2297    317.2852
+
+--- L=3, n=8, Z = two collinear last-axis bonds: Qm_cc = q = -8.77654, C_0(1 bond) = |q|/4 = 2.19414  (setup 2.2s)
+    Q <= 0 on this torus: max eig Qm = 2.80e-14
+    violation per unit far-flux energy,  kappa(r) = sup -D/A_flux (flux at distance >= r):
+        r >=  1.0: kappa = 4.69797e-01
+        r >=  1.5: kappa = 2.01437e-01  ratio 0.4288
+        r >=  2.0: kappa = 2.22213e-02  ratio 0.1103
+        r >=  2.5: kappa = 9.87665e-03  ratio 0.4445
+        r >=  3.0: kappa = 1.42559e-03  ratio 0.1443
+        r >=  3.5: kappa = 5.81622e-04  ratio 0.4080
+        r >=  4.0: kappa = 7.14769e-11  ratio 0.0000
+    least C_T with  D + C A_Z + C_T T_m >= 0   (T_m weight e^{-m d}):
+        m \ C         2.20        3.00        5.00        8.00       20.00
+         0.00         inf     12.2157      1.1104      0.7347      0.5490
+         1.00         inf     46.2281      4.2022      2.7804      2.0775
+         2.00         inf    225.2535     20.4760     13.5480     10.1229
+         3.00         inf   1865.3434    169.5634    112.1920     83.8288
+         3.40         inf   5309.9258    482.6828    319.3682    238.6288

@@ -50,31 +50,16 @@ sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read the T71 draft first: it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 
-### T80 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09, **rescoped** (see the lead's note at the end of this entry); assigned to Sonnet, 2026-10-08: the equipartition bound (EQ') for the fibre Gibbs measure (note 64 §7.4-7.5)
-Scope: a new note `research/67-fibre-equipartition.md`, plus
-`research/scripts/t80_*.py`. (T79 edits note 64 §8 in parallel; do not edit note 64.)
-T77 reduced the Z-local bound (R), hence (I-LF)(b) of note 61 §6b, to (EQ'):
-E_{μ_{V'}}[β_{N+1} A_q] <= C_A for every fine plaquette q near Z, uniformly in
-N, in β_{N+1} >= β_*(L), and in the coarse configuration V' (μ_{V'} is the
-Wilson Gibbs measure on the fibre q(U) = V' of Balaban's average). Its
-log-convexity route (Lemma 64.6) stalls at a lower bound for the fibre
-partition function with a rough outside. Try an integration-by-parts
-(Ward-identity) route instead: parametrize the fibre by U_rest with the
-private links b(U_rest) determined (note 53 Lemma 1, Theorems 2, 4), take a
-left-invariant vector field on one free link ℓ, and integrate by parts against
-the fibre density. For the Wilson action this gives
-E[β² |∇_ℓ A|²] = E[β Δ_ℓ A] + (terms from ∇_ℓ b and ∇_ℓ log J), and
-Δ_ℓ(1 - ½ tr U_p) is a bounded multiple of ½ tr U_p. Bound the extra terms by
-note 53's Jacobian bounds and Lemma 64.2. Then pass from the gradient bound
-(which controls sin² of the plaquette angle) to A_q itself, handling angles
-near π separately (for example by a large-deviation bound at that plaquette).
-Gauge zero modes (note 64 §7.5) must be handled: work with gauge-invariant
-quantities only.
-Done when: (EQ') is proved with explicit C_A, or a `failed-attempt` names the
-step (and says whether the boundary terms or the near-π angles are the
-obstruction).
-Partial work: `wip/round-2026-10-08/t80/` (scripts only).
-Lead, 2026-10-09 (rescope): the salvaged `t80_abelian_fibre.py` shows that (EQ') as stated is false (abelian Gaussian fibre: E[βA_q] = βθ_cl²/2 + O(1), unbounded in β when V' has coarse flux near q), and that G_η of Prop. 64.3 at the classical minimizer exceeds the slack (1-η)L² - 1 by factors 10²-10⁴. New scope: write these up (counterexample), then decide (R) itself in the abelian Gaussian model, where D_N = β_N(A_N - L A_min) + const exactly: is Q - P_ZᵀQP_Z + C A_Z ⪰ 0 for a finite C, and which Z-local form of (R) holds.
+### T81 [proof] — open, posted 2026-10-09 by the lead: Lemma 6b.2 of note 61 under the corrected large-field bound (I-LF)(b′) (note 67 §5)
+Scope: `research/61-3d-assembly-conditional.md`, a new §6e only (do not rewrite §6b).
+T80 showed that (I-LF)(b) in its relative reading (R) is false in the abelian
+Gaussian model and that what holds there is (I-LF)(b′):
+D_N(V) - D_N(V^Z) >= -C_- β_N A_Z(V) - C_T β_N Σ_{c∈Z} Σ_{x∌Z} e^{-m d(x,c)} A_x(V^Z) - e_ent|Z| log β_N
+(note 67 Prop. 67.5, §5). Redo Lemma 6b.2 (note 61 lines 449-470 and what follows) with (I-LF)(b′) as the hypothesis:
+(1) the σ = -τ bound with the tail; (2) the tail in a small-field exterior (β_N A_x <= p²/2: tail <= ½C_T N_m p² per bond);
+(3) large-field regions at distance < r_0 merged into one polymer, and the polymer factorization with the new connectivity radius;
+(4) the resulting s_0^{LF} with explicit dependence on C_T, N_m, m, c_1. Say whether the KP summation of note 49 §6 still closes with the larger radius.
+Done when: Lemma 6b.2′ is proved from (I-LF)(a), (I-LF)(b′) and Lemma 6b.1, or a `failed-attempt` names the step (e.g. the merged polymers' entropy against p²).
 
 ### T79 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t79_center_obstruction.py` salvaged): exact fibre transport for all three bond axes (note 64 §7.5)
 Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.
@@ -94,6 +79,7 @@ obstruction and the best approximate map with an explicit Jacobian bound.
 Done when: Theorem 64.2 holds for all axes, or a `failed-attempt` with the
 obstruction.
 Partial work: `wip/round-2026-10-08/t79/` (scripts only).
+Lead, 2026-10-09: after T80 (note 67) the route of Prop. 64.3 via (EQ) is closed, but Theorem 64.2 for all axes is still what (I-LF)(b′) for SU(2) needs (note 67 §5).
 
 ### T78 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
 Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.

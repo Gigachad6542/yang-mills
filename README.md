@@ -210,8 +210,11 @@ must be controlled polymer by polymer.
     (Theorem 64.1, explicit constants) and an exact fibre-transport identity
     for bonds in the last contour axis (Theorem 64.2, T77), which reduces
     the needed Z-local bound (R) to an equipartition bound (EQ') for the
-    fibre Gibbs measure. (EQ') (T80) and the other two bond axes (T79) are
-    open.
+    fibre Gibbs measure. T80 (note 67) showed that (EQ') is false as stated,
+    and that (R) with a Z-local right-hand side is false in the abelian
+    Gaussian model; the form that holds there has an exponentially decaying
+    tail, (I-LF)(b′), which Lemma 6b.2 would need to absorb (not yet redone).
+    (I-LF)(b′) for SU(2) and the other two bond axes (T79) are open.
 
 So M1-3D stays a **conditional reduction**. (NA♭) and (A_s) are supported
 readings; (H4) is supported at the level of the inductive assumptions; (L_s)
@@ -310,6 +313,7 @@ reading.
 - `research/61-3d-assembly-conditional.md` -- The 3D assembly: H3D-1 from single-step bounds, written out (conditional)
 - `research/63-na-energy-perturbation.md` -- (NA♭) in the energy norm without CMP 102b (190): a constrained-minimizer perturbation lemma
 - `research/64-large-field-lower-bound.md` -- The large-field lower bound for the one-step defect D_N: an absolute bound, and an exact fibre transport reducing the Z-local form to equipartition
+- `research/67-fibre-equipartition.md` -- (EQ') is false; the Z-local relative bound (R) fails in the abelian Gaussian model; the corrected form with an exponentially decaying tail (T80)
 - `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm
