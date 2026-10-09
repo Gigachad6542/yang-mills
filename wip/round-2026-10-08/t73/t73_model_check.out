@@ -1,0 +1,4 @@
+d=2 M=2 L=2 n0=2 N=8: rel|H C_L H^T - (G_QLM - G_QM)|=1.6e-15  rel|G_QLM - G_QM - (R_M - R_LM)|=2.2e-16  rel|Q_LM Gamma|=2.9e-16  rank=12 (expected 12)  min eig=-3.3e-16
+d=2 M=2 L=3 n0=2 N=12: rel|H C_L H^T - (G_QLM - G_QM)|=1.7e-15  rel|G_QLM - G_QM - (R_M - R_LM)|=1.7e-16  rel|Q_LM Gamma|=2.0e-16  rank=32 (expected 32)  min eig=-7.7e-16
+d=2 M=3 L=2 n0=2 N=12: rel|H C_L H^T - (G_QLM - G_QM)|=2.5e-15  rel|G_QLM - G_QM - (R_M - R_LM)|=3.8e-16  rel|Q_LM Gamma|=2.1e-16  rank=12 (expected 12)  min eig=-7.7e-16
+d=2 M=2 L=2 n0=3 N=12: rel|H C_L H^T - (G_QLM - G_QM)|=2.2e-15  rel|G_QLM - G_QM - (R_M - R_LM)|=2.3e-16  rel|Q_LM Gamma|=3.4e-16  rank=27 (expected 27)  min eig=-5.5e-16

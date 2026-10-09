@@ -1,0 +1,130 @@
+T71 scalar checks (see header of this file for scope)
+3D flow: g_j^2 = g^2 L^(j-K), lam_j = log g_j^-2 = lam_K + (K-j) log L (CMP 109 p. 259)
+
+[Part A] g tiny (lam_K = 400): L=2, beta0=0.1, p=2, p0=10, r=2, lam_K=log g^-2=400.0, K=60
+   (2.6a) g_n <= (1+b0)(n-m)^(1/2) g_m              violated for  1830 of  1830 pairs (m<n); smallest violating n-m = 1
+   (2.6b) g_m <= (1+b0) g_n                         violated for     0 of  1830 pairs (m<n)
+   (2.7a) lam_n^p <= (1+b0) lam_m^p                 violated for     0 of  1830 pairs (m<n)
+   (2.7b) lam_m^p <= (1+b0)(n-m)^b0 lam_n^p         violated for     0 of  1830 pairs (m<n)
+   (2.8a) eps_n <= (1+b0)(n-m)^(1/2) eps_m          violated for  1830 of  1830 pairs (m<n); smallest violating n-m = 1
+   (2.8b) eps_m <= (1+b0)^2 (n-m)^b0 eps_n          violated for     0 of  1830 pairs (m<n)
+   (2.9a) R_n <= L R_m                              violated for     0 of  1830 pairs (m<n)
+   (2.9b) R_m <= (L+1)(n-m)^b0 R_n                  violated for     0 of  1830 pairs (m<n)
+   3D replacements: max log[g_n/(L^((n-m)/2) g_m)] = 3.020e-14 (0 means equality), max log[eps_n/(L^((n-m)/2) eps_m)] = -1.571e-02 (<= 0), max log[(lam_m/lam_n)^p / L^(n-m)] = -6.897e-01 (<= 0)
+   single step eps_(k+1)/eps_k over k=0..K-1: min 1.3899, max 1.3922; L^(1/2) = 1.4142; (1+beta0) = 1.1000
+   single step g_(k+1)/g_k = 1.414214 .. 1.414214 (= L^(1/2) exactly)
+   (2.7b) at (m,n)=(0,K), p=2, lam_K=400.0: first failing K = 215
+   (2.7b) at (m,n)=(0,K), p=20, lam_K=400.0: first failing K = 10
+   (2.7b) at (m,n)=(0,K), p=2, lam_K=4000.0: first failing K = 3306
+   (2.9b) at (m,n)=(0,K), r=2, lam_K=400.0: first failing K = 901
+   (2.9b) at (m,n)=(0,K), r=2, lam_K=4000.0: first failing K = 6048
+   3D (2.8b) with room (eps_m <= eps_n) holds when lam_n >= 2 p0, since 1+x <= e^x:
+     p0=10, L=2, lam_n=2 p0=20.0: max_s log[eps_m/eps_n] = -5.8704e-03 (<= 0)
+     p0=10, L=3, lam_n=2 p0=20.0: max_s log[eps_m/eps_n] = -1.4556e-02 (<= 0)
+
+[Part B] constant in (3.8):  rho/L^2 + 2/5 < 1  (2/10 (1+4/10 eps_k) <= 4/10 as printed)
+   4D as printed: rho = 2(1+beta0)  (2(1+b0)L^-2 + 4/10 < 1)
+     L=2: 2(1+b0)/L^2 + 2/5 = 19/20 = 0.9500  <1: True
+     L=3: 2(1+b0)/L^2 + 2/5 = 29/45 = 0.6444  <1: True
+     L=4: 2(1+b0)/L^2 + 2/5 = 43/80 = 0.5375  <1: True
+     L=5: 2(1+b0)/L^2 + 2/5 = 61/125 = 0.4880  <1: True
+     L=6: 2(1+b0)/L^2 + 2/5 = 83/180 = 0.4611  <1: True
+     L=8: 2(1+b0)/L^2 + 2/5 = 139/320 = 0.4344  <1: True
+   3D replacement: eps_(k+1) <= L^(1/2) eps_k  =>  rho = L^(1/2)(1+beta0)
+     condition (1+b0) < (3/5) L^(3/2)  <=>  (1+b0)^2 < (9/25) L^3  <=>  900 L^3 > 3025 (exact, b0=1/10)
+     L=2: 900 L^3 = 7200 > 3025: True;  (1+b0) L^(-3/2) + 2/5 = 0.7889
+     L=3: 900 L^3 = 24300 > 3025: True;  (1+b0) L^(-3/2) + 2/5 = 0.6117
+     L=4: 900 L^3 = 57600 > 3025: True;  (1+b0) L^(-3/2) + 2/5 = 0.5375
+     L=5: 900 L^3 = 112500 > 3025: True;  (1+b0) L^(-3/2) + 2/5 = 0.4984
+     L=6: 900 L^3 = 194400 > 3025: True;  (1+b0) L^(-3/2) + 2/5 = 0.4748
+     L=8: 900 L^3 = 460800 > 3025: True;  (1+b0) L^(-3/2) + 2/5 = 0.4486
+   printed constant 2(1+b0) = 2.2000 versus L^(1/2) (the single-step ratio eps_(k+1)/eps_k <= L^(1/2) on the 3D flow):
+     L=2: L^(1/2) = 1.4142; L^(1/2) <= 2(1+b0): True; L^(1/2)(1+0.2 eps_k eta) <= 2(1+b0) needs eps_k eta <= 2.778
+     L=3: L^(1/2) = 1.7321; L^(1/2) <= 2(1+b0): True; L^(1/2)(1+0.2 eps_k eta) <= 2(1+b0) needs eps_k eta <= 1.351
+     L=4: L^(1/2) = 2.0000; L^(1/2) <= 2(1+b0): True; L^(1/2)(1+0.2 eps_k eta) <= 2(1+b0) needs eps_k eta <= 0.500
+     L=5: L^(1/2) = 2.2361; L^(1/2) <= 2(1+b0): False; L^(1/2)(1+0.2 eps_k eta) <= 2(1+b0) needs eps_k eta <= -0.081
+     L=6: L^(1/2) = 2.4495; L^(1/2) <= 2(1+b0): False; L^(1/2)(1+0.2 eps_k eta) <= 2(1+b0) needs eps_k eta <= -0.509
+     L=8: L^(1/2) = 2.8284; L^(1/2) <= 2(1+b0): False; L^(1/2)(1+0.2 eps_k eta) <= 2(1+b0) needs eps_k eta <= -1.111
+   so the printed constant 2(1+b0) covers L <= 4 (with eps_k eta small); for L >= 5 it is read as L^(1/2)(1+b0).
+
+[Part C] cube sizes R_j = smallest power of L >= (log g_j^-2)^r  (CMP 119 (2.5))
+   L=2, r=2, lam_K=400.0, K=60: R_K = L^18, R_0 = L^18; single-step violations of R_(k+1)>=R_k/L: 0; violations of R_m<=L^(n-m)R_n: 0; sufficient lam_K >= ell/(1-L^(-1/r)) = 2.367: True
+   L=2, r=2, lam_K=30.0, K=60: R_K = L^10, R_0 = L^13; single-step violations of R_(k+1)>=R_k/L: 0; violations of R_m<=L^(n-m)R_n: 0; sufficient lam_K >= ell/(1-L^(-1/r)) = 2.367: True
+   L=2, r=2, lam_K=5.0, K=60: R_K = L^5, R_0 = L^12; single-step violations of R_(k+1)>=R_k/L: 0; violations of R_m<=L^(n-m)R_n: 0; sufficient lam_K >= ell/(1-L^(-1/r)) = 2.367: True
+   L=2, r=3, lam_K=5.0, K=60: R_K = L^7, R_0 = L^17; single-step violations of R_(k+1)>=R_k/L: 0; violations of R_m<=L^(n-m)R_n: 0; sufficient lam_K >= ell/(1-L^(-1/r)) = 3.360: True
+   L=3, r=2, lam_K=5.0, K=40: R_K = L^3, R_0 = L^8; single-step violations of R_(k+1)>=R_k/L: 0; violations of R_m<=L^(n-m)R_n: 0; sufficient lam_K >= ell/(1-L^(-1/r)) = 2.599: True
+   L=2, r=2, lam_K=1.0, K=60: R_K = L^0, R_0 = L^11; single-step violations of R_(k+1)>=R_k/L: 1; violations of R_m<=L^(n-m)R_n: 3; sufficient lam_K >= ell/(1-L^(-1/r)) = 2.367: False
+   domain growth D_j = sum_u (R_(j-u)/R_j) L^-u (a persisting domain stays within O(m_0 L M R_j D_j) of its seed, j-units):
+   L=2, r=2, lam_K=400.0, K=60: max_j D_j = 2.0000  (analytic bound L/(1-L^-(1-r/lam_K)) = 4.0139)
+   L=2, r=2, lam_K=30.0, K=60: max_j D_j = 3.0000  (analytic bound L/(1-L^-(1-r/lam_K)) = 4.1986)
+   L=2, r=2, lam_K=5.0, K=60: max_j D_j = 3.1331  (analytic bound L/(1-L^-(1-r/lam_K)) = 5.8781)
+   L=3, r=2, lam_K=5.0, K=40: max_j D_j = 2.6116  (analytic bound L/(1-L^-(1-r/lam_K)) = 6.2148)
+
+[Part D] exponent bookkeeping (CMP 119 (2.31), (2.43)-(2.46), (3.67)); n-j = s
+   per point z of the j-lattice the remainder after the counterterm is O((L^-s)^(5-b)) (3.67),
+   the F^2 term itself O((L^-s)^4) (3.57)-(3.66); the number of z per unit n-cell is L^(s d).
+   d=4: summed remainder exponent 5-d-b = 1-b; summed F^2 (marginal) exponent 4-d = 0
+   d=3: summed remainder exponent 5-d-b = 2-b; summed F^2 (marginal) exponent 4-d = 1
+   d=4, L=2: sum_(s=0..60) L^(-(4-d)s) = 61.000000   (limit n->inf: inf)
+   d=3, L=2: sum_(s=0..60) L^(-(4-d)s) = 2.000000   (limit n->inf: 2.0)
+   d=3, L=3: sum_(s=0..60) L^(-(4-d)s) = 1.500000   (limit n->inf: 1.4999999999999998)
+   d=4, L=2: L^d - 1 = 15 non-central sites per block; d^2 = 16
+   d=3, L=2: L^d - 1 = 7 non-central sites per block; d^2 = 9
+   d=3, L=3: L^d - 1 = 26 non-central sites per block; d^2 = 9
+   => d=4: the marginal sum grows like n (needs the beta_j counterterm and g_j^kappa0 factors);
+      d=3: it is a convergent geometric series, no coupling counterterm is needed, beta = 1 is allowed in (2.43).
+
+[Part E] Lemma 65.2: sum_(s>=0) L^(d s) exp(-c (lam + s ell)^q) <= C0 exp(-c lam^q),
+         C0 = sum_(s>=0) exp(s d ell - c (s ell)^q) < inf for q > 1  (superadditivity (a+b)^q >= a^q + b^q)
+   d=3, L=2, c=1.0, q=20: C0 = 8.99476
+   d=3, L=2, c=1.0, q=4: C0 = 8.94381
+   d=3, L=2, c=0.1, q=4: C0 = 143.118
+   d=3, L=3, c=0.1, q=4: C0 = 95.3623
+   d=4, L=2, c=0.1, q=4: C0 = 1003.44
+   direct check d=3,L=2,c=0.1,q=4, lam=1.0: lhs = 6.985459e+00 <= rhs = 1.294981e+02: True
+   direct check d=3,L=2,c=0.1,q=4, lam=2.0: lhs = 2.435561e-01 <= rhs = 2.889493e+01: True
+   direct check d=3,L=2,c=0.1,q=4, lam=3.0: lhs = 3.036058e-04 <= rhs = 4.344177e-02: True
+   direct check d=3,L=2,c=0.1,q=4, lam=5.0: lhs = 7.187782e-28 <= rhs = 1.028697e-25: True
+
+[Part F] (i) exp(-c p_0(g)^2) <= (g p_0(g))^q for lam = log g^-2 >= lam_*(q);
+   p_0(g) = A_0 lam^p0 (CMP 119 (1.1)), g = exp(-lam/2). Take A_0 = 1 (A_0 >= 1 only helps).
+   Condition: c lam^(2 p0) >= q (lam/2 - p0 ln lam).  Sufficient: c lam^(2 p0) >= q lam/2,
+   i.e. lam >= (q/(2c))^(1/(2 p0 - 1)) (and lam >= 1).  lam_* below = last sign change of the exact condition on a grid of step 1e-3.
+     c=0.5, p0=10, q=5: lam_* = 1.034 (g^2 <= 3.556e-01); sufficient closed form lam >= 1.088; closed form >= lam_*: True
+     c=0.5, p0=10, q=10: lam_* = 1.042 (g^2 <= 3.527e-01); sufficient closed form lam >= 1.129; closed form >= lam_*: True
+     c=0.5, p0=10, q=100: lam_* = 1.053 (g^2 <= 3.489e-01); sufficient closed form lam >= 1.274; closed form >= lam_*: True
+     c=0.5, p0=10, q=1000: lam_* = 1.054 (g^2 <= 3.485e-01); sufficient closed form lam >= 1.438; closed form >= lam_*: True
+     c=0.25, p0=10, q=5: lam_* = 1.042 (g^2 <= 3.527e-01); sufficient closed form lam >= 1.129; closed form >= lam_*: True
+     c=0.25, p0=10, q=10: lam_* = 1.048 (g^2 <= 3.506e-01); sufficient closed form lam >= 1.171; closed form >= lam_*: True
+     c=0.25, p0=10, q=100: lam_* = 1.054 (g^2 <= 3.485e-01); sufficient closed form lam >= 1.322; closed form >= lam_*: True
+     c=0.25, p0=10, q=1000: lam_* = 1.055 (g^2 <= 3.482e-01); sufficient closed form lam >= 1.492; closed form >= lam_*: True
+     c=0.25, p0=15, q=5: lam_* = 1.028 (g^2 <= 3.577e-01); sufficient closed form lam >= 1.083; closed form >= lam_*: True
+     c=0.25, p0=15, q=10: lam_* = 1.031 (g^2 <= 3.567e-01); sufficient closed form lam >= 1.109; closed form >= lam_*: True
+     c=0.25, p0=15, q=100: lam_* = 1.035 (g^2 <= 3.552e-01); sufficient closed form lam >= 1.200; closed form >= lam_*: True
+     c=0.25, p0=15, q=1000: lam_* = 1.036 (g^2 <= 3.549e-01); sufficient closed form lam >= 1.300; closed form >= lam_*: True
+   (iii) polynomial degree r d + 1 of the summed domain volumes versus 2 p_0 >= 10 r and (d+1) r:
+     r=2, d=3: r d + 1 = 7 <= (d+1) r = 8 < 2 p_0 >= 20
+     r=2, d=4: r d + 1 = 9 <= (d+1) r = 10 < 2 p_0 >= 20
+     r=3, d=3: r d + 1 = 10 <= (d+1) r = 12 < 2 p_0 >= 30
+     r=3, d=4: r d + 1 = 13 <= (d+1) r = 15 < 2 p_0 >= 30
+   (ii) CMP 119 (1.1): p_0 >= 5 r.  Entropy-vs-weight needs 2 p_0 > (d+1) r (note 49 sect. 5).
+     r=2, d=3: need p_0 > 4.0; (1.1) gives p_0 >= 10; 2 p_0 / ((d+1) r) >= 2.50
+     r=2, d=4: need p_0 > 5.0; (1.1) gives p_0 >= 10; 2 p_0 / ((d+1) r) >= 2.00
+     r=3, d=3: need p_0 > 6.0; (1.1) gives p_0 >= 15; 2 p_0 / ((d+1) r) >= 2.50
+     r=3, d=4: need p_0 > 7.5; (1.1) gives p_0 >= 15; 2 p_0 / ((d+1) r) >= 2.00
+
+[Part G] exact linear algebra: invariants of Pi_{mu nu,kappa lambda} under B_d, (3.55)-(3.61)
+   d=2: |B_d| = 8; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 7.55e-15, smallest nonzero eigenvalue 8.000)
+      normalised Pi_(22,11) = 1: nonzero entries = 4; in the block kappa<mu, lambda<nu: entries with (mu,kappa) = (nu,lambda) all equal to 1: True; all others 0: True; number of pairs kappa<mu = 1
+   d=3: |B_d| = 48; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 9.37e-16, smallest nonzero eigenvalue 8.000)
+      normalised Pi_(22,11) = 1: nonzero entries = 12; in the block kappa<mu, lambda<nu: entries with (mu,kappa) = (nu,lambda) all equal to 1: True; all others 0: True; number of pairs kappa<mu = 3
+   d=4: |B_d| = 384; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 1.69e-14, smallest nonzero eigenvalue 8.000)
+      normalised Pi_(22,11) = 1: nonzero entries = 24; in the block kappa<mu, lambda<nu: entries with (mu,kappa) = (nu,lambda) all equal to 1: True; all others 0: True; number of pairs kappa<mu = 6
+
+[Part H] 4D inequalities (2.7b), (2.9b) on chains of length s = R_n (unprocessed-domain regime), exact 3D flow
+   L=2, beta0=0.1, p=2, r=2; lam_n = log g_n^-2; lam_m = lam_n + s ln L; R_n = smallest power of L >= lam_n^r
+   lam_n=  10.0: s=R_n=   128; (2.7b): (lam_m/lam_n)^p =      97.46 <=  1.787: False; (2.9b): R_m/R_n =      128.0 <=  4.874: False; physical R_m <= L^s R_n: True
+   lam_n=  20.0: s=R_n=   512; (2.7b): (lam_m/lam_n)^p =     351.36 <=  2.053: False; (2.9b): R_m/R_n =      512.0 <=  5.598: False; physical R_m <= L^s R_n: True
+   lam_n=  50.0: s=R_n=  4096; (2.7b): (lam_m/lam_n)^p =    3338.83 <=  2.527: False; (2.9b): R_m/R_n =     2048.0 <=  6.892: False; physical R_m <= L^s R_n: True
+   lam_n= 100.0: s=R_n= 16384; (2.7b): (lam_m/lam_n)^p =   13125.19 <=  2.903: False; (2.9b): R_m/R_n =     8192.0 <=  7.917: False; physical R_m <= L^s R_n: True
+   lam_n= 400.0: s=R_n=262144; (2.7b): (lam_m/lam_n)^p =  207262.52 <=  3.830: False; (2.9b): R_m/R_n =   131072.0 <= 10.447: False; physical R_m <= L^s R_n: True

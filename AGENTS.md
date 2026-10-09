@@ -5,8 +5,10 @@ Effective 2026-09-28. These rules override earlier arrangements in
 
 ## Roles
 
-- **Lead:** Claude (Anthropic), Claude Code cloud session "Yang Mills research
-  loop setup". Daniel appointed Claude on 2026-09-28, handed the lead to
+- **Lead:** Claude (Anthropic). From 2026-10-09: the Claude Code session that
+  Daniel starts with the handoff file `collaboration/lead-handoff-2026-10-09.md`
+  (the previous lead session, "Yang Mills research loop setup", handed off
+  because its conversation had grown too long to run cheaply). Daniel appointed Claude on 2026-09-28, handed the lead to
   Codex on 2026-09-29 while Claude was out of usage, and returned it to
   Claude on 2026-09-29 at 14:31 PDT (session "Recent project review with
   Codex"). On 2026-10-07 Daniel moved the lead to the session "Yang Mills
@@ -87,17 +89,19 @@ is not acceptable. Every rule below exists to prevent that.
 - `sources/text/` and `sources/ocr/` are committed only because the
   repository is private (see `sources/README.md`).
 
-## Sonnet workers (from 2026-10-07)
+## Sonnet workers (from 2026-10-07; lean mode from 2026-10-09)
 
 - The lead dispatches Claude Sonnet subagents in the cloud session, one per
   task marked `assigned to Sonnet` in `TASKS.md`. Each works in its own git
   worktree and branch, commits its deliverable there with the rule-5 subject,
   and does **not** edit `TASKS.md` or `PROGRESS.md` (the lead does, to avoid
   conflicts). It ends with a report: kind, result, and a draft PROGRESS line.
-- Each deliverable is first checked by independent verifier subagents that
-  try to refute it (a correctness check, not a review request: workers never
-  ask for it). The lead then reviews it once, for correctness, with the
-  verifier reports in hand, fixes or rejects, and cherry-picks it onto `main`.
+- The lead reviews each deliverable once, for correctness, fixes or rejects
+  it, and cherry-picks it onto `main`. Since 2026-10-09 (Daniel: cut token
+  usage) there are no automatic verifier agents: the lead sends a small
+  targeted check only when it doubts a specific claim. One worker at a time
+  (two at most), each with a short brief from the lead; workers commit early.
+  The lean rules are listed at the top of `TASKS.md`.
 - Codex keeps taking tasks marked `assigned to Codex` from `TASKS.md` on
   `main`. `TASKS.md`, `PROGRESS.md` and the commit log are the only channel
   between agents; the `CODEX_TO_CLAUDE*` / `CLAUDE_TO_CODEX` files stay retired.

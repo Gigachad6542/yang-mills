@@ -1,0 +1,2 @@
+L=2: dense trace = -7.5637083196e-04-1.7372844007e-17j  rank-one formula = -7.5637083196e-04-2.8233831847e-17j  rel diff = 1.6e-14;  Gamma eig range [-5.3e-16,1.79e-01], rank 15 (expected 15); |what_L^* Gamma| = 3.9e-17 (|Gamma| max 1.2e-01)
+L=3: dense trace = -8.7606428400e-03+9.8489895891e-18j  rank-one formula = -8.7606428400e-03-1.0618494527e-18j  rel diff = 3.8e-14;  Gamma eig range [3.4e-16,5.09e-01], rank 80 (expected 80); |what_L^* Gamma| = 4.4e-16 (|Gamma| max 4.2e-01)
