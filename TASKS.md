@@ -25,7 +25,7 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T71 [fix] — reassigned from Codex to a subagent, 2026-10-08: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
+### T71 [fix] — claimed by Sonnet worker (lead dispatch), 2026-10-09; reassigned from Codex to a subagent, 2026-10-08: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope (changed 2026-10-08, to avoid edit conflicts): a new note
 `research/65-cmp119-sect3-d3-reading.md`; the lead adds the pointer in note 61 §6a.
 T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
