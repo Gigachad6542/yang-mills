@@ -50,7 +50,7 @@ sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read the T71 draft first: it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 
-### T81 [proof] — open, posted 2026-10-09 by the lead: Lemma 6b.2 of note 61 under the corrected large-field bound (I-LF)(b′) (note 67 §5)
+### T81 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09; posted 2026-10-09 by the lead: Lemma 6b.2 of note 61 under the corrected large-field bound (I-LF)(b′) (note 67 §5)
 Scope: `research/61-3d-assembly-conditional.md`, a new §6e only (do not rewrite §6b).
 T80 showed that (I-LF)(b) in its relative reading (R) is false in the abelian
 Gaussian model and that what holds there is (I-LF)(b′):
