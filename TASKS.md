@@ -50,6 +50,13 @@ sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read the T71 draft first: it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 
+### T82 [fix] — open, posted 2026-10-10 by the lead: apply the approved items of the 2026-10-09 correctness audit
+Source: `collaboration/claude-audit-2026-10-09.md` (Daniel-requested audit by the session "Project Euclid paper downloads"; the lead approved the items below). Scope: exactly the files named in the audit's §6 table, except as noted. For each item, re-check the claim against the text before editing (one line in the commit body per item: applied / not applied and why).
+Approved: §2.2 (note 39 §7b, README l. 97-105: (T1*) holds *given* CMP 102b (190), proof omitted); §2.3 (notes 35 header and §3, 36 l. 106, 37 l. 113: the computed rows are lower bounds for s_L; s_L < 1 for L >= 4 is not established); §2.4 (manuscript l. 329-335: replace the real-source remark by the Vitali argument, after checking that the paper's observables are uniformly bounded); §2.5 (note 61 §6e Prop. 6e.2(ii), note 49 §6: a(X) = ½κd(X) + a_0 and the single-polymer bound <= 1/(3e)); every item of §2.6 except the PROGRESS/README error bar (already fixed); §3 (mark the stale summaries superseded, with a pointer to the current statement); §4 (note 67 §3.3(a), header, status, and note 61 §6e.3: Q <= 0 is proved by the argument of note 61 Lemma 6c.2 plus the kernel identity d(qA) = w*(CA); check that this identity holds for the average used in note 67's model, else say "proved given the identity; numerically confirmed").
+Not in T82: §2.1 (note 61 §6a; the lead applies it with T71's note 65 §6), §5 (manuscript update and ledger rows: separate tasks), note 56 (done in T54).
+Note 61 is also edited by T78 (new §6d): touch only the lines the audit names.
+Done when: every approved item is applied or rejected with a reason. Commit `[T82][fix]` plus one PROGRESS line.
+
 ### T78 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09; moved ahead of T79 by the lead (T79's consumer, the (EQ) route, was closed by T80); earlier: assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
 Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
 T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
