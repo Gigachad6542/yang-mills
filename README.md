@@ -213,8 +213,10 @@ must be controlled polymer by polymer.
     fibre Gibbs measure. T80 (note 67) showed that (EQ') is false as stated,
     and that (R) with a Z-local right-hand side is false in the abelian
     Gaussian model; the form that holds there has an exponentially decaying
-    tail, (I-LF)(b′), which Lemma 6b.2 would need to absorb (not yet redone).
-    (I-LF)(b′) for SU(2) and the other two bond axes (T79) are open.
+    tail, (I-LF)(b′). Note 61 §6e (T81) redoes Lemma 6b.2 with (I-LF)(b′)
+    in union form (Lemma 6b.2′; the disc radius becomes about 10⁻³ in the
+    model, and KP closes for any fixed connectivity radius). (I-LF)(b′) for
+    SU(2) and the other two bond axes (T79) are open.
 
 So M1-3D stays a **conditional reduction**. (NA♭) and (A_s) are supported
 readings; (H4) is supported at the level of the inductive assumptions; (L_s)

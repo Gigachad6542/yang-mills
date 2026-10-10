@@ -50,17 +50,6 @@ sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read the T71 draft first: it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 
-### T81 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09; posted 2026-10-09 by the lead: Lemma 6b.2 of note 61 under the corrected large-field bound (I-LF)(b′) (note 67 §5)
-Scope: `research/61-3d-assembly-conditional.md`, a new §6e only (do not rewrite §6b).
-T80 showed that (I-LF)(b) in its relative reading (R) is false in the abelian
-Gaussian model and that what holds there is (I-LF)(b′):
-D_N(V) - D_N(V^Z) >= -C_- β_N A_Z(V) - C_T β_N Σ_{c∈Z} Σ_{x∌Z} e^{-m d(x,c)} A_x(V^Z) - e_ent|Z| log β_N
-(note 67 Prop. 67.5, §5). Redo Lemma 6b.2 (note 61 lines 449-470 and what follows) with (I-LF)(b′) as the hypothesis:
-(1) the σ = -τ bound with the tail; (2) the tail in a small-field exterior (β_N A_x <= p²/2: tail <= ½C_T N_m p² per bond);
-(3) large-field regions at distance < r_0 merged into one polymer, and the polymer factorization with the new connectivity radius;
-(4) the resulting s_0^{LF} with explicit dependence on C_T, N_m, m, c_1. Say whether the KP summation of note 49 §6 still closes with the larger radius.
-Done when: Lemma 6b.2′ is proved from (I-LF)(a), (I-LF)(b′) and Lemma 6b.1, or a `failed-attempt` names the step (e.g. the merged polymers' entropy against p²).
-
 ### T79 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t79_center_obstruction.py` salvaged): exact fibre transport for all three bond axes (note 64 §7.5)
 Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.
 T77 built a Haar-preserving map 𝒯_R on fine configurations with

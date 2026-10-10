@@ -404,7 +404,9 @@ distance). The form that holds there, (I-LF)(b′), adds the tail
 -C_T β_N Σ_{c∈Z} Σ_{x∌Z} e^{-m d(x,c)} A_x(V^Z), m < 2m_w; in a small-field
 exterior it costs O(p²(g_k)) per bond of Z, which Lemma 6b.2 can absorb with
 one more condition on τ and with large-field regions closer than
-r_0 = m^{-1} log(2τC_T/c_1) merged. Lemma 6b.2 has not been redone with it.]
+r_0 = m^{-1} log(2τC_T/c_1) merged. Lemma 6b.2 is redone with it in §6e (T81):
+Lemma 6b.2′ holds with (I-LF)(b′) in union form; no merging beyond radius 2 is
+needed.]
 
 #### 6b.3 Lemmas
 
@@ -482,6 +484,8 @@ This is (H4b); q >= 4 makes the correction to θ' in (H4) decay. ∎
 The hypothesis on the large-field activities for complex s' is the persistence
 of Balaban's large-field estimate under the weight bounds above (CMP 119 Sect. 2
 at d = 3, §6a). It is part of (H4), not new.
+
+[T81: the σ = −τ side above is redone with (I-LF)(b′) as Lemma 6b.2′ in §6e.]
 
 #### 6b.4 Where the unconditional claim fails
 
@@ -824,3 +828,380 @@ step: Combes-Thomas for the composite fibre problem (6c.1) in the abelian model 
 which would give uniform exponential decay of Π_j^{(s)} and the gradient bound for
 B_s, and then the one-step estimate of note 42 Theorem 3 with Π_j^{(s)} as Gaussian
 part (R1).
+
+### 6e. Lemma 6b.2 under the corrected large-field bound (I-LF)(b′) (T81)
+
+**Question.** T80 (note 67 §3, §5) showed that (I-LF)(b), read as the relative
+bound (R), is false in the abelian Gaussian model, and that the form which holds
+there is (I-LF)(b′), with an exponentially decaying tail. Does Lemma 6b.2 survive
+with (I-LF)(b′) in place of (I-LF)(b), every other hypothesis unchanged?
+
+**Result.** Yes, as a conditional reduction, with these precise changes.
+
+- **Reading (§6e.1).** The σ = −τ step uses the *relative* reading (reading 2 of
+  note 67 §5). It does not reduce to reading 1.
+- **Radius of the disc (§6e.3).** s_0^{LF} is replaced by
+
+      s_0^{LF′} := min{ c_1/(2(1−c_1)) [∞ if c_1 = 1],  1/(2(C_- + 4 C_T N_m)) },
+
+  N_m = sup_c Σ_{x∌c} e^{−m d(x,c)} (N_1 = 143.5, N_2 = 17.40, N_3 = 4.91 on Z³).
+  For C_T = 0 this is the old s_0^{LF}. In the Gaussian model (c_1 = 1, L = 2,
+  m = 2, (C_-, C_T) = (3, 8.8)) it is 8.1·10⁻⁴.
+- **Distance, merging (§6e.4).** With (I-LF)(b′) applied to the union Z of *all*
+  large-field regions of V, no tail between two large-field regions ever appears,
+  and the weight bound is a product over any partition of the large-field set.
+  The merging radius of note 67 §5 is not needed: r_0 = m⁻¹ log(2τC_T/c_1) is
+  negative under the new condition on τ whenever c_1 > 1/(4N_m) (model: r_0 = −2.1),
+  and only disjointness of the near sets (radius r_* = 2) remains. The per-polymer route
+  (apply (b′) to each region, other regions in the exterior) does give a clean bound
+  for each region's factor, but the product of these factors is **not** a bound
+  for the weight (§6e.4, cross term). That route does not close; the union form of
+  the hypothesis is what closes it.
+- **KP (§6e.5).** The summation of note 49 §6 closes for any fixed connectivity
+  radius r_*, with κ ≥ 4c_d(r_*) = 4 log(eΔ_{r_*}) and
+  p_*² ≥ (8/c_1)(½κ r_* + log(4eΔ_{r_*})); the large-field factor itself supplies the decay rate.
+- **Lemma 6b.2′ (§6e.6)** is proved from (I-LF)(a), (I-LF)(b′), the entropy-room
+  condition (LF-E), Lemma 6b.1 and the large-field activity hypothesis (LF-act).
+  (I-LF)(b′) itself stays a **target** for SU(2).
+
+#### 6e.1 Which reading of (I-LF)(b) the σ = −τ step uses
+
+Note 67 §5 distinguishes two readings. (1) V|_Z = V on Z, flat elsewhere, and the
+claim is D_N(V|_Z) − c_N ≥ −C_-β_NA_Z(V|_Z) − e_ent|Z| log β_N. (2) The weight of the
+actual configuration V, with whatever small-field exterior it has, compared with the
+vacuum value; this needs the relative form (R).
+
+The step in question writes |e^{sD_N}ρ_0|(V) = ρ_0(V) e^{−τD_N(V)} at σ = −τ and
+bounds e^{−τD_N(V)} by exp(τ[C_-β_NA_Z + e_ent|Z| log β_N]). The left side is the
+weight of V itself, with its exterior present. It is not the weight of V|_Z. So the
+step needs a lower bound for the part of D_N(V) that is attributable to Z, with V
+arbitrary outside Z. That is reading 2.
+
+*Reading 1 cannot suffice.* In the abelian Gaussian model (note 67 §0, Prop. 67.1)
+D_N(V) = β_NQ(V) + c_N′ with Q a quadratic form. Write a := V|_Z = V − V^Z (the
+bond variables on Z; V^Z = V with Z set to 0, additive in the model) and b := V^Z.
+Then, exactly,
+
+    D_N(V) − D_N(V^Z) = β_N [ Q(a) + 2 Q(a, b) ],        D_N(V|_Z) − c_N′ = β_N Q(a).
+
+Reading 1 controls the first term (Q(a) ≥ −(L²−1)A_N(a), Theorem 64.1; note 67
+§3.3(a)). The weight of V contains the cross term 2β_NQ(a, b), and (R) fails
+because of it (Prop. 67.3(3), §3.4). (I-LF)(b′) is exactly a bound for Q(a) + 2Q(a, b).
+The σ ∈ [0,1] and σ > 1 sides of Lemma 6b.2 use only (I-LF)(a), an upper bound,
+and are unchanged. The task therefore does not reduce; the σ = −τ side is redone
+below.
+
+*One more repair.* The displayed σ = −τ bound of Lemma 6b.2 writes
+exp(−β_NA_P(1 − τC_-) + …), i.e. it identifies the near energy A_Z of (I-LF)(b)
+(note 67: the plaquettes touching Z) with the energy A_P of the large-field plaquettes.
+They differ: A_Z ≥ A_P. §6e.3 keeps both.
+
+#### 6e.2 Conventions and hypotheses
+
+(C1) *Plaquette energies.* A_x(V) ≥ 0 depends on the four bond variables of x;
+A_S := Σ_{x∈S} A_x. For a set Z of coarse bonds, N(Z) := plaquettes containing a bond
+of Z, A_Z(V) := A_{N(Z)}(V) (as in note 67), and V^Z := V with the bond variables on Z
+set to 1. For x ∉ N(Z) (written x ∌ Z in note 67) A_x(V^Z) = A_x(V).
+
+(C2) *Large fields.* p = p(g_k) is the small-field threshold of the scale considered;
+x is small-field in V iff β_NA_x(V) ≤ p²/2 (note 67 §4). P = P(V) is the set of
+large-field plaquettes, so β_NA_P(V) ≥ (p²/2)|P|. For a plaquette set P let Z(P) be
+the set of bonds of plaquettes of P. Then |Z(P)| ≤ c_Z|P| with c_Z := 4, P ⊂ N(Z(P)),
+and A_{Z(P)} ≥ A_P. In particular **every plaquette x ∉ N(Z(P(V))) is small-field.**
+
+(C3) *Distances.* d(x,c) is the Chebyshev distance between the centre of x and the
+midpoint of c (d = ½ on N({c})). For m > 0 let
+N_m := Σ_{x∉N({c})} e^{−m d(x,c)}, the same for all three bond directions; on Z³,
+N_1 = 143.51, N_2 = 17.40, N_3 = 4.91 (a torus of side n gives at most these;
+8³: 108.8, 17.14, 4.91). Put Ñ_m := sup_x Σ_{all bonds c} e^{−m d(x,c)} = N_m + 4e^{−m/2}
+(Ñ_2 = 18.87), used only in §6e.4.
+
+(LF-a) = (I-LF)(a), unchanged: c_1 ∈ (0,1], and for the P-localized factors
+ρ_0|_P = e^{−β_NA_P}, (Tρ_1)|_P ≤ e^{−c_1β_NA_P} (entropy aside, as in Lemma 6b.2).
+
+(LF-b′) = (I-LF)(b′), **for every finite set Z of coarse bonds, connected or not**,
+with C_- > 0, C_T ≥ 0, m > 0, e_ent ≥ 0 independent of Z and V:
+
+    D_N(V) − D_N(V^Z) ≥ −C_-β_NA_Z(V) − C_Tβ_N Σ_{c∈Z} Σ_{x∉N(Z)} e^{−m d(x,c)} A_x(V)
+                        − e_ent|Z| log β_N.
+
+(By (C1) this is the displayed (I-LF)(b′) of note 67 §5.) Status: **target** for
+SU(2). In the Gaussian model it is proved for one bond (Prop. 67.5, with
+(C_-, C_T) = (2.84, 8.8), L = 2, m = 2); for several bonds note 67 has the PSD test
+for two collinear bonds only. For V supported in a large box, Z the box, one has
+A_Z(V) = A_N(V) and D_N(V) − D_N(V^Z) = β_NQ(V), so the union form forces
+C_- ≥ |inf Q/A_N| = 3 (L = 2), 5.28 (L = 3) (note 67 §3.3(a)); the single-bond
+C_- = 2.84, 4.39 are not the uniform constants. Uniformity over all Z, including
+disconnected Z, is part of what is assumed here.
+
+(LF-E) *Entropy room* (for a strip radius t_0 ≤ s_0^{LF′}, see §6e.3):
+c_Z t_0 e_ent log β_N ≤ (c_1/8) p². This is Lemma 6b.2's own assertion that p²(g_k)
+dominates log β_N, made explicit. In the model e_ent = 0. (At scales k ≪ N,
+log β_N ~ N log L is not dominated by p²(g_k) for fixed ε_0, so the assertion has to
+be read for the regions created at the current scale; Lemma 6b.2 had the same
+point. Not examined here.)
+
+(LF-act) *Large-field activity hypothesis (persistence).* Fix r_* ≥ 2 and call two
+plaquettes r_*-linked if their centres are at Chebyshev distance ≤ r_*. Polymers Z
+are r_*-connected sets of blocks; d(Z) is the minimal total length of a spanning tree
+of the r_*-link graph, link length max(1, distance). The large-field plaquette set
+P(Z) of a polymer is r_*-connected and spans it, so d(Z) ≤ r_*|P(Z)| (a convention
+about how Balaban's domains are measured). Let c_d(r) := log(eΔ_r),
+Δ_r := 3(2r+1)³. There are C_LF, q ≥ 4 and κ ≥ 4c_d(r_*) such that the following
+holds. If, for every s′ in the strip dist(s′,[0,1]) ≤ t_0, the region weights of the
+s′-deformed density satisfy W_{s′}(P;V) ≤ ∏_i exp(−(c_1/8)p²|P_i|) for every
+partition of the large-field set (the form of Proposition 6e.1), then
+s′ ↦ 𝒜_k^{(s′)}(Z) is analytic on the open strip dist(s′,[0,1]) < t_0 and
+|𝒜_k^{(s′)}(Z)| ≤ C_LFε_k^q e^{−κd(Z)} there.
+For s′ ∈ [0,1] the premise follows from (LF-a) and the conclusion is Balaban's
+large-field estimate (H4a); the hypothesis is its persistence to complex s′ (analyticity
+of the flows in s′ from Lemma 6b.1). It is the same hypothesis as in Lemma 6b.2, whose
+last paragraph calls it "part of (H4), not new". Status: **published conditional
+input** (CMP 119 Sect. 2 at d = 3, §6a; the line-by-line check is open).
+
+#### 6e.3 The weight bounds on the strip (Proposition 6e.1)
+
+Let s = σ + iς, τ := dist(σ,[0,1]) ≤ dist(s,[0,1]), and
+
+    s_0^{LF′} := min{ c_1/(2(1−c_1)),  1/(2(C_- + c_Z C_T N_m)) },   s_1′ := min(s_0, s_0^{LF′}),
+
+c_Z = 4. (c_1 does not enter the new condition: for σ < 0 the exponent obtained is
+≥ ½ ≥ c_1/2, because ρ_0 itself carries the coefficient 1, not c_1.)
+
+For a configuration V with large-field set P = P(V), Z := Z(P), the *region weight*
+W_s(P;V) is defined as follows. For σ ∈ [0,1] and σ > 1 it is the P-localized weight
+of Lemma 6b.2 (the restriction of ρ_0^{1−s}(Tρ_1)^s to P). For σ < 0 it is
+
+    F_s(Z;V) := exp( −β_NA_Z(V) + s [D_N(V) − D_N(V^Z)] ).
+
+*Exact factorization.* Since ρ_0(V) = e^{−β_NA_N(V)} = e^{−β_NA_Z(V)} e^{−β_NA_ext(V)},
+with A_ext := A_{N(Z)ᶜ} and A_ext(V) = A_ext(V^Z), and D_N is real,
+
+    |e^{sD_N}ρ_0|(V) = |F_s(Z;V)| · E_σ(V^Z),    E_σ(V^Z) := exp( −β_NA_ext(V^Z) + σ D_N(V^Z) ).   (6e.1)
+
+The second factor is a function of the Z-flat configuration V^Z only; the first is
+the Z-factor. (D_N(V) − D_N(V^Z) depends on V everywhere; that dependence is the tail.)
+
+**Proposition 6e.1 (proved here from (LF-a), (LF-b′)).** Let 0 < t_0 ≤ s_0^{LF′},
+dist(s,[0,1]) ≤ t_0 and P(V) ≠ ∅. For every partition P = ⊔_i P_i,
+
+    W_s(P;V) ≤ ∏_i exp( −(c_1/2) β_NA_{P_i}(V) + t_0 c_Z e_ent |P_i| log β_N ),
+
+and under (LF-E) the right side is at most ∏_i exp( −(c_1/8) p² |P_i| ).
+(As in Lemma 6b.2, which subtracts "entropy" on all three sides alike, the entropy
+allowance of the σ ≥ 0 sides is taken to be the same expression; for σ ≥ 0 this is a
+convention about (LF-a)'s "up to entropy", not a derivation.)
+
+*Proof.* (i) σ ∈ [0,1] and σ > 1: as in Lemma 6b.2. The exponents are
+c_1 and c_1 − τ(1−c_1), both ≥ c_1/2 for τ ≤ c_1/(2(1−c_1)).
+
+(ii) σ = −τ, 0 < τ ≤ t_0 ≤ s_0^{LF′}. By (LF-b′) for Z = Z(P) (the whole large-field set),
+−τ[D_N(V) − D_N(V^Z)] ≤ τ[ C_-β_NA_Z + 𝒯 + e_ent|Z| log β_N ], with
+𝒯 := C_Tβ_N Σ_{c∈Z} Σ_{x∉N(Z)} e^{−m d(x,c)} A_x(V). By (C2) every x ∉ N(Z) is
+small-field, β_NA_x ≤ p²/2, and for each c ∈ Z the set {x ∉ N(Z)} lies in
+{x ∉ N({c})}. So
+
+    𝒯 ≤ C_T |Z| N_m p²/2 ≤ c_Z C_T N_m (p²|P|/2) ≤ c_Z C_T N_m β_NA_P.
+
+Hence |F_s| ≤ exp( −β_NA_Z(1 − τC_-) + τ c_Z C_T N_m β_NA_P + τ e_ent|Z| log β_N ).
+Because τC_- ≤ ½ and A_Z ≥ A_P, the first term is at most −β_NA_P(1 − τC_-), so
+
+    |F_s| ≤ exp( −β_NA_P [1 − τ(C_- + c_Z C_T N_m)] + τ c_Z e_ent |P| log β_N )
+          ≤ exp( −½ β_NA_P + t_0 c_Z e_ent |P| log β_N ),
+
+since τ(C_- + c_ZC_TN_m) ≤ ½. As ½ ≥ c_1/2 this is the claimed bound.
+
+(iii) The exponent −(c_1/2)β_NA_P + t_0c_Ze_ent|P| log β_N is a sum over the
+plaquettes of P (A_P = Σ_i A_{P_i}, |P| = Σ|P_i|), hence the product form for any
+partition. Last, β_NA_{P_i} ≥ (p²/2)|P_i| gives (c_1/2)β_NA_{P_i} ≥ (c_1/4)p²|P_i|, and
+(LF-E) bounds the entropy by (c_1/8)p²|P_i|. ∎
+
+*Size of the tail.* The tail 𝒯 is not small in general:
+½C_TN_m = 76 p² per bond (L = 2, m = 2), 4 bonds per plaquette of P at most, with
+p²|P| ≤ 2β_NA_P. So c_ZC_TN_m ≈ 6·10² (L = 2) and ≈ 1.4·10³ (L = 3, C_T = 20.6).
+These are crude: every exterior plaquette is taken to sit at the small-field
+threshold at once. The sharp constant of note 67's linear programme (4.7 p² per
+bond, L = 2) applies only to V flat at Z. Numbers (model, m = 2): L = 2,
+(C_-, C_T) = (3, 8.8): s_0^{LF′} = 1/(2·615.5) = 8.1·10⁻⁴. L = 3, (8, 20.6):
+3.5·10⁻⁴. They assume (LF-b′) holds with these constants for all Z. The entry
+c_1/(2(1−c_1)) is the larger one for every c_1 ≥ 2·10⁻³, so the unknown SU(2) value
+of c_1 does not affect these numbers. (In the model the global form of (LF-a) holds
+with c_1 = 1, because Q ≤ 0, i.e. Lβ_NA_min ≥ β_NA_N; the localized form is not
+checked.)
+
+#### 6e.4 Large fields at distance: merging, factorization, and the per-polymer route
+
+**(a) The union form needs no merging.** In Proposition 6e.1 (LF-b′) is applied to
+the union Z of all large-field regions of V. A plaquette x ∉ N(Z) is small-field,
+so the tail never sees another large-field region: what note 67 §5 called the
+charge C_Te^{−mr}β_NA_{Z′} to Z from a second region Z′ at distance r is, in the
+union form, part of C_-β_NA_Z with the *same* uniform C_-. The weight bound is then
+a product over any partition of P, in particular over the r-clusters of P for any
+radius r ≥ 2. The radius r_* = 2 is the least one for which the near sets N(Z(P_i))
+of distinct clusters are disjoint (x ∈ N(Z(y)) implies d(x,y) ≤ 1), so that
+A_Z = Σ_i A_{Z_i}; the bound itself only uses A_Z ≥ A_P and does not need it.
+
+**(b) The per-polymer route and the value of r_0.** Suppose one wants to apply
+(b′) to each cluster separately, with the others in the exterior. Take clusters
+P_1, …, P_n of P(V) with disjoint near sets (radius r_* = 2) and the individual
+factors F_s(Z_i;V), Z_i = Z(P_i). For x ∈ N(Z_j), j ≠ i, A_x(V) is not small; the
+charge from the tail of Z_i is τC_Tβ_N Σ_{c∈Z_i} e^{−m d(x,c)} A_x(V). Summing over
+i ≠ j, Σ_{c∈∪_{i≠j}Z_i} e^{−m d(x,c)} ≤ Ñ_m for every x, so the total charge to Z_j is
+at most τ C_T Ñ_m β_NA_{Z_j}. The same chain as in (ii) gives, if
+τ(C_- + c_ZC_TN_m + C_TÑ_m) ≤ ½,
+
+    ∏_i |F_s(Z_i;V)| ≤ exp( −½ β_NA_P + τ c_Z e_ent |P| log β_N ).
+
+There is **no condition on the distance** between regions. In terms of note 67's
+formula, the condition τ ≤ 1/(2c_ZC_TN_m) already gives 2τC_T/c_1 ≤ 1/(c_1c_ZN_m), so
+
+    r_0 = m⁻¹ log(2τC_T/c_1) ≤ −m⁻¹ log(c_1 c_Z N_m) < 0   whenever c_1 > 1/(4N_m)
+
+(model: c_1 = 1, m = 2, τ = s_0^{LF′}: r_0 = ½ log(2·8.1·10⁻⁴·8.8) = −2.1). The
+merging radius is therefore max(2, r_0) = 2 in every case with c_1 > 1/(4N_m).
+A distance-dependent refinement (charges decaying like T_m(r) := sup_x
+Σ_{c: d(x,c)≥r} e^{−m d(x,c)}; T_2(2) = 5.55, T_2(3) = 1.50, T_2(4) = 0.34,
+T_2(5) = 0.07) only improves constants.
+
+**(c) Failed attempt: assembling the weight from the individual factors.** The
+product of individual factors is not the weight. In the Gaussian model, for Z = Z_1 ⊔ Z_2 and a_i = V|_{Z_i},
+
+    [D_N(V) − D_N(V^Z)] = [D_N(V) − D_N(V^{Z_1})] + [D_N(V) − D_N(V^{Z_2})] − 2β_N Q(a_1, a_2),
+
+and Q(a_1,a_2) is bilinear in the bond variables a_i = V|_{Z_i}. Those are
+gauge-dependent: a gauge transformation at the head vertex of c_1 changes V_{c_1}
+by an arbitrary amount at fixed plaquette fluxes. Each first difference is bounded
+below uniformly in the gauge (that is the content of (b′), through the minimization
+over the free bond variable, Prop. 67.5), but the cross term is not bounded by the
+near energies. So the lower bound for the union cannot be assembled from the lower
+bounds for its components. The sequential route (flatten Z_1, then apply (b′) to
+(V^{Z_1}, Z_2)) fails at one exact step: the tail of Z_2 then contains
+A_x(V^{Z_1}) for x ∈ N(Z_1), the energy of plaquettes with some bond set to 1, which
+is not controlled by the fluxes of V (it depends on V_{c_1}). In SU(2), A_x ≤ 2, and
+bounding A_x(V^{Z_1}) by 2 charges Z_2 with about 2τC_Tβ_N e^{−mr} per plaquette of
+N(Z_1), to be absorbed in p²; that would force r of order m⁻¹ log(β_N/p²) (an
+estimate, not carried out). The Gaussian model has no such bound. That route is
+not pursued. **What closes the lemma is the union form of (LF-b′).**
+Its uniformity over disconnected Z with the single-component constants is thus the
+substantive extra assumption of §6e.
+
+#### 6e.5 The KP summation with the larger connectivity radius (Proposition 6e.2)
+
+**Proposition 6e.2 (proved here).** Let r ≥ 2, Δ_r := 3(2r+1)³, c_d(r) := log(eΔ_r).
+
+(i) *Counting.* If κ ≥ 4c_d(r), then for every block □
+    Σ_{Z∋□, r-connected} e^{−κ d(Z)} ≤ 2.
+(ii) *Large-field factor against entropy.* Let w(Z) := exp(−(c_1/8)p²|P(Z)|) be the
+large-field factor of Proposition 6e.1 for the polymer with large-field set P(Z), and
+p_*² := inf_k p²(g_k) (the infimum is at k = 0 and tends to ∞ as ε_0 → 0). If
+
+    p_*² ≥ (8/c_1) ( ½ κ r + log(4eΔ_r) ),
+
+then Σ_{Z∋□} w(Z) e^{½κ d(Z)} ≤ ½ ≤ ½κ (κ ≥ 4). This is the KP condition of note 49 §6,
+Σ_{X∋□} |activity(X)| e^{a(X)} ≤ a(□) with a(X) = ½κd(X), for the large-field
+polymers with activity prefactor ≤ 1.
+
+*Proof.* (i) The number of connected subsets of j vertices containing a fixed vertex
+in a graph of maximal degree Δ is at most (eΔ)^{j−1} (standard). Here the graph is
+the r-link graph, of degree < Δ_r, and d(Z) ≥ j − 1 (each tree link has length ≥ 1).
+So the sum is at most Σ_{j≥1} (eΔ_r e^{−κ})^{j−1} ≤ 2, because eΔ_re^{−κ} ≤ e^{−3c_d} ≤ ½.
+(ii) Polymers with |P| = j plaquettes of the large-field set containing a given
+plaquette number at most (eΔ_r)^j, and d(Z) ≤ r(j−1) ≤ rj (a tree of links of
+length ≤ r). So the sum is at most Σ_{j≥1} (eΔ_r e^{½κr − c_1p²/8})^j. The hypothesis
+makes the ratio at most ¼, so the sum is at most ⅓ ≤ ½. ∎
+
+So the extra entropy of the radius is the constant log Δ_r = log 3 + 3 log(2r+1),
+plus κ r from the tree length. Both are independent of ε_0 and of N, and the
+large-field exponent c_1p_*²/8 grows without bound as ε_0 → 0. **KP closes for
+every fixed r_*.** Numbers: r_* = 2, Δ_2 = 375, c_d(2) = 6.93, κ ≥ 27.7, and
+c_1p_*² ≥ 8(27.7 + 8.3) = 288. The constants C_T, N_m, τ enter only through
+s_0^{LF′} and r_0, not through this condition.
+
+The requirement κ ≥ 4c_d(r_*) in (LF-act) is not an extra constraint on the
+large-field polymers. Since d(Z) ≤ r_*|P|, the weight bound itself gives
+e^{−(c_1/8)p²|P|} ≤ e^{−κ_LF d(Z)} with κ_LF := c_1p_*²/(8r_*), and κ_LF ≥ 4c_d(r_*)
+as soon as p_*² ≥ 32 r_* c_d(r_*)/c_1 (r_* = 2: 443/c_1). So the large-field factor
+supplies the decay rate that the larger connectivity radius requires.
+
+#### 6e.6 Lemma 6b.2′
+
+**Lemma 6b.2′ ((H4b) under (I-LF)(b′); proved here from (LF-a), (LF-b′), Lemma 6b.1,
+(LF-E) and (LF-act)).** Assume the hypotheses of Lemma 6b.2 with (I-LF)(b) replaced by
+(LF-b′), and let
+
+    s_0^{LF′} := min{ c_1/(2(1−c_1)) [∞ if c_1 = 1],  1/(2(C_- + 4C_TN_m)) },
+    s_1′ := min(s_0, s_0^{LF′}),
+
+with s_0 from Lemma 6b.1. Take any connectivity radius r_* ≥ max{2, r_0}, where
+r_0 := m⁻¹ log(2 s_0^{LF′} C_T/c_1) is the merging radius of note 67 §5 (r_0 < 0
+whenever c_1 > 1/(4N_m)), and assume (LF-E) with t_0 = s_1′ and (LF-act) at radius r_*
+(so κ ≥ 4c_d(r_*)). Then for every real s ∈ [0,1] and every scale k = N − j,
+
+    Σ_{Z meeting the blocks of scale k} |∂_s 𝒜_k^{(s)}(Z)|  ≤  54 n_0³ ε_0³ C_LF ε_k^{q−3} / s_1′ ,
+
+with no dependence on N or the volume. For C_T = 0 the radius s_0^{LF′} is the old
+s_0^{LF}.
+
+*Proof.* (1) *Weights.* For s′ with dist(s′,[0,1]) ≤ s_1′, Proposition 6e.1 (with
+t_0 = s_1′) bounds the region weight by ∏ exp(−(c_1/8)p²|P_i|) for every partition of
+the large-field set, in particular for its r_*-clusters. This is the premise of
+(LF-act). At s′ ∈ [0,1] it is Balaban's large-field factor of (H4a); on the strip it
+has the same form with c_1 replaced by c_1/2 in the exponent of β_NA_P, and (LF-E)
+is the lemma's condition p²(g_k) ≫ log β_N.
+(2) *Activities.* By (LF-act), |𝒜_k^{(s′)}(Z)| ≤ C_LFε_k^qe^{−κd(Z)} on the open strip
+dist(s′,[0,1]) < s_1′, and s′ ↦ 𝒜_k^{(s′)}(Z) is analytic there. (3) *Cauchy.* For real
+s ∈ [0,1] the open disc |s′ − s| < s_1′ lies in the open strip, since
+dist(s′,[0,1]) ≤ |s′ − s|. Cauchy on circles of radius ρ < s_1′ and ρ ↑ s_1′ give
+|∂_s𝒜_k^{(s)}(Z)| ≤ C_LFε_k^qe^{−κd(Z)}/s_1′. (4) *Counting.* Polymers meeting a block
+□ contain a block within distance 1 of □, 27 choices; by Proposition 6e.2(i) each
+contributes at most 2. So Σ_{Z meeting □} |∂_s𝒜_k^{(s)}(Z)| ≤ 54 C_LFε_k^q/s_1′. (5)
+*Blocks.* Summing over the (n_0L^j)³ = n_0³ε_0³ε_k^{−3} blocks of scale k, as in
+Lemma 6b.2, gives the claim. Proposition 6e.2(ii) is the statement that the
+large-field factor beats the entropy of the radius r_*, so that (LF-act) with
+polymers r_*-connected is the same kind of hypothesis as at radius 1; it is not used
+in the chain (1)-(5). ∎
+
+q ≥ 4 makes the correction to θ′ in (H4) decay, as before.
+
+#### 6e.7 Status
+
+- **Proved here:** Proposition 6e.1 (weight bounds on the strip with the tail),
+  Proposition 6e.2 (KP counting with radius r), the exact factorization (6e.1), the
+  identification of the reading (§6e.1), and **Lemma 6b.2′, from (I-LF)(a),
+  (I-LF)(b′) in union form, Lemma 6b.1, (LF-E) and (LF-act)**. (H4b) as a whole
+  remains a conditional reduction, as in §6b.6.
+- **Target, not proved:** (LF-b′) for SU(2), and for the Gaussian model in union
+  form with uniform constants (note 67: one bond proved, two collinear bonds by
+  PSD test). The substantive new assumption is uniformity over disconnected Z.
+- **Published conditional input, unchanged:** (LF-a) (CMP 102 (70)-(71)),
+  (LF-act) (CMP 119 Sect. 2 at d = 3; the line-by-line check is open).
+- **Not closed:** (a) the passage from the sequence of individual Z-factors to the
+  weight (§6e.4(c)) is not available, so the per-polymer form of the merging
+  argument in note 67 §5 does not prove the lemma; the union form does. (b) (LF-E)
+  at scales k ≪ N. (c) The tail constant c_ZC_TN_m ≈ 6·10² is crude, and s_0^{LF′}
+  is of order 10⁻³ in the model; a sharper tail would need the flatness
+  information of note 67's linear programme, which is not available for general V.
+  (d) The extension of (LF-act) to complex s′ is, as in Lemma 6b.2, an
+  assumption about Balaban's expansion, not a consequence of the weight bounds
+  proved here.
+- Lemma 6b.2 (original) is superseded on the σ = −τ side by Proposition 6e.1.
+- **Lead review (2026-10-09), two additions.** (e) *The exterior factor.*
+  (6e.1) puts E_σ(V^Z) = exp(−β_NA_ext(V^Z) + σD_N(V^Z)) into the small-field
+  part of the expansion, but V^Z (Z set to 1) need not be small-field on
+  N(Z) \ P: a plaquette there keeps its non-Z bonds, whose product equals the
+  inverse of its Z-bonds' product up to a small flux, and the Z-bond values are
+  gauge-dependent. So the split needs a gauge for V in which the Z-bonds are
+  close to 1 relative to their small-field neighbours (for instance a tree
+  gauge on the non-Z bonds next to Z, with the small holonomies of their
+  cycles controlled). This bookkeeping is not done here; the original Lemma
+  6b.2 has the same gap ("P-localized factors"). (f) *Union form, numerically.*
+  `research/scripts/t81_union_check.py` (the worker's check, outputs
+  `t81_union_check_L2n8.out`, `t81_union_check_L3n6.out`) tests (LF-b′) in
+  union form in the abelian Gaussian model for one bond, two bonds and two
+  plaquette loops at separations 2-4, 2×2 and 4×4 patches, a cube surface, a
+  3×3×3 solid and a 6×6 slab. With the summed tail, the least C_T at L = 2,
+  n = 8, m = 2, C = 2.9 is 8.66 for one bond and smaller for every larger Z
+  (0.51-8.39). At L = 3, n = 6 the large patches need C > 4.4, consistent with
+  C_- >= 5.28 (note 67 §3.3(a)); at C = 8 all C_T <= 14.5. So the union form
+  with the single-bond constants is consistent with the model on these shapes.
+  Status: **computation**, not a proof.

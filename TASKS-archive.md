@@ -812,6 +812,18 @@ Partial work: `wip/round-2026-10-08/t80/` (scripts only).
 Lead, 2026-10-09 (rescope): the salvaged `t80_abelian_fibre.py` shows that (EQ') as stated is false (abelian Gaussian fibre: E[βA_q] = βθ_cl²/2 + O(1), unbounded in β when V' has coarse flux near q), and that G_η of Prop. 64.3 at the classical minimizer exceeds the slack (1-η)L² - 1 by factors 10²-10⁴. New scope: write these up (counterexample), then decide (R) itself in the abelian Gaussian model, where D_N = β_N(A_N - L A_min) + const exactly: is Q - P_ZᵀQP_Z + C A_Z ⪰ 0 for a finite C, and which Z-local form of (R) holds.
 Verdict (lead review): accepted, with one sentence of note 67 §3.4 corrected by the lead. Note 67: (EQ') and (EQ) are false as stated (exact Gaussian fibre, Prop. 67.1); Prop. 64.3's G_η route misses the slack by 10²-10⁴; (R) with a Z-local right-hand side is false in the abelian Gaussian model (Prop. 67.3: the column of the Schur complement A_min at c is not finite-range; explicit V with A_Z(V) = 0 and D = -0.234θ²β_N at L = 2, checked by brute force); the corrected form with an exponentially decaying tail holds there (Prop. 67.5; C_near = 2.84, C_T(2) = 8.8 at L = 2). Q = A_N - L A_min <= 0 numerically, with Theorem 64.1's L² - 1 sharp at L = 2. Follow-up: T81.
 
+### T81 [proof] — **completed 2026-10-09** (Sonnet worker, lead-reviewed); posted 2026-10-09 by the lead: Lemma 6b.2 of note 61 under the corrected large-field bound (I-LF)(b′) (note 67 §5)
+Scope: `research/61-3d-assembly-conditional.md`, a new §6e only (do not rewrite §6b).
+T80 showed that (I-LF)(b) in its relative reading (R) is false in the abelian
+Gaussian model and that what holds there is (I-LF)(b′):
+D_N(V) - D_N(V^Z) >= -C_- β_N A_Z(V) - C_T β_N Σ_{c∈Z} Σ_{x∌Z} e^{-m d(x,c)} A_x(V^Z) - e_ent|Z| log β_N
+(note 67 Prop. 67.5, §5). Redo Lemma 6b.2 (note 61 lines 449-470 and what follows) with (I-LF)(b′) as the hypothesis:
+(1) the σ = -τ bound with the tail; (2) the tail in a small-field exterior (β_N A_x <= p²/2: tail <= ½C_T N_m p² per bond);
+(3) large-field regions at distance < r_0 merged into one polymer, and the polymer factorization with the new connectivity radius;
+(4) the resulting s_0^{LF} with explicit dependence on C_T, N_m, m, c_1. Say whether the KP summation of note 49 §6 still closes with the larger radius.
+Done when: Lemma 6b.2′ is proved from (I-LF)(a), (I-LF)(b′) and Lemma 6b.1, or a `failed-attempt` names the step (e.g. the merged polymers' entropy against p²).
+Verdict (lead review): accepted. Note 61 §6e: the σ = -τ step of Lemma 6b.2 uses the relative reading; Lemma 6b.2′ is proved from (I-LF)(a), (I-LF)(b′) in union form, Lemma 6b.1, (LF-E) and (LF-act), with s_0^{LF′} = min{c_1/(2(1-c_1)), 1/(2(C_- + 4C_T N_m))} (about 10⁻³ in the model); no merging beyond radius 2; KP closes for any fixed radius; the per-polymer route fails at a gauge-dependent cross term. Lead additions: the exterior factor E_σ(V^Z) needs a gauge in which V^Z is small-field on N(Z) (not done; same gap as the original lemma); the worker's union-form check committed as t81_union_check.py.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors
