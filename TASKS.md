@@ -25,7 +25,7 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T71 [fix] — claimed by Sonnet worker (lead dispatch), 2026-10-09; reassigned from Codex to a subagent, 2026-10-08: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
+### T71 [fix] — claimed 2026-10-10 by the Claude session "Project Euclid paper downloads" (worker; started by Daniel, accepted by the lead); earlier claimed for a Sonnet worker, 2026-10-09; reassigned from Codex to a subagent, 2026-10-08: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
 Scope (changed 2026-10-08, to avoid edit conflicts): a new note
 `research/65-cmp119-sect3-d3-reading.md`; the lead adds the pointer in note 61 §6a.
 T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
@@ -36,7 +36,7 @@ exponents, entropy). Then state the resulting localized large-field
 activity bound in the form |activity(X)| <= C ε_j^q e^{-κ d(X)}.
 Done when: note 65 has the list and a one-line verdict. Commit `[T71][fix]`.
 Partial work: `wip/round-2026-10-08/t71/` holds an essentially complete draft of note 65 and its script (unverified; see the README there). Start from it.
-Lead, 2026-10-09: **blocked on the page images.** On Daniel's Mac, Project Euclid answers `fetch_papers.sh` with a bot-check page after three downloads; CMP 119, 109, 116, 122 II, both CMP 99 and CMP 102 (variational) are missing from `sources/papers/`. The lead does not bypass the check; Daniel can download them in a browser (links in `fetch_papers.sh`), or the lead retries later. The worker brief is ready.
+Lead, 2026-10-10: unblocked; Daniel downloaded all Project Euclid PDFs in his browser. Lead, 2026-10-09: **blocked on the page images.** On Daniel's Mac, Project Euclid answers `fetch_papers.sh` with a bot-check page after three downloads; CMP 119, 109, 116, 122 II, both CMP 99 and CMP 102 (variational) are missing from `sources/papers/`. The lead does not bypass the check; Daniel can download them in a browser (links in `fetch_papers.sh`), or the lead retries later. The worker brief is ready.
 
 ### T72 [fix] — reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
 Scope (changed 2026-10-08): a new note `research/66-cmp122ii-d3-reading.md`;
