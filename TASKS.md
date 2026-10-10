@@ -50,6 +50,22 @@ sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
 Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read the T71 draft first: it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 
+### T78 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09; moved ahead of T79 by the lead (T79's consumer, the (EQ) route, was closed by T80); earlier: assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
+Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
+T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
+(R2) that a Loewner sandwich does not give locality: the real-space kernel of
+Π_j^{(s)} (and of its minimizer map B_s(Φ), (6c.1)) must decay exponentially,
+uniformly in s ∈ [0,1], j, N, for the polymer/mixed norm of note 51 to apply.
+Prove this by a Combes-Thomas argument: conjugate the composite fibre problem
+(6c.1) by e^{μ·x}, show the conjugated form stays coercive on the fibre for
+|μ| <= μ_0 (with μ_0 independent of s, j, N, using S <= S + sΔ <= (1+ρ)S
+and the finite range of w), and deduce |kernel(x,y)| <= C e^{-μ_0|x-y|} in
+coarse units. Note whether the decay rate is in units of the level N-j lattice
+(it must be, for the mixed norm). Check numerically on the abelian model
+(`t76_convexity.py` setup) for L = 2, 3.
+Done when: exponential decay is proved with explicit μ_0, C, or a
+`failed-attempt` names the step (e.g. the constraint space under conjugation).
+
 ### T79 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t79_center_obstruction.py` salvaged): exact fibre transport for all three bond axes (note 64 §7.5)
 Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.
 T77 built a Haar-preserving map 𝒯_R on fine configurations with
@@ -69,22 +85,6 @@ Done when: Theorem 64.2 holds for all axes, or a `failed-attempt` with the
 obstruction.
 Partial work: `wip/round-2026-10-08/t79/` (scripts only).
 Lead, 2026-10-09: after T80 (note 67) the route of Prop. 64.3 via (EQ) is closed, but Theorem 64.2 for all axes is still what (I-LF)(b′) for SU(2) needs (note 67 §5).
-
-### T78 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
-Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
-T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
-(R2) that a Loewner sandwich does not give locality: the real-space kernel of
-Π_j^{(s)} (and of its minimizer map B_s(Φ), (6c.1)) must decay exponentially,
-uniformly in s ∈ [0,1], j, N, for the polymer/mixed norm of note 51 to apply.
-Prove this by a Combes-Thomas argument: conjugate the composite fibre problem
-(6c.1) by e^{μ·x}, show the conjugated form stays coercive on the fibre for
-|μ| <= μ_0 (with μ_0 independent of s, j, N, using S <= S + sΔ <= (1+ρ)S
-and the finite range of w), and deduce |kernel(x,y)| <= C e^{-μ_0|x-y|} in
-coarse units. Note whether the decay rate is in units of the level N-j lattice
-(it must be, for the mixed norm). Check numerically on the abelian model
-(`t76_convexity.py` setup) for L = 2, 3.
-Done when: exponential decay is proved with explicit μ_0, C, or a
-`failed-attempt` names the step (e.g. the constraint space under conjugation).
 
 ### T73 [proof] — assigned to Sonnet (re-dispatched 2026-10-08 after the session-limit stop; partial scripts `t73_*.py` salvaged): (E) for the scalar loop in note 48's model (note 50 §2.5)
 Scope: `research/50-sum-rule-from-multiplicativity.md`, a new §2.6, plus
