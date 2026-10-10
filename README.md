@@ -131,9 +131,11 @@ estimate. The research notes give the details.
     (S1)-(S3) hold together in a mixed norm, given (A_s), (NA) and Balaban's
     fifth-order expansion.
 - **Numerics (note 56):** in 4D SU(2), matching the terminal averaged plaquette at
-  depths N = 1, 2 also fixes the terminal 1x2 loop: the difference is 0.000(2),
-  against 0.015 between N = 0 and 1. The beta step falls toward the one-loop 0.2575
-  (0.36 -> 0.30). This is evidence for (H0)/M1-4D, not a proof.
+  depths N = 1, 2, 3 (up to 32⁴, T54) also fixes the terminal 1x2 loop: the
+  differences are 0.000(2) at 1 -> 2 and at 2 -> 3, against 0.015 between N = 0
+  and 1; the 2x2 loop behaves the same way (within 1σ at 2 -> 3). The beta step
+  falls toward the one-loop 0.2575 (0.36 -> 0.30 -> 0.29). This is evidence for
+  (H0)/M1-4D, not a proof.
 - **Nondegeneracy (P6-4D)** <= (V^R) + (B-small) (28). Three of the four
   source checks for (V^R) are now cited.
 
@@ -232,9 +234,9 @@ reading.
 - Two bare actions that differ by an irrelevant term give converging
   terminal observables (note 59).
 - In 4D, matching the terminal plaquette across depths fixes the terminal
-  1×2 loop (note 56).
+  1×2 and 2×2 loops, through N = 3 (note 56).
 - In 4D, the Wilson/Symanzik gap at matched terminal P is -0.0075(18) at N = 1
-  and -0.0057(19) at N = 2. Decay is not established at these depths (note 62).
+  and -0.0057(21) at N = 2. Decay is not established at these depths (note 62).
 
 ## Repository map
 

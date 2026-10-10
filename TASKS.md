@@ -146,48 +146,6 @@ m = 1, at θ = π/4 and π/2. Report s_L(θ) next to s_L(0).
 Done when: the table is in note 35 and states whether the claim of note 36
 holds. Commit `[T53][computation]` plus one PROGRESS line.
 
-### T54 [computation] — reassigned from Codex to the lead, 2026-10-08 (runs in progress): 4D universality test, third depth and a third observable (note 56)
-Scope: `research/scripts/t51_mc_universality_4d.py` (add a 2x2 loop
-observable if needed), new output files, and a new section in
-`research/56-mc-4d-universality.md`.
-Note 56 matched the terminal plaquette at depths N = 1, 2 (8^4, 16^4). There
-the terminal 1x2 loop agreed (difference 0.000(2)), and the beta step was
-0.30 against the one-loop 0.2575.
-1. Add the terminal 2x2 loop and repeat the N = 1, 2 matching for it.
-2. Run N = 3 (32^4) at 3 beta values bracketing the matching point P = 0.64.
-   Extrapolating the beta step suggests beta_3 is about 3.37-3.40. Use
-   `t51_matching.py` (extend DATA).
-3. Report the beta steps beta_3 - beta_2 and the W12 differences.
-
-Expect about 4-5 h per beta at 32^4 in numpy, single core: the 16^4 points took about 1000 s, and 32^4 is 16 times larger. Run the three
-beta values in parallel. Use 150 thermalization updates
-and at least 200 measurements, as in note 56.
-Optional extension (note 62): also run the tree-level Symanzik action at N = 3 with `t58_mc_action_universality.py`
-(masked staples, about 11 h per beta at 32^4), to decide the 4D memory test.
-Done when: the N = 3 matching row and the 2x2 comparison are in note 56.
-Commit `[T54][computation]` plus one PROGRESS line.
-Lead, 2026-10-08: the three N = 3 runs (32^4, betas 3.30, 3.40, 3.50, seeds
-54330, 54340, 54350) were started at 23:16 UTC in the cloud container
-(about 5.6 h each, one core each; output `research/scripts/t54_n3_beta*.out`).
-The 2x2 loop and the write-up follow when they finish.
-Update: container restarts kill background processes, so the runs now use
-the checkpointed driver `t54_mc_checkpointed.py` (adds the 2x2 loop) and the
-N = 0, 1, 2 points are re-run with it for W22 (`t54_chain.sh`). **On every lead
-wake, run `sh research/scripts/t54_supervise.sh`**; it resumes any killed run
-from its checkpoint and reports which are done.
-
-**Status 2026-10-09 (handoff).** Finished, with the checkpointed driver
-(adds W22), outputs committed as `research/scripts/t54_n{N}_b{beta}.out`:
-N = 0 at beta 2.40, 2.50, 2.60; N = 1 at 2.60, 2.70, 2.80, 2.90; N = 2 at
-2.85, 3.00. Still to run: N = 2 at 3.15, 3.30 (about 26 min each) and the
-three N = 3 points (32^4, about 6.3 h each at about 44 s per update). The
-N = 3 checkpoints of the old container (50 of 550 updates) do not transfer:
-in a new container `sh research/scripts/t54_supervise.sh` starts them from
-scratch. Run it on every lead wake: container restarts kill background
-processes, and the supervisor resumes from the checkpoints. Then fit the
-matching with `t51_matching.py` (extend DATA with the W22 column) and write
-the note 56 section.
-
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

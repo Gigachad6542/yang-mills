@@ -4,6 +4,9 @@ Status: **computation** (T51). Scripts:
 
 - `research/scripts/t51_mc_universality_4d.py` (output `t51_universality.out`);
 - `research/scripts/t51_matching.py` (output `t51_matching.out`).
+- T54 (third depth N = 3 and the 2×2 loop, section "Third depth" below):
+  `research/scripts/t54_mc_checkpointed.py` (outputs `t54_n{N}_b{β}.out`),
+  `research/scripts/t54_matching.py` (output `t54_matching.out`).
 
 This is numerical evidence for the 4D coupling flow (H0) and for M1-4D. It
 is not a proof.
@@ -70,11 +73,69 @@ At fixed terminal plaquette P:
    by Balaban's iterated average have well-defined limits. In 4D this holds
    once the coupling flow is matched.
 
+## Third depth (N = 3, 32⁴) and the 2×2 loop (T54)
+
+The same Monte Carlo (checkpointed driver `t54_mc_checkpointed.py`, same
+update scheme, 150 + 400 updates, 200 measurements) was run again at every
+depth with fresh seeds, adding the terminal 2×2 loop W22, and at the new
+depth N = 3 on 32⁴ (β = 3.30, 3.40, 3.50; about 4.2 h each). Raw data
+(`t54_n*.out`):
+
+| N | lattice | β | P | W12 | W22 |
+|---|---|---|---|---|---|
+| 0 | 4⁴ | 2.4 / 2.5 / 2.6 | 0.6367 / 0.6567 / 0.6714 | 0.4378 / 0.4648 / 0.4858 | 0.2436 / 0.2735 / 0.2974 |
+| 1 | 8⁴ | 2.6 / 2.7 / 2.8 / 2.9 | 0.5795 / 0.6126 / 0.6424 / 0.6654 | 0.3540 / 0.3937 / 0.4307 / 0.4600 | 0.1722 / 0.2073 / 0.2424 / 0.2718 |
+| 2 | 16⁴ | 2.85 / 3.0 / 3.15 / 3.3 | 0.5541 / 0.6105 / 0.6540 / 0.6872 | 0.3277 / 0.3923 / 0.4449 / 0.4869 | 0.1555 / 0.2107 / 0.2612 / 0.3025 |
+| 3 | 32⁴ | 3.3 / 3.4 / 3.5 | 0.6152 / 0.6418 / 0.6704 | 0.3995 / 0.4286 / 0.4665 | 0.2219 / 0.2438 / 0.2857 |
+
+Errors on P are 0.0006-0.0014, on W12 0.0008-0.0020, on W22 0.0012-0.0028.
+The N = 0, 1, 2 points agree with note 56's first runs within errors.
+
+At fixed terminal plaquette P (`t54_matching.out`; differences between
+consecutive depths, value(error)):
+
+| P | N | β step β_N - β_{N-1} | W12(N) - W12(N-1) | W22(N) - W22(N-1) |
+|---|---|---|---|---|
+| 0.64 | 0 → 1 | 0.378(5) | -0.0146(22) | -0.0092(30) |
+| 0.66 | 0 → 1 | 0.355(6) | -0.0165(19) | -0.0141(23) |
+| 0.62 | 1 → 2 | 0.308(3) | +0.0009(18) | +0.0060(24) |
+| 0.64 | 1 → 2 | 0.304(3) | +0.0000(19) | +0.0046(24) |
+| 0.66 | 1 → 2 | 0.298(4) | -0.0009(18) | +0.0027(23) |
+| 0.62 | 2 → 3 | 0.288(5) | +0.0006(24) | +0.0026(28) |
+| 0.64 | 2 → 3 | 0.297(5) | -0.0011(25) | -0.0021(31) |
+| 0.66 | 2 → 3 | 0.292(4) | -0.0000(22) | +0.0013(28) |
+
+Matched couplings at P = 0.64: β_0 = 2.415(4), β_1 = 2.793(2),
+β_2 = 3.097(3), β_3 = 3.394(4) (the extrapolated guess was 3.37-3.40).
+
+What this adds:
+
+1. **The third depth confirms universality for W12.** The 2 → 3
+   differences are zero within 0.0025 at all three matching points, the same
+   as 1 → 2, after the 7-9σ disagreement between N = 0 and N = 1.
+2. **The 2×2 loop converges as well.** W22 shows the same pattern: 3-6σ
+   apart between N = 0 and N = 1, 1.2-2.5σ at 1 → 2 (all positive,
+   +0.003 to +0.006), and within 1σ at 2 → 3. The 1 → 2 residual is larger
+   for the larger loop, as expected for a finite-depth correction that
+   decays with N; with these errors it is not significant at 2 → 3.
+3. **The β step keeps decreasing toward the one-loop value.** At fixed P,
+   0.36-0.38 (0 → 1), 0.30-0.31 (1 → 2), 0.29-0.30 (2 → 3), against
+   8 b_0 log 2 = 0.2575. The decrease from 1 → 2 to 2 → 3 is 0.020, 0.007,
+   0.006 at P = 0.62, 0.64, 0.66 (3.4σ, 1.2σ, 1.1σ), in the direction
+   predicted by asymptotic freedom (the two-loop correction to the step is
+   positive and of order g², so it shrinks as β grows). The
+   remaining gap of about 0.035 is of the size of the higher-order and
+   scheme terms at β ≈ 3.3.
+
+Status: **computation**. This is evidence for (H0) and M1-4D at three
+refinements, not a proof.
+
 ## Limits
 
-- Only two refinements (N <= 2, up to 16⁴). The statistics are modest: 200
-  measurements per point.
+- Three refinements at most (N <= 3, up to 32⁴; N = 3 has only three β
+  values, so its quadratic interpolation is exact through the data). The
+  statistics are modest: 200 measurements per point.
 - The terminal 4⁴ lattice is small, and the β values are in the
   crossover/scaling window (β ≈ 2.4-3.3). The test does not reach the deep
   asymptotic regime.
-- Only L = 2. Only the plaquette and the 1×2 loop are compared.
+- Only L = 2. Only the plaquette, the 1×2 loop and (T54) the 2×2 loop are compared.
