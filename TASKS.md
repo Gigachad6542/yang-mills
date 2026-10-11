@@ -38,7 +38,7 @@ Done when: note 65 has the list and a one-line verdict. Commit `[T71][fix]`.
 Partial work: `wip/round-2026-10-08/t71/` holds an essentially complete draft of note 65 and its script (unverified; see the README there). Start from it.
 Lead, 2026-10-10: unblocked; Daniel downloaded all Project Euclid PDFs in his browser. Lead, 2026-10-09: **blocked on the page images.** On Daniel's Mac, Project Euclid answers `fetch_papers.sh` with a bot-check page after three downloads; CMP 119, 109, 116, 122 II, both CMP 99 and CMP 102 (variational) are missing from `sources/papers/`. The lead does not bypass the check; Daniel can download them in a browser (links in `fetch_papers.sh`), or the lead retries later. The worker brief is ready.
 
-### T72 [fix] — reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
+### T72 [fix] — claimed by Sonnet worker (lead dispatch), 2026-10-10; reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
 Scope (changed 2026-10-08): a new note `research/66-cmp122ii-d3-reading.md`;
 the lead adds the pointers in notes 49 §6 and 61 §6a.
 From the page images, check that Balaban's domain factors (1.79)-(1.89) and
@@ -57,21 +57,11 @@ Not in T82: §2.1 (note 61 §6a; the lead applies it with T71's note 65 §6), §
 Note 61 is also edited by T78 (new §6d): touch only the lines the audit names.
 Done when: every approved item is applied or rejected with a reason. Commit `[T82][fix]` plus one PROGRESS line.
 
-### T78 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-09; moved ahead of T79 by the lead (T79's consumer, the (EQ) route, was closed by T80); earlier: assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
-Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
-T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
-(R2) that a Loewner sandwich does not give locality: the real-space kernel of
-Π_j^{(s)} (and of its minimizer map B_s(Φ), (6c.1)) must decay exponentially,
-uniformly in s ∈ [0,1], j, N, for the polymer/mixed norm of note 51 to apply.
-Prove this by a Combes-Thomas argument: conjugate the composite fibre problem
-(6c.1) by e^{μ·x}, show the conjugated form stays coercive on the fibre for
-|μ| <= μ_0 (with μ_0 independent of s, j, N, using S <= S + sΔ <= (1+ρ)S
-and the finite range of w), and deduce |kernel(x,y)| <= C e^{-μ_0|x-y|} in
-coarse units. Note whether the decay rate is in units of the level N-j lattice
-(it must be, for the mixed norm). Check numerically on the abelian model
-(`t76_convexity.py` setup) for L = 2, 3.
-Done when: exponential decay is proved with explicit μ_0, C, or a
-`failed-attempt` names the step (e.g. the constraint space under conjugation).
+### T83 [proof] — open, posted 2026-10-10 by the lead: the inputs (P) and (L) of note 61 Theorem 6d.1
+Scope: `research/61-3d-assembly-conditional.md`, a new §6d.6 only, plus `research/scripts/t83_*.py`.
+T78 reduced kernel locality (R2) to (P) a local primitive Λ_0 on the fibre Z = ker div ∩ ker w (range r_P M, norm C_P M, M = L^j), (L) a local closed lift b of closed coarse fluxes (w b = 1, range r_L M, norm C_L M^{-1/2}), and (H) for interior s. (P) is false on all closed fluxes (linking; §6d.2), so its proof must use wz = 0.
+(1) Prove (P): box Poincaré lemma (cone operator) on boxes of side ~M, glued through the Čech-de Rham tower; show the last (Čech H²) step is solvable locally because the coarse fluxes of z vanish; give C_P, r_P independent of M. (2) Prove (L) by a Whitney-type lift R^{(2)} commuting with d, with (wR^{(2)})^{-1} local on closed fluxes uniformly in M; check numerically (Fourier model of t78_kernel_decay.py) for L = 2, 3, j <= 4.
+Done when: (P) and (L) proved with explicit constants (then Theorem 6d.1 is unconditional at s = 0, 1), or a `failed-attempt` naming the step.
 
 ### T79 [proof] — assigned to Sonnet (re-dispatched 2026-10-08; partial script `t79_center_obstruction.py` salvaged): exact fibre transport for all three bond axes (note 64 §7.5)
 Scope: `research/64-large-field-lower-bound.md`, new §8, plus `research/scripts/t79_*.py`.

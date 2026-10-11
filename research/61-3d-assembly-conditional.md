@@ -802,7 +802,8 @@ concavity) does not imply what is needed:
   T_S) are not implied. Likely route: Combes-Thomas for the fibre Green function from
   the gap c = 1 and the exponential locality of Δ (T1, CMP 102b (190)). **Not carried
   out.** R2 is needed for (H1) at non-flat backgrounds (note 63 (iii)) and for the
-  Lipschitz inequality (i) at interior s.
+  Lipschitz inequality (i) at interior s. *(T78, §6d: conditional reduction proved, via
+  Combes-Thomas on potentials; open inputs (P), (L), (H) named there.)*
 - **R3. Contraction θ' < 1 for complex perturbations in the full data.** The quadratic
   sector avoids it (6c.3), because the j-step composite is one Schur complement. For
   the coupled data (quadratic ⊕ generated ⊕ higher order) the induction of Lemma 6b.1
@@ -828,6 +829,346 @@ step: Combes-Thomas for the composite fibre problem (6c.1) in the abelian model 
 which would give uniform exponential decay of Π_j^{(s)} and the gradient bound for
 B_s, and then the one-step estimate of note 42 Theorem 3 with Π_j^{(s)} as Gaussian
 part (R1).
+
+### 6d. Kernel locality of the interpolated forms (T78)
+
+**Question (R2 of 6c.6).** Is the kernel of Π_j^{(s)}, and of the minimizer map
+Φ ↦ B_s(Φ) of (6c.1), exponentially decaying,
+|kernel(x,y)| ≤ C e^{−μ_0|x−y|} in units of the level-(N−j) lattice, with C, μ_0
+independent of s ∈ [0,1], j, N?
+
+**Answer (conditional reduction, plus a numerical confirmation).** Theorem 6d.1
+below proves the decay, with μ_0 and C explicit and independent of s, j, N, **given
+three local-geometry inputs (P), (L), (H)** that are stated precisely in 6d.2 and are
+**not proved here**. The proof is a Combes-Thomas (Agmon) argument for the composite
+fibre problem (6c.1). It handles the obstruction expected for this route, that the fibre
+Z = ker w ∩ ran d is not invariant under multiplication by e^{μ·x}, by cutting off
+*potentials* instead of fluxes. Status:
+
+- **conditional reduction (proved here):** Theorem 6d.1. For the Wilson orbit
+  (s = 0; and s = 1, which is the Wilson orbit at depth j+1) it needs only (P) and
+  (L), which are properties of the lattice and of w, not of the model. For
+  0 < s < 1 it needs (H) in addition.
+- **computation:** in the abelian Fourier model the potential-form kernel decays at
+  rate 1.25-1.67 per coarse l¹-unit for L = 2, 3, j = 1, 2, 3, s = 0, ½, 1, and the
+  rate converges as j grows (6d.4). The zero-extended *flux* form does **not** decay
+  exponentially (it has the |x|^{-3} tail of the Wilson projector P), which is why the
+  statement has to be made for pairings of closed fluxes (6d.1).
+- **open:** (P), (L), (H) (6d.5).
+
+#### 6d.1 Conventions, and what "kernel" means for a form on ran d
+
+*Normalization.* (6c.1) as printed omits a factor. With the dimensionless units of
+6c.1 (the fine Wilson form is L|B|² in coarse units), the j-step Schur complement is
+
+    Π_j^{(s)}(Φ) = L^j · min { H(B) : B ∈ ran d_N, wB = Φ },   H = S + sΔ,   (6d.1)
+
+where w = w^{(M)}, M = L^j, is the composite kernel of note 18 §8(a). A positive
+constant is irrelevant for decay, but the coercivity c = 1 of Theorem 6c.3 refers to
+this normalization (it is the one in `t76_convexity.py`, G = L^{-4}Σ...).
+`t78_realspace_check.py` (`.out`) verifies (6d.1) by brute force: on the torus
+(Z/8)³, L = 2, j = 1, the constrained minimum of (1−s)S + sΣ(S) over closed fluxes
+with wB = Φ, times L, equals the Fourier symbol Π_1^{(s)}(K) of the aliasing formula
+for s = 0, ½, 1 (spectra at all K ≠ 0 agree to 2e-14; the constraint residual is
+1e-14).
+
+*Units.* Work on the level-N lattice Λ = Z³ (fine units), M = L^j. The coarse lattice
+is MZ³. A weight e^{ν·x} with ν = μ/M per fine unit is e^{μ·Y} per coarse unit. So
+the decay rates below are **per level-(N−j) lattice unit**, as note 51 needs.
+
+*Fluxes.* 𝔇 := ker(div) ⊂ ℓ²(Λ; R³), the closed fluxes (Bianchi: Σ_a ∂_a B_a = 0,
+a *local* condition); on the torus 𝔇 = ran d in the sector of zero global flux.
+w maps 𝔇 into the closed coarse fluxes 𝔇_c, because div_c w = w_0 div (the kernel
+identity of note 18 §8(a)). For Φ ∈ 𝔇_c the fibre is F_Φ = {B ∈ 𝔇 : wB = Φ} = b + Z,
+Z := 𝔇 ∩ ker w. Since H ≥ c_H > 0 (hypothesis (H)), the minimizer B(Φ) exists and is
+unique (Lax-Milgram on the closed affine space F_Φ), and it is characterized by
+
+    ⟨H B(Φ), z⟩ = 0   for all z ∈ Z.   (EL)
+
+*Three notions of kernel.* Π is a form on 𝔇_c only, so "the kernel" is not
+canonical:
+
+- (K1) *off-diagonal decay on closed fluxes:* |Π(Φ, Φ')| ≤ C e^{−μ D}‖Φ‖‖Φ'‖ for
+  closed Φ, Φ' with supports at coarse distance D. This is representation-free and is
+  what Theorem 6d.1 proves.
+- (K2) *the potential-form kernel* κ(ℓ,ℓ') := Π(d_cδ_ℓ, d_cδ_ℓ'), the kernel of
+  a ↦ Π(d_c a) on coarse links; it is the special case Φ = d_cδ_ℓ of (K1) (a closed
+  flux on 4 plaquettes), and it is what the numerics of 6d.4 measure.
+- (K3) *a flux-operator representative:* a bounded symmetric π on ℓ²(plaquettes) with
+  Π(Φ) = ⟨Φ, πΦ⟩ for closed Φ, with a decaying kernel. The natural representative,
+  extension by zero off the transverse space, contains the projector P(K) and is
+  **not** local: `t78_flux_tail.out` gives local power-law exponents 3.17, 3.19, 3.11
+  between |x| = 8 and 16 for Π(W_1), Π(W_2) and for P itself (3.06, 3.06, 3.05 between
+  16 and 24, where torus images start to contribute). A
+  local representative, when it exists, is a different object. Note 51 Lemma 4 uses
+  (K3) for polymer activities supported in a bounded X, where it follows from the
+  Poincaré lemma on X. For Π_j^{(s)} it is the content of hypothesis (H) below, not
+  something to be assumed silently.
+
+#### 6d.2 Setting, facts used, and the three inputs
+
+*Facts about w (proved).* w_a(x) = b_M(x_a)∏_{i≠a}(b_M*s_M)(x_i), with b_M = M^{-1}1_{[0,M)}
+and s_M = 1_{[0,M)}, so w ≥ 0, w_a(x−Y) ≠ 0 only for x−Y ∈ [0, 2M−2]³ (Euclidean
+radius R_w ≤ 2√3 M), mass M², and the periodization Σ_Y w(x−Y) = 1/M. The proof of
+Lemma 6c.2 (Cauchy-Schwarz with these two periodizations) applies verbatim to the
+composite kernel and gives
+
+    (W1)   ‖ w|f| ‖_{ℓ²(MZ³)} ≤ M^{1/2} ‖f‖_{ℓ²(Λ)}   for every f.
+
+*Inputs.* All constants below are meant to be independent of M = L^j (hence of j and
+N); "range" is Euclidean distance between sites. For an operator T, |T| is the
+operator with entrywise absolute value kernel.
+
+- **(P) local primitive on the fibre.** A linear Λ_0 : Z → ℓ²(links), Z = 𝔇 ∩ ker w,
+  with d Λ_0 z = z, range ≤ r_P M, and ‖|Λ_0|‖ ≤ C_P M. (Only z' ∈ Z is used, in
+  Step 1 of the proof.) The scale M is forced: |A| ≲ M|B| is the Poincaré scaling of
+  6c / note 63 Lemma 3(b).
+  *Lead review (2026-10-10): (P) cannot hold on all of 𝔇.* If a linear primitive Λ
+  on 𝔇 had range r, take B the closed flux Φ along a closed dual-lattice loop γ of
+  size R ≫ r, and a closed lattice curve C that links γ once and stays at distance
+  > r from γ. Then ΛB = 0 on C, so Σ_C ΛB = 0; but by Stokes Σ_C ΛB = Σ_S B = ±Φ for
+  a surface S with ∂S = C. (Exponential decay instead of finite range fails the same
+  way, with R ≫ e^{μ dist(C,γ)}.) On Z this obstruction is absent: for a curve C far
+  from supp z the flux of z through a surface bounded by C is unchanged under
+  translations of C by less than the block size, and its block average is a
+  w-average of z, which vanishes. So (P) on Z is plausible, but it **depends on w**
+  (the worker's draft stated (P) on 𝔇 and said it "uses no property of w"; corrected
+  here). *Status: **open**.* A route: the box Poincaré lemma (cone operator, norm ∼M)
+  glued at scale M through the Čech-de Rham tower, where the last (Čech H²) step is
+  solvable locally exactly because the coarse fluxes of z vanish.
+- **(L) local closed lift.** A linear b : 𝔇_c → 𝔇 with w b(g) = g, b(g)(x) depending
+  only on g(Y) with |x−Y| ≤ r_L M, and ‖|b|‖ ≤ C_L M^{-1/2}.
+  The exponent −½ is the natural one: by (W1), ‖w‖ ≤ M^{1/2}, so no lift can have a
+  smaller norm.
+  *Source (route):* the worker's route b(g) := d R a_g, with a_g = Λ_0^{c} g a
+  coarse primitive of g and R a local right inverse of the link average Q, does
+  **not** work as stated: a_g would need a local primitive on all closed coarse
+  fluxes, which does not exist (the linking argument under (P), at M = 1) [lead
+  review]. A route that avoids primitives: a Whitney-type lift that commutes with d
+  on 2-forms, b = R^{(2)}(Q^{(2)}R^{(2)})^{-1}, where R^{(2)} is a local Whitney
+  interpolation of coarse 2-cochains with d R^{(1)} = R^{(2)} d_c (so closed coarse
+  fluxes go to closed fine fluxes) and Q^{(2)} = w; it needs w R^{(2)} to be
+  invertible with an exponentially local inverse that maps closed fluxes to closed
+  fluxes, uniformly in M. *Status: **open**, not checked.*
+- **(H) flux representative of the level-N form.** H = 1 + sΔ̂ on ℓ²(Λ;R³), Δ̂
+  symmetric, bounded, agreeing with Δ = Σ(S) − S on closed fluxes, with
+  (i) c_H ≤ H ≤ C_H on ℓ², uniformly for s ∈ [0,1] (c_H > 0);
+  (ii) exponential locality: |Δ̂(x,y)| ≤ C_Δ e^{−μ_Δ|x−y|}; put ν_Δ := μ_Δ/2,
+  m_0 := sup_x Σ_y |Δ̂(x,y)| e^{ν_Δ|x−y|}, m_1 := sup_x Σ_y |Δ̂(x,y)||x−y|e^{ν_Δ|x−y|}.
+  For s = 0 (and for s = 1, as the case s = 0 at depth j+1) this is empty: H = 1,
+  c_H = C_H = 1, m_0 = m_1 = 0. For 0 < s < 1, Δ̂ is a fixed object depending on L
+  only, but its existence is the (K3) statement for the one-step defect, see 6d.5.
+
+#### 6d.3 Theorem 6d.1 (Combes-Thomas for the composite fibre; conditional reduction)
+
+Put C_H := 1 + m_0 (this bounds ‖e^{φ}He^{−φ}‖ for every ν-Lipschitz weight with
+ν ≤ ν_Δ, and H itself) and, for μ > 0,
+
+    ε_1(μ) := 4 C_P μ e^{(3+r_P)μ},
+    ε_2(μ) := C_L e^{r_Lμ} [ 4√3 μ e^{6√3μ} + e^{2√3μ} ε_1(μ) ],
+    ε_3 := ε_1 + ε_2.
+
+Call μ *admissible* if μ ≤ μ_Δ/2 and m_1 μ + C_H ε_3(μ) ≤ c_H/2.
+
+**Theorem 6d.1.** Assume (P), (L), (H) with constants independent of M = L^j. Let
+μ be admissible, K_u := (2C_H/c_H)(1+ε_3)e^{r_Lμ}, and let Φ, Φ' ∈ 𝔇_c have
+finite supports S, S' ⊂ MZ³ (coarse plaquette positions, in fine coordinates) at
+coarse distance D := dist(S,S')/M. Then for every s ∈ [0,1], j ≥ 0, N ≥ j:
+
+1. (*decay of the minimizer map*) the fibre correction z' := B(Φ') − b(Φ')
+   satisfies ‖z' 1_{dist(·,S') ≥ ℓ}‖ ≤ K_u e^{−μℓ/M} ‖b(Φ')‖ for all ℓ ≥ 0, and
+   b(Φ') is supported within r_L M of S'. In coarse units the decay rate is μ.
+2. (*decay of the form*) |Π_j^{(s)}(Φ,Φ')| ≤ C e^{−μD} ‖Φ‖ ‖Φ'‖ with
+   C := C_L² C_H e^{r_Lμ}(e^{r_Lμ} + K_u).
+
+*Explicit μ_0.* For μ ≤ 1, ε_3(μ) ≤ κ_3 μ with
+κ_3 := 4C_Pe^{3+r_P} + C_L e^{r_L}[4√3e^{6√3} + 4C_Pe^{2√3+3+r_P}], so
+μ_0 := min{1, μ_Δ/2, c_H/(2(m_1 + C_Hκ_3))} is admissible. For s = 0 and s = 1
+(H = 1: c_H = C_H = 1, m_0 = m_1 = 0) μ_0 = min{1, 1/(2κ_3)} depends only on the
+lattice constants C_P, r_P, C_L, r_L, not on L, j, N, s. For 0 < s < 1 the defect
+enters only through (c_H, C_H, m_1, μ_Δ), constants of the single one-step object
+Δ̂_L, and only as m_1 μ/M, so it matters less as j grows. (The constants are not
+optimized.)
+
+*Proof.* Fix φ_T(x) := ν min(dist(x,S'), T) with ν := μ/M ≤ μ, so φ_T is
+ν-Lipschitz in the Euclidean metric; write φ = φ_T, E := e^{2φ}, and u := e^{φ}z'
+(in ℓ² because φ is bounded; the constants below do not depend on T, and T → ∞ at the
+end by monotone convergence). Let B' := B(Φ') = b' + z', b' := b(Φ'), z' ∈ Z.
+
+*Step 1: a test fibre element built from a potential.* By (P), A' := Λ_0 z' satisfies
+dA' = z'. Put z_0 := d(E A') ∈ 𝔇 and
+
+    z := z_0 − b(w z_0).
+
+This is in Z: z_0 is closed, w z_0 is a closed coarse flux (w maps 𝔇 into 𝔇_c), so
+b(wz_0) is defined, closed, and w z = w z_0 − w z_0 = 0. (This is where the
+non-invariance of Z under multiplication by e^{2φ} is handled: E z' is not closed,
+but d(E A') is, and it differs from E z' by a commutator that carries one derivative
+of E acting on A', which is of size ν|A'| ≲ (μ/M)·M|z'| = μ|z'| by (P).)
+
+*Step 2: z ≈ E z'.* Write z_0 = E z' + δ with δ = (dE − Ed)A'. At a site x the
+curl components of δ are sums of two terms (E(x+e_k) − E(x))A_l(x+e_k), and
+|E(x+e_k) − E(x)| ≤ (e^{2ν}−1)E(x). Hence
+‖e^{−φ}δ‖ ≤ 2(e^{2ν}−1)e^{ν}‖e^{φ}A'‖. By (P), ‖e^{φ}A'‖ ≤ e^{r_Pμ} C_P M ‖u‖
+(e^{φ(x)} ≤ e^{φ(y)}e^{νr_PM} on the range of Λ_0), and M(e^{2ν}−1) ≤ 2μe^{2ν}, so
+
+    ‖e^{−φ}δ‖ ≤ ε_1(μ) ‖u‖.
+
+Next g := w z_0 = w(E z') + wδ. Since w z' = 0, for a coarse point Y
+(wEz')(Y) = Σ_x w(x−Y)(E(x) − E(Y))z'(x), and
+|E(x)−E(Y)| ≤ 2ν|x−Y| e^{2φ(Y)+2ν|x−Y|}, e^{φ(Y)} ≤ e^{φ(x)+ν|x−Y|}. With
+|x−Y| ≤ R_w ≤ 2√3M and (W1),
+‖e^{−φ}wEz'‖ ≤ 4√3 μ e^{6√3μ} M^{1/2}‖u‖, and likewise
+‖e^{−φ}wδ‖ ≤ e^{2√3μ} M^{1/2}‖e^{−φ}δ‖. By (L) (weights move by e^{r_Lμ}),
+
+    ‖e^{−φ}b(g)‖ ≤ ε_2(μ) ‖u‖,   so   ‖e^{−φ}(z − E z')‖ ≤ ε_3(μ) ‖u‖.
+
+*Step 3: the Euler-Lagrange equation.* (EL) with this z gives
+0 = ⟨Hz', Ez'⟩ + ⟨Hb', Ez'⟩ + ⟨HB', z − Ez'⟩ =: T_1 + T_2 + T_3.
+T_1 = ⟨e^{φ}He^{−φ}u, u⟩ = ⟨Hu,u⟩ + s⟨(e^{φ}Δ̂e^{−φ} − Δ̂)u,u⟩ ≥ (c_H − m_1ν)‖u‖²,
+by (H)(i) and the Schur test |e^{ν|x−y|}−1| ≤ ν|x−y|e^{ν|x−y|} (ν ≤ ν_Δ). On
+supp b', φ ≤ νr_LM = r_Lμ, so |T_2| ≤ ‖e^{φ}Hb'‖‖u‖ ≤ C_H e^{r_Lμ}‖b'‖‖u‖. And
+|T_3| ≤ ‖e^{φ}HB'‖ ε_3‖u‖ ≤ C_H ε_3 (e^{r_Lμ}‖b'‖ + ‖u‖)‖u‖. Since T_1 ≤ |T_2|+|T_3|
+and μ is admissible,
+
+    (c_H/2)‖u‖² ≤ C_H e^{r_Lμ}(1+ε_3)‖b'‖‖u‖,   i.e.   ‖e^{φ}z'‖ ≤ K_u ‖b'‖.
+
+Since e^{φ_T} ≥ e^{ν min(ℓ,T)} on {dist ≥ ℓ}, letting T → ∞ gives item 1.
+
+*Step 4: the form.* With (EL) for B' tested on z ∈ Z,
+Π(Φ,Φ')/M = ⟨B(Φ), H B'⟩ = ⟨b, Hb'⟩ + ⟨Hb, z'⟩ (⟨z,HB'⟩ = 0 by (EL) for B'
+tested on z = z(Φ) ∈ Z). First term: b and b' are supported within r_LM of S
+and S'. If D > 2r_L they are at fine distance ≥ M(D − 2r_L) and, since H = 1 + sΔ̂,
+|⟨b,Hb'⟩| ≤ m_0 e^{−ν_ΔM(D−2r_L)}‖b‖‖b'‖ ≤ m_0 e^{−μ(D−2r_L)}‖b‖‖b'‖ (Schur
+test, μ ≤ ν_Δ, M ≥ 1); for D ≤ 2r_L use |⟨b,Hb'⟩| ≤ C_H‖b‖‖b'‖. Either way it is
+≤ C_H e^{2r_Lμ}e^{−μD}‖b‖‖b'‖. Second term: on supp b, φ ≥ μ(D − r_L), so
+|⟨Hb,z'⟩| ≤ ‖e^{−φ}Hb‖‖u‖ ≤ C_H e^{−μ(D−r_L)}‖b‖ K_u‖b'‖. Finally
+M‖b‖‖b'‖ ≤ C_L²‖Φ‖‖Φ'‖ by (L). Adding gives item 2. ∎
+
+*Remarks.* (1) *Why potentials.* Cutting off a closed flux gives a field with
+divergence ∇χ·B, and the local correction (a Bogovskii/divergence solver on the
+transition region of width ℓ_χ) has norm ≈ C‖B‖, not small: the constant does not
+improve with ℓ_χ. Cutting off the potential gives an error of relative size μ because
+the potential of a fibre element is bounded by M times the element (the Poincaré
+scaling, input (P)). (2) *Where M cancels:* ν = μ/M, |A| ≲ M|z|, ‖w‖ ≲ M^{1/2},
+‖b‖ ≲ M^{-1/2}. All errors are O(μ) with M-independent constants, which is why one
+composite Schur complement gives μ_0 independent of j with no per-step loss; iterating
+the one-step estimate j times would lose a constant per step. (3) *What is trivial:*
+in the flux picture the fibre form is coercive with constant c_H (= 1 for the orbit)
+and no Poincaré inequality enters Steps 3-4; the Poincaré content of the fibre is
+entirely in (P). (4) A pseudo-inverse/Riesz-projector Combes-Thomas on the fibre in
+the potential picture, with the spectral gap ∼M^{-2} of d^*Hd on ker Q, only gives
+a rate ∼M^{-3} per fine unit, i.e. M^{-2} per coarse unit: the gauge directions
+make that route non-uniform. (5) On a torus use the periodic distance; the
+construction and constants are unchanged. (6) The statement is for pairings of
+closed fluxes (K1), hence includes (K2): κ(ℓ,ℓ') = Π(d_cδ_ℓ, d_cδ_ℓ'),
+‖d_cδ_ℓ‖ = 2, gives |κ(ℓ,ℓ')| ≤ 4C e^{2μ_0} e^{−μ_0|ℓ−ℓ'|} (the supports are within 1 of the links).
+
+#### 6d.4 Numerics: decay rates in the abelian Fourier model (computation)
+
+`research/scripts/t78_kernel_decay.py` (`.out`). For a coarse momentum grid
+K ∈ (2π/n)Z³ the script evaluates Π_j^{(s)}(K) *exactly* by recursion over the L^{3j}
+aliases of the level-N momenta p = (K + 2πm)/L^j (no fine grid is built; the same
+aliasing formulas as t76: Σ(Π) = (GΠ^+)^+, level-N data (1−s)P + sΣ(P)). The
+potential symbol κ(K) = C(K)^*Π(K)C(K), C(K)a = r(K) × a (the form
+a ↦ Π(curl a) on coarse links; 3×3, gauge invariant, κ r = 0, κ(0) = 0), is Fourier
+transformed to the n³ coarse torus. The reported rate μ is the slope of
+−log max_{ab}|κ_{ab}(x)| against the l¹ distance |x|_1, fitted on the shells
+2 ≤ |x|_1 ≤ n/2 above 1e-8 of the maximum ("fit") and on the last five usable shells
+("tail"). Grids: n = 32 for L = 2, n = 16 for L = 3 (7 shells only). Since
+|x|_1 ≥ |x|_2, a bound C e^{−μ|x|_1} implies C e^{−μ|x|_2}.
+
+Decay rate μ per coarse l¹-unit, fit / tail:
+
+| L | j | s = 0 | s = ½ | s = 1 |
+|---|---|---|---|---|
+| 2 | 1 | 1.670 / 1.586 | 1.445 / 1.407 | 1.375 / 1.341 |
+| 2 | 2 | 1.375 / 1.341 | 1.332 / 1.299 | 1.304 / 1.268 |
+| 2 | 3 | 1.304 / 1.268 | 1.294 / 1.259 | 1.286 / 1.251 |
+| 3 | 1 | 1.501 / 1.488 | 1.392 / 1.380 | 1.339 / 1.332 |
+| 3 | 2 | 1.339 / 1.332 | 1.328 / 1.322 | 1.320 / 1.314 |
+| 3 | 3 | 1.320 / 1.314 | 1.319 / 1.312 | 1.318 / 1.311 |
+
+Observations.
+
+- **Uniform lower bound.** All 18 cases have μ ≥ 1.25 (tail) and ≥ 1.28 (fit). The
+  smallest value is at s = 1 and at the largest j, and the rate decreases
+  monotonically in s at fixed (L, j) and in j at fixed s.
+- **Convergence in j.** The Wilson orbit W_n = Π_{n−1}^{(1)} = Π_n^{(0)} has tail rates
+  1.586, 1.341, 1.268, 1.251 (L = 2, n = 1..4; successive differences 0.245, 0.073,
+  0.017) and 1.488, 1.332, 1.314, 1.311 (L = 3). So the rate converges geometrically
+  to a limit ≈ 1.245 (L = 2), ≈ 1.31 (L = 3); this is the continuum-limit behaviour
+  predicted by scale covariance, and it is why μ_0 must not depend on j.
+- **Consistency.** The rows (j, s = 1) and (j+1, s = 0) agree to all printed digits
+  (also kernel(0) = 14.37, 16.38 for L = 2), as they must since Π_j^{(1)} = W_{j+1}.
+  The overall normalization (factor L per step) is the one checked by brute force in
+  `t78_realspace_check.out` (6d.1).
+- **The flux form is not local.** `t78_flux_tail.py` (`.out`), n = 64: the
+  zero-extended Π(K) has the same |x|^{-3} tail as the Wilson projector P(K) itself
+  (axis, local exponents 3.17, 3.19, 3.11 between |x| = 8 and 16 for W_1, W_2, P, and 3.06, 3.06, 3.05 between 16 and 24, where torus images start to contribute),
+  although its potential-form kernel decays at rate ≥ 1.25. This is the numerical
+  content of the distinction (K2) versus (K3).
+- **Limits of the check.** These are measured rates in the abelian Gaussian model at
+  flat background, not bounds; they say nothing about (P), (L), (H) separately, and
+  the rates are not compared to the (unoptimized) μ_0 of Theorem 6d.1, whose constants
+  C_P, C_L, r_P, r_L were not computed. The L = 3 grids have only 7 shells.
+
+#### 6d.5 What is proved, and what is not (status of R2)
+
+**Proved here.** (i) Theorem 6d.1, a conditional reduction of R2 to the inputs (P),
+(L), (H) (for s = 0 and s = 1 to (P), (L) only), with explicit μ_0, C, uniform in
+s, j, N, in coarse units. (ii) The normalization (6d.1), checked by brute force.
+(iii) The numerical decay table above.
+
+**Not proved: the exact remaining steps.**
+
+1. **(P), the M-uniform local primitive on the fibre Z = 𝔇 ∩ ker w.** False on all of
+   𝔇 (linking obstruction, 6d.2 [lead review]); plausible on Z, where the coarse
+   fluxes vanish, via the box Poincaré lemma and the Čech-de Rham tower; the constants
+   C_P, r_P and their independence of M are not verified. Naive alternatives fail: the Coulomb primitive A = (r̄ × B)/|r|²
+   has the factor 1/Σ4sin²(p_a/2), whose zero set contains, for every small t, a point
+   within O(t³) of p = (t, 2it, √3t) (to leading order p·p = 0), so it is analytic in
+   no strip around the real axis at the m = 0 alias; and the minimal-norm primitive in ker Q is as nonlocal as P.
+2. **(L), the M-uniform local closed lift of coarse fluxes**, with
+   ‖|b|‖ ≤ C_LM^{-1/2}. The route b = dRΛ_0^c fails (no local coarse primitive on
+   all closed coarse fluxes); the Whitney route of 6d.2 needs the uniform local
+   invertibility of w R^{(2)} on closed fluxes. Not computed.
+3. **(H), a local flux representative of the one-step defect Δ_L = Σ(S) − S that is
+   positive on all of ℓ².** This is (K3) for j = 1. Theorem 6d.1 with s = 0, j = 1
+   gives (K1) for Π_1 = S + Δ_L from (P), (L) alone, and the numerics show (K2) holds.
+   What is missing is the lemma M1: *a gauge-invariant, exponentially local kernel on
+   links (or, equivalently, a (K1)-local form on closed fluxes) has an exponentially
+   local flux representative, which can be chosen ≥ c on ℓ².* A positive extension
+   from a local representative exists (at p = 0 the matrix π(0) is ≥ 1 on all of C³,
+   because every vector is transverse to some direction, and a penalty
+   τ|div u|² handles |p| ≥ p_0); the existence of the local representative itself
+   would come from a cone-chain (Koszul) construction with an exponential-rate loss
+   that is paid once, since Δ_L is a fixed object. Not carried out. Without (H), the
+   interior s ∈ (0,1) is not covered, but the two endpoints are (conditional on (P),
+   (L)): s = 0 and s = 1 are the Wilson orbit at depths j and j+1.
+4. **Scope.** Abelian Gaussian skeleton at flat background only. The non-flat and
+   non-abelian cases (R4), the generated terms (R1) and large fields (R5) are
+   untouched. Item R2 also names the gradient bound ‖∇B_s‖ ≲ M^{-1}‖B_s‖ (note 44
+   Theorem 1) and the Lipschitz inequality (i) of note 63 Lemma 1 at interior s; the
+   decay of B_s is item 1 of Theorem 6d.1, but a gradient bound is a separate estimate
+   that was not attempted.
+
+**Lead review (2026-10-10).** Theorem 6d.1's proof was checked step by step and is
+correct given (P), (L), (H); `t78_realspace_check.py` was re-run with identical output. Two
+corrections were made: (P) is stated on the fibre Z only (on all closed fluxes it is
+false, by the linking argument in 6d.2), and the suggested route to (L) through a
+coarse primitive is replaced (same obstruction). So the remaining inputs are not
+"standard lattice facts": (P) on Z and (L) both depend on w and are genuinely open,
+though plausible.
+
+**Verdict on R2.** The Combes-Thomas step, which was the stated obstruction (the
+constraint space is not invariant under e^{μ·x}), is resolved: cut off potentials,
+repair the two constraints with the local lift, and every error is O(μ) with
+M-independent constants. What remains is not analysis of the interpolated forms but
+geometry of the lattice and of w: (P) on the fibre and (L), plus (H) at interior s.
+Next concrete step: (P) on Z (box homotopy operator with norm ≤ CM, glued through the
+Čech-de Rham tower, using wz = 0 at the last step), then (L) by the Whitney route,
+checked numerically for L = 2, 3, j <= 4.
 
 ### 6e. Lemma 6b.2 under the corrected large-field bound (I-LF)(b′) (T81)
 

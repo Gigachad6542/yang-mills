@@ -867,6 +867,23 @@ matching with `t51_matching.py` (extend DATA with the W22 column) and write
 the note 56 section.
 Result: note 56 section "Third depth (N = 3, 32⁴) and the 2×2 loop (T54)"; `t54_matching.py`/`.out`. The optional Symanzik N = 3 run (note 62) was not done.
 
+### T78 [failed-attempt] — **completed 2026-10-10** (Sonnet worker, two session-limit stops, lead-reviewed); moved ahead of T79 by the lead (T79's consumer, the (EQ) route, was closed by T80); earlier: assigned to Sonnet (re-dispatched 2026-10-08; nothing salvaged): kernel locality of the interpolated forms (note 61 §6c.6, R2)
+Scope: `research/61-3d-assembly-conditional.md`, new §6d, plus `research/scripts/t78_*.py`.
+T76 proved S <= W_j <= Π_j^{(s)} <= W_{j+1} in the quadratic sector but noted
+(R2) that a Loewner sandwich does not give locality: the real-space kernel of
+Π_j^{(s)} (and of its minimizer map B_s(Φ), (6c.1)) must decay exponentially,
+uniformly in s ∈ [0,1], j, N, for the polymer/mixed norm of note 51 to apply.
+Prove this by a Combes-Thomas argument: conjugate the composite fibre problem
+(6c.1) by e^{μ·x}, show the conjugated form stays coercive on the fibre for
+|μ| <= μ_0 (with μ_0 independent of s, j, N, using S <= S + sΔ <= (1+ρ)S
+and the finite range of w), and deduce |kernel(x,y)| <= C e^{-μ_0|x-y|} in
+coarse units. Note whether the decay rate is in units of the level N-j lattice
+(it must be, for the mixed norm). Check numerically on the abelian model
+(`t76_convexity.py` setup) for L = 2, 3.
+Done when: exponential decay is proved with explicit μ_0, C, or a
+`failed-attempt` names the step (e.g. the constraint space under conjugation).
+Verdict (lead review): accepted as a conditional reduction (failed-attempt for the unconditional statement). Note 61 §6d Theorem 6d.1: Combes-Thomas for the composite fibre, by cutting off potentials and repairing the constraint with a local lift; decay rate μ_0 per coarse unit uniform in s, j, N, given (P), (L), (H). Normalization: Π_j^{(s)} = L^j min{...} (brute force). Numerics: rate >= 1.25 per coarse unit for L = 2, 3, j <= 3, s ∈ {0, ½, 1}; the zero-extended flux form has a |x|^{-3} tail. Lead correction: (P) is false on all closed fluxes (linking argument) and is restated on the fibre Z; the suggested route to (L) via a coarse primitive fails for the same reason. Follow-up: T83.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

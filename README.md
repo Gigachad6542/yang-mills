@@ -205,8 +205,12 @@ must be controlled polymer by polymer.
   - (I-S) the step map is analytic along the s-orbit. In the quadratic
     (Schur) sector this is **proved** by convexity (note 61 §6c, T76:
     S <= W_j <= Π_j^(s) <= W_{j+1}, an analytic disc uniform in N and j).
-    Kernel locality of the interpolated forms (T78) and the higher-order
-    parts are open.
+    Kernel locality of the interpolated forms is reduced (note 61 §6d, T78,
+    Combes-Thomas on potentials) to three local-geometry inputs: a local
+    primitive on the fibre, a local closed lift of coarse fluxes, and (for
+    interior s) a local positive flux representative of the one-step defect;
+    the numerical decay rate is >= 1.25 per coarse unit, uniform in s and j.
+    These inputs and the higher-order parts are open.
   - (I-LF) a large-field comparison. The upper side is published (CMP 102
     (70)-(71)). For the lower side, note 64 proves an absolute bound
     (Theorem 64.1, explicit constants) and an exact fibre-transport identity

@@ -1,0 +1,5 @@
+L=2 n_c=4 fine torus 8^3: 1536 plaquette dofs, 192 coarse
+  rank d = 1022
+  s=0.0: fibre value vs pinv formula max|diff|/scale = 9.59e-15; constraint residual 7.7e-15; Fourier-vs-real-space symbol spectra max diff 1.15e-14
+  s=0.5: fibre value vs pinv formula max|diff|/scale = 1.36e-14; constraint residual 9.8e-15; Fourier-vs-real-space symbol spectra max diff 1.69e-14
+  s=1.0: fibre value vs pinv formula max|diff|/scale = 1.04e-14; constraint residual 8.8e-15; Fourier-vs-real-space symbol spectra max diff 1.60e-14
