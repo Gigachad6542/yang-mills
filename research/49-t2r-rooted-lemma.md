@@ -9,7 +9,7 @@ Status:
     domain factors CMP 122 II (1.79)-(1.89), with the rate a_eff below.
 - **Correction to note 39 §6.** Persistence does **not** cost one
   large-field factor per level. Inside an unprocessed large-field domain,
-  levels pass without new factors for up to K <= n_0 + R_j steps
+  levels pass without new factors for up to K <= n_0 - j + R_j steps [corrected from n_0 + R_j, T72; (1.81), p. 385]
   (CMP 122 II (1.83)). The correct rate is a_eff = c p_0(γ)²/(R(γ) + n_0 + 1),
   where R(γ) ~ (log γ^{-2})^r (CMP 119 p. 245). Since p_0(γ)² ~ (log γ^{-1})^{2p_0},
   a_eff -> ∞ as γ -> 0 provided 2p_0 > r.
@@ -29,11 +29,11 @@ the fundamental bound T_k(X)1 <= exp(-2(1+β_0)^{-1} p_0(g_k) - κ d_k(X))
 - each **new** large-field region Z^{(j+1)} created at step j+1 adds
   γ_0 A p_0²(g_{j+1})(d'_{j+1}(Z^{(j+1)}) + 1) + 2p_0(g_{j+1}) to κ;
 - a domain carried along by Z = S(Z_0), with **no new large fields**,
-  satisfies κ_{j+1}(Z) = κ_j(Z_0) - O(1) M^d R^d d'_{j+1}(Z) (1.83). It gets
+  satisfies κ_{j+1}(Z) = κ_j(Z_0) - O(1) M^d R_{j+1}^{d+1} d'_{j+1}(Z) (1.83) [R^{d+1}, not R^d: T72, note 66]. It gets
   no new factor;
 - a domain is carried for at most K steps, until S^K(Z) satisfies
   conditions (i)-(ii) (size <= 100MR and no new large fields for N = R_j
-  steps). By (1.81), K <= n_0 + R_j. Then the R-operation processes it.
+  steps). By (1.81), K <= n_0 - j + R_j. Then the R-operation processes it.
 
 ## 2. Lemma 1 (rooted Kotecký-Preiss bound)
 
@@ -79,7 +79,11 @@ expansion, CMP 122 II §1-2). Then
 3. *Activity bound.* The domains Y in the final representation that contain
    these creation regions carry, by (1.85), a factor
    exp(-γ_0 A p_0² (d' + 1)) for each creation, times entropy factors
-   exp(O(1) M^d R^d d') absorbed for small γ (CMP 122 II (1.80)-(1.81)).
+   exp(O(1) M^d R^{d+1} d') absorbed for small γ (CMP 122 II (1.80)-(1.81)).
+   [T72, note 66 §5 item 7: the unnumbered second case after (1.83) gives a
+   fresh factor exp(-p_0(g_j)), linear in p_0, each time a processed domain
+   stays large-field; so per R-cycle the gain may be linear in p_0, not p_0².
+   Not checked further; it concerns a_eff at d = 4.]
 4. *Lemma 1.* Apply it with S_i = the level-(k+j_i) neighbourhoods of Λ at
    the creation steps. The KP weights e^{a(Y)} cost at most half of the
    exponent, times a factor e per polymer (absorbed into C). The geometric sum over domain shapes is controlled by the
@@ -111,6 +115,10 @@ is a new estimate.
   O(1) M^d R_j^{d+1} d' (CMP 122 II (1.81)-(1.82); "this condition is
   satisfied for p_0 large, and g_1 sufficiently small"). With the forms above
   this requires 2p_0 > (d+1) r for small g. In particular 2p_0 > r.
+  [Corrected, T72 (note 66 §3, §5 item 3): the base case (1.82) compares
+  p_0² with R_1^{d+2}, so it needs 2p_0 > (d+2) r: 5r at d = 3, 6r at d = 4;
+  the (1.88) merge step in II's form needs p_0 > (d+2) r, and at R = identity
+  p_0 > (d+1) r suffices. Balaban's p_0 >= 5r meets the d = 3 conditions.]
 - [T71, note 65 §6 item 6.] Balaban's actual choice is stated on CMP 119
   p. 246, text after (1.1): "in the first step we take ε_0 = g_0 p_0(g_0),
   p_0(g_0) = A_0(log g_0^{-2})^{p_0}, p_0 ≧ 5r" (the first of two choices,
@@ -135,6 +143,13 @@ CMP 122 II, after (1.89) (printed pp. 388-390).
 - "The next step is a construction of an exponentiated cluster expansion
   for the expression in the curly bracket in (1.72). The first operation is
   the Mayer expansion of the exponential, the same as in (7.1) [I]."
+- [T72, note 66 §4 Q1, Q3: (1.90)-(1.99) expand the curly bracket of (1.72),
+  the sum over the R-operation's first-class components; they are vacuous at
+  R = identity, the constant c_1 = α_1^{1/3} for polymers touching a
+  large-field domain is scale-independent (not a power of g_k), and they are
+  not the exponentiated expansion of the fluctuation integral. At d = 3 the
+  g^q smallness of a persisting domain is the weight (1.89),
+  T_k(Y)1 <= exp(-2p_0(g_k)), outside the activities.]
 - The activities obey (1.92)-(1.97). The final bound (1.97) has the form
 
       |activity(X')| <= c_1 exp(-(1 + β) κ d_k(X')),

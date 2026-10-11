@@ -906,6 +906,19 @@ Note 61 is also edited by T78 (new §6d): touch only the lines the audit names.
 Done when: every approved item is applied or rejected with a reason. Commit `[T82][fix]` plus one PROGRESS line.
 Verdict (lead review): accepted. All approved items applied, except two audit items the worker showed were wrong (note 22 Thm A constant: a partial window costs < ℓb_+, so 2ℓb_+ stands — checked by the lead; note 25 gauge order: correct under the convention of step 3, now stated). KP weight a(X) = ½κd(X) + 1 (c_1 <= 1/(2e)) checked. Q <= 0 now proved (note 61 Lemma 6c.2 + kernel identity, t82_kernel_check67.py re-run). Manuscript remark replaced by the Vitali-Montel argument; PDF rebuilt.
 
+### T72 [fix] — **completed 2026-10-11** (Sonnet worker, one session-limit stop; lead-reviewed); reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
+Scope (changed 2026-10-08): a new note `research/66-cmp122ii-d3-reading.md`;
+the lead adds the pointers in notes 49 §6 and 61 §6a.
+From the page images, check that Balaban's domain factors (1.79)-(1.89) and
+the final activity bound (1.97)-(1.99) hold at d = 3 when the R-operation is
+the identity, so that note 49's rooted KP lemma gives (H4a). List each
+inequality used, with its d-dependence. Also (added after T66): say whether
+the exponentiated expansion (1.92)-(1.99) at d = 3 localizes CMP 102's
+sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
+Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
+Partial work: `wip/round-2026-10-08/t72/` (script only). Read note 65 first (T71): it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
+Verdict (lead review): accepted (pp. 385 and 387 checked by the lead against the images: (1.83) has R^{d+1}, (1.82) needs R^{d+2}, (1.89) is linear in p_0, the improved -κ_1 d_k(X) bound is one sentence). Note 66: (1.79)-(1.89) survive at d = 3 with R = identity after three changes (conditional reduction); (1.90)-(1.99) are the R-operation's expansion, vacuous at d = 3, with scale-independent α^{1/3}; they do not localize CMP 102's sixth-order remainder (the localized fluctuation expansion is CMP 119 (3.39)-(3.47)); the failing (2.6)-(2.9) forms are used only in the R-specific preparatory step. Lead applied note 66 §5 to notes 49, 61, 65 and the README. Follow-up: T84 (gaps G1, G2).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

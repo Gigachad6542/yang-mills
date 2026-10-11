@@ -1,0 +1,87 @@
+PART A. exponent conditions (strict, as g -> 0); minimal integer p_0.
+  p_0(g) = (log g^-2)^p_0, R_j ~ (log g_j^-2)^r (r = r_0 of II p. 383).
+  (a) R on, II p. 383 prose after (1.78): 2 p_1 - (d+5) r > p_0; if p_1 <= p_0 this gives p_0 > (d+5) r
+  (b) R on, (1.88): p_0 > (d+2) r        [linear 2(1+b0)^-1 p_0(g_{j+1}) against R^(d+2)]
+  (c) (1.82) base case, R on or R = id (verbatim): 2 p_0 > (d+2) r   [p_0^2 against R^(d+2)]
+  (d) R on, (1.95): p_0 > d r             [2 kappa (100 R_k)^d <= p_0(g_k)/4 - 1]
+  (e) R = id, merge (1.87) (no extra steps): p_0 > (d+1) r        [linear p_0 against R^(d+1)]
+  (f) R = id, base with tail <= x/ln L steps (refined): 2 p_0 > (d+1) r + 1
+  CMP 119 (1.1), p. 246: p_0 >= 5 r.   note 49 s5 / note 61 s6a quote 2 p_0 > (d+1) r  [(1.82) has R^(d+2)].
+
+| d | r | (a) p_0 > (d+5)r | (b) p_0 > (d+2)r | (c) 2p_0 > (d+2)r | (d) p_0 > d r | (e) p_0 > (d+1)r | (f) 2p_0 > (d+1)r+1 | p_0 >= 5r ok for (b)? (c)? (e)? |
+|---|---|---|---|---|---|---|---|---|
+| 3 | 2 | 17 | 11 | 6 | 7 | 9 | 5 | NO / yes / yes (p_0 = 10) |
+| 3 | 3 | 25 | 16 | 8 | 10 | 13 | 7 | NO / yes / yes (p_0 = 15) |
+| 4 | 2 | 19 | 13 | 7 | 9 | 11 | 6 | NO / yes / NO (p_0 = 10) |
+| 4 | 3 | 28 | 19 | 10 | 13 | 16 | 9 | NO / yes / NO (p_0 = 15) |
+
+Binding condition, R on (d = 4): (a) p_0 > 9 r (if p_1 <= p_0), against p_0 >= 5 r of CMP 119 (1.1).
+Binding condition, R = id (d = 3): (b)-form p_0 > 5 r verbatim, p_0 > 4 r refined; p_0 >= 5 r meets the refined one.
+
+PART B. L-conditions of the printed geometry (II p. 384-385). L is odd and > 11 in CMP 109 (note 65).
+  L_{n-j} <= 42 (1 - L^-(n-j))/(1 - 1/L) < 63 needs 42 L/(L-1) <= 63, i.e. L >= 3;
+  L^(-1/2 (n-j)) <= 2^(-(n-j)) needs L >= 4.
+| L | 42 L/(L-1) | <= 63 ? | L^(-1/2) | <= 1/2 ? |
+|---|---|---|---|---|
+| 2 | 84.00 | NO | 0.7071 | NO |
+| 3 | 63.00 | yes | 0.5774 | NO |
+| 4 | 56.00 | yes | 0.5000 | yes |
+| 5 | 52.50 | yes | 0.4472 | yes |
+| 13 | 45.50 | yes | 0.2774 | yes |
+| 15 | 45.00 | yes | 0.2582 | yes |
+
+PART C. 3D flow, x_j = x_K + (K-j) ln L; K = 300 steps (all j = 0..K), g^2 = exp(-x_K).
+  analytic: (C1) holds once x_j >= 1 (K - j = (x_j - x_K)/ln L < x_j/ln L <= x_j <= x_j^r for L >= 3).
+            (C2) needs (x/(x - ln L))^r <= L, i.e. x >= x_b = ln L/(1 - L^(-1/r)).
+            (C3) is guaranteed once drops are >= 3 steps apart: x >= x_c = ln L/(1 - L^(-1/(3r))).
+| L | r | x_b | x_c | g^2 = e^-x_c |
+|---|---|---|---|---|
+| 3 | 2 | 2.599 | 6.566 | 1.41e-03 |
+| 3 | 3 | 3.583 | 9.560 | 7.05e-05 |
+| 4 | 2 | 2.773 | 6.720 | 1.21e-03 |
+| 4 | 3 | 3.746 | 9.711 | 6.06e-05 |
+| 5 | 2 | 2.912 | 6.841 | 1.07e-03 |
+| 5 | 3 | 3.876 | 9.829 | 5.39e-05 |
+| 13 | 2 | 3.549 | 7.374 | 6.28e-04 |
+| 13 | 3 | 4.463 | 10.343 | 3.22e-05 |
+
+  exact check on the grid x_K in {1.0, 1.25, ..., 40.0}: smallest x_K from which the check holds for every larger grid value
+| L | r | (C0) | (C1) | (C2) | (C3) |
+|---|---|---|---|---|---|
+| 3 | 2 | 1.00 | 1.00 | 1.25 | 3.25 |
+| 3 | 3 | 1.00 | 1.00 | 2.25 | 6.25 |
+| 4 | 2 | 1.00 | 1.00 | 1.25 | 4.25 |
+| 4 | 3 | 1.00 | 1.00 | 1.75 | 6.50 |
+| 5 | 2 | 1.00 | 1.00 | 1.25 | 2.25 |
+| 5 | 3 | 1.00 | 1.00 | 1.75 | 5.25 |
+| 13 | 2 | 1.00 | 1.00 | 1.00 | 1.25 |
+| 13 | 3 | 1.00 | 1.00 | 1.25 | 5.75 |
+
+PART D. a domain created at scale i with weight ~ x_i^(2 p_0) (the p_0^2 term of (1.82), (1.85)) and carried unprocessed to the unit lattice K:
+  accumulated entropy E_i = sum_{n=i+1}^{K} R_n^(d+1) (one MR-cube per step; constants (64)^d M^d omitted).
+  (1.81) second line: E_i <= L^(d+1) R_i^(d+1) (K - i) <= L^(d+1) R_i^(d+2); ratios printed below.
+| d | L | r | p_0 | x_K | max_i E_i / R_i^(d+2) | max_i E_i / x_i^((d+1) r + 1) | min_i x_i^(2 p_0) / E_i |
+|---|---|---|---|---|---|---|---|
+| 3 | 4 | 2 | 10 | 8 | 0.016 | 8.085 | 1.027e+11 |
+| 3 | 4 | 2 | 10 | 20 | 0.008 | 8.053 | 3.643e+14 |
+| 3 | 4 | 2 | 10 | 60 | 0.003 | 7.908 | 2.246e+19 |
+| 3 | 4 | 3 | 15 | 8 | 0.001 | 5.493 | 1.360e+17 |
+| 3 | 4 | 3 | 15 | 20 | 0.000 | 5.471 | 1.113e+23 |
+| 3 | 4 | 3 | 15 | 60 | 0.000 | 5.499 | 2.415e+30 |
+| 3 | 13 | 2 | 10 | 8 | 0.006 | 473.360 | 3.530e+10 |
+| 3 | 13 | 2 | 10 | 20 | 0.005 | 478.500 | 5.028e+13 |
+| 3 | 13 | 2 | 10 | 60 | 0.001 | 469.040 | 1.269e+18 |
+| 3 | 13 | 3 | 15 | 8 | 0.000 | 322.993 | 2.232e+17 |
+| 3 | 13 | 3 | 15 | 20 | 0.000 | 306.517 | 6.025e+22 |
+| 3 | 13 | 3 | 15 | 60 | 0.000 | 316.244 | 3.843e+29 |
+  (L^(d+1) R_i^(d+1) (K-i) <= L^(d+1) R_i^(d+2) is the paper's bound; first ratio stays below L^(d+1).)
+
+PART E. exp(-2 p_0(g)) <= g^q with p_0(g) = (log g^-2)^p_0 (A_0 = 1): need 2 x^p_0 >= q x/2, i.e. x >= (q/4)^(1/(p_0-1)).
+| p_0 | q | threshold x_* | g^2 <= e^-x_* |
+|---|---|---|---|
+| 10 | 5 | 1.025 | 0.359 |
+| 10 | 10 | 1.107 | 0.330 |
+| 10 | 100 | 1.430 | 0.239 |
+| 10 | 1000 | 1.847 | 0.158 |
+
+(2.7) first line on the 3D flow: p_0(g_m) >= p_0(g_n) for m <= n because x_m = x_n + (n-m) ln L >= x_n (beta_0 = 0 suffices).

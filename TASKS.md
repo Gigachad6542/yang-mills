@@ -25,17 +25,11 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T72 [fix] — claimed by Sonnet worker (lead dispatch), 2026-10-10; reassigned from Codex to a subagent, 2026-10-08: CMP 122 II (1.79)-(1.99) at d = 3 with R = identity (notes 49, 61)
-Scope (changed 2026-10-08): a new note `research/66-cmp122ii-d3-reading.md`;
-the lead adds the pointers in notes 49 §6 and 61 §6a.
-From the page images, check that Balaban's domain factors (1.79)-(1.89) and
-the final activity bound (1.97)-(1.99) hold at d = 3 when the R-operation is
-the identity, so that note 49's rooted KP lemma gives (H4a). List each
-inequality used, with its d-dependence. Also (added after T66): say whether
-the exponentiated expansion (1.92)-(1.99) at d = 3 localizes CMP 102's
-sixth-order remainder (22)-(24), which is what note 61 §6b.4 item 1 needs.
-Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
-Partial work: `wip/round-2026-10-08/t72/` (script only). Read note 65 first (T71): it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
+### T84 [proof] — open, posted 2026-10-11 by the lead: the gaps (G1), (G2) of (H4a) at d = 3 (note 66 §4 Q1)
+Scope: a new note `research/68-large-field-gas-d3.md`, plus `research/scripts/t84_*.py`.
+Note 66 found that at d = 3 with R = identity CMP 122 II gives each persisting large-field domain Y the weight T_k(Y)1 <= exp(-2p_0(g_k) - κ_k(Y)) ((1.89), inductive bookkeeping (1.80)-(1.88), which survives with three changes), but (G1) CMP 122 II writes no polymer representation of the large-field-domain gas at R = identity (only the R-operation output (1.103)-(1.104)), and (G2) the decay -κ_1 d_k(X) added to (1.89) for arbitrary regions is asserted on p. 387, not proved.
+(1) Write the large-field-domain gas at R = identity as a polymer system: domains Y with weights from (1.89), interacting through the small-field expansion (CMP 119 (3.44)-(3.47), note 65) and through hard-core/overlap constraints, and state the KP condition of note 49 §6 (weight a(X) = ½κd(X) + 1) that it needs. (2) Prove (G2) from (1.80) at R = identity: κ_k(Y) >= κ_1 d_k(Y) for every domain (the creation budget γ_0 A_1² p_0²(d' + 1) of (1.85) against the R^{d+1} losses), with the exponent conditions of note 66 §3. (3) Conclude the bound |activity| <= C_q g_k^q e^{-κ d(X)} that note 61 Lemma 6b.2 / §6e assume, or name the step that fails.
+Done when: (H4a) at d = 3 is proved from CMP 122 II's printed inputs (1.79)-(1.89), CMP 119 Sect. 3 and note 49, or a `failed-attempt` names the step.
 
 ### T83 [proof] — open, posted 2026-10-10 by the lead: the inputs (P) and (L) of note 61 Theorem 6d.1
 Scope: `research/61-3d-assembly-conditional.md`, a new §6d.6 only, plus `research/scripts/t83_*.py`.

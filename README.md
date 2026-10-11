@@ -201,12 +201,20 @@ must be controlled polymer by polymer.
   (2.6)-(2.9) fail on the exact 3D flow, but Sect. 3 uses them only in forms
   that survive, and its form preservation goes through at d = 3 with
   R = identity after four changes. CMP 119 has no large-field activity
-  bound; that is CMP 122 II, being read at d = 3 in T72.
+  bound. Note 66 (T72, page images): CMP 122 II's domain factors
+  (1.79)-(1.89) survive at d = 3 with R = identity after three changes and
+  give a persisting large-field domain the weight exp(-2p_0(g)), smaller than
+  any power of g; its exponentiated expansion (1.90)-(1.99) belongs to the
+  R-operation and is vacuous at d = 3. (H4a) is a conditional reduction with
+  two named gaps: no polymer representation of the large-field gas at
+  R = identity is written (G1), and the decay of (1.89) for arbitrary regions
+  is asserted, not proved (G2).
 - (L_s), reduced in note 61 §6b (Lemma 6b.1, proved) to three inputs:
   - (I-L) locality of the one-step defect D_N. Its classical part is local
     through CMP 102b (190) (proof omitted by Balaban); its sixth-order
-    remainder is only bounded extensively in CMP 102, and needs the
-    exponentiated expansion of CMP 122 II at d = 3 (part of T72). Open.
+    remainder is only bounded extensively in CMP 102, and needs a localized
+    expansion of the first-step fluctuation integral (CMP 119 (3.39)-(3.47),
+    note 65; not CMP 122 II, note 66). Open.
   - (I-S) the step map is analytic along the s-orbit. In the quadratic
     (Schur) sector this is **proved** by convexity (note 61 §6c, T76:
     S <= W_j <= Π_j^(s) <= W_{j+1}, an analytic disc uniform in N and j).
@@ -328,6 +336,7 @@ reading.
 - `research/63-na-energy-perturbation.md` -- (NA♭) in the energy norm without CMP 102b (190): a constrained-minimizer perturbation lemma
 - `research/64-large-field-lower-bound.md` -- The large-field lower bound for the one-step defect D_N: an absolute bound, and an exact fibre transport reducing the Z-local form to equipartition
 - `research/65-cmp119-sect3-d3-reading.md` -- CMP 119 Sect. 3 at d = 3 with R = identity, from the page images: four changes, no large-field activity bound; corrects note 61 §6a (T71)
+- `research/66-cmp122ii-d3-reading.md` -- CMP 122 II (1.79)-(1.99) at d = 3 with R = identity, from the page images: domain factors survive, (1.90)-(1.99) are the R-operation's expansion; (H4a) with gaps G1, G2 (T72)
 - `research/67-fibre-equipartition.md` -- (EQ') is false; the Z-local relative bound (R) fails in the abelian Gaussian model; the corrected form with an exponentially decaying tail (T80)
 - `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print

@@ -290,7 +290,8 @@ is now read in note 65.
    - *Entropy versus large-field factors.* The induction needs the
      large-field factor exp(-c p_0(g_j)²) per unit of domain to beat entropy
      factors exp(O(1) M^d R_j^{d+1}) (CMP 122 II (1.80)-(1.82); note 49 §5).
-     For d = 3 this asks for 2p_0 > 4r instead of 2p_0 > 5r, which is weaker.
+     [Corrected, T72 (note 66): (1.82) compares p_0² with R^{d+2}, so the base
+     condition is 2p_0 > (d+2) r: 5r at d = 3 instead of 6r at d = 4.]
      Balaban's choice is p_0 >= 5r (CMP 119 p. 246, text after (1.1)), with
      r >= 2 (p. 245).
      And in 3D, p_0(g_j)² ~ (log ε_j^{-1})^{2p_0} grows, so the factor is
@@ -320,7 +321,14 @@ hold verbatim at d = 3 (four of (2.6)-(2.9) fail on the 3D flow), but Sect. 3
 uses them only in forms that survive (note 65). (H4a) keeps the status
 "published conditional input, checked at the level of Sect. 3's form
 preservation (four changes at d = 3, note 65)", with the large-field factor
-still to be read in CMP 122 II (T72). (H4b): Lemma 65.3 (proved given (D))
+still to be read in CMP 122 II (T72). [T72, note 66: CMP 122 II's domain
+factors (1.79)-(1.89) survive at d = 3 with R = identity after three changes;
+the g_j^q smallness of a persisting large-field region is the weight (1.89),
+T_k(Y)1 <= exp(-2p_0(g_k)), linear in p_0, not the activity (1.97); (H4a) is a
+**conditional reduction** with two named gaps: (G1) no polymer representation
+of the large-field-domain gas at R = identity is written in CMP 122 II, and
+(G2) the decay -κ_1 d_k(X) in (1.89) for arbitrary regions is asserted on
+p. 387, not proved.] (H4b): Lemma 65.3 (proved given (D))
 gives that a persisting large-field domain has radius O(M R_j) j-cells;
 Prop. 65.4 (target, heuristic) suggests a per-point large-field probability
 <= C_q g_j^q.
@@ -402,8 +410,9 @@ quadratic part, which is all that c̄ sees.
 without proof, and note 36 §2 step 4 (holonomy, cube localization) is only
 sketched. Note 63 avoids (190) for (NA♭) but not for the exponential decay of
 δℋ/δB. T2, T3: CMP 102 (25), (33)-(34), (62)-(63), which Balaban calls "very
-sketchy" (p. 257). T4: needs an *exponentiated* expansion (CMP 122 II
-(1.92)-(1.99); note 49 §6), see §6b.4. Status: **published conditional input**
+sketchy" (p. 257). T4: needs an *exponentiated* expansion of the fluctuation
+integral, see §6b.4 [T72: not CMP 122 II (1.92)-(1.99), which is the
+R-operation's expansion; the relevant source is CMP 119 (3.44)-(3.47), note 65]. Status: **published conditional input**
 for T1-T3, **open** for T4.
 
 **(I-S) Analytic Lipschitz step on a complex neighbourhood.** Let 𝒞_j be the real
@@ -522,11 +531,15 @@ at d = 3, §6a). It is part of (H4), not new.
    s-derivative bounded only by the same extensive quantity (Cauchy in s on the
    whole remainder): Prop. 3's problem again. Localization needs R_6 as
    Σ_X r_X with e^{-κ'𝔏(X)} decay, i.e. an exponentiated cluster expansion of the
-   fluctuation integral. CMP 102 does not contain one. Balaban proves such a
-   statement in CMP 122 II (1.92)-(1.99), |R'(X)| <= O(1)c_1 exp(-(1+β/2)κ d_k(X))
-   (note 49 §6), written for d = 4 with the R-operation; its d = 3 reading is the
-   open reading of §6a. So (I-L) for T4 is **open**, and equivalent in content
-   to (H4).
+   fluctuation integral. CMP 102 does not contain one (it says, p. 262, that the
+   integral "can be expressed naturally by an exponentiated cluster expansion",
+   but does not do it). [Corrected, T72 (note 66 Q3): CMP 122 II (1.92)-(1.99),
+   cited here before, is the expansion of the R-operation's first-class
+   large-field components and does not localize CMP 102 (22)-(24). The
+   localized fluctuation expansion is CMP 119 (3.39)-(3.47), via CMP 109
+   Sect. 7, read at d = 3 in note 65.] So (I-L) for T4 is **open**: it needs
+   CMP 119's localized expansion of the first-step fluctuation integral to be
+   matched with CMP 102's sixth-order truncation.
 2. **T1, the classical term.** Its locality is the exponential decay of
    δℋ/δB, CMP 102b (190), "proof omitted". Prop. 9 is stated for coarse fields
    that are small globally in one gauge; on the torus with holonomy it needs the
@@ -591,8 +604,9 @@ structure, so it checks the mechanism only.
 - **Published conditional input:** (I-L) for T1-T3 (CMP 102b (190); CMP 102 (25),
   (33)-(34), (62)-(63); CMP 99 (3.185)); (I-S) (note 42 (A_s)); (I-LF)(a)
   (CMP 102 (70)-(71)).
-- **Open:** (I-L) for T4 (a first-step exponentiated expansion, CMP 122 II
-  (1.92)-(1.99) at d = 3); (I-LF)(b), a large-field lower bound for Tρ_1.
+- **Open:** (I-L) for T4 (a first-step exponentiated expansion of the
+  fluctuation integral; CMP 119 (3.39)-(3.47) at d = 3, note 65, not CMP 122 II
+  (1.92)-(1.99), note 66); (I-LF)(b), a large-field lower bound for Tρ_1.
 - So (H4b) and the complex-s form of (H5) are **conditional reductions** to
   (H4) plus (I-LF)(b), not proved. Next concrete step: prove
   D_N >= -C_-β_NA_Z - e_ent|Z|log β_N by an explicit block extension of V (for

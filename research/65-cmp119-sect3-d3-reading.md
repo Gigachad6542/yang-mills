@@ -506,7 +506,12 @@ persistence from CMP 122 II, unchecked; (E) from (2.49)-(2.50); (D) read off
   without loss through the unprocessed steps i+1, ..., j is CMP 122 II
   (1.83)-(1.85), (1.89) (not checked here).
 - **(E) per-point loss.** Each point of Γ_t costs at most e^{O(1)} (CMP 119
-  (2.49): "+ O(1) Σ|Γ_j|"; Cor. 3 (2.50)).
+  (2.49): "+ O(1) Σ|Γ_j|"; Cor. 3 (2.50)). [T72, note 66 Q2: in CMP 122 II the
+  per-site cost is O(log g_j^{-2}) (p. 380), so the entropy exponent is
+  R^{d+1}; the polynomial in Prop. 65.4 then has degree (d+1)r + 1, still
+  below 2p_0. (W) is CMP 122 II pp. 380-381 with (1.79), (1.85), persisting by
+  (1.80), (1.89) with the weight exp(-2p_0(g)), linear in p_0; (D) is (1.76),
+  m_0 = 10.]
 - **(D) domain growth.** Z_{k+1} ⊂ (Z_k')^{~m_0} ∪ (new seeds), m_0 a fixed
   number of layers of LMR_{k+1}-cubes (read off (3.2), (3.5), (3.20); the
   value does not matter).
