@@ -12,6 +12,9 @@ Status:
         (transport) + R,   ||R|| <= 2M (g p(g))² / α'²,
 
     **under** the uniformity hypothesis (A_s).
+  [Superseded (audit 2026-10-09, T82): for CMP 102, whose fluctuation cutoff is p² (T63 reading, §4), read
+  p(g) as p(g)² throughout: the domain is |s| g p² <= α' and ||R|| = O(g² p⁴);
+  note 61 uses this form.]
 - **Hypothesis (A_s), open.** Balaban's single-step bounds hold, with the
   same constants, when the fluctuation coupling g is replaced by a complex
   coupling sg with |sg| <= α'/p(g).
@@ -25,6 +28,8 @@ Status:
     - in 3D the g_k² are geometric;
     - in 4D note 29 Theorem 1 uses only sup bounds and the product b̄c̄.
   - In 3D, by the README's chain, M1-3D ⇐ (S1) + (A_s) for CMP 102.
+    [Superseded (audit 2026-10-09, T82): the current 3D route is note 61 Theorem 1:
+    M1-3D <= (NA♭) + (A_s) + (H4) + (L_s).]
 
 ## 1. Lemma 1 (even Schwarz lemma)
 
@@ -82,6 +87,8 @@ in Balaban's polymer norms (input norm to output norm).
 **Theorem 3.** Under (A_s),
 
     D_E F(E, 1) = (transport h ↦ h(U)) + R,   ||R|| <= 2M (g p(g)/α')².
+
+(p(g) is the fluctuation cutoff; for CMP 102 it is p(g)², see §4.)
 
 *Proof.* By Lemma 2, Ψ(s) := D_E F(E, s) is even and analytic for
 |s| < s_0, and Ψ(0) is transport. Lemma 1 with |s| = 1 gives
@@ -267,6 +274,7 @@ replace a line-by-line check of CMP 116/119.
 - **3D.** By the README chain (notes 17, 18, 29), M1-3D ⇐ (S1) + (S2) for
   CMP 102. By Theorem 3, (S2) ⇐ (A_s). (S1) is the transport structure
   behind CMP 109 (0.29) and CMP 102's local expansion. So M1-3D ⇐ (S1) + (A_s).
+  [Superseded (audit 2026-10-09, T82): see note 61 Theorem 1 and §6b for the current four inputs.]
   Both are statements about CMP 102's single-step analysis: its irrelevance
   bound, and its uniformity in a complex fluctuation coupling.
 - **4D.** In note 29 Theorem 1, b̄ and c̄ come from (S2) and (S3) with

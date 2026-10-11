@@ -60,7 +60,7 @@ log Z - log Z_{\{γ_l\}^c}. ∎
 
 Let E_t(Λ) be the persistence event of note 39 §1 (block variables near Λ
 non-small at levels k, ..., k+t). Assume Balaban's final representation
-satisfies the KP condition with a(Y) = ½ κ d(Y) (his convergent cluster
+satisfies the KP condition with a(Y) = ½ κ d(Y) + 1 (§6; his convergent cluster
 expansion, CMP 122 II §1-2). Then
 
     μ^R(E_t(Λ)) <= C exp(-a_eff (t+1)),   a_eff = (1/2) min_j γ_0 A p_0(g_{k+j})² / (n_0 + R_{k+j} + 1) - C'.
@@ -82,7 +82,7 @@ expansion, CMP 122 II §1-2). Then
    exp(O(1) M^d R^d d') absorbed for small γ (CMP 122 II (1.80)-(1.81)).
 4. *Lemma 1.* Apply it with S_i = the level-(k+j_i) neighbourhoods of Λ at
    the creation steps. The KP weights e^{a(Y)} cost at most half of the
-   exponent. The geometric sum over domain shapes is controlled by the
+   exponent, times a factor e per polymer (absorbed into C). The geometric sum over domain shapes is controlled by the
    remaining e^{-½κ d(Y)}. ∎
 
 ## 4. Consequence for (P)
@@ -147,14 +147,20 @@ CMP 122 II, after (1.89) (printed pp. 388-390).
   exp(-(1 + β/2) κ d_k(X)) ((1.99)).
 
 *KP condition.* The localization domains are connected unions of cubes. So
-the number containing a given cube, with d_k(X) = n, is at most e^{c_d n}.
-Hence, with a(X) = ½ κ d_k(X),
+the number containing a given cube, with d_k(X) = n, is at most e^{c_d n}
+(n = 0 for a single cube, if d_k is the length of a minimal connecting
+tree). Hence, with a(X) = ½ κ d_k(X) + 1,
 
-    Σ_{X ∋ □} |activity(X)| e^{a(X)} <= c_1 Σ_n e^{c_d n - (½ + β) κ n} <= 2 c_1 e^{c_d - (½+β)κ},
+    Σ_{X ∋ □} |activity(X)| e^{a(X)} <= e c_1 Σ_{n>=0} e^{c_d n - (½ + β) κ n} <= 2e c_1,
 
-which is <= a(□) = ½κ once κ >= 4 c_d and c_1 <= 1. Balaban's κ is "large
-enough" throughout. So his expansion satisfies the KP condition with
-a(X) = ½ κ d(X), the form assumed in Proposition 2.
+which is <= 1 <= a(□) once κ >= 4 c_d and c_1 <= 1/(2e); for a polymer of
+|X| cubes the incompatible sum is <= |X| <= ½κ d_k(X) + 1 (d_k(X) >= |X| - 1,
+κ >= 2). The condition c_1 <= 1/(2e) holds for c_1 = exp(-p_0(g_k)), and for
+c_1 = α_1^{1/3} it asks α_1 <= (2e)^{-3}; Balaban takes α_1 small. So his
+expansion satisfies the KP condition with a(X) = ½ κ d(X) + 1; the extra
+constant costs a factor e per polymer in Lemma 1 and Proposition 2, which
+only changes C. [Audit 2026-10-09, T82: the earlier "<= a(□) = ½κ ... c_1 <= 1"
+needed d_k(□) >= 1 and dropped the n = 0 term.]
 
 *Status.* The last open source item for (P) is now a reading of CMP 122 II,
 (1.97)-(1.99), plus a standard counting step. Assembling the per-step

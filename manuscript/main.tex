@@ -329,10 +329,17 @@ interior approximation.
 More generally, local uniform convergence $Z_n\to Z$ and $Z(0)=1$ already imply
 cumulant convergence on a sufficiently small common disc: continuity makes $Z$
 nonzero there, uniform convergence makes late $Z_n$ nonzero there, and Cauchy's
-formula applies to the normalized logarithms.  By contrast, convergence only on
-real sources is insufficient; $1+n^{-1/2}\sin(nz)$ converges uniformly to one
-on every bounded real interval while its first logarithmic derivative at zero is
-$\sqrt n$.
+formula applies to the normalized logarithms.  For the bounded observables
+above, convergence on real sources already suffices: since
+$|Z_n(z)|\le\exp(\sum_jB_j|z_j|)$, the $Z_n$ are uniformly bounded on compact
+subsets of $\C^q$, so by the Vitali--Montel theorem convergence on any real
+neighbourhood of the origin implies locally uniform convergence on $\C^q$.
+Equivalently, for finitely many uniformly bounded observables the polydisc
+formulation is the same as convergence in distribution of the vector
+$(X_{n,1},\ldots,X_{n,q})$.  Real-source convergence is insufficient only
+without such a uniform bound: $1+n^{-1/2}\sin(nz)$ converges uniformly to one
+on every bounded real interval while its first logarithmic derivative at zero
+is $\sqrt n$, but it is not bounded on complex discs uniformly in $n$.
 
 \begin{proposition}[Projective density criterion]\label{prop:projective}
 Let $\nu_n$ and $\nu_{n+1}$ be probability measures on the same terminal

@@ -320,7 +320,9 @@ With R_k >= (log g_k^{-2})^r and r >= 2,
     e^{-8δMR_k} p(g_k)/g_k <= exp(-8δM (log g_k^{-2})² + log g_k^{-1} + p_0 log log g_k^{-1}) -> 0,
 
 so condition (5.1) holds for all small g_k. **(T1\*) therefore holds**,
-given the exact reduction of §5a and Balaban's bounds on the non-Wilson
-terms. The parallel construction in Dimock's exposition (§7a) is consistent
+given the exact reduction of §5a, Balaban's bounds on the non-Wilson terms
+(CMP 122 II p. 381), and the decay of δℋ/δB used in §5a, which is
+CMP 102b (190), a bound whose proof Balaban omits (notes 54 §4, 61 §6b.1,
+63). [Audit 2026-10-09, T82: this dependence was not stated here.] The parallel construction in Dimock's exposition (§7a) is consistent
 with this. Status of (P): (P) <= (T2-R), whose only gap is the unprinted
 marker bookkeeping of §6.

@@ -48,6 +48,11 @@ It is submultiplicative, and |second moment of A| <= C_δ ||A||_δ.
 
 ## 2. Proposition 1
 
+[Audit 2026-10-09, T82: hypothesis (O2) below, ||K_j - K_∞||_δ <= C_O ϑ^j,
+cannot hold for the Laplacian part, whose difference is unbounded (§5,
+Lemma 2 remark). Proposition 1 is a correct implication, but the route
+actually used is §5 Theorem 2 on the induced coarse kernels.]
+
 Assume:
 
 - **(O1)** sup_j ||G_j||_δ <= C_G, sup_j ||V_j'||_δ, ||V_j''||_δ <= C_V;

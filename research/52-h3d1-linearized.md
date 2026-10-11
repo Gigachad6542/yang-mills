@@ -21,7 +21,8 @@ and
     c_0^{(d)} = (4/π²)^{d-1} · 16/π⁴,
     ||∇_ν F_min||_2 <= (2π √d / √(c_0^{(d)})) M^{-1} ||F_min||_2.
 
-(The factor √d comes from |r(p_0)|² <= d π²·4/M².) Theorem 3 of note 44
+(From |r(p_0)|² <= d π²/M² the constant is π√d/√(c_0^{(d)}); the 2π√d/√(c_0^{(d)})
+above is a valid bound, larger by 2. At d = 4 it gives note 44's 2π/√c_0.) [Audit 2026-10-09, T82.] Theorem 3 of note 44
 (second differences) carries over in the same way.
 
 ## 2. Proposition (H3D-1', linearized)

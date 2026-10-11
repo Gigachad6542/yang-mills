@@ -224,6 +224,11 @@ which is (S) of note 22.
 
 ## 4. Status of H0
 
+[Superseded (audit 2026-10-09, T82): (E) is open after T67 (header, §2), so the "(E) sketched"
+below is out of date; (C)'s vertex Riemann sums are reduced to (V) and
+checked for the leading gluon, ghost and gauge-fixing vertices (note 58), and
+the multi-level penalty is open (note 41 §5.6, T75).]
+
     H0 <= (B), regularity [published]
         + (C) [note 48; vertex Riemann sums stated]
         + (S) [this note; the edge bound (E) sketched]

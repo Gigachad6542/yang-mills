@@ -21,6 +21,7 @@ Status (T80):
   decaying tail of the coarse energy of V^Z away from Z.) Cause:
   the Schur complement A_min has an exponentially decaying but not
   finite-range kernel, rate m_w = 1.774 (L = 2), 1.525 (L = 3) per coarse unit.
+- **Proved (T82).** Q = A_N − L·A_min <= 0 for all V: proved by the argument of note 61 Lemma 6c.2 (T76): for every A with qA = V, d(qA) = W(CA) with W >= 0 of row sums L² and column sums 1/L (the kernel identity of note 18 §8(a), note 19 (2.1)), so |dV|² <= L|CA|² by Cauchy-Schwarz (Schur test), i.e. A_N(V) <= L·A_min(V); for the q of t80_abelian_fibre.py the representation is confirmed to 1e-16 with ||W||_2² = L exactly (`t82_kernel_check67.py`, L = 2, n = 3 and L = 3, n = 2).
 - **Computation.** Q = A_N − L·A_min <= 0 for all k (L·A_min >= A_N), with
   inf Q/A_N = −(L²−1) attained at k = (π,π,π) for L = 2, so Theorem 64.1's
   coefficient is sharp; −5.276 for L = 3. The corrected form
@@ -28,7 +29,7 @@ Status (T80):
   with (C_near, C_T(2)) = (2.84, 8.8) for L = 2 and (4.39, 20.6) for L = 3,
   m < 2m_w. §5 states what Lemma 6b.2 of note 61 needs instead.
 - **Not done.** The transfer to compact U(1) and SU(2); uniformity in n beyond
-  n = 8 (argued, not written); Q <= 0 for all k as a proof.
+  n = 8 (argued, not written). (Q <= 0 is now proved; see above.)
 
 Scripts (all in `research/scripts/`, outputs next to them):
 `t80_abelian_fibre.py` (`.out`), `t80_jensen.py` (`.out`); §3-§4 use
@@ -276,8 +277,7 @@ outside S is 37.5% (L = 2) and 41.4% (L = 3) of ‖w‖ (n = 8).
 
 ### 3.3 Results
 
-**(a) Is Q <= 0, i.e. L·A_min >= A_N for all V?** Yes in every case computed
-(**computation**, not a proof):
+**(a) Is Q <= 0, i.e. L·A_min >= A_N for all V?** Yes: proved by the argument of note 61 Lemma 6c.2 (T76): for every A with qA = V, d(qA) = W(CA) with W >= 0 of row sums L² and column sums 1/L (the kernel identity of note 18 §8(a), note 19 (2.1)), so |dV|² <= L|CA|² by Cauchy-Schwarz (Schur test), i.e. A_N(V) <= L·A_min(V); for the q of t80_abelian_fibre.py the representation is confirmed to 1e-16 with ||W||_2² = L exactly (`t82_kernel_check67.py`, L = 2, n = 3 and L = 3, n = 2). [Audit 2026-10-09, T82; earlier this read "(computation, not a proof)".] The numbers:
 
 | | Q/A_N range | where the extreme is attained |
 |---|---|---|
@@ -524,9 +524,8 @@ Lemma 6b.2 the following changes:
   Gaussian-model form as the guide.
 
 **What was not done.** (i) The transfer of §1 and §3 to compact U(1) and SU(2)
-(Laplace method). (ii) The proof of Q <= 0 for all k (computation only; it
-reduces to ‖dq A‖² <= L‖CA‖², a Cauchy-Schwarz bound whose constant is
-sharp as k → 0). (iii) Uniformity in n of Proposition 67.5 beyond n = 8, and
+(Laplace method). (ii) [Done in T82: Q <= 0 is the Cauchy-Schwarz bound
+‖dq A‖² <= L‖CA‖² of note 61 Lemma 6c.2; its constant is sharp as k → 0.] (iii) Uniformity in n of Proposition 67.5 beyond n = 8, and
 the multi-bond explicit formula. (iv) Axes 0 and 1 for the non-abelian
 transport (note 64 §7.5(2)); the abelian model treats all three axes alike
 up to the contour order, and the real-space computations of §3.3(b) give

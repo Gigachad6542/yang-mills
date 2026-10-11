@@ -1,0 +1,2 @@
+L=2 n=3: max residual 1.11e-16; row sums in [4.000000, 4.000000] (L^2 = 4); max column sum 0.500000 (1/L = 0.500000); ||W||_2^2 = 2.000000 (L = 2)
+L=3 n=2: max residual 1.39e-16; row sums in [9.000000, 9.000000] (L^2 = 9); max column sum 0.333333 (1/L = 0.333333); ||W||_2^2 = 3.000000 (L = 3)

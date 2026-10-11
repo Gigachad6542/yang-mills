@@ -117,7 +117,9 @@ Let σ > 0 be fixed.
   η_N := sup_{s∈[0,1]} osc m_{N,s} <= C_1 L^{-σN}.
 - **H3D-1' (local L^1 form).** D_N = c_N + Σ_x D_{N,x} with bounded local
   pieces, and Σ_x sup_s E_{μ_{N,s}}|E[D_{N,x}|b_N] - μ_{N,s}(D_{N,x})| <=
-  C_1' ε_N^σ. This is implied by H3D-1.
+  C_1' ε_N^σ. This is implied by H3D-1 for the trivial one-piece
+  decomposition D_N = c_N + D_{N,x_0} (for a general decomposition it is not:
+  Σ_x |a_x| >= |Σ_x a_x|). [Audit 2026-10-09, T82.]
 - **H3D-2 (polymer form).** For s ∈ [0,1], the terminal tangent defect has a
   connected-polymer representation modulo constants with rooted oscillation
   norm <= η̄ L^{-σN}. By research/09 Prop. 4 on the fixed terminal lattice,

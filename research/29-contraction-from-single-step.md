@@ -141,7 +141,8 @@ that θ := L^{-α} + Cγ² < θ_1 < 1 and (2.1) holds. Then:
 - (T-b) of note 27 holds with rate θ_1;
 - (D) of note 22 holds;
 - in 3D, where every coupling g_k² = g² L^k ε is explicit and identical
-  across depths (Δ_k = 0) and g_k -> 0 at fine scales, H3D-2 and hence
+  across depths (Δ_k = 0; [Superseded (audit 2026-10-09, T82): note 61 shows the generated F² terms
+  make Δ_k ≠ 0 and controls them by (H3) and Lemma G]) and g_k -> 0 at fine scales, H3D-2 and hence
   P4-3D hold via note 18 Thm. 1, with σ = α minus logarithmic losses.
 
 The large-field analogues (B-b), with R-data in place of E-data, follow

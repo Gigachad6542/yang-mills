@@ -102,7 +102,9 @@ estimate. The research notes give the details.
     activity bound CMP 122 II (1.97)-(1.99) (49 §6). Persistence costs a factor only once per
     domain lifetime K <= n_0 + R_k, so the rate is a_eff ~ p_0(gamma)^2/R(gamma).
     It diverges because 2p_0 > (d+1)r, which Balaban's own induction requires
-    (49 §5). So (P) rests on published structure. An independent action-based route is in
+    (49 §5). So (P) rests on published structure, given CMP 102b (190)
+    (the decay of δℋ/δB used in (T1*), note 39 §5a), whose proof Balaban
+    omits. An independent action-based route is in
     notes 34-38 ((PA), (D1), (D2), (SER), (UB-ms)).
   - **Generalized averaged H8** is a covariance (32). Its decay (H-dec)
     follows from local extensive tangent bounds (LS) plus large fields (LF)

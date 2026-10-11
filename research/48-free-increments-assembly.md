@@ -1,5 +1,11 @@
 # (C) of note 22 assembled: free increments converge geometrically
 
+[Superseded (audit 2026-10-09, T82): this note models the step fluctuation through H_k and C^{(M)};
+Balaban's K_j carries averaging penalties at all levels i <= j (note 41 §1),
+the multi-level penalty is open (note 41 §5.6, T75), and the equivalence of
+the two descriptions is not shown here. The claim below holds for the model
+of this note.]
+
 Status: **proved for every quadratic and linear operator ingredient**
 (T42); the cubic and quartic vertex Riemann sums are **stated**. Data:
 `research/scripts/t42_minimizer_symbol_convergence.py` (output `.out`).
@@ -63,7 +69,9 @@ Prop. D it gives (U), and then (W).
 ## Status of H0 after this note
 
     H0 <= (B), regularity [published]
-        + (C) [items 1-3 and 5 proved; item 4, the vertex Riemann sums, stated]
+        + (C) [items 1-3 and 5 proved; item 4, the vertex Riemann sums, stated
+               (since note 58: reduced to (V) and checked for the gluon,
+               ghost and gauge-fixing vertices)]
         + (S) finite one-loop scheme matching [universal part published]
         + (D) memory decay [single-step reduction: notes 29, 42, 44-46].
 

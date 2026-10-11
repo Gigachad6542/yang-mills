@@ -46,7 +46,7 @@ tilted by small terms; (M1)-(M3) hold with σ = O(1).
 
 **Lemma 1 (new term is O(g²)).** If 0 < g <= α/4, then
 
-    |E_μ[f(U e^{igB})] - f(U)| <= ||f|| (C_1 g²σ²(1+log|X|)/α² + 2|X| e^{-α²/(32 g²σ²)}).
+    |E_μ[f(U e^{igB})] - f(U)| <= ||f|| (C_1 g²σ²(1+log|X|)/α² + (2 + σ/4)|X|^{3/2}(1+log|X|)^{1/2} e^{-α²/(32 g²σ²)}).
 
 *Proof.*
 
@@ -63,8 +63,9 @@ tilted by small terms; (M1)-(M3) hold with σ = O(1).
    ½ sup|φ''| <= 4||f|| g²|B|_∞²/α²; take expectations with (M2), so C_1 = 4.
 6. On the complement, bound the difference by 2||f||, with probability at
    most |X| e^{-α²/(8g²σ²)} by (M3). The first-order term restricted to this
-   event has E[|φ'(0)|; g|B|_∞ > α/2] = O(||f|| |X| e^{-α²/(32g²σ²)})
-   (Cauchy-Schwarz with (M3)). ∎
+   event has E[|φ'(0)|; g|B|_∞ > α/2] <= g|X|(||f||/α) E[|B|_∞; g|B|_∞ > α/2]
+   <= (gσ/α)||f|| |X|^{3/2}(1+log|X|)^{1/2} e^{-α²/(16g²σ²)} (Cauchy-Schwarz
+   with (M2), (M3)), and gσ/α <= σ/4. ∎ [Audit 2026-10-09, T82.]
 
 **Lemma 2 (the nonlinear step; Gaussian base).** Let μ be the centered
 Gaussian with covariance C, and assume (M2)-(M3) for the tilted measures
@@ -73,7 +74,7 @@ below with constant σ_f. For real f with ||f|| <= 1, put
 any h in the same class,
 
     d/dt Γ(f + t h)|_{t=0} = E_{μ_f}[h(U e^{igB})] = h(U) + R(h),
-    |R(h)| <= ||h|| (4 g²σ_f²(1+log|X|)/α² + C_2 |X| e^{-α²/(32g²σ_f²)})
+    |R(h)| <= ||h|| (4 g²σ_f²(1+log|X|)/α² + C_2 |X|^{3/2}(1+log|X|)^{1/2} e^{-α²/(32g²σ_f²)})
               + C_3 g² ||C||_{∞→∞} |X| ||f|| ||h|| / α².
 
 *Proof.*

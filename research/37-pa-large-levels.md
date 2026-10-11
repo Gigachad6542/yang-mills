@@ -110,7 +110,8 @@ lattice statement.
 - (D1) and (D2) of note 34 at every level that is not large, in the local
   form near the chain;
 - (SER);
-- s_L < 1 - η (true for L >= 4 in the abelian limit, note 35).
+- s_L < 1 - η (in the abelian limit, note 35's computed rows suggest this
+  for L >= 4; they are lower bounds for s_L, so it is not established).
 
 Let U be persistent on levels 1, ..., t (note 26 §3). Then
 

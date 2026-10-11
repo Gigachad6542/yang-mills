@@ -112,7 +112,7 @@ generating functions converge.
 *Proof.* Apply Lemma G to the s-derivative of the difference of the two
 flows. All the maps involved are differentiable along the interpolation,
 because the data stay in Balaban's analytic domain for s ∈ [0, 1] by
-(H5)'s input size. (H1), (H2) and (H4) give (i). (H3) and (H4) give (ii).
+(H5)'s input size. [Superseded (audit 2026-10-09, T82): this differentiability along μ_s is not automatic; it is the input (L_s) of §6b, reduced there and in §6e.] (H1), (H2) and (H4) give (i). (H3) and (H4) give (ii).
 Lemma G with Δ_0 <= C_0 ε_N = C_0 ε_0 L^{-N} <= C_0 ε_0 λ^N gives
 δ_N + Δ_N <= C (N + 1) λ^N. (H5) converts this into the bound on η_N. ∎
 
@@ -201,6 +201,7 @@ fields, (H4) for large fields).
 | (H4) | **Reduced to a reading of CMP 119 at d = 3** (see §6, as corrected). CMP 102 alone gives only stability bounds. CMP 119 builds exact convergent expansions with large-field regions. Its introduction says that for d < 4 the large-field factors are arbitrary powers of ε and "enough to control expressions arising in the large field regions ... for all steps", so no R-operation is needed. With note 49's rooted KP lemma this gives (H4a). (H4b) follows from the ε^q factors. Not checked line by line for d = 3. |
 | (H5) | Proved (Proposition 3), given CMP 102's small-field representation at k = 0 and its first-step bounds for the input sizes. |
 
+[Superseded (audit 2026-10-09, T82): since T66 the route has a fourth input, (L_s), a new estimate rather than a reading (§6b, §6e; README 3D section).]
 So M1-3D <= (NA♭) + (A_s) + (H4), as a written-out conditional
 theorem. All three remaining inputs are readings of Balaban's papers:
 (NA♭) of CMP 99, (A_s) of CMP 102, and (H4) of CMP 119 at d = 3. Every remaining item is a statement about a single CMP 102 step
@@ -452,8 +453,9 @@ constants depends on N or on the volume.
 
 *Proof.* The initial data are E_0^{(s+h)} = E_0^{(s)} + h d: affine in h, hence
 analytic, at distance |h|‖d‖_κ in the irrelevant sector and |h||c̄(d)|ε_N in the
-marginal sector (y = ε x), by (I-L). Induct on j. Suppose E_i^{(s+h)} ∈ N_r(𝒞_i)
-for i <= j. Then N_r(𝒞_i) contains the segment from E_i^{(s)} to E_i^{(s+h)}, so
+marginal sector (y = ε x), by (I-L). Induct on j. Suppose that for i <= j the
+distance from E_i^{(s+h)} to E_i^{(s)} itself is at most r (the bounds below
+give exactly this). Then N_r(𝒞_i) contains the segment from E_i^{(s)} to E_i^{(s+h)}, so
 (I-S) gives (i)-(ii) for this pair. Lemma G uses only (i)-(ii), so with
 δ_0 = |h|C_D and Δ_0 <= |h|C_D'ε_0,
 
@@ -500,7 +502,7 @@ s ∈ [0,1], by Cauchy on the disc of radius s_1,
     |∂_s 𝒜_k^{(s)}(Z)| <= C_LF ε_k^q e^{-κ d(Z)} / s_1.
 
 Summing over polymers Z meeting a block (KP counting, κ >= 4c_d, note 49 §6) and
-over the (n_0L^j)³ = n_0³ε_0³ε_k^{-3} blocks of scale k = N - j,
+over the (n_0L^k)³ = n_0³ε_0³ε_k^{-3} blocks of scale k = N - j,
 
     Σ_Z |∂_s 𝒜_k^{(s)}(Z)| <= C n_0³ ε_0³ C_LF ε_k^{q-3} / s_1.
 
@@ -560,7 +562,7 @@ the once-blocked precision is r(K) = 1/λ(C_L(K)), where C_L is the covariance o
 §8(b) with M = L, restricted to the transverse eigenspace of C_1. The s-deformed
 precision is 1 + s(r(K) - 1), so Ξ(s) is a product over modes of
 (1 + s(r(K) - 1))^{-1/2} (degeneracy aside). Since r depends only on L (scale
-covariance in 3D, units g²ε_0 = 1), Ξ(s) is zero-free on |s| < 1/(r_max - 1) for
+covariance in 3D, units g²ε_0 = 1), Ξ(s) is analytic (it has no zeros at all; 1/(r_max - 1) is the radius of its first singularity, where the integral diverges) on |s| < 1/(r_max - 1) for
 **every** N and every volume, and the disc cannot be enlarged: the factor vanishes
 at s = -1/(r_max - 1). Evaluation with `terminal_cov` of `research/scripts/t7_gauss3d.py` over all
 nonzero K of the grid, by `research/scripts/t66_gauss_disc.py` (output `.out`;
@@ -1392,7 +1394,7 @@ bond, L = 2) applies only to V flat at Z. Numbers (model, m = 2): L = 2,
 3.5·10⁻⁴. They assume (LF-b′) holds with these constants for all Z. The entry
 c_1/(2(1−c_1)) is the larger one for every c_1 ≥ 2·10⁻³, so the unknown SU(2) value
 of c_1 does not affect these numbers. (In the model the global form of (LF-a) holds
-with c_1 = 1, because Q ≤ 0, i.e. Lβ_NA_min ≥ β_NA_N; the localized form is not
+with c_1 = 1, because Q ≤ 0, i.e. Lβ_NA_min ≥ β_NA_N (proved by Lemma 6c.2 above, note 67 §3.3(a)); the localized form is not
 checked.)
 
 #### 6e.4 Large fields at distance: merging, factorization, and the per-polymer route
@@ -1463,9 +1465,13 @@ p_*² := inf_k p²(g_k) (the infimum is at k = 0 and tends to ∞ as ε_0 → 0)
 
     p_*² ≥ (8/c_1) ( ½ κ r + log(4eΔ_r) ),
 
-then Σ_{Z∋□} w(Z) e^{½κ d(Z)} ≤ ½ ≤ ½κ (κ ≥ 4). This is the KP condition of note 49 §6,
-Σ_{X∋□} |activity(X)| e^{a(X)} ≤ a(□) with a(X) = ½κd(X), for the large-field
-polymers with activity prefactor ≤ 1.
+then Σ_{Z∋□} w(Z) e^{½κ d(Z)} ≤ ⅓. This gives the KP condition of note 49 §6,
+Σ_{X∋□} |activity(X)| e^{a(X)} ≤ a(□), with a(X) = ½κd(X) + 1, for the
+large-field polymers with activity prefactor ≤ 1: the left side is at most
+e/3 < 1 = a(□), since d(□) = 0 for a single block; and for a polymer of |X|
+blocks the incompatible sum is at most |X| e/3 ≤ ½κ(|X| − 1) + 1 ≤ a(X)
+(d(X) ≥ |X| − 1, κ ≥ 4). [Audit 2026-10-09, T82: the earlier wording
+"≤ ½ ≤ ½κ" with a(X) = ½κd(X) needed d(□) = 1, but d(□) = 0 here.]
 
 *Proof.* (i) The number of connected subsets of j vertices containing a fixed vertex
 in a graph of maximal degree Δ is at most (eΔ)^{j−1} (standard). Here the graph is
@@ -1521,7 +1527,7 @@ dist(s′,[0,1]) ≤ |s′ − s|. Cauchy on circles of radius ρ < s_1′ and �
 |∂_s𝒜_k^{(s)}(Z)| ≤ C_LFε_k^qe^{−κd(Z)}/s_1′. (4) *Counting.* Polymers meeting a block
 □ contain a block within distance 1 of □, 27 choices; by Proposition 6e.2(i) each
 contributes at most 2. So Σ_{Z meeting □} |∂_s𝒜_k^{(s)}(Z)| ≤ 54 C_LFε_k^q/s_1′. (5)
-*Blocks.* Summing over the (n_0L^j)³ = n_0³ε_0³ε_k^{−3} blocks of scale k, as in
+*Blocks.* Summing over the (n_0L^k)³ = n_0³ε_0³ε_k^{−3} blocks of scale k, as in
 Lemma 6b.2, gives the claim. Proposition 6e.2(ii) is the statement that the
 large-field factor beats the entropy of the radius r_*, so that (LF-act) with
 polymers r_*-connected is the same kind of hypothesis as at radius 1; it is not used

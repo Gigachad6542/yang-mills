@@ -4,6 +4,15 @@ Requested by Daniel directly (Claude session started for the Project Euclid
 downloads; not the lead session). One pass, correctness only. No notes were
 edited; every proposed change is in §6 for the lead to apply or reject.
 
+**Errata (T82, 2026-10-10).** Two items of §2.6 were wrong and were not
+applied: (1) note 22 Thm A's constant 2ℓb_+ is correct: within a window the
+sum is >= |W|c/2 with |β_j| <= b_+, so a partial window costs at most
+min(a(b_+ + c/2), (|W| - a)(b_+ - c/2)) <= |W|b_+/2 < ℓb_+, and two partial
+windows cost < 2ℓb_+; (2) note 25 Lemma 1's u = gg'^{-1} is correct under the
+convention U^g(x,y) = g(x)^{-1}U(x,y)g(y) that its step 3 uses (the
+convention is now stated there). Item 2.5's constant is c_1 <= 1/(2e) with
+a_0 = 1 (not 1/(3e)).
+
 ## 0. Scope and method
 
 Read in full and checked line by line (constants recomputed where a number

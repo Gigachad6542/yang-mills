@@ -24,7 +24,8 @@ Status:
   in a fixed gauge), and the uniformity of the third-order remainder.
 - **Effect.** The non-abelian (PA) on the ε_0-small event (note 34) now
   rests on published variational results plus two exact abelian constants.
-  It needs L >= 4 (note 35).
+  It needs s_L < 1 - η, which note 35's computed rows (lower bounds for s_L)
+  suggest for L >= 4 but do not establish.
 
 ## 1. What CMP 102b provides
 
@@ -42,8 +43,8 @@ The constants depend on d and L only, uniformly in the number of steps k.
 
 So the fine curvature in scale-j units is O(ε_1). This is (D2) with **some**
 constant C(d, L). The theorem does not give the size of that constant. Note
-35 shows it is about s_L = O(1), not O(L^{-2}), and that it is below 1 only
-for L >= 4.
+35 shows it is about s_L = O(1), not O(L^{-2}): it exceeds 1 for L = 2, 3,
+and the computed rows (lower bounds for s_L) are below 1 for L >= 4.
 
 *Proposition 9 (CMP 102b p. 309).* Let V = V'V_0 with V' = e^{iB} small.
 Then U_k(V'V_0) U_k(V_0)^{-1} = exp(iη ℋ(B)) in the Landau gauge. Here ℋ is
@@ -103,8 +104,10 @@ O(e^{-δ n_0}), because unimodular phases do not change |kernel|. This was not
 recomputed with the exact-flux LP of note 35.
 
 Hence on E_0, s_L^{NA} <= s_L^{ab}(1 + Cε_0) + Cε_0, with the weighted form
-of note 35. For L >= 4 (s_L^{ab} <= 0.88 including the observed m-growth)
-and small ε_0, the chain lemma's condition s_L < 1 - η holds.
+of note 35. For L >= 4 the computed rows give about 0.88 including the
+observed m-growth, but they are lower bounds for s_L^{ab}, so the chain
+lemma's condition s_L < 1 - η for small ε_0 is suggested, not established.
+[Audit 2026-10-09, T82.]
 
 ## 3. (D1), abelian: exact constant
 
@@ -167,7 +170,8 @@ The maximum sits at the smallest nonzero coarse momenta.
 **Use in note 34.** In the abelian theory take φ_j to be the level-j flux
 residual Φ_j - E[Φ_j | Φ_{j+1}] itself. Then Lemma 1 holds with C_F = 1
 (the angle is the flux), and (D1) holds with c_1 = 0.6 by §3. With note 35's
-s_L, Theorem 3 of note 34 applies for L >= 4. For example:
+s_L, Theorem 3 of note 34 would apply for L >= 4 if the computed rows
+(lower bounds for s_L) gave s_L itself. For example:
 
 - L = 5: s ≈ 0.6 including the m-growth; with η = 0.3, ρ = 0.7/0.6 ≈ 1.17;
 - L = 4: s ≈ 0.85; with η = 0.1, ρ ≈ 1.06.

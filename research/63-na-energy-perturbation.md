@@ -178,6 +178,9 @@ which is (NA♭) with C_1(L) ω(ε_0) replaced by K(C_ab + C)(ω + ε_0).
    - terms ⟨D_♭A, [a', A']⟩ with |a'|_∞ <= Cω/M, bounded by
      C(ω/M) ||D_♭A|| ||A'|| <= Cω N(A) N(A');
    - terms ⟨[a', A], [a', A']⟩, bounded by (Cω/M)² ||A|| ||A'|| <= Cω² N N;
+   - the background-curvature term ⟨F_U, [A, A']⟩ of the second variation,
+     with |F_U| <= Cω/M² (fine units, from (I2)), bounded by
+     (Cω/M²) ||A|| ||A'|| <= Cω N(A) N(A'); [Audit 2026-10-09, T82.]
    - the (I3) term, O(ε_0) N N.
 2. *Constraints.* The linearized averages differ by parallel transport
    along contours of length <= CM, so by at most CM · Cω/M = Cω per

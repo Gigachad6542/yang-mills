@@ -251,7 +251,8 @@ of note 18 holds.
   note 18 Propositions 1-3 and Theorems 1, 1' and 2 hold with H3D-0 as a
   verified input. Note 52 §4a (Proposition 4) is superseded, though still
   correct.
-- The 3D route now reads
+- [Superseded (audit 2026-10-09, T82): the current 3D route is note 61, M1-3D <= (NA♭) + (A_s) +
+  (H4) + (L_s).] The 3D route now reads
 
       M1-3D <= (A_s) [CMP 102 remainder bound, complex coupling] + (NA♭) [3D; note 54],
 

@@ -52,7 +52,8 @@ max_b ϑ(U^u_b{}^{-1} U'_b) <= 2(d-1)R²κ_1.
 1. Take complete axial gauges g, g' on N for U, U', with the same tree
    rooted at a corner x_0 of N outside S. By note 24 Lemma B, all links of
    U^g and U'^{g'} on N have ϑ <= (d-1)Rκ_1.
-2. Put u = g g'^{-1} on N and u = 1 outside. For b ⊂ N, U^u_b and U'_b are
+2. (Convention U^g(x,y) = g(x)^{-1} U(x,y) g(y), so that the axial gauge is
+   g(x) = hol_U(τ_x); step 3 uses this.) Put u = g g'^{-1} on N and u = 1 outside. For b ⊂ N, U^u_b and U'_b are
    simultaneous conjugates of U^g_b and U'^{g'}_b, so their distance is at
    most 2(d-1)Rκ_1.
 3. For x ∈ N, u(x) = hol_U(τ_x) hol_{U'}(τ_x)^{-1}, where τ_x is the tree

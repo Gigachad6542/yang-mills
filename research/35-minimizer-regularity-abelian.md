@@ -22,7 +22,10 @@ Status: **computation** (T27). Script:
   limit near 1.76.
 - **Consequences.**
   - The chain lemma of note 34 (Theorem 3, with the η-split) needs
-    s_L < 1. This holds for L >= 4 and fails for L = 2, 3.
+    s_L < 1. It fails for L = 2, 3 (the computed rows already exceed 1).
+    For L >= 4 the computed rows are below 1, but they are only lower bounds
+    for s_L (§2: some rows, one 6⁴ torus), so s_L < 1 is suggested there,
+    not established. [Audit 2026-10-09, T82: the values of §2 are lower bounds for s_L.]
   - The reading "fine curvature = coarse curvature / L²" in note 33 §1 holds
     only for coarse fields that are smooth on the block scale. It is
     corrected there.
@@ -87,10 +90,13 @@ oscillating ones.
 
 For the programme:
 
-1. **Note 34 Theorem 3** holds with ρ_L = (1-η)/s_L > 1 when L >= 4. For
-   L = 4, s ≈ 0.77 at m = 1, and the m-growth seen at L = 2 (about 10%)
-   keeps it below 1. Balaban's L is a large fixed integer, so this is
-   compatible. L = 2, 3 are excluded.
+1. **Note 34 Theorem 3** needs ρ_L = (1-η)/s_L > 1. For L = 2, 3 it fails.
+   For L = 4 the corner row gives 0.77 at m = 1 (about 0.85 with the m-growth
+   seen at L = 2), but that is a lower bound for s_L (§2), so the condition
+   is suggested for L >= 4 and not established; it would need every row and
+   the torus-size dependence (§4). Balaban's L is a large fixed integer
+   (odd, > 11, CMP 109 p. 251), where the fitted s_L ≈ 3.4 L^{-1.1} is small,
+   but the same caveat applies. [Audit 2026-10-09, T82: the values of §2 are lower bounds for s_L.]
 2. **Note 33 §1 reading**: the L^{-4} per level for transported
    gauge-invariant functions is a low-momentum statement only. Note 33's
    Theorem 3 does not depend on it.
