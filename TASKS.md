@@ -25,7 +25,7 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T84 [proof] — open, posted 2026-10-11 by the lead: the gaps (G1), (G2) of (H4a) at d = 3 (note 66 §4 Q1)
+### T84 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-11; posted 2026-10-11 by the lead: the gaps (G1), (G2) of (H4a) at d = 3 (note 66 §4 Q1)
 Scope: a new note `research/68-large-field-gas-d3.md`, plus `research/scripts/t84_*.py`.
 Note 66 found that at d = 3 with R = identity CMP 122 II gives each persisting large-field domain Y the weight T_k(Y)1 <= exp(-2p_0(g_k) - κ_k(Y)) ((1.89), inductive bookkeeping (1.80)-(1.88), which survives with three changes), but (G1) CMP 122 II writes no polymer representation of the large-field-domain gas at R = identity (only the R-operation output (1.103)-(1.104)), and (G2) the decay -κ_1 d_k(X) added to (1.89) for arbitrary regions is asserted on p. 387, not proved.
 (1) Write the large-field-domain gas at R = identity as a polymer system: domains Y with weights from (1.89), interacting through the small-field expansion (CMP 119 (3.44)-(3.47), note 65) and through hard-core/overlap constraints, and state the KP condition of note 49 §6 (weight a(X) = ½κd(X) + 1) that it needs. (2) Prove (G2) from (1.80) at R = identity: κ_k(Y) >= κ_1 d_k(Y) for every domain (the creation budget γ_0 A_1² p_0²(d' + 1) of (1.85) against the R^{d+1} losses), with the exponent conditions of note 66 §3. (3) Conclude the bound |activity| <= C_q g_k^q e^{-κ d(X)} that note 61 Lemma 6b.2 / §6e assume, or name the step that fails.
