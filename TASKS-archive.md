@@ -919,6 +919,21 @@ Done when: note 66 has the list and a one-line verdict. Commit `[T72][fix]`.
 Partial work: `wip/round-2026-10-08/t72/` (script only). Read note 65 first (T71): it reduces the needed bound to inputs (W) and (E) of CMP 122 II (its §5).
 Verdict (lead review): accepted (pp. 385 and 387 checked by the lead against the images: (1.83) has R^{d+1}, (1.82) needs R^{d+2}, (1.89) is linear in p_0, the improved -κ_1 d_k(X) bound is one sentence). Note 66: (1.79)-(1.89) survive at d = 3 with R = identity after three changes (conditional reduction); (1.90)-(1.99) are the R-operation's expansion, vacuous at d = 3, with scale-independent α^{1/3}; they do not localize CMP 102's sixth-order remainder (the localized fluctuation expansion is CMP 119 (3.39)-(3.47)); the failing (2.6)-(2.9) forms are used only in the R-specific preparatory step. Lead applied note 66 §5 to notes 49, 61, 65 and the README. Follow-up: T84 (gaps G1, G2).
 
+### T55 [fix] — **completed 2026-10-11** (lead-reviewed); worker: the session "Project Euclid paper downloads" (worker); claimed by Codex, 2026-10-07 (no deliverable; Codex out of usage); reassigned to a subagent, 2026-10-08: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
+Scope: `research/42-s2-by-even-deformation.md` §4 only.
+Note 42 §4 (T49) checked CMP 116 Part II §1 and CMP 109 §2. Read CMP 109
+§§3-5 (`sources/ocr/cmp109.md`, fluctuation-field action, Ward identities,
+beta-function extraction). List every place where the coupling g_k enters an
+estimate, and say for each whether the estimate uses only |g_k| p(g_k) (or
+|g_k| |B|) or something more: the sign, reality or positivity of g_k, or of
+g_k^{-2} A. Under the deformation g_k -> s g_k with |s g_k| p(g_k) <= α', the
+generated marginal coefficient becomes complex. Say whether any step of §§3-5
+uses that coefficient being real.
+Done when: note 42 §4 has the list, with page and equation numbers, and a
+one-line verdict: "no use of reality found", or the exact place where it is
+used. Commit `[T55][fix]` plus one PROGRESS line.
+Verdict (lead review): accepted (p. 295 checked by the lead on the image: the only reality statements are after (5.29), (5.30)). Note 42 §4: in CMP 109 §§3-5, g_k enters only through P^{(k)} (3.1) and B' (3.2); every estimate uses only the size of B'; the counterterm cancellation (4.38)-(4.45) and the β extraction (5.1)-(5.44) are identities plus size bounds; no use of reality found.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

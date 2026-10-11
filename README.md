@@ -126,7 +126,10 @@ estimate. The research notes give the details.
   - **(S2)** follows for a whole step from (A_s), Balaban's single-step
     bounds for complex fluctuation coupling, by an exact even deformation
     and a Schwarz lemma (42). In 3D, (A_s) reduces to CMP 102's
-    sixth-order remainder bound.
+    sixth-order remainder bound. In 4D, the source checks of CMP 116 II §1,
+    CMP 109 §2 (T49) and CMP 109 §§3-5 (T55, page images) found no use of the
+    reality of the coupling: every estimate uses only the size of the
+    fluctuation field.
   - **(S3)** has the order structure confirmed in the MK model (40).
   - **Glue (51):** Balaban's sup-norm activities have quadratic parts bounded
     in the form norm by C E_0, with higher orders O(eps_0) smaller. So

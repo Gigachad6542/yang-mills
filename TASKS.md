@@ -91,20 +91,6 @@ Done when: Theorem 2 holds for the full multi-level operator with explicit
 rate, or a `failed-attempt` names the term that is not uniform in j.
 Partial work: `wip/round-2026-10-08/t75/` (script only).
 
-### T55 [fix] — offered 2026-10-10 to the session "Project Euclid paper downloads" (worker); claimed by Codex, 2026-10-07 (no deliverable; Codex out of usage); reassigned to a subagent, 2026-10-08: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
-Scope: `research/42-s2-by-even-deformation.md` §4 only.
-Note 42 §4 (T49) checked CMP 116 Part II §1 and CMP 109 §2. Read CMP 109
-§§3-5 (`sources/ocr/cmp109.md`, fluctuation-field action, Ward identities,
-beta-function extraction). List every place where the coupling g_k enters an
-estimate, and say for each whether the estimate uses only |g_k| p(g_k) (or
-|g_k| |B|) or something more: the sign, reality or positivity of g_k, or of
-g_k^{-2} A. Under the deformation g_k -> s g_k with |s g_k| p(g_k) <= α', the
-generated marginal coefficient becomes complex. Say whether any step of §§3-5
-uses that coefficient being real.
-Done when: note 42 §4 has the list, with page and equation numbers, and a
-one-line verdict: "no use of reality found", or the exact place where it is
-used. Commit `[T55][fix]` plus one PROGRESS line.
-
 ### T53 [computation] — reassigned from Codex to a subagent, 2026-10-08: sup-norm constant s_L in twisted sectors (note 36 caveat)
 Scope: `research/scripts/t27_minimizer_regularity.py` (add a twist option),
 its output, and a short section in `research/35-minimizer-regularity-abelian.md`.

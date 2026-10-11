@@ -266,8 +266,108 @@ replace a line-by-line check of CMP 116/119.
   For that radius the fluctuation cutoff must be χ(|B| <= p(g_k)), the
   small-field cutoff of the later papers (CMP 119/122), not CMP 109's
   |g_k B| < ε_1.
-- **Not checked.** The CMP 109 §§3-5 expansions with this cutoff, and the
-  normalization constants. The latter are entire in s and drop out of D_E F.
+- **Not checked.** The normalization constants, which are entire in s and
+  drop out of D_E F; and the localization and cluster expansion of the
+  fluctuation integral (2.13), which CMP 109 leaves to the next paper
+  (p. 298). The CMP 109 §§3-5 expansions are checked below (T55).
+
+*Source check, 4D (CMP 109 §§3-5; T55).* Printed pp. 269-298, read from the
+page images. In §§3-5 the fluctuation-field action of step k has two parts:
+
+- the Wilson part P^{(k)}(g_k, U_{k+1}, B);
+- the curly bracket of (2.12). For each earlier scale j <= k it contains
+  E^{(j)}(U_k(exp iB'V^{(k)})) - E^{(j)}(U_k(V^{(k)})) and the counterterm
+  β_j(g_{j-1})(A(U_j(exp iB'V^{(k)})) - A(U_k(V^{(k)}))) of (4.38), which
+  enters with a minus sign ((1.6)).
+
+The deformation g_k -> s g_k of this note changes neither the inputs
+E^{(j)} nor the earlier β_j(g_{j-1}), j <= k. Only B' changes. Every place
+where g_k enters §§3-5:
+
+1. **P^{(k)}, p. 269, (3.1).** Balaban only states that it is analytic in
+   B and bounded by a second-order polynomial in B with O(ε_1) coefficients,
+   so it is a small perturbation of dμ_{C^{(k)}}. Its localization is
+   deferred (p. 270). It is the term I_{sg} checked in CMP 116 Part II §1
+   above. Size only.
+2. **B' = g_k CB - hD̃(g_k CB), p. 270, (3.2).** This is the only place g_k
+   enters the curly bracket. After the deformation,
+   B' = s g_k CB - hD̃(s g_k CB). This is analytic in s, and
+   |B'| <= C|s g_k| p(g_k) <= Cα' on supp χ(|B| <= p(g_k)).
+3. **First localization and the t_□-derivative, pp. 270-273, (3.3)-(3.17).**
+   B' enters only through H_k(B') in δH_j ((3.8)). The bounds (3.9) and
+   (3.17) are linear in |ζ_□H_k(B')|. The Cauchy integral (3.15) in t_□
+   needs only that H_j(B(t)) satisfies (3.14). Balaban gets this by taking
+   ε_1 small (p. 273), that is, from the size of B'. Under the deformation,
+   ε_1 is replaced by Cα'. (The decay of δH_j/δB used in (3.9) is
+   Proposition 9, (190) of CMP 102b; see note 39.)
+4. **Gauge changes, pp. 273-276, (3.18)-(3.31).** The bounds are
+   O(1)Mα_0. (3.29) allows G^c-valued gauge transformations. g_k does not
+   enter.
+5. **Fifth-order expansion and Lemma 4, pp. 277-280, (3.32)-(3.54).** These
+   are:
+   - the expansion (3.34) in the background field B and its remainder
+     (3.35);
+   - analyticity on U_j^c(X, α_0, α_1), (3.36);
+   - Lemma 4 ((3.53)), stated for an arbitrary complex perturbation with
+     values in g^c and size < α_3 (Balaban also calls it B', p. 279, but it
+     is a perturbation of the background field, not the B' of (3.2));
+   - the Cauchy estimate (3.54).
+
+   The factor that restores the constant E_0 is O(1)α_2^{-1}ε_1, from the
+   t_□-derivative (p. 280). That is again the size of B'. Size only.
+6. **§4, background derivatives and Ward identities, pp. 281-288,
+   (4.1)-(4.30).** These are:
+   - Cauchy integrals (4.3) and the size bound (4.5);
+   - the Ward identities (4.8)-(4.15), from invariance under g^c-valued λ
+     with complex B (pp. 283-284), where (4.14) is algebraic
+     (semisimplicity);
+   - the derivative bounds (4.16)-(4.23);
+   - algebra and a lattice Taylor formula, (4.24)-(4.30).
+
+   g_k does not enter.
+7. **E^{(2)} and the vacuum polarization, pp. 289-291, (4.32)-(4.37).** By
+   Schur's lemma ((4.32)-(4.33)), E^{(2)}_{ab} is proportional to δ_{ab}.
+   This holds for a complex coefficient too. (4.36) is a size bound, and
+   (4.37) defines Π := Σ_X E^{(2)}(X, x, y). g_k does not enter.
+8. **Counterterm cancellation, pp. 291-292, (4.38)-(4.45).** The scale-j
+   counterterm (4.38) expands into (4.42) and (4.44); the term (4.45)
+   vanishes. β_j(g_{j-1}) is *defined* as the coefficient in the
+   corresponding expansion of Π^{(j)} (p. 292; (5.42) with the superscript
+   (j), p. 298). So the two groups of terms cancel identically. The
+   cancellation is an identity between input data and holds for every
+   complex B'. Its prefactor is the earlier β_j(g_{j-1}), not g_k.
+9. **§5, β from Π, pp. 292-298, (5.1)-(5.44).** §5 uses:
+   - Euclidean covariance (5.2)-(5.6);
+   - gauge invariance (5.9), (5.21);
+   - the decay (5.10), |Π_μν(x-y)| <= O(1)E_0 exp(-δ_1|x-y|);
+   - analyticity for |Im p| < δ_1 ((5.11));
+   - the Laurent decomposition (5.17)-(5.24);
+   - Taylor coefficients and their symmetries (5.25)-(5.36);
+   - β = Σ_x Π_μν(x) x_μ x_ν for μ ≠ ν ((5.42)).
+
+   (5.43)-(5.44) are a regrouping and a size bound. The printed exponent in
+   (5.44) is missing its minus sign.
+
+*The generated marginal coefficient.* After the deformation, the
+coefficient produced by step k is β(s) = Σ_x Π_μν(x; s) x_μ x_ν ((5.42)),
+built from the deformed output. It is complex for non-real s. CMP 109
+mentions reality once, on p. 295, after (5.29) and (5.30): g_μν, a and b are
+real for real z. That holds at real coupling and is never used afterwards:
+- (5.31)-(5.42) are identities between Taylor coefficients and hold over C;
+- the cancellation on p. 298 is an identity;
+- (5.43)-(5.44) is a size bound.
+
+Reality and positivity of β matter only for the flow of the couplings
+between steps, which Balaban says the dependence of β_j on g_{j-1} governs
+(p. 298). That flow is outside §§3-5 and outside the single step of (A_s).
+In this note the marginal coefficient of the deformed output is one
+component of F(E, s), and (A_s) needs only a bound on its size.
+
+**Verdict (T55): no use of reality found in CMP 109 §§3-5.** g_k enters
+only through P^{(k)} ((3.1)) and B' ((3.2)), and every estimate uses only
+the size of B' (ε_1 in CMP 109, Cα' under the deformation). The generated
+marginal coefficient enters only through algebraic identities and size
+bounds.
 
 ## 5. Consequences
 
