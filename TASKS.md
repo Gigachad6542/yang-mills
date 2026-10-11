@@ -91,7 +91,7 @@ Done when: Theorem 2 holds for the full multi-level operator with explicit
 rate, or a `failed-attempt` names the term that is not uniform in j.
 Partial work: `wip/round-2026-10-08/t75/` (script only).
 
-### T53 [computation] — reassigned from Codex to a subagent, 2026-10-08: sup-norm constant s_L in twisted sectors (note 36 caveat)
+### T53 [computation] — offered 2026-10-11 to the session "Project Euclid paper downloads" (worker); reassigned from Codex to a subagent, 2026-10-08: sup-norm constant s_L in twisted sectors (note 36 caveat)
 Scope: `research/scripts/t27_minimizer_regularity.py` (add a twist option),
 its output, and a short section in `research/35-minimizer-regularity-abelian.md`.
 Note 36 (holonomy caveat) claims that the exact-flux sup-norm constant s_L of
