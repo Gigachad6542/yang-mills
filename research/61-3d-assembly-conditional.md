@@ -1181,7 +1181,7 @@ s, j, N, in coarse units. (ii) The normalization (6d.1), checked by brute force.
    that was not attempted.
 
 **Lead review (2026-10-10).** Theorem 6d.1's proof was checked step by step and is
-correct given (P), (L), (H); `t78_realspace_check.py` was re-run with identical output. Two
+correct given (P), (L), (H); the three scripts (`t78_realspace_check.py`, `t78_kernel_decay.py`, `t78_flux_tail.py`) were re-run with identical output (up to timings). Two
 corrections were made: (P) is stated on the fibre Z only (on all closed fluxes it is
 false, by the linking argument in 6d.2), and the suggested route to (L) through a
 coarse primitive is replaced (same obstruction). So the remaining inputs are not
