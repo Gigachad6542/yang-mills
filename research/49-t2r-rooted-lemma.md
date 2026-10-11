@@ -13,10 +13,9 @@ Status:
   (CMP 122 II (1.83)). The correct rate is a_eff = c p_0(γ)²/(R(γ) + n_0 + 1),
   where R(γ) ~ (log γ^{-2})^r (CMP 119 p. 245). Since p_0(γ)² ~ (log γ^{-1})^{2p_0},
   a_eff -> ∞ as γ -> 0 provided 2p_0 > r.
-- **Source check needed.** Balaban takes r >= 2 and p_0 > 2. The
-  inequality 2p_0 > r must hold for the chosen values. That is consistent
-  with the minimal choices (r = 2, p_0 > 2), but the actual choice was not
-  located.
+- **Source check needed** [resolved, §5 and T71]. Balaban takes r >= 2
+  (CMP 119 p. 245) and p_0 >= 5r (CMP 119 p. 246, text after (1.1)), so
+  p_0 >= 10. The inequality 2p_0 > r holds for this choice.
 
 ## 1. The structure being used (CMP 122 II §1)
 
@@ -103,7 +102,7 @@ is a new estimate.
 
 ## 5. Source check 2p_0 > r: resolved
 
-- CMP 119, introduction (printed p. 243): the large-field threshold is
+- CMP 119, introduction (printed p. 244 [corrected from p. 243, T71]): the large-field threshold is
   |U(∂p) - 1| <= g_0 p_0(g_0), with "p_0(g_0) = A_0 (log g_0^{-2})^{p_0} with a
   positive integer p_0".
 - CMP 119 p. 245: R_0 >= (log g_0^{-2})^r, r >= 2.
@@ -112,6 +111,16 @@ is a new estimate.
   O(1) M^d R_j^{d+1} d' (CMP 122 II (1.81)-(1.82); "this condition is
   satisfied for p_0 large, and g_1 sufficiently small"). With the forms above
   this requires 2p_0 > (d+1) r for small g. In particular 2p_0 > r.
+- [T71, note 65 §6 item 6.] Balaban's actual choice is stated on CMP 119
+  p. 246, text after (1.1): "in the first step we take ε_0 = g_0 p_0(g_0),
+  p_0(g_0) = A_0(log g_0^{-2})^{p_0}, p_0 ≧ 5r" (the first of two choices,
+  "the same as in [16]"); with r >= 2, p_0 >= 10. CMP 119 gives no reason for
+  5r; the requirement 2p_0 > (d+1) r above is this note's inference from
+  CMP 122 II (1.81)-(1.82), and p_0 >= 5r satisfies it for d = 3 and d = 4.
+  At d = 3 it reads p_0 > 2r. Note also: at d = 3 with R = identity the
+  persistence bounds (T2-R) of this note (d = 4, with the R-operation) are
+  replaced by the single-scale question of note 65 §5 (Lemma 65.2, Prop. 65.4,
+  target).
 
 So a_eff ~ (log γ^{-2})^{2p_0 - r} -> ∞, and L⁴ e^{-a_eff} < 1 for small γ.
 The remaining assumption of Proposition 2 is the KP form of Balaban's final

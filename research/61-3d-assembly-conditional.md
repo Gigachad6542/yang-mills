@@ -249,55 +249,80 @@ What then gives (H4):
 asserts in the introduction but writes out only for d = 4, plus note 49.
 It is not a new construction. The line-by-line check for d = 3 is open.
 
-### 6a. Reading report on CMP 119 at d = 3 (T62, partial)
+### 6a. Reading report on CMP 119 at d = 3 (T62, partial; corrected by T71)
 
-Source: `sources/ocr/cmp119.md` (OCR; formulas partly garbled).
+Source: `sources/ocr/cmp119.md` (OCR; formulas partly garbled). **Corrected
+2026-10-10 from the page images (T71, note 65; also the 2026-10-09 audit):**
+item 2's reading of (2.6)-(2.9) was wrong, the CMP 109 page is 259, and the
+p. 276 sentence is a d = 4 remark; the corrected text is below, and Sect. 3
+is now read in note 65.
 
 1. **Explicit statements.**
    - Introduction, printed pp. 244-245. For d < 4, "the bound above can be
      estimated by an arbitrarily large power of ε. This is enough to control
      expressions arising in the large field regions ... for all steps".
      The R-operation is introduced only for d = 4.
-   - Printed p. 276, Sect. 3, on the terms R_k: "the analysis presented in
-     [16] for three-dimensional models is enough here". [16] is CMP 102.
+   - [Corrected, T71.] Printed p. 276, Sect. 3, on the terms R_k: "the
+     analysis presented in [16] for three-dimensional models is enough here"
+     ([16] = CMP 102). This concerns only the d = 4 R_k terms: R_k needs no
+     coupling counterterm (p. 260, after (2.31)), so the 3D technique of [16]
+     suffices for them. It is **not** a d = 3 statement (note 65 §6 item 3).
    - The framework gives "not bounds, but a precise description of the
      effective densities in the form of convergent expansions" (p. 244).
 2. **Dimension-dependent inputs of the inductive assumption (Sect. 2).**
    - *(2.4)-(2.5).* Thresholds ε_j = g_j p_0(g_j) and domain sizes R_j, the
      smallest power of L with R_j >= (log g_j^{-2})^r. These definitions do
      not depend on d.
-   - *(2.6)-(2.9).* Inequalities between couplings and thresholds at scales
-     m < n. As far as the OCR shows, they bound the finer-scale quantity by
-     the coarser one up to (1 + β_0) and polynomial factors in (n - m),
-     derived from the 4D RG equations. In 3D, g_k² = g² ε L^k increases
-     geometrically with k. Since g p_0(g) increases for small g, ε_j
-     increases with j as well. So these inequalities hold in 3D, with room.
-     No inequality in the reverse direction (coarser bounded by finer),
-     which would fail in 3D, was found in Sect. 2.
+   - *(2.6)-(2.9)* [corrected, T71; the T62 text read them in the wrong
+     direction]. (2.6)-(2.9) (CMP 119 pp. 255-256, n > m, a larger index is
+     a coarser lattice) encode the 4D slowly running coupling. On the exact
+     3D flow g_k² = g² L^k ε four of the eight inequalities fail: the first
+     lines of (2.6) and (2.8), which bound the coarser quantity by the finer
+     one, for every n - m >= 1; the second lines of (2.7) and (2.9) beyond a
+     window that the persistence lengths n - m ~ R_n exceed (note 65 §3.1,
+     script Parts A, H). Sect. 3 uses them explicitly with n - m = 1 only,
+     with L^{1/2} in place of 1 + β_0, and those estimates still close
+     (note 65 §3.2); one implicit multi-step use, the analyticity bookkeeping
+     of p. 277, closes as printed for Balaban's L (odd, > 11, CMP 109 p. 251)
+     (rough count, note 65 §3.1). Whether CMP 122 II uses them with
+     n - m > 1 is part of T72.
    - *Entropy versus large-field factors.* The induction needs the
      large-field factor exp(-c p_0(g_j)²) per unit of domain to beat entropy
      factors exp(O(1) M^d R_j^{d+1}) (CMP 122 II (1.80)-(1.82); note 49 §5).
      For d = 3 this asks for 2p_0 > 4r instead of 2p_0 > 5r, which is weaker.
+     Balaban's choice is p_0 >= 5r (CMP 119 p. 246, text after (1.1)), with
+     r >= 2 (p. 245).
      And in 3D, p_0(g_j)² ~ (log ε_j^{-1})^{2p_0} grows, so the factor is
      smaller than any power of ε_j, as Balaban says.
    - *Coupling renormalization.* The terms needing "the second
      renormalization connected with the coupling constant renormalization
      counterterm" (p. 276) are absent in 3D, by superrenormalizability
-     (CMP 109 p. 255: "in that case it is not necessary to consider the
-     β-functions").
-3. **Not checked.** The bounds of Sect. 3 (the (k+1)-st step) and of CMP 122
-   I/II line by line at d = 3, with the R-operation removed. The OCR quality
-   of those pages does not allow a reliable equation-level reading. A check
-   against the original page images would be needed.
+     (CMP 109 **p. 259** [corrected from p. 255, T71]: "The proof also covers
+     the dimension d = 3, but in that case it is not necessary to consider
+     the β-functions ... The effective coupling constants are given by
+     g_k² = g² L^k ε"). CMP 109 Theorem 2, the two-sided bound on 1/g_k²
+     (printed (0.31), cited by CMP 119 as (I.0.33)), is stated for d = 4,
+     G = SU(2) only; at d = 3 the coupling hypothesis holds by the explicit
+     flow.
+3. **Sect. 3, now read from the page images (T71, note 65).** The
+   (k+1)-st-step form preservation goes through at d = 3 with R = identity
+   after four changes (3D flow in place of (2.6)-(2.9); no counterterm, F²
+   summed exponent 1; d-dependent constants and geometry; no R-terms). CMP 119
+   contains **no** localized or quantitative bound on the large-field
+   operations T_k (only the global Corollary 3, p. 264), so the large-field
+   activity bound must come from CMP 122 II (T72). CMP 122 I/II at d = 3: T72.
 
-**Verdict.** (H4) is supported:
-- Balaban states the d < 4 case explicitly in two places;
-- the dimension-dependent inputs found in Sect. 2 hold, or hold with room,
-  at d = 3.
-
-This is a partial reading, not a line-by-line proof. (H4) keeps the status
-"published conditional input (asserted for d < 4 by Balaban), checked at the
-level of the inductive assumptions".
+**Verdict** [rewritten 2026-10-10 after T71]. Balaban states the d < 4 case
+explicitly once in CMP 119 (Introduction, p. 244); CMP 109 p. 259 states the
+d = 3 coupling g_k² = g² L^k ε. The inductive assumptions of Sect. 2 do **not**
+hold verbatim at d = 3 (four of (2.6)-(2.9) fail on the 3D flow), but Sect. 3
+uses them only in forms that survive (note 65). (H4a) keeps the status
+"published conditional input, checked at the level of Sect. 3's form
+preservation (four changes at d = 3, note 65)", with the large-field factor
+still to be read in CMP 122 II (T72). (H4b): Lemma 65.3 (proved given (D))
+gives that a persisting large-field domain has radius O(M R_j) j-cells;
+Prop. 65.4 (target, heuristic) suggests a per-point large-field probability
+<= C_q g_j^q.
 
 ### 6b. Localized s-analyticity and (H4b) (T66)
 

@@ -194,9 +194,12 @@ must be controlled polymer by polymer.
 - (A_s): CMP 102's single-step bounds for complex fluctuation coupling,
   reduced to its sixth-order remainder bound (note 42). Read in T63: no use
   of reality or positivity of g_0; the domain is |s| g_0 p(g_0)^2 <= alpha'.
-- (H4): CMP 119's exact convergent expansions at d = 3 (T62 read the
-  inductive assumptions of Sect. 2: supported). Sect. 3 of CMP 119 and
-  CMP 122 II at d = 3 are being read from the page images (T71, T72).
+- (H4): CMP 119's exact convergent expansions at d = 3. Note 65 (T71, from
+  the page images) corrects T62: four of the coupling inequalities
+  (2.6)-(2.9) fail on the exact 3D flow, but Sect. 3 uses them only in forms
+  that survive, and its form preservation goes through at d = 3 with
+  R = identity after four changes. CMP 119 has no large-field activity
+  bound; that is CMP 122 II, being read at d = 3 in T72.
 - (L_s), reduced in note 61 §6b (Lemma 6b.1, proved) to three inputs:
   - (I-L) locality of the one-step defect D_N. Its classical part is local
     through CMP 102b (190) (proof omitted by Balaban); its sixth-order
@@ -225,7 +228,8 @@ must be controlled polymer by polymer.
     SU(2) and the other two bond axes (T79) are open.
 
 So M1-3D stays a **conditional reduction**. (NA♭) and (A_s) are supported
-readings; (H4) is supported at the level of the inductive assumptions; (L_s)
+readings; (H4) is supported at the level of CMP 119 Sect. 3's form
+preservation (note 65), with CMP 122 II's large-field bound still to read; (L_s)
 is the main open item on the 3D route, and it is a new estimate, not a
 reading.
 
@@ -321,6 +325,7 @@ reading.
 - `research/61-3d-assembly-conditional.md` -- The 3D assembly: H3D-1 from single-step bounds, written out (conditional)
 - `research/63-na-energy-perturbation.md` -- (NA♭) in the energy norm without CMP 102b (190): a constrained-minimizer perturbation lemma
 - `research/64-large-field-lower-bound.md` -- The large-field lower bound for the one-step defect D_N: an absolute bound, and an exact fibre transport reducing the Z-local form to equipartition
+- `research/65-cmp119-sect3-d3-reading.md` -- CMP 119 Sect. 3 at d = 3 with R = identity, from the page images: four changes, no large-field activity bound; corrects note 61 §6a (T71)
 - `research/67-fibre-equipartition.md` -- (EQ') is false; the Z-local relative bound (R) fails in the abelian Gaussian model; the corrected form with an exponentially decaying tail (T80)
 - `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print

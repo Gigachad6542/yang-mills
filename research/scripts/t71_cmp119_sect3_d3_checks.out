@@ -64,7 +64,7 @@ T71 scalar checks (see header of this file for scope)
    per point z of the j-lattice the remainder after the counterterm is O((L^-s)^(5-b)) (3.67),
    the F^2 term itself O((L^-s)^4) (3.57)-(3.66); the number of z per unit n-cell is L^(s d).
    d=4: summed remainder exponent 5-d-b = 1-b; summed F^2 (marginal) exponent 4-d = 0
-   d=3: summed remainder exponent 5-d-b = 2-b; summed F^2 (marginal) exponent 4-d = 1
+   d=3: summed remainder exponent 5-d-b = 2-b (only with a counterterm, absent at d = 3); summed F^2 (marginal) exponent 4-d = 1
    d=4, L=2: sum_(s=0..60) L^(-(4-d)s) = 61.000000   (limit n->inf: inf)
    d=3, L=2: sum_(s=0..60) L^(-(4-d)s) = 2.000000   (limit n->inf: 2.0)
    d=3, L=3: sum_(s=0..60) L^(-(4-d)s) = 1.500000   (limit n->inf: 1.4999999999999998)
@@ -72,7 +72,7 @@ T71 scalar checks (see header of this file for scope)
    d=3, L=2: L^d - 1 = 7 non-central sites per block; d^2 = 9
    d=3, L=3: L^d - 1 = 26 non-central sites per block; d^2 = 9
    => d=4: the marginal sum grows like n (needs the beta_j counterterm and g_j^kappa0 factors);
-      d=3: it is a convergent geometric series, no coupling counterterm is needed, beta = 1 is allowed in (2.43).
+      d=3: it is a convergent geometric series, no coupling counterterm is needed, (2.43) holds with exponent 1 (beta = 1 in (2.43)'s own notation).
 
 [Part E] Lemma 65.2: sum_(s>=0) L^(d s) exp(-c (lam + s ell)^q) <= C0 exp(-c lam^q),
          C0 = sum_(s>=0) exp(s d ell - c (s ell)^q) < inf for q > 1  (superadditivity (a+b)^q >= a^q + b^q)
@@ -87,7 +87,7 @@ T71 scalar checks (see header of this file for scope)
    direct check d=3,L=2,c=0.1,q=4, lam=5.0: lhs = 7.187782e-28 <= rhs = 1.028697e-25: True
 
 [Part F] (i) exp(-c p_0(g)^2) <= (g p_0(g))^q for lam = log g^-2 >= lam_*(q);
-   p_0(g) = A_0 lam^p0 (CMP 119 (1.1)), g = exp(-lam/2). Take A_0 = 1 (A_0 >= 1 only helps).
+   p_0(g) = A_0 lam^p0 (CMP 119 p. 244; p. 246 text after (1.1)), g = exp(-lam/2). Take A_0 = 1 (A_0 >= 1 only helps).
    Condition: c lam^(2 p0) >= q (lam/2 - p0 ln lam).  Sufficient: c lam^(2 p0) >= q lam/2,
    i.e. lam >= (q/(2c))^(1/(2 p0 - 1)) (and lam >= 1).  lam_* below = last sign change of the exact condition on a grid of step 1e-3.
      c=0.5, p0=10, q=5: lam_* = 1.034 (g^2 <= 3.556e-01); sufficient closed form lam >= 1.088; closed form >= lam_*: True
@@ -107,18 +107,18 @@ T71 scalar checks (see header of this file for scope)
      r=2, d=4: r d + 1 = 9 <= (d+1) r = 10 < 2 p_0 >= 20
      r=3, d=3: r d + 1 = 10 <= (d+1) r = 12 < 2 p_0 >= 30
      r=3, d=4: r d + 1 = 13 <= (d+1) r = 15 < 2 p_0 >= 30
-   (ii) CMP 119 (1.1): p_0 >= 5 r.  Entropy-vs-weight needs 2 p_0 > (d+1) r (note 49 sect. 5).
-     r=2, d=3: need p_0 > 4.0; (1.1) gives p_0 >= 10; 2 p_0 / ((d+1) r) >= 2.50
-     r=2, d=4: need p_0 > 5.0; (1.1) gives p_0 >= 10; 2 p_0 / ((d+1) r) >= 2.00
-     r=3, d=3: need p_0 > 6.0; (1.1) gives p_0 >= 15; 2 p_0 / ((d+1) r) >= 2.50
-     r=3, d=4: need p_0 > 7.5; (1.1) gives p_0 >= 15; 2 p_0 / ((d+1) r) >= 2.00
+   (ii) CMP 119 p. 246 (text after (1.1)): p_0 >= 5 r.  Entropy-vs-weight needs 2 p_0 > (d+1) r (note 49 sect. 5).
+     r=2, d=3: need p_0 > 4.0; p. 246 gives p_0 >= 10; 2 p_0 / ((d+1) r) >= 2.50
+     r=2, d=4: need p_0 > 5.0; p. 246 gives p_0 >= 10; 2 p_0 / ((d+1) r) >= 2.00
+     r=3, d=3: need p_0 > 6.0; p. 246 gives p_0 >= 15; 2 p_0 / ((d+1) r) >= 2.50
+     r=3, d=4: need p_0 > 7.5; p. 246 gives p_0 >= 15; 2 p_0 / ((d+1) r) >= 2.00
 
 [Part G] exact linear algebra: invariants of Pi_{mu nu,kappa lambda} under B_d, (3.55)-(3.61)
-   d=2: |B_d| = 8; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 7.55e-15, smallest nonzero eigenvalue 8.000)
+   d=2: |B_d| = 8; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 8.04e-15, smallest nonzero eigenvalue 8.000)
       normalised Pi_(22,11) = 1: nonzero entries = 4; in the block kappa<mu, lambda<nu: entries with (mu,kappa) = (nu,lambda) all equal to 1: True; all others 0: True; number of pairs kappa<mu = 1
-   d=3: |B_d| = 48; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 9.37e-16, smallest nonzero eigenvalue 8.000)
+   d=3: |B_d| = 48; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 1.83e-14, smallest nonzero eigenvalue 8.000)
       normalised Pi_(22,11) = 1: nonzero entries = 12; in the block kappa<mu, lambda<nu: entries with (mu,kappa) = (nu,lambda) all equal to 1: True; all others 0: True; number of pairs kappa<mu = 3
-   d=4: |B_d| = 384; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 1.69e-14, smallest nonzero eigenvalue 8.000)
+   d=4: |B_d| = 384; invariant 4-tensors under B_d alone: 4; with (S),(A): 1 (largest |null eigenvalue| 3.66e-13, smallest nonzero eigenvalue 8.000)
       normalised Pi_(22,11) = 1: nonzero entries = 24; in the block kappa<mu, lambda<nu: entries with (mu,kappa) = (nu,lambda) all equal to 1: True; all others 0: True; number of pairs kappa<mu = 6
 
 [Part H] 4D inequalities (2.7b), (2.9b) on chains of length s = R_n (unprocessed-domain regime), exact 3D flow

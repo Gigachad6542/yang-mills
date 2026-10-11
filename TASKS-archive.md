@@ -884,6 +884,20 @@ Done when: exponential decay is proved with explicit μ_0, C, or a
 `failed-attempt` names the step (e.g. the constraint space under conjugation).
 Verdict (lead review): accepted as a conditional reduction (failed-attempt for the unconditional statement). Note 61 §6d Theorem 6d.1: Combes-Thomas for the composite fibre, by cutting off potentials and repairing the constraint with a local lift; decay rate μ_0 per coarse unit uniform in s, j, N, given (P), (L), (H). Normalization: Π_j^{(s)} = L^j min{...} (brute force). Numerics: rate >= 1.25 per coarse unit for L = 2, 3, j <= 3, s ∈ {0, ½, 1}; the zero-extended flux form has a |x|^{-3} tail. Lead correction: (P) is false on all closed fluxes (linking argument) and is restated on the fibre Z; the suggested route to (L) via a coarse primitive fails for the same reason. Follow-up: T83.
 
+### T71 [fix] — **completed 2026-10-10** (lead-reviewed); worker: the Claude session "Project Euclid paper downloads" (worker; started by Daniel, accepted by the lead); earlier claimed for a Sonnet worker, 2026-10-09; reassigned from Codex to a subagent, 2026-10-08: CMP 119 Sect. 3 at d = 3, from page images (note 61 §6a)
+Scope (changed 2026-10-08, to avoid edit conflicts): a new note
+`research/65-cmp119-sect3-d3-reading.md`; the lead adds the pointer in note 61 §6a.
+T62 read CMP 119 Sect. 2 at d = 3 from the OCR and stopped at Sect. 3 (the
+(k+1)-st step), whose OCR is unreadable. Read Sect. 3 from the page images
+in `sources/papers/`. For each estimate, with equation number, say whether
+it holds at d = 3 with R = identity, or what changes (powers of L, ε
+exponents, entropy). Then state the resulting localized large-field
+activity bound in the form |activity(X)| <= C ε_j^q e^{-κ d(X)}.
+Done when: note 65 has the list and a one-line verdict. Commit `[T71][fix]`.
+Partial work: `wip/round-2026-10-08/t71/` holds an essentially complete draft of note 65 and its script (unverified; see the README there). Start from it.
+Lead, 2026-10-10: unblocked; Daniel downloaded all Project Euclid PDFs in his browser. Lead, 2026-10-09: **blocked on the page images.** On Daniel's Mac, Project Euclid answers `fetch_papers.sh` with a bot-check page after three downloads; CMP 119, 109, 116, 122 II, both CMP 99 and CMP 102 (variational) are missing from `sources/papers/`. The lead does not bypass the check; Daniel can download them in a browser (links in `fetch_papers.sh`), or the lead retries later. The worker brief is ready.
+Verdict (lead review): accepted. Note 65 verified against the page images (eight checks; two corrected in detail: p_0 >= 5r is in the text after (1.1); CMP 119 has the global Corollary 3 bound involving T_k but no localized one). Sect. 3 survives at d = 3 with R = identity after four changes; no large-field activity bound in CMP 119; Prop. 65.4 relabelled a target. The lead applied note 65 §6 items 1-6 and 8 to note 61 §6a, note 49 and the README; item 7 (which uses of (T2-R) in notes 39/25 remain at d = 3) is recorded in note 49 only. The wip draft was removed.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

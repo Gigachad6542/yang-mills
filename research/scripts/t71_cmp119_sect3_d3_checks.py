@@ -190,7 +190,7 @@ def part_D():
     print("   per point z of the j-lattice the remainder after the counterterm is O((L^-s)^(5-b)) (3.67),")
     print("   the F^2 term itself O((L^-s)^4) (3.57)-(3.66); the number of z per unit n-cell is L^(s d).")
     for d in (4, 3):
-        print(f"   d={d}: summed remainder exponent 5-d-b = {5-d}-b; summed F^2 (marginal) exponent 4-d = {4-d}")
+        print(f"   d={d}: summed remainder exponent 5-d-b = {5-d}-b" + (" (only with a counterterm, absent at d = 3)" if d == 3 else "") + f"; summed F^2 (marginal) exponent 4-d = {4-d}")
     n = 60
     for d, L in ((4, 2), (3, 2), (3, 3)):
         tot = sum(float(L) ** (-(4 - d) * s) for s in range(n + 1))
@@ -199,7 +199,7 @@ def part_D():
     for d, L in ((4, 2), (3, 2), (3, 3)):
         print(f"   d={d}, L={L}: L^d - 1 = {L**d - 1} non-central sites per block; d^2 = {d*d}")
     print("   => d=4: the marginal sum grows like n (needs the beta_j counterterm and g_j^kappa0 factors);")
-    print("      d=3: it is a convergent geometric series, no coupling counterterm is needed, beta = 1 is allowed in (2.43).")
+    print("      d=3: it is a convergent geometric series, no coupling counterterm is needed, (2.43) holds with exponent 1 (beta = 1 in (2.43)'s own notation).")
 
 
 def part_E():
@@ -222,7 +222,7 @@ def part_E():
 
 def part_F():
     print("\n[Part F] (i) exp(-c p_0(g)^2) <= (g p_0(g))^q for lam = log g^-2 >= lam_*(q);")
-    print("   p_0(g) = A_0 lam^p0 (CMP 119 (1.1)), g = exp(-lam/2). Take A_0 = 1 (A_0 >= 1 only helps).")
+    print("   p_0(g) = A_0 lam^p0 (CMP 119 p. 244; p. 246 text after (1.1)), g = exp(-lam/2). Take A_0 = 1 (A_0 >= 1 only helps).")
     print("   Condition: c lam^(2 p0) >= q (lam/2 - p0 ln lam).  Sufficient: c lam^(2 p0) >= q lam/2,")
     print("   i.e. lam >= (q/(2c))^(1/(2 p0 - 1)) (and lam >= 1).  lam_* below = last sign change of the exact condition on a grid of step 1e-3.")
     for (c, p0) in ((0.5, 10), (0.25, 10), (0.25, 15)):
@@ -245,11 +245,11 @@ def part_F():
     for r in (2, 3):
         for d in (3, 4):
             print(f"     r={r}, d={d}: r d + 1 = {r*d+1} <= (d+1) r = {(d+1)*r} < 2 p_0 >= {10*r}")
-    print("   (ii) CMP 119 (1.1): p_0 >= 5 r.  Entropy-vs-weight needs 2 p_0 > (d+1) r (note 49 sect. 5).")
+    print("   (ii) CMP 119 p. 246 (text after (1.1)): p_0 >= 5 r.  Entropy-vs-weight needs 2 p_0 > (d+1) r (note 49 sect. 5).")
     for r in (2, 3):
         p0min = 5 * r
         for d in (3, 4):
-            print(f"     r={r}, d={d}: need p_0 > {(d+1)*r/2}; (1.1) gives p_0 >= {p0min}; "
+            print(f"     r={r}, d={d}: need p_0 > {(d+1)*r/2}; p. 246 gives p_0 >= {p0min}; "
                   f"2 p_0 / ((d+1) r) >= {2*p0min/((d+1)*r):.2f}")
 
 
