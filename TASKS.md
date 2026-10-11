@@ -97,7 +97,7 @@ Done when: Theorem 2 holds for the full multi-level operator with explicit
 rate, or a `failed-attempt` names the term that is not uniform in j.
 Partial work: `wip/round-2026-10-08/t75/` (script only).
 
-### T55 [fix] — claimed by Codex, 2026-10-07 (no deliverable; Codex out of usage); reassigned to a subagent, 2026-10-08: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
+### T55 [fix] — offered 2026-10-10 to the session "Project Euclid paper downloads" (worker); claimed by Codex, 2026-10-07 (no deliverable; Codex out of usage); reassigned to a subagent, 2026-10-08: (A_s) source check of CMP 109 §§3-5 (note 42 §4)
 Scope: `research/42-s2-by-even-deformation.md` §4 only.
 Note 42 §4 (T49) checked CMP 116 Part II §1 and CMP 109 §2. Read CMP 109
 §§3-5 (`sources/ocr/cmp109.md`, fluctuation-field action, Ward identities,
