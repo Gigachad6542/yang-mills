@@ -25,7 +25,7 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T85 [fix] — open, posted 2026-10-12 by the lead: the three readings behind note 68 Thm 68.5 ((H4a) at d = 3)
+### T85 [fix] — offered 2026-10-12 to the session "Project Euclid paper downloads" (worker; branch t85-claude); posted 2026-10-12 by the lead: the three readings behind note 68 Thm 68.5 ((H4a) at d = 3)
 Scope: a new §7 of `research/68-large-field-gas-d3.md` only.
 Note 68 proved (G2) and reduced (G1) to three statements that CMP 122 II does not print at R = identity: (H-form) the R = id density has the form (1.104) with R' = 0, Y_i = all components of Z_k, and a factor e^{A'_k} independent of the large-field configuration; (H-C) the summed coupling bound, uniform in the Y_i (II proves (1.99) with the Y_i fixed); (1.79) for the unprocessed T_k (stated "for all large field regions", pp. 383-384, derived for T'_k). From the page images of CMP 122 II pp. 355-392 (pp. 355-375 not yet read) and CMP 122 I where cited, say for each whether it holds at d = 3 with R = identity, with page and equation numbers, or what is missing. Also the thickness of Z~ versus the footprint S(Y) (note 68 §6 "Not checked").
 Done when: each of the three is confirmed, corrected, or shown to need a new argument (named). Commit `[T85][fix]`.

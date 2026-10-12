@@ -45,8 +45,9 @@ Daniel started it; it downloaded the PDFs, wrote the correctness audit
 (`collaboration/claude-audit-2026-10-09.md`), and then worked as a worker
 under this lead: T71, T82, T55, all integrated. It reports by cross-session
 message, works in its own worktree/branch (`t<id>-claude`), does not push or
-edit TASKS/PROGRESS. It has no task at the moment (T53 was integrated on
-2026-10-12); offer it T85 (a page-image reading) if it is available. Its message channel is tied to the old lead session: if it
+edit TASKS/PROGRESS. **T85 was offered to it on 2026-10-12**; if it took it, its branch is
+`t85-claude` and the final commit body has its report (integrate from the
+branch). Its message channel is tied to the old lead session: if it
 messages the old session, Daniel can forward, or check `git branch` for
 `t53-claude`. Remind it of lean mode (no multi-agent workflows) if needed.
 
