@@ -90,18 +90,6 @@ Done when: Theorem 2 holds for the full multi-level operator with explicit
 rate, or a `failed-attempt` names the term that is not uniform in j.
 Partial work: `wip/round-2026-10-08/t75/` (script only).
 
-### T53 [computation] — offered 2026-10-11 to the session "Project Euclid paper downloads" (worker); reassigned from Codex to a subagent, 2026-10-08: sup-norm constant s_L in twisted sectors (note 36 caveat)
-Scope: `research/scripts/t27_minimizer_regularity.py` (add a twist option),
-its output, and a short section in `research/35-minimizer-regularity-abelian.md`.
-Note 36 (holonomy caveat) claims that the exact-flux sup-norm constant s_L of
-note 35 is unchanged, up to O(e^{-δ n_0}), in the twisted Bloch sectors
-created by a flat background with holonomy (note 54 §1). Test this. Add a
-quasi-periodic twist e^{iθ} to the fine Fourier grid, so that coarse momenta
-become K ∈ (2π/n_0)(Z^4 + θ/(2π)). Rerun the LP of note 35 for L = 2, 3, 4,
-m = 1, at θ = π/4 and π/2. Report s_L(θ) next to s_L(0).
-Done when: the table is in note 35 and states whether the claim of note 36
-holds. Commit `[T53][computation]` plus one PROGRESS line.
-
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

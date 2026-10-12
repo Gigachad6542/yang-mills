@@ -941,6 +941,19 @@ Note 66 found that at d = 3 with R = identity CMP 122 II gives each persisting l
 Done when: (H4a) at d = 3 is proved from CMP 122 II's printed inputs (1.79)-(1.89), CMP 119 Sect. 3 and note 49, or a `failed-attempt` names the step.
 Verdict (lead review): accepted (Prop. 68.1 induction and Thm 68.4 KP steps checked; script re-run, identical). Note 68: (G2) proved at R = id (surplus κ - Φ carried exactly; κ_k >= Φ + λD + c_*P²; only 2p_0 > (d+2)r); (G1) reduced to (H-form), (H-C), (1.79) for unprocessed T_k; Thm 68.5 gives |w(Γ)| <= C_q g_k^q e^{-κd_k} for large-field polymers, KP with a = ½κd + 1. Follow-up: T85 (the three readings).
 
+### T53 [computation] — **completed 2026-10-12** (lead-reviewed); worker: the session "Project Euclid paper downloads" (worker); reassigned from Codex to a subagent, 2026-10-08: sup-norm constant s_L in twisted sectors (note 36 caveat)
+Scope: `research/scripts/t27_minimizer_regularity.py` (add a twist option),
+its output, and a short section in `research/35-minimizer-regularity-abelian.md`.
+Note 36 (holonomy caveat) claims that the exact-flux sup-norm constant s_L of
+note 35 is unchanged, up to O(e^{-δ n_0}), in the twisted Bloch sectors
+created by a flat background with holonomy (note 54 §1). Test this. Add a
+quasi-periodic twist e^{iθ} to the fine Fourier grid, so that coarse momenta
+become K ∈ (2π/n_0)(Z^4 + θ/(2π)). Rerun the LP of note 35 for L = 2, 3, 4,
+m = 1, at θ = π/4 and π/2. Report s_L(θ) next to s_L(0).
+Done when: the table is in note 35 and states whether the claim of note 36
+holds. Commit `[T53][computation]` plus one PROGRESS line.
+Verdict (lead review): accepted (twistcheck re-run: all identities to 1e-15; the L = 4, n0 = 6, θ = 0 row re-run: 0.8807). Note 35 §5: diagonal twists lower the largest rows, one-direction twists raise them by < 0.1% at n0 = 6, gaps shrink from n0 = 4 to 6 (note 36's claim holds up to a small wrap-around amount; rate not confirmed). Side finding: for L >= 3 the far-corner rows are not the largest; s_L < 1 is suggested only for L >= 5. Lead added [T53] markers in notes 34 and 36.
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

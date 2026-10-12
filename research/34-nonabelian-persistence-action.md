@@ -110,7 +110,10 @@ Put C_F := 4 and s_L := C_I L^{-2}, the sup-to-sup norm of the one-level minimiz
 image map. Fix η ∈ (0, 1) and put ρ_L := (1-η)/s_L. Assume ρ_L > 1, that is,
 s_L < 1 - η. The abelian computation of note 35 gives s_L ≈ 1.6, 1.1, 0.77,
 0.55 for L = 2, 3, 4, 5, so this assumption holds for L >= 4 and fails for
-L <= 3 (§5, item 4).
+L <= 3 (§5, item 4). [T53 (note 35 §5): these are far-corner rows; for
+L >= 3 larger rows exist (n0 = 6: 1.258, 0.881, 0.675 for L = 3, 4, 5), so
+with the depth growth L = 4 gives about 0.97-1.01 and s_L < 1 is suggested
+only for L >= 5; all are lower bounds (audit, T82).]
 Let ε_min := min_{j<=t} ε_j and R := ⌈log(ε_0/ε_min)/log ρ_L⌉.
 
 **Theorem 3.** Assume (D1), (D2) and the event E_0. If U is persistent on
@@ -203,7 +206,8 @@ linearizing. It is harmless.
    the block scale are suppressed by the averaging kernel, so the minimizer
    that reproduces them must have larger fine fluxes. So the "coarse
    curvature over L²" reading of (D2) is wrong in the sup norm; only s_L < 1
-   is available, and only for L >= 4. Theorem 3 needs exactly that. With
+   is available, and only for L >= 4 [T53: suggested only for L >= 5, see
+   note 35 §5; not established for any L]. Theorem 3 needs exactly that. With
    L = 2 or 3 the chain argument fails, and an energy (ℓ²) form of (D2)
    would be needed.
 

@@ -67,6 +67,15 @@ def pinv_h(C, rel=1e-9, absolute=1e-14):
 
 def kernel(L, m, n0, s=1):
     """Kernel from level-m fluxes to level-(m-s) image fluxes of the minimizer."""
+    return np.fft.ifftn(kernel_H(L, m, n0, s), axes=(1, 2, 3, 4))
+
+
+def kernel_H(L, m, n0, s=1, theta=0.0):
+    """Fourier multiplier H[u, k, a, b] of the kernel at coarse momenta
+    K = (2 pi k + theta) / n0. theta = 0 is the periodic torus; theta != 0 is
+    the sector twisted by e^{i theta_mu} around the torus in direction mu
+    (note 54 §1, T53)."""
+    theta = np.broadcast_to(np.asarray(theta, dtype=float), (4,))
     M = L**m
     Ls = L**s
     M1 = M // Ls
@@ -77,7 +86,7 @@ def kernel(L, m, n0, s=1):
     nK = n0**4
     H = np.zeros((Ls**4, n0, n0, n0, n0, 6, 6), dtype=complex)
     for kidx in itertools.product(range(n0), repeat=4):
-        K = 2 * np.pi * np.array(kidx, dtype=float) / n0
+        K = (2 * np.pi * np.array(kidx, dtype=float) + theta) / n0
         p = (K[:, None] + 2 * np.pi * ells) / M
         wM = what(p, M)
         wM1 = what(p, M1) if M1 > 1 else np.ones((6, p.shape[1]), dtype=complex)
@@ -92,8 +101,7 @@ def kernel(L, m, n0, s=1):
         Kp = (K[:, None] + 2 * np.pi * offs) / Ls  # child momenta
         phase = np.exp(1j * (offs.T @ Kp))  # [u, l']
         H[(slice(None),) + kidx] = np.einsum("ul,lab->uab", phase, B) / Ls**4
-    G = np.fft.ifftn(H, axes=(1, 2, 3, 4))
-    return G
+    return H
 
 
 def report(L, m, n0, delta=0.0):
@@ -111,7 +119,7 @@ def report(L, m, n0, delta=0.0):
     return S, L**2 * S, imag
 
 
-if __name__ == "__main__":
+if __name__ == "__main__" and len(sys.argv) == 1:
     cases = [(2, 1, 8), (2, 2, 8), (2, 3, 6), (3, 1, 8), (3, 2, 6), (2, 2, 10)]
     for L, m, n0 in cases:
         S, CI, im = report(L, m, n0)
@@ -183,3 +191,193 @@ def exact_report(L, m, n0, rows=None, s=1):
         val, st = exact_norm(g.reshape(-1), n0, Dm)
         out.append((u, a, val, st, np.abs(g).sum()))
     return out
+
+
+# ---------------------------------------------------------------------------
+# T53: twisted Bloch sectors (note 36 holonomy caveat, note 54 §1).
+# Fields are quasi-periodic, Phi(Y + n0 e_mu) = e^{i theta_mu} Phi(Y), and
+# complex; the sup norm uses the complex modulus (the charged components of
+# su(2)). For theta != 0 the twisted complex has no cohomology, so exact =
+# closed and the annihilator of exact fluxes is {D_theta^T c}, with no
+# constants h. The dual l1 norm uses |.| on C; we bracket it by an LP:
+# |z| >= max_k Re(z e^{-i phi_k}) >= cos(pi/ndir)|z|, phi_k = 2 pi k/ndir.
+
+
+def twisted_bianchi_matrix(n0, theta):
+    import scipy.sparse as sp
+    theta = np.broadcast_to(np.asarray(theta, dtype=float), (4,))
+    N = n0**4
+    idx = np.arange(N).reshape((n0,) * 4)
+    coords = np.indices((n0,) * 4).reshape(4, -1)
+    rows, cols, vals = [], [], []
+    pl = {a: i for i, a in enumerate(PLAQ)}
+    for it, (l, mu, nu) in enumerate(TRIP):
+        for sign, dirn, a in ((1, l, (mu, nu)), (-1, mu, (l, nu)), (1, nu, (l, mu))):
+            ia = pl[a]
+            shifted = np.roll(idx, -1, axis=dirn)  # Y + e_dirn, wrapped
+            wrap = np.where(coords[dirn] == n0 - 1, np.exp(1j * theta[dirn]), 1.0)
+            r = it * N + idx.ravel()
+            rows += [r, r]
+            cols += [ia * N + shifted.ravel(), ia * N + idx.ravel()]
+            vals += [sign * wrap, np.full(N, -sign, complex)]
+    return sp.csr_matrix((np.concatenate(vals), (np.concatenate(rows), np.concatenate(cols))),
+                         shape=(4 * N, 6 * N))
+
+
+def twisted_row(Hrow, n0, theta):
+    """Row functional on fundamental-domain values Phi_b(Y), Y in [0, n0)^4.
+
+    Hrow[k, b] is the multiplier at K = (2 pi k + theta)/n0. The image flux at
+    Y0 = 0 is sum_Y g_b(Y) Phi_b(Y) with g_b(Y) = e^{-i theta.Y/n0} (FFT H_b)(Y)/n0^4.
+    """
+    theta = np.broadcast_to(np.asarray(theta, dtype=float), (4,))
+    Y = np.indices((n0,) * 4)
+    ph = np.exp(-1j * np.tensordot(theta, Y, axes=1) / n0)
+    g = np.fft.fftn(np.moveaxis(Hrow, -1, 0), axes=(1, 2, 3, 4)) / n0**4  # (b, Y)
+    return (g * ph[None]).reshape(-1)
+
+
+def exact_norm_complex(g, n0, theta, ndir=32, Dm=None):
+    """Bracket [lo, hi] for min_c sum_b |g_b - (D_theta^T c)_b| (complex modulus).
+
+    lo is the polygon LP value; hi is the true complex l1 norm of the LP's
+    residual (an admissible extension), also <= lo / cos(pi/ndir)."""
+    import scipy.sparse as sp
+    from scipy.optimize import linprog
+    N = n0**4
+    nphi = 6 * N
+    if Dm is None:
+        Dm = twisted_bianchi_matrix(n0, theta)
+    DT = Dm.T.tocsr()
+    Dr, Di = DT.real, DT.imag
+    Ar = sp.hstack([Dr, -Di])
+    Ai = sp.hstack([Di, Dr])
+    if not np.any(np.asarray(theta)):  # periodic: add per-orientation constants
+        Hc = sp.kron(sp.eye(6), np.ones((N, 1)))
+        Z = sp.csr_matrix((nphi, 6))
+        Ar = sp.hstack([Ar, Hc, Z])
+        Ai = sp.hstack([Ai, Z, Hc])
+    Ar, Ai = Ar.tocsr(), Ai.tocsr()
+    nz = Ar.shape[1]
+    gr, gi = g.real, g.imag
+    I = sp.eye(nphi)
+    blocks, rhs = [], []
+    for k in range(ndir):
+        c, s_ = np.cos(2 * np.pi * k / ndir), np.sin(2 * np.pi * k / ndir)
+        blocks.append(sp.hstack([-(c * Ar + s_ * Ai), -I]))
+        rhs.append(-(c * gr + s_ * gi))
+    A_ub = sp.vstack(blocks).tocsr()
+    b_ub = np.concatenate(rhs)
+    cost = np.concatenate([np.zeros(nz), np.ones(nphi)])
+    bounds = [(None, None)] * nz + [(0, None)] * nphi
+    # interior point: about 100x faster than dual simplex on these LPs
+    res = linprog(cost, A_ub=A_ub, b_ub=b_ub, bounds=bounds, method="highs-ipm")
+    z = res.x[:nz]
+    resid = (gr - Ar @ z) + 1j * (gi - Ai @ z)
+    hi = min(np.abs(resid).sum(), res.fun / np.cos(np.pi / ndir))
+    if not np.any(np.asarray(theta)) and np.abs(gi).max() < 1e-12:
+        hi = min(hi, np.abs(resid.real).sum())  # real g: Re of c is a real extension
+    return res.fun, hi, res.status
+
+
+def orbit_rows(L, fix0=False):
+    """One (u, a) per orbit of the axis permutations S_4, which are symmetries
+    for theta = 0 and for a diagonal twist (t, t, t, t); with fix0, of the
+    permutations of axes 1-3 only, which are symmetries for (t, 0, 0, 0).
+    Rows in one orbit agree up to sign, so the maximum over these rows is
+    s_L on the torus."""
+    perms = [pi for pi in itertools.permutations(range(4)) if not fix0 or pi[0] == 0]
+    seen, reps = set(), []
+    for u in itertools.product(range(L), repeat=4):
+        for ia, (mu, nu) in enumerate(PLAQ):
+            key = min((tuple(u[q] for q in pi), tuple(sorted((pi.index(mu), pi.index(nu)))))
+                      for pi in perms)
+            if key not in seen:
+                seen.add(key)
+                reps.append((((u[0] * L + u[1]) * L + u[2]) * L + u[3], ia))
+    return reps
+
+
+def twisted_report(L, m, n0, theta, rows, ndir=32):
+    """Yield (u, a, lo, hi, status, plain complex l1 of the row) for the given rows."""
+    H = kernel_H(L, m, n0, 1, theta)
+    Dm = twisted_bianchi_matrix(n0, theta)
+    for u, a in rows:
+        g = twisted_row(H[u, :, :, :, :, a, :], n0, theta)
+        lo, hi, st = exact_norm_complex(g, n0, theta, ndir, Dm)
+        yield u, a, lo, hi, st, np.abs(g).sum()
+
+
+if __name__ == "__main__" and sys.argv[1:2] == ["twist"]:
+    import time
+    # usage: twist L n0 theta_spec [ndir [rows=u:a,...]]; theta_spec 'diag:<t>' = (t,t,t,t), 'x:<t>' = (t,0,0,0)
+    L, n0 = int(sys.argv[2]), int(sys.argv[3])
+    kind, val = sys.argv[4].split(":")
+    t = {"0": 0.0, "pi/4": np.pi / 4, "pi/2": np.pi / 2, "pi": np.pi}[val]
+    theta = (t, t, t, t) if kind == "diag" else (t, 0.0, 0.0, 0.0)
+    ndir = int(sys.argv[5]) if len(sys.argv) > 5 else 32
+    corner, origin = L**4 - 1, 0
+    rows = [(corner, 0), (origin, 0)]
+    if L == 2:
+        rows.append((5, 2))
+    if L == 3:
+        rows.append((40, 0))
+    if len(sys.argv) > 6:  # rows=u:a,u:a  or  rows=orbits
+        spec = sys.argv[6][5:]
+        if spec == "orbits":
+            rows = orbit_rows(L, fix0=(kind == "x"))
+        elif spec == "all":
+            rows = [(u, a) for u in range(L**4) for a in range(6)]
+        else:
+            rows = [tuple(map(int, r.split(":"))) for r in spec.split(",")]
+    best = 0.0
+    t0 = time.time()
+    for u, a, lo, hi, st, l1 in twisted_report(L, 1, n0, theta, rows, ndir):
+        print(f"L={L} m=1 n0={n0} theta={kind}:{val} ndir={ndir} row(u={u},a={a}): "
+              f"s in [{lo:.4f}, {hi:.4f}] status={st} plain_l1={l1:.4f} t={time.time()-t0:.0f}s",
+              flush=True)
+        best = max(best, lo)
+    print(f"L={L} n0={n0} theta={kind}:{val}: max over {len(rows)} rows >= {best:.4f}", flush=True)
+
+
+if __name__ == "__main__" and sys.argv[1:2] == ["twistcheck"]:
+    # T53 consistency checks (L = 2, m = 1, n0 = 4).
+    L, n0 = 2, 4
+    N = n0**4
+    H0 = kernel_H(L, 1, n0)
+    H2 = kernel_H(L, 1, n0, 1, 2 * np.pi)
+    G = kernel(L, 1, n0).real
+    ix = (-np.arange(n0)) % n0
+    worst_old, worst_2pi = 0.0, 0.0
+    for u, a in [(15, 0), (0, 3), (7, 5)]:
+        g_old = np.moveaxis(G[u, :, :, :, :, a, :], -1, 0)[:, ix][:, :, ix][:, :, :, ix][:, :, :, :, ix].reshape(-1)
+        g0 = twisted_row(H0[u, :, :, :, :, a, :], n0, 0.0)
+        g2 = twisted_row(H2[u, :, :, :, :, a, :], n0, 2 * np.pi)
+        worst_old = max(worst_old, np.abs(g_old - g0).max())
+        worst_2pi = max(worst_2pi, np.abs(g0 - g2).max())
+    print(f"theta=0 row equals T27 reindexed row: max diff {worst_old:.1e}")
+    print(f"theta=2pi row equals theta=0 row: max diff {worst_2pi:.1e}")
+    print(f"D at 2pi equals D at 0: {abs(twisted_bianchi_matrix(n0, 2 * np.pi) - bianchi_matrix(n0)).max():.1e}")
+    th = np.array([np.pi / 4] * 4)
+    H = kernel_H(L, 1, n0, 1, th)
+    Y = np.indices((n0,) * 4)
+    rng = np.random.default_rng(1)
+    worst = 0.0
+    for kk in [(0, 0, 0, 0), (1, 2, 3, 0), (3, 3, 1, 2)]:
+        K = (2 * np.pi * np.array(kk) + th) / n0
+        phi = rng.normal(size=6) + 1j * rng.normal(size=6)
+        Phi = (phi[:, None] * np.exp(1j * np.tensordot(K, Y, axes=1)).reshape(1, -1)).reshape(-1)
+        for u, a in [(15, 0), (3, 4)]:
+            g = twisted_row(H[u, :, :, :, :, a, :], n0, th)
+            worst = max(worst, abs(g @ Phi - H[(u,) + kk + (a,)] @ phi))
+    print(f"twisted row reproduces the multiplier on twisted plane waves: max diff {worst:.1e}")
+    D = twisted_bianchi_matrix(n0, th)
+    c = rng.normal(size=(4,) + (n0,) * 4) + 1j * rng.normal(size=(4,) + (n0,) * 4)
+
+    def tshift(f, mu):
+        fs = np.roll(f, -1, axis=mu)
+        return np.where(Y[mu] == n0 - 1, np.exp(1j * th[mu]) * fs, fs)
+
+    curl = np.stack([tshift(c[nu], mu) - c[nu] - (tshift(c[mu], nu) - c[mu]) for mu, nu in PLAQ]).reshape(-1)
+    print(f"D_theta annihilates twisted curls: {abs(D @ curl).max():.1e}")
+    print(f"dim ker D_theta = {6 * N - np.linalg.matrix_rank(D.toarray())}, dim exact = 3 n0^4 = {3 * N}")

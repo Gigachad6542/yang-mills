@@ -105,7 +105,9 @@ recomputed with the exact-flux LP of note 35.
 
 Hence on E_0, s_L^{NA} <= s_L^{ab}(1 + Cε_0) + Cε_0, with the weighted form
 of note 35. For L >= 4 the computed rows give about 0.88 including the
-observed m-growth, but they are lower bounds for s_L^{ab}, so the chain
+observed m-growth [T53: for L = 4 a larger row, 0.881 at m = 1, n0 = 6, gives
+about 0.97-1.01 with the m-growth; only L >= 5 stays below 1; in twisted
+sectors s_L^{ab} must be the maximum over sectors (note 35 §5)], but they are lower bounds for s_L^{ab}, so the chain
 lemma's condition s_L < 1 - η for small ε_0 is suggested, not established.
 [Audit 2026-10-09, T82.]
 
@@ -174,7 +176,9 @@ s_L, Theorem 3 of note 34 would apply for L >= 4 if the computed rows
 (lower bounds for s_L) gave s_L itself. For example:
 
 - L = 5: s ≈ 0.6 including the m-growth; with η = 0.3, ρ = 0.7/0.6 ≈ 1.17;
-- L = 4: s ≈ 0.85; with η = 0.1, ρ ≈ 1.06.
+- L = 4: s ≈ 0.85; with η = 0.1, ρ ≈ 1.06. [T53: superseded; the largest
+  L = 4 row found is 0.881 at m = 1 (note 35 §5), about 0.97-1.01 with the
+  m-growth, so ρ > 1 is not suggested for L = 4.]
 
 The abelian (PA) was already proved, without these inputs, in note 26
 Prop. 2. The point of this section is that the non-abelian route of note 34
