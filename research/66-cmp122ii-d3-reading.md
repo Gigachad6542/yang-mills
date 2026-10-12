@@ -237,7 +237,15 @@ R = id.
     correct count for that expansion's activities, but it is not the gas of
     Proposition 2 at R = id.
 - Status of (H4a) at d = 3, R = id: **conditional reduction** (domain weights),
-  with (G1), (G2) open.
+  with (G1), (G2) open. [Update, T84 (note 68): (G2) is proved at R = id
+  (Prop. 68.1, Cor. 68.2: T_k(Y)1 <= exp(-κ_1 d_k(Y) - c_* p_0²(g_k)) for every
+  κ_1, from the printed geometry of pp. 380-387 and this note's R = id
+  reading), under the single exponent condition 2p_0 > (d+2)r; the merge
+  condition p_0 > (d+1)r of §3 is sufficient but not needed. (G1) is reduced
+  (note 68 §3-§5: the gas, KP with a = ½κd + 1, and the activity bound
+  C_q g_k^q e^{-κ d_k}) to three readings not printed in II: (H-form), (H-C),
+  and (1.79) for the unprocessed T_k. CMP 122 II (1.85) prints γ_0 A_1² where
+  (1.79), (1.82) and p. 381 use ½γ_0 A_1².]
 
 ### Q2. Are inputs (W), (E), (D) of note 65 §5 statements of CMP 122 II at d = 3, R = id?
 

@@ -328,7 +328,11 @@ T_k(Y)1 <= exp(-2p_0(g_k)), linear in p_0, not the activity (1.97); (H4a) is a
 **conditional reduction** with two named gaps: (G1) no polymer representation
 of the large-field-domain gas at R = identity is written in CMP 122 II, and
 (G2) the decay -κ_1 d_k(X) in (1.89) for arbitrary regions is asserted on
-p. 387, not proved.] (H4b): Lemma 65.3 (proved given (D))
+p. 387, not proved. Update, T84 (note 68): (G2) is proved at R = id
+(Prop. 68.1), and (G1) is reduced to the readings (H-form), (H-C) and (1.79)
+for the unprocessed T_k; given them, Thm 68.5 gives |w(Γ)| <= C_q g_k^q
+e^{-κ d_k(Γ)} for every polymer containing a large-field domain, with KP for
+a = ½κd + 1.] (H4b): Lemma 65.3 (proved given (D))
 gives that a persisting large-field domain has radius O(M R_j) j-cells;
 Prop. 65.4 (target, heuristic) suggests a per-point large-field probability
 <= C_q g_j^q.
@@ -1323,7 +1327,10 @@ log β_N ~ N log L is not dominated by p²(g_k) for fixed ε_0, so the assertion
 be read for the regions created at the current scale; Lemma 6b.2 had the same
 point. Not examined here.)
 
-(LF-act) *Large-field activity hypothesis (persistence).* Fix r_* ≥ 2 and call two
+(LF-act) [T84: at the level of note 68 this is Thm 68.5, for touching-connected
+polymers of scale-k M-cubes, conditional on (H-form), (H-C) and (1.79) for the
+unprocessed T_k; the coarse-graining to r_*-connected polymers is not done.]
+*Large-field activity hypothesis (persistence).* Fix r_* ≥ 2 and call two
 plaquettes r_*-linked if their centres are at Chebyshev distance ≤ r_*. Polymers Z
 are r_*-connected sets of blocks; d(Z) is the minimal total length of a spanning tree
 of the r_*-link graph, link length max(1, distance). The large-field plaquette set

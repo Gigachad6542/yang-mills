@@ -143,6 +143,9 @@ CMP 122 II, after (1.89) (printed pp. 388-390).
 - "The next step is a construction of an exponentiated cluster expansion
   for the expression in the curly bracket in (1.72). The first operation is
   the Mayer expansion of the exponential, the same as in (7.1) [I]."
+- [T84, note 68 §4: at d = 3 with R = identity the KP check below is replaced
+  by the KP check of the large-field gas (Thm 68.4: a(Γ) = ½κd_k(Γ) + 1,
+  touching connectivity, c_d = ln(26e) = 4.26).]
 - [T72, note 66 §4 Q1, Q3: (1.90)-(1.99) expand the curly bracket of (1.72),
   the sum over the R-operation's first-class components; they are vacuous at
   R = identity, the constant c_1 = α_1^{1/3} for polymers touching a

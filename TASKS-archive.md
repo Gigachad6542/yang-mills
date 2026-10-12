@@ -934,6 +934,13 @@ one-line verdict: "no use of reality found", or the exact place where it is
 used. Commit `[T55][fix]` plus one PROGRESS line.
 Verdict (lead review): accepted (p. 295 checked by the lead on the image: the only reality statements are after (5.29), (5.30)). Note 42 §4: in CMP 109 §§3-5, g_k enters only through P^{(k)} (3.1) and B' (3.2); every estimate uses only the size of B'; the counterterm cancellation (4.38)-(4.45) and the β extraction (5.1)-(5.44) are identities plus size bounds; no use of reality found.
 
+### T84 [proof] — **completed 2026-10-12** (Sonnet worker, one session-limit stop; lead-reviewed); posted 2026-10-11 by the lead: the gaps (G1), (G2) of (H4a) at d = 3 (note 66 §4 Q1)
+Scope: a new note `research/68-large-field-gas-d3.md`, plus `research/scripts/t84_*.py`.
+Note 66 found that at d = 3 with R = identity CMP 122 II gives each persisting large-field domain Y the weight T_k(Y)1 <= exp(-2p_0(g_k) - κ_k(Y)) ((1.89), inductive bookkeeping (1.80)-(1.88), which survives with three changes), but (G1) CMP 122 II writes no polymer representation of the large-field-domain gas at R = identity (only the R-operation output (1.103)-(1.104)), and (G2) the decay -κ_1 d_k(X) added to (1.89) for arbitrary regions is asserted on p. 387, not proved.
+(1) Write the large-field-domain gas at R = identity as a polymer system: domains Y with weights from (1.89), interacting through the small-field expansion (CMP 119 (3.44)-(3.47), note 65) and through hard-core/overlap constraints, and state the KP condition of note 49 §6 (weight a(X) = ½κd(X) + 1) that it needs. (2) Prove (G2) from (1.80) at R = identity: κ_k(Y) >= κ_1 d_k(Y) for every domain (the creation budget γ_0 A_1² p_0²(d' + 1) of (1.85) against the R^{d+1} losses), with the exponent conditions of note 66 §3. (3) Conclude the bound |activity| <= C_q g_k^q e^{-κ d(X)} that note 61 Lemma 6b.2 / §6e assume, or name the step that fails.
+Done when: (H4a) at d = 3 is proved from CMP 122 II's printed inputs (1.79)-(1.89), CMP 119 Sect. 3 and note 49, or a `failed-attempt` names the step.
+Verdict (lead review): accepted (Prop. 68.1 induction and Thm 68.4 KP steps checked; script re-run, identical). Note 68: (G2) proved at R = id (surplus κ - Φ carried exactly; κ_k >= Φ + λD + c_*P²; only 2p_0 > (d+2)r); (G1) reduced to (H-form), (H-C), (1.79) for unprocessed T_k; Thm 68.5 gives |w(Γ)| <= C_q g_k^q e^{-κd_k} for large-field polymers, KP with a = ½κd + 1. Follow-up: T85 (the three readings).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

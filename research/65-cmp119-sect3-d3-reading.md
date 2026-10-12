@@ -511,7 +511,9 @@ persistence from CMP 122 II, unchecked; (E) from (2.49)-(2.50); (D) read off
   R^{d+1}; the polynomial in Prop. 65.4 then has degree (d+1)r + 1, still
   below 2p_0. (W) is CMP 122 II pp. 380-381 with (1.79), (1.85), persisting by
   (1.80), (1.89) with the weight exp(-2p_0(g)), linear in p_0; (D) is (1.76),
-  m_0 = 10.]
+  m_0 = 10. T84 (note 68 Cor. 68.2): at R = id the quadratic weight is
+  recovered, T_k(Y)1 <= exp(-κ_1 d_k(Y) - c_* p_0²(g_k)), with the entropy
+  absorbed.]
 - **(D) domain growth.** Z_{k+1} ⊂ (Z_k')^{~m_0} ∪ (new seeds), m_0 a fixed
   number of layers of LMR_{k+1}-cubes (read off (3.2), (3.5), (3.20); the
   value does not matter).

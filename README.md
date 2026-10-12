@@ -211,7 +211,11 @@ must be controlled polymer by polymer.
   R-operation and is vacuous at d = 3. (H4a) is a conditional reduction with
   two named gaps: no polymer representation of the large-field gas at
   R = identity is written (G1), and the decay of (1.89) for arbitrary regions
-  is asserted, not proved (G2).
+  is asserted, not proved (G2). Note 68 (T84) proves (G2) at R = identity
+  from the printed induction (the creation surplus is carried exactly; one
+  exponent condition, 2p_0 > 5r) and reduces (G1) to three readings of
+  CMP 122 that II does not print; given them, every large-field polymer has
+  activity <= C_q g^q e^{-κd} and the KP condition holds.
 - (L_s), reduced in note 61 §6b (Lemma 6b.1, proved) to three inputs:
   - (I-L) locality of the one-step defect D_N. Its classical part is local
     through CMP 102b (190) (proof omitted by Balaban); its sixth-order
@@ -341,6 +345,7 @@ reading.
 - `research/65-cmp119-sect3-d3-reading.md` -- CMP 119 Sect. 3 at d = 3 with R = identity, from the page images: four changes, no large-field activity bound; corrects note 61 §6a (T71)
 - `research/66-cmp122ii-d3-reading.md` -- CMP 122 II (1.79)-(1.99) at d = 3 with R = identity, from the page images: domain factors survive, (1.90)-(1.99) are the R-operation's expansion; (H4a) with gaps G1, G2 (T72)
 - `research/67-fibre-equipartition.md` -- (EQ') is false; the Z-local relative bound (R) fails in the abelian Gaussian model; the corrected form with an exponentially decaying tail (T80)
+- `research/68-large-field-gas-d3.md` -- The large-field gas at d = 3 with R = identity: (G2) proved, (G1) reduced to three readings, activity <= C_q g^q e^{-κd} (T84)
 - `research/62-mc-4d-action-memory.md` -- Monte Carlo, 4D: Wilson vs Symanzik at matched terminal P (inconclusive at N <= 2)
 - `research/60-literature-check-2026-10.md` -- Literature check, October 2026: M1-3D/M1-4D still open in print
 - `research/51-mixed-norm-compatibility.md` -- Mixed-norm compatibility: Balaban's sup-norm activities in the form norm

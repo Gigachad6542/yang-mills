@@ -1,0 +1,46 @@
+PART A. Prop. 68.1: (CC)  c_* P_m^2 >= C_c(lambda) R_m^(d+2) for all m <= K.
+  With R_m <= L x_m^r, P_m = x_m^p0, x_m >= x_K, it holds once x_K^(2 p0 - (d+2) r) >= Lambda_1 = C_c L^(d+2)/c_*.
+  The merge step needs c_* P^2 >= 2 d c_E M^d R^(d+1), which follows from (CC) because C_S = 3*126^d >= 2d.
+  sample constants: d = 3, L = 13, c_E M^d = 1.0, c_0 = 0.25, c_* = 2.2777e-05, C_S = 6001128, C_V = 72013548
+  C_S >= 2d: True;  (d+2)r/2 < (d+1)r for r = 1..4: True
+| lambda | r | p_0 | 2p_0 - (d+2)r | Lambda_1 | x_K threshold | g^2 = e^-x_K |
+|---|---|---|---|---|---|---|
+| 0 | 2 | 10 | 10 | 9.783e+16 | 50.01 | 1.91e-22 |
+| 0 | 2 | 11 | 12 | 9.783e+16 | 26.05 | 4.84e-12 |
+| 0 | 3 | 15 | 15 | 9.783e+16 | 13.57 | 1.27e-06 |
+| 0 | 2 | 5 | 0 | 9.783e+16 | no threshold (a <= 0) | - |
+| 10 | 2 | 10 | 10 | 1.184e+19 | 80.78 | 8.24e-36 |
+| 10 | 2 | 11 | 12 | 1.184e+19 | 38.85 | 1.34e-17 |
+| 10 | 3 | 15 | 15 | 1.184e+19 | 18.69 | 7.66e-09 |
+| 10 | 2 | 5 | 0 | 1.184e+19 | no threshold (a <= 0) | - |
+| 100 | 2 | 10 | 10 | 1.175e+20 | 101.62 | 7.33e-45 |
+| 100 | 2 | 11 | 12 | 1.175e+20 | 47.04 | 3.71e-21 |
+| 100 | 3 | 15 | 15 | 1.175e+20 | 21.78 | 3.49e-10 |
+| 100 | 2 | 5 | 0 | 1.175e+20 | no threshold (a <= 0) | - |
+  row (r, p_0) = (2, 5) is not CMP 119's p_0 >= 5r: it has 2p_0 = (d+2)r (equality), where (CC) is a constant inequality.
+  CMP 119 p. 246: p_0 >= 5r, e.g. (r, p_0) = (2, 10), (3, 15): margin 2p_0 - 5r = 5r.
+
+PART B. Random histories on the toy geometry (S = dilate(coarsen(., 2), 1), d' = #cells, R = 1, K = 10).
+  Recursion: (1.83)/(1.85) as written in II; check s = kappa - Phi >= lambda D + c_* P_m^2 (Prop. 68.1) for every component.
+  Sample: x_K = 3, p_0 = 5 (so P_m^2 = x_m^10), e = 1, c_0 = 1/4 scaled by t, lambda = 10, c_* = c_0 t/(2*125).
+  t = 1: 150 histories, components checked {'old': 626, 'new': 476, 'merge': 553}; min normalized slack = 475.7143 (new (m=10)) -> invariant HOLDS
+  observed toy constants: Phi/(d'+1) <= 8.93, D/(d'+1) <= 1.00
+  toy analogue of (CC): c_*(t) P_K^2 >= C_c^toy = e + C_Phi^toy + lambda C_V^toy = 19.92  =>  sufficient t >= 0.337
+  empirical threshold (bisection, 150 histories): invariant holds for t >= 0.0467; sufficient t from the proof's constants: 0.337 -> proof's condition is sufficient (consistent)
+  below the threshold, the first failure:
+| t | min normalized slack | at |
+|---|---|---|
+| 1.0000 | 475.7143 | new (m=10) |
+| 0.0700 | 166.4864 | new (m=10) |
+| 0.0233 | -498.5409 | new (m=10) |
+| 0.0047 | -5983.7860 | new (m=10) |
+  (the failing cases are components with d' large relative to the budget: the creation/merge conditions (CC) of Prop. 68.1.)
+PART B2. Fact (a), s_{m+1}(S Z) = s_m(Z): max relative error over one seed region followed for 9 steps = 0.00e+00
+
+PART C. Lemma 65.2: sum_{s>=0} L^{ds} exp(-c (lam + s ln L)^q) <= C_0 exp(-c lam^q), C_0 = sum_s exp(s d ln L - c (s ln L)^q).
+  For c = c_* (sample, A_0 = 1), q = 2 p_0, d = 3, L = 13 (C_0 - 1 is the s >= 1 contribution):
+  p_0 = 10, q = 20: C_0 = 1.0000000000 (C_0 - 1 = 0.000e+00), lemma holds at lambda = 1, 2, 3, 5: [True, True, True, True]
+  p_0 = 15, q = 30: C_0 = 1.0000000000 (C_0 - 1 = 0.000e+00), lemma holds at lambda = 1, 2, 3, 5: [True, True, True, True]
+  reproduction of note 65 Part E: (d, L, c, q) = (3, 2, 0.1, 4): C_0 = 143.118 (note 65 prints 143.118)
+  With the sample constants of Part A the factor L^{ds} is beaten at s = 1 already (c_* (ln L)^q >> d ln L), so only s = 0 survives:
+  the sum over creation scales is dominated by the current scale, as in the lemma.

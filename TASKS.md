@@ -25,11 +25,10 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T84 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-11; posted 2026-10-11 by the lead: the gaps (G1), (G2) of (H4a) at d = 3 (note 66 §4 Q1)
-Scope: a new note `research/68-large-field-gas-d3.md`, plus `research/scripts/t84_*.py`.
-Note 66 found that at d = 3 with R = identity CMP 122 II gives each persisting large-field domain Y the weight T_k(Y)1 <= exp(-2p_0(g_k) - κ_k(Y)) ((1.89), inductive bookkeeping (1.80)-(1.88), which survives with three changes), but (G1) CMP 122 II writes no polymer representation of the large-field-domain gas at R = identity (only the R-operation output (1.103)-(1.104)), and (G2) the decay -κ_1 d_k(X) added to (1.89) for arbitrary regions is asserted on p. 387, not proved.
-(1) Write the large-field-domain gas at R = identity as a polymer system: domains Y with weights from (1.89), interacting through the small-field expansion (CMP 119 (3.44)-(3.47), note 65) and through hard-core/overlap constraints, and state the KP condition of note 49 §6 (weight a(X) = ½κd(X) + 1) that it needs. (2) Prove (G2) from (1.80) at R = identity: κ_k(Y) >= κ_1 d_k(Y) for every domain (the creation budget γ_0 A_1² p_0²(d' + 1) of (1.85) against the R^{d+1} losses), with the exponent conditions of note 66 §3. (3) Conclude the bound |activity| <= C_q g_k^q e^{-κ d(X)} that note 61 Lemma 6b.2 / §6e assume, or name the step that fails.
-Done when: (H4a) at d = 3 is proved from CMP 122 II's printed inputs (1.79)-(1.89), CMP 119 Sect. 3 and note 49, or a `failed-attempt` names the step.
+### T85 [fix] — open, posted 2026-10-12 by the lead: the three readings behind note 68 Thm 68.5 ((H4a) at d = 3)
+Scope: a new §7 of `research/68-large-field-gas-d3.md` only.
+Note 68 proved (G2) and reduced (G1) to three statements that CMP 122 II does not print at R = identity: (H-form) the R = id density has the form (1.104) with R' = 0, Y_i = all components of Z_k, and a factor e^{A'_k} independent of the large-field configuration; (H-C) the summed coupling bound, uniform in the Y_i (II proves (1.99) with the Y_i fixed); (1.79) for the unprocessed T_k (stated "for all large field regions", pp. 383-384, derived for T'_k). From the page images of CMP 122 II pp. 355-392 (pp. 355-375 not yet read) and CMP 122 I where cited, say for each whether it holds at d = 3 with R = identity, with page and equation numbers, or what is missing. Also the thickness of Z~ versus the footprint S(Y) (note 68 §6 "Not checked").
+Done when: each of the three is confirmed, corrected, or shown to need a new argument (named). Commit `[T85][fix]`.
 
 ### T83 [proof] — open, posted 2026-10-10 by the lead: the inputs (P) and (L) of note 61 Theorem 6d.1
 Scope: `research/61-3d-assembly-conditional.md`, a new §6d.6 only, plus `research/scripts/t83_*.py`.
