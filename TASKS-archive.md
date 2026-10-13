@@ -954,6 +954,12 @@ Done when: the table is in note 35 and states whether the claim of note 36
 holds. Commit `[T53][computation]` plus one PROGRESS line.
 Verdict (lead review): accepted (twistcheck re-run: all identities to 1e-15; the L = 4, n0 = 6, θ = 0 row re-run: 0.8807). Note 35 §5: diagonal twists lower the largest rows, one-direction twists raise them by < 0.1% at n0 = 6, gaps shrink from n0 = 4 to 6 (note 36's claim holds up to a small wrap-around amount; rate not confirmed). Side finding: for L >= 3 the far-corner rows are not the largest; s_L < 1 is suggested only for L >= 5. Lead added [T53] markers in notes 34 and 36.
 
+### T85 [fix] — **completed 2026-10-12** (lead-reviewed); worker: the session "Project Euclid paper downloads" (worker; branch t85-claude); posted 2026-10-12 by the lead: the three readings behind note 68 Thm 68.5 ((H4a) at d = 3)
+Scope: a new §7 of `research/68-large-field-gas-d3.md` only.
+Note 68 proved (G2) and reduced (G1) to three statements that CMP 122 II does not print at R = identity: (H-form) the R = id density has the form (1.104) with R' = 0, Y_i = all components of Z_k, and a factor e^{A'_k} independent of the large-field configuration; (H-C) the summed coupling bound, uniform in the Y_i (II proves (1.99) with the Y_i fixed); (1.79) for the unprocessed T_k (stated "for all large field regions", pp. 383-384, derived for T'_k). From the page images of CMP 122 II pp. 355-392 (pp. 355-375 not yet read) and CMP 122 I where cited, say for each whether it holds at d = 3 with R = identity, with page and equation numbers, or what is missing. Also the thickness of Z~ versus the footprint S(Y) (note 68 §6 "Not checked").
+Done when: each of the three is confirmed, corrected, or shown to need a new argument (named). Commit `[T85][fix]`.
+Verdict (lead review): accepted (II p. 391 checked by the lead: (1.104) is the R-operation output with normalized T'_k and fixed Y_i). Note 68 §7: footprint Y~ (c_+ = 3^d); (H-C) holds from CMP 119 (2.40)-(2.42); (1.79) for unprocessed T_k has II's own status up to (Ov) (CMP 86 Sect. 3.C, not in sources/); (H-form) not available as stated, replaced by a joint hard-core gas plus (Dec), a new argument. Lead marked note 68 §3, §5, §6, the verdict, note 61 (LF-act), README. Follow-up: T86 (Dec).
+
 ## Proposals
 (Workers: at most 5 lines each.)
 - Lead, 2026-10-02: the lead's notes 21-30 have had only self-checks, which caught three errors

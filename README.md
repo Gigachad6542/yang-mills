@@ -213,9 +213,12 @@ must be controlled polymer by polymer.
   R = identity is written (G1), and the decay of (1.89) for arbitrary regions
   is asserted, not proved (G2). Note 68 (T84) proves (G2) at R = identity
   from the printed induction (the creation surplus is carried exactly; one
-  exponent condition, 2p_0 > 5r) and reduces (G1) to three readings of
-  CMP 122 that II does not print; given them, every large-field polymer has
-  activity <= C_q g^q e^{-κd} and the KP condition holds.
+  exponent condition, 2p_0 > 5r) and reduces (G1) to statements that II does
+  not print; T85 (note 68 §7, page images) confirmed two of them and showed
+  that the third needs a new argument (Dec), an R = identity version of II's
+  decoupling expansion (T86), plus the overlap step (Ov) that all of
+  Balaban's large-field bounds share. Given these, every large-field polymer
+  has activity <= C_q g^q e^{-κd} and the KP condition holds.
 - (L_s), reduced in note 61 §6b (Lemma 6b.1, proved) to three inputs:
   - (I-L) locality of the one-step defect D_N. Its classical part is local
     through CMP 102b (190) (proof omitted by Balaban); its sixth-order

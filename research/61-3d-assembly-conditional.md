@@ -1327,9 +1327,12 @@ log β_N ~ N log L is not dominated by p²(g_k) for fixed ε_0, so the assertion
 be read for the regions created at the current scale; Lemma 6b.2 had the same
 point. Not examined here.)
 
-(LF-act) [T84: at the level of note 68 this is Thm 68.5, for touching-connected
-polymers of scale-k M-cubes, conditional on (H-form), (H-C) and (1.79) for the
-unprocessed T_k; the coarse-graining to r_*-connected polymers is not done.]
+(LF-act) [T84, T85: at the level of note 68 this is Thm 68.5, for
+touching-connected polymers of scale-k M-cubes; after T85 (note 68 §7) it rests
+on (Dec), an R = id decoupling expansion (new argument, T86), the shared
+overlap step (Ov) of CMP 86 Sect. 3.C, and the joint hard-core gas form; (H-C)
+and (1.79) for the unprocessed T_k are confirmed. The coarse-graining to
+r_*-connected polymers is not done.]
 *Large-field activity hypothesis (persistence).* Fix r_* ≥ 2 and call two
 plaquettes r_*-linked if their centres are at Chebyshev distance ≤ r_*. Polymers Z
 are r_*-connected sets of blocks; d(Z) is the minimal total length of a spanning tree

@@ -25,10 +25,10 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T85 [fix] — offered 2026-10-12 to the session "Project Euclid paper downloads" (worker; branch t85-claude); posted 2026-10-12 by the lead: the three readings behind note 68 Thm 68.5 ((H4a) at d = 3)
-Scope: a new §7 of `research/68-large-field-gas-d3.md` only.
-Note 68 proved (G2) and reduced (G1) to three statements that CMP 122 II does not print at R = identity: (H-form) the R = id density has the form (1.104) with R' = 0, Y_i = all components of Z_k, and a factor e^{A'_k} independent of the large-field configuration; (H-C) the summed coupling bound, uniform in the Y_i (II proves (1.99) with the Y_i fixed); (1.79) for the unprocessed T_k (stated "for all large field regions", pp. 383-384, derived for T'_k). From the page images of CMP 122 II pp. 355-392 (pp. 355-375 not yet read) and CMP 122 I where cited, say for each whether it holds at d = 3 with R = identity, with page and equation numbers, or what is missing. Also the thickness of Z~ versus the footprint S(Y) (note 68 §6 "Not checked").
-Done when: each of the three is confirmed, corrected, or shown to need a new argument (named). Commit `[T85][fix]`.
+### T86 [proof] — open, posted 2026-10-12 by the lead: (Dec), the decoupling of the large-field gas at d = 3 with R = identity (note 68 §7)
+Scope: a new §8 of `research/68-large-field-gas-d3.md`, plus `research/scripts/t86_*.py` if useful.
+T85 found that the gas form (H-form) of note 68 is not in CMP 122 II at R = identity: II's (1.104) holds because the R-operation rebuilds Z ((1.33), p. 365; (1.37)) and the T'_k are normalized ((1.102)-(1.103)). At R = id the density is CMP 119 (2.18)/(2.23) (pp. 257-258): T_k = Π T^{(j)} are integral operations acting on B-terms, and U_k, the E-terms and the vacuum constant depend on the large-field history. Write (Dec): an R = id version of II's decoupling expansion pp. 369-375 ((1.50)-(1.65)) that brings the density to the joint hard-core gas (H-form′) of note 68 §7 (E-polymers avoiding the footprints Y~, large-field weights W_Y normalized as in II (1.103), (1.73)-(1.75)), with the bounds that Thm 68.4 uses. Read II pp. 369-375 and CMP 119 pp. 257-263 from the page images; the PDFs are in sources/papers/ (offsets +354, +242).
+Done when: (Dec) is proved (then Thm 68.5 rests only on the shared step (Ov)), or a `failed-attempt` names the step.
 
 ### T83 [proof] — open, posted 2026-10-10 by the lead: the inputs (P) and (L) of note 61 Theorem 6d.1
 Scope: `research/61-3d-assembly-conditional.md`, a new §6d.6 only, plus `research/scripts/t83_*.py`.

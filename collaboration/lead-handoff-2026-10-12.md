@@ -45,9 +45,7 @@ Daniel started it; it downloaded the PDFs, wrote the correctness audit
 (`collaboration/claude-audit-2026-10-09.md`), and then worked as a worker
 under this lead: T71, T82, T55, all integrated. It reports by cross-session
 message, works in its own worktree/branch (`t<id>-claude`), does not push or
-edit TASKS/PROGRESS. **T85 was offered to it on 2026-10-12**; if it took it, its branch is
-`t85-claude` and the final commit body has its report (integrate from the
-branch). Its message channel is tied to the old lead session: if it
+edit TASKS/PROGRESS. It finished T85 on 2026-10-12 (integrated); it has no task now. Its message channel is tied to the old lead session: if it
 messages the old session, Daniel can forward, or check `git branch` for
 `t53-claude`. Remind it of lean mode (no multi-agent workflows) if needed.
 
@@ -79,8 +77,10 @@ messages the old session, Daniel can forward, or check `git branch` for
 
 ## Open queue (priority order, TASKS.md)
 
-1. **T85** [fix] — the three readings behind note 68 Thm 68.5 (CMP 122 II
-   pp. 355-392 page images). A reading: good for the second session or Sonnet.
+1. **T86** [proof] — (Dec), the R = identity decoupling of the large-field
+   gas (note 68 §7; T85 showed (H-form) is not in CMP 122 II at R = id).
+   After it, Thm 68.5 rests only on the overlap step (Ov) of CMP 86 Sect. 3.C
+   (CMP 86 is not in sources/).
 2. **T83** [proof] — (P) local primitive on the fibre Z = ker div ∩ ker w and
    (L) local closed lift (note 61 §6d). Sonnet.
 3. T79 (all-axes fibre transport, note 64 §8; now feeds only the SU(2)

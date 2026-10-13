@@ -1,5 +1,14 @@
 # Large-field gas at d = 3, R = identity: the decay in (1.89) and the polymer representation (T84)
 
+**Update (T85, §7; lead, 2026-10-12).** The three readings were checked on the page
+images: the footprint is Y~ (one layer, c_+ = 3^d), (H-C) holds from CMP 119
+(2.40)-(2.42), (1.79) for the unprocessed T_k has the status of II's own (1.79)
+up to the shared overlap step (Ov) of CMP 86 Sect. 3.C, and (H-form) is **not**
+available as stated: at R = id the density is CMP 119 (2.18)/(2.23), and the
+gas needs a joint hard-core form plus (Dec), an R = id version of II's
+decoupling expansion pp. 369-375, which is a **new argument** (T86). So
+Thm 68.5 rests on (Dec), (Ov) and the joint-gas form.
+
 **One-line verdict.** (G2) is proved here at R = id (conditional reduction on the
 printed geometry of II pp. 380-387 and the note 66 reading): for every λ,
 T_k(Y)1 <= exp(−λ|Y|_M − c_*p_0²(g_k)) once x_K is large, under the single
@@ -272,6 +281,10 @@ statement of II at R = id.
   (T3) d_k(A) <= c_g|A| (§2.2).
 - 𝒴: admissible large-field domains Y: connected unions of MR_k-cubes. Footprint
   Ŷ := S(Y) ⊃ Y (cover by LMR_{k+1}-cubes, ten layers); |Ŷ| <= c_+|Y|, c_+ := (21L)^d
+  [T85, §7 item 1: II and CMP 119 localize on components of Z~, one layer of
+  cubes; the footprint should be Ŷ = Y~, with c_+ = 3^d; S(Y) is the
+  persistence neighbourhood of (1.76)-(1.88). The proofs below go through
+  unchanged with the smaller c_+.]
   (the cover has at most L^d|Y| M-cubes, the ten layers multiply by 21^d; uses
   R_{k+1} <= R_k).
 - A *large-field configuration* 𝒴_0 is a finite set of pairwise non-touching
@@ -473,7 +486,9 @@ sup_{x>=x_*} e^{−c_*x^{2p_0}+qx/2} < ∞), because g_k² = e^{−x_k}. ∎
 | (H-C): uniform summed coupling bound | **open (reading)** | II proves (1.99) with Y_i fixed; uniformity in Y_i and the tree-counting are not written |
 | (1.79) for T_k at R = id | open (note 66 Q1) | II states "for all large field regions" (p. 383-384), derives it for T'_k |
 
-**Where it could fail.** No step was found to fail. The steps that are not
+**Where it could fail** [superseded in part by §7 (T85): (H-C) and (1.79) are
+confirmed up to (Ov); (H-form) fails as stated and is replaced by (H-form′)
+plus (Dec)]. No step was found to fail. The steps that are not
 established are exactly three: (H-form), (H-C), and (1.79) for the unprocessed
 T_k. In particular: (a) the *printed* (1.97)/(1.99) alone do not give the form
 |activity| <= C_qg^q e^{−κd} (the constant is α^{1/3}), but the form follows
@@ -521,9 +536,269 @@ proof's constants give the sufficient t >= 0.337; fact (a) holds to relative err
 5. II (1.85) prints γ_0A_1² for the creation weight where (1.79), (1.82) and p. 381
    use ½γ_0A_1²; the proofs use ½γ_0A_1².
 
-**Not checked.** Page images of II pp. 355-375 (definitions of Z~, Y_i, X_j; the
+**Not checked** [T85 read pp. 355-375 and the footprint question; see §7]. Page images of II pp. 355-375 (definitions of Z~, Y_i, X_j; the
 exact thickness of Z~ vs the footprint S(Y)); the (7.13) series of [I] and its
 tree-counting; the identification of the tree entropy c_e; the uniformity of
 the constants in (1.92)-(1.97) in the Y_i; whether e^{A'_k} is truly independent
 of the large-field configuration. The proofs use d' ≍ #cubes only through the
 printed (Gm-V), (Gm-S), (Gm-C), (Gm-M).
+
+## 7. The three readings and the footprint, from the page images (T85)
+
+Sources read for this section, all from page images:
+
+- CMP 122 II, printed pp. 355-392 (pp. 355-375 for the first time);
+- CMP 119 [III], pp. 245, 257-258 and 261-263;
+- CMP 102 (3D) [16], pp. 272-274.
+
+II's own reference list (p. 392) is [I] = CMP 109, [II] = CMP 116,
+[III] = CMP 119, [IV] = CMP 122 I. Its numbered references follow CMP 109's
+list, so [15] = CMP 102 (variational problem) and [16] = CMP 102 (3D UV
+stability). CMP 122 I is cited in the relevant passages only for the
+internals of the R-operation ((1.64)-(1.100) of [IV]); it was not reread.
+
+**What pp. 355-375 contain.**
+
+- pp. 356-369, (1.1)-(1.49): the R′-operation on one large-field region Z.
+  This covers the cancellation of the Wilson terms of numerator and
+  denominator, the new determining set B_k with {Z^(k)} on Z (1.33), the new
+  coupling 1/g_k² on Z (p. 365), and the new Wilson term −A(1/(g_k(·))², U_k)
+  assembled on pp. 365-366, giving (1.49).
+- pp. 369-375, (1.50)-(1.65): the decoupling of the old background field from
+  the new one, by expansions around the separated configuration U_{1,2}
+  (1.52)-(1.55). The localization expansions (6.9)-(6.10) of [I] are then
+  applied, with summation over domains Y_0, Y'_2, Y'_3, Y'_4 that contain a
+  component of Λ~. The remainders become boundary terms connected with
+  components of Z (p. 372).
+- pp. 376-379, (1.66)-(1.72): the decay factors, the relative size (1.67),
+  the bounds (1.68)-(1.69) on components of Z~, the two classes of components
+  (p. 378), T′_k (1.71) and R (1.72).
+
+Everything on pp. 356-375 is part of the R-operation and has no counterpart
+at R = id. The two exceptions are the mechanism of pp. 369-375 (see §7.2) and
+the localization conventions (§7.1).
+
+### 7.1 The footprint: Z~ is one layer; S(Y) is ten layers of coarser cubes
+
+- *Convention* (CMP 119 p. 245): the operation ~ adds one layer of the cubes
+  in terms of which the set is defined. II restates this for its local use
+  on p. 372 ("□_0 = □~5 ... defined here in terms of M-cubes").
+- *Localization in II and III.* Everything attached to a large-field region
+  is localized on components of Z~:
+  - the boundary terms of CMP 119 meet Z_j~ ((2.41), p. 261);
+  - II's final terms V(Y, U_k) live on domains Y with Y ∩ Z~ a union of
+    components of Z~, and satisfy (1.68)-(1.69) on a component of Z~
+    (p. 377);
+  - T′_k(X) contains V(X~, U_k) (1.71) and depends only on the variables in X
+    (p. 392);
+  - the R′-terms are split according to whether they meet Z_k~ ∪ ∪Y_i~
+    ((1.98)-(1.100), p. 390).
+- *S(Y)* (p. 384) is the cover of Y by LMR_{k+1}-cubes plus ten layers of
+  such cubes. It is the persistence neighbourhood: S(Z) is the next
+  large-field region when nothing new is created (p. 384), and (1.76) bounds
+  the next region by S of the old one plus the new regions. It is used in the
+  induction (1.80)-(1.88), and **it is not a localization domain**. Its thickness,
+  10 L M R_{k+1} in scale-k units, is 10L or 10 times the MR_k layer of Y~,
+  by (F3).
+
+**Correction to §3.** The footprint can be taken as **Ŷ := Y~**, one layer
+of MR_k-cubes. (H-loc) holds for it with the printed localization above.
+Lemma 68.3a's argument is unchanged: touching Y, Y′ give Y~ ∩ Y′ ≠ ∅, and
+components of Z_k whose footprints overlap simply lie in the same polymer,
+as in II, where a component of Z~ may contain several components of Z.
+The volume constant improves from c_+ = (21L)^d to
+
+    |Y~| <= 3^d |Y|,   c_+ = 3^d = 27 at d = 3,
+
+since each MR_k-cube and its one-layer neighbours are at most 3^d cubes. So
+the term (β_ν + ν)c_+ of λ = λ_3 + (β_ν + ν)c_+ (Thm 68.4) is (21L)³/27 times
+smaller: 7.5·10^5 times at L = 13. With Ŷ = S(Y), §3 asked more than II gives: a coupling domain of
+II need not contain the whole of S(Y). With Ŷ = Y~ it matches II p. 377 and
+the resummed form of CMP 119 p. 262 (X contains or misses each component).
+
+### 7.2 (H-form): not as stated; the R = id density has CMP 119's form
+
+**What II prints is R-specific.** In (1.104) (p. 391) the factor e^{A′_k}
+does not depend on the choice of second-class Y_i among the components of Z
+(p. 378). That holds only because R has rebuilt Z: new determining set
+(1.33), new coupling 1/g_k² on Z (p. 365), new Wilson term (1.37). T_k(Y_i)
+is then a multiplication operation ((1.102), p. 390; p. 392).
+
+**At R = id the density is CMP 119 (2.18)** (p. 257):
+
+    ρ_k = Σ_{{Ω_j},{Λ_j}} χ_k(Ω_k) T_k exp A_k,
+    A_k = −A(1/g_k², U_k) + E_k(U_k) + R_k(U_k) + B_k(U_k, A) − E_k   (2.23).
+
+Here:
+
+- T_k(X) = Π_j T^{(j)}(Z_{j+1} ∩ X) are **integral operations** over V_j and
+  the fluctuation fields A_j ((2.19)-(2.21), p. 258);
+- the B-terms depend on these A_j ((2.40)-(2.41), p. 261);
+- U_k, the E-terms (small-field region only) and the vacuum constant E_k
+  (p. 262) all depend on the history.
+
+So (H-form) is not available at R = id, for two reasons:
+
+- (a) W_Y = "T_k(Y)1 times characteristic functions" is not a multiplicative
+  weight: T_k(Y) acts on the B-terms, which depend on its integration
+  variables;
+- (b) e^{A′_k} independent of 𝒴_0 does not hold for this representation.
+  Moreover the add-and-subtract of
+  II p. 377 is not available: it needs the small-field terms E(X) on domains
+  meeting the large-field region. At R = id, U_k there is not regular in
+  the sense of the spaces Ũ_j^c(X, α̃_0, α̃_1) ((2.34)-(2.39) [III], p. 261),
+  which are the analyticity domains of those terms.
+
+**Corrected form (H-form′) and what it needs.**
+
+    ρ_k = Σ_{𝒴_0} Π_Y W_Y · exp( Σ_{X ∩ ∪Ŷ = ∅} E(X) + Σ_{X ∈ 𝒳(𝒴_0)} B′(X; 𝒴_X) ),
+    W_Y := T_k(Y)1 · (characteristic functions),
+
+with E(X) independent of 𝒴_0 and Ŷ = Y~. This then gives a **joint
+hard-core gas**: the Mayer polymers of the E-terms must avoid the footprints,
+and the large-field polymers are those of Definition 68.3. KP for the joint
+gas is the small-field KP of notes 49/61 plus the large-field part (68.4).
+Theorem 68.4 is therefore what the joint gas uses; the factor e^{A′_k} is
+not needed. Getting from (2.18) to (H-form′) takes:
+
+1. *Normalization of T_k(Y)*, as II does for T′_k in (1.103) (p. 391):
+   T_k(Y) exp(B) = (T_k(Y)1) · (T_k(Y)1)^{-1}T_k(Y) exp(B), followed by
+   Mayer expansion with normalized operations restricted to the Y inside each
+   activity. The bound |(T1)^{-1}T F| <= e^{3 sup|σ|} sup|F| ((1.73)-(1.75),
+   p. 380) uses only that the operation is positive for real (U, 0) with a
+   small first-order complex term. That holds for (2.21), whose Gaussian form
+   is positive (p. 383). **Transfers; not written for T_k.**
+2. *(Dec) an R = id decoupling expansion*: E(X, U_k) for X away from the
+   footprints made independent of 𝒴_0, with the remainders resummed as
+   boundary terms on domains meeting Y~. II pp. 369-375 do this inside R:
+   (1.50)-(1.58) separate U across ∂Ω~ into U_{1,2}, and the localization
+   expansions (6.9)-(6.10) of [I] send the remainders to domains meeting Λ~.
+   On this reading the construction does not use the change of determining
+   set on Z in an essential way, but **an R = id version is not written
+   anywhere**. This is
+   the new argument (H-form) needs. CMP 119 never needs it: it keeps the sum
+   over histories outside and does not build a gas.
+3. The vacuum constant E_k and the normalizations are local: their
+   history-dependent part is one-step small-field expressions (p. 262). It
+   goes into W_Y as O(log g_j^{-2})|Z_j|, exactly as II p. 380 does.
+
+**Verdict.** (H-form) as stated is **not available** at R = id: Balaban's
+representation does not have that form. (H-form′) with the
+joint gas is what is needed. It rests on item 1 (transfers) and on **(Dec),
+a new argument** (an R = id version of II pp. 369-375).
+
+### 7.3 (H-C): holds at R = id, from CMP 119 (2.42), not from II (1.99)
+
+At R = id the coupling terms are CMP 119's B-terms, not II's R′-output
+(1.98)-(1.99). Their published inductive bound is
+
+    |B^{(j)}(X, (U,J), A, {S_i ∩ X})| < B_0 exp(−κ d_j(X))    ((2.42), p. 261),
+
+on domains X ∈ D_j that meet Ω_j and Z_j~ ((2.41)). B_0 is a constant, not
+small (note 65), and d_j(X) is the full linear size. B_0 and κ are constants
+of the inductive assumption, so the bound is **uniform in the large-field
+configuration**. p. 262 prints the resummed alternative: domains contain or
+miss each component of Z_j, with the bound in d_j(X ∖ Z_j). That is §3's
+"X contains every footprint it meets", given as an admissible form of the
+inductive assumption.
+
+*(H-C) from (2.42).* ||f(X)|| <= B_0 e^{B_0} e^{−κ d_k(X)}. By (T2),
+n_out(X) <= c_t(d_k(X) + 1). Domains of linear size ℓ through a given cube
+number at most e^{c_e ℓ}, and X must meet Ŷ, which has at most |Ŷ| cubes.
+Hence
+
+    Σ_{X ∈ 𝒳(𝒴_0)} ||f(X)|| e^{ν n_out(X)} <= B_0 e^{B_0 + νc_t} Σ_Y |Ŷ| Σ_{ℓ>=0} e^{(c_e + νc_t − κ)ℓ},
+
+which is (H-C) with β_ν = O(B_0 e^{B_0}), for κ > c_e + νc_t. The terms
+B^{(j)}, j < k, of older scales are of two kinds:
+
+- those inside Y~ belong to W_Y, as V(X~) belongs to T′_k in II ((1.69),
+  p. 380);
+- those leaving Y~ start in Z_j~, and Z_j lies at least ten layers deeper
+  inside the large-field region with each step (CMP 122 I p. 177: each
+  renormalization step adds at least ten layers of MR-cubes; II p. 384:
+  S(Z) is the next region when nothing new is created). So they carry a
+  factor exp(−κ · 10(k − j)) or smaller and add a geometric series.
+
+II's "Y_i fixed" (p. 391) is not an obstruction: (H-C) is itself a
+fixed-configuration statement with configuration-independent constants.
+
+**Verdict.** (H-C) **holds at R = id** given CMP 119 (2.40)-(2.42) at d = 3,
+R = id (published input, read by note 65 with its five changes) and the tree
+counting (c_e), with the condition κ > c_e + νc_t on Balaban's κ (§4.2). The
+coupling constant is O(B_0), not O(α^{1/3}). Nothing in §4 needs it small
+(§4.3 (ii)).
+
+### 7.4 (1.79) for the unprocessed T_k: same status as II's own (1.79)
+
+**Derivation in II** (pp. 380-383, for T′_k). The bound on T′_k(X)1 has four
+parts:
+
+- (a) the (U, 0)-reduction (1.73)-(1.75);
+- (b) the old terms V(X~) via (1.69), plus vacuum energies and normalizations
+  (O(log g_j^{-2})|Z_j|), giving the entropy factor
+  Σ_j O(1)M^dR_j^{d+1}d′_j(Z_j);
+- (c) the large-field characteristic functions χ_j^c(P_j), χ_j^c(Q_j),
+  χ^{(j−1)c}(R_j), obtained "in the usual way, using Theorem 1 [15] and (71)
+  [16]" (p. 380). They give
+  exp(−½γ_0A_1²p_0²(g_j)(d′_j(Z_j^{(i)})+1) − 2p_0(g_j)) per component
+  (p. 381);
+- (d) the preparatory-step factors Π′ exp(−p_0(g_j)) (pp. 381-383); the A_j
+  integrals of (2.21) by positivity, giving exp O(1)|Z_j ∩ Ω_j|; and the
+  history sums exp O(1)(MR_j)^{-d}|Z_j|.
+
+**At R = id**, T_k(Y) = Π_j T^{(j)}(Z_{j+1} ∩ Y) ((2.20)-(2.21) [III]). Taking
+the parts in turn:
+
+- (a) holds (positivity of (2.21));
+- (b) holds with V(X~) replaced by the old-scale B-terms inside Y~, bounded by
+  (2.42) as B_0·O(1)|Z_j| per scale and absorbed into the same entropy factor;
+- (c) is unchanged. Its source [16] is the **3D paper itself**, whose
+  large-field argument ((66)-(71), pp. 273-274) is the unprocessed situation:
+  persisting large-field sets at all scales, no R-operation. Each large-field
+  plaquette p′ at scale j gets exp(−¼p²(g_j)) from the final action localized
+  to the four j-blocks around p′ ((71)). II turns such factors into the
+  per-component form with (d′_j + 1) on pp. 380-381, by covering the large
+  field set with MR_j-cubes. Each cover cube meets the set, and a connected
+  union of n cubes has d′ <= c_g n ((T3)). Only c_0 > 0 matters for §2;
+- (d): Π′ is absent at R = id, the R-specific characteristic functions are
+  not there, and the remaining factors are as printed.
+
+**Verdict.** (1.79) for the unprocessed T_k **holds with the same status as
+II's (1.79)**. That status is published input: II pp. 380-383 with the
+R-specific items dropped, plus [16] (66)-(71) and CMP 119 (2.20)-(2.21),
+(2.42). The one step neither II nor [16] writes out is the same in both:
+[16] takes the factors "for all plaquettes in all large field sets P" from
+one final action and defers the control of the sums to Sect. 3.C of [9]
+(CMP 86; not reread). So the large-field plaquettes of different scales, whose
+j-blocks overlap, share one action. II inherits this through "in the usual
+way". This is the remaining unread input (call it (Ov), the overlap of
+scales). It is not specific to R = id.
+
+### 7.5 Summary, and corrections for the lead
+
+| item | verdict at d = 3, R = id | rests on |
+|---|---|---|
+| footprint | Ŷ = Y~ (one layer of MR_k-cubes), not S(Y); c_+ = 3^d | CMP 119 p. 245, (2.41); II pp. 377, 379, 390, 392 |
+| (H-form) | **not available as stated**; corrected to (H-form′) with a joint hard-core gas | needs the T_k normalization (transfers from II (1.103), (1.73)-(1.75)) and **(Dec), an R = id decoupling expansion (new argument; R-version: II pp. 369-375)** |
+| (H-C) | **holds**, with β_ν = O(B_0 e^{B_0}) for κ > c_e + νc_t | CMP 119 (2.40)-(2.42), p. 262 (published; note 65 at d = 3) + counting |
+| (1.79), unprocessed T_k | **holds, same status as II's (1.79)** | II pp. 380-383 minus R-items; [16] (66)-(71); CMP 119 (2.20)-(2.21), (2.42); (Ov) via [9] Sect. 3.C, not reread |
+
+So Theorem 68.5 rests on:
+
+- (Dec), the one new argument;
+- (Ov), shared with all of Balaban's large-field bounds;
+- the joint-gas formulation (a change of form, not a new estimate).
+
+(H-C) and (1.79) are no longer open readings, apart from (Ov) for (1.79).
+
+**For the lead** (not applied; outside this task's scope):
+
+1. §3.1 and the §3.2 table: replace Ŷ = S(Y), c_+ = (21L)^d by Ŷ = Y~,
+   c_+ = 3^d (§7.1). Update the (H-form), (H-C) and (1.79) rows to §7.2-§7.4.
+2. §5 "Where it could fail" and the one-line verdict: the steps not
+   established are now (Dec) and (Ov), plus the joint-gas form, instead of
+   the three readings.
+3. Note 61 (LF-act) bracket (T84 line): the large-field activity is that of
+   the joint gas, conditional on (Dec) and (Ov).
+4. §6 "Not checked": the thickness item and pp. 355-375 are done.
