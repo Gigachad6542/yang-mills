@@ -25,7 +25,7 @@ Daniel asked on 2026-10-09 to cut token usage. The rules:
 
 ## Open tasks (priority order)
 
-### T86 [proof] — open, posted 2026-10-12 by the lead: (Dec), the decoupling of the large-field gas at d = 3 with R = identity (note 68 §7)
+### T86 [proof] — claimed by Sonnet worker (lead dispatch), 2026-10-13; posted 2026-10-12 by the lead: (Dec), the decoupling of the large-field gas at d = 3 with R = identity (note 68 §7)
 Scope: a new §8 of `research/68-large-field-gas-d3.md`, plus `research/scripts/t86_*.py` if useful.
 T85 found that the gas form (H-form) of note 68 is not in CMP 122 II at R = identity: II's (1.104) holds because the R-operation rebuilds Z ((1.33), p. 365; (1.37)) and the T'_k are normalized ((1.102)-(1.103)). At R = id the density is CMP 119 (2.18)/(2.23) (pp. 257-258): T_k = Π T^{(j)} are integral operations acting on B-terms, and U_k, the E-terms and the vacuum constant depend on the large-field history. Write (Dec): an R = id version of II's decoupling expansion pp. 369-375 ((1.50)-(1.65)) that brings the density to the joint hard-core gas (H-form′) of note 68 §7 (E-polymers avoiding the footprints Y~, large-field weights W_Y normalized as in II (1.103), (1.73)-(1.75)), with the bounds that Thm 68.4 uses. Read II pp. 369-375 and CMP 119 pp. 257-263 from the page images; the PDFs are in sources/papers/ (offsets +354, +242).
 Done when: (Dec) is proved (then Thm 68.5 rests only on the shared step (Ov)), or a `failed-attempt` names the step.
